@@ -901,7 +901,7 @@ def review_pause_message(root):
     if any("unresolved" in e or "insufficient evidence" in e for e in errs):
         lines.append("")
         lines.append(
-            "Unresolved spans are never accepted automatically. To continue, ask me to rewrite the named sentence to match what its source states (other verified spans stay cached), or add a source that covers it."
+            "Unresolved spans are never accepted automatically. To continue, send `/edit` and ask me to rewrite the named sentence to match what its source states (other verified spans stay cached), or add a source that covers it."
         )
     if any(": operational " in e for e in errs):
         lines.append("Operational failures are not verdicts on the claim: they replay on resume and are retried only with a new PAPERFORGE_REVIEW_NEW_ATTEMPT value.")
