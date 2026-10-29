@@ -1,0 +1,103 @@
+=== PAGE 5 (continued) ===
+regular intervals or adaptively in response to a drop in the acceptance rate, which ensures
+that the cache remains dynamically aligned with the evolving context. Notably, both
+StreamingLLM and H2 O incorporate this principle implicitly. H2 O consistently retains
+tokens with high scores, and StreamingLLM reuses extensive local information and sink
+tokens, which both reduce the necessity for complete cache reconstruction.
+5
+
+
+=== PAGE 6 ===
+Published as a conference paper at COLM 2024
+
+4
+
+T RI F ORCE
+
+This section aims to introduce the T RI F ORCE, which leverages a retrieval-based KV cache
+selection policy and a hierarchical speculation system. We first argue that our retrievalbased drafting approach is intuitive and lossless compared to existing strategies such as
+StreamingLLM and H2 O. Subsequently, we introduce the hierarchical system designed to
+effectively address the dual bottlenecks in speculative decoding, facilitating a substantial
+improvement in overall speed-up. Finally, T RI F ORCE is elaborated in Section 4.3.
+4.1
+
+Retrieval-based Drafting
+
+Value
+Key
+
+In scenarios requiring long-term contextual
+dependencies, methods like StreamingLLM
+0.3
+0.1
+0.5
+0.1
+and H2 O underperform due to their cache updating strategies, which are ineffective at accurately retrieving detailed contextual inforChunk Size
+mation because they inevitably and irrecovQuery
+erably discard KV pairs. In our experiment,
+The
+spec
+new
+system
+context
+ulative
+for
+long
+we challenge StreamingLLM and H2 O with
+a needle retrieval task (Liu et al., 2024b; Peng
+Figure 4: Retrieval-based drafting
+et al., 2023; Liu et al., 2024a). As detailed in
+Table 1, there is a notable drop in their acceptance rates compared to their performance
+on the PG-19 dataset, highlighting their limitations. Essentially, StreamingLLM and H2 O
+operate on a lossy principle, as evicted tokens are permanently discarded, making them a
+poor fit for settings requiring the preservation of full KV cache for the target model.
+The necessity of keeping the entire KV cache in our settings allows us to select KV cache
+more freely (Singhal et al., 2001). This insight leads us to develop a more effective selection
+policy for lossless approximations. In our approach, demonstrated in Figure 4, KV cache is
+segmented into small chunks. During the retrieval phase, we calculate the attention between
+a given query and the average key cache within each chunk. This method effectively
+highlights the most relevant chunks, enabling us to gather KV cache with a fixed budget
+based on the scores. As illustrated in Table 1, retrieval-based method excels by actively
+identifying the most crucial information for the task rather than relying on passive and timebased cache management methods. By focusing on relevance over recency, retrieval-based
+policy demonstrates its potential to handle contextually dense datasets.
+Table 1: Acceptance rates are shown across various tasks, utilizing a 120K context and a 4K
+budget, while bypassing the initial two layers. There is a notable drop in StreamingLLM
+and H2 O’s results on needle retrieval. For reference, Top-K is the theoretical upper bound.
+
+4.2
+
+Method
+
+Top-K (Ref.)
+
+StreamingLLM
+
+H2 O
+
+Retrieval
+
+PG-19
+Needle Retrieval
+
+0.9921
+0.9989
+
+0.9156
+0.0519
+
+0.9179
+0.0739
+
+0.9649
+0.9878
+
+Hierarchical Speculation
+
+While addressing the KV cache bottleneck enhances efficiency, the requirement to load
+whole model weights for drafting reintroduces latency, shifting the bottleneck to model
+weights again. To tackle this challenge, we implement a hierarchical system, as illustrated
+in Figure 1. This system employs a secondary, lightweight model with StreamingLLM cache
+to perform initial speculations for the target model with retrieval-based cache (which serves
+as a draft model for the target model with full KV cache). By establishing this sequential
+speculation hierarchy, we effectively reduce drafting latency and accelerate overall inference.
+Correctness: The original output distribution is p

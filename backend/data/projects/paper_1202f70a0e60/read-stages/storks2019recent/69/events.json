@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.69.txt \u2014 Page 81 (continued) and 82\u201383\n\n**Problem:** N/A \u2014 references-only segment.\n\n**Method:** N/A \u2014 references-only segment.\n\n**Reported results:** N/A \u2014 references-only segment.\n\n**Limitations:** N/A \u2014 references-only segment.\n\n**Exact quotes:**\n- Page 81 (continued): \u201cRACE: Large-scale ReAding Comprehension Dataset From Examinations.\u201d\n- Page 83: \u201cALBERT: A lite BERT for self-supervised learning of language representations.\u201d\n\n**Note:** Segment contains exclusively bibliography entries spanning pages 81\u201383. No problem, method, or results attributable to the survey paper itself. Markers follow physical-page boundaries as instructed."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2498,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78225e25ffe3grtKgt83RWL05"
+  }
+]

@@ -1,0 +1,52 @@
+=== PAGE 6 (continued) ===
+ provided to the model. (right) The corresponding ground-truth and
+counterfactual causal graph with (H) a hidden confounder, unlike in real-world situations, its value is
+given in the dataset and thus shown in blue, (C) coffee drinking, and (S) a high or low salary. All
+causes affecting the system are mentioned. Intervention is shown in yellow.
+than random guessing (50% accuracy). There is no consistent difference of accuracy between the
+three levels of commonsense, showing little bias towards prior knowledge. The best models are
+GPT-4-1106+Causal CoT and Counterfactual-CI-GPT-4o-Ggt although their performance remains
+limited (around 10% better than random guessing). Our framework decomposes counterfactual
+reasoning into a sequence of atomic steps, allowing us to get insights into the LLMs’ causal reasoning
+abilities. We observe an improvement of performance when the causal graph is given to the LLM.
+This is most noticeable with GPT-4o. It indicates that LLMs are not systematically able to recover
+the true causal structure even when no information is hidden. However, the improvements are often
+small, e.g. no improvement is observed for GPT-3.5, highlighting that the accuracy seldom depends
+on the access to the correct causal structure. Our framework ensures that the right causal factors
+are provided to the appropriate causal variables, i.e. the value of a variable is solely determined by
+the value of its parents or from an intervention. Therefore, the bottleneck in accuracy lies in the
+computation of the functions P (Y|pa(Y)). We provide an example of failure case illustrating this
+limitation in LLMs in Section 4.4.
+We look deeper into Figure 4 and Table 2. Figure 4 shows the decomposition of the results between
+graph building and inference errors. Table 2 further shows the Graph Edit Distances (GED) between
+the causal graphs built by the models and the ground-truth causal graphs. The GED counts the
+number of node and edge edits required to transform the first graph to the second. We can see in
+Figure 4 that most LLMs can accurately build a causal graph. Only LLaMA-3.1 shows a high number
+of errors during the causal graph generation. Moreover, Table 2 shows that GPT-4o, GPT-4o-mini and
+GPT-3.5 require less than one modification in average to recover the true graph (GED metric). As the
+GEDtopology metric is very close to the GED, it indicates that a semantic difference is systematically
+associated with a structural difference. This is further confirmed by the observed difference between
+the GEDtopology and IoU-GEDtopology metrics.
+4.3
+
+LLM Self-Evaluation
+
+We ask the LLM to self-evaluate its generated factual and counterfactual graphs. Each sample in the
+dataset contains a context document a query. Thus, one factual graph corresponding to the context
+and a second counterfactual graph with the intervention are generated for each sample. We summarise
+each graph into text format and prompt the LLM to return a plausibility score for the chain of events
+and a confidence score for its prediction (prompts are given in Appendix B.4). Table 3 shows the
+average LLM self-evaluation on the accuracy of the generated causal graphs. The models expectedly
+attribute a slightly lower plausibility to the counterfactual graphs. Models attributing a higher score
+also show a higher confidence. In addition, the models that obtain a higher accuracy in Table 1 tend
+6
+
+
+=== PAGE 7 ===
+Table 1: Accuracy on the counterfactual subset of the Cladder dataset. Only extracted answers are
+shown. Accuracy is reported overall and divided by commonsense (Common.), nonsensical and
+anticommonsense (Anti-Common) queries. Models with Ggt are given the true causal graph extracted
+via standard parsing. Results with * are obtained on ∼ 65% of the dataset and cannot be directly
+compared with the other models (see Figure 4). LLMs do not demonstrate good counterfactual
+inference abilities even when the causal and reasoning structures are given, highlighting that the
+perform

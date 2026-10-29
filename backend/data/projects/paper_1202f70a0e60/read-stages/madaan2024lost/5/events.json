@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# madaan2024lost.5 \u2014 Compact Notes (Pages 4\u20135)\n\n**Problem**  \n- Investigate NLI benchmark utility for monitoring 8B/70B model pre-training, and assess score inflation from data contamination.\n\n**Method**  \n- Analyse four-shot learning curves during training (Figure 2) and final model performance (Figure 1).  \n- Quantify benchmark monotonicity via Kendall Tau against monotonically increasing arrays and NLL.  \n- Conduct contamination analysis: EPG as function of contaminated data percentage across thresholds; use 8-gram overlap to flag contamination.\n\n**Reported Results**  \n- 70B model surpasses fine-tuned BERT after 500B tokens on ANLI and \u03b1NLI; 8B model shows slow improvement, not exceeding chance on HANS, MNLI, SNLI.  \n- 405B > 70B > 8B performance gap across Llama series; \u03b1NLI near-saturated at ~85% accuracy for 70B.  \n- Low monotonicity across benchmarks for both accuracy and NLL, suggesting unsuitability for closely-spaced checkpoint monitoring.  \n- EPG shows virtually no score inflation from contamination for 8B/70B models; HANS clean due to minimal 8-gram overlap; MNLI/SNLI/\u03b1NLI have high detected contamination at low thresholds with no performance impact; ANLI has very high contamination percentages but erratic EPG behaviour as examples are gradually added to the clean set.\n\n**Limitations**  \n- No full pre-training budget; conclusions about 8B based on partial runs.  \n- EPG erratic behaviour with gradual addition of examples to clean sets.  \n- Contamination flagged by 8-gram overlap may not reflect actual performance impact.\n\n**Quotes (Page 4)**  \n- \u201cThe 70B model starts improving after 250B tokens for ANLI and \u03b1NLI; it crosses fine-tuned BERT performance after 500B tokens.\u201d  \n- \u201cthe development of performance for the 8B model is slow, not exceeding chance accuracy for HANS, MNLI, and SNLI.\u201d\n\n**References-Only Note**  \nThis segment presents empirical results and analysis from the paper; no new findings are invented.\n\nattributed to pages 4\u20135 as markers."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2522,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783f5a9effeOylj3V3zlwZyJB"
+  }
+]

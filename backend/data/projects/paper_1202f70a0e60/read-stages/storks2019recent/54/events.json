@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.54: Page 64\n\n- **Problem**: Language-and-vision benchmarks require external knowledge and reasoning; early corpora (semantic role labeling, relation extraction, paraphrase) implicitly depend on commonsense, though this was not originally emphasized.\n- **Method**: Survey of benchmarks spanning VQA, Visual7W, GQA, CLEVR, VQA-style datasets with commonsense action recognition/ justification (Fouhey et al., 2018; VCR Zellers et al., 2019), directional-adjective learning (Winn & Muresan, 2018), verb causality (Gao et al., 2018), and video-based datasets (Something Something >100k videos; VLN R2R Anderson et al.).\n- **Results**: No new experimental results; the paper catalogs task taxonomies and dataset characteristics across language, vision, and multimodal domains.\n- **Limitations**: Survey scope is bounded by cited works; no original analysis or error analysis performed.\n\n> \"These are all image-based, but we are also beginning to see similar video-based datasets, such as Something Something (Goyal et al., 2017), which aims to evaluate visual commonsense through over 100,000 videos portraying everyday actions.\" \u2014 p.64\n\n> \"We have also seen the vision-and-language navigation (VLN) task such as Room-to-Room (R2R) by Anderson, Wu,...\" \u2014 p.64"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2436,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782562a5ffe4Kg32hX8oS4maC"
+  }
+]

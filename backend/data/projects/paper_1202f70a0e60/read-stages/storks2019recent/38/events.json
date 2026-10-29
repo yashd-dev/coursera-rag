@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Storks2019Recent \u2014 Page 46 (continued)\u201347\n\n- **Problem**: Cyc's manual encoding costs ~$120M (Paulheim, 2018), keeping it small and slow-growing despite high data quality from expert curation.\n- **Method**: Survey of text-mining approaches for automatic knowledge-graph and taxonomy construction from Web sources (Wikipedia, Web crawling, other KBs). Highlights extraction processes for temporal commonsense, event order/participants, physical/spatial relations, numeric trends, and comparative entity relations.\n- **Reported results**: Text mining costs 1.85 cents (DBpedia) and 0.83 cents (YAGO) per statement versus $5.71 for manual Cyc encoding\u2014hundreds offold cost advantage enabling large-scale KB creation.\n- **Limitations**: Acquired knowledge is noisy and inconsistent from open online data; automatic error correction exists (Spithourakis et al., 2016) but human validation remains likely required (Gordon et al., 2010).\n- **Quote 1**: \"creating a statement in the Wikipedia-extracted DBpedia and YAGO respectively costs 1.85 cents and 0.83 cents (USD), which are hundreds of folds less than the cost of manually encoding a statement in Cyc (which was estimated at about $5.71 per statement)\" (Paulheim, 2018).\n- **Quote 2**: \"human validation is still likely to be required when automatically generating knowledge resources in this way\" (Gordon, Van Durme, & Schubert, 2010)."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2431,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78293399ffeE0vNSnEpfB39yb"
+  }
+]

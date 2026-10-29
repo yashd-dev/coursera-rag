@@ -1,0 +1,61 @@
+=== PAGE 76 (continued) ===
+al Workshop on Paraphrasing (IWP2005),
+Jeju Island, Korea.
+Dua, D., Wang, Y., Dasigi, P., Stanovsky, G., Singh, S., & Gardner, M. (2019). DROP: A Reading
+Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs. In Proceedings
+of the 17th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT 2019), Minneapolis, MN,
+USA. Association for Computational Linguistics.
+Dzikovska, M. O., Nielsen, R. D., Brew, C., Leacock, C., Giampiccolo, D., Bentivogli, L., Clark,
+P., Dagan, I., & Dang, H. T. (2013). SemEval-2013 Task 7: The Joint Student Response
+Analysis and 8th Recognizing Textual Entailment Challenge. In Proceedings of the Seventh
+76
+
+
+=== PAGE 77 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+International Workshop on Semantic Evaluation (SemEval-2013), p. 13, Atlanta, GA, USA.
+Association for Computational Linguistics.
+Elliott, D., & Keller, F. (2014). Comparing Automatic Evaluation Measures for Image Description.
+In Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics
+(Volume 2: Short Papers), pp. 452–457. Association for Computational Linguistics.
+Emami, A., De La Cruz, N., Trischler, A., Suleman, K., & Cheung, J. C. K. (2018). A Knowledge Hunting Framework for Common Sense Reasoning. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP 2018), pp. 1949–1958,
+Brussels, Belgium. Association for Computational Linguistics.
+Etzioni, O., Banko, M., Soderland, S., & Weld, D. S. (2008). Open information extraction from the
+web. Communications of the ACM, 51(12), 68.
+Etzioni, O., Cafarella, M., Downey, D., Popescu, A.-M., Shaked, T., Soderland, S., Weld, D. S.,
+& Yates, A. (2005). Unsupervised named-entity extraction from the Web: An experimental
+study. Artificial Intelligence, 165(1), 91–134.
+Fellbaum, C. (1999). WordNet : An Electronic Lexical Database, Vol. 2nd printing of Language,
+Speech, and Communication. A Bradford Book, Cambridge, Mass.
+Fillmore, C. J. (1976). The Need for a Frame Semantics within Linguistics. Statistical Methods in
+Linguistics, 5–29.
+Fillmore, C. J. (1977). Scenes-and-Frames Semantics. Fundamental Studies in Computer Science,
+59, 55–82.
+Fillmore, C. J., Baker, C. F., & Sato, H. (2002). The FrameNet Database and Software Tools.. In
+Proceedings of the Third International Conference on Language Resources and Evaluation
+(LREC’02), Las Palmas, Canary Islands - Spain. European Language Resources Association
+(ELRA).
+Forbes, M., & Choi, Y. (2017). Verb Physics: Relative Physical Knowledge of Actions and Objects.
+In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics
+(ACL 2017), pp. 266–276, Vancouver, Canada. Association for Computational Linguistics.
+Fouhey, D. F., Kuo, W., Efros, A. A., & Malik, J. (2018). From Lifestyle VLOGs to Everyday
+Interactions. In Proceedings of the 2018 IEEE/CVF Conference on Computer Vision and
+Pattern Recognition (CVPR 2018), Salt Lake City, UT, USA. IEEE.
+Franke, J., Niehues, J., & Waibel, A. (2018). Robust and Scalable Differentiable Neural Computer
+for Question Answering. In Proceedings of the Workshop on Machine Reading for Question Answering (MRQA), pp. 47–59, Melbourne, Australia. Association for Computational
+Linguistics.
+Gabrilovich, E., Ringgaard, M., & Subramanya, A. (2013). FACC1: Freebase annotation of
+ClueWeb corpora, Version 1 (Release date 2013-06-26, Format version 1, Correction level
+0). Note: http://lemurproject. org/clueweb09/FACC1/Cited by, 5.
+Gao, Q., Doering, M., Yang, S., & Chai, J. (2016). Physical Causality of Action Verbs in Grounded
+Language Understanding. In Proceedings of the 54th Annual Meeting of the Association
+for Computational Linguistics (ACL 2016), pp. 1814–1824, Berlin, Germany. Association for
+Computational Linguistics.
+77
+
+
+=== PAGE 78 ===
+S TORKS , G AO , & C HAI
+
+Gao, Q., Yang, S., Chai, J., & Vanderwende, L. (2018). Wha

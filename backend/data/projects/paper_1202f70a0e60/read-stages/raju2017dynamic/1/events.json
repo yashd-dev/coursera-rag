@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# raju2017dynamic \u2014 Source Segment Notes\n\n**Problem**\nNLI is viewed as a QA problem; DMNs are proposed to enhance performance. NLI classifies sentence-pair relationships (entailment, contradiction, neutral) and is crucial for QA, summarization, and IR. [P1]\n\n**Method**\nDMNs are applied to NLI beyond their original domain, enabling incremental memory update and reawakening. Attention mechanisms within DMN structure are analyzed for focusing on essential words/phrases. Integration of episodic memory updates with attention mechanisms is extensively experimented. [P1]\n\n**Reported results**\nNo quantitative results or accuracy figures provided in this segment. The abstract states DMNs are \"effective for episodic memory\" and improve inferential accuracy, but specific scores, datasets, or comparisons are absent. [P1]\n\n**Limitations**\nSegment contains only introductory/background text; no experimental methodology, dataset descriptions, or performance metrics are present. [P1]\n\n**Two short exact quotes**\n> \"NLI classifies the relationship between two sentences as entailment, contradiction, or neutral.\" [P1]\n\n> \"the most significant contribution of the paper is to demonstrate that DMNs are effective for episodic memory and experiment with DMNs outside of their original domain.\" [P1]\n\n**References-only note**: This segment is entirely introductory with no findings, methods beyond concept description, or results. A references-only segment requires a short contextual note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2160,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781ffc87ffeCL74LPvTqM1TME"
+  }
+]

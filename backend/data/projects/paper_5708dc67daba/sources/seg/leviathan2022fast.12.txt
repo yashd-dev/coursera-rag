@@ -1,0 +1,175 @@
+=== PAGE 12 (continued) ===
+2
+0.04
+0.11
+
+3.2
+3.3
+2.5
+2.3
+2.4
+2.0
+
+3.4
+2.8
+1.7
+2.6
+2.4
+1.4
+
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+
+T5- SMALL
+T5- BASE
+T5- LARGE
+T5- SMALL
+T5- BASE
+T5- LARGE
+
+0
+0
+0
+1
+1
+1
+
+5
+5
+3
+5
+3
+3
+
+0.65
+0.73
+0.74
+0.53
+0.55
+0.56
+
+0.02
+0.04
+0.11
+0.02
+0.04
+0.11
+
+2.4
+2.6
+2.0
+1.9
+1.8
+1.6
+
+3.1
+3.0
+2.2
+2.3
+2.2
+1.7
+
+A.4. Application to Beam Search
+Our method can be applied, with some performance penalty, to beam search sampling. Given the original beam width w, we
+can perform beam search with the approximation model Mq and beam width u ≥ w for γ steps. Then, we can use Mp to
+check all of the candidates in parallel (costing a compute budget of (w + uγ) runs of Mp ). Finally, for each step, we can
+accept the guesses of Mq as long as topw (Mp ) ⊆ topu (Mq ) to get identical results to regular beam search with Mp alone
+(with a more elaborate procedure we could also accept cases where the candidates we got happen to have higher probabilities
+than those of Mp alone). The analysis of our method in this setting is more involved and we leave it for future work.
+A.5. Lenience
+A strong property of Algorithm 1 is that the output distribution is guaranteed to remain unchanged. That said, if we’re
+willing to allow some changes, with nice guarantees, we can get further inference speed improvements. To further motivate
+this, note that when we train two models with identical architectures and sizes on the same dataset, the generated probability
+distributions will not be identical, so some lenience might make sense. Note that the results in this paper except for this
+section use the strictest version of Algorithm 1 and don’t allow lenience of any kind.
+We could include a lenience parameter l ∈ [0, 1] and multiply q(x) by l before comparing with p(x) in Algorithm 1. This
+still maintains the nice guarantee that no token can be sampled with probability greater than p(x)
+l . This means for example,
+1
+that with l = 10
+no token can be sampled with more than 10X its ground truth probability, so we can guarantee that
+extremely rare tokens will remain extremely rare (there is no guarantee on the minimum probability, so lenience could hurt
+the diversity of the samples).
+(
+1
+lq(x) ≤ p(x)
+p(x)
+Specifically, with a lenience factor l we have α = Ex∼q(x) p(x)
+= Ex∼q(x) max(p(x),lq(x))
+=
+lq(x)
+>
+p(x)
+lq(x)
+P
+P
+P
+p(x)q(x)
+p(x)
+1
+x max(p(x),lq(x)) = l
+x min(p(x), lq(x)) =
+x min( l , q(x)).
+Table 5 shows α values for different values of l when Mp is T5-XXL (11B) and Mq is T5-small (77M). With c = 0.015,
+using lenience values of 1, 0.5, 0.3, and 0.1 (meaning that no token can be sampled with probability greater than 1X, 2X, 3X
+and 10X of the ground truth) we get improvement factors of 2.5X, 3.1X, 3.6X, and 5X respectively.
+
+Table 5. α values for various values of l with standard sampling where Mp is T5-XXL (11B) on the EnDe translation task.
+Mq
+
+l=1
+
+l = 0.5
+
+l = 0.3
+
+l = 0.1
+
+U NIGRAM
+B IGRAM
+T5- SMALL (77M)
+T5- BASE (250M)
+
+0.07
+0.19
+0.62
+0.68
+
+0.1
+0.23
+0.71
+0.8
+
+0.11
+0.25
+0.76
+0.83
+
+0.16
+0.32
+0.84
+0.90
+
+12
+
+
+=== PAGE 13 ===
+Fast Inference from Transformers via Speculative Decoding
+
+Note that when using temperature = 0 (i.e. argmax sampling), we can no longer use lenience as above. Instead, we could
+allow some lenience before standardizing the distributions. For example, we could accept the token x sampled from Mq in
+case p(x) ≤ l · max(p). In this case, we measure similar empirical increases in α values to those with temperature = 1. For
+example, when using lenience values of 1, 0.5, 0.3, and 0.1 for Mp T5-XXL Mq T5-small for English-German translation,
+we get α values of 0.75, 0.75, 0.8, 0.87. Taking for example c = 0.015 and γ = 8 we get speed improvement factors of
+3.3X, 3.3X, 3.9X, and 4.9X respectively7 .
+
+7
+
+In this case, unlike in the standard sampling case shown in Table 5, a lenience factor of 0.5 doesn’t improve the speed-up.
+
+13
+

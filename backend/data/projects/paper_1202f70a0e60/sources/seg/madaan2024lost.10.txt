@@ -1,0 +1,81 @@
+=== PAGE 10 (continued) ===
+
+Noah Lee, Na Min An, and James Thorne. 2023. Can
+large language models capture dissenting human
+voices? In Proceedings of the 2023 Conference
+on Empirical Methods in Natural Language Processing, pages 4569–4585, Singapore. Association for
+Computational Linguistics.
+
+agreement loss. In Proceedings of the 14th Conference of the European Chapter of the Association for
+Computational Linguistics, pages 742–751, Gothenburg, Sweden. Association for Computational Linguistics.
+Adam Poliak. 2020. A survey on recognizing textual
+entailment as an NLP evaluation. In Proceedings of
+the First Workshop on Evaluation and Comparison
+of NLP Systems, pages 92–109, Online. Association
+for Computational Linguistics.
+
+Lovish Madaan, Aaditya K. Singh, Rylan Schaeffer,
+Andrew Poulton, Sanmi Koyejo, Pontus Stenetorp,
+Sharan Narang, and Dieuwke Hupkes. 2024. Quantifying variance in evaluation benchmarks. Preprint,
+arXiv:2406.10229.
+
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine
+Lee, Sharan Narang, Michael Matena, Yanqi Zhou,
+Wei Li, and Peter J. Liu. 2023. Exploring the limits
+of transfer learning with a unified text-to-text transformer. Preprint, arXiv:1910.10683.
+
+Tom McCoy, Ellie Pavlick, and Tal Linzen. 2019. Right
+for the wrong reasons: Diagnosing syntactic heuristics in natural language inference. In Proceedings of
+the 57th Annual Meeting of the Association for Computational Linguistics, pages 3428–3448, Florence,
+Italy. Association for Computational Linguistics.
+
+Aaditya K. Singh, Muhammed Yusuf Kocyigit, Andrew
+Poulton, David Esiobu, Maria Lomeli, Gergely Szilvasy, and Dieuwke Hupkes. 2024. Evaluation data
+contamination in llms: how do we measure it and
+(when) does it matter? Preprint, arXiv:2411.03923.
+
+María Luisa Menéndez, JA Pardo, L Pardo, and
+MC Pardo. 1997. The jensen-shannon divergence.
+Journal of the Franklin Institute, 334(2):307–318.
+
+Pat Verga, Sebastian Hofstätter, Sophia Althammer, Yixuan Su, Aleksandra Piktus, Arkady Arkhangorodsky,
+Minjie Xu, Naomi White, and Patrick S. H. Lewis.
+2024. Replacing judges with juries: Evaluating LLM
+generations with a panel of diverse models. CoRR,
+abs/2404.18796.
+
+Yixin Nie, Adina Williams, Emily Dinan, Mohit Bansal,
+Jason Weston, and Douwe Kiela. 2020a. Adversarial
+NLI: A new benchmark for natural language understanding. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics,
+pages 4885–4901, Online. Association for Computational Linguistics.
+
+Alex Wang, Yada Pruksachatkun, Nikita Nangia, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy,
+and Samuel Bowman. 2019a. Superglue: A stickier
+benchmark for general-purpose language understanding systems. In Advances in Neural Information
+Processing Systems, volume 32. Curran Associates,
+Inc.
+
+Yixin Nie, Xiang Zhou, and Mohit Bansal. 2020b. What
+can we learn from collective human opinions on natural language inference data? In Proceedings of the
+2020 Conference on Empirical Methods in Natural
+Language Processing (EMNLP), pages 9131–9143,
+Online. Association for Computational Linguistics.
+
+Alex Wang, Amanpreet Singh, Julian Michael, Felix
+Hill, Omer Levy, and Samuel R. Bowman. 2019b.
+GLUE: A multi-task benchmark and analysis platform for natural language understanding. In 7th International Conference on Learning Representations,
+ICLR 2019, New Orleans, LA, USA, May 6-9, 2019.
+OpenReview.net.
+
+Xenia Ohmer, Elia Bruni, and Dieuwke Hupkes. 2023.
+Separating form and meaning: Using self-consistency
+to quantify task understanding across multiple senses.
+In Proceedings of the Third Workshop on Natural Language Generation, Evaluation, and Metrics
+(GEM), pages 258–276, Singapore. Association for
+Computational Linguistics.
+
+Lucas Weber, Elia Bruni, and Dieuwke Hupkes. 2023.
+Mind the instructions: a holistic evaluation of consistency and interactions in prompt-based learning.
+In Proceedings of the 27th Conference on Computational Natural Language Learning (CoNLL), pages
+294–313, Singapore. Association for Computational
+L

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.38.txt \u2014 Page 36 (continued) / Page 37\n\n- **Problem**: Reading comprehension logic item; determining if conclusion is entailed from premise about opinion surveys and respondent bias.\n\n- **Method**: Three-choice judgment (entailed / not entailed) with error-type explanation, using LogiQA2NLI dataset format.\n\n- **Reported results**: Table 25 presents a single reasoning case comparing multiple model variants (Davinci-003 0-shot, ChatGPT 3-shot/1-shot/0-shot) on premise-conclusion entailment. No aggregate metrics or accuracy scores provided in this segment.\n\n- **Limitations**: Segment contains only one illustrative example; no dataset-wide performance breakdown, confidence scores, or discussion of model variation beyond the displayed rows.\n\n- **Quote (p.36 continued)**: \u201cThe other answer choices are not supported by the passage. Answer choice A is not supported because the passage does not say that Ma Zheng\u2019s grades are better than Zhang Qiang\u2019s.\u201d [Answer and Explain]\n\n- **Quote (p.37)**: \u201cThe conclusion is not logically entailed by the given premise. The premise discusses the potential for opinion survey respondents to give answers they believe the surveyor expects to hear, but notes that well-constructed surveys prevent this by wording questions in a way that does not indicate expected answers.\u201d [Answer and Explain: Not entailed]\n\n**Note**: This references-only segment provides no new findings, only structural metadata and a single reasoning case."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2200,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78352122ffeJR33d9a6yPgC2X"
+  }
+]

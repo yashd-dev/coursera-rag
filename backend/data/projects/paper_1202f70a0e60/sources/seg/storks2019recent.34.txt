@@ -1,0 +1,47 @@
+=== PAGE 42 (continued) ===
+ns to capture semantics of words. A detailed review of such resources is provided by
+Camacho-Collados and Pilehvar (2018). Early approaches evolved from first using counts of cooccurring n-grams for statistical language modeling (Brown, Della Pietra, deSouza, Lai, & Mercer,
+1992), then using these counts to generate spare semantic vectors (Lund & Burgess, 1996). The
+most recent works, e.g., word2vec (Mikolov, Chen, Corrado, & Dean, 2013), train neural networks
+on word co-occurrence classification tasks generated from large texts. The learned weights from
+these neural networks are then used as dense vector representations of words, which can later be
+used as a resource to represent words in the input to neural networks for other tasks. More word
+embedding models have been proposed since word2vec, and the pre-trained semantic vectors from
+them are often made available. GloVe18 (Pennington, Socher, & Manning, 2014) is a highly popular
+example, which improves efficiency and performance by training on only nonzero co-occurrence
+measures. Newer works have leveraged sub-word information in order to better handle rare words
+for which limited training data is available (Bojanowski, Grave, Joulin, & Mikolov, 2017). This can
+be done by splitting training text into characters when training semantic vectors, as in FastText19
+by Bojanowski et al. (2017), an extension of the word2vec models. This has also been explored by
+training semantic vectors for flexibly-sized pieces of words, as in the wordpiece embeddings20 by
+Wu, Schuster, Chen, Le, Norouzi, Macherey, Krikun, Cao, Gao, Macherey, and others (2016).
+There are many advantages to using these pre-trained semantic vectors in language processing
+tasks. As similar words co-occur in text and they are trained from co-occurrence, vectors for similar
+words appear close together in the semantic vector space. Further, they can be shown to capture
+word meaning to some degree. For example, in the word2vec model, it was found that when subtracting the vector for man from the vector for king, then adding the vector for woman, a vector
+approximately equal to the pre-trained vector for queen is produced (Mikolov et al., 2013). A major
+limitation of these vectors, however, is that they are context-independent, so the vector representa16. https://framenet.icsi.berkeley.edu/fndrupal/framenet_data
+17. https://propbank.github.io/
+18. https://nlp.stanford.edu/projects/glove/
+19. https://github.com/facebookresearch/fastText
+20. See https://github.com/google-research/bert for pre-trained model, or the similar SentencePiece
+project at https://github.com/google/sentencepiece to train a new model.
+
+42
+
+
+=== PAGE 43 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+tion of a word is the same regardless of context and word sense. Most recently, contextual word
+representations, where representations for a word depend on where the word appears in a context,
+have been heavily used. More information on such representations is given in Section 4.3.3.
+3.1.2 C OMMON K NOWLEDGE R ESOURCES
+Common knowledge refers to well-known facts about the world that are often explicitly stated
+(Cambria et al., 2011). Since these facts are so often stated, they can be mined from the Web with
+relative ease to create knowledge bases. In this section, we summarize several such resources for
+common knowledge.
+YAGO. Wikipedia is a large and open source of common knowledge. Yet Another Great Ontology
+(YAGO) by Suchanek, Kasneci, and Weikum (2007) augments WordNet (Miller, 1995) with common knowledge facts extracted from Wikipedia, converting WordNet from a primarily linguistic
+resource to a common knowledge base. YAGO originally consisted of more than 1 million entities and 5 million facts describing relationships between these entities. YAGO2 grounded entities,
+facts, and events in time and space, contained 446 million facts about 9.8 million entities (Hoffart, Suchanek, Berberich, & Weikum, 2012), while YAGO3 added about 1 m

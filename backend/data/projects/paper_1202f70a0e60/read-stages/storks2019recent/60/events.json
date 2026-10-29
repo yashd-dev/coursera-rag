@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.60 \u2014 Factual Notes\n\n**Problem**: Survey of recent advances in natural language inference, organizing datasets by task and format (T=textual, C=commonsense, A=argumentation, M=multiple-choice).\n\n**Method**: Systematic categorization of 46 NLI/reading-comprehension benchmarks, listing dataset size, format, and shared task suffixes (T, C, A, M).\n\n**Reported results**: Dataset sizes range from 3.99K (SherLIiC) to 1.44M (GLUE). Format annotations (T, C, A, M) appear consistently across entries, indicating multi-attribute classification per benchmark.\n\n**Limitations**: Table presents only dataset metadata (name, size, format tags); no performance scores, methodology, or comparative results are included. Source is a references-only segment.\n\n**Two short exact quotes**:\n- \u201c1.44M\u201d \u2014 GLUE total scale (p.70 continued)\n- \u201c171K\u201d \u2014 AlphaNLI total scale (p.71)\n\n**Note**: This segment contains only citation metadata and dataset statistics; no methodological findings or performance claims are present."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2997,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78241479ffeLj3F3PLi1LuDmn"
+  }
+]

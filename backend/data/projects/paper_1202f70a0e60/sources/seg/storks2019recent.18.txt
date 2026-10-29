@@ -1,0 +1,53 @@
+=== PAGE 23 (continued) ===
+ared toward a different
+language processing task: semantic proto-role labeling, paraphrase, and pronoun resolution. Each
+task is in classic RTE Challenge format (Dagan et al., 2005), i.e., given context and hypothesis
+texts, one must determine whether the context entails the hypothesis. Between the tasks, IIE includes about 300,000 examples, all of which are recast from previously existing datasets. IIE can be
+downloaded with another multi-task suite at https://github.com/decompositionalsemantics-initiative/DNC.
+GLUE. The General Language Understanding Evaluation (GLUE) dataset from Wang et al. (2018)
+consists of 9 language tasks, including single-sentence binary classification and 2- or 3-way entailment comparable to the dual tasks in RTE-4 and RTE-5 (Giampiccolo et al., 2008; Bentivogli et al.,
+2009). The GLUE tasks are recast or included directly from other benchmark data and corpora:
+• Corpus of Linguistic Acceptability (CoLA) from Warstadt, Singh, and Bowman (2018)
+• Stanford Sentiment Treebank (SST-2) from Socher, Perelygin, Wu, Chuang, Manning, Ng,
+and Potts (2013)
+• Microsoft Research Paraphrase Corpus (MRPC) from Dolan and Brockett (2005)
+• Quora Question Pairs (QQP) from Iyer, Dandekar, and Csernai (2017)
+• Semantic Textual Similarity Benchmark (STS-B) from Cer, Diab, Agirre, Lopez-Gazpio, and
+Specia (2017)
+• Multi-Genre Natural Language Inference (MNLI) from Williams et al. (2017)
+• Question Natural Language Inference (QNLI) recast from SQuAD 1.1 Rajpurkar et al. (2016)
+• Recognizing Textual Entailment (RTE), consisting of examples from RTE-1 (Dagan et al.,
+2005), RTE-2 (Bar-Haim et al., 2006), RTE-3 (Giampiccolo et al., 2007), and RTE-5 (Bentivogli et al., 2009)
+23
+
+
+=== PAGE 24 ===
+S TORKS , G AO , & C HAI
+
+• Winograd Natural Language Inference (WNLI) recast from privately shared Winograd schemas
+by the creators of the Winograd Schema Challenge Levesque (2011)
+Many of these tasks, though not all, require some outside knowledge and reasoning to make inferences. GLUE includes a small analysis set for diagnostic purposes, which has manual annotations
+of fine-grained knowledge and reasoning categories examples fall into. Overall, GLUE has over 1
+million examples, which can be downloaded at https://gluebenchmark.com/tasks.
+DNC. The Diverse Natural Language Inference Collection (DNC) by Poliak et al. (2018a) consists
+of 9 textual entailment tasks requiring 7 different types of reasoning. Like IIE by White et al. (2017),
+data for each task follows the form of the original RTE Challenge (Dagan et al., 2005). Some of the
+tasks within DNC cover basic language processing tasks like named entity recognition, while others
+cover more challenging tasks like anaphora resolution and recognition of puns, which require some
+outside knowledge and reasoning beyond the text. Each task is recast from a previously existing
+dataset:
+1. Event Factuality, recast from UW (Lee, Artzi, Choi, & Zettlemoyer, 2015), MEANTIME
+(Minard, Speranza, Urizar, Altuna, van Erp, Schoen, & van Son, 2016), and (Rudinger, White,
+& Van Durme, 2018b)
+2. Named Entity Recognition, recast from the Groningen Meaning Bank (Bos, Basile, Evang,
+Venhuizen, & Bjerva, 2017) and the ConLL-2003 shared task (Tjong Kim Sang & De Meulder, 2003)
+3. Gendered Anaphora Resolution, recast from the Winogender dataset (Rudinger et al., 2018a)
+4. Lexicosyntactic Inference, recast from MegaVeridicality (White & Rawlins, 2018), VerbNet
+(Schuler, 2005), and VerbCorner (Hartshorne, Bonial, & Palmer, 2013)
+5. Figurative Language, recast from puns by Yang, Lavie, Dyer, and Hovy (2015) and Miller,
+Hempelmann, and Gurevych (2017)
+6. Relation Extraction, partially from FACC1 (Gabrilovich, Ringgaard, & Subramanya, 2013)
+7. Subjectivity, recast from Kotzias, Denil, De Freitas, and Smyth (2015)
+The DNC benchmark consists of about 570,000 examples total, and can be downloaded at
+https://github.com/decompositional-semantics-initiative/DNC.
+SuperGLUE. SuperGLUE by Wang et al. (2019) is a reissue of 

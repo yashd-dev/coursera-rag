@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.75.txt \u2014 Segment Notes\n\n**Problem**: Unstated; context is bibliographic survey of commonsense knowledge, language models, and evaluation resources.\n\n**Method**: None; this segment contains reference citations only.\n\n**Reported results**: None.\n\n**Limitations**: No analysis or findings can be extracted from a references-only segment.\n\n**Quote (p.89)**: \u201cWeb Text. In Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing (EMNLP 2010), EMNLP \u201910, pp. 1088\u20131098, Stroudsburg, PA, USA.\u201d\n\n**Quote (p.90)**: \u201cStrubell, E., Ganesh, A., & McCallum, A. (2019). Energy and Policy Considerations for Deep Learning in NLP. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL 2019), pp. 3645\u20133650, Florence, Italy.\u201d\n\n**Note**: This segment consists entirely of bibliography entries with no experimental content."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2555,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78211393ffe7nZ2VvMLv8PQtA"
+  }
+]

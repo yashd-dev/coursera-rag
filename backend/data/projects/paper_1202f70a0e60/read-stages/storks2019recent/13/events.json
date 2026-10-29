@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.13.txt \u2014 PAGE 16 (continued)**\n\n- **Problem**: SherLIiC forms a challenging testbed for NLI and textual entailment, built from inference rule candidates extracted from a knowledge graph (\u22484,000 annotated for correctness) plus automatic premise-hypothesis similarity calculations.\n\n- **Method (Plausible Inference)**: Survey of benchmarks requiring hypothetical/uncertain conclusions from limited context (abductive reasoning). Includes cloze tasks (fill-in-the-blank), sentence/story completion, and causal reasoning.\n\n- **COPA**: 1,000 examples evaluating causal reasoning between events via backward/forward cause/effect choices, requiring commonsense knowledge of everyday interactions. Download: `people.ict.usc.edu/~gordon/copa.html`.\n\n- **CBT**: 687,000 cloze-style questions from 20-sentence children's story extracts; 10 candidate words per blank; 4 prediction tasks (named entity, common noun, verb, preposition). Download: `research.fb.com/downloads/babi/`.\n\n- **ROCStories**: 50,000 five-sentence everyday stories with causal/temporal relationships; 3,700 test cases with plausible/implausible alternate endings (Story Cloze Test). Most recent release adds ~50,000 stories. Request: `cs.rochester.edu/nlp/rocstories/`.\n\n- **LAMBADA**: 10,000 BooksCorpus passages; open-ended cloze task requiring discourse-aware language modeling to predict missing terminal word.\n\n- **Limitations**: No reported system results, human performance baselines, or comparative analysis within this segment.\n\n- **Quote (P16)**: \"Almost 4,000 of these are annotated for their correctness.\"\n\n- **Quote (P16)**: \"SherLIiC serves as a challenging testbed for NLI and textual entailment systems.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2477,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782f41e9ffehG1EVUZPUGYMLZ"
+  }
+]

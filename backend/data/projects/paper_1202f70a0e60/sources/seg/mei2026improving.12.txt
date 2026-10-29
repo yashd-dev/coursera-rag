@@ -1,0 +1,65 @@
+=== PAGE 16 (continued) ===
+
+Chess
+HellaSwag
+MMLU
+MMLU, few-shot
+
+500
+10,042
+14,042
+14,042
+
+Generated
+Validation
+Test
+Test
+
+Table 7 | MC11 populations, candidate construction, and demonstration sources.
+The question supplies the premise, and the default candidate hypothesis is “The correct
+answer is: [option]”. GSM8K uses “The answer is [option]”, WinoGrande substitutes the
+candidate into the sentence, HellaSwag uses the candidate ending, and few-shot configurations
+use “Answer: [option]”. The instruction asks how this hypothesis relates to the premise, with
+three option descriptions: “The hypothesis follows from the premise”, “The hypothesis may or
+may not be true given the premise”, and “The hypothesis contradicts the premise”.
+Evaluation selects the first maximal candidate in the recorded order and requires three finite
+probabilities in [0, 1] whose sum differs from one by at most 10−5 ; an invalid output stops the
+evaluation. For GSM8K, the distractors perturb the correct numerical answer, and reproducing
+the evaluation requires the saved candidate order. Chess questions are generated with chess
+version 1.11.2 and the recorded randomization settings. Source inventories identify the dataset
+revisions, splits, and row order for the evaluated populations.
+A.2. Training corpus and grouped folds
+The predominantly English corpus contains 22,035 records and 29,897 questions drawn from web
+decisions, policy tasks, and public classification datasets. It combines 4,642 JevForge/Mind2Web
+records [12], 2,676 Nimble records [4], 1,680 compositional-policy records, ten public-source
+16
+
+
+=== PAGE 17 ===
+groups of 1,000 records each, and generated policy, date, insufficient-evidence, control, and
+assertion records. The ten public sources are Yelp full-star reviews, DBpedia14, and AG News
+[52]; Banking77 [7]; TREC [23]; MultiNLI [46]; IMDb [28]; sentence-level SST-5 [38]; BoolQ [9];
+and the SetFit English packaging of MARC [19], with all source labels converted to the shared
+decision schema.
+JevForge uses the cleaned Mind2Web resource at revision 080a4b67 and the JevForge
+conversion at revision 8c6fa6c9. The conversion preserves labels and distributions, including probability mass shared by several positive candidates. Its website partition differs from
+the official Mind2Web out-of-distribution split. The retained Nimble reference is revision
+f136b3f75721fda4ea961f73993cc50b08488835. Its publisher describes the reference answers as synthetic and model-checked. Training consumes record contents directly without
+opening external private-file or image references.
+To keep related examples in the same split, we link records through shared families, paired or
+control examples, upstream rows, websites, and normalized states, then assign each connected
+group as a whole. This produces 12,472 groups, allocated with approximate feature balance:
+80% to eight training pools, 5% to locked development, 5% to calibration, and 10% to a separate
+test split. The eight pools contain 17,661 records and 24,001 questions, with fold 𝑗 holding out
+pool 𝑗 and training on the remaining seven. Our four settings combine folds 2 and 3 with seeds
+44 and 45: fold 2 contains 15,456 training records and requires 1,932 updates per epoch, while
+fold 3 contains 15,442 records and requires 1,931 updates.
+The corpus contains 12,486 Choice, 12,176 binary, and 5,235 Score questions. Most supplied
+target distributions are one-hot (9,142 of 9,457), while the remaining distributions express
+insufficient evidence through 173 uniform targets or multiple valid solutions through 142
+JevForge targets. Training preserves these distributions and augments compatible requests
+by shuffling options or adding distractor and none-of-the-above options, with augmentation
+probabilities ranging from 0.10 to 0.25.
+A.3. Serialization, backbone, and optimization
+The request format follows NeoHorse-Jev’s option-conditioned implementation of typed
+JEV decisions [43, 41]. A record contains a state and one or more questions, each wi

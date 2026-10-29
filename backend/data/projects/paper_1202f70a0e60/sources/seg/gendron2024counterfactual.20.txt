@@ -1,0 +1,77 @@
+=== PAGE 20 (continued) ===
+side risks to corporate earnings are in- (no explanation returned by the model)
+fluenced by Malaysia’s change of coalition government. Since the change of coalition government did not occur (value is False), the downside
+risks are expected to be low.
+Given that the severity of the COVID-19 pan- Given that the severity of COVID-19 pandemic is low and the potential end of the pan- demic is low and there is a potential end
+demic is false, there would be no severe travel of COVID-19 pandemic, it can be inferred
+restrictions imposed worldwide. The low sever- that travel restrictions imposed worldwide
+ity of the pandemic suggests minimal disruption, would likely be none. This is because a
+and since there’s no potential end of the pan- low severity of the pandemic suggests that
+demic yet, current measures would likely remain the situation is under control, and a poin place but not be stringent.
+tential end to the pandemic would further
+reduce the need for travel restrictions.
+Since the travel restrictions imposed worldwide Given that yesterday there were no worldwere ’none’ yesterday, it is likely that the oil & wide travel restrictions, it is estimated that
+gas and airlines sectors condition was ’good’. the condition of oil & gas and airlines secSevere travel restrictions would worsen these tors was good.
+sectors, but in the absence of any restrictions, the
+condition should be favorable.
+The value cannot be determined as there are no The potential end of COVID-19 pandemic
+parent causes provided to infer the outcome.
+will occur because all the parent causes
+have values that lead to this outcome.
+
+20
+
+
+=== PAGE 21 ===
+Table 7: Example of graph scores explanations given by GPT-4o in Table 5. FG stands for Factual
+Graph and CG for Counterfactual Graph. Sc stands for Score and Cf stands for confidence. We show
+the explanations for one graph and two counterfactual graphs.
+Sc
+Cf
+GPT-4o
+FG
+
+0.85
+
+0.85
+
+CG1
+
+0.5
+
+0.5
+
+CG2
+
+0.3
+
+0.5
+
+The sequence of events and their causal relationships are highly plausible
+given the context of the COVID-19 pandemic and global economic conditions. The COVID-19 pandemic had a significant impact on global markets,
+including Bursa Malaysia, leading to a downtrend in FBM KLCI points.
+The severity of the oil price war also contributed to this downtrend. Travel
+restrictions due to the pandemic affected both the oil and gas sector and
+the airline sector, leading to further economic pressure. The change in
+Malaysia’s coalition government affected corporate earnings, contributing
+to the overall economic situation. The lack of financial support from the
+government increased pressure on bank stocks, especially given the bad
+operating conditions for SMEs. The values provided for FBM KLCI points
+and other financial metrics are consistent with the described events and their
+causal relationships. Therefore, the overall sequence of events is highly
+plausible.
+Let’s break down the events and their causal relationships one by one:
+1. Travel restrictions (Event 0) are false, meaning there are no travel
+restrictions in place. 2. The severity of the oil price war (Event 1) is high,
+which indicates a significant conflict impacting oil prices. 3. The severity
+of the COVID-19 pandemic (Event 2) is also high, suggesting widespread
+impact from the pandemic. 4. Travel restrictions affect the oil and gas
+sector condition (causal relationship 0 -> 3). 5. The condition of the oil and
+gas sector (Event 3) is bad. Given the provided events and relationships,
+the key causal link to evaluate is between travel restrictions (Event 0) and
+the oil and gas sector condition (Event 3). Since travel restrictions are not
+in place (false), this would typically suggest a neutral or positive impact
+on the oil and gas sector. However, the sector condition is bad. This could
+be due to other factors not explicitly mentioned in the graph, such as the
+high severity of the oil price war (Event 1) and the high severity of the
+COVID-19 pandemic (Event 2). The gr

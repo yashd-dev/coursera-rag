@@ -1,0 +1,325 @@
+=== PAGE 16 (continued) ===
+the
+latest time of the utilized training data. B in the last column
+represents the one billion.
+Model
+
+Affi.
+
+Charge
+
+Data
+
+Size
+
+text-davinci-003
+ChatGPT
+BARD
+
+Open-AI
+Open-AI
+Google
+
+20$
+2$
+-
+
+Sep. 2021
+Jun. 2021
+Not report
+
+540B
+
+LLaMA3.1-Chat
+Mistral-Inst-v0.3
+Claude-3
+GPT-4
+
+Meta
+Mistral
+Anthropic
+Open-AI
+
+3$/15$
+30$/60$
+
+2023
+2023
+2023
+2023
+
+8B
+7B
+-
+
+A PPENDIX B
+D ETAILS OF E VALUATIONS
+This section supplements some details of the evaluation.
+B.1
+
+1-2
+
+3-4
+
+Length
+5-6
+
+7-8
+
+≥9
+
+28.20
+76.65
+39.40
+34.94
+
+61.60
+13.36
+45.80
+43.56
+
+9.00
+7.22
+12.60
+16.95
+
+1.00
+1.84
+1.60
+3.07
+
+0.20
+0.92
+0.60
+1.46
+
+Evaluation Modes
+
+As mentioned in the main paper, we introduce four metrics
+to evaluate the LLM performances, i.e., Answer Correctness,
+Explain Correctness, Explain Completeness and Explain Redundancy. Also, we employ five metrics to attribute the error
+cases. Although these metrics are subjective, their standards
+are clear and well-defined.
+As for the three previously representative LLMs, their
+evaluations are conducted through manual annotation. In
+detail, we output the LLM answers through API calling
+and hire ten graduate students (all majoring in Natural
+Language Processing) to annotate the answers based on our
+metric definitions.
+As for the four trending LLMs, their evaluations are
+under the automatic mode. Specifically, we utilize GPT-4o
+model to act as the LLM judge. The definitions of the metrics
+are fed to the LLM judge as instructions, and it outputs the
+evaluation scores the same as the human annotators.
+
+A PPENDIX C
+S UPPLEMENTARY R ESULTS ON L ATEST LLM S
+First of all, we conduct the pilot experiments to demonstrate
+the consistency between the manual labeling and GPT-4o.
+The analysis is conducted under the four evaluation metrics
+(i.e., answer correctness, explanation correctness, explanation completeness, and explanation redundancy) and the
+two error categories (i.e., evidence selection and reasoning
+errors). Fig. 13 shows the results.
+
+Evaluated Datasets
+
+Considering the huge annotation load, we make a balance
+between the comprehensiveness and annotation cost. We try
+to keep the full data of each dataset to evaluate ChatGPT,
+except for some large-scale datasets, i.e., RuleTaker, α-NLI,
+α-NLG, AbductiveRules, D*-Ab and LogiQA2NLI. We limit
+the number of evaluation samples in these datasets to 1000,
+1000, 1000, 1000, 1000 and 600 respectively. For text-davinci003 and BARD, we randomly sample 100 examples for
+each dataset. It is still more comprehensive than previous
+works, that only utilize dozens of samples for testing (e.g.,
+30 samples for each dataset).
+Notably, as for the supplemented experiments on the
+four latest LLMs (LLaMA3.1-Chat, Mistral-Instruct-v0.3,
+Claude-3 and GPT-4), we randomly sample 100 cases for
+each dataset. It is expected to maintain a fair comparison.
+For the mixed-form reasoning datasets, we calculate the
+fact length distributions of four datasets for reference. It
+is observed that most samples have 1-2 or 3-4 facts for
+reasoning.
+
+No Hallucination
+
+98.33%
+
+1.67%
+
+Oriented
+
+97.33%
+
+2.67%
+
+Active
+
+97.00%
+
+3.00%
+Matched
+
+Not Matched
+
+Self-aware
+
+94.00%
+
+6.00%
+
+Rigorous
+
+95.33%
+
+4.67%
+
+Correct
+
+99.00%
+
+1.00%
+
+0%
+
+20%
+
+40%
+
+60%
+
+80%
+
+100%
+
+Fig. 13: The evaluation matches between LLM judge and
+human annotations on the 300 samples.
+It illustrates that LLM-as-judge can well align with human performance in our evaluation settings.
+
+
+=== PAGE 17 ===
+17
+
+De.
+.1
+
+Mix
+aM
+LL
+
+Mix
+
+T-4
+
+-3
+
+Mi
+
+(a) Correctness.
+
+Cla
+ude
+
+0.97 0.95 0.94 1.00
+
+0.43 0.41 0.54 0.56
+0.43 0.41 0.54 0.56
+
+GP
+
+T-4
+
+-3
+Cla
+ude
+
+0.98 0.95 0.97 1.00
+
+GP
+
+T-4
+
+-3
+Cla
+ude
+
+0.80 0.59 0.49 0.69
+
+GP
+
+0.77 0.43 0.46 0.71
+
+Ab.
+
+0.05 0.00 0.08 0.06
+
+l-v
+
+0.78 0.75 0.79 0.94
+
+In.
+
+0.07 0.21 0.01 0.09
+
+A3
+
+0.89 0.85 0.82 0.94
+
+0.3
+
+Ab.
+
+stra
+
+A3
+aM
+
+In.
+
+Mi
+
+0.63 0.40 0.32 0.49
+
+l-v
+
+LL
+
+0.72 0.66 0.36 0.59
+
+De.
+.1
+
+Mix
+
+0.3
+
+Ab.
+
+stra
+
+0.3
+
+In.
+
+Mi
+
+stra
+
+l-v
+
+LL
+
+aM
+
+A3
+
+.1
+
+De.
+
+(b) Rigorousness.
+
+(c) Self-awareness.
+
+Fig. 14: Heatmap results for

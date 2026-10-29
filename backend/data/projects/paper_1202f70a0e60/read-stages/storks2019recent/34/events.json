@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.34\n\n**Problem:** N/A \u2014 background survey of NLP word embeddings and common knowledge resources.\n\n**Method:** Literature review tracing semantic vector evolution from n-gram counts (Brown et al., 1992) through word2vec (Mikolov et al., 2013), GloVe (Pennington et al., 2014), FastText (Bojanowski et al., 2017), and wordpiece embeddings (Wu et al., 2016). Examines pre-trained vectors and contextual representations.\n\n**Reported results:** King \u2212 man + woman \u2248 queen vector (word2vec). YAGO3 contains 1 million+ entities and facts beyond YAGO2's 446 million facts across 9.8 million entities.\n\n**Limitations:** Pre-trained vectors are context-independent; word sense is fixed regardless of context. Most recent works use contextual representations (Section 4.3.3).\n\n**Exact quotes:**\n- \"King \u2212 man + woman \u2248 queen\" (word2vec, Mikolov et al., 2013)\n- \"YAGO3 added about 1 m\" (text continues beyond segment)\n\n**Attribution:** All bullets sourced from physical-page markers [PAGE 42 continued] and [PAGE 43].\n\n**Note:** References-only segment describes prior work; no new experimental findings attributed to this paper."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2358,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782a2495ffevxd7fXpxHH1bgM"
+  }
+]

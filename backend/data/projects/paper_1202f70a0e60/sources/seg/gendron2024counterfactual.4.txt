@@ -1,0 +1,218 @@
+=== PAGE 3 (continued) ===
+ an LLM. We also use it to compute the prior probability distribution of the
+confounders U . We discuss our method and the implications of using an LLM for inference in
+Section 3.2. We note a full causal model containing the causal graph G and all these attributes
+as M = ⟨G, LLM⟩. The instantiated model M(D) describes the model with the values of each
+variable extracted from the document D. We further note an intervention do(X = x) in this model as
+MX=x (D) or M(D, do(X = x)).
+Our proposed method is divided into four stages. First, we extract the causal graph from a text
+document. If multiple documents are provided, we merge their respective causal graphs together.
+Then, we compute counterfactual worlds from the resulting causal graph. We use these counterfactuals
+to self-evaluate the causal graph. Section 3.1 describes the causal graph extraction step. Section 3.2
+describes the counterfactual inference step. Evaluation is described in Sections 4.3 and 5. Figure 1
+illustrates the complete pipeline.
+3
+
+
+=== PAGE 4 ===
+H0
+Lorem ipsum dolor sit amet, consectetur
+Lorem ipsum dolor sit amet, consectetur
+Lorem
+ipsum elit,
+dolorsed
+sit do
+amet,
+consectetur
+adipiscing
+eiusmod
+tempor
+adipiscing elit, sed do eiusmod tempor
+adipiscing
+elit,utsed
+do et
+eiusmod
+incididunt
+labore
+dolore tempor
+magna aliqua.
+incididunt ut labore et dolore magna aliqua.
+incididunt
+ut
+labore
+et
+dolore
+magna
+aliqua.
+Non odio euismod lacinia at.
+Nullam
+Non odio euismod lacinia at. Nullam
+Non odio
+euismod
+Nullam
+vehicula
+ipsum alacinia
+arcu at.
+cursus
+vitae congue
+vehicula ipsum a arcu cursus vitae congue
+vehicula
+ipsum
+a
+arcu
+cursus
+vitae
+congue
+mauris. Pharetra vel turpis nunc eget lorem
+mauris. Pharetra vel turpis nunc eget lorem
+mauris.
+Pharetra
+turpis
+nunc eget
+dolor sed.
+Ut vel
+morbi
+tincidunt
+auguelorem
+interdum
+dolor sed. Ut morbi tincidunt augue interdum
+dolor
+sed. Ut
+morbi
+augue
+interdum
+velit
+euismod
+in tincidunt
+pellentesque
+massa.
+velit euismod in pellentesque massa.
+velitTincidunt
+euismod in
+pellentesque
+massa.
+augue
+interdum velit
+euismod in
+Tincidunt augue interdum velit euismod in
+Tincidunt
+augue massa
+interdum
+velit euismod
+pellentesque
+placerat.
+Nunc in
+lobortis
+pellentesque massa placerat. Nunc lobortis
+pellentesque
+massa
+placerat.
+Nunc
+lobortis
+mattis
+aliquam
+faucibus
+purus.
+At erat
+mattis aliquam faucibus purus. At erat
+mattis
+aliquam faucibus
+purus.
+At eratelit at.
+pellentesque
+adipiscing
+commodo
+pellentesque adipiscing commodo elit at.
+pellentesque
+adipiscing
+commodo
+at.viverra
+Venenatis cras
+sed felis
+eget. elit
+Neque
+Venenatis cras sed felis eget. Neque viverra
+Venenatis
+cras
+sed felis
+eget. tortor aliquam
+justo nec
+ultrices.
+Tincidunt
+justo nec ultrices. Tincidunt tortor aliquam
+nulla facilisi cras fermentum odio eu feugiat.
+nulla facilisi cras fermentum odio eu feugiat.
+Tristique nulla aliquet enim tortor at. Iaculis
+Tristique nulla aliquet enim tortor at. Iaculis
+at erat pellentesque adipiscing. Scelerisque
+at erat pellentesque adipiscing. Scelerisque
+eu ultrices vitae auctor. Luctus venenatis
+eu ultrices vitae auctor. Luctus venenatis
+lectus magna fringilla urna porttitor rhoncus
+lectus magna fringilla urna porttitor honcus
+dolor.
+dolor.
+
+H1
+
+H0
+H1
+
+H0
+H1
+
+0
+
+0
+
+0
+1
+
+2
+
+1
+
+1
+
+2
+
+2
+score
+
+7
+3
+
+3
+
+3
+
+4
+4
+8
+
+5
+
+1. Causal Graph Extraction
+
+5
+
+2. Graph Summarisation
+
+5
+
+3. Counterfactual queries
+
+4. Causal Graph Evaluation
+
+Figure 1: Overview of the proposed framework. (1) An LLM extracts causal variables and their
+corresponding causal relationships from the input text. (2) Multiple graphs are generated and merged
+into a single graph if multiple text snippets are given in input. (3) The resulting causal graph is edited
+using ablation, intervention, and prediction steps to build counterfactual instantiations. The LLM
+performs inference given the variables’ parent values. (4) The LLM self-evaluates the original and
+counterfactual graphs.
+
+3.1
+
+Causal Structure Discovery from Natural Language
+
+We prompt an LLM to read an input document and r

@@ -1,0 +1,53 @@
+=== PAGE 11 (continued) ===
+, 29]. Our paired comparisons bring
+readout design and adaptation scope together in a typed decision model used for cross-request
+entailment reranking.
+
+9. Conclusion
+Fixed-checkpoint comparisons show that direct selection and entailment reranking can favor
+different option readouts, indicating that design choices for single-request selection need not
+transfer unchanged to cross-request reranking. Motivated by this observation, we pair meanspan pooling over each NLI option with selective backbone adaptation restricted to attention and
+DeltaNet projections, jointly adjusting how option states are extracted and how the backbone
+is updated. Matched comparisons under a tuned one-epoch recipe establish the gains from
+both choices, while pointer-position, parameter-budget, and head-capacity controls clarify their
+respective contributions.
+On NeoHorse-1-4B, selective adaptation improves MC11 from 50.28% to 52.49%, and adding
+mean-span pooling reaches 53.39%, with both steps positive in all four fold–seed settings.
+Together, these changes improve reranking accuracy by about 3.1 pp while reducing trainable
+parameters by 55.2%.
+
+11
+
+
+=== PAGE 12 ===
+References
+[1] Seyedarmin Azizi, Erfan Baghaei Potraghloo, and Massoud Pedram. 2026. Labels override definitions in Jev-style typed decision models. Preprint, arXiv:2610.02586.
+[2] Parishad BehnamGhader, Vaibhav Adlakha, Marius Mosbach, Dzmitry Bahdanau, Nicolas Chapados, and Siva Reddy. 2024. LLM2Vec: Large language models are secretly powerful text encoders. In
+First Conference on Language Modeling.
+[3] Benchmark Heaven. 2026. JevBench: Benchmark for AI decision models. Benchmark repository.
+Accessed 11 October 2026.
+[4] Bespoke Labs and Maheswaran Sathiamoorthy. 2026. Nimble. Software and dataset repository.
+Revision f136b3f75721fda4ea961f73993cc50b08488835; accessed 2026-10-11.
+[5] Dan Biderman, Jacob Portes, Jose Javier Gonzalez Ortiz, Mansheej Paul, Philip Greengard, Connor
+Jennings, Daniel King, Sam Havens, Vitaliy Chiley, Jonathan Frankle, Cody Blakeney, and John P.
+Cunningham. 2024. LoRA learns less and forgets less. Transactions on Machine Learning Research.
+[6] Yonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. 2020. PIQA: Reasoning
+about physical commonsense in natural language. In Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 34, pages 7432–7439.
+[7] Iñigo Casanueva, Tadas Temčinas, Daniela Gerz, Matthew Henderson, and Ivan Vulić. 2020. Efficient
+intent detection with dual sentence encoders. In Proceedings of the 2nd Workshop on Natural Language
+Processing for Conversational AI, pages 38–45, Online. Association for Computational Linguistics.
+[8] Nan Chen, Soledad Villar, and Soufiane Hayou. 2026. Learning rate scaling across LoRA ranks and
+transfer to full finetuning. In Proceedings of the 43rd International Conference on Machine Learning,
+volume 306 of Proceedings of Machine Learning Research, pages 17039–17084. PMLR.
+[9] Christopher Clark, Kenton Lee, Ming-Wei Chang, Tom Kwiatkowski, Michael Collins, and Kristina
+Toutanova. 2019. BoolQ: Exploring the surprising difficulty of natural yes/no questions. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics:
+Human Language Technologies, Volume 1 (Long and Short Papers), pages 2924–2936, Minneapolis,
+Minnesota. Association for Computational Linguistics.
+[10] Peter Clark, Isaac Cowhey, Oren Etzioni, Tushar Khot, Ashish Sabharwal, Carissa Schoenick, and
+Oyvind Tafjord. 2018. Think you have solved question answering? try ARC, the AI2 reasoning
+challenge. Preprint, arXiv:1803.05457.
+[11] Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser,
+Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher Hesse, and John
+Schulman. 2021. Training verifiers to solve math word problems. Preprint, arXiv:2110.14168.
+[12] Xiang Deng, Yu Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi 

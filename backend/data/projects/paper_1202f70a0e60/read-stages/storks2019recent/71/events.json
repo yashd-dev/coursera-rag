@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Page 84 (continued)**\n- The 11th International Workshop on Semantic Evaluation (SemEval-2017), pp. 58\u201368, Vancouver, Canada [Miltsakaki et al., 2004; Minard et al., 2016]\n- Minsky (1974) A Framework for Representing Knowledge; Minsky (2000) Commonsense-based interfaces\n- Morgenstern et al. (2016) Planning, Executing, and Evaluating the Winograd Schema Challenge; Morgenstern & Ortiz (2015) The Winograd Schema Challenge\n\n**Page 85**\n- Mostafazadeh et al. (2016) A Corpus and Cloze Evaluation Framework for Deeper Understanding of Commonsense Stories; Mostafazadeh et al. (2017) LSDSem 2017 Shared Task: The Story Cloze Test\n- Negri et al. (2012) Semeval-2012 Task 8 Cross-lingual Textual Entailment; Negri et al. (2013) Semeval-2013 Task 8 Cross-lingual Textual Entailment\n- Nematzadeh et al. (2018) Evaluating Theory of Mind in Question Answering\n- Ng et al. (2018) ... text cut off\n\n**Limitations**\n- No results or problem statements from this survey segment are reported\n- Text ends mid-citation; methodological details are absent\n\n**Two exact quotes**\n- \"The Penn Discourse Treebank. In Proceedings of the Fourth International Conference on Language Resources and Evaluation (LREC-2004), p. 4, Lisbon, Portugal.\"\n- \"The Story Cloze Test. In Proceedings of the 2nd Workshop on Linking Models of Lexical, Sentential and Discourse-Level Semantics, pp. 46\u201351, Valencia, Spain.\"\n\n**Note:** Segment contains references only; no problem, method, or results attributable to the survey paper itself."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2738,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7821f0b5ffe1Ap0ScUL7HBubB"
+  }
+]

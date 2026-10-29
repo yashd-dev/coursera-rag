@@ -1,0 +1,42 @@
+=== PAGE 41 (continued) ===
+guistic resources include the Penn Treebank (Marcus et al., 1993) and several derivatives of it. The Penn Treebank is perhaps the first annotated
+corpus that drove the development of earlier machine learning approaches in the 1990s. It started
+with POS tags and syntactic structures based on context-free grammar. The Penn Discourse Treebank (PDTB) is built upon it, adding annotated discourse structures (Miltsakaki, Prasad, Joshi, &
+Webber, 2004). OntoNotes revises information in the Wall Street Journal portion of these treebanks,
+integrating them with word sense, proper name, coreference, and ontological annotations, as well
+as including some Chinese linguistic annotations (Pradhan, Hovy, Marcus, Palmer, Ramshaw, &
+Weischedel, 2007). The Abstract Meaning Representation (AMR) corpus extends the Penn Treebank into a sentence-level semantic formalism (Banarescu, Bonial, Cai, Georgescu, Griffitt, Hermjakob, Knight, Koehn, Palmer, & Schneider, 2013). All of these linguistic corpora can be downloaded by members of the Linguistic Data Consortium at https://www.ldc.upenn.edu/.
+Lexical resources. A widely used lexical resource for commonly used nouns, verbs, adjectives
+and adverbs is WordNet 12 (Miller, 1995). Different from a traditional online dictionary, WordNet organizes words in terms of concepts (i.e., a list of synonyms) and their semantic relations
+to other words (e.g., antonymy, hyponymy/hypernymy, entailment, etc.). There are also resources
+specifically for verbs. VerbNet 13 by Schuler (2005) is a hierarchical English verb lexicon that is
+created based on the verb classes from the English Verb Classes and Alternations (EVCA) resource
+by Levin (1993). VerbNet defines many classes of verbs and their argument structures, selectional
+restrictions on the arguments, and syntactic descriptions. Other resources for verbs include VerbOcean 14 (Chklovski & Pantel, 2004) which captures a network of finer-grained relations among a
+smaller set of common verbs, and VerbCorner 15 (Hartshorne et al., 2013) which provides crowdsourced validation for VerbNet.
+Frame semantics. Beyond annotations over large corpora or lexical hierarchies, verb semantics
+may also be captured by frames. Frames were defined by Minsky (1974) as cognitive data structures
+12. https://wordnet.princeton.edu/
+13. https://verbs.colorado.edu/~mpalmer/projects/verbnet.html
+14. https://demo.patrickpantel.com/demos/verbocean/
+15. https://archive.gameswithwords.org/VerbCorner/about.php
+
+41
+
+
+=== PAGE 42 ===
+S TORKS , G AO , & C HAI
+
+for information about prototypical events and situations. After further development in works by Fillmore (1976) and Fillmore (1977), the FrameNet project began annotating large texts to be used for
+such semantic generalization (Baker, Fillmore, & Lowe, 1998). This resulted in the FrameNet resource 16 (Fillmore, Baker, & Sato, 2002), which provides a database of semantic frames describing
+situations, information about them (e.g., the expected participants), relations between them, and
+sentences annotated for elements of the frames. It additionally includes a lexical database of nouns,
+verbs, and adjectives which are paired with the frames. This important resource inspired the influential and well-studied task of semantic role labeling (Gildea & Jurafsky, 2000; Punyakanok, Roth,
+Yih, & Zimak, 2004), where models are trained to annotate sentences for types of participants in
+events. PropBank 17 by Kingsbury, Palmer, and Marcus (2002) uses frames to provide the annotation
+of similar predicate-argument structures over the Wall Street Journal portion of the Penn Treebank
+(Taylor, Marcus, & Santorini, 2003). Other structures for common events have been proposed, such
+as plans (Miller, Galanter, & Pribram, 1960) and scripts (Schank & Abelson, 1988), which have
+inspired popular language tasks like the narrative cloze task (Chambers & Jurafsky, 2008).
+Pre-trained semantic vectors. Recent years have seen a surge of using continuous numeric vector
+representatio

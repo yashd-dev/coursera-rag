@@ -1,0 +1,47 @@
+=== PAGE 32 (continued) ===
+new state-of-theart model struggled. Variants of adversarial filtering were used in creating other benchmarks such
+as WinoGrande (Sakaguchi et al., 2019) and AlphaNLI (Bhagavatula et al., 2019) to respectively
+remove statistical biases and select the most challenging pairs of choices from a pool of hypotheses,
+32
+
+
+=== PAGE 33 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+resulting in low performance from state-of-the-art baseline approaches. As this iterative process of
+discovering stronger classifiers and in turn strengthening the adversarial filtering continues, an important question will be when all of the statistical biases are removed, or if it will ever be possible to
+remove all statistical biases. Nonetheless, given these recent successes, adversarial filtering should
+continue to be used on new benchmarks to challenge the latest state-of-the-art models, and perhaps
+be used to strengthen existing benchmarks where possible.
+Another technique to avoid these biases proposed by Belinkov, Poliak, Shieber, Van Durme, and
+Rush (2019), particularly in textual entailment problems, is to train a model to predict the premise
+sentence given the hypothesis sentence and class label. This training setup ensures that the model
+ignores unexpected language artifacts in the premise, attempting to remove superficial statistical
+biases. While the development of these paradigms to avoid data bias is promising, a continuous
+effort in finding and improving techniques to avoid these kinds of biases will be important as the
+state of the art continues to evolve.
+2.2.4 C OLLECTION M ETHODS
+Methods to collect benchmark data ideally should be cost-efficient and should result in high-quality
+and unbiased data. Both manual and automatic approaches have been applied. Manual curation of
+data can be done by experts or researchers, or through crowd workers, which comes with its own set
+of considerations. Automatic approaches often involve automatically generating data by applying
+language models or automatically extracting or mining data from existing resources. As detailed in
+Appendix A, a benchmark is often created through a combination of these approaches. For the rest
+of this section, we summarize pros and cons for these different approaches.
+Manual versus automatic generation. Until recently, many of the existing benchmarks were created manually by groups of experts. This may involve tedious processes like manually collecting
+data from other corpora or the Internet, e.g., the first RTE Challenge (Dagan et al., 2005), or authoring most data from scratch, e.g., the Winograd Schema Challenge (Levesque, 2011; Levesque
+et al., 2012; Morgenstern & Ortiz, 2015; Morgenstern et al., 2016). This approach ensures data is
+high quality and thus typically requires little validation, however it is not scalable. These datasets
+are often small compared to those created with other approaches.
+Recent advances in NLP make it possible to automatically generate textual data (e.g., natural
+language statements, questions, etc.) for benchmark tasks. Although this approach is scalable and
+efficient, the quality of data varies, and often depends directly on the language model used. For
+example, in bAbI (Weston et al., 2016), as agents interacted with objects in a virtual world and with
+each other, examples were automatically generated. This method ensures that produced data are
+sensible to the constraints of the physical world. However, as the questions and answers are written
+with simple structure, the data is easily understood by machines. Most of the dataset is solved
+with 100% accuracy just by baseline systems. Consequently, the bAbI tasks are often considered as
+toy tasks. A more sophisticated rule-based method for probabilistically generating text data which
+encourages more diverse language without any added biases is presented by Manning and Hudson
+(2018). Though automatic natural language generation methods are improving, it is likely that such
+app

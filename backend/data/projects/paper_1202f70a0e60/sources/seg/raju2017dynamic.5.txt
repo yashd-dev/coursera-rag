@@ -1,0 +1,85 @@
+=== PAGE 3 (continued) ===
+question - answering problem
+where the premise corresponds to the “facts” while the
+hypothesis is the “question. ” The model’s goal is thus to
+quantify the extent to which the hypothesis supports or denies
+the premise, which ranges from entailment to contradiction
+and neutrality.
+The reasoning behind the premise and the hypothesis in our
+DMN framework involves an important module called
+episodic memory, which refines the perception of the external
+input data (Hearne, 2017). The episodic memory module
+should be able to update its state repeatedly, which may be
+achieved in this case in terms of multiple ‘hops, ’ during each
+hop, the information processing unit focuses on some parts of
+the premise while ignoring others. Each hop allows the model
+to reread the premise, which enables it to establish distinctive
+features that can be plausible in answering the hypothesis.
+This multi - hop approach is somewhat akin to how a human
+would revisit the same information to get more understanding
+before deciding.
+In our methodology, a significant enhancement is that the
+memory update can be dynamic. While working through the
+premise, the model constantly updates the memory state
+depending on the relation of each sentence to the hypothesis
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2221
+
+
+=== PAGE 4 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+(Buch et al., 2017). This relevance is not fixed but changes
+with the progression of the model as it learns from each hop
+in the process. Again, having multiple sections that derive
+from the same premise gives the model a more comprehensive
+understanding of the relationship between the premise and
+hypothesis. This interactive refinement process is essential for
+figuring out the intricate, common dependency structures
+when inferring meaning from natural language.
+The proposed capability of dynamic change to memory state
+also enables our model to work effectively in NLI conditions
+in general, not limited to the simple dependency of two
+sentences. For instance, when the connection between the
+premise and the hypothesis is unclear, the model employs
+several hops to reveal the details of the connection. This is a
+significant advantage over more rigid model types, which
+might need help capturing such relations in a single step.
+By posing the NLI as a question - answering problem in the
+context of DMNs, we could benefit from the proposed
+memory optimization and iterative reasoning and saw
+potential in integrating a broad spectrum of other NLP
+techniques. For example, attention mechanisms and advanced
+sentence encoders such as transformers can be applied to the
+architecture of DMN for performance improvement. Due to
+such possibilities, DMNs are a very flexible tool for
+addressing the refers of natural language inference (Ye et al.,
+2015).
+
+Figure 5: Natural Language Processing tasks for legal
+documents
+Incorporating Multi - Hop Reasoning in DMNs
+Dynamic Memory Networks (DMNs) sets them apart from
+other models as they are capable of multi - hop reasoning—a
+mechanism for interacting with the memory state by
+repeatedly processing the input data. This feature proves
+especially helpful in Natural Language Inference, where
+analyses of the connections between a premise and a
+hypothesis may involve more than a cursory look at the data.
+Using multiple hops in DMNs to make an inference is helpful
+because it mimics what a human being would do when
+assessing evidence: revisit the same evidence multiple times
+at increasingly finer granularity levels before arriving at a
+decision.
+According to NLI, the complexity of available information
+may often be out of comprehension in the first reading of the
+premise. For example, some words or the meanings of some
+words used in the premise might need to be fu

@@ -1,0 +1,60 @@
+=== PAGE 91 (continued) ===
+ S., Wallach, H., Fergus, R., Vishwanathan, S., & Garnett, R. (Eds.), Advances in Neural Information
+Processing Systems 30, pp. 5998–6008. Curran Associates, Inc.
+Voorhees, E. M. (2000). The TREC-8 Question Answering Track. Natural Language Engineering,
+7, 361–378.
+91
+
+
+=== PAGE 92 ===
+S TORKS , G AO , & C HAI
+
+Wang, A., Pruksachatkun, Y., Nangia, N., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. R.
+(2019). SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding
+Systems. arXiv: 1905.00537.
+Wang, A., Singh, A., Michael, J., Hill, F., Levy, O., & Bowman, S. R. (2018). GLUE: A Multi-Task
+Benchmark and Analysis Platform for Natural Language Understanding. In Proceedings of
+the 2018 EMNLP Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for
+NLP, Brussels, Belgium. Association for Computational Linguistics.
+Wang, Z., Zhang, Y., & Chang, C.-Y. (2017). Integrating Order Information and Event Relation
+for Script Event Prediction. In Proceedings of the 2017 Conference on Empirical Methods in
+Natural Language Processing (EMNLP 2017), pp. 57–67, Copenhagen, Denmark. Association for Computational Linguistics.
+Warstadt, A., Singh, A., & Bowman, S. R. (2018). Neural Network Acceptability Judgments. arXiv:
+1805.12471.
+Weston, J., Bordes, A., Chopra, S., Rush, A. M., van Merriënboer, B., Joulin, A., & Mikolov, T.
+(2016). Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks. In
+Proceedings of the 4th International Conference on Learning Representations (ICLR 2016),
+San Juan, Puerto Rico.
+Weston, J., Chopra, S., & Bordes, A. (2015). Memory Networks. In Proceedings of the 3rd International Conference on Learning Representations (ICLR 2015), San Diego, CA, USA.
+White, A. S., Rastogi, P., Duh, K., & Van Durme, B. (2017). Inference is Everything: Recasting
+Semantic Resources into a Unified Evaluation Framework. In Proceedings of the Eighth
+International Joint Conference on Natural Language Processing (IJCNLP 2017), pp. 996–
+1005, Taipei, Taiwan. Asian Federation of Natural Language Processing.
+White, A. S., & Rawlins, K. (2018). The role of veridicality and factivity in clause selection. In
+Proceedings of the 48th Annual Meeting of the North East Linguistic Society, Amherst, MA,
+USA. GLSA Publications.
+Williams, A., Nangia, N., & Bowman, S. R. (2017). A Broad-Coverage Challenge Corpus for
+Sentence Understanding through Inference. In Proceedings of the 2018 Conference of the
+North American Chapter of the Association for Computational Linguistics: Human Language
+Technologies (NAACL HLT 2018), New Orleans, LA, USA. Association for Computational
+Linguistics.
+Winn, O., & Muresan, S. (2018). ‘Lighter’ Can Still Be Dark: Modeling Comparative Color Descriptions. In Proceedings of the 56th Annual Meeting of the Association for Computational
+Linguistics (ACL 2018), pp. 790–795, Melbourne, Australia. Association for Computational
+Linguistics.
+Winograd, T. (1972). Understanding Natural Language. Academic Press, New York.
+Woods, W. A. (1975). What’s in a Link: Foundations for Semantic Networks. Tech. rep. BBN-3072,
+Bolt Beranek and Newman Inc., Cambridge, MA, USA.
+Wu, W., Li, H., Wang, H., & Zhu, K. Q. (2011). Towards a Probabilistic Taxonomy of Many Concepts. http://www.microsoft.com/en-us/research/wp-content/uploads/2011/03/paper-2.pdf.
+92
+
+
+=== PAGE 93 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Wu, Y., Schuster, M., Chen, Z., Le, Q. V., Norouzi, M., Macherey, W., Krikun, M., Cao, Y., Gao,
+Q., Macherey, K., & others (2016). Google’s Neural Machine Translation System: Bridging
+the Gap between Human and Machine Translation. arXiv: 1609.08144.
+Xie, Q., Lai, G., Dai, Z., & Hovy, E. (2017). Large-scale Cloze Test Dataset Created by Teachers. In
+Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing
+(EMNLP 2017), Copenhagen, Denmark. Association for Computational Linguistics.
+Xu, F. F., Lin, B. Y., & Zhu, K. (2018a). Automatic Extraction of Common

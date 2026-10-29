@@ -1,0 +1,47 @@
+=== PAGE 63 (continued) ===
+enchmark tasks that combine language and vision.
+40. https://www.wikidata.org/
+
+63
+
+
+=== PAGE 64 ===
+S TORKS , G AO , & C HAI
+
+Language-related benchmarks. Many early corpora for classical NLP tasks such as semantic
+role labeling, relation extraction, and paraphrase may also require commonsense knowledge and
+reasoning, though this was not emphasized or investigated at the time. For example, in creating the
+Microsoft Research Paraphrase Corpus, Dolan and Brockett (2005) found that the task of annotating
+text pairs was difficult to streamline because this often required commonsense, suggesting that the
+paraphrases within the corpus require commonsense knowledge and reasoning to identify. Some
+such tasks are actually included in the multi-task benchmarks like Inference is Everything (White
+et al., 2017), GLUE (Wang et al., 2018), and DNC (Poliak et al., 2018a).
+More recent related tasks include challenging textual conversational benchmarks. One example
+is QuAC (Choi et al., 2018), which asks questions about Wikipedia articles through a discourse for
+robust contextual question answering, but does not require commonsense in the way that the similar
+CoQA benchmark does (Reddy et al., 2018).41 Another related conversation dataset created by Xu,
+Zhou, Young, Zhao, Huang, and Zhu (2018b) explores the use of commonsense knowledge from
+ConceptNet in producing higher quality and more relevant responses for chatbots.
+Besides English, there are also benchmarks in other languages. For example, there have been
+RTE datasets created in Italian42 and Portuguese43 , and cross-lingual RTE datasets have appeared in
+several SemEval shared tasks over the years (Negri, Marchetti, Mehdad, Bentivogli, & Giampiccolo,
+2012, 2013; Cer et al., 2017) to encourage progress in machine translation and content synchronization. There also exist various cross-lingual knowledge resources, including the latest version of
+ConceptNet (Speer et al., 2017), which contains relations from several multilingual resources.
+Visual benchmarks. External knowledge and reasoning play an important role in integrating language and vision, for example, grounding language to perception (Gao, Doering, Yang, & Chai,
+2016), language-based justification for action recognition (Yang, Gao, Sadiya, & Chai, 2018a), and
+visual question answering (Kafle & Kanan, 2017). Visual benchmarks requiring external knowledge
+include VQA benchmarks like the original VQA (Agrawal, Lu, Antol, Mitchell, Zitnick, Batra, &
+Parikh, 2015), other similar VQA datasets like Visual7W (Zhu, Groth, Bernstein, & Fei-Fei, 2016),
+and the newer GQA based on scene graphs of images (Hudson & Manning, 2019). There also exist similar datasets with synthetic images, such as CLEVR (Johnson, Hariharan, van der Maaten,
+Fei-Fei, Zitnick, & Girshick, 2017) and the work by Suhr, Lewis, Yeh, and Artzi (2017). They
+also include the tasks of commonsense action recognition and justification, which are found in the
+dataset by Fouhey, Kuo, Efros, and Malik (2018), and Visual Commonsense Reasoning (VCR) by
+Zellers, Bisk, Farhadi, and Choi (2019). Some visual datasets are geared toward specific reasoning
+processes, e.g., the dataset by (Winn & Muresan, 2018) for learning the directional changes associated with comparative adjectives for colors; and the verb causality dataset by Gao, Yang, Chai, and
+Vanderwende (2018), which provides both natural language descriptions and images for the effects
+of actions upon objects.
+These are all image-based, but we are also beginning to see similar video-based datasets, such
+as Something Something (Goyal, Kahou, Michalski, Materzyńska, Westphal, Kim, Haenel, Fruend,
+Yianilos, Mueller-Freitag, Hoppe, Thurau, Bax, & Memisevic, 2017), which aims to evaluate visual commonsense through over 100,000 videos portraying everyday actions. We have also seen
+the vision-and-language navigation (VLN) task such as Room-to-Room (R2R) by Anderson, Wu,
+41. Yatskar (2018) give a detailed account of further differences be

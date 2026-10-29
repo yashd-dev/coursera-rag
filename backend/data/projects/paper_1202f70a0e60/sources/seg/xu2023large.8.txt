@@ -1,0 +1,72 @@
+=== PAGE 6 (continued) ===
+ing ability, which may be difficult to learn
+with a few question-answer samples without rationales. But
+the task form of deductive and abductive reasoning is easy
+to follow, which provides the application potential for fewshot ICL.
+
+5
+
+F INE - LEVEL E VALUATIONS
+
+This section presents a detailed analysis of the logical reasoning capabilities of LLMs from various perspectives.
+5.1
+
+Are LLMs Rigorous Logical Reasoning?
+
+While LLMs may produce correct answers in some cases, it
+is unclear whether they perform the correct logical reasoning or simply arrive at the right answer by chance. Therefore, we delve deeper into the reasoning process beyond the
+output answers. We view cases where LLMs provide a correct answer along with a correct and complete explanation
+as Rigorous. The detailed results are shown in Table 3. Compared with the simple judgment of answer correctness, all
+selected LLMs present obvious performance drops. For simplicity, we only take the zero-shot setting into consideration.
+In Fig. 5a, we calculate the ratio of rigorous performance and
+answer accuracy. The higher values (darker colors) mean
+better performance in rigorous reasoning. According to the
+results, BARD shows the best capability in rigorous reasoning, consistently under four reasoning manners. Meanwhile,
+
+ChatGPT still struggles in deductive and inductive settings,
+while text-davinci-003 comes last in both abductive and
+mixed-form manners.
+Further, LLMs are best at keeping rigorous reasoning in
+the abductive setting, while they are weak in the deductive
+and inductive settings. The finding is a little different from
+the analysis of simple accuracy conditions in the previous
+section. We argue that the setting of abductive reasoning
+requires the LLMs to achieve the reasoning reversely, which
+can activate LLMs to provide sufficient reasoning process.
+In a deductive reasoning setting, the reasoning chain is
+sequential, which may cause LLMs to be in a lazy mode
+and harm rigorous reasoning.
+In Table 3, we also include the two conditions (1) when
+correct answer and correct explanations are satisfied, and
+(2) when correct answer and complete explanations are satisfied. Results vary a lot with different datasets and different
+LLMs. Overall, ChatGPT performs relatively well in keeping
+correct explanations while it may fail to maintain complete
+explanations in most cases. In comparison, text-davinci-003
+exhibits stronger characteristics in maintaining the completeness of explanations, compared with the correctness
+of explanations. These findings of the respective reasoning
+preferences are expected to guide the future utilization of
+LLMs.
+5.2
+
+Are LLMs Self-aware Logical Reasoners?
+
+From an alternative perspective, the redundancy of the
+generated content by LLMs has been a frequently discussed
+topic, as it is deemed an important metric for assessing
+their practicality. In this paper, we consider LLMs with less
+redundant content as more self-aware, as they can effectively
+express the necessary information without outputting all
+possible answers. Table 4 presents the evaluation results
+of LLMs’ self-awareness. Similar to our previous approach,
+we compute the weighted results for each reasoning setting
+and derive the self-awareness scores shown in Fig. 5b. The
+darker color indicates a stronger self-awareness capability. Results indicate that text-davinci-003 exhibits notable
+advantages, particularly in the inductive, abductive, and
+mixed-form reasoning settings. Additionally, it ranks second
+in the deductive setting. Conversely, BARD performs poorly
+in deductive, abductive, and mixed-form reasoning settings.
+In comparison to classification tasks, LLMs tend to
+generate redundant answers more frequently in generation
+tasks, such as α-NLI vs. α-NLG. This is because openended questions can prompt LLMs to generate content from
+various perspectives, which can lead to the inclusion of
+redundant information. Furthermore, the mixed-form reasoning setting observes significantly f

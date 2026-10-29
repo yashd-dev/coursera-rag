@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## raju2017dynamic (13/16) \u2014 notes\n\n**Problem**  \n- NLI requires reasoning processes akin to QA tasks (premise\u2013hypothesis relationships).  \n- DMNs designed to incorporate iterative memory updates to improve consideration of these interactions, building on their advantage: memory states update on an iterative basis as sentences combine.\n\n**Method**  \n- Model incorporates episodic memory updates; attention mechanism iteratively draws focus to cognitively relevant words.  \n- Gradual premise/hypothesis representation improvement across iterations reduces inferential errors.  \n- Multi-time inspection of memory updates is particularly beneficial for NLI, outperforming traditional sentence encoding.\n\n**Reported results**  \n- (p.10 continued) Overall results do not exceed state\u2011of\u2011the\u2011art on SNLI, but improvements over the baseline are observed and are particularly notable on more complex sentence pairs.  \n- Memory inspection for updates is beneficial; outperforms traditional encoding for sentences generally.\n\n**Limitations**  \n- (p.10 continued) Training is time\u2011consuming; long sequences require several memory hops, and designed attention mechanisms lead to longer training time and higher resource utilization.  \n- (p.14) Training slower due to DMN complexity; handling large data puts pressure on computing resources.\n\n**Two short exact quotes**  \n- \u201cThe fact that the memory could be inspected several times for updates was particularly beneficial in the context of NLI and outperformed traditional encoding for sentences more generally.\u201d (p.10 continued)  \n- \u201cthe obtained results do not exceed the state of the art achieved on the the SNLI dataset\u201d (p.10 continued)\n\n**Future work**  \n- (p.14) Minimizing time/space complexity of DMNs critical for large\u2011scale applications in limited\u2011compute environments.  \n- Exploring sparse attention, memory compression, parallelization methods, and hardware implementations.  \n- Expanding complex sentence encoding beyond GRU\u2011based encoders; transformer models (BERT, GPT) hold promise.  \n\n*References-only segment: summary provided; no invented findings.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2290,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781d1306ffeeO701Cg01xMTsx"
+  }
+]

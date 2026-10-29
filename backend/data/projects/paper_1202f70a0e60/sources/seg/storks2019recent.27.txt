@@ -1,0 +1,47 @@
+=== PAGE 33 (continued) ===
+roaches will still require some manual validation.
+Automatic generation versus text mining. As millions of natural language texts are publicly
+available on the Internet and in existing datasets, it is possible to build language benchmarks from
+these texts by automatically mining texts and extracting sentences. This process is most successful
+33
+
+
+=== PAGE 34 ===
+S TORKS , G AO , & C HAI
+
+when the information source is created by experts and highly accurate. For example, in the CLOTH
+(Xie et al., 2017) benchmark, data instances were mined from fill-in-the-blank English tests created
+by human teachers. While other automatically generated cloze tasks like CBT (Hill et al., 2015)
+choose missing words mostly randomly, CLOTH is more challenging as the missing word in each
+example was chosen by an expert. For many other benchmarks that are built by mining less reliable
+or consistent sources, there is often a need for automatic or human validation or filtering, e.g., in
+creating SWAG (Zellers et al., 2018), which was mined in part from other corpora, such as the
+Large Scale Movie Description Challenge (Rohrbach et al., 2017) and the captions in ActivityNet
+(Heilbron et al., 2015).
+Crowdsourcing considerations. Acquiring language data directly from crowd workers has become more feasible in recent years due to the growth of crowdsourcing platforms, e.g., Amazon
+Mechanical Turk. Crowdsourcing has enabled researchers to create larger datasets than ever before,
+however it comes with a set of considerations relating to task complexity, worker qualification, data
+validation, and cost optimization.
+Task complexity. When creating a crowdsourcing task, it is important to consider the difficulty level
+of what crowd workers will be expected to do. When given overly complicated instructions, the
+non-expert crowd workers may find it difficult understanding the instructions and keeping them in
+mind while working on the task. Easy crowdsourcing tasks typically involve quick pass/fail validation or relabeling of data, e.g., in validating SNLI (Bowman et al., 2015). Difficult crowdsourcing
+tasks usually require crowd workers to write large texts, e.g., in creating ROCStories (Mostafazadeh
+et al., 2016), where workers wrote five-sentence stories following a fairly elaborate set of restrictions
+on story content to ensure stories were high-quality, focused, and well-organized. Such restrictions
+must be explained briefly and clearly, and it may take several pilot studies to ensure workers understand and follow the instructions correctly (Mostafazadeh et al., 2016).
+Worker qualification. Regardless of task difficulty, efforts should be made to avoid workers submitting invalid data, whether they are trolls or unable to follow directions. This may be done through
+some sort of qualification task, perhaps requiring a prospective worker to recognize examples of
+acceptable submissions (Mostafazadeh et al., 2016), or testing a prospective worker’s grammar
+(Richardson et al., 2013). It may also be worthwhile to identify excellent workers, and reward
+them and/or recruit them for more work (Mostafazadeh et al., 2016). In our own experience with
+crowdsourcing, we have found that if a worker produces one invalid submission, all of the worker’s
+submissions will likely be invalid, and thus the worker should be rejected and potentially banned
+from the task. On the other hand, if a worker produces an excellent submission, all of the worker’s
+submissions will likely be excellent.
+Data validation. Even though crowdsourced data is produced by non-experts, data can just as easily
+be validated by non-experts. In creating ROCStories, Mostafazadeh et al. (2016) employ several
+novel methods of crowdsourced validation of crowdsourced data. Involved validation is especially
+necessary for difficult crowdsourcing tasks like the authoring of ROCStories, which required crowd
+workers to write long texts following strict guidelines. Crowdsourced data validation typically just
+requires a s

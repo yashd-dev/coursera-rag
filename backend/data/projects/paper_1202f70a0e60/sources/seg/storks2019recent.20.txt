@@ -1,0 +1,79 @@
+=== PAGE 25 (continued) ===
+tion
+answering. Examples from these recasted subtasks are listed in Figure 8.
+Cloze tasks. Another popular format is the cloze task, originally conceived by Taylor (1953). Such
+a task typically involves the deletion of one or more words in a text, essentially requiring one
+to fill in the blank, usually from a set of choices, but not always, e.g., LAMBADA, which is an
+open-ended cloze task (Paperno et al., 2016). This format expands upon the traditional language
+modeling task, i.e., the task of predicting the next word in a sequence of words, inspired by the need
+to calculate a probability distribution of sequences in language for problems like speech recognition
+25
+
+
+=== PAGE 26 ===
+S TORKS , G AO , & C HAI
+
+(A) GLUE, Question Answering NLI
+Context: Who was the main performer at
+this year’s halftime show?
+Hypothesis: The Super Bowl 50 halftime
+show was headlined by the British rock
+group Coldplay with special guest performers Beyoncé and Bruno Mars, who
+headlined the Super Bowl XLVII and Super Bowl XLVIII halftime shows, respectively.
+
+(B) IIE, Definite Pronoun Resolution
+Context: The bird ate the pie and it died.
+Hypothesis: The bird ate the pie and the
+bird died.
+Label: entailed
+(C) DNC, Figurative Language
+Context: Carter heard that a gardener who
+moved back to his home town rediscovered his roots.
+Hypothesis: Carter heard a pun.
+
+Label: entailed
+
+Label: entailed
+
+Figure 8: Examples from tasks within the General Language Understanding Evaluation (GLUE)
+benchmark by Wang et al. (2018), Inference is Everything (IIE) by White et al. (2017),
+and the Diverse NLI Collection (DNC) by Poliak et al. (2018a). Each task is recast from
+preexisting data into classic RTE format.
+
+(Bahl, Jelinek, & Mercer, 1983) and machine translation (Brown, Cocke, Della Pietra, Della Pietra,
+Jelinek, Lafferty, Mercer, & Roossin, 1990). The cloze format has been used in several recent NLI
+benchmarks, including CBT (Hill et al., 2015), the Story Cloze Test for the ROCStories benchmark
+(Mostafazadeh et al., 2016), CLOTH (Xie et al., 2017), SWAG (Zellers et al., 2018), and ReCoRD
+(Zhang et al., 2018). These recent benchmarks provide anywhere from two to ten options to fill in
+the blank, and range from requiring the prediction of a single word to parts of sentences and entire
+sentences. Examples of cloze tasks are listed in Figure 9.
+Traditional multiple-choice tasks. If not in entailment or cloze form, classification tasks tend to
+be formulated as traditional multiple-choice questions. Benchmarks which use this format include
+COPA (Roemmele et al., 2011), the Winograd Schema Challenge (Davis, Morgenstern, & Ortiz,
+2018), and MCScript (Ostermann et al., 2018). Two-way and four-way decision questions are the
+most common among the surveyed multiple-choice benchmarks.
+Open-ended tasks. On the other hand, some benchmarks require more open-ended responses
+rather than providing a small list of alternatives to choose from. Answers may be restricted to spans
+of a given text, e.g., SQuAD (Rajpurkar et al., 2016, 2018) or QuAC (Choi et al., 2018). They
+may be less restricted to a subset of a large number of category labels, e.g., the Maslow, Reiss,
+and Plutchik tasks in Story Commonsense (Rashkin et al., 2018a). And of course, they may be
+purely open-ended, e.g., Event2Mind (Rashkin et al., 2018b), NarrativeQA (Kočiský et al., 2018),
+or DROP (Dua et al., 2019). Examples of these open-ended formats are listed in Figure 10.
+9. Example extracted from Story Commonsense test data available at https://uwnlp.github.io/
+storycommonsense/
+
+26
+
+
+=== PAGE 27 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+(A) CBT (Hill et al., 2015)
+1 Mr. Cropper was opposed to our hiring you .
+2 Not , of course , that he had any personal objection to you , but he is set
+against female teachers , and when a Cropper is set there is nothing on earth
+can change him .
+
+(C) CLOTH (Xie et al., 2017)
+She pushed the door open and found nobody there. "I am the _____ to arrive." She
+t

@@ -1,0 +1,119 @@
+=== PAGE 7 (continued) ===
+.
+Right: Detailed speedup performance of Vicuna-7B with M EDUSA-2 on 8 categories from MT-Bench.
+
+and in models like Zephyr-7B that employ Reinforcement
+Learning from Human Feedback (RLHF). The evaluation is
+conducted on MT-Bench (Zheng et al., 2023), a multi-turn,
+conversational-format benchmark. Detailed settings can be
+found in Appendix B.
+
+ment and other programming-related tasks. The “Extraction”
+category shows the highest speedup at 3.62×, indicating
+that this task is highly optimized by the M EDUSA. Overall,
+the results suggest that the M EDUSA significantly enhances
+inference speed across different model sizes and tasks.
+
+3.1. Case Study: M EDUSA-1 v.s. M EDUSA-2 on Vicuna
+7B and 13B
+
+3.2. Case Study: Training with Self-Distillation on
+Vicuna-33B and Zephyr-7B
+
+Experimental Setup. We use the Vicuna model class (Chiang et al., 2023), which encompasses chat models of varying sizes (7B, 13B, 33B) that are fine-tuned from the Llama
+model (Touvron et al., 2023). Among them, the 7B and
+13B models are trained on the ShareGPT (ShareGPT, 2023)
+dataset, while the 33B model is an experimental model and
+is trained on a private dataset. In this section, we use the
+ShareGPT dataset to train the M EDUSA heads on the 7B
+and 13B models for 2 epochs. We use the v1.5 version of
+Vicuna models, which are fine-tuned from Llama-2 models
+with sequence length 4096.
+
+Experimental Setup. In this case study, we focus on
+the cases where self-distillation is needed. We use the
+Vicuna-33B model (Chiang et al., 2023) and the Zephyr7B model (Tunstall et al., 2023) as examples. Following the procedure described in Section 2.3.2, we first
+generate the datasets with some seed prompts. We use
+ShareGPT (ShareGPT, 2023) and UltraChat (Ding et al.,
+2023) as the seed datasets and collect a dataset at about
+100k samples for both cases. Interestingly, we find that the
+Zephyr model can continue to generate multiple rounds of
+conversation with a single prompt, which makes it easy to
+collect a large dataset. For Vicuna-33B, we generate the
+multi-turn conversations by iteratively feeding the prompts
+from each multi-turn seed conversation using random sampling with temperature 0.3. Both models are trained with
+sequence length 2048 and batch size 128.
+
+Results. We collect the results and show them in Fig. 3.
+The baseline is the default Huggingface implementation.
+In Fig. 3a, we can see that for the 7B models, M EDUSA1 and M EDUSA-2 configurations lead to a significant increase in speed, measuring in tokens processed per second.
+M EDUSA-1 shows a 2.18× speedup, while M EDUSA-2 further improves this to a 2.83×. When applied to the larger
+13B model, M EDUSA-1 results in a 2.33× speed increase,
+while M EDUSA-2 maintains a similar performance gain of
+2.83× over the baseline. We also plot the speedup per category for M EDUSA-2 Vicuna-7B model. We observe that the
+coding category benefits from a 3.29× speedup, suggesting
+that M EDUSA is particularly effective for tasks in this domain. This points to a significant potential for optimizing
+coding LLMs, which are widely used in software develop-
+
+Results. Table 1 complements these findings by comparing
+various M EDUSA-2 models in terms of their acceleration
+rate, overhead, and quality on MT-Bench with GPT-4 acting
+as the evaluator to assign performance scores ranging from
+0 to 10. We report the quality differences of M EDUSA compared to the original model. Notably, while the M EDUSA-2
+Vicuna-33B model shows a lower acceleration rate, it maintains a comparable quality. We hypothesize that this is due
+to a mismatch between the hidden training dataset and the
+dataset we used for self-distillation. Hence, the model’s gen7
+
+
+=== PAGE 8 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+3.5
+
+120
+
+Sparse Tree Attention
+
+Speed (token/s)
+
+Acc. Rate
+
+3.0
+2.5
+2.0
+1.5
+1.0
+
+Sparse Tree Attention
+
+100
+80
+60
+
+w/o Medusa
+
+0
+
+50
+
+w/o Medusa
+
+100
+
+150
+
+200
+
+Number of Candidate Tokens
+
+250
+
+0
+
+50
+
+100
+
+150
+
+20

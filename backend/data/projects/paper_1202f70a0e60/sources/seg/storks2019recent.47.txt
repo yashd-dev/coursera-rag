@@ -1,0 +1,52 @@
+=== PAGE 56 (continued) ===
+raints, further investigation suggests that KG-MRC learns these constraints automatically, violating them less often than P RO S TRUCT (Das et al., 2019). This shows that
+the use of the recurrent graph representation helps the model learn these constraints, perhaps better
+than can be manually enforced. Further, since KG-MRC includes a trained reading comprehension
+model, it can likely better track changes in coreference which often occur in these texts.
+NCET. The Neural Conditional Random Field (CRF) Entity Tracking (NCET) model by Gupta
+and Durrett (2019) instead tracks each entity’s state and location through per-entity bidirectional
+LSTMs. These LSTMs are trained using new, crowdsourced annotations for state and location
+changes of entities in the training paragraphs. A neural CRF maintains the global structure of
+all object states, enforcing physical laws such as their example that an object cannot move after
+being destroyed. According to the ProPara leaderboard, NCET is the current state of the art on the
+benchmark, achieving an F-measure of 62.50, a fair improvement over KG-MRC.
+4.3.3 C ONTEXTUAL M ODELS AND R EPRESENTATIONS
+One of the most exciting recent advances in NLP is the development of pre-trained models and
+embeddings that can be used as features or further fine-tuned for downstream tasks. These models
+are often trained based on a large amount of unsupervised textual data. The earlier pre-trained
+word embedding models such as word2vec (Mikolov et al., 2013) and GloVe (Pennington et al.,
+2014) have been widely applied. However, these models are context-independent, meaning the
+same embedding is used in different contexts, and they therefore cannot capture different word
+senses. More recent work has addressed this problem by pre-training models that can provide a
+word embedding based on context. The most representative models are ELM O, GPT, BERT and
+its variants, and XLN ET. Next, we give a brief overview of these models and summarize their
+performance on the selected benchmark tasks. Table 2 quantitatively compares the performance of
+these models on various benchmarks.
+ELM O. The characteristic contribution of Embeddings from Language Models (ELM O) is its
+contextual word embeddings, which each rely on the entire input sentence they belong to Peters
+et al. (2018). These embeddings are calculated from learned weights in a bidirectional LSTM which
+is pre-trained on the One Billion Word language modeling benchmark (Chelba, Mikolov, Schuster,
+Ge, Brants, Koehn, & Robinson, 2014). Simply adding these embeddings to the input features of
+26. https://leaderboard.allenai.org/propara/submissions/public
+
+56
+
+
+=== PAGE 57 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+previous state-of-the-art systems improved performance, suggesting that they are indeed successful
+in representing word context. An investigation by the authors shows that ELM O embeddings make
+it possible to identify word sense and POS, further supporting this.
+When the ELM O embedding system was originally released, it helped exceed the state of the
+art on several benchmarks in the areas of question answering, textual entailment, and sentiment
+analysis. These included SQuAD (Rajpurkar et al., 2018) and SNLI (Bowman et al., 2015). All of
+these approaches have since been exceeded. ELMo still commonly appears in baseline approaches
+to benchmarks, e.g., to SWAG (Zellers et al., 2018) and CommonsenseQA (Talmor et al., 2019).
+It is often combined with the enhanced LSTM-based models such as the ESIM model (Chen, Zhu,
+Ling, Wei, Jiang, & Inkpen, 2017), or the CNN- and bidirectional GRU-based models such as the
+DocQA model (Clark & Gardner, 2018).
+GPT. The Generative Pre-trained Transformer (GPT) model by Radford et al. (2018) uses the
+transformer architecture originally proposed by Vaswani et al. (2017), in particular the decoder. This
+system is pre-trained on a large amount of open online data unsupervised, then fine-tuned to various
+benchmark d

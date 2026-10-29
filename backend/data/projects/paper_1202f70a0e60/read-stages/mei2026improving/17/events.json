@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# mei2026improving.17.txt \u2014 Notes\n\n- **Problem:** NLI entailment reranking for additional-source evaluation; effect of pooling/adapter/label-order changes on PIQA/CommonsenseQA/CLINC150/GPQA.\n- **Method:** 18 NLI templates from 3 premise descriptions \u00d7 6 label orders, cross-checked at fixed checkpoints; SHA-256 canonical JSON triples for candidate ordering; GPQA five-shot excluding Diamond identities.\n- **Reported results:** \n  - PIQA/CommonsenseQA: 36 models + 8 pointer comparisons across learning rates, schedules, adapter placement.\n  - CLINC150: pooling lowers accuracy 3.64\u00b10.54 pp (lower-rate readout); omitting FFN adapters lowers 1.78\u00b10.41 pp.\n  - GPQA: pooling 36.87% vs pointer 33.46% on 198 Diamond questions, +3.41\u00b12.75 pp (two positive settings).\n  - Inference env: H100 pointer/pooling 65.27/73.12%; H20 packaged model 65.15/73.22% (\u22482.6% of 14,704 selections differ).\n- **Limitations:** Known CLINC overlap item classified correctly by all models, contributing zero to paired differences; uniform-tie credit leaves pooling/scope effects unchanged; semantic overlap/pretraining exposure unmeasured; reranking sensitivity to description/label-order.\n- **Quote (p22):** \u201cThese close aggregate scores conceal changes in about 2.6% of the 14,704 model\u2013question selections, with nearly balanced correct-to-wrong and wrong-to-correct changes.\u201d\n- **Quote (p23):** \u201cWording changes the readout comparison even with the checkpoints fixed. Across the 18 templates, the mean pooling effect is +3.18 \u00b1 3.27 pp, but averaging label orders within each description gives +6.31, \u22121.80, and +5.03 pp, and the smallest fixed-template mean is \u22125.51 pp.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2475,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7845da77ffeiCo3zGG0a0OcCI"
+  }
+]

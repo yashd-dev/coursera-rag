@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 13 (continued)**  \n- **Problem**: LLM reasoning gaps in real-world deductive, inductive, and abductive tasks; math Q&A in education remains challenging; hallucinations in logical reasoning.  \n- **Method**: Framework proposes three categories of improvement: minimize hallucinations, improve multi-hop reasoning, increase explainability via neuro-symbolic AI.  \n- **Results**: Table 3 shows current LLMs not sufficiently rigorous for deductive, inductive, abductive reasoning; multi-hop reasoning has \"much room for improvement\" vs. human decomposition.  \n- **Limitations**: LLMs may not fully comprehend questions; hallucinations during logical reasoning; multi-hop gaps persist.  \n\n**PAGE 14**  \n- **Quote 1**: \"LLMs may generate false or irrelevant hallucinations during logical reasoning tasks. It suggests that LLMs may not fully comprehend the question and can not solve it correctly.\"  \n- **Quote 2**: \"humans are better at decomposing complex questions. It can be an interesting topic for LLMs to capture the ability to divide and conquer questions, thus benefiting multi-hop reasoning.\"  \n- **Explainability**: Commonsense-based neuro-symbolic AI (e.g., [57]) can increase explainability for ethics, privacy, health decision-making.  \n- **Acknowledgments/References**: Standard section; no findings attributed."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2426,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7839f3abffeXDOBW54Qgig7Zj"
+  }
+]

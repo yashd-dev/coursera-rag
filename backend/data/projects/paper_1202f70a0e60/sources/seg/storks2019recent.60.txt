@@ -1,0 +1,386 @@
+=== PAGE 70 (continued) ===
+13.9K
+
+M, T, C
+
+C
+
+C
+
+C
+
+C
+
+Story Commonsense (Rashkin et al., 2018a)
+
+161K
+
+T
+
+C
+
+–
+
+C
+
+C
+
+Event2Mind (Rashkin et al., 2018b)
+
+57.1K
+
+T
+
+C
+
+–
+
+–
+
+C
+C
+
+ProPara (Mishra et al., 2018)
+
+488
+
+C
+
+C
+
+–
+
+C
+
+MultiRC (Khashabi et al., 2018)
+
+9.87K
+
+T, C
+
+C
+
+C
+
+–
+
+C
+
+ARCT (Habernal et al., 2018)
+
+2.45K
+
+T,C
+
+C
+
+C
+
+C
+
+C
+
+SQuAD 2.0 (Rajpurkar et al., 2018)
+
+151K
+
+T, C
+
+C
+
+–
+
+–
+
+C
+
+CoQA (Reddy et al., 2018)
+
+8.40K
+
+T, C
+
+C
+
+–
+
+C
+
+C
+
+QuAC (Choi et al., 2018)
+
+98.4K
+
+T, C
+
+C
+
+–
+
+C
+
+C
+
+GLUE (Wang et al., 2018)
+
+1.44M
+
+T, A
+
+T, A
+
+–
+
+M
+
+–
+C
+
+DNC (Poliak et al., 2018a)
+
+570K
+
+M, A, T
+
+M, A, T
+
+–
+
+–
+
+OpenBookQA (Mihaylov et al., 2018)
+
+5.96K
+
+C
+
+C
+
+C
+
+C
+
+C
+
+SWAG (Zellers et al., 2018)
+
+114K
+
+T
+
+T, A
+
+A
+
+C
+
+C
+
+ReCoRD (Zhang et al., 2018)
+
+121K
+
+A, T
+
+A
+
+A
+
+A
+
+A, C
+
+CommonsenseQA (Talmor et al., 2019)
+
+9.40K
+
+C
+
+T
+
+T
+
+–
+
+C
+
+SocialIQA (Sap et al., 2019b)
+
+44.8K
+
+T, C
+
+C
+
+A, C
+
+–
+
+C
+
+DREAM (Sun et al., 2019)
+
+10.2K
+
+T
+
+T
+
+T
+
+–
+
+–
+
+DROP (Dua et al., 2019)
+
+96.6K
+
+T, C
+
+C
+
+–
+
+–
+
+C
+
+SuperGLUE (Wang et al., 2019)
+
+21.3K
+
+T, A
+
+T, A
+
+–
+
+C
+
+–
+
+HellaSWAG (Zellers et al., 2019a)
+
+70.0K
+
+T
+
+T, A
+
+A
+
+C
+
+C
+
+WinoGrande (Sakaguchi et al., 2019)
+
+44.0K
+
+C, A
+
+C
+
+–
+
+–
+
+C, A
+
+SherLIiC (Schmitt & Schütze, 2019)
+
+3.99K
+
+T, C
+
+C
+
+–
+
+A
+
+C
+
+AlphaNLI (Bhagavatula et al., 2019)
+
+171K
+
+T
+
+C, A
+
+C, A
+
+–
+
+A
+
+Cosmos QA (Huang et al., 2019)
+
+35.6K
+
+T, C
+
+C
+
+C
+
+–
+
+C
+
+MC-TACO (Zhou et al., 2019)
+
+1.89K
+
+T, C
+
+C
+
+C
+
+–
+
+C
+
+70
+
+
+=== PAGE 71 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+References
+Agrawal, A., Lu, J., Antol, S., Mitchell, M., Zitnick, C. L., Batra, D., & Parikh, D. (2015). VQA:
+Visual Question Answering. In Proceedings of the 2015 IEEE International Conference on
+Computer Vision (ICCV 2015), Santiago, Chile. IEEE.
+Agrawal, A., Lu, J., Antol, S., Mitchell, M., Zitnick, C. L., Parikh, D., & Batra, D. (2017). VQA:
+Visual Question Answering. Int. J. Comput. Vision, 123(1), 4–31.
+Anderson, P., Wu, Q., Teney, D., Bruce, J., Johnson, M., Sünderhauf, N., Reid, I., Gould, S., &
+van den Hengel, A. (2018). Vision-and-Language Navigation: Interpreting visually-grounded
+navigation instructions in real environments. In Proceedings of the 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2018), Salt Lake City, UT, USA.
+IEEE.
+Andrade, D., Bai, B., Rajendran, R., & Watanabe, Y. (2018). Leveraging knowledge bases for future
+prediction with memory comparison&nbsp;networks. AI Communications.
+Angeli, G., & Manning, C. D. (2014). NaturalLI: Natural Logic Inference for Common Sense
+Reasoning. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP 2014), pp. 534–545, Doha, Qatar. Association for Computational
+Linguistics.
+Aristotle (1989). Prior Analytics. Hackett Publishing.
+Auer, S., Bizer, C., Kobilarov, G., Lehmann, J., Cyganiak, R., & Ives, Z. (2007). DBpedia: A
+Nucleus for a Web of Open Data. In Aberer, K., Choi, K.-S., Noy, N., Allemang, D.,
+Lee, K.-I., Nixon, L., Golbeck, J., Mika, P., Maynard, D., Mizoguchi, R., Schreiber, G., &
+Cudré-Mauroux, P. (Eds.), Proceedings of the Semantic Web Challenge 2007 Co-Located
+with ISWC 2007 + ASWC 2007, Lecture Notes in Computer Science, pp. 722–735, Busan,
+Korea. Springer Berlin Heidelberg.
+Bahdanau, D., Cho, K., & Bengio, Y. (2015). Neural Machine Translation by Jointly Learning
+to Align and Translate. In Proceedings of the 3rd International Conference on Learning
+Representations (ICLR 2015).
+Bahl, L. R., Jelinek, F., & Mercer, R. L. (1983). A maximum likelihood approach to continuous
+speech recognition. IEEE Transactions on Pattern Analysis & Machine Intelligence, 5(2),
+179–190.
+Baillargeon, R. (2004). Infants’ physical world. Current Directions in Psychological Science, 13(3),
+89–94.
+Baker, C. F., Fillmore, C. J., & Lowe, J. B. (1998). The Berkeley FrameNet Project. In Proceedings
+of the 36th Annual Meeting of the Association for Computational Linguistics and 17th International Conference on Computational Linguistics (ACL ’98/COLING ’98), COLING ’98,
+pp. 

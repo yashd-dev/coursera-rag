@@ -1,0 +1,47 @@
+=== PAGE 43 (continued) ===
+illion more entities
+from non-English Wikipedia articles (Mahdisoltani, Biega, & Suchanek, 2013). YAGO is available for free download at https://www.mpi-inf.mpg.de/departments/databasesand-information-systems/research/yago-naga/yago/downloads/.
+DBpedia. DBpedia by Auer, Bizer, Kobilarov, Lehmann, Cyganiak, and Ives (2007) is another
+Wikipedia-based knowledge base originally consisting of structured knowledge from more than
+1.95 million Wikipedia articles. At its creation, DBpedia included around 103 million Resource
+Description Framework (RDF) triples21 , which are triples of subjects, predicates, and objects which
+describe semantic relationships. These triples included descriptions of concepts within articles, information about people, links between articles, and category labels from YAGO. The latest version,
+available for free at https://wiki.dbpedia.org/develop/datasets, consists of 6.6
+million entities, 5.5 million resources classified in the DBpedia ontology, and over 23 billion RDF
+triples.
+WikiTaxonomy. Yet another Wikipedia-based resource is WikiTaxonomy by Ponzetto and Strube
+(2007), which consists of about 105,000 well-evaluated semantic links between categories in Wikipedia
+articles. Categories and relationships are labeled using the connectivity of the conceptual network
+formed by the categories. The authors demonstrate that this resource can be used to calculate semantic similarity of words, which may be useful in textual entailment and other NLI tasks. WikiTaxonomy is available for free download at https://www.h-its.org/en/research/nlp/
+wikitaxonomy/.
+Freebase. Freebase by Bollacker, Evans, Paritosh, Sturge, and Taylor (2008) was a knowledge
+graph which originally contained 125 million RDF triples of general human knowledge about 4,000
+types of entities and 7,000 properties of entities. The data of Freebase was absorbed into the Google
+Knowledge Graph for intelligent web searching, and even migrated to Wikidata (introduced later),
+however the last release is still available for free download at https://developers.google.
+com/freebase/. It contains more than 1.9 billion triples.
+21. https://www.w3.org/TR/rdf-concepts/#section-triples
+
+43
+
+
+=== PAGE 44 ===
+S TORKS , G AO , & C HAI
+
+NELL. As common knowledge is not static, it is advantageous for knowledge bases to grow over
+time. This is typically done through new releases, however the Never-Ending Language Learner
+(NELL) by Carlson, Betteridge, Kisiel, Settles, Jr, and Mitchell (2010) continually grows by automatically mining structured beliefs of varying confidence from the web daily. It originally contained 242,000 beliefs about properties of entities, but now contains over 50 million beliefs, with
+almost 3 million of these having high confidence. This version can be downloaded for free at
+https://rtw.ml.cmu.edu/rtw/.
+Probase. Probase by Wu, Li, Wang, and Zhu (2011) is different from previous common knowledge taxonomies in that relationships are probabilistic rather than concrete. Probase consists of
+2.7 million concepts extracted from 1.6 billion web pages. Relationships between concepts are
+described in 20.8 million is-a and is-instance-of pairs, and probabilistic interpretation is possible
+through provided similarity values between 0 and 1 for each pair of concepts in the knowledge base.
+Though the original resource is no longer available, the Microsoft Concept Graph which was built
+upon Probase can be downloaded for free at https://concept.research.microsoft.
+com/Home/Download.
+Wikidata. Wikidata22 is an open, collaborative, multilingual knowledge graph launched in 2012
+which can be edited by anyone. At time of writing, it consisted of nearly 59 million items, which are
+typically commonly known entities such as famous people, artistic works, and buildings. Each item
+consists of various property relations linking them to other items, such as the example given on their
+homepage: the highest point property for the item Earth has the value Mount Everest. Informat

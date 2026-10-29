@@ -1,0 +1,107 @@
+=== PAGE 14 (continued) ===
+ks. In Advances in Neural
+Information Processing Systems, volume 28.
+[45] Liang Wang, Nan Yang, Xiaolong Huang, Linjun Yang, Rangan Majumder, and Furu Wei. 2024.
+Improving text embeddings with large language models. In Proceedings of the 62nd Annual Meeting of
+the Association for Computational Linguistics (Volume 1: Long Papers), pages 11897–11916, Bangkok,
+Thailand. Association for Computational Linguistics.
+[46] Adina Williams, Nikita Nangia, and Samuel R. Bowman. 2018. A broad-coverage challenge corpus
+for sentence understanding through inference. In Proceedings of the 2018 Conference of the North
+American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1
+(Long Papers), pages 1112–1122, New Orleans, Louisiana. Association for Computational Linguistics.
+[47] Zixiang Xu, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, and Yue Zhao. 2026. JevOut:
+Natural context can flip decision models. Preprint, arXiv:2609.30243. Version 2.
+[48] An Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu, Chang Gao,
+Chengen Huang, Chenxu Lv, Chujie Zheng, Dayiheng Liu, Fan Zhou, Fei Huang, Feng Hu, Hao
+Ge, Haoran Wei, Huan Lin, Jialong Tang, and 41 others. 2025a. Qwen3 technical report. Preprint,
+arXiv:2505.09388.
+[49] Songlin Yang, Jan Kautz, and Ali Hatamizadeh. 2025b. Gated delta networks: Improving Mamba2
+with delta rule. In International Conference on Learning Representations.
+[50] Zhuoyi Yang, Ming Ding, Yanhui Guo, Qingsong Lv, and Jie Tang. 2022. Parameter-efficient tuning
+makes a good classification head. In Proceedings of the 2022 Conference on Empirical Methods in Natural
+Language Processing, pages 7576–7586. Association for Computational Linguistics.
+[51] Rowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. 2019. HellaSwag: Can
+a machine really finish your sentence? In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 4791–4800, Florence, Italy. Association for Computational
+Linguistics.
+
+14
+
+
+=== PAGE 15 ===
+[52] Xiang Zhang, Junbo Zhao, and Yann LeCun. 2015. Character-level convolutional networks for text
+classification. In Advances in Neural Information Processing Systems, volume 28. Curran Associates,
+Inc.
+[53] Chujie Zheng, Hao Zhou, Fandong Meng, Jie Zhou, and Minlie Huang. 2024. Large language
+models are not robust multiple choice selectors. In International Conference on Learning Representations,
+volume 2024, pages 19426–19454.
+
+15
+
+
+=== PAGE 16 ===
+A. Protocol and Reproducibility
+A.1. MC11 populations and scoring
+MC11 averages the eleven configuration accuracies listed in Table 7, each computed by ranking
+candidates with Equation 1. These configurations contain 46,475 question occurrences per model:
+GSM8K, GPQA, and MMLU repeat their question populations under two formats, whereas
+ARC-Easy and ARC-Challenge use different populations from the same source. An occurrence
+identifies a question within a configuration, so a repeated question contributes once in each
+configuration. Appendix D examines how the results change when sources receive equal weight
+or are omitted individually.
+Configuration
+
+Questions
+
+Split
+
+External candidates and demonstrations
+Choices supplied with each source question.
+Choices supplied with each source question.
+Supplied alternatives, inserted into the incomplete
+sentence.
+Correct numerical answer and three generated distractors.
+Correct numerical answer and nine generated distractors.
+Supplied answers, with the correct answer first in
+loaded order.
+Same answers; five solved examples from other
+Diamond questions.
+One legal move and three illegal moves.
+Supplied candidate endings.
+Supplied answer choices.
+Same choices; five examples from the subject’s development split.
+
+ARC-Easy
+ARC-Challenge
+WinoGrande
+
+2,376
+1,172
+1,267
+
+Test
+Test
+Validation
+
+GSM8K, four options
+
+1,319
+
+Test
+
+GSM8K, ten options
+
+1,319
+
+Test
+
+GPQA
+
+198
+
+Diamond
+
+GPQA, few-shot
+
+198
+
+Diamond

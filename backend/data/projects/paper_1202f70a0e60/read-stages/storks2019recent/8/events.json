@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**8/79 \u2013 Problems & Methods**\n\n- **MCTest**: 500 multiple-choice questions over short stories; downloadable from GitHub; requires outside knowledge limited to manageable amount.\n- **RACE**: 98,000 MC questions over 28,000 passages from middle/high-school exams; designed by expert teachers; often requires multi-sentence reasoning; choices may not match passage directly.\n- **NarrativeQA**: 1,500 stories/scripts with 47,000 QA pairs; two open-ended tasks (original stories/summaries); answering from full texts requires larger-span reasoning.\n- **ARC**: 8,000 four-way MC science questions + 14M sentence corpus; requires drawing from multiple sentences; not solvable by keyword search alone.\n- **MCScript**: 14,000 2-way MC questions emphasizing commonsense; large proportion answerable without passage; labeled as text- vs. commonsense-answered.\n- **ProPara**: 488 procedural paragraphs (e.g., photosynthesis); state-change grids required; proficiency in physical-process reasoning needed.\n- **MultiRC**: (text cut off)\n\n**8/79 \u2013 Reported Results**  \n*No quantitative results in this segment.*\n\n**8/79 \u2013 Limitations**  \n*No explicit limitations stated.*\n\n**Quotes (p.10)**  \n- \u201cAs the exams are designed by expert teachers, the questions are challenging, often requiring reasoning over multiple sentences in the passage.\u201d  \n- \u201cIf a system understands a paragraph in this dataset, it is said that for each entity mentioned in the paragraph, it can answer any question about whether the entity is created, destroyed, or moved\u2026\u201d\n\n**8/79 \u2013 Notes**  \nSegment ends mid-definition of MultiRC; source continues on p.11."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2364,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78305cc4ffe9lpQqk9AoFKeIg"
+  }
+]

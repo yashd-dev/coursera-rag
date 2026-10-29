@@ -1,0 +1,47 @@
+=== PAGE 80 (continued) ===
+ Manning, C. D. (2018). Compositional Attention Networks for Machine Reasoning. In Proceedings of the 6th International Conference on Learning Representations (ICLR
+2018), Vancouver, BC, Canada.
+Hudson, D. A., & Manning, C. D. (2019). GQA: A New Dataset for Real-World Visual Reasoning
+and Compositional Question Answering. In 2019 IEEE Conference on Computer Vision and
+Pattern Recognition (CVPR 2019), Long Beach, CA, USA. IEEE.
+Iftene, A. (2008). UAIC Participation at RTE4. In Proceedings of the First Text Analysis Conference
+(TAC 2008), Gaithersburg, MD, USA. National Institute of Standards and Technology.
+Iyer, S., Dandekar, N., & Csernai, K. (2017). First Quora Dataset Release: Question Pairs.
+https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs.
+Jastrz˛ebski, S., Bahdanau, D., Hosseini, S., Noukhovitch, M., Bengio, Y., & Cheung, J. (2018).
+Commonsense mining as knowledge base completion? A study on the impact of novelty.
+In Proceedings of the Workshop on Generalization in the Age of Deep Learning, pp. 8–16.
+Association for Computational Linguistics.
+Jia, R., & Liang, P. (2017). Adversarial Examples for Evaluating Reading Comprehension Systems. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language
+Processing (EMNLP 2017), pp. 2021–2031. Association for Computational Linguistics.
+Johnson, J., Hariharan, B., van der Maaten, L., Fei-Fei, L., Zitnick, C. L., & Girshick, R. (2017).
+CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning. In 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017).
+IEEE.
+80
+
+
+=== PAGE 81 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Kafle, K., & Kanan, C. (2017). Visual Question Answering: Datasets, Algorithms, and Future
+Challenges. Computer Vision and Image Understanding, 163, 3–20.
+Kamath, A., & Das, R. (2018). A Survey on Semantic Parsing. In Proceedings of the 1st Conference
+on Automated Knowledge Base Construction (AKBC 2019), Amherst, MA, USA. Association
+for Computational Linguistics.
+Khashabi, D., Chaturvedi, S., Roth, M., Upadhyay, S., & Roth, D. (2018). Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences. In Proceedings
+of the 2018 Conference of the North American Chapter of the Association for Computational
+Linguistics: Human Language Technologies (NAACL HLT 2018), New Orleans, LA, USA.
+Association for Computational Linguistics.
+Khot, T., Sabharwal, A., & Clark, P. (2018). SciTail: A Textual Entailment Dataset from Science
+Question Answering. In Proceedings of the Thirty-Second AAAI Conference on Artificial
+Intelligence (AAAI-18), p. 9, New Orleans, LA, USA. AAAI Press.
+Kiddon, C., Zettlemoyer, L., & Choi, Y. (2016). Globally Coherent Text Generation with Neural
+Checklist Models. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing (EMNLP 2016), pp. 329–339, Austin, TX, USA. Association for
+Computational Linguistics.
+Kim, S., Hong, J.-H., Kang, I., & Kwak, N. (2019). Semantic Sentence Matching with Denselyconnected Recurrent and Co-attentive Information. In Proceedings of the Thirty-Third AAAI
+Conference on Artificial Inteligence (AAAI-19), Honolulu, HI, USA. AAAI Press.
+Kingsbury, P., Palmer, M., & Marcus, M. (2002). Adding Semantic Annotation to the Penn TreeBank. In Proceedings of the Second International Conference on Human Language Technology Research (HLT ’02), p. 5, San Diego, CA, USA. Morgan Kaufmann Publishers Inc.
+Kočiský, T., Schwarz, J., Blunsom, P., Dyer, C., Hermann, K. M., Melis, G., & Grefenstette, E.
+(2018). The NarrativeQA Reading Comprehension Challenge. Transactions of the Association for Computational Linguistics, 6, 317–328.
+Kotzias, D., Denil, M., De Freitas, N., & Smyth, P. (2015). From group to individual labels using deep features. In Proceedings of the 21th ACM SIGKDD International Conference on
+Knowledge Discovery and Data Mining, pp. 597–606, Sydney, Australia. ACM, ACM.

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.4 \u2014 Compact Notes\n\n**Problem**: Survey recent advances in natural language inference. Positioning commonsense knowledge (unstated, universally accepted beliefs) as distinct from common knowledge (region/culture-variant), with intuitive physics and psychology as two critical domains enabling on-the-fly predictions of physical/social interactions.\n\n**Method**: Survey of computational models from symbolic/statistical to deep neural networks, modeling language context and leveraging external knowledge resources. Critical caveat: unexplainability of recent approaches + statistical biases in benchmark datasets (Schwartz et al., 2017; Gururangan et al., 2018; Niven & Kao, 2019) obscure true progress toward NLI ability.\n\n**Reported Results**: Deep neural models achieve state-of-the-art (some near/above human performance) on benchmark tasks, but debate persists on how much progress enables genuine NLI ability.\n\n**Limitations**: Unexplainability of neural approaches; statistical biases in datasets; commonsense knowledge is typically unstated and considered obvious; cultural/regional variation in common knowledge; knowledge resources remain incomplete for facilitating NLI.\n\n- \"commonsense knowledge, on the other hand, is typically unstated, as it is considered obvious to most humans\" [Pg 4 continued]\n- \"commonsense knowledge provides a deeper understanding of language\" [Pg 4 continued]\n- \"it remains a subject of debate in terms of how much progress we have made in enabling natural language inference ability\" [Pg 5]\n\n### References-Only Note\nThis segment is a survey introduction reviewing the landscape\u2014no original experimental results, datasets, or novel models are presented. It maps the field's scope, key knowledge domains (intuitive physics/psychology), and known barriers (unexplainability, dataset biases) without reporting new findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2370,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78317a3affekOkvcz977vZiJY"
+  }
+]

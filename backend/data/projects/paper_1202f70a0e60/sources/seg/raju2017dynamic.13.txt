@@ -1,0 +1,77 @@
+=== PAGE 10 (continued) ===
+ (2015): 78.96 | Impact Factor (2015): 6.391
+inspired by the observation that NLI entails several
+reasoning processes comparable to those used in QA tasks,
+especially in determining the relationship between a premise
+and hypothesis. Our current model was designed to
+incorporate these features to improve consideration of these
+interactions and build upon the specific advantage of DMNs,
+where memory states may be updated on an iterative basis as
+sentences are combined.
+Our experiments showed that, through updates in episodic
+memory, the dynamic memory inference network succeeded
+in drawing attention to the cognitively relevant words in the
+sentences. This attention mechanism helped the model to
+improve the representation of the premise and hypothesis in
+every iteration gradually to reduce the errors in the
+inferential relationship. The fact that the memory could be
+inspected several times for updates was particularly
+beneficial in the context of NLI and outperformed traditional
+encoding for sentences more generally.
+Based on the outcome of our work, the DMN framework
+could provide direction for improving present NLI models,
+especially when coupling episodic memory update and
+attention strategies. Although overall, the obtained results do
+not exceed the state of the art achieved on the the SNLI
+dataset, the improvements over the baseline were observed
+and are particularly notable when analyzing how the model
+performs on more complex pairs of sentences. This suggests
+that the erasure of distinctions between memory and
+attention mechanisms can yield significant advantages in
+problems that include semantic comprehension and nuanced
+reasoning.
+This work also showed some limitations that can be
+overcome and improvements that can be made. There was
+also the problem of time consumption when training
+dynamic memory networks for the game. The long
+sequences require several memory hops, and the designed
+attention mechanisms lead to longer training time and higher
+resource utilization. Nonetheless, the potential gains from
+DMNs in NLI and other related NLP tasks suggest that the
+model's effectiveness can be further enhanced and explored.
+In conclusion, our work builds on prior work in the NLP
+literature that investigates the applicability of memory augmentation models in the field. To show that DMNs can
+be used for NLI, we expect that more studies will be done in
+this field to analyze approaches to enhance the behavioral
+performance of these models. The findings from this work
+form the basis of future research focusing on the further
+improvement of NLI and associated tasks.
+
+4. Future Work
+Although we have demonstrated significant potential for
+developing dynamic memory networks for natural language
+inference, there remain possibilities for future research
+improvement and expansion of the models. In addition,
+training was slower due to the complexity of DMNs, and the
+need to handle large amounts of data put pressure on our
+computing resources. Minimizing the time and space
+complexity of DMNs will become an important task when
+applying these models at a more significant level in large -
+
+scale applications in environments with limited computation
+capability.
+Another possible avenue for research is to improve further
+the memory structures that remain flexible enough to support
+multi - step inference while minimizing complexity (Zhang
+et al., 2015). One possible avenue could be exploring
+techniques such as sparse attention mechanisms or memory
+compression to optimize the memory update. Furthermore,
+there is scope for potential research on parallelization
+methods and hardware implementations, which would allow
+for reduced training difficulty of DMNs and enable them to
+be utilized for various NLP tasks. Charset Another promising
+area of research is expanding more complex sentence
+encoding mechanisms into the DMN model. Even though
+our experiments were centered on GRU - based encoders,
+newer trends in transformer models like BERT and GPT hold
+sig

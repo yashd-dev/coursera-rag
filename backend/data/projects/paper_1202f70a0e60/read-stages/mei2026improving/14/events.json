@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# mei2026improving.14.txt Notes (pp. 18\u201319)\n\n**Problem**: Appendices detail evaluation infrastructure, endpoint definitions, and evidence coverage for the paper\u2019s experimental suite.\n\n**Method**: Fixed-interface comparisons use all 1,838 PIQA validation and 1,954 SocialIQA development questions (outside MC11). JevBench weights 18 families across 231 questions (48 easy, 72 original, 111 hard). Kev averages over development/test partitions of decision-v7, transfer-v4, transfer-v9, excluding source named unknowable.\n\n**Reported results**:\n- Kev partitions: 1,264/1,200 (dev), 656/656 (dev), 1,046/1,046 (test) questions after exclusion.\n- JevBench: 231 questions across three difficulty buckets.\n- Fixed-checkpoint evaluations span PIQA and SocialIQA only.\n\n**Limitations**: Overlap screening assessed only exact/normalized state matches and available source identities; semantic paraphrases, substrings, pretraining exposure, synthetic chess, and rendered evaluation requests remain unassessed. CUDA determinism was disabled; dropout trajectories were not saved for head/adapter rate variations. RunWeaver and other redistribution permissions remain unresolved.\n\n**Quotes**:\n- \"Overlap screening found no exact or normalized state matches between the training corpus and 231 JevBench records or 6,436 Kev record occurrences\" (p. 19)\n- \"The 56 core NeoHorse models were trained on individual GPUs of a shared eight-H20 server, using 94.46 GPU hours over the measured training intervals\" (p. 19)\n\nReferences-only segment: No findings inferred; notes attribute only recorded source text and coverage scope."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2315,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78467d68ffe7fS4p5nYLysdZr"
+  }
+]

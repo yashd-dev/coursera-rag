@@ -1,0 +1,156 @@
+=== PAGE 21 (continued) ===
+e answer options. Interestingly, the authors show that when fine-tuned
+on SocialIQA, deep learning models perform better when later fine-tuned on smaller-magnitude
+benchmarks which require commonsense knowledge such as COPA (Roemmele et al., 2011) and
+the Winograd Schema Challenge (Davis et al., 2017), exceeding the state of the art on both. This
+suggests that some useful commonsense knowledge can be acquired from the data. More information about SocialIQA can be found at https://maartensap.github.io/social-iqa/.
+21
+
+
+=== PAGE 22 ===
+S TORKS , G AO , & C HAI
+
+Task
+
+bAbI
+
+IIE
+
+DNC
+
+X
+
+X
+
+Event Factuality
+
+X
+
+Named Entity Recognition
+
+X
+X
+
+Word Sense Disambiguation
+Reference Resolution
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+Grammaticality
+Lexicosyntactic Inference
+
+X
+
+Sentiment Analysis
+
+X
+X
+
+Figurative Language
+X
+
+Sentence Similarity
+X
+
+Paraphrase
+
+X
+
+X
+X
+
+Sentence Completion
+X
+
+Textual Entailment
+Question Answering
+
+SuperGLUE
+
+X
+
+Semantic Role Labeling
+Relation Extraction
+
+GLUE
+
+X
+
+X
+
+X
+
+X
+X
+
+Table 1: Comparison of language processing tasks present in the bAbI (Weston et al., 2016), IIE
+(White et al., 2017), GLUE (Wang et al., 2018), DNC (Poliak et al., 2018a), and SuperGLUE (Wang et al., 2019) benchmarks. Recent multi-task benchmarks focus on the
+recognition of a greater variety of linguistic and semantic phenomena.
+
+2.1.6 M ULTIPLE TASKS
+Some benchmarks consist of several focused language processing or reasoning subtasks so that a
+diverse set of reading comprehension skills can be learned and tested in a consistent format. These
+benchmarks can be used as diagnostics to determine how a model performs in different areas (Wang
+et al., 2018). Subtasks are often reframed from various pre-existing benchmarks (White et al.,
+2017). As shown in Table 1, many benchmark subtasks are specified by low- to high-level language
+processing tasks. In the following paragraphs, we introduce these benchmarks in detail.
+bAbI. The bAbI benchmark from Weston et al. (2016) consists of 20 prerequisite tasks, each with
+1,000 examples for training and 1,000 for testing. Each task presents systems with a passage, then
+asks a reading comprehension question. Each task also focuses on a different type of reasoning or
+language processing task, allowing systems to learn basic skills one at a time. Tasks are as follows:
+
+22
+
+
+=== PAGE 23 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+1. Single supporting fact
+2. Two supporting facts
+3. Three supporting facts
+4. Two argument relations
+5. Three argument relations
+6. Yes/no questions
+7. Counting
+
+8. Lists/sets
+9. Simple negation
+10. Indefinite knowledge
+11. Basic coreference
+12. Conjunction
+13. Compound coreference
+14. Time reasoning
+
+15. Basic deduction
+16. Basic induction
+17. Positional reasoning
+18. Size reasoning
+19. Path finding
+20. Agent’s motivations
+
+In addition to providing focused language processing tasks as previously discussed, bAbI also
+provides focused commonsense reasoning tasks, such as its tasks for deduction and induction, and
+time, positional, and size reasoning (Weston et al., 2016). It is important to note that bAbI’s data
+is synthetic and very simply structured, and the inference required for testing data can be learned
+mostly from the training data, so it is easily solved by current systems. Further, models trained
+on bAbI currently cannot generalize well to real-world, naturally-generated data (Das, Munkhdalai,
+Yuan, Trischler, & McCallum, 2019). As such, bAbI is best used to gauge a model’s ability to learn
+reasoning skills rather than its comprehension of natural language. A dataset by Nematzadeh, Burns,
+Grant, Gopnik, and Griffiths (2018) expands bAbI with questions about theory of mind, which may
+make it a more realistic reasoning task. bAbI can be downloaded at https://research.fb.
+com/downloads/babi/.
+Inference is Everything. Inference is Everything (IIE) by White et al. (2017) follows bAbI (Weston et al., 2016) in creating a suite of tasks, where each task is deliberately ge

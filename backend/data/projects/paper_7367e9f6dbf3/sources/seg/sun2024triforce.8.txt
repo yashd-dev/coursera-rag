@@ -1,0 +1,156 @@
+=== PAGE 8 (continued) ===
+ethod
+
+T
+
+Speedup
+
+Naive Policy
+
+T RI F ORCE
+T RI F ORCE
+T RI F ORCE
+T RI F ORCE
+T RI F ORCE
+T RI F ORCE
+T RI F ORCE
+
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+
+2.31× (0.9234)
+2.25× (0.9203)
+2.20× (0.9142)
+2.19× (0.9137)
+2.08× (0.8986)
+2.08× (0.9004)
+2.02× (0.8902)
+
+1.56× (0.4649)
+1.54× (0.4452)
+1.47× (0.4256)
+1.42× (0.4036)
+1.34× (0.3131)
+1.29× (0.2872)
+1.27× (0.2664)
+
+Retrieval w/o Hierarchy
+StreamingLLM w/ Hierarchy
+
+0.6
+0.6
+
+1.80× (0.9126)
+1.90× (0.8745)
+
+-
+
+Table 3: Offloading results (RTX 4090): We present latency comparison between T RI F ORCE
+and Auto-regressive (AR) baseline for various models on different GPU setups. The sampling temperature is set to 0.6. The results indicate that T RI F ORCE achieves significant
+speedups across a range of models and hardware configurations. The entries marked with
+an asterisk represent the baseline using DeepSpeed-ZeRO-Inference (Aminabadi et al., 2022).
+
+5
+
+GPUs
+
+Target Model
+
+T RI F ORCE (ms)
+
+AR (ms)
+
+Speedup
+
+2× RTX 4090s
+2× RTX 4090s
+2× RTX 4090s
+1× RTX 4090
+1× RTX 4090
+
+Llama2-7B-128K
+LWM-Text-Chat-128K
+Llama2-13B-128K
+Llama2-7B-128K
+LWM-Text-Chat-128K
+
+108
+114
+226
+312
+314
+
+840
+840
+1794
+1516*
+1516*
+
+7.78×
+7.37×
+7.94×
+4.86×
+4.83×
+
+Empirical Evaluation
+
+In this section, our goal is to showcase the capabilities of T RI F ORCE, a scalable and robust
+speculative decoding algorithm designed to expedite the inference of LLMs for long sequence generation, which significantly reduces the wall-clock time. We first present our
+end-to-end system, highlighting the overall speedup achieved, including both on-chip and
+offloading settings, followed by a comparison with other methods and ablation experiments.
+5.1
+
+End-to-end Results
+
+We demonstrate that T RI F ORCE accelerates long sequence generation, up to 2.31× on an
+A100 in the on-chip setting and 7.78× on two RTX 4090s with offloading for Llama2-7B-128K.
+Setup. Our experiments are based on Llama2 and LWM models with 128K context window
+size (Touvron et al., 2023; Liu et al., 2024a; Peng et al., 2023), which serve as our target models.
+In this setup, we utilize a 4K retrieval cache as an intermediate draft cache in our hierarchical
+system, while leveraging the JackFram/Llama68M (JF68M) (Miao et al., 2023) model as the
+initial draft model. For experiments involving offloading, we aim to maximize memory
+utilization by filling it up as much as possible and offloading the remaining KV cache to
+the CPU (AMD EPYC 9754 @ 2.25 GHz), while keeping the model weights on the GPU.
+Our evaluation is carried out on the PG-19 (Rae et al., 2019) and NarrativeQA (Kočiský
+et al., 2018) dataset, each testing on 100 examples, configured to a prompt length of 122K
+for on-chip settings and 127K for offloading settings, and aiming for a generation of 256
+tokens. The performance of T RI F ORCE is analyzed across various hardware configurations,
+including on-chip experiments on an A100, and offloading experiments on RTX 4090 GPUs.
+8
+
+
+=== PAGE 9 ===
+Published as a conference paper at COLM 2024
+
+Naive Policy. Since it is hard to train a draft model with long contexts, we consider
+JF68M with StreamingLLM cache as a naive policy approach, and its budget is set to 1K.
+Additionally, we experiment with various temperatures to test its robustness.
+
+Speedup
+
+Main Results. We evaluate T RI F ORCE using different
+2.4
+temperatures, as depicted in Table 2. We observe that T RI TriForce Upper Bound (13.1×)
+2.2
+F ORCE reaches up to 2.31× speedup for the on-chip setting
+2.0
+with a minimal 4K KV cache budget for Llama2-7B-128K.
+For offloading settings, we provide end-to-end results on
+1.8
+Naive Policy Upper Bound (1.87×)
+consumer GPUs for more models, including Llama2-7B1.6
+128K, Llama2-13B-128K, and LWM-Text-Chat-128K. Remarkably, in Table 3 we demonstrate that T RI F ORCE can
+1.4
+TriForce
+efficiently serve a Llama2-13B with 128K contexts on two
+Naive Policy
+1.2
+RTX 4090s, reaching an average time between tokens as
+32K 48K 64K 80K 96K 112K 128K
+Context Length
+low as 0.226 seconds, which is 

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.55 \u2014 Markdown Notes\n\n**Problem**\n- Survey of recent advances in natural language inference (NLI).\n- Examines how data, computing resources, and new learning methods reshape NLI research.\n- Central question: Do developed technologies push the state-of-the-art in NLI?\n\n**Method**\n- Systematic review of benchmark datasets and learning/inference methods.\n- Analysis of bias mitigation, knowledge incorporation, and task formulation trends across Sections 2\u20134.\n\n**Reported Results**\n- Benchmark performance is growing steadily, but state-of-the-art gains are diminishing.\n- New benchmarks (e.g., CommonsenseQA, SherLiic) couple tasks with external knowledge resources.\n- Pre-training on large datasets remains dominant; practical incorporation of external knowledge is far from solved.\n\n**Limitations**\n- Most approaches rely heavily on pre-training data, which is impractical for low-resource settings.\n- Knowledge resources are incomplete and often missing required information for benchmark tasks.\n- Difficulty in formalizing intuitive commonsense knowledge.\n- Benchmarks and knowledge resources are developed independently, creating a disconnect.\n\n**Two short exact quotes**\n- \"The availability of data and computing resources and the rise of new learning and inference methods make this an unprecedentedly exciting time for research on natural language understanding and inference.\" (Conclusion, p.65)\n- \"Since commonsense knowledge is so intuitive for humans, it is difficult for researchers to even identify and formalize the needed knowledge.\" (Conclusion, p.65)\n\n**Attribute each bullet to the preceding physical-page marker** \u2014 Page 64 (continued), Page 65, Page 66."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2313,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78252bdcffekYuHs4t8PxKQ2A"
+  }
+]

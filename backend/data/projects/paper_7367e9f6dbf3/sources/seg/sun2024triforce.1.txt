@@ -1,0 +1,95 @@
+=== PAGE 1 ===
+Published as a conference paper at COLM 2024
+
+T RI F ORCE: Lossless Acceleration of Long Sequence
+Generation with Hierarchical Speculative Decoding
+Hanshi Sun1 , Zhuoming Chen1 , Xinyu Yang1 , Yuandong Tian2 , Beidi Chen1,2
+1 Carnegie Mellon Univeristy
+2 Meta AI (FAIR)
+
+arXiv:2404.11912v3 [cs.CL] 4 Aug 2024
+
+{hanshis, zhuominc, xinyuya2, beidic}@andrew.cmu.edu
+yuandong@meta.com
+
+Abstract
+With large language models (LLMs) widely deployed in long content generation recently, there has emerged an increasing demand for efficient
+long-sequence inference support. However, key-value (KV) cache, which
+is stored to avoid re-computation, has emerged as a critical bottleneck
+by growing linearly in size with the sequence length. Due to the autoregressive nature of LLMs, the entire KV cache will be loaded for every
+generated token, resulting in low utilization of computational cores and
+high latency. While various compression methods for KV cache have been
+proposed to alleviate this issue, they suffer from degradation in generation
+quality. We introduce T RI F ORCE, a hierarchical speculative decoding system that is scalable for long sequence generation. This approach leverages
+the original model weights and dynamic sparse KV cache via retrieval as a
+draft model, which serves as an intermediate layer in the hierarchy and is
+further speculated by a smaller model to reduce its drafting latency. T RI F ORCE not only facilitates impressive speedups for Llama2-7B-128K, achieving up to 2.31× on an A100 GPU but also showcases scalability in handling
+even longer contexts. For the offloading setting on two RTX 4090 GPUs,
+T RI F ORCE achieves 0.108s/token—only half as slow as the auto-regressive
+baseline on an A100, which attains 7.78× on our optimized offloading
+system. Additionally, T RI F ORCE performs 4.86× than DeepSpeed-ZeroInference on a single RTX 4090 GPU. T RI F ORCE’s robustness is highlighted
+by its consistently outstanding performance across various temperatures.
+The code is available at https://github.com/Infini-AI-Lab/TriForce.
+
+1
+
+Introduction
+
+Large language models (LLMs) with long-context capability, such as GPT-4 (Achiam et al.,
+2023), Gemini (Team et al., 2023), and LWM (Liu et al., 2024a) continue to emerge and
+gain proficient application in scenarios including chatbots, vision generation, and financial
+analysis (Touvron et al., 2023; Chowdhery et al., 2023; Zhao et al., 2023; Reddy et al., 2024).
+However, losslessly serving these LLMs efficiently is challenging. Because of the autoregressive nature of LLMs, the entire key-value (KV) cache, which stores intermediate
+key-value states from previous contexts to avoid re-computation, together with model
+parameters will be loaded into GPU SRAM for every token generated, resulting in low
+utilization of computational cores. In addition to the large volume of model parameters,
+the memory footprint of KV cache, which grows linearly with sequence length (Pope et al.,
+2023), is emerging as a new bottleneck for long sequence generation.
+Recent methodologies have proposed KV cache eviction strategies (Xiao et al., 2023b; Zhang
+et al., 2024b; Liu et al., 2024c; Jiang et al., 2023; Ge et al., 2023) to mitigate the substantial
+memory footprint of KV cache, which selectively discard KV pairs from the cache based on a
+designed eviction policy, allowing models to generate texts with a limited KV cache budget.
+However, considering that discarded KV pairs cannot be restored and the difficulty in
+1
+
+
+=== PAGE 2 ===
+Published as a conference paper at COLM 2024
+
+[token]: context tokens
+[token]: accepted tokens
+[token]: rejected tokens
+[token]: tokens sampled from verification phase
+
+A
+
+Draft 𝛾! steps repeatedly
+to generate ≥ 𝛾" tokens:
+𝑥! , 𝑥" , … , 𝑥# (𝑛 ≥ 𝛾" )
+
+Llama-68M + StreamingLLM Cache
+150MB, 0.45ms
+
+Llama2-7B-128K + Partial Cache
+16GB, 14ms
+
+Llama2-7B-128K + Full Cache
+78GB, 56ms
+
+Retrieval Cache
+
+Target Model
+Full KV Cache
+
+for
+
+long
+
+context
+
+spec
+
+ulative
+
+dec
+dec oding with 

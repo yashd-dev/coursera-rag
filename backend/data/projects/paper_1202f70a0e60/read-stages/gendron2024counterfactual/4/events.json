@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Gendron2024 Counterfactual\n\n## Problem\nPaper proposes a framework for causal structure discovery and evaluation from natural language text using LLMs, dividing work into four stages: extraction, summarisation, counterfactual queries, and graph evaluation.\n\n## Method\n1. Extract causal graph from text; merge multiple documents' graphs\n2. Compute counterfactual worlds from resulting causal graph for self-evaluation\n3. LLM performs inference given variables' parent values\n4. Self-evaluate original and counterfactual graphs\n\n## Reported Results\n- Framework illustrated in Figure 1 with four pipeline stages\n- Counterfactual queries build on ablation, intervention, and prediction steps\n- LLM self-evaluates original and counterfactual graphs per Sections 4.3 and 5\n\n## Limitations (Page 3 continued)\n- Method relies on LLM for causal graph extraction and counterfactual inference\n- No quantitative results provided in this segment; evaluation deferred to Sections 4.3 and 5\n\n## Quotes\n- \"Our proposed method is divided into four stages. First, we extract the causal graph from a text document. If multiple documents are provided, we merge their respective causal graphs together. Then, we compute counterfactual worlds from the resulting causal graph. We use these counterfactuals to self-evaluate the causal graph.\" (Page 3 continued)\n- \"We prompt an LLM to read an input document and r\" (Page 3 continued, truncated)\n\n## Note\nReferences-only segment requires short note; no invented findings possible from this narrative text."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2616,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7844739effeBvbKv7RyN8xDgz"
+  }
+]

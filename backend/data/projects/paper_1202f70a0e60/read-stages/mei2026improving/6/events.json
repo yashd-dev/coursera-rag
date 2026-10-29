@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# mei2026improving.6 (Pages 8\u20139)\n\n## Problem\nTraining both readout and adapter modules together degrades pointer accuracy. Longer training beyond one epoch harms performance on ARC and HellaSwag. Higher learning rates require head-only first 30% updates before adapter enabling.\n\n## Method\nCompares mean-span pooling vs. pointer readout, and all-module vs. No-FFN adapter scope, under one-epoch, lower-rate training. Tests across ARC, HellaSwag, MMLU, WinoGrande, GSM8K, GPQA, chess.\n\n## Reported Results\n- Lower-rate all-module pointer: **50.28%** MC11 (one epoch)\n- Two-epoch pointer drops to 43.96%; pooling drops to 48.57% (relative advantage grows from 0.73 to 4.61 pp)\n- Higher learning rate: head-first 30% updates \u2192 **53.54%** MC11 with no-FFN pointer\n- Pooling adds ~4.2 pp on HellaSwag under either adapter scope\n- Removing FFN adds ~9.1 pp on HellaSwag under either readout (total ~13.3 pp advantage)\n- On chess: pooling gain grows from 1.95 pp (all-module) to 7.35 pp (no-FFN)\n\n## Limitations\n- One-epoch, lower-rate recipe not tested with mean-span pooling + head-first schedule combination\n- Declines on GSM8K and GPQA with final model\n- Adapter scope effects tested only under one-epoch, lower-rate setup\n\n## Two Short Exact Quotes\n- \"Changing the head rate has little average effect (+0.02 \u00b1 0.43 pp)\" [p.8]\n- \"Pooling\u2019s relative advantage therefore grows from 0.73 to 4.61 pp as both models become less accurate\" [p.8]\n\nA references-only segment needs a short note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2630,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7848b000ffeBSSY5CeKHpVT6o"
+  }
+]

@@ -1,0 +1,21 @@
+=== PAGE 94 (continued) ===
+nal Common-sense Inference.
+Transactions of the Association for Computational Linguistics, 5, 379–395.
+Zhang, Z., Han, X., Liu, Z., Jiang, X., Sun, M., & Liu, Q. (2019). ERNIE: Enhanced Language
+Representation with Informative Entities. In Proceedings of the 57th Annual Meeting of
+the Association for Computational Linguistics (ACL 2019), pp. 1441–1451, Florence, Italy.
+Association for Computational Linguistics.
+Zhou, B., Khashabi, D., Ning, Q., & Roth, D. (2019). "Going on a vacation" takes longer than
+"Going for a walk": A Study of Temporal Commonsense Understanding. In Proceedings of
+the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP 2019),
+Hong Kong, China. Association for Computational Linguistics.
+Zhu, Y., Groth, O., Bernstein, M., & Fei-Fei, L. (2016). Visual7W: Grounded Question Answering
+in Images. In Proceedings of the 2016 IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR 2016), Las Vegas, NV, USA. IEEE.
+Zhu, Y., Kiros, R., Zemel, R., Salakhutdinov, R., Urtasun, R., Torralba, A., & Fidler, S. (2015).
+Aligning Books and Movies: Towards Story-Like Visual Explanations by Watching Movies
+and Reading Books. In IEEE International Conference on Compter Vision (ICCV 2015), pp.
+19–27, Santiago, Chile. IEEE.
+
+94
+

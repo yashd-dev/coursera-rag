@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Paper Segment: storks2019recent.21\n\n**Problem:** Classifying and comparing natural language inference (NLI) tasks for evaluation schemes.\n\n**Method:** Survey of NLI tasks organized by genre, cloze, open-ended response, and evaluation schemes including Turing Test, ROCStories, ReCoRD, SC, DROP, bAbI, and SWAG.\n\n**Reported results:** \n- SWAG cloze task: She sits on a bench as her sister plays with the doll / smiles with someone as the music plays / is in the crowd watching dancers / nervously sets fingers on keys\n- ROCStories: Karen agreed happily to concert; show was exhilarating  \n- ReCoRD: Hantuchova knocked Williams out 6-2 5-7 6-2\n- DROP painting sold $16.3M above $12M estimate\n- bAbI navigation: den\u2192kitchen via west, north\n\n**Limitations:** Source text contains mixed task examples without systematic performance metrics; no new results reported in this segment.\n\n**Exact quotes:**\n- \"He's started in with a spite at you on general principles, and the boys know it\" (p.27)\n- \"You can't whip 'em \u2013 that is the trouble\" (p.27)\n\n**Note:** References-only segment (pp.27-28) provides task examples for NLI evaluation; no original findings or results attributed to this survey paper."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2490,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782d654bffeScPbX2WfIMBwqG"
+  }
+]

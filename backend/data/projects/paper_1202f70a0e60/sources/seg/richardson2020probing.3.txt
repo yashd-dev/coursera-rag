@@ -1,0 +1,100 @@
+=== PAGE 2 (continued) ===
+ents that cover several fundamental aspects of reasoning in
+NLI, namely, monotonicity reasoning using two newly constructed challenge datasets as well as six other fragments
+that probe into rudimentary logic using new versions of the
+data from Salvatore, Finger, and Hirata Jr (2019).
+As illustrated in Figure 1, our proposed method works in
+the following way: starting with a particular linguistic fragment of interest, we create a formal speciﬁcation (or a formal rule system with certain guarantees of correctness) of
+that fragment, with which we then automatically generate a
+new idealized challenge dataset, and ask the following three
+empirical questions. 1) Is this particular fragment learnable
+from scratch using existing NLI architectures (if so, are the
+resulting models useful)? 2) How well do large state-of-theart pre-trained NLI models (i.e., models trained on all known
+NLI data such as SNLI/MNLI) do on this task? 3) Can existing models be quickly re-trained or re-purposed to be robust
+on these fragments (if so, does mastering a given linguistic
+fragment affect performance on the original task)?
+We emphasize the quickly part in the last question; given
+the multitude of possible fragments and linguistic phenomena that can be formulated and that we expect a widecoverage NLI model to cover, we believe that models should
+be able to efﬁciently learn and adapt to new phenomena as
+they are encountered without having to learn entirely from
+scratch. In this paper we look speciﬁcally at the question: are
+
+Related Work
+The use of semantic fragments has a long tradition in logical semantics, starting with the seminal work of Montague (1973), as well as earlier work on NLI (Cooper et al.
+1996). We follow Pratt-Hartmann (2004) in deﬁning a semantic fragment more precisely as a subset of a language
+equipped with semantics which translate sentences in a formal system such as ﬁrst-order logic. In contrast to work on
+empirical NLI, such linguistic work often emphasizes the
+complex cases of each phenomena in order measure competence (see Chomsky (1965) for a discussion about competence vs. performance). For our fragments that test basic
+logic, the target formal system includes basic boolean algebra, quantiﬁcation, set comparisons and counting (see Figure 2), and builds on the datasets from Salvatore, Finger, and
+Hirata Jr (2019). For our second set of fragments that focus on monotonicity reasoning, the target formal system is
+based on the monotonicity calculus of van Benthem (1986)
+(see review by Icard and Moss (2014)). To construct these
+datasets, we build on recent work on automatic polarity projection (Hu and Moss 2018; Hu, Chen, and Moss 2019;
+Hu et al. 2019).
+Our work follows other attempts to learn neural models from fragments and small subsets of language, which
+includes work on syntactic probing (McCoy, Pavlick, and
+Linzen 2019; Goldberg 2019), probing basic reasoning (Weston et al. 2015; Geiger et al. 2018; 2019) and probing other
+tasks (Lake and Baroni 2017; Chrupała and Alishahi 2019;
+Warstadt et al. 2019). Geiger et al. (2018) is the closest
+work to ours. However, they intentionally focus on artiﬁcial fragments that deviate from ordinary language, whereas
+our fragments (despite being automatically constructed and
+sometimes a bit pedantic) aim to test naturalistic subsets of
+English. In a similar spirit, there have been other attempts
+8714
+
+
+=== PAGE 3 ===
+Fragments
+
+Example (premise,label,hypothesis)
+
+Genre
+
+Vocab. Size
+
+# Pairs
+
+Avg. Sen. Len.
+
+Negation
+
+Laurie has only visited Nephi, Marion has only visited Calistoga.
+CONTRADICTION Laurie didn’t visit Calistoga
+
+Countries/Travel
+
+3,581
+
+5,000
+
+20.8
+
+Boolean
+
+Travis, Arthur, Henry and Dan have only visited Georgia
+ENTAILMENT Dan didn’t visit Rwanda
+
+Countries/Travel
+
+4,172
+
+5,000
+
+10.9
+
+Quantifier
+
+Everyone has visited every place
+NEUTRAL Virgil didn’t visit Barry
+
+Countries/Travel
+
+3,414
+
+5,000
+
+9.6
+
+Counting
+
+Nellie has visited Carrie, Billie, John, Mike, Thomas, Mark, .., and 

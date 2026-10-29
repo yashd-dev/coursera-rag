@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.2 \u2014 Compact Notes\n\n**Problem**  \n- Paper surveys recent advances in NLI (broader than textual entailment), focusing on tasks, benchmarks, knowledge resources, and inference approaches. *(P2)*  \n- Aims to provide an entry point for newcomers to this quickly evolving field. *(P2)*  \n\n**Method**  \n- Survey overview of existing tasks and benchmarks, knowledge resources, and learning/inference approaches. *(P2)*  \n- Discusses limitations and future opportunities. *(P2)*  \n\n**Reported Results**  \n- No quantitative results or performance metrics reported; survey of state-of-the-art methods and benchmarks. *(P2\u2013P3)*  \n\n**Limitations**  \n- Not a comprehensive discussion of all NLP benchmarks/resources; focuses specifically on NLI. *(P3)*  \n- Early benchmarks targeted shallow linguistic approaches; deeper reasoning outside scope. *(P3)*  \n- Videos/images used for benchmarks are not the focus of this paper. *(P2)*  \n\n**Exact Quotes**  \n- \u201cAlthough videos and images are often used for creating various benchmarks, they are not the focus of this paper.\u201d *(P2)*  \n- \u201cWe use the term here to refer to a broader sense of inference which includes but is not restricted to the textual entailment task formulation.\u201d *(P2)*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2213,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7831dd6dffeQerJ9iL5ZjvS4M"
+  }
+]

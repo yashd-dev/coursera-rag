@@ -1,0 +1,78 @@
+=== PAGE 50 (continued) ===
+ synonym, antonym, and hypernym relationships
+derived from training data, and hidden correlation biases in benchmark data (Lai & Hockenmaier,
+2014).
+External knowledge and the Web were often used to complement features derived from the
+training data. For example, the best system in the first RTE Challenge (Dagan et al., 2005) used
+a naïve Bayes classifier with features from the co-occurrences of word from an online search engine (Glickman, 2006). A similar approach was also applied in the top system from the seventh
+RTE Challenge (Bentivogli et al., 2011), which utilized some knowledge resources from Section 3,
+50
+
+
+=== PAGE 51 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Task-specific output layers:
+MLP
+
+Attention
+Mechanism
+
+Softmax Layer
+
+Decoder
+
+Main Architecture:
+RNN
+
+CNN
+
+Transformer
+
+Fine-tuning
+
+Memory
+Augmented
+
+Feature-based
+
+Pre-trained language representations:
+Non-Contextual Word Embeddings
+(e.g., word2vec, GloVe)
+
+Pre-trained Contextual Representations
+(e.g., ELMo, GPT, BERT )
+
+Figure 15: Common components in neural approaches to natural language inference tasks.
+acronyms extracted from the training data, and linguistic knowledge to calculate a statistical measure of entailment between sentences (Tsuchida & Ishikawa, 2011). While the use of some external
+knowledge provides an advantage over models which only use linguistic features extracted from
+training data, these earlier statistical models have still not been competitive in recent benchmarks
+of large data size. Nonetheless, such models may serve as useful baselines for new benchmarks, as
+demonstrated for JOCI (Zhang et al., 2017).
+4.3 Neural Approaches
+Neural approaches evolved from earlier statistical approaches, but use various kinds of neural network architectures to discover useful features in the data, rather than manually specifying all of the
+features. The increasingly large amount of data available for recent benchmarks makes it possible
+to train larger and deeper neural models. Today, these approaches top virtually all leaderboards
+for NLI benchmarks surveyed here. Figure 15 shows some common components in neural models.
+First of all, distributional representation of words is fundamental where word vectors or embeddings
+are usually trained using neural networks on large-scale text corpora. In traditional word embedding
+models like word2vec (Mikolov et al., 2013) or GloVe (Pennington et al., 2014), the embedding vectors are context independent. No matter what context the target word appears in, once trained, its
+embedding vector is always the same. Consequently, these embeddings lack the capability of modeling different word senses in different contexts, although this phenomenon is prevalent in language.
+To address this problem, recent works have developed contextual word representation models, e.g.,
+Embeddings from Language Models (ELM O) by Peters, Neumann, Iyyer, Gardner, Clark, Lee, and
+51
+
+
+=== PAGE 52 ===
+S TORKS , G AO , & C HAI
+
+Zettlemoyer (2018) and Bidirectional Encoder Representations from Transformers (BERT) by Devlin et al. (2018). These models give words different embedding vectors based on the context in
+which they appear. These pre-trained word representations can be used as features or fine-tuned
+for downstream tasks. For example, the Generative Pre-trained Transformer (GPT) by Radford,
+Narasimhan, Salimans, and Sutskever (2018) and BERT (Devlin et al., 2018) introduce minimal
+task-specific parameters, and can be easily fine-tuned on the downstream tasks with modified final
+layers and loss functions.
+On top of the word embedding layers, task-specific network architectures are designed for different downstream applications. These architectures often adopt recurrent neural networks (RNNs)
+such as LSTMs (Hochreiter & Schmidhuber, 1997) and GRUs (Cho, van Merrienboer, Bahdanau,
+& Bengio, 2014), convolutional neural networks (CNNs), or more recently, transformers (Vaswani,
+Shazeer, Parmar, Uszkoreit, Jones, Gomez, Ka

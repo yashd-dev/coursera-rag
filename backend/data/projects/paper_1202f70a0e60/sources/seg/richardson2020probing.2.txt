@@ -1,0 +1,55 @@
+=== PAGE 1 (continued) ===
+escriptions. For example, given the pair of sentences All dogs
+chased some cat and All small dogs chased a cat shown
+in Figure 1, the goal for an NLI model is to determine that
+the second sentence, known as the hypothesis sentence, follows from the meaning of the ﬁrst sentence (the premise
+sentence). Such a task is known to involve a wide range
+of reasoning and knowledge phenomena, including knowledge that goes beyond basic linguistic understanding (e.g.,
+elementary logic). As one example of such knowledge, the
+inference in Figure 1 involves monotonicity reasoning (i.e.,
+c 2020, Association for the Advancement of Artiﬁcial
+Copyright 
+Intelligence (www.aaai.org). All rights reserved.
+8713
+
+
+=== PAGE 2 ===
+there particular linguistic fragments (relative to other fragments) that are hard for these pre-trained models to adapt to
+or that confuse the model on its original task?
+On these eight fragments, we ﬁnd that while existing NLI
+architectures can effectively learn these particular linguistic pheneomena, pre-trained NLI models do not perform
+well. This, as in other studies (Glockner, Shwartz, and Goldberg 2018), reveals weaknesses in the ability of these models to generalize. While most studies into linguistic probing end the story there, we take the additional step to see
+if attempts to continue the learning and re-ﬁne-tune these
+models on fragments (using a novel and cheap inoculation
+(Liu, Schwartz, and Smith 2019) strategy) can improve performance. Interestingly, we show that this yields mixed results depending on the particular linguistic phenomena and
+model being considered. For some fragments (e.g., comparatives), re-training some models comes at the cost of degrading performance on the original tasks, whereas for other
+phenomena (e.g., monotonicity) the learning is more stable,
+even across different models. These ﬁndings, and our technique of obtaining them, make it possible to identify the
+degree to which a given linguistic phenomenon stresses a
+benchmark NLI model, and suggest a new methodology for
+quickly making models more robust.
+
+build new challenge datasets that focus on particular linguistic phenomena (Glockner, Shwartz, and Goldberg 2018;
+Naik et al. 2018; Poliak et al. 2018a). The latter aim to more
+deﬁnitively answer questions such as: are models able to effectively learn and extrapolate complex knowledge and reasoning abilities when trained on benchmark tasks?
+To date, studies using challenge datasets have largely been
+limited by the simple types of inferences that they included
+(e.g., lexical and negation inferences). They fail to cover
+more complex reasoning phenomena related to logic, and
+primarily use adversarially generated corpus data, which
+sometimes makes it difﬁcult to identify exactly the particular
+semantic phenomena being tested for. There is also a focus
+on datasets that are easily able to be constructed and/or veriﬁed using crowd-sourcing techniques. Adequately evaluating a model’s competence on a given reasoning phenomena,
+however, often requires datasets that are hard even for humans, but that are nonetheless based on sound formal principles (e.g., reasoning about monotonicity where, in contrast
+to the simple example in Figure 1, several nested downward
+monotone contexts are involved to test the model’s capacity
+for compositionality, cf. Lake and Baroni (2017)).
+In contrast to existing work on challenge datasets, we
+propose using semantic fragments—synthetically generated
+challenge datasets, of the sort used in linguistics, to study
+NLI model behavior. Semantic fragments provide the ability
+to systematically control the semantic complexity of each
+new challenge dataset by bringing to bear the expert knowledge excapsulated in formal theories of reasoning, making it
+possible to more precisely identify model performance and
+competence on a given linguistic phenomenon. While our
+idea of using fragments is broadly applicable to any linguistic or reasoning phenomena, we look at eight types of fragm

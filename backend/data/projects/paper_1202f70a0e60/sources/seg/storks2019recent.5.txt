@@ -1,0 +1,126 @@
+=== PAGE 5 (continued) ===
+iticized for encouraging machines to deceive humans (Levesque,
+2011), not providing feedback on a continuous scale to allow for incremental development (Ortiz,
+2016), and being impractical in several ways (Harnad, 2000). Benchmark datasets have thus been
+used as alternatives to the Turing Test, providing training and testing data, evaluation frameworks,
+and continuous numerical feedback for various language tasks. For the remainder of this section,
+we first give an overview of recent benchmarks that are designed to evaluate machine’s inference
+ability in natural language understanding. Then, we summarize important considerations in creating
+these benchmarks and lessons learned from ongoing research.
+5
+
+
+=== PAGE 6 ===
+S TORKS , G AO , & C HAI
+
+10,000,000
+GLUE
+
+Benchmark Data Size
+
+1,000,000
+
+CBT
+SNLI
+
+100,000
+
+ROCStories
+
+RTE-7
+RTE-6
+
+10,000
+
+1,000
+
+SICK
+
+RTE-1
+
+RTE-2
+
+MCTest
+
+RTE-3
+RTE-4
+
+RTE-5
+COPA
+Conversational Entailment
+
+IIE
+SQuAD 1.1 QuAC
+RACE
+CLOTH
+Event2Mind
+bAbI NarrativeQA
+JOCI
+MCScript
+LAMBADA
+MultiRC
+OpenBookQA
+
+DNC
+Story Commonsense
+SQuAD 2.0 AlphaNLI
+ReCoRD DROP
+SWAG
+HellaSWAG
+WinoGrande
+Cosmos QA
+SciTail
+SocialIQA
+SuperGLUE
+CoQA
+DREAM
+CommonsenseQA
+SherLIiC
+ARC
+MC-TACO
+ARCT
+ProPara
+
+100
+
+Triangle-COPA
+Winograd Schema Challenge
+
+10
+
+2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021
+
+Figure 2: Since the early 2000s, there has been a surge of benchmark tasks geared toward natural
+language inference. In 2018, we saw the creation of more benchmarks of larger sizes than
+ever before.
+
+2.1 An Overview of Existing Benchmarks
+Since the Recognizing Textual Entailment (RTE) Challenges introduced by Dagan et al. (2005) in
+the early 2000s, there has been an explosion of challenging NLI benchmarks being created. Figure 2 shows a trend of this growth among the benchmarks introduced in this section. The RTE
+challenges, which were inspired by difficulties encountered in semantic processing for machine
+translation, question answering, and information extraction (Dagan et al., 2005), had been the dominant reasoning tasks for many years. Recently, however, there has been a surge in the variety of
+benchmarks. As shown in Figure 2, the sizes for most benchmarks in earlier days, e.g., from 2005
+to 2015, are relatively small. Most benchmarks developed after 2015 have a much larger number
+of instances. Some of them have more than 100,000 instances, which make the application of deep
+learning approaches possible.
+Next, we give a review of widely used benchmarks, introduced by the following groupings:
+reference resolution, question answering, textual entailment, plausible inference, psychological reasoning, and multiple tasks. These groupings are not necessarily exclusive, but they highlight the
+recent trends in the field. While all benchmarks’ training and/or development data are available for
+free download, it is important to note that test data are often not distributed publicly so that testing
+of systems can occur privately in a standard, unbiased way.
+2.1.1 R EFERENCE R ESOLUTION
+Reference resolution is the process of identifying a referent, typically a linguistic mention in a
+span of text, that a particular expression, e.g., a pronoun or phrase, refers to. This process can
+be significantly complicated by ambiguities which arise from the presence of multiple entities in
+a sentence with pronouns, creating a need for external knowledge, e.g., commonsense knowledge,
+to inform decisions (Levesque, 2011). Since such challenging examples for reference resolution
+are typically handcrafted or handpicked (Morgenstern, Davis, & Ortiz, 2016; Rahman & Ng, 2012;
+Rudinger, Naradowsky, Leonard, & Van Durme, 2018a), there exists a small magnitude of data for
+6
+
+
+=== PAGE 7 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+this skill, and it remains an unsolved problem (Rahman & Ng, 2012; Davis, Morgenstern, & Ortiz,
+2017). Consequently, there is a need for more benchmarks here. In the following par

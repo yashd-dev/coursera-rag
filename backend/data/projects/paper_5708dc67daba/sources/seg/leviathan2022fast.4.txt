@@ -1,0 +1,120 @@
+=== PAGE 3 (continued) ===
+nalysis
+3.1. Number of Generated Tokens
+
+From Lemma 3.3 we immediately get the following results:
+
+Let’s analyze the reduction factor in the number of serial
+calls to the target model, or equivalently, the expected num-
+
+2
+As before, we’ll omit the x<t subscript whenever the prefix is
+clear from the context.
+
+3
+
+
+=== PAGE 4 ===
+Fast Inference from Transformers via Speculative Decoding
+
+Corollary 3.4. DLK (p, q) is a symmetric divergence in [0, 1]. Corollary 3.9. If α > c, there exists γ for which we’ll get
+DLK (p, q) = 0 ⇐⇒ p = q.
+an improvement, and the improvement factor will be at least
+1+α
+DLK (p, q) = 1 ⇐⇒ p and q have disjoint support.
+1+c .
+Theorem 3.5. β = 1 − DLK (p, q)
+Proof. β
+
+=
+
+Ex∼q(x)
+
+Ex∼q(x) min(1, p(x)
+q(x) ) =
+
+(
+1
+p(x)
+q(x)
+
+q(x) ≤ p(x)
+q(x) > p(x)
+
+Proof. If we get an improvement for γ, we’d also get an
+improvement for any 0 < γ ∗ < γ, so for our method to
+yield an improvement, we can evaluate Theorem 3.8 for
+1−α2
+= 1+α
+γ = 1, yielding (1−α)(c+1)
+1+c .
+
+=
+
+P
+
+x min(p(x), q(x))
+
+3.4. Number of Arithmetic Operations
+Finally we get:
+
+Algorithm 1 does γ +1 runs of Mp in parallel, so the number
+of concurrent arithmetic operations grows by a factor of
+γ +1. Now, since Algorithm 1 produces at most γ +1 tokens
+per run, the total number of arithmetic operations might be
+higher than that of the standard decoding algorithm. When
+we accept the sample from Mq the increased concurrency
+is “free” and the total number of operations isn’t increased3 .
+When we reject a guess though, computation is wasted. Let’s
+now analyze the effect of our method on the total number
+of arithmetic operations.
+
+Corollary 3.6. α = 1 − E(DLK (p, q)) = E(min(p, q))
+See Table 3 for empirically observed α values in our experiments.
+3.3. Walltime Improvement
+We’ve shown that with the i.i.d. assumption our algorithm
+reduces the number of calls to the target model by a factor
+γ+1
+of 1−α
+1−α . Note that speculative execution in general, and
+our algorithm in particular, assume that we have enough
+compute resources to support the increased concurrency
+(Section 3.4). For the walltime anaylsis, we’ll assume that
+we can run γ + 1 concurrent evaluations of Mp in parallel
+without increasing the walltime. To get the total walltime
+improvement, we now consider the cost of running the approximation model Mq .
+
+Definition 3.10. Let ĉ be the ratio of arithmetic operations
+per token of the approximation model Mq to that of the
+target model Mp .
+Theorem 3.11. The expected factor of increase in the number of total operations of Algorithm 1 is (1−α)(γĉ+γ+1)
+.
+1−αγ+1
+Proof. Denote by T̂ the number of arithmetic operations
+done by a standard decoding baseline per token, i.e. the
+number of operations of a single run of Mp . Then a single
+iteration of Algorithm 1 costs T̂ ĉγ + T̂ (γ + 1) operations
+(for γ runs of Mq and γ + 1 parallel runs of Mp ). Dividing
+by the expected number of tokens produced by Algorithm 1,
+i.e. Equation (1), and by T̂ , we get the desired result.
+
+Definition 3.7. Let c, the cost coefficient, be the ratio between the time for a single run of Mq and the time for a
+single run of Mp .
+Note that unlike α which is an intrinsic property of the
+models and the task, the value of c depends on the hardware
+configuration and software implementation details. In our
+experiments where Mq is typically a couple of orders of
+magnitude smaller than Mp , c was always less than 0.05
+and often negligibly close to 0.
+
+If α is low, the increase in the number of arithmetic operations is high, and vice-versa. Note that for Transformer
+decoders, the total number of arithmetic operations by Algorithm 1 (not counting runs of Mq ) can be bounded from
+above by a single run of the same-size Transformer encoder.
+
+Theorem 3.8. The expected improvement factor in total
+1−αγ+1
+walltime by Algorithm 1 is (1−α)(γc+1)
+.
+Proof. Denote the cost of running a single step of Mp by T .
+Now, each run of Algorithm 1 costs T cγ + T (for running
+the approximation model Mq γ times and running

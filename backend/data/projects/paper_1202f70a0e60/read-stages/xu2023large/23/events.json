@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.23 \u2014 Segment Notes\n\n**Problem**: The study investigates zero-shot and k-shot prompting strategies for deductive, inductive, and abductive reasoning across datasets (bAbI, EntailmentBank, RuleTaker, FOLIO, Leap-Of-Thought, CLUTRR, \u03b1-NLI, \u03b1-NLG, abductive rule tasks, ReClor, LogiQA variants). It evaluates prompt-engineered reasoning in LLMs.\n\n**Method**: A systematic comparison of zero-shot and k-shot prompts across multiple reasoning types and datasets. Prompt templates differ by task (deductive vs. inductive vs. abductive) and shot count. All prompts follow a \u201cGiven facts: [Context]\u201d structure with task-specific answer formats.\n\n**Reported results**: None. The segment presents only prompt templates and task descriptions; no LLM outputs, accuracy, or comparative scores appear.\n\n**Limitations**: The absence of results prevents assessment of prompt effectiveness. No conclusions about reasoning performance can be drawn from this segment alone.\n\n**Exact quotes**  \n- \u201cGiven facts: [Context]. Based on the given facts above, determine whether the following statement is true using deductive reasoning and give simple explanations. The statement is: [Statement].\u201d (deductive, zero-shot, page 20)  \n- \u201c[task description]: Given a context and an observation, the abductive reasoning task is to g\u201d (page 21, truncated)\n\nPage 19 (continued) and page 20 are attributed as the source for all bullets above."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2347,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783857dcffemfOkPWwaZmaBOX"
+  }
+]

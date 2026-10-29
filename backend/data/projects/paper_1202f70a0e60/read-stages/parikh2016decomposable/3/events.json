@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 3 CONTINUED**\n\n- **Problem**: Compose words in each sentence; compute intra-sentence attention between aligned subphrases using function G; aggregate via summation; classify with feed-forward network H.\n- **Method**: Define fij = Fintra(ai)T Fintra(aj); compute v1,i = G([\u0101i, \u03b2i]) and v2,j = G([b\u0304j, \u03b1j]); aggregate v1,i and v2,j by summation; feed [v1, v2] into final classifier H (feed-forward + linear layer).\n- **Reported results**: (PAGE 4) Vanilla approach: train 89.5%, test 86.3%, 382K params. With intra-sentence attention: train 90.5%, test 86.8%, 582K params.\n- **Limitations**: Distance-sensitive bias terms di\u2212j bucketed at >10 words share same bias; complexity O(`d2) under assumption ` < d; inference cost higher than linear models.\n- **Quote (PAGE 3)**: \u201cNote that since there are only a linear number of terms in this case, we do not need to apply a decomposition as was done in the previous step. Thus G can jointly take into account both \u0101i, and \u03b2i.\u201d (Eq. 3)\n- **Quote (PAGE 3)**: \u201cWe now have two sets of comparison vectors {v1,i}`i=1 and {v2,j}`j=1. We first aggregate over each set by summation.\u201d (Eq. 4)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2771,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781b5c2affe30woB3543LXJMa"
+  }
+]

@@ -1,0 +1,96 @@
+=== PAGE 1 ===
+A Decomposable Attention Model for Natural Language Inference
+Ankur P. Parikh
+Google
+New York, NY
+
+Oscar Täckström
+Google
+New York, NY
+
+Dipanjan Das
+Google
+New York, NY
+
+Jakob Uszkoreit
+Google
+Mountain View, CA
+
+arXiv:1606.01933v2 [cs.CL] 25 Sep 2016
+
+{aparikh,oscart,dipanjand,uszkoreit}@google.com
+
+Abstract
+We propose a simple neural architecture for natural language inference. Our approach uses attention to decompose the problem into subproblems that can be solved separately, thus making
+it trivially parallelizable. On the Stanford Natural Language Inference (SNLI) dataset, we obtain state-of-the-art results with almost an order
+of magnitude fewer parameters than previous
+work and without relying on any word-order information. Adding intra-sentence attention that
+takes a minimum amount of order into account
+yields further improvements.
+
+LSTMs henceforth) with the goal of deeper sentence comprehension. While these approaches have
+yielded impressive results, they are often computationally very expensive, and result in models having
+millions of parameters (excluding embeddings).
+Here, we take a different approach, arguing that
+for natural language inference it can often suffice to
+simply align bits of local text substructure and then
+aggregate this information. For example, consider
+the following sentences:
+• Bob is in his room, but because of the thunder
+and lightning outside, he cannot sleep.
+• Bob is awake.
+
+1
+
+Introduction
+
+Natural language inference (NLI) refers to the problem of determining entailment and contradiction relationships between a premise and a hypothesis. NLI
+is a central problem in language understanding (Katz,
+1972; Bos and Markert, 2005; van Benthem, 2008;
+MacCartney and Manning, 2009) and recently the
+large SNLI corpus of 570K sentence pairs was created for this task (Bowman et al., 2015). We present
+a new model for NLI and leverage this corpus for
+comparison with prior work.
+A large body of work based on neural networks
+for text similarity tasks including NLI has been published in recent years (Hu et al., 2014; Rocktäschel
+et al., 2016; Wang and Jiang, 2016; Yin et al., 2016,
+inter alia). The dominating trend in these models is
+to build complex, deep text representation models,
+for example, with convolutional networks (LeCun et
+al., 1990, CNNs henceforth) or long short-term memory networks (Hochreiter and Schmidhuber, 1997,
+
+• It is sunny outside.
+The first sentence is complex in structure and it
+is challenging to construct a compact representation
+that expresses its entire meaning. However, it is fairly
+easy to conclude that the second sentence follows
+from the first one, by simply aligning Bob with Bob
+and cannot sleep with awake and recognizing that
+these are synonyms. Similarly, one can conclude
+that It is sunny outside contradicts the first sentence,
+by aligning thunder and lightning with sunny and
+recognizing that these are most likely incompatible.
+We leverage this intuition to build a simpler and
+more lightweight approach to NLI within a neural
+framework; with considerably fewer parameters, our
+model outperforms more complex existing neural architectures. In contrast to existing approaches, our
+approach only relies on alignment and is fully computationally decomposable with respect to the input
+text. An overview of our approach is given in Figure 1. Given two sentences, where each word is repre-
+
+
+=== PAGE 2 ===
+2
+
+Related Work
+
+Our method is motivated by the central role played by
+alignment in machine translation (Koehn, 2009) and
+previous approaches to sentence similarity modeling
+(Haghighi et al., 2005; Das and Smith, 2009; Chang
+et al., 2010; Fader et al., 2013), natural language
+inference (Marsi and Krahmer, 2005; MacCartney
+et al., 2006; Hickl and Bensley, 2007; MacCartney
+et al., 2008), and semantic parsing (Andreas et al.,
+2013). The neural counterpart to alignment, attention (Bahdanau et al., 2015), which is a key part
+of our approach, was originally proposed and has
+be

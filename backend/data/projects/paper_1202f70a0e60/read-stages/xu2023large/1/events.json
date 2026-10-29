@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large - Page 1 Notes\n\n- **Problem**: Whether LLMs can effectively address logical reasoning tasks requiring gradual cognitive inference similar to human intelligence; remains unanswered.\n- **Method**: Select fifteen logical reasoning datasets organized into deductive, inductive, abductive and mixed-form reasoning; include 3 early-era + 4 trending LLMs; propose fine-level evaluations (answer correctness, explain correctness/completeness/redundancy); attribute problematic cases to 5 error types across evidence selection and reasoning process dimensions; propose neutral-content dataset to avoid knowledge bias.\n- **Reported results**: None (introduction only).\n- **Limitations**: None reported in segment.\n- **Quote 1**: \u201clogical reasoning consistently plays a fundamental and significant role in the domains of knowledge engineering and artificial intelligence\u201d [1]\u2013[3].\n- **Quote 2**: \u201cdeveloping efficient and robust logical reasoning systems remains a challenging academic pursuit due to complexities in handling intricate semantic and syntactic structures, managing symbolic knowledge, executing high-level abstractions and inferences, and navigating uncertainty and ambiguity\u201d [7]\u2013[9].\n- **Page 1 of 39**."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2160,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783d7ac5ffeaYsBLoZrxVFoxa"
+  }
+]

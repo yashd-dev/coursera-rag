@@ -1,0 +1,48 @@
+=== PAGE 29 (continued) ===
+as long been criticized by AI researchers as
+it does not seem to truly evaluate machine intelligence. As described by Ortiz (2016), there is a
+critical need for new intelligence benchmarks to support incremental development and evaluation
+of AI techniques. These benchmarks should not merely provide a pass or fail grade, rather they
+should provide feedback on a continuous scale which enables both incremental development and
+comparison of approaches. One key consideration for these benchmarks is informative evaluation
+metrics that are objective and easy to calculate. These metrics can be used to compare different
+approaches and compare machine performance against human performance.
+Evaluation metrics. Choice of evaluation metrics is highly dependent on the type of task, and
+thus so is the difficulty of calculating them. Classification tasks often use exact-match accuracy
+if correct answers or class labels are evenly distributed through benchmark data. If this is not the
+case, common practice is to additionally present F-measure as an evaluation metric (Wang et al.,
+2018). The precision and recall may also be presented, however the F-measure (which considers
+both in its calculation) is much more common in the recent surveyed benchmarks. Multiple-choice
+and classification task formats such as RTE, cloze, and traditional multiple-choice can all use these
+metrics.
+More open-ended tasks are by nature more difficult to evaluate, but they can still be objective and
+informative. Tasks like SQuAD (Rajpurkar et al., 2016) or QuAC (Choi et al., 2018), where answers
+can only be spans of a provided text, can be evaluated similarly to multiple-choice tasks. Exactmatch accuracy and F-measure are used as evaluation metrics on both of these benchmarks, where
+the collection of tokens in the predicted and true spans (excluding punctuation and articles) are
+compared. Where answers are instead a subset of a large group of category labels, e.g., the Maslow,
+Reiss, and Plutchik tasks in Story Commonsense, evaluation is similar, but for these benchmarks
+particularly, precision and recall are additionally calculated (Rashkin et al., 2018a).
+Where multiple purely open-ended responses are given, as in Event2Mind (Rashkin et al.,
+2018b), evaluation is more difficult. Event2Mind particularly uses the average cross-entropy and
+the "recall @ 10," i.e., the percentage of times human-produced ground truth labels fall within the
+top 10 generated predictions from a system. In bAbI (Weston et al., 2016), LAMBADA (Paperno
+et al., 2016), and CoQA (Reddy et al., 2018), where open-ended responses are compared to a single
+ground truth answer, exact-match accuracy and F-measure are used. These benchmarks are able
+to use such exact evaluation measures because responses are short. In bAbI particularly, correct
+responses are limited to one word or lists of words, and in LAMBADA, responses are only a single word to fill a blank. Such restrictions are essential for such simple and accurate evaluation of
+open-ended responses. For longer generated responses, e.g., as required in NarrativeQA (Kočiský
+et al., 2018), evaluation metrics for machine translation like BLEU (Papineni, Roukos, Ward, &
+Zhu, 2002) or Meteor (Denkowski & Lavie, 2011), or similar metrics for text summarization like
+ROUGE (Lin, 2004), are often used to compare answers with gold responses. However, many such
+metrics have been found to not correlate well with human judgments of generated text (Belz &
+Reiter, 2006; Elliott & Keller, 2014), so they should be interpreted with caution.
+Baseline performance. Benchmarks provide common datasets and experimental setups for researchers to compare different approaches. When a new benchmark is first released, results from
+simple baseline approaches are often reported. Ideally, the benchmark should be designed in a
+29
+
+
+=== PAGE 30 ===
+S TORKS , G AO , & C HAI
+
+way that a simple baseline would achieve poor performance to ensure that it cannot be solved by
+trivial means,

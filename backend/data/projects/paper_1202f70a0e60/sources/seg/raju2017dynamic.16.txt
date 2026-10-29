@@ -1,0 +1,80 @@
+=== PAGE 11 (continued) ===
+rgus, R.
+“End - to - end memory networks” In Proc. NIPS
+2015.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2229
+
+
+=== PAGE 12 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+[39]
+
+[40]
+[41]
+
+[42]
+[43]
+[44]
+[45]
+
+[46]
+
+[47]
+
+[48]
+
+Tan, S. (2017). Spot the lie: Detecting untruthful
+online opinion on Twitter (Doctoral dissertation,
+Department of Computing, Imperial College
+London).
+Thapliyal, H. (2016). Unveiling the Past: AI Powered Historical Book Question Answering.
+Global journal of Business and Integral Security.
+Tim Rocktaschel, Edward Grefenstette & Karl Moritz
+Hermann, Tomas & Phil Blunsom. “Reasoning about
+Entailment with Neural Attention”. In Proc. ICLR
+2016
+Valli, M. (2016). A glimpse on Dark Matter particles
+shining through the gamma - ray Sky.
+Volodymyr Mnih, Nicolas Heess, Alex Graves, and
+Koray Kavukcuoglu. “Recurrent models of visual
+attention” In Proc. NIPS 2014.
+Wang, L. (2017). Heterogeneous data and big data
+analytics. Automatic Control and Information
+Sciences, 3 (1), 8 - 15.
+Xiong, C., Merity, S., & Socher, R. (2016, June).
+Dynamic memory networks for visual and textual
+question answering. In International conference on
+machine learning (pp.2397 - 2406). PMLR.
+Ye, J., Dasiopoulou, S., Stevenson, G., Meditskos, G.,
+Kontopoulos, E., Kompatsiaris, I., & Dobson, S.
+(2015). Semantic web technologies in pervasive
+computing: A survey and research roadmap.
+Pervasive and Mobile Computing, 23, 1 - 25.
+Zhang, Y., Guo, C., Li, D., Chu, R., Wu, H., & Xiong,
+Y. (2015). {CubicRing}: Enabling {One - Hop}
+Failure Detection and Recovery for Distributed {In Memory} Storage Systems. In 12th USENIX
+Symposium on Networked Systems Design and
+Implementation (NSDI 15) (pp.529 - 542).
+Zhiguo Wang, Wael Hamza, Radu Florian. “Bilateral
+Multi - Perspective Matching for Natural Language
+Sentences” In Proc. IJCAI 2017.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2230
+

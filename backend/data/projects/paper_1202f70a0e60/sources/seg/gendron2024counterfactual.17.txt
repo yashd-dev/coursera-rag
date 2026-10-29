@@ -1,0 +1,99 @@
+=== PAGE 17 (continued) ===
+nformation linked to the
+current instance>"
+},
+...
+],
+"hidden_nodes": [
+{
+"node_id": (str) "h0",
+"description": (str) "<high-level short atomic description of the hidden causal variable>",
+"type": (str) "<variable type: e.g. bool, int, set element, range element>",
+"values": (str) "<set of possible values, if applicable>",
+"current_value": (str) "", # This field is left empty because the current value of the variable is
+unknown since the variable is hidden
+"context": (str) "<contextual information type> : <value of the contextual information linked to the
+current instance>"
+},
+...
+],
+"observed_edges": [
+{
+"source_node_id": (str) "0",
+"target_node_id": (str) "1",
+"description": (str) "<high-level short atomic description of the causal relationship from variable 0
+to 1>",
+"details": (str) "<detailed explanation of how the value of variable 0 affects the value of variable
+1 in the text>"
+},
+...
+],
+"hidden_edges": [
+{
+"source_node_id": (str) "h0",
+"target_node_id": (str) "1",
+"description": (str) "<high-level short atomic description of the causal relationship from hidden
+variable 0 to 1>",
+"details": (str) "<detailed explanation of how the value of hidden variable 0 affects the value of
+variable 1 in the text>"
+},
+...
+]
+}
+
+Here is the parameterised user prompt, specific for each instance. The {text} parameter is replaced
+by the input document.
+Here is the input text:
+‘‘‘
+{text}
+‘‘‘
+
+B.2
+
+Graph Summarisation
+
+When conducting graph summarisation, we do not use the LLM as a generative model but as an
+embedding model. We only provide node information using the following format. Texts in curly
+brackets represent variable parameters.
+description: {description}, type: {type}, values: {values}, context: {context}
+
+When adding neighbour information, we concatenate the initial representation with the folowing
+neighbour representation:
+neighbour at distance {rank} from node: description: {description}, type: {type}, values: {values},
+context: {context}
+
+17
+
+
+=== PAGE 18 ===
+B.3
+
+Counterfactual Inference
+
+During inference, we provide parent variables to the LLM and prompt it to estimate the value of the
+target variable. Here is the system prompt:
+Your task is to predict the value of the target variable given its description, type, possible values, and
+context, and the attributes and values of its parent causes and the relationships connecting them.
+The value of the target variable is fully determined by its direct list of causes. Reason step-by-step.
+Start by describing the attributes of the target variable and explain in your own words its
+relationships with its parent causes, how the variables are linked, and how their values cause the
+value of the target. Then, predict the value of the target variable. Provide a confidence score as a
+float between 0 and 1. Follow strictly the provided format.
+
+The user prompt provides information about the target variable. The format is as follows:
+The target variable has the following attributes: {node attributes}.
+It is caused by the following variables:
+
+The list of parent is then provided. The ith parent variable is described as follows:
+{i}. {parent attributes}. Its value is {parent value}. Its causal relationship with the target is
+described as follows: {edge attributes}
+
+We generate the value of the intervened variable using an LLM. Here is the system prompt provided
+for this task:
+Your task is to interpret the attributes of a variable and propose an alternative/counterfactual
+instantiation different from its current value. The variable is described by its description, type,
+possible values, current value, and context. The counterfactual value should be a plausible
+alternative instantiation of the variable given the context, type, description, and possible values.
+Reason step-by-step. Start by describing the attributes of the variable and explain in your own words
+the reasons for the choice of the counterfactual value. Then, state the factual value and propose
+the new counterfactual value. Provide 

@@ -1,0 +1,76 @@
+=== PAGE 4 (continued) ===
+nd fine-tuning M EDUSA
+heads. However, training the backbone in conjunction with
+the M EDUSA heads can significantly enhance the accuracy
+of the M EDUSA heads. Depending on the computational
+
+LM EDUSA-2 = LLM + λ0 LM EDUSA-1 .
+4
+
+(2)
+
+
+=== PAGE 5 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+• Differential learning rates: Since the backbone model
+is already well-trained and the M EDUSA heads need
+more training, we can use separate learning rates for
+them to enable faster convergence of M EDUSA heads
+while preserving the backbone model’s capability.
+
+However, in real-world scenarios, sampling from language
+models is often employed to generate diverse responses,
+and the temperature parameter is used merely to modulate
+the “creativity” of the response. Therefore, higher temperatures should result in more opportunities for the original
+model to accept the draft model’s output. We ascertain that
+it is typically unnecessary to match the distribution of the
+original model. Thus, we propose employing a typical acceptance scheme to select plausible candidates rather than
+using rejection sampling. This approach draws inspiration
+from truncation sampling studies (Hewitt et al., 2022) (refer
+to Appendix A for an in-depth explanation). Our objective
+is to choose candidates that are typical, meaning they are
+not exceedingly improbable to be produced by the original
+model. We use the prediction probability from the original
+model as a natural gauge for this and establish a threshold
+based on the prediction distribution to determine acceptance.
+Specifically, given x1 , x2 , · · · , xn as context, when evaluating the candidate sequence (xn+1 , xn+2 , · · · , xn+K+1 )
+(composed by top predictions of the original language model
+head and M EDUSA heads), we consider the condition
+
+• Heads warmup: Noticing that at the beginning of
+training, the M EDUSA heads have a large loss, which
+leads to a large gradient and may distort the backbone
+model’s parameters. Following the idea from Kumar
+et al. (2022), we can employ a two-stage training process. In the first stage, we only train the M EDUSA
+heads as M EDUSA-1. In the second stage, we train the
+backbone model and M EDUSA heads together with a
+warmup strategy. Specifically, we first train the backbone model for a few epochs, then train the M EDUSA
+heads together with the backbone model. Besides this
+simple strategy, we can also use a more sophisticated
+warmup strategy by gradually increasing the weight λ0
+of the backbone model’s loss. We find both strategies
+work well in practice.
+Putting these strategies together, we can train M EDUSA
+heads together with the backbone model without hurting
+the backbone model’s capability. Moreover, this recipe can
+be applied together with Supervised Fine-Tuning (SFT),
+enabling us to get a model with native M EDUSA support.
+
+poriginal (xn+k |x1 , x2 , · · · , xn+k−1 ) >
+min (ϵ, δ exp (−H(poriginal (·|x1 , x2 , · · · , xn+k−1 )))) ,
+where H(·) denotes the entropy function, and ϵ, δ are the
+hard threshold and the entropy-dependent threshold respectively. This criterion is adapted from Hewitt et al. (2022)
+and rests on two observations: (1) tokens with relatively
+high probability are meaningful, and (2) when the distribution’s entropy is high, various continuations may be deemed
+reasonable. During decoding, every candidate is evaluated
+using this criterion, and a prefix of the candidate is accepted
+if it satisfies the condition. To guarantee the generation of
+at least one token at each step, we apply greedy decoding
+for the first token and unconditionally accept it while employing typical acceptance for subsequent tokens. The final
+prediction for the current step is determined by the longest
+accepted prefix among all candidates.
+
+2.2.3. H OW TO S ELECT THE N UMBER OF H EADS
+Empirically, we found that five heads are sufficient at most.
+Therefore, we recommend training with five heads and referring to the strategy described in Section

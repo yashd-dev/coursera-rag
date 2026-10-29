@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing: Page 8 continued\n\n- **Problem**: Inventory NLI phenomena; rigorously probe model performance beyond prior work (Zaenen et al., 2005). Assess whether models generalize or simply re-purpose on challenge tasks.\n\n- **Method**: Lossless inoculation strategy \u2014 teach model new tasks while explicitly balancing loss on original task vs. new task loss. BERT effective at learning new tasks with minimal original-task loss, suggesting continuous learning could increase generalization.\n\n- **Reported results**: Models largely robust on new linguistic phenomena; generally easy to re-purpose, especially BERT. Ubiquity of logical/monotonicity reasoning justifies chosen fragments; models solve these tasks. Framework can systematically probe benchmark NLI flavors and identify annotation errors/artifacts.\n\n- **Limitations**: Benchmark NLI annotations often imperfect/error-prone (Kalouli et al., 2017; Pavlick & Kwiatkowski, 2019). Loose task definition (Dagan et al., 2005). Approach limited to elementary logic; future work should extend to commonsense reasoning beyond elementary logic.\n\n- **Exact quotes**:\n  - \"The fact that models such as BERT can effectively learn new tasks with minimal loss on their original tasks gives some indication that, even if the models are not generalizing too far beyond the provided challenge tasks, one way to increase generalization is by continuously feeding models new challenge tasks.\" (Page 8 continued)\n  - \"Despite differences across various fragments, we largely found NLI models to be robust when tackling new linguistic phenomena and easy to quickly re-purpose (especially with BERT).\" (Page 8 continued)\n\n- **References-only note**: Final segment lists citations only; no findings to attribute."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2378,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7832b6f3ffeA4mstsuhO26Bj9"
+  }
+]

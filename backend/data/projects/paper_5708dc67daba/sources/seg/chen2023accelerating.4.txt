@@ -1,0 +1,104 @@
+=== PAGE 4 (continued) ===
+oof in Theorem 1) within hardware numerics. Note that:
+4
+
+
+=== PAGE 5 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+• At least one token will always be generated from a draft-accept loop – if the first token is
+rejected, a valid token is resampled.
+• Since the final token of the draft gives us the logits for the next token, if every drafted token is
+accepted, we can sample from it normally. This gives us a maximum of 𝐾 + 1 tokens per loop,
+over the naive implementation which would only return 𝐾 tokens.
+With standard sampling methods such as nucleus, top-k sampling and adjusting temperature, we
+can modify the probabilities accordingly before applying this rejection sampling scheme. We have
+observed that the overall acceptance rate is robust to the exact parameters used.
+Because we do not interact with the body of the transformer itself, this method can be used in
+conjunction many other techniques for accelerating or optimising the memory use of sampling, such
+as quantisation and multi-query attention.
+
+Choice of Draft Models
+Since the acceptance criterion guarantees the distribution of the target model in our samples, we are
+free to choose the method for drafting a continuation as long as it exposes logits, and there is a high
+enough acceptance rate and/or low enough latency to break-even. There exist several approaches
+here:
+• Incorporating draft generation into the target model, and train the model from the start. This
+is the strategy used by Stern et al. (2018), which adds multiple heads into the transformer to
+generate multiple tokens.
+• Using sequence level distillation (Kim and Rush, 2016) to generate a second model which
+predicts 𝐾 tokens in parallel. This strategy was employed by Ge et al. (2022).
+• Set a portion of the activations of the target model as an input to the draft model, and train the
+draft model with this input.
+Although these methods will likely yield powerful drafts, they require a large number of data generated from the target model or changes to the target model. Sequence level distillation in particular
+would require a large compute budget. This makes them less practical for large scale applications.
+Whilst large language models produce better samples, intuitively there are "easier" tokens to predict
+for which smaller models may be sufficient. Therefore we may simply use a smaller version of the
+target language model as the draft and obtain high acceptance rates. This would also be convenient
+from an engineering and workflow perspective, since robust tooling for such models should already
+exist to train the target model in the first place.
+
+Results
+We train a 4 billion parameter draft model optimised for sampling latency on 16 TPU v4s – the same
+hardware that is typically used to serve Chinchilla for research purposes. This model was trained
+with the same tokeniser and dataset as Chinchilla, with a slightly smaller width and with only 8
+layers. The relatively few number of layers allows it to achieve a sampling speed of 1.8ms/token
+compared to 14.1ms/token for Chinchilla. For details, please refer to the hyperparameters in Table 2.
+For distributed setups it is insufficient to naively choose a small model as the draft, since different models have different optimal inference setups. For example, it is typical to serve Chinchilla 70B
+5
+
+
+=== PAGE 6 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+Table 1 | Chinchilla performance and speed on XSum and HumanEval with naive and speculative
+sampling at batch size 1 and 𝐾 = 4. XSum was executed with nucleus parameter 𝑝 = 0.8, and
+HumanEval with 𝑝 = 0.95 and temperature 0.8.
+Sampling Method
+
+Benchmark
+
+Result
+
+Mean Token Time
+
+Speed Up
+
+ArS (Nucleus)
+SpS (Nucleus)
+
+XSum (ROUGE-2)
+
+0.112
+0.114
+
+14.1ms/Token
+7.52ms/Token
+
+1×
+1.92×
+
+ArS (Greedy)
+SpS (Greedy)
+
+XSum (ROUGE-2)
+
+0.157
+0.156
+
+14.1ms/Token
+7.00ms/Token
+
+1×
+2.01×
+
+ArS (Nucleus)
+SpS (Nucleus)
+
+HumanEval (100 Shot)
+
+45.1%
+47.0%
+
+14.1ms/Token
+5.73ms/Token

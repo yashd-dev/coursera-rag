@@ -1,0 +1,67 @@
+=== PAGE 13 (continued) ===
+jjwal Bhargava, Shruti Bhosale, et al. Llama 2:
+Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023.
+Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony
+Moi, Pierric Cistac, Tim Rault, Rémi Louf, Morgan Funtowicz, et al. Huggingface’s
+transformers: State-of-the-art natural language processing. arXiv preprint arXiv:1910.03771,
+2019.
+Heming Xia, Zhe Yang, Qingxiu Dong, Peiyi Wang, Yongqi Li, Tao Ge, Tianyu Liu, Wenjie
+Li, and Zhifang Sui. Unlocking efficiency in large language model inference: A comprehensive survey of speculative decoding. arXiv preprint arXiv:2401.07851, 2024.
+Guangxuan Xiao, Ji Lin, Mickael Seznec, Hao Wu, Julien Demouth, and Song Han.
+Smoothquant: Accurate and efficient post-training quantization for large language models.
+In International Conference on Machine Learning, pp. 38087–38099. PMLR, 2023a.
+13
+
+
+=== PAGE 14 ===
+Published as a conference paper at COLM 2024
+
+Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, and Mike Lewis. Efficient streaming language models with attention sinks. In The Twelfth International Conference on
+Learning Representations, 2023b.
+Minghao Yan, Saurabh Agarwal, and Shivaram Venkataraman. Decoding speculative
+decoding. arXiv preprint arXiv:2402.01528, 2024.
+June Yong Yang, Byeongwook Kim, Jeongin Bae, Beomseok Kwon, Gunho Park, Eunho Yang,
+Se Jung Kwon, and Dongsoo Lee. No token left behind: Reliable kv cache compression
+via importance-aware mixed precision quantization. arXiv preprint arXiv:2402.18096, 2024.
+Yuxuan Yue, Zhihang Yuan, Haojie Duanmu, Sifan Zhou, Jianlong Wu, and Liqiang Nie.
+Wkvquant: Quantizing weight and key/value cache for large language models gains
+more. arXiv preprint arXiv:2402.12065, 2024.
+Jun Zhang, Jue Wang, Huan Li, Lidan Shou, Ke Chen, Gang Chen, and Sharad Mehrotra.
+Draft & verify: Lossless large language model acceleration via self-speculative decoding.
+arXiv preprint arXiv:2309.08168, 2023.
+Peitian Zhang, Zheng Liu, Shitao Xiao, Ninglu Shao, Qiwei Ye, and Zhicheng Dou. Soaring from 4k to 400k: Extending llm’s context with activation beacon. arXiv preprint
+arXiv:2401.03462, 2024a.
+Zhenyu Zhang, Ying Sheng, Tianyi Zhou, Tianlong Chen, Lianmin Zheng, Ruisi Cai, Zhao
+Song, Yuandong Tian, Christopher Ré, Clark Barrett, et al. H2o: Heavy-hitter oracle for
+efficient generative inference of large language models. Advances in Neural Information
+Processing Systems, 36, 2024b.
+Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian
+Min, Beichen Zhang, Junjie Zhang, Zican Dong, et al. A survey of large language models.
+arXiv preprint arXiv:2303.18223, 2023.
+Zirui Liu, Jiayi Yuan, Hongye Jin, Shaochen Zhong, Zhaozhuo Xu, Vladimir Braverman,
+Beidi Chen, and Xia Hu. Kivi : Plug-and-play 2bit kv cache quantization with streaming
+asymmetric quantization. 2023. doi: 10.13140/RG.2.2.28167.37282. URL https://rgdoi.
+net/10.13140/RG.2.2.28167.37282.
+Acknowledgments
+We thank Yang Zhou, Ranajoy Sadhukhan, Harry Dong, and Jian Chen for their helpful
+discussions and feedback on early drafts of the paper.
+
+14
+
+
+=== PAGE 15 ===
+Published as a conference paper at COLM 2024
+
+A
+
+System Implementation
+
+We implement the draft and target models using Transformers (Wolf et al., 2019). Leveraging
+a predetermined cache budget enables the effective use of PyTorch CUDA graphs (Paszke
+et al., 2019; NVIDIA & Fitzek, 2020), significantly minimizing the kernel launching overhead
+during speculative decoding. FlashAttention is used to accelerate attention operations (Dao
+et al., 2022; Dao, 2023; Kwon et al., 2023; Hong et al., 2023). Notably, we maintain full layer
+sparsity without omitting the initial two layers for system efficiency, ensuring our approach
+stays within the fixed KV cache budget. Although this strategy might lead to a lower
+acceptance rate, the benefit of maintaining a constant drafting cost makes it a worthwhile
+compromise. Additionally, to facilitate a faster speculation phase, w

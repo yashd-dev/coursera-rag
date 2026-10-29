@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## gendron2024counterfactual.10\n\n### Problem\nCausal structure discovery and counterfactual inference from unstructured natural language text (Section 1).\n\n### Method\nEnd-to-end framework using LLMs for causal discovery and counterfactual reasoning across document graphs (Appendix B).\n\n### Reported Results\n- **GPT-4o** provides higher self-evaluation scores and confidence than on synthetic data despite complex causal structure\n- **LLaMA-3.1** shows lower scores, especially for counterfactuals (Table 5)\n- Standard deviations indicate consistency issues across graph generations\n\n### Limitations\n- LLM free-text outputs are difficult to parse automatically; errors accumulate in pipelines\n- Tested only on synthetic data and short text snippets due to LLM cost\n- Only considers DAG structures; real-world events contain feedback loops\n- Counterfactual results depend on causal graph accuracy\n- LLM-extracted causal relationships may contain errors and omit confounders\n\n### Two Short Exact Quotes\n- \"LLMs provide free-text answers that can be different from the format provided in the instructions.\" (Section 5, p.7)\n- \"LLMs can extract the causal structure of a piece of text but fail during the reasoning part.\" (Section 6, Conclusion, p.8)\n\n### Note\nThis segment concludes the paper's experimental findings and transitions to conclusions/broader impact."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2273,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78431b8dffebhh4jACgiat7SG"
+  }
+]

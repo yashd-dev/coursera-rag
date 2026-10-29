@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## storks2019recent.11 (pp. 13\u201314)\n\n**Problem**  \n- Cosmos QA (\u00a72.1.2): 94% of questions require commonsense knowledge; highest proportion seen for any QA benchmark.  \n- MC-TACO (\u00a72.1.2): 1,900 multiple-choice questions on temporal common-sense (duration, frequency, order); commonsense under-emphasized in prior benchmarks.  \n\n**Method**  \n- Textual entailment (\u00a72.1.3) defined directionally: text entails hypothesis if a typical person would infer it true.  \n- Benchmarks surveyed: RTE Challenges, SICK, SNLI, MultiNLI (Telephone), SciTail.  \n- Figure 5 provides example pairs with labels (entailment, contradiction, neutral).  \n\n**Reported results**  \n- Cosmos QA: ~94% question proportion requiring commonsense (no aggregate accuracy cited).  \n- MC-TACO: ~1,900 questions; multiple correct answers permitted (no aggregate accuracy cited).  \n- RTE/SNLI/MultiNLI/SciTail examples listed; no system scores reported.  \n\n**Limitations**  \n- Cosmos QA: Most correct answers not stated in the passage; requires external knowledge.  \n- MC-TACO: Temporal properties focus under-emphasized prior to 2019.  \n- Textual entailment: Reliance on \u201ctypical person\u201d inference introduces subjectivity.  \n\n**Two short exact quotes**  \n- \u201cAbout 94% of questions require commonsense knowledge, which is the highest proportion seen yet for any QA benchmark requiring the comprehension of a passage.\u201d (p. 13)  \n- \u201cMC-TACO provides about 1,900 multiple-choice questions requiring commonsense knowledge about the temporal properties of events\u2026 Such commonsense knowledge was under-emphasized in previous benchmarks.\u201d (p. 13)  \n\n**References-only note**  \nThis segment surveys existing QA and entailment benchmarks; no new results, datasets, or methods are introduced beyond citation of prior work."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2528,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782fad3cffemhTRbtKz1MSEOw"
+  }
+]

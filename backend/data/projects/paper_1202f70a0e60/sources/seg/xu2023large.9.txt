@@ -1,0 +1,288 @@
+=== PAGE 6 (continued) ===
+ewer instances of redundancy. The tasks in mixed-form reasoning are primarily
+based on question answering, which closely resembles reallife text, and LLMs tend to generate rational and specific
+content in such scenarios. However, in other settings, the
+input context is elaborately designed for logical reasoning
+and may provide sufficient background information. This
+can result in LLMs employing embodied commonsense
+knowledge to help reason and thus generate additional
+explanations. Notably, considering that current LLMs do a
+lot of optimizations for preference alignment, it is inevitable
+
+
+=== PAGE 7 ===
+7
+
+TABLE 3: Evaluations on whether LLMs are rigorous reasoners. For each dataset, the first row of results represents the
+performances when LLMs give the correct answer, correct explanation as well as complete explanation simultaneously.
+The values in the subscripts denote the drops compared with only distinguishing the answer correctness. The second
+row of results represents the performances when LLMs give both correct answers and correct explanations, regardless
+of the explanation completeness. The third row represents the cases when LLMs give correct answers and list complete
+explanations, regardless of the explanation correctness.
+Dataset
+bAbI-15
+
+Deductive
+
+EntailmentBank
+RuleTaker
+FOLIO
+
+Inductive
+
+Leap-of-Thought
+bAbI-16
+CLUTRR
+
+Abductive
+
+α-NLI
+α-NLG
+
+AbductiveRules
+D*-Ab
+
+Mixed-form
+
+ReClor
+LogiQA
+LogiQA2.0
+LogiQA2NLI
+
+text-davinci-003
+ChatGPT
+BARD
+0-shot
+1-shot
+3-shot
+0-shot
+1-shot
+3-shot
+0-shot
+1-shot
+3-shot
+53.0032.00↓ 60.0016.00↓ 64.0011.00↓ 25.5012.90↓ 12.1034.30↓ 14.1025.60↓ 45.0034.00↓ 25.0055.00↓ 47.0041.00↓
+61.00
+66.00
+68.00
+32.10
+12.90
+16.40
+77.00
+74.00
+85.00
+56.00
+60.00
+64.00
+27.90
+18.00
+17.60
+45.00
+25.00
+47.00
+29.0064.00↓ 37.0051.00↓ 30.0059.00↓ 25.8857.94↓ 20.0062.06↓ 10.5967.35↓ 26.0038.00↓ 25.0032.00↓ 33.0037.00↓
+29.00
+37.00
+30.00
+25.88
+20.00
+10.59
+54.00
+66.00
+71.00
+72.00
+73.00
+75.00
+62.06
+57.65
+31.76
+94.00
+96.00
+97.00
+35.306.70↓ 22.5015.50↓ 24.8015.40↓ 25.8857.94↓ 20.0062.06↓ 10.5967.35↓ 54.0042.00↓ 66.0031.00↓ 71.0026.00↓
+36.20
+24.00
+26.00
+25.88
+20.00
+10.59
+26.00
+28.00
+33.00
+36.00
+23.20
+26.00
+62.06
+57.65
+31.76
+26.00
+25.00
+34.00
+27.0021.00↓ 25.0028.00↓ 25.0027.00↓ 28.9221.08↓ 27.9423.04↓ 27.9426.47↓ 21.0031.00↓ 19.0024.00↓ 20.0029.00↓
+28.00
+25.00
+26.00
+28.92
+27.94
+27.94
+23.00
+19.00
+22.00
+27.00
+28.00
+27.00
+33.33
+32.35
+35.29
+25.00
+22.00
+23.00
+29.0053.00↓ 43.0047.00↓ 38.0049.00↓ 70.602.02↓ 24.3649.65↓ 28.8632.35↓ 76.003.00↓ 69.003.00↓ 77.002.00↓
+63.00
+63.00
+58.00
+71.22
+24.83
+29.79
+76.00
+69.00
+77.00
+32.00
+46.00
+42.00
+70.99
+48.33
+40.88
+79.00
+71.00
+7.00
+59.0025.00↓ 35.0046.00↓ 23.0051.00↓ 8.308.80↓ 8.2016.50↓ 2.6010.30↓ 24.0049.00↓ 15.0029.00↓ 16.0036.00↓
+67.00
+50.00
+37.00
+10.20
+8.40
+3.10
+58.00
+32.00
+24.00
+65.00
+44.00
+35.00
+10.00
+9.40
+3.50
+32.00
+22.00
+24.00
+2.004.00↓ 7.0016.00↓ 6.0014.00↓ 7.8514.14↓ 4.6214.92↓ 2.7110.12↓ 19.004.00↓ 25.001.00↓ 23.001.00↓
+2.00
+7.00
+6.00
+7.94
+4.62
+2.71
+19.00
+25.00
+23.00
+6.00
+18.00
+18.00
+10.56
+6.72
+3.75
+21.00
+26.00
+23.00
+68.006.00↓ 69.001.00↓ 68.006.00↓ 77.503.40↓ 64.5015.50↓ 58.4020.70↓ 75.000.00− 71.003.00↓ 77.000.00−
+70.00
+69.00
+68.00
+78.20
+66.70
+60.90
+75.00
+71.00
+77.00
+68.00
+69.00
+68.00
+77.60
+64.50
+58.40
+75.00
+71.00
+77.00
+1.008.00↓ 0.0010.00↓ 2.0010.00↓ 15.306.60↓ 16.007.40↓ 10.3015.60↓ 7.003.00↓ 8.004.00↓ 9.006.00↓
+1.00
+0.00
+2.00
+15.30
+16.00
+10.40
+7.00
+9.00
+10.00
+8.00
+8.00
+9.00
+20.90
+22.40
+21.40
+10.00
+9.00
+14.00
+50.0025.00↓ 5.0037.00↓ 0.0035.00↓ 12.0011.30↓ 18.3016.80↓ 5.7024.10↓ 57.0014.00↓ 30.0019.00↓ 10.0012.00↓
+75.00
+10.00
+0.00
+20.50
+29.60
+9.50
+65.00
+40.00
+18.00
+50.00
+5.00
+0.00
+13.00
+19.90
+5.80
+57.00
+30.00
+10.00
+4.004.00↓ 5.0016.00↓ 4.0019.00↓ 4.107.50↓ 1.201.30↓ 1.100.70↓
+4.007.00↓ 0.000.00− 0.000.00−
+7.00
+7.00
+7.00
+5.50
+1.50
+1.20
+4.00
+0.00
+0.00
+4.00
+5.00
+4.00
+4.50
+1.20
+1.10
+5.00
+0.00
+0.00
+5.0048.00↓ 0.0053.00↓ 0.0055.00↓ 28.6030.20↓ 25.2030.80↓ 29.8029.00↓ 38.0018.00↓ 34.0021.00↓ 33.0023.00↓
+5.00
+0.00
+0.00
+32.40
+28.00
+32.20
+48.00
+46.00
+42.00
+42.00
+46.00
+42.00
+50.00
+32

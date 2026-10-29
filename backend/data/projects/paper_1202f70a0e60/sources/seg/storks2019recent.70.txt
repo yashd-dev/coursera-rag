@@ -1,0 +1,49 @@
+=== PAGE 83 (continued) ===
+ing, Z.-H., Zhu, X., Wei, S., & Hu, Y. (2017). Combing Context and Commonsense Knowledge Through Neural Networks for Solving Winograd Schema Problems. In
+2017 AAAI Spring Symposium Series.
+Liu, X., He, P., Chen, W., & Gao, J. (2019a). Multi-Task Deep Neural Networks for Natural Language Understanding. arXiv: 1901.11504.
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., &
+Stoyanov, V. (2019b). RoBERTa: A Robustly Optimized BERT Pretraining Approach. arXiv:
+1907.11692.
+Lund, K., & Burgess, C. (1996). Producing high-dimensional semantic spaces from lexical cooccurrence. Behavior Research Methods, Instruments, & Computers, 28(2), 203–208.
+MacCartney, B., & Manning, C. D. (2007). Natural Logic for Textual Inference. In Proceedings of
+the ACL-PASCAL Workshop on Textual Entailment and Paraphrasing, pp. 193–200, Prague,
+Czech Republic. Association for Computational Linguistics.
+Mahdisoltani, F., Biega, J., & Suchanek, F. M. (2013). YAGO3: A Knowledge Base from Multilingual Wikipedias. In Proceedings of the 6th Biennial Conference on Innovative Data Systems
+Research (CIDR 2013), Asilomar, CA, USA.
+Mak, A. (2019). When Is Technology Too Dangerous to Release to the Public?..
+Manjunatha, V., Saini, N., & Davis, L. S. (2018). Explicit Bias Discovery in Visual Question Answering Models. arXiv: 1811.07789.
+Manning, C., & Hudson, D. (2018). Towards real-world visual reasoning..
+Marasović, A. (2018). NLP’s generalization problem, and how researchers are tackling it..
+Marcus, M. P., Santorini, B., & Marcinkiewicz, M. A. (1993). Building a Large Annotated Corpus
+of English: The Penn Treebank. Computational Linguistics, 1(2).
+Marelli, M., Menini, S., Baroni, M., Bentivogli, L., Bernardi, R., & Zamparelli, R. (2014a). A SICK
+cure for the evaluation of compositional distributional semantic models. In Proceedings of
+the Ninth International Conference on Language Resources and Evaluation (LREC-2014),
+Reykjavik, Iceland. European Language Resources Association (ELRA).
+Marelli, M., Bentivogli, L., Baroni, M., Bernardi, R., Menini, S., & Zamparelli, R. (2014b).
+SemEval-2014 Task 1: Evaluation of Compositional Distributional Semantic Models on Full
+Sentences through Semantic Relatedness and Textual Entailment. In Proceedings of the 8th
+International Workshop on Semantic Evaluation (SemEval-2014), Dublin, Ireland. Association for Computational Linguistics.
+Maslow, A. H. (1943). A theory of human motivation. Psychological Review, 50(4), 370–396.
+McCarthy, J. (1968). Programs with Common Sense. In Semantic Information Processing, pp.
+403–418. MIT Press.
+McCarthy, J. (1976). An example for natural language understanding and the AI problems it raises.
+Formalizing Common Sense: Papers by John McCarthy, 355.
+Medelyan, O., & Legg, C. (2008). Integrating Cyc and Wikipedia: Folksonomy meets rigorously
+defined common-sense. In Proceedings of the Twenty-Third AAAI Conference on Artificial
+Intelligence (AAAI-08), Chicago, IL, USA. AAAI Press.
+83
+
+
+=== PAGE 84 ===
+S TORKS , G AO , & C HAI
+
+Mihaylov, T., Clark, P., Khot, T., & Sabharwal, A. (2018). Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP 2018), pp. 2381–2391,
+Brussels, Belgium. Association for Computational Linguistics.
+Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Efficient Estimation of Word Representations in Vector Space. In Proceedings of the 1st International Conference on Learning
+Representations (ICLR 2013), Scottsdale, AZ, USA.
+Miller, G. A. (1995). WordNet: A Lexical Database for English. Commun. ACM, 38(11), 39–41.
+Miller, G. A., Galanter, E., & Pribram, K. H. (1960). Plans and the Structure of Behavior. Plans
+and the Structure of Behavior. Henry Holt and Co, New York, NY, US.
+Miller, T., Hempelmann, C., & Gurevych, I. (2017). SemEval-2017 Task 7: Detection and Interpretation of English Puns. In Proceedings of

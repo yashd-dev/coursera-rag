@@ -1,0 +1,164 @@
+=== PAGE 8 (continued) ===
+0
+
+Number of Candidate Tokens
+
+250
+
+(a)
+(b)
+Figure 4. Effectiveness of numbers of candidate tokens for decoding introduced by trees (default number of candidate token for decoding
+is 1 when using KV cache). Left: The acceleration rate for randomly sampled dense tree settings (blue dots) and optimized sparse tree
+settings (red stars). Right: The speed (tokens/s) for both settings. The trend lines indicate that while the acceleration rate remains relatively
+stable for sparse trees, there is a notable decrease in speed as the candidate tokens increases.
+
+Vicuna-7B
+
+Zephyr-7B
+
+Vicuna-13B
+
+Vicuna-33B
+
+Acc. rate
+Overhead
+Quality
+
+3.47
+1.22
+6.18 (+0.01)
+
+3.14
+1.18
+7.25 (-0.07)
+
+3.51
+1.23
+6.43 (-0.14)
+
+3.01
+1.27
+7.18 (+0.05)
+
+SSpecDecoding
+SM EDUSA
+
+1.47
+2.83
+
+2.66
+
+1.56
+2.83
+
+1.60
+2.35
+
+shown with red stars). The sparse tree configuration with 64
+nodes shows a better acceleration rate than the dense tree
+settings with 256 nodes. The decline in speed in Fig. 4b
+is attributed to the increased overhead introduced by the
+compute-bound. While a more complex tree can improve
+acceleration, it does so at the cost of speed due to intensive
+matrix multiplications for linear layers and self-attention.
+The acceleration rate increase follows a logarithmic trend
+and slows down when the tree size grows as shown in Fig. 4a.
+However, the initial gains are substantial, allowing Medusa
+to achieve significant speedups. If the acceleration increase
+is less than the overhead, it will slow down overall performance. For detailed study, please refer to Appendix G.
+
+Table 1. Comparison of various M EDUSA-2 models. The first
+section reports the details of M EDUSA-2, including accelerate rate,
+overhead, and quality that denoted the average scores on the MTBench compared to the original models. The second section lists
+the speedup (S) of SpecDecoding and M EDUSA, respectively.
+
+Acc. Rate
+
+eration quality can be well aligned by self-distillation while
+M EDUSA heads learn distribution from the self-distillation
+that potentially shifts from the training set. In our study,
+we also applied speculative decoding (Chen et al., 2023;
+Leviathan et al., 2022) to the Vicuna lineup using opensource draft models (details can be found in Appendix D).
+These results underscore the complex interplay between
+speed and performance when scaling up model sizes and
+applying self-distillation techniques. The findings also highlight the potential of the M EDUSA-2 configuration to boost
+efficiency in processing while carefully preserving the quality of the model’s outputs, suggesting a promising direction
+for co-optimizing LLMs with M EDUSA heads.
+
+3.5
+
+7.6
+
+3.4
+
+7.5
+
+3.3
+
+7.4
+
+3.2
+
+7.3
+
+3.1
+
+7.2
+
+RS
+Greedy
+Scores
+
+Model Name
+
+Greedy
+3.0
+RS
+0.00
+
+7.1
+0.05
+
+0.10
+
+0.15
+
+Posterior Thresholds
+
+0.20
+
+0.25
+
+7.0
+
+Figure 5. Performance comparison of M EDUSA using proposed
+typical sampling. The model is fully fine-tuned from Vicuna-7B.
+The plot illustrates the acceleration rate and average scores on the
+writing and roleplay (MT-Bench) with a fixed temperature of 0.7
+for 3 different settings: greedy sampling and random sampling
+(RS) plotted as the star and the dot, and typical sampling curves
+under different thresholds.
+
+3.3. Ablation Study
+3.3.1. C ONFIGURATION OF T REE ATTENTION
+The study of tree attention is conducted on the writing
+and roleplay categories from the MT-Bench dataset using
+M EDUSA-2 Vicuna-7B. We target to depict tree attention’s
+motivation and its performance.
+
+3.3.2. T HRESHOLDS OF T YPICAL ACCEPTANCE
+
+Fig. 4a compares the acceleration rate of randomly sampled
+dense tree configurations (Section. 2.1.2, depicted by blue
+dots) against optimized sparse tree settings (Section. 2.3.3,
+
+The thresholds of typical acceptance are studied on
+the writing and roleplay categories from the MT-Bench
+8
+
+
+=== PAGE 9 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+dataset (Zheng et al., 2023) using M EDUSA-2 Vicuna 7B.
+Utilizing the Vicuna 7B model, we alig

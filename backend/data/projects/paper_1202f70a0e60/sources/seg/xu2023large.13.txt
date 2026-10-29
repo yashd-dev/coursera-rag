@@ -1,0 +1,133 @@
+=== PAGE 11 (continued) ===
+GPT with different tokens on various datasets.The red line denotes Answer Correct while
+the green line is Answer Correct+Explain Correct.
+
+(a) Deductive (EntailmentBank).
+
+(b) Inductive (CLUTRR).
+
+(c) Abductive (D*-Ab).
+
+Fig. 10: The performances of ChatGPT under different number of hops. Comparison of Deductive, Inductive and Abductive
+reasoning settings.The red line denotes Answer Correct while the green line is Answer Correct+Explain Correct.
+numbers (Results of other LLMs are listed in the Appendix).
+Alongside the simple accuracy results, we also report the
+rigorous reasoning cases where both the answer and explanations are correct.
+
+performances of ChatGPT witness slight improvements. It
+shows that ChatGPT may have the potential capability of
+multi-hop reasoning in the abductive setting.
+
+In the deductive setting, with the number of hops increasing, the performances witness obvious drops, particularly influencing the rigor of the LLM reasoning. It illustrates that reasoning hops have great effects on deductive
+reasoning. In inductive reasoning, when the hop number
+is greater than two, the performance of ChatGPT decreases
+sharply. When the number ranges from three to nine, the
+performance of ChatGPT keeps stable at a relatively low
+level. Combined with the weak performance of ChatGPT in
+inductive reasoning tasks, it demonstrates that ChatGPT can
+only work on simple induction, and it obviously struggles
+in cases when more hops are needed. In the abductive
+reasoning setting, the majority of the test samples only need
+one-hop reasoning. When the hop number increases, the
+
+5.9 Does Chain-of-Thought or Program-of-Thought
+Help Logical Reasoning?
+As a supplement to the original results, we add the comparison between chain-of-thought and direct prompting in
+Table 2. It is observed that chain-of-thought does not always
+lead to evident improvements Especially under abductive
+reasoning, COT tends to have adverse effects in the majority
+of instances. Given the distinct disparities between logical
+reasoning and fact-based reasoning, the model is required
+to engage in abstract reasoning. But COT actually works
+more for superficial reasoning over facts.
+Recently, the program-of-thought (POT) prompting
+strategy [50], [51] stands out as another selection to improve
+the model performance. Since POT relies heavily on the
+
+
+=== PAGE 12 ===
+12
+
+TABLE 5: Statistics and evaluation results on NeuLR. Num. represents the number of samples in the dataset. #Hop represents
+the hop number of samples in the dataset. COT represents the chain-of-thought strategy under the 1-shot setting.
+Dataset
+
+Num.
+
+#Hop
+
+text-davinci-003
+0-shot 1-shot COT
+
+0-shot
+
+NeuLR
+
+3,000
+
+1∼5
+
+50.93
+
+59.17
+
+67.90
+
+37.27
+
+48.13
+
+- Deductive
+- Inductive
+- Abductive
+
+1,000
+1,000
+1,000
+
+2
+3
+1∼5
+
+59.00
+86.90
+6.90
+
+69.40
+89.60
+18.50
+
+86.10
+95.60
+22.00
+
+85.20
+15.10
+11.50
+
+69.10
+68.60
+6.70
+
+accessibility of external solvers, we merely include several
+logical reasoning datasets for evaluation, i.e., ProofWriter
+and RuleTaker. In the implementation, LLMs are prompted
+to generate First-order Logic, which can be executed by the
+Pyke solver to obtain the final answer [52], [53]. We include
+the experimental results in Appendix.
+It can be concluded that more powerful LLMs can
+derive greater advantages from the PoT. It is observed
+that open-source LLMs (i.e., LLaMA3.1-Chat and MistralInstruct-v0.3) benefit more from the chain-of-thought strategy, but fail in the program-of-thought method. Conversely,
+proprietary powerful LLMs can derive more benefits from
+POT than from COT. It demonstrates that POT requires the
+basic symbolic generation capability, which is challenging
+for most of the current trending LLMs. The symbol-centric
+modeling for LLMs is also a promising direction.
+
+6
+
+N EUTRAL - CONTENT L OGICAL R EASONING
+
+Considering the current benchmarks may not provide neutral content for fair evaluation, we propose the new dataset
+NeuLR to benchmark the neutral-content logical reasoning
+tasks. I

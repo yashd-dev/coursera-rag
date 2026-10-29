@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Notes from raju2017dynamic.6.txt (page 4 continued \u2192 page 5)**\n\n- **Problem:** DMNs needed improved multi-hop reasoning to handle complex NLI relationships (entailment, contradiction, independence). Single-pass approaches obscure intricate, non-linear premise\u2013hypothesis dependencies.\n\n- **Method:** Multi-hop DMNs iterate across episodic memory, selectively attending to premise segments at each hop. This tiered knowledge approach first highlights straightforward connections, then uncovers indirect dependencies, enabling layered dependency construction. Applied to NLI, the model finds syllogisms for entailment or conflicting premise parts for contradiction.\n\n- **Reported results:** Multi-hop reasoning greatly improves DMN performance on NLI, enabling the model to capture intricate premise\u2013hypothesis dependencies and align with human cognition for meaning inference. Further fine-tuning prospects include improved attention and sentence encoding approaches (Githiari, 2014).\n\n- **Limitations:** The segment introduces alternative sentence encodings (GRU-RNN initially; modular architecture allows experimentation) but does not report quantitative results for the alternative encodings within this excerpt.\n\n- **Quote 1 (page 4 continued):** \u201cSuch multi-level analysis is critically helpful in argumentative texts where the relationship between the premise and the hypothesis is intricate or non-linear, which might be obscured by a single-pass approach\u201d (Brzezi\u0144ski, 2015).\n\n- **Quote 2 (page 4 continued):** \u201cDue to the cyclical interpretation, the DMN works more efficiently in these diverse cases, so the solution has high adaptability and repeatability.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2311,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781edd02ffe1aJ41IVoBpy1ew"
+  }
+]

@@ -1,0 +1,68 @@
+=== PAGE 8 (continued) ===
+tep in trying to gather an inventory of NLI phenomena and
+look rigorously at model performance, which follows earlier
+work on NLI (see Zaenen, Karttunen, and Crouch (2005)).
+
+might help determine the extent to which models are truly
+generalizing, and provide insights into alternative ways of
+training more robust and generalizable models.
+A key feature of our lossless inoculation strategy, which
+differs from the original proposal of Liu, Schwartz, and
+Smith (2019), is that each time we teach the model something new, we explicitly take into account how much loss
+this same model has on its original task, and balance the
+two scores accordingly. The fact that models such as BERT
+can effectively learn new tasks with minimal loss on their
+original tasks gives some indication that, even if the models
+are not generalizing too far beyond the provided challenge
+tasks, one way to increase generalization is by continuously
+feeding models new challenge tasks. This type of continuous
+or never-ending learning scenario is one promising area for
+future work that one may pursue by looking at more robust
+methods for model inoculation and ﬁne-tuning.
+
+Can we ﬁnd more difﬁcult fragments? Despite differences across various fragments, we largely found NLI models to be robust when tackling new linguistic phenomena
+and easy to quickly re-purpose (especially with BERT). This
+generally positive result begs the question: Are there more
+challenging fragments and linguistic phenomena that we
+should be studying?
+The ubiquity of logical and monotonicity reasoning provides a justiﬁcation for our particular fragments, and we
+take it as a positive sign that models are able to solve these
+tasks. As we emphasize throughout, however, our general
+approach is amenable to any linguistic phenomena, and future work may focus on developing more complicated fragments that capture a wider range of linguistic phenomena
+and inference. This could include, for example, efforts to
+extend to fragments in a way that moves beyond elementary
+logic to systematically target the types of commonsense reasoning known to be common in existing NLI tasks (LoBue
+and Yates 2011). We believe that semantic fragments are a
+promising way to introspect model performance generally,
+and can also be used to forge interdisciplinary collaboration
+between neural NLP research and traditional linguistics.
+Benchmark NLI annotations and judgements are often imperfect and error-prone (cf. Kalouli, de Paiva, and
+Real (2017), Pavlick and Kwiatkowski (2019)), partly due
+to the loose way in which the task is traditionally deﬁned
+(Dagan, Glickman, and Magnini 2005). For models trained
+on benchmarks such as SNLI, understanding model performance not only requires probing how each target model
+works, but also probing the particular ﬂavor of NLI that is
+captured in each benchmark. We believe that our variant of
+inoculation and overall framework can also be used to more
+systematically look at these issues, as well as help identify
+annotation errors and artifacts.
+
+Acknowledgements
+We thank the anonymous reviewers for their helpful feedback, as well as our colleagues, especially Peter Clark, Vered
+Shwartz, and Reut Tsarfaty. Part of this work is supported by
+grant #586136 from the Simons Foundation. Hai Hu is supported by the China Scholarship Council.
+
+References
+Bowman, S. R.; Angeli, G.; Potts, C.; and Manning, C. D.
+2015. A Large Annotated Corpus for Learning Natural Language Inference. In EMNLP.
+Chen, Q.; Zhu, X.; Ling, Z.-H.; Wei, S.; Jiang, H.; and
+Inkpen, D. 2017. Enhanced LSTM for Natural Language
+Inference. In ACL.
+Chomsky, N. 1965. Aspects of the Theory of Syntax. MIT
+press.
+Chrupała, G., and Alishahi, A. 2019. Correlating Neural and
+Symbolic Representations of Language. In ACL.
+Conneau, A.; Kiela, D.; Schwenk, H.; Barrault, L.; and Bordes, A. 2017. Supervised Learning of Universal Sentence
+Representations from Natural Language Inference Data. In
+EMNLP.
+Cooper, R.; Crouch, D.; Van Eijck, J.; Fox, C.; Van Ge

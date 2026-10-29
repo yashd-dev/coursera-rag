@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large \u2014 Page 8 (continued) Notes\n\n- **Problem**: LLMs evaluated on logical reasoning across deductive, inductive, and abductive modes; performance measured via few-shot and zero-shot prompts.\n- **Method**: In-context learning with ChatGPT, BARD, text-davinci-003; error-type analysis (selection vs. hallucination vs. perspective/process mistakes).\n- **Results**: \n  - Deductive: ChatGPT leads; text-davinci-003 lags. BARD competitive.\n  - Abductive: LLMs generally lazier; performance drops across modes.\n  - Hallucination avoidance: ChatGPT ranks first in deductive, inductive, mixed-form.\n- **Limitations**: \n  - ChatGPT is \"lazy\" in abductive reasoning (backward mode), frequently fails to identify correct reasoning direction.\n  - text-davinci-003 and BARD are \"active\" but prone to starting from wrong directions, causing reasoning mistakes.\n- **Exact quotes**: \n  - \"Conversely, text-davinci-003 and BARD are active in logical reasoning, but they tend to start from wrong directions, leading to reasoning mistakes.\" (p.8 continued)\n  - \"ChatGPT exhibits stronger and consistent competitiveness, ranking first in deductive, inductive, and mixed-form settings.\" (p.9, Fig. 15c)\n\n*Attribution: All bullets traced to physical-page markers on pp.8\u20139. No background citations inferred.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2646,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783b17dbffeMXSXhAvBeApdCx"
+  }
+]

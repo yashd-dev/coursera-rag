@@ -1,0 +1,57 @@
+=== PAGE 12 (continued) ===
+, Felix Leeb, Luigi Gresele, Ojasv Kamal, Zhiheng Lyu, Kevin Blin,
+Fernando Gonzalez Adauto, Max Kleiman-Weiner, Mrinmaya Sachan, and Bernhard Schölkopf.
+Cladder: A benchmark to assess causal reasoning capabilities of language models. In Alice Oh, Tristan Naumann, Amir Globerson, Kate Saenko, Moritz Hardt, and Sergey Levine
+(eds.), Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December
+10 - 16, 2023, 2023. URL http://papers.nips.cc/paper_files/paper/2023/hash/
+631bb9434d718ea309af82566347d607-Abstract-Conference.html.
+[20] Zhijing Jin, Jiarui Liu, Zhiheng Lyu, Spencer Poff, Mrinmaya Sachan, Rada Mihalcea, Mona T.
+Diab, and Bernhard Schölkopf. Can large language models infer causation from correlation?
+In The Twelfth International Conference on Learning Representations, ICLR 2024, Vienna,
+Austria, May 7-11, 2024. OpenReview.net, 2024. URL https://openreview.net/forum?
+id=vqIH0ObdqL.
+[21] Thomas Jiralerspong, Xiaoyin Chen, Yash More, Vedant Shah, and Yoshua Bengio. Efficient
+causal graph discovery using large language models. CoRR, abs/2402.01207, 2024. doi:
+10.48550/ARXIV.2402.01207. URL https://doi.org/10.48550/arXiv.2402.01207.
+[22] Nitish Joshi, Abulhair Saparov, Yixin Wang, and He He. Llms are prone to fallacies in causal
+inference. arXiv preprint arXiv:2406.12158, 2024.
+[23] Emre Kiciman, Robert Ness, Amit Sharma, and Chenhao Tan. Causal reasoning and large
+language models: Opening a new frontier for causality. CoRR, abs/2305.00050, 2023. doi:
+10.48550/arXiv.2305.00050. URL https://doi.org/10.48550/arXiv.2305.00050.
+[24] Thomas N. Kipf and Max Welling. Semi-supervised classification with graph convolutional
+networks. In 5th International Conference on Learning Representations, ICLR 2017, Toulon,
+France, April 24-26, 2017, Conference Track Proceedings. OpenReview.net, 2017. URL
+https://openreview.net/forum?id=SJU4ayYgl.
+12
+
+
+=== PAGE 13 ===
+[25] Gregor Leban, Blaz Fortuna, Janez Brank, and Marko Grobelnik. Event registry: learning about
+world events from news. In Proceedings of the 23rd International Conference on World Wide
+Web, pp. 107–110, 2014.
+[26] Jing Ma. Causal inference with large language model: A survey.
+arXiv:2409.09822, 2024.
+
+arXiv preprint
+
+[27] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe,
+Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Sean Welleck, Bodhisattwa Prasad
+Majumder, Shashank Gupta, Amir Yazdanbakhsh, and Peter Clark. Self-refine: Iterative
+refinement with self-feedback. CoRR, abs/2303.17651, 2023. doi: 10.48550/arXiv.2303.17651.
+URL https://doi.org/10.48550/arXiv.2303.17651.
+[28] Valentyn Melnychuk, Dennis Frauen, and Stefan Feuerriegel. Causal transformer for estimating
+counterfactual outcomes. In Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvári,
+Gang Niu, and Sivan Sabato (eds.), International Conference on Machine Learning, ICML 2022,
+17-23 July 2022, Baltimore, Maryland, USA, volume 162 of Proceedings of Machine Learning
+Research, pp. 15293–15329. PMLR, 2022. URL https://proceedings.mlr.press/v162/
+melnychuk22a.html.
+[29] OpenAI. GPT-4 technical report. CoRR, abs/2303.08774, 2023. doi: 10.48550/ARXIV.2303.
+08774. URL https://doi.org/10.48550/arXiv.2303.08774.
+[30] OpenAI. Hello gpt-4o, 2024. URL https://openai.com/index/hello-gpt-4o/. Accessed: 2024-09-23.
+[31] Matías Osta-Vélez and Peter Gärdenfors. Analogy as a search procedure: a dimensional view.
+Journal of Experimental & Theoretical Artificial Intelligence, 0(0):1–20, 2022. doi: 10.1080/
+0952813X.2022.2125081. URL https://doi.org/10.1080/0952813X.2022.2125081.
+[32] Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll L. Wainwright, Pamela Mishkin,
+Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton,
+Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul F. Christiano,
+Jan Leike, and Ryan Lowe. Training lang

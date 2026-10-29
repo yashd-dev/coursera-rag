@@ -1,0 +1,47 @@
+=== PAGE 78 (continued) ===
+t Action Causes This? Towards Naive
+Physical Action-Effect Prediction. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 934–945, Melbourne,
+Australia. Association for Computational Linguistics.
+Giampiccolo, D., Dang, H. T., Magnini, B., Dagan, I., & Dolan, B. (2008). The Fourth PASCAL
+Recognizing Textual Entailment Challenge. In Proceedings of the First Text Analysis Conference (TAC 2008), p. 9, Gaithersburg, MD, USA. National Institute of Standards and Technology.
+Giampiccolo, D., Magnini, B., Dagan, I., & Dolan, B. (2007). The Third PASCAL Recognizing
+Textual Entailment Challenge. In Proceedings of the ACL-PASCAL Workshop on Textual Entailment and Paraphrasing, RTE ’07, pp. 1–9, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Gildea, D., & Jurafsky, D. (2000). Automatic Labeling of Semantic Roles. In Proceedings of
+the 38th Annual Meeting of the Association for Computational Linguistics (ACL 2000), pp.
+512–520, Hong Kong. Association for Computational Linguistics.
+Glickman, O. (2006). Applied Textual Entailment. Ph.D. Thesis, Bar Ilan University.
+Glockner, M., Shwartz, V., & Goldberg, Y. (2018). Breaking NLI systems with sentences that require simple lexical inferences. In Proceedings of the 56th Annual Meeting of the Association
+for Computational Linguistics (ACL 2018), pp. 650–655, Melbourne, Australia. Association
+for Computational Linguistics.
+Gordon, A. S. (2016). Commonsense Interpretation of Triangle Behavior. In Thirtieth AAAI Conference on Artificial Intelligence, Phoenix, AZ, USA. AAAI Press.
+Gordon, D. B., Kembhavi, A., Rastegari, M., Redmon, J., Fox, D., & Farhadi, A. (2018). IQA:
+Visual Question Answering in Interactive Environments. 2018 IEEE/CVF Conference on
+Computer Vision and Pattern Recognition, 4089–4098.
+Gordon, J., & Schubert, L. (2011). Discovering Commonsense Entailment Rules Implicit in Sentences. In Proceedings of the TextInfer 2011 Workshop on Textual Entailment, pp. 59–63,
+Edinburgh, Scottland, UK. Association for Computational Linguistics.
+Gordon, J., & Schubert, L. K. (2012). Using Textual Patterns to Learn Expected Event Frequencies. In Proceedings of the Joint Workshop on Automatic Knowledge Base Construction and
+Web-Scale Knowledge Extraction, AKBC-WEKEX ’12, pp. 122–127, Stroudsburg, PA, USA.
+Association for Computational Linguistics.
+Gordon, J., Van Durme, B., & Schubert, L. (2010). Evaluation of Commonsense Knowledge with
+Mechanical Turk. In Proceedings of the NAACL HLT 2010 Workshop on Creating Speech and
+Language Data with Amazon’s Mechanical Turk, pp. 159–162, Los Angeles. Association for
+Computational Linguistics.
+Goyal, R., Kahou, S. E., Michalski, V., Materzyńska, J., Westphal, S., Kim, H., Haenel, V., Fruend,
+I., Yianilos, P., Mueller-Freitag, M., Hoppe, F., Thurau, C., Bax, I., & Memisevic, R. (2017).
+The "something something" video database for learning and evaluating visual common sense.
+In Proceedings of the 2017 IEEE International Conference on Computer Vision (ICCV 2017).
+Graves, A., Wayne, G., Reynolds, M., Harley, T., Danihelka, I., Grabska-Barwińska, A., Colmenarejo, S. G., Grefenstette, E., Ramalho, T., Agapiou, J., Badia, A. P., Hermann, K. M.,
+78
+
+
+=== PAGE 79 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Zwols, Y., Ostrovski, G., Cain, A., King, H., Summerfield, C., Blunsom, P., Kavukcuoglu,
+K., & Hassabis, D. (2016). Hybrid computing using a neural network with dynamic external
+memory. Nature, 538(7626), 471–476.
+Grishman, R., & Sundheim, B. (1996). Message Understanding Conference-6: A Brief History. In
+Proceedings of the 16th Conference on Computational Linguistics - Volume 1, COLING ’96,
+pp. 466–471, Stroudsburg, PA, USA. Association for Computational Linguistics.
+Gupta, A., & Durrett, G. (2019). Tracking Discrete and Continuous Entity State for Process Understanding. In Proceedings of the Third Workshop on Structured Prediction for NLP, pp. 7–12,
+Minneapol

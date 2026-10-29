@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**MEI2026IMPROVING \u2014 SEGMENT 12/19 (PAGES 16\u201317)**\n\n**Problem:**  \nThe paper defines MC11 evaluation populations (Chess, HellaSwag, MMLU) and their candidate construction methods. Question premises supply a default hypothesis (\u201cThe correct answer is: [option]\u201d), and evaluation requires three probabilities in [0,1] summing to \u22431. GSM8K distractors perturb the correct numerical answer; Chess uses version 1.11.2 and recorded randomization settings.\n\n**Method:**  \nTraining corpus: predominantly English, 22,035 records / 29,897 questions from web decisions, policy tasks, and public datasets (JevForge/Mind2Web, Nimble, compositional-policy, 10 public sources). Records are grouped into 12,472 connected families; 80%/5%/5%/10% allocated to eight training pools, locked development, calibration, and test splits. Four training settings combine folds 2+3 with seeds 44/45 (15,456/15,442 records, ~1,930 updates/epoch). Question types: 12,486 Choice, 12,176 binary, 5,235 Score; distributions are one-hot (9,142/9,457), uniform (173), or JevForge multi-solution (142). Augmentation shuffles options or adds distractors/none-of-the-above with probability 0.10\u20130.25.\n\n**Reported results:**  \nNo test metrics or performance scores are provided in this segment.\n\n**Limitations:**  \nGrouping via shared families may restrict split independence; augmentation probabilities are heuristic (0.10\u20130.25). Source inventories identify dataset revisions, splits, and row order for evaluated populations.\n\n**Exact quotes:**  \n- \u201cThe question supplies the premise, and the default candidate hypothesis is \u2018The correct answer is: [option]\u2019.\u201d (Table 7, MC11 construction)  \n- \u201cTraining consumes record contents directly without opening external private-file or image references.\u201d (A.2, corpus description)\n\n**Attribution:** All bullets attributed to physical-page markers 16 (continued) and 17 as specified."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2617,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784704a6ffens0F2w6ldPQlVI"
+  }
+]

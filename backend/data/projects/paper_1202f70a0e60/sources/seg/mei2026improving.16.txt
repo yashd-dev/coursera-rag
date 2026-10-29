@@ -1,0 +1,79 @@
+=== PAGE 21 (continued) ===
+e end. Both schedules omit 580 adapter updates per setting but expose the adapters
+to different examples, learning rates, momentum histories, and dropout phases.
+Pointer recipe or paired change
+Joint training, higher rate (accuracy, %)
+Lower-rate joint − higher-rate joint (pp)
+Head-first − higher-rate joint (pp)
+No-FFN − higher-rate joint (pp)
+Head-first + no-FFN − higher-rate joint (pp)
+Head-only tail − higher-rate joint (pp)
+
+MC11
+
+JevBench
+
+Kev
+
+45.90
++4.43 ± 1.03
++6.38 ± 2.17
++3.67 ± 1.33
++7.64 ± 1.91
++3.84 ± 0.88
+
+75.62
++2.35 ± 0.67
++2.03 ± 0.84
++1.80 ± 1.53
++0.96 ± 0.66
+−0.31 ± 1.40
+
+81.47
+−0.43 ± 0.53
+−1.02 ± 0.28
+−0.02 ± 0.34
+−1.95 ± 0.40
+−0.30 ± 0.23
+
+Table 10 | Effects of update timing and adapter placement in a separately trained set of pointers.
+All recipes use the option-ending pointer. Except for the explicit lower-rate row, both peak rates
+are 2.5 × 10−5 . Differences are means ± descriptive SE across four settings. Head initialization
+can vary when adapter scope changes in these comparisons.
+Head-first reaches 52.28% MC11 and exceeds head-only tail by 2.54 ± 1.49 pp. Combining
+head-first and no-FFN reaches 53.54%, but its scope-by-schedule interaction is −2.41 ± 1.61 pp:
+the combined gain is smaller than the sum of the separate gains. The combined head-first/noFFN model uses the higher-rate pointer recipe; adding pooling to this recipe remains untested.
+The separate adapter-scope comparison starts from identical head and attention/DeltaNet
+adapter tensors.
+A further seven-pair retraining checks a different rate interval, 5 × 10−5 to 2.5 × 10−5 for both
+parameter groups. The mean MC11 change is −0.34 pp: five pairs improve, while two decline
+by 2.46 and 6.10 pp. JevBench and Kev means rise by 1.69 and 0.74 pp. Those pairs share their
+seeded construction procedure, but saved initial-tensor identity is not established. The rate
+result therefore depends on the interval and comparison being tested.
+B.4. Additional sources and inference execution
+Fixed-question requests. The PIQA state is “Goal: [goal]”, followed by a newline and “Which
+solution best achieves this goal?”. Direct selection presents both solutions under the instruction
+“Select the solution that best achieves the goal.”, whereas reranking evaluates each solution in
+a separate NLI request with the hypothesis “The correct solution is: [solution]”. For the same
+1,838 questions, these interfaces require one and two requests per question, respectively.
+SocialIQA version 1.4 combines the original context, two newlines, and the question as its
+state. Direct selection presents the raw A/B/C answer texts under “Select the correct answer to
+the question.”; NLI reranking places each raw answer in quotation marks within “Hypothesis:
+[raw answer] How does it relate to the premise?”. Answer fragments remain in their original
+21
+
+
+=== PAGE 22 ===
+form, and the three NLI options use the descriptions in Appendix A.1. Comparing entailment
+probabilities across answers requires three requests per question, against one for direct selection.
+All 1,954 questions are evaluated with eight one-epoch checkpoints from the core all-module
+comparison and eight two-epoch checkpoints from the budget comparison.
+The SocialIQA source, checkpoint selection, candidate order, request templates, and overlap
+screening were specified before scoring, after the main evaluations had begun. Exact matching,
+normalized lexical containment, and available source-lineage checks found no overlap with
+the training inputs and derivation files, so all questions were retained. These checks address
+recorded text and provenance; semantic overlap and pretraining exposure remain unmeasured.
+NLI descriptions and option order. To examine sensitivity to the wording of the NLI options,
+we use the default descriptions in Appendix A.1 and two alternatives. The second set is
+“The premise supports the hypothesis as true.”, “The premise does not determine whether the
+hypothesis is true.”, and “The premise supports the 

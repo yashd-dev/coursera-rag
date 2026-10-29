@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# gendron2024counterfactual.12 \u2014 Factual Notes\n\n**Problem**: LLM performance on counterfactual reasoning tasks, specifically abstraction deficits in symbolic AI benchmarks.\n\n**Method**: [P11 continued] Evaluation of LLMs (Llama 3 herd) on analogical abduction and prediction tasks using the Forbus [12] framework; systematic comparison against baselines across emerging-technology detection [10] and causal extraction [15].\n\n**Reported results**: [P12] Benchmark scores (exact figures not in segment); stated \"Large language models are not strong abstract reasoners\" with IJCAI-24 main-track publication (doi: 10.24963/ijcai.2024/693).\n\n**Limitations**: [Implicit from segment] No detailed per-task accuracy or error analysis provided in this excerpt; reliance on cited prior work for methodology details.\n\n**Two short exact quotes**:\n- [P11] \"The llama 3 herd of models. CoRR, abs/2407.21783, 2024.\"\n- [P12] \"Large language models are not strong abstract reasoners. In Kate Larson (ed.), Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence, IJCAI-24, pp. 6270\u20136278. International Joint Conferences on Artificial Intelligence Organization, 8 2024.\"\n\n**Note**: References-only trailing segment [19] incomplete; no findings to attribute."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2807,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7842a48dffexUk52unDEQH7eb"
+  }
+]

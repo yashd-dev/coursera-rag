@@ -1,0 +1,121 @@
+=== PAGE 2 (continued) ===
+fine-tune
+it to enhance the prediction accuracy of M EDUSA heads,
+which can directly lead to a greater speedup. Therefore,
+we introduce M EDUSA-2, which is suitable for scenarios
+with ample computational resources or for direct Supervised Fine-Tuning (SFT) from a base model. The key to
+M EDUSA-2 is a training protocol that enables joint training
+of the M EDUSA heads and the backbone model without
+compromising the model’s next-token prediction capability and output quality. We propose different strategies for
+obtaining the training datasets depending on the model’s
+
+📜
+
+Top-k Predictions
+It, I, As
+
+Medusa Heads
+
+Medusa Head 1
+
+is, ', the
+
+Medusa Head 2
+
+difficult, is, '
+
+Medusa Head 3
+
+not, difficult, a
+
+❌✅
+
+Candidates
+
+It is difficult not
+It' difficult a
+It is' not
+...
+
+❌
+
+✍🏻
+
+Single step prediction
+It is difficult
+
+Figure 1. M EDUSA introduces multiple heads on top of the last
+hidden states of the LLM, enabling the prediction of several subsequent tokens in parallel (Section 2.1.1). During inference, each
+head generates multiple top predictions for its designated position. These predictions are assembled into candidates, which are
+processed in parallel using a tree-based attention mechanism (Section 2.1.2). The final step is to verify the candidates and accept a
+continuation. Besides the standard rejection sampling scheme, a
+typical acceptance scheme (Section 2.3.1) can also be used here
+to select reasonable continuations, and the longest accepted candidate prefix will be used for the next decoding phase.
+
+2. Methodology
+M EDUSA follows the same framework as speculative decoding, where each decoding step primarily consists of three
+substeps: (1) generating candidates, (2) processing candidates, and (3) accepting candidates. For M EDUSA, (1) is
+1
+Upon contacting the authors, this version is experimental and
+used some different data than Vicuna 7B and 13B.
+
+2
+
+
+=== PAGE 3 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+achieved by M EDUSA heads, (2) is realized by tree attention,
+and since M EDUSA heads are on top of the original model,
+the logits calculated in (2) can be used for substep (1) for
+the next decoding step. The final step (3) can be realized by
+either rejection sampling (Leviathan et al., 2022; Chen et al.,
+2023) or typical acceptance (Section 2.3.1). The overall
+pipeline is illustrated in Figure 1.
+
+(k)
+
+pt
+
+
+
+
+(k)
+(k)
+= softmax W2 · SiLU(W1 · ht ) + ht ,
+(k)
+
+where W2
+
+(k)
+
+∈ Rd×V , W1
+
+∈ Rd×d .
+
+d is the output dimension of the LLM’s last hidden layer
+(k)
+and V is the vocabulary size. We initialize W2 identically
+(k)
+to the original language model head, and W1 to zero. This
+aligns the initial prediction of M EDUSA heads with that of
+the original model. The SiLU activation function (Elfwing
+et al., 2017) is employed following the Llama models (Touvron et al., 2023).
+
+In this section, we first introduce the key components of
+M EDUSA, including M EDUSA heads, and tree attention.
+Then, we present two levels of fine-tuning procedures for
+M EDUSA to meet the needs of different use cases. Finally, we propose two extensions to M EDUSA, including
+self-distillation and typical acceptance, to handle situations
+where no training data is available for M EDUSA and to
+improve the efficiency of the decoding process, respectively.
+
+Unlike a draft model, M EDUSA heads are trained in conjunction with the original backbone model, which can remain
+frozen during training (M EDUSA-1) or be trained together
+(M EDUSA-2). This method allows for fine-tuning large models even on a single GPU, taking advantage of the powerful
+base model’s learned representations. Furthermore, it ensures that the distribution of the M EDUSA heads aligns with
+that of the original model, thereby mitigating the distribution
+shift problem. Additionally, since the new heads consist of
+just a single layer akin to the original language model head,
+M EDUSA does not add complexity to the serving system
+design and is friendly 

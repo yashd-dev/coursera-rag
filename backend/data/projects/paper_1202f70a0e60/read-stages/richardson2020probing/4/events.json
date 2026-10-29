@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**problem** (p3 continued): Study the trade-off between mastering specific linguistic fragments and maintaining performance on NLI benchmarks, using inoculation fine-tuning to maximize aggregate score across tasks.\n\n**method** (p3 continued): Generate challenge test sets for logic fragments (boolean, negation, quantification, comparatives, conditionals, monotonicity) and set counting; uniformly generate 3,000 training and 1,000 test examples per fragment; inoculate BERT using Devlin et al. (2019) fine-tuning to maximize aggregate score across tasks.\n\n**reported results** (p3 continued): Logic fragment accuracies: boolean 86.0, negation 85.0, quantifier 82.0, comparative 79.0, conditional 71.9, set counting 89.7, monotonicity 90.6; SNLI+MNLI mixed accuracy 83.5; overall monotonicity and set counting strongest; conditional weakest.\n\n**limitations** (p3 continued): Fragments use simplified templates from Salvatore et al. repurposed for 3-way classification; conditional fragment built specially for this study; emphasis on trade-off may not generalize to other linguistic phenomena; results tied to BERT-inoculation methodology.\n\n- \"These fragments (with the exception of the conditional fragment, which was built specially for this study) were first built using the set of verb-argument templates first described in Salvatore, Finger, and Hirata Jr (2019).\"\n- \"Overall monotonicity and set counting strongest; conditional weakest.\"\n\n*continued next segment*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2405,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78340b4affeRDITlxIw2CI7Xy"
+  }
+]

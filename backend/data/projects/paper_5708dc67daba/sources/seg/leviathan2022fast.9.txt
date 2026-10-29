@@ -1,0 +1,86 @@
+=== PAGE 8 (continued) ===
+g. when memory bandwidth is the bottleneck) our method
+provides the speedup with significant benefits: the model
+architecture doesn’t change, retraining isn’t required, and
+most importantly, the output distribution is guaranteed to
+stay the same. Our method is easy to implement, and can
+be used to speedup inference using out-of-the-box models
+without developing and evaluating custom schemes.
+
+We would like to extend a special thank you to YaGuang Li
+for help with everything LaMDA related and for calculating
+the LaMDA figures in the paper, and to Blake Hechtman
+for great insights and help with XLA. We would also like
+to thank the reviewers for insightful comments, as well
+as Asaf Aharoni, Reiner Pope, Sasha Goldshtein, Nadav
+Sherman, Eyal Segalis, Eyal Molad, Dani Valevski, Daniel
+Wasserman, Valerie Nygaard, Danny Vainstein, the LaMDA
+and Theta Labs teams at Google, and our families.
+
+References
+Bapna, A., Arivazhagan, N., and Firat, O. Controlling
+computation versus quality for neural sequence models.
+ArXiv, abs/2002.07106, 2020.
+
+There are several directions for follow up research, importantly, further investigating the compatibility of speculative
+decoding with beam search (see Appendix A.4). Also, while
+our method yields substantial speedups with existing off-theshelf approximation models, greater improvements might
+be obtained via custom approximation models (Section 3.6),
+such as those with custom architectures (e.g. custom sizes,
+non-autoregressive models, or various heuristics) or with
+custom training procedures (e.g. standard distillation with
+soft targets from Mp , or optimizing Mq for α directly). It
+could also be interesting to explore a hierarchical version
+of the algorithm, where the approximation model is itself
+accelerated by an even faster model, which could allow
+for more capable approximation models. In this work we
+fixed the approximation model and the number of guesses
+γ throughout inference, but varying them during inference
+could yield additional improvements (Section 3.5). In our
+
+Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan,
+J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G.,
+Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G.,
+Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu,
+J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M.,
+Gray, S., Chess, B., Clark, J., Berner, C., McCandlish,
+S., Radford, A., Sutskever, I., and Amodei, D. Language models are few-shot learners. In Proceedings of
+the 34th International Conference on Neural Information Processing Systems, NIPS’20, Red Hook, NY, USA,
+2020. Curran Associates Inc. ISBN 9781713829546.
+Burton, F. W. Speculative computation, parallelism, and
+functional programming. IEEE Transactions on Computers, C-34(12):1190–1193, 1985. doi: 10.1109/TC.1985.
+6312218.
+
+6
+Note that the outputs from the LaMDA model always go
+through a T op40 filter. This has no effect on argmax, but does
+have some effect on standard sampling.
+
+Chelba, C., Mikolov, T., Schuster, M., Ge, Q., Brants, T.,
+Koehn, P. T., and Robinson, T. One billion word bench8
+
+
+=== PAGE 9 ===
+Fast Inference from Transformers via Speculative Decoding
+
+mark for measuring progress in statistical language modeling. In Interspeech, 2013.
+
+Jaszczur, S., Chowdhery, A., Mohiuddin, A., Kaiser, L.,
+Gajewski, W., Michalewski, H., and Kanerva, J. Sparse
+is enough in scaling transformers. In Neural Information
+Processing Systems, 2021.
+
+Chen, C., Borgeaud, S., Irving, G., Lespiau, J.-B., Sifre,
+L., and Jumper, J. M. Accelerating large language
+model decoding with speculative sampling. ArXiv,
+abs/2302.01318, 2023.
+
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S.,
+Matena, M., Zhou, Y., Li, W., and Liu, P. J. Exploring
+the limits of transfer learning with a unified text-to-text
+transformer. The Journal of Machine Learning Research,
+21(1):5485–5551, 2020.
+
+Chowdhery, A., Narang, S., Devlin, J., Bosma, M., Mishra,
+G., Roberts, A., Barham, P., Chung, H. W., Sutton, C.,
+Gehrmann, S., S

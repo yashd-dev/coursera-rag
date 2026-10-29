@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.76.txt Notes\n\n**Problem:** Survey of recent advances in natural language inference. No coherent problem statement beyond survey scope.\n\n**Method:** Narrative review of 2013\u20132019 NLI/AI systems, categorizing datasets, models, and reasoning types (commonsense, textual entailment, dialogue).\n\n**Reported results:** No new experiments or aggregate scores; reports individual dataset papers (e.g., CommonsenseQA, DREAM, SNLI-style baselines) with cited test-set performances.\n\n**Limitations:** Survey covers pre-2020 work; no unifying framework, no reproducibility comparison, no analysis of shift or failure modes across systems.\n\n- \"A Corpus of Natural Language for Visual Reasoning\" (Suhr et al., ACL 2017) \u2014 introduced dataset for visual reasoning with natural language.\n- \"DREAM: A Challenge Dataset and Models for Dialogue-Based Reading Comprehension\" (Sun et al., ACL 2019) \u2014 7-way multiple-choice dataset for dialogue comprehension.\n\n**Ref:** 76-only segment; references-only portion requires summary note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2608,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7820e79dffeAty4ltFMnvZMhP"
+  }
+]

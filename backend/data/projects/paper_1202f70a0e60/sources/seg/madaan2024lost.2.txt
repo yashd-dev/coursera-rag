@@ -1,0 +1,82 @@
+=== PAGE 1 (continued) ===
+ntailment,
+contradiction, and no relationship. Included in the
+then widely-used natural language understanding
+benchmark GLUE (Wang et al., 2019b), the NLI
+
+1
+
+Some recent papers do report low scores for LLMs, for
+e.g. GPT3.5 on XNLI (Ohmer et al., 2024, 2023) and Llama
+1 models on ANLI, HANS, and MNLI (McCoy et al., 2019;
+Weber et al., 2023).
+
+1
+
+
+=== PAGE 2 ===
+the best performing model, examples with ‘incorrect’ predictions are rarely in fact incorrect; most
+concern questions on which humans may disagree
+as well. Motivated by this result, we further explore
+this topic by considering the ChaosNLI benchmark
+(Nie et al., 2020b), which contains 100 human annotations for over 4500 samples for three of the
+benchmarks we consider (§ 4.5). We find that accuracies (as computed on the majority label) are
+higher if the entropy of the human labels is low;
+when humans disagree, models are more likely
+to select one of the less preferred labels. Lastly,
+we consider the distributional differences between
+model outputs and human labels, as measured by
+the Jensen Shannon Divergence (JSD) between the
+human label distributions and the models’ softmax
+distributions over the possible answers. We find
+that the JSDs are lower than the ones reported by
+Nie et al. (2020b) for the previous generation of
+models, and they are also better than chance distributions. However, they are still substantially higher
+than the JSD between two populations of humans2 ,
+bearing interesting implications on the viablity of
+using an ensemble of LLM judges as a ‘jury’ (e.g.
+Verga et al., 2024). Interestingly, contrary to the
+findings of Nie et al. (2020b), we observe an effect of scale and model quality: JSD shows a clear
+decrease during training, and larger models have
+lower JSD than smaller models.
+In sum, we find that NLI benchmarks are still
+useful for model development and improvement.
+Specifically, they are able to discriminate between
+models of different scale and quality, develop
+steadily during training, and are not completely
+saturated. Furthermore, as even the best models
+are still far away from human performance in this
+respect, we see promise in monitoring the development of the distributional differences between
+models and humans, both during and after training.
+
+2
+
+whether the meaning of one sentence can be inferred from the meaning of another. Because the
+concept of entailment (and contradiction) are considered central to many aspects of language meaning (e.g. Bowman et al., 2015), such tasks were
+for some period considered an important task to
+determine whether one model could understand
+language better than another (Poliak, 2020). Over
+the years, many different, increasingly more difficult NLI tasks have been proposed in the literature. Included in the popular benchmarks GLUE
+(Wang et al., 2019b) and SuperGLUE (Wang et al.,
+2019a), the benchmarks MNLI (Williams et al.,
+2018) and RTE (Dagan et al., 2005) and RTE were
+used to claim SoTA by many influential models
+such as BERT (Devlin et al., 2019) and T5 (Raffel
+et al., 2023). When performance on MNLI and
+RTE started to saturate, several adversarial NLI
+benchmarks were introduced, such as ANLI (Raffel et al., 2023) and HANS (McCoy et al., 2019), on
+which BERT-style models performed poorly compared previous datasets. For LLMs, NLI benchmarks are rarely used. Of all big LLM releases,
+only GPT-3 (Brown et al., 2020) reported an NLI
+score, and only on one partition of ANLI. They
+concluded that NLI is a difficult task for general
+purpose LLMs. Similar trends were observed by
+Ohmer et al. (2024) and Weber et al. (2023) for
+decoder-only LLMs on various NLI tasks, in part
+motivating the study presented here.
+2.2
+
+Another line of work relevant to ours considers the
+behaviour of models in cases where humans disagree on the correct label for a particular sample
+(for an overview, see Plank, 2022). The ground
+truth labels for NLP benchmarks are often decided
+according to the majority label by human annotators. This 

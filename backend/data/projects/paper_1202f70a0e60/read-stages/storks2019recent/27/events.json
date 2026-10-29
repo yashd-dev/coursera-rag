@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.27 \u2013 physical page markers**\n\n- **Problem:** Language benchmarks can be mined from natural language texts; quality depends on source reliability (e.g., CLOTH uses expert-created fill-in-the-blank tests vs. random selection in CBT).\n\n- **Method:** Discussion of automatic text mining versus crowdsourcing for dataset creation; attention to task complexity, worker qualification, and data validation (e.g., SNLI validation, ROCStories authoring).\n\n- **Reported results:** No new experimental results; comparative analysis of benchmark origins (CLOTH mined from human tests; SWAG mined from movie descriptions and ActivityNet captions).\n\n- **Limitations:** Roaches will still require some manual validation; benchmarks mining less reliable or inconsistent sources often need automatic or human validation/filtering.\n\n- **Quote 1 (p.33 continued):** \u201cAutomatic generation versus text mining. As millions of natural language texts are publicly available on the Internet and in existing datasets, it is possible to build language benchmarks from these texts by automatically mining texts and extracting sentences.\u201d\n\n- **Quote 2 (p.34):** \u201cCLOTH is more challenging as the missing word in each example was chosen by an expert. For many other benchmarks that are built by mining less reliable or consistent sources, there is often a need for automatic or human validation or filtering.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2220,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782bd4b9ffejmp7P38LzgXd5d"
+  }
+]

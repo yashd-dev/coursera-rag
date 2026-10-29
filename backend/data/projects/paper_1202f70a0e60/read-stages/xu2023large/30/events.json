@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "### xu2023large.30 \u2014 Source Notes\n\n- **Problem**: A zero-shot reasoning case from \u03b1-NLI testing model explanations for sibling-in-law deduction and hypothesis selection over military contexts.\n\n- **Method**: Presents specific examples (Reynaldo, Maxine, Sara, Naomi) to derive a general conclusion; contrasts 0-shot and few-shot prompting across models (Bard, Davinci-003, ChatGPT variants) on a USMC enlistment hypothesis-selection task.\n\n- **Reported results**: Not explicitly quantified; the segment displays model outputs for \u03b1-NLI reasoning cases, showing varying correctness across 0-shot/1-shot/3-shot settings.\n\n- **Limitations**: Source text is untrusted data; no measured metrics, only presented answers and explanations.\n\n- **Quotes**:\n  - \"Therefore, Naomi is the sister-in-law of Reynaldo.\" [P28 continued]\n  - \"The more likely explanation is hypothesis choice A: I got injured the last day during a training event.\" [P29]\n\n- **References-only note**: This segment presents raw task outputs with no synthesized findings; a references-only excerpt requires a summary note, not invented results."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2166,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7836cba2ffeBq8kMErpBIN2Mm"
+  }
+]

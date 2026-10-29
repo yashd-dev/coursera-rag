@@ -1,0 +1,14 @@
+{
+  "draft_sha256": "cfc8228a8fb5d36d03bf6e4fe14750e6342926a848e34e9b7e4848e1b71113a4",
+  "claims": [
+    {
+      "claim": "The paper proposes speculative decoding as a method to accelerate inference from large autoregressive models without altering output distributions. \\cite{leviathan2022fast}",
+      "draft_quote": "The paper proposes speculative decoding as a method to accelerate inference from large autoregressive models without altering output distributions. \\cite{leviathan2022fast}",
+      "source_key": "leviathan2022fast",
+      "page": 2,
+      "quote": "differently at the logits level, they can all easily be cast\ninto standard sampling from an adjusted probability distribution. For example, argmax sampling is equivalent to zeroing\nout non-max elements of the distribution and normalizing.\nWe can therefore only deal with standard sampling from a\n\nTo summarize, our main contributions are: (1) A generalization of speculative execution to the stochastic setting, with\na novel sampling method we call speculative sampling, and\n(2) A decoding mechanism we call speculative decoding that\ncan accelerate decoding from autoregressive models, without any change to the model architectures, training regimes\nand output distributions.\n\n1\nWe\u2019ll use p(x) to denote p(xt |x<t ) whenever the prefix x<t\nis clear from the context, and similarly for q(x).\n\n2\n\n\n",
+      "status": "supported",
+      "review_reason": "Excerpts confirm speculative decoding speeds inference and keeps output distribution unchanged."
+    }
+  ]
+}

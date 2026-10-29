@@ -1,0 +1,56 @@
+=== PAGE 86 (continued) ===
+International Semantic
+Web Conference (ISWC 2012), Boston, MA, USA.
+Poliak, A., Haldar, A., Rudinger, R., Hu, J. E., Pavlick, E., White, A. S., & Van Durme, B. (2018a).
+Collecting Diverse Natural Language Inference Problems for Sentence Representation Evaluation. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language
+Processing (EMNLP 2018), Brussels, Belgium. Association for Computational Linguistics.
+Poliak, A., Naradowsky, J., Haldar, A., Rudinger, R., & Van Durme, B. (2018b). Hypothesis Only
+Baselines in Natural Language Inference. In Proceedings of the Seventh Joint Conference on
+86
+
+
+=== PAGE 87 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Lexical and Computational Semantics, pp. 180–191, New Orleans, LA, USA. Association for
+Computational Linguistics.
+Ponzetto, S. P., & Strube, M. (2007). Deriving a Large Scale Taxonomy from Wikipedia. In Proceedings of the 22nd National Conference on Artificial Intelligence, AAAI’07, pp. 1440–
+1445, Vancouver, BC, Canada. AAAI Press.
+Poole, D. (1990). A methodology for using a default and abductive reasoning system. International
+Journal of Intelligent Systems, 5(5), 521–548.
+Pradhan, S. S., Hovy, E., Marcus, M., Palmer, M., Ramshaw, L., & Weischedel, R. (2007).
+OntoNotes: A Unified Relational Semantic Representation. In International Conference on
+Semantic Computing (ICSC 2007), pp. 517–526.
+Punyakanok, V., Roth, D., Yih, W.-t., & Zimak, D. (2004). Semantic Role Labeling via Integer Linear Programming Inference. In Proceedings of the 20th International Conference on Computational Linguistics (COLING ’04), COLING ’04, Geneva, Switzerland. Association for
+Computational Linguistics.
+Quillian, M. R. (1966). Semantic Memory. Tech. rep. 2, Bolt Beranek and Newman Inc., Cambridge, MA, USA.
+Radford, A., Narasimhan, K., Salimans, T., & Sutskever, I. (2018). Improving Language Understanding with Unsupervised Learning..
+Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., & Sutskever, I. (2019). Language Models
+are Unsupervised Multitask Learners. https://d4mucfpksywv.cloudfront.net/better-languagemodels/language-models.pdf.
+Rahman, A., & Ng, V. (2012). Resolving Complex Cases of Definite Pronouns: The Winograd
+Schema Challenge. In Proceedings of the 2012 Joint Conference on Empirical Methods
+in Natural Language Processing and Computational Natural Language Learning (EMNLPCoNLL 2012), pp. 777–789, Jeju Island, Korea. Association for Computational Linguistics.
+Raina, R., Ng, A. Y., & Manning, C. D. (2005). Robust textual inference via learning and abductive
+reasoning. In Proceedings of the Twentieth National Conference on Artificial Intelligence
+(AAAI-05), pp. 1099–1105, Pittsburgh, PA, USA. AAAI Press.
+Rajpurkar, P., Jia, R., & Liang, P. (2018). Know What You Don’t Know: Unanswerable Questions
+for SQuAD. In Proceedings of the 56th Annual Meeting of the Association for Computational
+Linguistics (ACL 2018), Melbourne, Australia. Association for Computational Linguistics.
+Rajpurkar, P., Zhang, J., Lopyrev, K., & Liang, P. (2016). SQuAD: 100,000+ Questions for Machine
+Comprehension of Text. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing (EMNLP 2016), Austin, TX, USA. Association for Computational
+Linguistics.
+Rashkin, H., Bosselut, A., Sap, M., Knight, K., & Choi, Y. (2018a). Modeling Naive Psychology of
+Characters in Simple Commonsense Stories. In Proceedings of the 56th Annual Meeting of the
+Association for Computational Linguistics (ACL 2018), Melbourne, Australia. Association for
+Computational Linguistics.
+Rashkin, H., Sap, M., Allaway, E., Smith, N. A., & Choi, Y. (2018b). Event2Mind: Commonsense
+Inference on Events, Intents, and Reactions. In Proceedings of the 56th Annual Meeting of the
+87
+
+
+=== PAGE 88 ===
+S TORKS , G AO , & C HAI
+
+Association for Computational Linguistics (ACL 2018), Melbourne, Australia. Association for
+Computational Linguistics.
+Reddy, S., Chen, D., & Manning, C. D. (2018). CoQA: A C

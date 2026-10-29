@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# parikh2016decomposable.1 \u2014 Compact Factual Notes (1/7)\n\n**Page 1**\n- **Problem**: NLI requires determining entailment/contradiction between premise/hypothesis; complex deep models are computationally expensive with millions of parameters.\n- **Method**: Decomposable attention model using attention to align local text substructures, solve subproblems separately (trivially parallelizable), aggregate information without relying on word-order.\n- **Reported results**: State-of-the-art on SNLI with almost an order of magnitude fewer parameters than prior work; no word-order information needed; further improvements with intra-sentence attention.\n- **Limitations**: Not explicitly stated in segment; model relies on alignment and aggregation of local substructures.\n\n**Quote p.1**: \u201cIt is fairly easy to conclude that the second sentence follows from the first one, by simply aligning Bob with Bob and cannot sleep with awake and recognizing that these are synonyms.\u201d  \n**Quote p.1**: \u201cSimilarly, one can conclude that It is sunny outside contradicts the first sentence, by aligning thunder and lightning with sunny and recognizing that these are most likely incompatible.\u201d\n\n**Page 2**\n- **Related work**: Method motivated by alignment in machine translation and prior NLI/similarity approaches; neural counterpart is attention; dominating trend is complex deep text representation models (CNNs/LSTMs).\n\n---\n\n*Note: The segment ends after page 2; no further pages provided in this 1/7 view.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2353,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781bdc8bffeVcYKHVwmWUFDvF"
+  }
+]

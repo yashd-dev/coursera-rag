@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## storks2019recent.49.txt (pages 58\u201359)\n\n- **Problem**: Rapid growth of large language models (LLMs) since GPT-2 release (Nov 2019); debate on dangers/defenses of state-of-the-art language models.\n\n- **Method**: Survey of recent advances in natural language inference. BERT analyzed as representative: pre-trained on two larger corpora with cloze and sentence-ordering tasks; fine-tuned on 11 commonsense benchmarks; uses bidirectional transformers with sentence+positional embeddings.\n\n- **Reported results**: BERT exceeded state-of-the-art on GLUE, SQuAD 1.1, SWAG; later topped CLOTH, DREAM, OpenBookQA, CoQA, ReCoRD, SQuAD 2.0, CoQA, ReCoRD. Variants remain SOTA on many surveyed benchmarks, especially GLUE; BERT used as baseline for AlphaNLI and SocialIQA, yielding new SOTA on COPA and Winograd Schema Challenge.\n\n- **Limitations**: BERT's deep, complex structure makes it unexplainable; may exploit superficial correlations in data to achieve high accuracy (Niven & Kao, 2019); goal of future work: determine whether BERT captures intended semantic phenomena.\n\n- **Quote (p.58)**: \"Upon its initial release, BERT exceeded the state-of-the-art accuracy on several benchmarks including GLUE, SQuAD 1.1, and SWAG.\"\n\n- **Quote (p.59)**: \"In the latter, BERT was also used for a transfer learning experiment, where the model is fine-tuned to SocialIQA before finetuning to a new task. From this, new state-of-the-art results were achieved on COPA and the Winograd Schema Challenge.\"\n\nA references-only segment: no new findings invented."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2517,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78268eedffeX7azFTdclKwxgT"
+  }
+]

@@ -1,0 +1,50 @@
+=== PAGE 17 (continued) ===
+th
+an instruction, a type, and option descriptions or ordered levels. The encoder places the
+state after <|fim_prefix|>, the instruction after <|fim_middle|>, each option between
+<|box_start|> and <|box_end|>, and a final <|fim_suffix|>. Text segments are tokenized separately without added special tokens; delimiter IDs are inserted explicitly, with no
+intervening spaces or newlines. The instruction precedes all option tokens. Option isolation is
+disabled, allowing an option to attend to earlier options in its request.
+Training packs up to 4,096 tokens, with a 2,048-token limit on each state or branch segment;
+the inference server permits 8,192 tokens and rejects longer requests. Target distributions index
+Choice options, false/true answers, or Score levels, assigning zero mass to missing keys before
+normalization. When only an integer label is supplied, it defines a one-hot target. Training
+Í
+minimizes − 𝑖 𝑡𝑖 log 𝑝𝑖 averaged over questions within a record, with the ordered-score auxiliary
+loss disabled.
+We use TokenRhythm/NeoHorse-1-4B at revision 56f0584b [30], with a width-256 readout and zero head dropout. Rank-64 LoRA [18] uses 𝛼 = 128 and dropout 0.05 across attention
+projections q_proj, k_proj, v_proj, and o_proj; gated DeltaNet projections in_proj_qkv,
+in_proj_z, in_proj_a, in_proj_b, and out_proj; and, for all-module adaptation, feed17
+
+
+=== PAGE 18 ===
+forward projections gate_proj, up_proj, and down_proj. The no-FFN configuration omits
+these last three adapter targets while keeping the pretrained feed-forward modules.
+Parameters are stored in FP32 and computation uses BF16 autocast, gradient checkpointing,
+and gradient clipping at 1.0. AdamW [27] uses weight decay 0.01, microbatch size one, and
+accumulation over eight records. The OneCycle schedule [37] warms up for 10% of updates,
+begins at one twenty-fifth of the peak learning rate, and cosine-anneals to one ten-thousandth of
+that initial rate. Its first-moment coefficient cycles inversely between 0.95 and 0.85. Evaluation
+uses the final weights of each run. The two-epoch runs restart from saved initialization with a
+two-epoch schedule horizon: 3,864 updates on fold 2 and 3,862 on fold 3.
+A.4. Configurations, matching, and reuse
+Each configuration in Tables 2 and 4 is trained independently from its corresponding saved
+initialization and uses its assigned readout throughout training and evaluation.
+The pointer and mean-span heads have identical parameter counts: 1,311,232 parameters.
+All-module LoRA adds 129,859,584 parameters; attention and DeltaNet adapters alone add
+57,507,840. The auxiliary all-module rank-28 control uses 𝛼 = 56 and totals 58,124,800 trainable
+parameters, keeping 𝛼/𝑟LoRA = 2. Its adapter shapes differ from rank 64.
+Within each fold–seed setting, the core learning-rate models start from common saved
+parameters. The adapter-scope and rank comparisons copy reference parameters wherever
+their dimensions agree and align the initial CPU/CUDA random-generator states. Separate
+generators control record shuffling and augmentation, with matching recorded orders, inputs,
+and generator traces across the comparisons. A repeated pointer executes the reference recipe
+again under the same recorded starting conditions.
+Training the four learning-rate combinations and the repeated-pointer, trained-residual,
+and frozen-branch controls across four settings gives 28 models. The adapter-scope and rank
+comparisons add 20 models while reusing the four reference pointers; eight two-epoch models
+then reuse those pointers and the four all-module pooling models as their one-epoch references,
+giving 56 distinct trainings. The joint learning-rate experiments on H100, the additional adapterscope comparison, and the Qwen3 experiments each use their own references.
+For each named comparison, we first subtract scores within a fold–seed setting and then
+average the four differences. The descriptive standard error is the sample standard deviation of
+those differences divided by tw

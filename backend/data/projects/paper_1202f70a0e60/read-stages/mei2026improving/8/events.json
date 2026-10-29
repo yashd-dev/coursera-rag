@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Mei2026Improving - Page 11 (continued) / Page 12\n\n## Problem\n- Paired comparisons align readout design and adaptation scope in typed decision models for cross-request entailment reranking\n- Single-request selection design choices may not transfer unchanged to cross-request reranking contexts\n\n## Method\n- Pair meanspan pooling over each NLI option with selective backbone adaptation restricted to attention and DeltaNet projections\n- Jointly adjusts how option states are extracted and how the backbone is updated\n- Matched comparisons under tuned one-epoch recipe establish gains from both choices\n\n## Reported Results\n- On NeoHorse-1-4B, selective adaptation improves MC11 from 50.28% to 52.49%\n- Adding mean-span pooling reaches 53.39%\n- Both steps positive in all four fold\u2013seed settings\n- Together improve reranking accuracy by about 3.1 pp while reducing trainable parameters by 55.2%\n- Pointer-position, parameter-budget, and head-capacity controls clarify respective contributions\n\n## Limitations\n- No explicit limitations stated in this segment\n- Reference-only segment requires notes, not invented findings\n\n## Exact Quotes\n- \"Fixed-checkpoint comparisons show that direct selection and entailment reranking can favor different option readouts, indicating that design choices for single-request selection need not transfer unchanged to cross-request reranking.\" (Pg 11 continued)\n- \"Together, these changes improve reranking accuracy by about 3.1 pp while reducing trainable parameters by 55.2%.\" (Pg 11 continued)\n\n## References Note\n- References segment contains bibliographic citations only (papers 1-12 listed)\n- No findings or results to extract from references portion"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2560,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784818afffeaNa59Wf3AIVeTW"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.45** \u2014 recent advances in natural language inference: a survey\n\n- **Problem**: Tracking long-term world state and coreferences in procedural/commonsense text; models struggle when coreference is rich (human text) vs. structured (auto-generated).\n\n- **Method**: Memory-augmented neural networks (MemNets, ENTNET, QRN, DNC) that maintain entity states across time, using gated RNN cells or external memory to update/represent states incrementally.\n\n- **Reported results**:\n  - MemNets outperform RNN/LSTM on CBT cloze, leveraging wider context for named-entity/common-noun prediction. On bAbI, MemNNs achieve high performance, sometimes with fewer training examples (Weston et al., 2016).\n  - ENTNET passes all 20 bAbI subtasks (99.5% overall accuracy); strong on CBT, outperforming MemNet baselines. Used as baseline on Story Commonsense (Rashkin et al., 2018a) tracking character motivations/emotions from ROCStories. Advantage: updates world state incrementally; avoids re-processing input for multiple questions.\n  - QRN achieves comparable bAbI results to ENTNET; supports querying entity states at any point, not just end of text.\n  - DNC (Graves et al., 2016): uses recurrent units as memory cells; text cut off.\n\n- **Limitations**: ENTNET lacks separate embeddings for entity states over time; does not explicitly update coreferences in memory, causing errors on human-authored text rich in coreference (Das et al., 2019; PAGE 55). QRN/DNC comparisons cut off.\n\n- **Exact quotes**:\n  - \u201cmemory networks can efficiently leverage a wider context than these approaches in making inferences\u201d (CBT cloze; Hill et al., 2015, PAGE 54).\n  - \u201cENTNET does not explicitly update coreferences in memory, which can certainly cause errors when reading human-authored text which is rich in coreference\u201d (Das et al., 2019, PAGE 55).\n\n- **References-only note**: This segment surveys methods; no new experiments or results beyond cited benchmarks."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2498,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782778eeffemYOTKqs5eED6qz"
+  }
+]

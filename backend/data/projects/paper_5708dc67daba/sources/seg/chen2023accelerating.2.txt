@@ -1,0 +1,63 @@
+=== PAGE 2 (continued) ===
+el size in memory, quantisation to
+int8 or even int4 (Dettmers et al., 2022; Yao et al., 2022) and distillation (Jiao et al., 2020; Sanh
+et al., 2019) of transformers are effective techniques for reducing sampling latency with little to no
+performance penalty. The observation that model size contributes less to the final performance than
+expected (Hoffmann et al., 2022) has also encouraged smaller language models in general.
+During sampling, a cache of the keys and values is maintained for every attention layer, and could
+become a memory bandwidth bottleneck as the batch size increases. Methods such as multi-query
+attention (Shazeer, 2019) aims to improve sampling performance by shrinking this cache. However
+these techniques are most effective at maximising throughout (at larger batch sizes) instead of latency,
+especially for larger models where the majority of the memory bandwidth budget is consumed by the
+parameters.
+Using a combination of the above techniques, in addition to a number of low-level optimisations to
+TPUs, Pope et al. (2022) have greatly improved the serving latency and efficiency of PaLM 540B.
+There is an existing body of similar work exploiting the efficiency of transformers and sequence
+models operating in parallel. This includes block parallel sampling (Stern et al., 2018), aggressive
+decoding (Ge et al., 2022), in addition to some work in parallelizing autoregressive models in the
+image domain (Song et al., 2021; Wiggers and Hoogeboom, 2020). These methods have yet to be
+adapted to typical language model use-cases since they either only work with greedy sampling, bias
+the results or are focused on other modalities. Further, to our knowledge none of these techniques
+have been scaled to distributed setups, which is necessary for the most expensive decoders with the
+tens or hundreds of billions of parameters.
+Coincidentally, the work in this manuscript was undertaken concurrently and independently of
+the work on speculative decoding from Leviathan et al. (2022). We focus more heavily the distributed
+serving setting for large models and offer some incremental optimisations, but otherwise the core
+underlying idea is the same.
+
+Auto-regressive Sampling
+Whilst transformers can be trained efficiently and in parallel on TPUs and GPUs, samples are typically
+drawn auto-regressively (See algorithm 1). For most applications, auto-regressive sampling (ArS) is
+highly memory bandwidth bound and thus cannot make effective use of modern accelerator hardware
+(Shazeer, 2019). A memory bound model call only generates a single token for every sequence in the
+batch, hence generating multiple tokens introduces a large amount of latency in any system which
+makes use of it.
+2
+
+
+=== PAGE 3 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+This is especially problematic as the number of parameters in the model increases. Since all the model
+parameters need to pass through at least one accelerator chip, the model size divided by the total
+memory bandwidth across all chips gives us a hard ceiling on the maximum auto-regressive sampling
+speed. Larger models also require serving on multiple accelerators, introducing a further source of
+latency due to inter-device communication overheads.
+Algorithm 1 Auto-regressive (ArS) with Auto-Regressive Models
+Given auto-regressive target model 𝑞 ( . | .) and initial prompt sequence 𝑥1 , . . . , 𝑥𝑡 and target sequence
+length 𝑇 .
+Initialise 𝑛 ← 𝑡 .
+while 𝑛 < 𝑇 do
+Sample 𝑥𝑛+1 ∼ 𝑞 ( 𝑥 | 𝑥1 , . . . , 𝑥𝑛 )
+𝑛←𝑛+1
+end while
+Algorithm 2 Speculative Sampling (SpS) with Auto-Regressive Target and Draft Models
+Given lookahead 𝐾 and minimum target sequence length 𝑇 .
+Given auto-regressive target model 𝑞 ( . | .), and auto-regressive draft model 𝑝 ( . | .), initial prompt
+sequence 𝑥0 , . . . , 𝑥𝑡 .
+Initialise 𝑛 ← 𝑡 .
+while 𝑛 < 𝑇 do
+for 𝑡 = 1 : 𝐾 do
+Sample draft auto-regressively 𝑥˜𝑡 ∼ 𝑝 ( 𝑥 | , 𝑥1 , . . . , 𝑥𝑛 , 𝑥˜1 , . . . , 𝑥˜𝑡−1 )
+end for
+In parallel, compute 𝐾 + 1 sets of logits from 

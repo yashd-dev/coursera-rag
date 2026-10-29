@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing.8\n\n## Problem\n- Paper probes state-of-the-art NLI models on Logic Fragments and Monotonicity phenomena to test systematic generalization.\n- Challenge sets reveal inherent difficulty; baseline models perform poorly across all fragments.\n- State-of-the-art models fail to generalize well on fragments despite strong benchmark performance.\n\n## Method\n- Train baselines (biLSTM, BERT) and pre-trained NLI models (BERT, ESIM, Decomp-Attn) on NLI benchmarks then evaluate on fragment test sets.\n- Re-train models with fragment data to assess if they can \"master\" specific reasoning while retaining original benchmark accuracy.\n- Test two illustrative fragments: Monotonicity and Comparatives.\n\n## Reported Results\n- **Table 1**: Baseline models range 34\u201369% accuracy on Logic Fragments (Avg.); 44\u201359% on Mono. Fragments. Pre-trained models 42\u201391%.\n- **Re-training with fragments**: MNLI accuracy drops 5.9\u20136.7% across models, showing catastrophic interference.\n- **Monotonicity fragment** (Fig 6): All 4 models master it while retaining benchmark accuracy.\n- **Comparative fragment**: Non-BERT models lose substantial benchmark accuracy when learning comparatives.\n- **Other fragments** (Fig 7): Varied but largely stable trends; BERT robust to lexical variation even with paraphrased nouns/verbs.\n\n## Limitations\n- Models fail to generalize to benchmark tasks after fragment training, contradicting utility for general NLI.\n- Even with systematic paraphrasing (disjoint nouns/verbs), BERT maintains robustness\u2014findings rely on specific fragment types.\n- Hyperparameter sensitivity (learning rate, seeds) affects all models; results may not be globally optimal.\n\n## Two Exact Quotes\n- \"We found all models to be sensitive to learning rate, and performed comprehensive hyper-parameters searches to consider different learning rates, # iterations and (for BERT) random seeds.\" (Page 5)\n- \"All 4 models can master Monotonicity Reasoning while retaining accuracy on their original benchmarks.\" (Page 6)\n\n## Note on References-Only Segment\nThis segment contains re-training results and fragment evaluations per the paper's experimental design. No background citations or external findings are inferred."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2686,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7833366affeKNbNoVOReLupY4"
+  }
+]

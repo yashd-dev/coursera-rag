@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# gendron2024counterfactual.3.txt \u2014 Page 3 (continued)\n\n**Problem**  \n- Gap: AI for strategic foresight is largely unautomated; existing architectures omit causal testing among extracted graph relationships.  \n- Goal: Identify, extract, and test causal relationships from media news to construct a causal graph for building plausible future scenarios and providing policy insights.\n\n**Method**  \n- Modified Structural Causal Model (SCM) with DAGs: each document D yields graph G = \u27e8U, V, E\u27e9.  \n- Observed nodes v \u2208 V = general event depictions; edges Eij exist if an LLM explicitly mentions a causal relationship.  \n- Exogenous factors U describe unobserved influences; not assigned values.  \n- Nodes have domains, current values, and plain-natural-language descriptions; edges carry descriptions (e.g., \u201ctravel restrictions diminish airlines revenues\u201d).  \n- Counterfactual inference: intervene to modify node values while other attributes remain unchanged; contextual background knowledge is attached to each node.  \n- Causal inference performed via LLM-based intervention on modified SCM values (text cuts off mid-sentence).\n\n**Reported results**  \n- No quantitative results reported in this segment.\n\n**Limitations**  \n- Architecture considered only a signal-assessment module without explicit causality testing.  \n- Domains and values are text-based; numerical precision is unavailable.  \n- Confounders U are unobserved and not assigned values.\n\n**Two short exact quotes**  \n- \u201cthe proposed architecture only considered a signal assessment module without explicit reference to testing causality among the extracted graph relationships [41, 42]\u201d  \n- \u201cwe can extract the following causal variables S and T, and their relationship: travel restrictions (S) \u2192 airlines revenues (T)\u201d\n\n**Note**  \n- Page 3 ends mid-definition of causal inference; counterfactual results are not provided in this segment.  \n- References-only continuation requires a summary note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2314,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7844b0ebffef81JbuHY26rtC0"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent \u2014 Page 3 (continued)\u20134\n\n**Problem.** The survey surveys recent benchmarks evaluating machine reasoning, from focused tasks like the Winograd Schema Challenge to broad suites like GLUE. A central challenge is that solving these tasks requires machines to go beyond linguistic context and rely on implicit reasoning and world knowledge not explicitly stated in text.\n\n**Method.** The authors categorize benchmarks by task scope (specific vs. broad) and knowledge type (linguistic, common, commonsense). They survey existing benchmarks, summarize criteria for benchmark design, and discuss task formulation, bias mitigation, data collection, and complexity factors.\n\n**Reported results.** No quantitative results are reported; the paper is a survey of existing benchmarks and criteria.\n\n**Limitations.** The survey does not present new experiments or metrics; it maps the landscape of prior benchmarks.\n\n- \"Higher-level tasks, such as question answering, may appear the same as in earlier benchmarks. However, successfully solving these tasks will also require machines to go beyond linguistic context, and rely on reasoning and knowledge that is not explicitly stated in text.\" (P3)\n- \"Some benchmarks target a specific type of knowledge, e.g., commonsense social psychology in Event2Mind, while others intend to address a variety of types of knowledge, e.g., the Story Cloze Test.\" (P4)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2192,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7831a9c3ffeig12RO9pApABq6"
+  }
+]

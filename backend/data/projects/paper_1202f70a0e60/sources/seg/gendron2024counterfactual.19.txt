@@ -1,0 +1,66 @@
+=== PAGE 19 (continued) ===
+ resembles that of during the global financial
+crisis decline (-8.7 per cent).
+Meanwhile, AxiCorp market strategist Stephen Innes said small and medium enterprises (SMEs) are most at
+risk given they generally operate on small operating cushions and will need to dive into credit lines
+if not hefty interest credit card to keep things afloat.
+"Unless governments actually get money physically into the hands that need it the most things can turn bad.
+This will put pressure on bank stocks due to credit line drawdown and an increase in defaults.
+"We know oil and gas and airlines are in a bad way due to travel restrictions imposed around the world.
+"At this stage, I see no way out and expect more investors to move into cash or keep investment portfolio
+very light primarily in recessionary proof areas like healthcare.
+"But honestly with credit under duress, I think cash is the place to be. The only endgame in sight is when
+the world sees COVID-19 ends," he said.
+
+Table 6 provides the explanations given by the models when inferring the values of the remaining
+variables during the prediction step. We can observe that the two models reason similarly, although
+GPT-4o tends to return a more precise and detailled explanation. The only difference in behaviour is
+for variable h0 where GPT-4o does not answer. As this value is computed during the abduction step,
+in an anticausal fashion (predict a cause from its consequences), this is expected. This issue can be
+alleviated by marginalising over the set of possible values of h0.
+Tables 7 and 8 provide examples of explanation returned by the models when evaluating the factual
+and counterfactual causal graphs. GPT-4o provides longer and more detailled explanations while
+the justification provided by LLaMA-3.1 is not always very explanative. We can see that scores and
+confidence are highly correlated for both models although outliers can also be observed.
+
+19
+
+
+=== PAGE 20 ===
+Table 6: Explanation of the inferred values by GPT-4o and LLaMA-3.1 for every variable in Table 4.
+GPT-4o
+LLaMA-3.1
+2
+
+3
+
+10
+
+11
+
+12
+
+h0
+
+The Bursa Malaysia downtrend magnitude is in- Given that Severity of oil price war is
+fluenced by several factors. The severity of the severe, increasing Bursa Malaysia downCOVID-19 pandemic is low, which would typ- trend magnitude and Downside risks to
+ically suggest a smaller downtrend magnitude. corporate earnings are low, contributing
+However, the severity of the oil price war is se- less to the downtrend. Although Potenvere, which greatly increases the downtrend mag- tial end of COVID-19 pandemic would renitude. The downside risks to corporate earnings duce the downtrend magnitude, Severity
+are low, which would also typically suggest a of COVID-19 pandemic being low would
+smaller downtrend. Lastly, the potential end of increase it, but this effect is expected to
+the COVID-19 pandemic is not expected (False), be lower than that of oil price war. Hence
+which does not help reduce the downtrend mag- Bursa Malaysia downtrend magnitude is
+nitude. Thus, considering the severe impact of predicted to be high.
+the oil price war, I predict a moderate downtrend
+magnitude of around 20%.
+The FBM KLCI index value is influenced by sev- The estimated value of the FBM KLCI
+eral factors for the market close yesterday. The index is 1500.00 due to the high Bursa
+Bursa Malaysia downtrend magnitude shows a Malaysia downtrend magnitude and high
+significant percentage decline from peak (20%), selling pressure on stocks, which both dewhich has a negative impact on the index. Fur- crease the FBM KLCI index value. Howthermore, the selling pressure on stocks is high, ever, the good condition of oil & gas and
+which also decreases the index value. On the airlines sectors has a positive effect on the
+other hand, the condition of the oil & gas and index value.
+airlines sectors is good, which supports the index
+value. Given these mixed factors, the FBM KLCI
+index is estimated to be lower but not drastically
+so.
+The down

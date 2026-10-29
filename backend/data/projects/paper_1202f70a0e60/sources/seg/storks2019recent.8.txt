@@ -1,0 +1,46 @@
+=== PAGE 10 (continued) ===
+en, thus limiting the amount of required outside knowledge to be somewhat manageable. MCTest
+may be downloaded at https://github.com/mcobzarenco/mctest/tree/master/
+data/MCTest.
+RACE. The Reading Comprehension Dataset from Examinations (RACE) by Lai, Xie, Liu, Yang,
+and Hovy (2017) consists of about 98,000 multiple-choice reading comprehension questions over
+28,000 passages collected from middle- and high-school English exams. As the exams are designed
+by expert teachers, the questions are challenging, often requiring reasoning over multiple sentences
+in the passage. Further, many questions and candidate choices cannot be matched directly to the passage. RACE can be requested for download at https://www.cs.cmu.edu/~glai1/data/
+race/.
+NarrativeQA. NarrativeQA by Kočiský et al. (2018) is a collection of about 1,500 full stories
+and movie scripts paired with human-written summaries, along with about 47,000 human-written
+questions and answers based on the summaries. Two open-ended tasks are proposed: answering
+the questions paired with the original stories and scripts, and answering the questions paired with
+the summaries. As the questions were written based upon summaries of the stories and scripts,
+answering the questions based on the full stories and scripts is more challenging, and requires
+reasoning over a larger span of text. NarrativeQA can be downloaded at https://github.
+com/deepmind/narrativeqa.
+ARC. The AI2 Reasoning Challenge (ARC) from Clark, Cowhey, Etzioni, Khot, Sabharwal,
+Schoenick, and Tafjord (2018) provides a dataset of almost 8,000 four-way multiple-choice science questions and answers, as well as a corpus of 14 million science-related sentences which are
+claimed to contain most of the information needed to answer the questions. As many of the questions require systems to draw information from multiple sentences in the corpus to answer correctly,
+it is not possible to accurately solve the task by simply searching the corpus for keywords. As such,
+this task encourages reasoning over a large amount of knowledge, an essential skill for NLI systems.
+ARC can be downloaded at https://data.allenai.org/arc/.
+MCScript. The MCScript benchmark by Ostermann et al. (2018) is one of few QA benchmarks
+which emphasizes commonsense knowledge. The dataset consists of about 14,000 2-way multiplechoice questions based on short passages, with a large proportion of its questions requiring pure
+commonsense knowledge to answer, and thus can be answered without the passage. Such an example is given in Figure 4. Questions are conveniently labeled with whether they are answered
+with the provided text or commonsense. A download link to MCScript can be found at https:
+//www.sfb1102.uni-saarland.de/?page_id=2582.
+ProPara. ProPara by Mishra, Huang, Tandon, Yih, and Clark (2018) consists of 488 annotated
+paragraphs of procedural text. These paragraphs describe various processes such as photosynthesis
+and hydroelectric power generation in order for systems to learn object tracking in processes which
+involve changes of state. The authors assert that recognizing these state changes can require knowledge of physical processes, so proficiency in reasoning with such knowledge is required to perform
+10
+
+
+=== PAGE 11 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+well. Annotations of the paragraphs are in the form of a grid which describes the state of each participant in the paragraph after each sentence of the paragraph. If a system understands a paragraph
+in this dataset, it is said that for each entity mentioned in the paragraph, it can answer any question
+about whether the entity is created, destroyed, or moved, and when and where this happens. To
+answer all possible questions accurately, a system must produce a grid identical to the annotations
+for the paragraph. Thus, systems are evaluated by their performance on this task. ProPara data is
+linked from https://data.allenai.org/propara/.
+MultiRC. MultiRC by Khashabi, Chatur

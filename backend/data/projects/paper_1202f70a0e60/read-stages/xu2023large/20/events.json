@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large \u2014 Page 16 continued\n\n- **Problem context**: Comparison of latest training data cutoff and cost; B in column = one billion tokens; pricing per 1M tokens noted.\n- **Method**: Appendix details evaluation metrics (Answer Correctness, Explain Correctness, Explain Completeness, Explain Redundancy) plus error attribution. Human annotation (10 NLP grad students via API) for 3 LLMs; GPT-4o as automatic judge for 4 trending LLMs.\n- **Reported results**: Fig. 13 (n=300) shows LLM-judge alignment with human annotations across 4 metrics and 2 error categories. Fig. 14 heatmaps report correctness, rigorousness, self-awareness scores per LLM across datasets.\n- **Limitations**: Manual annotation scaled only to 3 LLMs; automatic judge uses GPT-4o; large datasets capped at 1000 samples; mixed-form reasoning datasets show most samples have 1\u20132 or 3\u20134 facts.\n\n- \"As mentioned in the main paper, we introduce four metrics to evaluate the LLM performances, i.e., Answer Correctness, Explain Correctness, Explain Completeness and Explain Redundancy.\" (Page 16 continued)\n- \"For the four trending LLMs, their evaluations are under the automatic mode. Specifically, we utilize GPT-4o model to act as the LLM judge.\" (Page 16 continued)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2827,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783914b8ffeQTIVPxoRSBFe9O"
+  }
+]

@@ -1,0 +1,74 @@
+=== PAGE 26 (continued) ===
+reasoning case in Leap-Of-Thought.
+
+The statement “A jazz is capable of express feelings” is true using deductive reasoning based on the given facts.
+Answer and Explain:
+Explain Error Type:
+This is true, as the given fact “a music is capable of express feelings” includes the subcategory of music that is
+jazz. Therefore, we can logically deduce that jazz music is also capable of expressing feelings.
+Answer and Explain:
+True. Although humans usually associate the sound of a quack-quack with birds, the quack-quack mentioned here
+is not a bird and is not capable of expressing feelings. Additionally, a privet is capable of suffering dehydration
+but not expressing feelings. Therefore, the only species that has been mentioned in the facts that is capable
+of expressing feelings is the music. Although a jazz is not explicitly mentioned in the facts, it would also be
+categorically considered to be a type of music, so it can logically be assumed that a jazz is capable of expressing
+feelings.
+Answer and Explain:
+The statement ”A jazz is capable of express feelings” is not true. The fact that a music is capable of expressing
+feelings does not mean that a jazz is capable of expressing feelings. A jazz is a type of music, but it is not the
+only type of music. There are many other types of music, and not all of them are capable of expressing feelings.
+For example, classical music is often seen as being more formal and less emotional than jazz. Therefore, it is not
+possible to say that all music is capable of expressing feelings, simply because one type of music is capable of
+doing so.
+In order to determine whether a jazz is capable of expressing feelings, we would need more information about the
+specific jazz in question. We would need to know what the jazz is about, who wrote it, and how it was performed.
+Once we have this information, we can then use deductive reasoning to determine whether the jazz is capable of
+expressing feelings.
+For example, if the jazz is about a personal experience that the author had, then it is more likely that the jazz will
+be able to express feelings. This is because the author will have put their own emotions into the jazz, and this will
+be reflected in the music. However, if the jazz is about a more general topic, such as the beauty of nature, then it
+is less likely that the jazz will be able to express feelings. This is because the author will not have put their own
+emotions into the jazz, and the music will therefore be more objective.
+Ultimately, whether or not a jazz is capable of expressing feelings is a matter of opinion. There is no scientific way
+to determine whether a piece of music is capable of expressing feelings. However, by using deductive reasoning,
+we can gain a better understanding of the potential for a jazz to express feelings.
+Answer and Explain:
+Explain Error Type:
+
+
+=== PAGE 27 ===
+27
+
+Question, answer
+and explanation
+
+Based on the given facts and inductive reasoning, it is likely that Lily’s color is not definitively determined.
+Although Lily is described as a rhino, there is no information given that directly pertains to Lily’s color.
+Additionally, there is no other animal descriptions that could be used to make an inference regarding Lily’s
+color. Therefore, based on the given facts, it is not possible to make an accurate determination of Lily’s color using
+inductive reasoning.
+Answer and Explain:
+Explain Error Type:
+
+Bard
+of 0-shot
+
+Davinci-003
+of 0-shot
+
+ChatGPT ChatGPT
+of 3-shot of 1-shot
+
+Context: 1 Greg is a rhino. 2 Brian is a swan. 3 Bernhard is a frog. 4 Brian is green. 5 Greg is gray. 6 Bernhard is
+yellow. 7 Julius is a lion. 8 Julius is yellow. 9 Lily is a rhino.
+Question: What color is Lily?
+Answer: Gray
+Explanation: IsRhino(Greg) (1), IsGray(Greg) (5)→ IsGray(rhino), IsRhino(Lily) (9)→IsGray(Lily)
+
+ChatGPT
+of 0-shot
+
+TABLE 16: A reasoning case in bAbI-16.
+
+Lily’s color is likely to be unknown as there is no information provided about her color among the other animals.
+Answer

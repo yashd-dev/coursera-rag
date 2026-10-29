@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Raju2017Dynamic \u2014 Source Segment Notes (Pages 7\u20138)\n\n**Problem**  \n- Construct a bidirectional GRU-based memory network for NLI (natural language inference).  \n- Word embeddings trained from scratch; embedding size = 80; hidden units = 80.  \n- Baseline uses sentence encoding only; proposed model adds fact-sentence encoding via episodic memory.  \n\n**Method**  \n- Optimizer: Standard SGD with mini-batch = 100; learning rate = 0.001; max input length = 200 tokens.  \n- Gradient clipping and dropout applied to avoid explosion/overfitting.  \n- Three hops for memory network (subsequent hops take less time).  \n- Episodic module state passed to Answer model for classification.  \n\n**Reported Results**  \n- Train accuracy: Baseline 75.3%; Fact-Sentence encoding 86.0% (train), 71.7% (validation).  \n- Test confusion matrix (Fact-Sentence encoding): Entailment 1420/180/100; Neutral 230/1100/190; Contradiction 50/220/1210.  \n- Sentence length groups (1\u20133): accuracies 76.5%, 76.7%, 76.8% \u2014 performance stable across lengths.  \n- Memory hops: accuracy rises significantly from 1\u21922 hops; further leaps insignificant.  \n\n**Limitations**  \n- Word embeddings not initialized from pre-trained vectors.  \n- Validation loss increases after ~8 epochs (overfitting).  \n- Model struggles to distinguish Entailment from Neutral; Contradiction overlaps with both.  \n\n> \u201cIn the current study, we failed to find major variations in values from the confusion matrix of each of the mentioned groups. One can observe that the model's performance is quite stable regardless of the number of words in the given sentence.\u201d (Table 4)  \n> \u201cRegarding class \u2018Neutral,\u2019 a significant mistake is made by predicting these sentence pairs as \u2018Entailment.\u2019 The \u2018Contradiction\u2019 class overlaps with \u2018Neutral\u2019 and \u2018Entailment.\u2019\u201d (Table 3)  \n\n**References-only note**  \nThis segment contains no novel findings beyond the reported results and limitations above; it is a results-and-analysis section with quantified performance and confusion matrices."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2701,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781dc636ffemBmgatiAoB2rJl"
+  }
+]

@@ -1,0 +1,121 @@
+=== PAGE 11 (continued) ===
+
+Caiming Xiong, Stephen Merity, Richard Socher.
+“Dynamic Memory Networks for Visual and Textual
+Question Answering” In Proc. ICLR 2017.
+Christiansen, M. H., & Chater, N. (2016). The now or - never bottleneck: A fundamental constraint on
+language. Behavioral and brain sciences, 39, e62.
+CORR 2014.
+Frank, M. C., & Goodman, N. D. (2014). Inferring
+word meanings by assuming that speakers are
+informative. Cognitive psychology, 75, 80 - 96.
+Gershman, S. J., & Daw, N. D. (2017). Reinforcement
+learning and episodic memory in humans and
+animals: an integrative framework. Annual review of
+psychology, 68 (1), 101 - 128.
+Githiari, L. M. (2014). Natural language access to
+relational databases: an ontology concept mapping
+(OCM) approach (Doctoral dissertation, University
+of Nairobi).
+Hearne, L. (2017). Characterisation of Functional
+Brain Networks underlying Cognitive Reasoning and
+Intelligence.
+In Proc.2015 NIPS Workshop on Cognitive
+Computation: Integrating Neural and Symbolic
+Approaches.
+In Proc. ICML 2016.
+Jamil, Z. (2017). Monitoring tweets for depression to
+detect at - risk users (Doctoral dissertation, Université
+d'Ottawa/University of Ottawa).
+Jan Chorowski, Dzmitry Bahdanau, Kyunghyun Cho,
+and Yoshua Bengio. “End - to - end continuous
+
+[21]
+[22]
+
+[23]
+[24]
+[25]
+[26]
+[27]
+
+[28]
+[29]
+
+[30]
+[31]
+[32]
+
+[33]
+
+[34]
+[35]
+[36]
+
+[37]
+[38]
+
+speech recognition using attention - based recurrent
+NN: first results”
+Jianpeng Cheng, Li Dong, and Mirella Lapata. “Long
+short - term memory - networks for machine reading”.
+In Proc. EMNLP 2016.
+Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho,
+Aaron C. Courville, Ruslan Salakhutdinov, Richard S.
+Zemel, and Yoshua Bengio. “Show, attend and tell:
+Neural image caption generation with visual
+attention” In Proc. ICML 2015.
+Kumar, A., Irsoy, O., Ondruska, P., Iyyer, M.,
+Bradbury, J., Gulrajani, I., and Socher, R.
+Lenz, I., Lee, H., & Saxena, A. (2015). Deep learning
+for detecting robotic grasps. The International
+Journal of Robotics Research, 34 (4 - 5), 705 - 724.
+Lili Mou, Men Rui, Ge Li, Yan Xu, Lu Zhang,
+RuiYan, and Zhi Jin.
+Lopez - Paz, D., & Ranzato, M. A. (2017). Gradient
+episodic memory for continual learning. Advances in
+neural information processing systems, 30.
+Marchman, V., & Plunkett, K. (2014, January). Token
+frequency and phonological predictability in a pattern
+association network: Implications for child language
+acquisition. In 11th Annual Conference Cognitive
+Science Society Pod (pp.179 - 187). Psychology
+Press.
+Martínez Manzanilla, A. G. (2015). An ontology based approach toward the configuration of
+heterogeneous network devices.
+Michael, A. K. J., Valla, E., Neggatu, N. S., & Moore,
+A. W. (2017). Network traffic classification via neural
+networks (No. UCAM - CL - TR - 912). University of
+Cambridge, Computer Laboratory.
+Oliver, A. D. (2017). 'Tell Me a Story': Using Critical
+Hip Hop Narratives to Decolonize College
+Composition (Doctoral dissertation, Mills College).
+REIN, B. M. (2014). Automatic Webpage Content
+Categorisation and Extraction. Briefings in
+Bioinformatics, 15 (5), 788 - 797.
+Richard Socher, Alex Perelygin, Jean Wu, Jason
+Chuang, Chris Manning, Andrew Ng and Chris Potts.
+“Recursive
+Deep
+Models
+for
+Semantic
+Compositionality Over a Sentiment Treebank”
+Conference on Empirical Methods in Natural
+Language Processing (EMNLP) 2013.
+Ruppenhofer, J., Ellsworth, M., Schwarzer - Petruck,
+M., Johnson, C. R., & Scheffczyk, J. (2016).
+FrameNet II: Extended theory and practice.
+International Computer Science Institute.
+Samuel R. Bowman, Christopher D. Manning, and
+Christopher Potts.
+Samuel R. Bowman, Gabor Angeli, Christopher Potts,
+and Christopher D. Manning.
+Samuel R. Bowman, Jon Gauthier, Abhinav Rastogi,
+Raghav Gupta, Christopher D. Manning and
+Christopher Potts. “A fast unified model for parsing
+and sentence understanding” In Proc. ACL 2016.
+Shuohang Wang and Jing Jiang. “Learning Natural
+Language Inference with LSTM”. In Proc. NAACL
+HLT 2016.
+Sukhbaatar, S., Szlam, A., Weston, J., and Fe

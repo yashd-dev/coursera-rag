@@ -1,0 +1,93 @@
+=== PAGE 5 (continued) ===
+hodology of Singh et al.
+(2024) and Dubey et al. (2024), we analyse contamination by assigning a score to each evaluation
+sample which represents the percentage of tokens
+in the sample that is part of an 8-gram occurring
+in the pre-training datamix. Following Singh et al.
+(2024), we select contamination thresholds using
+ConTAM, considering for each threshold the estimated performance gain (EPG), defined as the difference in performance on the full evaluation set
+and the ‘uncontaminated’ subset.4 Since EPG is
+4
+
+A threshold of 0 implies that all examples with non-zero
+contamination scores to be marked as contaminated, as we
+
+increase the threshold, examples are moved to the ‘uncontaminated’ subset.
+
+5
+
+
+=== PAGE 6 ===
+(a) ANLI
+
+(b) HANS
+
+(c) MNLI
+
+(d) SNLI
+
+(e) αNLI
+
+Figure 3: Contamination results. We show the EPG vs the percent of the evaluation dataset marked as contaminated
+according to different thresholds.
+
+observed at those threshold is likely an artefact of
+the small size of the clean partition, and this result
+is likely not indicative of true performance gain.
+Thus, we believe that contamination does not play
+a participatory role in high performances for NLI
+benchmarks.
+4.4
+
+case, the model’s prediction matches the majority
+label found by Nie et al. (2020b), but the sample
+is marked incorrect because the MNLI label is different. It is worth pointing out, that the same is
+sometimes true for examples that are marked correct. Consider, for instance, the last row in Table 2,
+where the model prediction matches the gold label in the MNLI dataset, but not the majority label
+collected by ChaosNLI. In sum, it appears that for
+the best model, most of the ‘mistakes’ in MNLI
+are cases in which humans may not agree on the
+correct label.
+
+Dataset saturation
+
+Having confirmed that the NLI benchmarks under
+scrutiny provide discrimination between LLMs of
+different sizes and are not affected much by contamination, we now turn to the question of saturation: the results show that the benchmarks would
+have been useful so far, but how about the future?
+As already pointed out before, the benchmark that
+still has the clearest room for improvement is adversarial benchmark ANLI, with performances not
+exceeding 70% even for the largest models. For
+the other benchmarks, performances are substantially higher, and it is unclear to what extent the
+benchmarks may suffer saturation.
+
+Majority accuracy Next, we study this phenomenon more quantitatively, again utilising the
+ChaosNLI dataset which contains 100 human annotations for over 1500 samples each for MNLI,
+SNLI, and αNLI. First, we consider how model
+accuracies change when we replace the original
+labels with the majority label of the ChaosNLI
+dataset. This alters 32%, 25%, and 11% of the
+labels of MNLI, SNLI, and αNLI, respectively. In
+Table 3, we can see that the results differ per model
+and benchmark. The largest effect is observed for
+MNLI, where for some models, there’s an increase
+of more than 10% in performance and the average
+accuracy across models is more than five points
+higher on the ‘corrected’ datasets. For the other
+two benchmarks, the results are more mixed, with
+little to no difference on average. Only for the
+largest Llama-3.1 model (405B), the majority accuracy is systematically higher than the original
+accuracy, suggesting it may have honed in more
+on the majority label. Interestingly, the MNLI and
+SNLI subsets of ChaosNLI appear substantially
+more difficult than the average dataset; even the
+Llama-3.1 405B model stays below 70% for both
+these subsets, suggesting that there is room for improvement.
+
+Error types To address this question, we first
+conduct a manual error analysis on the examples
+that the largest models assign an incorrect label.
+Specifically, we focus on MNLI, one of the datasets
+with the highest scores and analyse 40 predictions
+of Llama 3.1 405B model. In Table 2, we show examples, along with distribution of the 100 human
+annotations for that sample from the prev

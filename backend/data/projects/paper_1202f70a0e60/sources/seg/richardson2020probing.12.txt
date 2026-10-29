@@ -1,0 +1,39 @@
+=== PAGE 9 (continued) ===
+T’s Syntactic Abilities.
+arXiv:1901.05287.
+Gururangan, S.; Swayamdipta, S.; Levy, O.; Schwartz, R.;
+Bowman, S.; and Smith, N. A. 2018. Annotation Artifacts
+in Natural Language Inference Data. In NAACL.
+Hu, H., and Moss, L. S. 2018. Polarity Computations in
+Flexible Categorial Grammar. In *SEM.
+Hu, H.; Chen, Q.; Richardson, K.; Mukherjee, A.; Moss,
+L. S.; and Kuebler, S. 2019. Monalog: a Lightweight System for Natural Language Inference Based on Monotonicity.
+arXiv:1910.08772.
+Hu, H.; Chen, Q.; and Moss, L. S. 2019. Natural Language
+Inference with Monotonicity. In IWCS.
+Icard, T. F., and Moss, L. S. 2013. A Complete Calculus of
+Monotone and Antitone Higher-Order Functions. TACL.
+Icard, T. F., and Moss, L. S. 2014. Recent Progress on
+Monotonicity. Linguistic Issues in Language Technology
+9(7):167–194.
+Kalouli, A.-L.; de Paiva, V.; and Real, L. 2017. Correcting
+Contradictions. In the Computing Natural Language Inference Workshop.
+Lake, B. M., and Baroni, M. 2017. Generalization Without
+Systematicity: On the Compositional Skills of Sequence-toSequence Recurrent Networks. In ICML.
+Liu, N. F.; Schwartz, R.; and Smith, N. A. 2019. Inoculation by Fine-Tuning: A Method for Analyzing Challenge
+Datasets. In NAACL.
+LoBue, P., and Yates, A. 2011. Types of Common-sense
+Knowledge Needed for Recognizing Textual Entailment. In
+ACL.
+McCoy, R. T.; Pavlick, E.; and Linzen, T. 2019. Right for the
+Wrong Reasons: Diagnosing Syntactic Heuristics in Natural
+Language Inference. In ACL.
+Montague, R. 1973. The proper treatment of quantiﬁcation in ordinary English. In Approaches to natural language.
+Springer.
+Naik, A.; Ravichander, A.; Sadeh, N.; Rose, C.; and Neubig, G. 2018. Stress Test Evaluation for Natural Language
+Inference. In COLING.
+Parikh, A. P.; Täckström, O.; Das, D.; and Uszkoreit, J.
+2016. A Decomposable Attention Model for Natural Language Inference. In EMNLP.
+Pavlick, E., and Kwiatkowski, T. 2019. Inherent Disagreements in Human Textual Inferences. TACL 7:677–694.
+8721
+

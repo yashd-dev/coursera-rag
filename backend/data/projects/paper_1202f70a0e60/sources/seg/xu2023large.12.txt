@@ -1,0 +1,104 @@
+=== PAGE 10 (continued) ===
+ Visualization on the orientation.
+
+(c) Visualization on the no-hallucination.
+
+Fig. 7: Heatmap results for the activity, orientation and no-hallucination of LLMs.
+
+(a) EntailmentBank (De.).
+
+(b) RuleTaker (De.).
+
+(c) FOLIO (De.).
+
+(d) Leap (De.).
+
+(e) CLUTRR (In.).
+
+(f) D*-Ab (Ab.).
+
+Fig. 8: The LLM performances with different numbers of
+statements. The red line denotes Answer Correct while the
+green line is Answer Correct+Explain Correct.
+second in abductive reasoning tasks, albeit with slight disadvantages. Conversely, BARD displays poor performance
+in avoiding hallucinations and maintaining clarity during
+reasoning. Across all four reasoning settings, BARD ranks
+last with significant gaps.
+On average, LLMs induce hallucination in 27.46% of
+the failure cases. LLM hallucinations are more prevalent in
+deductive reasoning tasks among the settings of deductive,
+inductive, and abductive reasoning, whereas LLMs may
+exhibit clearer judgment in the inductive setting.
+5.7 How Does the Number of Statements Affect the
+LLMs’ Performances?
+In the following, we explore some of the key factors to affect
+the reasoning performances of LLMs. Since the length of the
+input context can be different for the datasets, we report
+
+the model performances with the number of statements in
+Fig. 8. We take ChatGPT for analysis and choose six datasets
+with specific counts of statements for illustration, covering
+the three reasoning manners. The first four subfigures are
+related to the deductive reasoning manner, i.e., EntailmentBank, RuleTaker, FOLIO, and Leap-of-Thought. Fig. 8e is
+CLUTRR in the inductive setting and Fig. 8f is D-Ab in the
+abductive setting. The horizontal axis denotes the number
+of statements. The left vertical axis denotes the number
+of samples for different numbers of statements. And the
+right vertical axis represents the performances with different
+numbers of statements.
+From the overall results, LLMs can keep the correctness
+of both the answer and explanations with fewer input
+statements. With the statement number increasing, the performances drop a lot and LLMs struggle to give the correct
+explanations. Interestingly, five (out of six) datasets witness
+performance gains when the number of statements reaches
+certain values. For example, in the RuleTaker dataset, the
+best performances are achieved when the number of statements is larger than 17. And when the number is between 13
+to 16, ChatGPT is capable of keeping stable performances.
+We argue that the larger number of statements can provide
+richer information and sometimes can help control the reasoning direction of LLMs.
+Furthermore, we investigate the impact of the number
+of tokens in the context. Fig. 9 illustrates the ChatGPT
+performances on twelve datasets. Results vary a lot across
+different datasets and different reasoning settings. In general, as the number of tokens increases, the performances
+of ChatGPT tend to decline. Detailedly, ChatGPT performs
+stably in deductive settings. Especially for EntailmentBank
+and Leap-of-Thought datasets, ChatGPT maintains relatively consistent accuracy with token numbers increasing.
+Considering that deductive setting is a more common form
+of reasoning in reality, LLMs are well-trained on it to tackle
+the various lengths of inputs.
+5.8 How Does the Number of Reasoning Hops Affect
+the LLMs’ Performances?
+Also, it is interesting to explore the influences of reasoning hops for LLMs. Among the selected dataset, three of
+them offer the number of hops for each sample, which are
+EntailmentBank in deductive reasoning, CLUTRR in inductive reasoning and D*-Ab in abductive reasoning. Fig. 10
+presents the performance of ChatGPT with different hop
+
+
+=== PAGE 11 ===
+11
+
+(a) EntailmentBank (De.).
+
+(b) FOLIO (De.).
+
+(c) Leap-of-Thought (De.).
+
+(d) CLUTRR (In.).
+
+(e) α-NLI (Ab.).
+
+(f) α-NLG (Ab.).
+
+(g) AbductiveRules (Ab.).
+
+(h) D*-Ab (Ab.).
+
+(i) ReClor (Mix).
+
+(j) LogiQA (Mix).
+
+(k) LogiQA2.0 (Mix).
+
+(l) LogiQA2NLI (Mix).
+
+Fig. 9: The performances of Chat

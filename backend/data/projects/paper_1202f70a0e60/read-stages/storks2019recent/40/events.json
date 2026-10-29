@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.40.txt \u2014 Notes\n\n- **Problem**: Survey of NLI approaches; knowledge base completion via inference or generation to fill gaps in existing KBs like ConceptNet.\n- **Method**: Page 48: Relaxed logical framework (Angeli & Manning, 2014) infers novel relations from existing KB; neural transformers (Bosselut et al., 2019) trained on KB relations to generate new ones.\n- **Reported results**: Page 49: Bosselut et al. (2019) trained on ConceptNet \u2192 92.1% of generated relations rated accurate by human workers.\n- **Limitations**: Page 49: Long-tail phenomenon in knowledge resources requires future improvement; automatic KB completion struggles with sparse tail entities.\n- **Quote (p.48)**: \u201cnew relations may be inferred from existing relations\u201d using a relaxed logical framework (Angeli & Manning, 2014).\n- **Quote (p.49)**: \u201cUp to 92.1% of generated relations as accurate\u201d when model trained on ConceptNet (Bosselut et al., 2019).\n\n*Ref*: References-only segment; no background citations invented."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2231,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7828b883ffeLZA4Zyw7r30zap"
+  }
+]

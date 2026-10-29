@@ -1,0 +1,60 @@
+=== PAGE 14 (continued) ===
+ion with logical reasoning using contrastive representations,” in Proceedings of the 2022 Conference on
+Empirical Methods in Natural Language Processing (EMNLP), 2022,
+pp. 4261–4274.
+[27] Z. Huang, M. Chiang, and W. Lee, “Line: Logical query reasoning
+over hierarchical knowledge graphs,” in 28th SIGKDD Conference
+on Knowledge Discovery and Data Mining, 2022, pp. 615–625.
+[28] K. Cheng, J. Liu, W. Wang, and Y. Sun, “Rlogic: Recursive logical
+rule learning from knowledge graphs,” in 28th SIGKDD Conference
+on Knowledge Discovery and Data Mining, 2022, pp. 179–189.
+
+
+=== PAGE 15 ===
+15
+
+[29] P. N. Johnson-Laird, “Deductive reasoning,” Annual review of psychology, vol. 50, no. 1, pp. 109–135, 1999.
+[30] V. Goel, “Anatomy of deductive reasoning,” Trends in cognitive
+sciences, vol. 11, no. 10, pp. 435–441, 2007.
+[31] E. Heit and C. M. Rotello, “Relations between inductive reasoning and deductive reasoning.” Journal of Experimental Psychology:
+Learning, Memory, and Cognition, vol. 36, no. 3, p. 805, 2010.
+[32] F. Yu, H. Zhang, and B. Wang, “Nature language reasoning, a
+survey,” arXiv preprint arXiv:2303.14725, 2023.
+[33] J. R. Josephson and S. G. Josephson, Abductive inference: Computation, philosophy, technology. Cambridge University Press, 1996.
+[34] D. Walton, “Abductive, presumptive and plausible arguments,”
+Informal Logic, vol. 21, no. 2, 2001.
+[35] B. Dalvi, P. Jansen, O. Tafjord, Z. Xie, H. Smith, L. Pipatanangkura,
+and P. Clark, “Explaining answers with entailment trees,” in
+Proceedings of the 2021 Conference on Empirical Methods in Natural
+Language Processing (EMNLP), 2021, pp. 7358–7370.
+[36] S. Han, H. Schoelkopf, Y. Zhao, Z. Qi, M. Riddell, L. Benson,
+L. Sun, E. Zubova, Y. Qiao, M. Burtell, D. Peng, J. Fan, Y. Liu,
+B. Wong, M. Sailor, A. Ni, L. Nan, J. Kasai, T. Yu, R. Zhang, S. R.
+Joty, A. R. Fabbri, W. Kryscinski, X. V. Lin, C. Xiong, and D. Radev,
+“FOLIO: natural language reasoning with first-order logic,” CoRR,
+vol. abs/2209.00840, 2022.
+[37] A. Talmor, O. Tafjord, P. Clark, Y. Goldberg, and J. Berant, “Leapof-thought: Teaching pre-trained models to systematically reason
+over implicit knowledge,” in Advances in Neural Information Processing Systems (NeurIPS), 2020.
+[38] K. Sinha, S. Sodhani, J. Dong, J. Pineau, and W. L. Hamilton,
+“CLUTRR: A diagnostic benchmark for inductive reasoning from
+text,” in Proceedings of the 2019 Conference on Empirical Methods in
+Natural Language Processing and the 9th International Joint Conference
+on Natural Language Processing (EMNLP-IJCNLP), 2019, pp. 4505–
+4514.
+[39] W. Yu, Z. Jiang, Y. Dong, and J. Feng, “Reclor: A reading comprehension dataset requiring logical reasoning,” in 8th International
+Conference on Learning Representations (ICLR), 2020.
+[40] J. Liu, L. Cui, H. Liu, D. Huang, Y. Wang, and Y. Zhang, “Logiqa: A
+challenge dataset for machine reading comprehension with logical
+reasoning,” in Proceedings of the Twenty-Ninth International Joint
+Conference on Artificial Intelligence (IJCAI), 2020, pp. 3622–3628.
+[41] H. Liu, R. Ning, Z. Teng, J. Liu, Q. Zhou, and Y. Zhang, “Evaluating the logical reasoning ability of chatgpt and GPT-4,” CoRR, vol.
+abs/2304.03439, 2023.
+[42] J. Weston, A. Bordes, S. Chopra, and T. Mikolov, “Towards aicomplete question answering: A set of prerequisite toy tasks,” in
+4th International Conference on Learning Representations (ICLR), 2016.
+[43] P. Clark, O. Tafjord, and K. Richardson, “Transformers as soft
+reasoners over language,” in Proceedings of the Twenty-Ninth International Joint Conference on Artificial Intelligence (IJCAI), 2020, pp.
+3882–3890.
+[44] C. Bhagavatula, R. L. Bras, C. Malaviya, K. Sakaguchi, A. Holtzman, H. Rashkin, D. Downey, W. Yih, and Y. Choi, “Abductive
+commonsense reasoning,” in 8th International Conference on Learning Representations (ICLR), 2020.
+[45] N. Young, Q. Bao, J. Bensemann, and M. Witbrock, “Abductionrules: Training transformers to explain unexpected inputs,” in
+Findings of the Association for Computational Linguistics

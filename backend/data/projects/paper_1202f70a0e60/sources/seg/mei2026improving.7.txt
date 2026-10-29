@@ -1,0 +1,76 @@
+=== PAGE 9 (continued) ===
+inters and matched initializations. These groups are
+separate from the core readout-by-scope models in Table 2; the final no-FFN pooling model has
+not been evaluated on these sources.
+
+9
+
+
+=== PAGE 10 ===
+Lowering both learning rates strengthens the pointer on both sources, and pooling improves
+these lower-rate models by a further 1.26 pp on PIQA and 4.01 pp on CommonsenseQA. The
+separate scope comparison follows the same direction: omitting FFN adapters improves both
+sources in every setting, reaching 80.25% and 63.80%, respectively.
+6.2. Readout on Qwen3-4B
+The Qwen3-4B comparison tests the readout change under lower-rate, all-module adaptation.
+Pooling improves HellaSwag by 3.91 pp, close to the 4.23 pp gain on NeoHorse, and also
+improves the ARC configurations. Declines elsewhere, including a 4.28 pp loss on four-option
+GSM8K, outweigh these gains: overall MC11 accuracy is 51.70% for pooling and 52.17% for the
+pointer. The readout change thus retains gains on particular tasks without improving aggregate
+accuracy on this backbone. Appendix B reports the complete task comparison.
+
+7. Trade-offs on Direct Selection
+We also test the same core checkpoints under direct selection to see how the reranking choices
+affect their original use (Table 6). The no-FFN pointer raises MC11 while maintaining JevBench
+accuracy, at 77.52% versus 77.11% for the all-module pointer. Adding pooling improves MC11
+further, with JevBench and Kev accuracies of 73.79% and 78.12%. These are 3.32 and 3.25 pp
+below the all-module pointer.
+Across both adapter scopes, the pointer gives higher direct-selection accuracy than pooling
+on these suites. Kev’s declines include decision-test as well as the transfer subsets; Appendix B
+gives the six-subset profile. Together with the fixed-checkpoint interface comparisons in Section 4, these results support choosing the readout with the intended scoring task in mind.
+Core model
+All-module pointer
+All-module pooling
+No-FFN pointer
+No-FFN pooling
+
+JevBench (%)
+
+Kev (%)
+
+77.11±0.84
+75.37±0.96
+77.52±0.98
+73.79±1.18
+
+81.37±0.59
+79.91±0.35
+79.78±0.35
+78.12±0.26
+
+Table 6 | Direct-decision results for the core readout-by-scope comparison.
+Entries are four-setting means with descriptive SEs. MC11 results for these
+same models appear in Table 2.
+
+8. Related Work
+Studies of specialized JEV decision models report uneven performance across knowledge,
+reasoning, and multilingual tasks [24]. Interventions on labels, definitions, and context also
+change their behavior without changing model weights [1, 47]. LLM-as-Jev examines joint suffix
+scoring without training and fine-tuning with KL anchors [25]. Related work on prompted
+language models shows that multiple-choice scores depend on the scoring interface and option
+identifiers [34, 53]. We focus on improving the trained JEV model when it is used to compare
+candidate answers through separate entailment requests.
+Pointer and biaffine architectures score contextual representations with shared projections
+[44, 14]. Research on sentence and span representations examines which token states to aggregate
+10
+
+
+=== PAGE 11 ===
+[32, 42]; recent work extends these choices to language models used as text encoders [45, 2]. Tang
+and Yang [40] compare pooling and attention while holding the embedding model’s data and
+backbone fixed. Our comparisons examine option-span readouts trained jointly with adapters,
+including whether pooling remains useful under a smaller adapter scope.
+LoRA restricts adaptation through low-rank updates to selected projections [18]. Module
+selection under distribution shift [22], forgetting during adaptation [5], and learning rates across
+adapter factors and ranks [15, 8] provide reasons to examine placement, capacity, and optimization together. Gradual unfreezing [17], head fitting before fine-tuning [20], and parameterefficient head fitting [50] offer other ways to control adaptation. Fine-tuning stability also
+depends on initialization, data order, and optimization [13

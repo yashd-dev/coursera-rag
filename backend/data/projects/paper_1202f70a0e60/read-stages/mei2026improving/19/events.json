@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## Mei2026improving.19.txt \u2014 Page 24\u201325\n\n- **Problem**: Effects of learning-rate, readout, adapter-placement, and training-budget manipulations on model accuracy are unstable across benchmark aggregation methods (MC11 vs. source-weighting/LOSO) and reference execution choices.\n\n- **Method**: Paired-comparison sensitivity analysis across seven source-omission conditions; main effects computed higher\u2212minus\u2212lower rate; budget interaction is two-epoch pooling advantage minus one-epoch advantage.\n\n- **Reported results** (Page 24):\n  - MC11 seven-source mean interaction = +3.66 pp; under equal weighting = +1.89 pp\n  - Head-rate main effect = +0.05 \u00b1 0.57; trained-residual = \u22120.11 \u00b1 0.46\n  - Adapter-rate main effects positive across settings (+0.73 to +3.10)\n  - Budget interaction = +3.88 \u00b1 1.13; persists under reweighting; ARC/HellaSwag = 63% of gap\n\n- **Limitations** (Page 25):\n  - Interaction between pooling and no-FFN: omitting chess reverses MC11-weighted mean\n  - No-FFN rank 64 vs. rank 28 changes sign under configuration weighting\n  - Near-zero head-rate and trained-residual means change sign under equal source weighting\n  - Seven-source weighting leaves one setting with \u22120.20 pp interaction\n\n- **Exact quotes**:\n  - \"[+3.88 \u00b1 1.13]\" (Page 24, budget interaction MC11 seven-source)\n  - \"[\u22120.20 \u00b1 0.77]\" (Page 25, one setting under seven-source weighting)\n\n- **References-only note**: This segment presents sensitivity/aggregation results without new methodological claims; findings pertain to effect stability under reweighting, not generalizable performance improvements."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2631,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784561f7ffelxG14weRs8jptg"
+  }
+]

@@ -1,0 +1,76 @@
+=== PAGE 9 (continued) ===
+ consistency
+between graph generations. LLaMA-3.1 shows a high standard deviation for all results.
+Table 5: Self-evaluation and confidence provided by the LLMs on the plausibility of the described set
+of events and their causal relationships for the document described in Appendix B. The average of
+three end-to-end runs is shown.
+Self-Evaluation
+Factual
+Counterfactuals
+Counterfactual-CI-GPT-4o
+-LLaMA-3.1
+
+0.850 ± 0.000
+0.563 ± 0.330
+
+0.739 ± 0.129
+0.256 ± 0.340
+
+Self-Confidence
+Factual
+Counterfactuals
+0.863 ± 0.022
+0.600 ± 0.346
+
+0.762 ± 0.155
+0.367 ± 0.400
+
+GPT-4o gives higher scores and confidence than on the synthetic data despite the more complex
+causal structure. However, LLaMA-3.1 provides lower scores, particularly for the counterfactual
+graph. We hypothesise that lower scores are attributed to the counterfactual graphs because they
+break the causal reasoning chains via the intervention. It hints that the LLMs rely on commonsense
+clues and already observed reasoning chains from their training distribution to build their answers.
+This can be further observed in the explanations provided in Appendix B.4 and was described in the
+context of abstract reasoning by [13].
+9
+
+
+=== PAGE 10 ===
+6
+
+Limitations
+
+LLMs provide free-text answers that can be different from the format provided in the instructions.
+This poses challenges for building an end-to-end pipeline that requires using LLMs at multiple stages,
+as the responses can be difficult to parse automatically, and errors can accumulate. In our future work,
+we will include fine-tuning in our pipeline to mitigate this issue. Due to the high cost of running
+LLMs or accessing them through APIs, we only tested our method on synthetic data and short text
+snippets. We intend to apply it to larger amounts of data in the future. We also only consider DAG
+structures, whereas real-world events can contain feedback loops. We will integrate them into our
+future work. As the LLM discovers the causal structure, errors can be present, and confounders
+can be omitted. The counterfactual results depend on the causal graph to be accurate. In addition,
+our current approach for real-world data proxies ground-truth counterfactual data by retrieving such
+values from LLMs. Our future work will focus on verifying the accuracy of the intermediate steps
+and building ground-truth counterfactual data.
+
+7
+
+Conclusion and Broader Impact
+
+We propose an end-to-end method for conducting causal structure discovery and counterfactual causal
+inference from unstructured natural language. We demonstrate the applicability of our method on
+real-world news events, showcasing the LLMs’ abilities to perform causal discovery and inference
+not as a standalone model but as a part of a larger framework. Furthermore, our experiments show
+that LLMs can extract the causal structure of a piece of text but fail during the reasoning part. This
+expands previous findings on the limitations of LLMs on reasoning tasks [49, 13, 20].
+This research is still in its infancy but has shown promising results for computing causal inference
+and leveraging LLMs. As the inference process is divided into several independent computations of
+causal variables given their parents, this configuration provides inherent interpretability and allows
+auditing an LLM’s answer. Our future work will follow two lines of research. On one hand, as LLMs
+have been shown to perform better by using refinement techniques [49, 27, 52, 36], our counterfactual
+self-evaluation method could be used to conduct Counterfactual Self-Learning: refine LLMs’ answers
+to improve them and teach LLMs to reason more causally by providing them with counterfactual
+data [1]. On the other hand, we aim to create a framework to build and test counterfactuals based on
+real values and validate whether LLM-extracted causal relationships hold. Doing so would avoid
+LLM hallucinations and counterfactual reasoning deficiencies similar to the ones shown in Section
+4 and lead to robust causal reason

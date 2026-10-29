@@ -1,0 +1,53 @@
+=== PAGE 11 (continued) ===
+Hinsvark,
+Arun Rao, Aston Zhang, Aurélien Rodriguez, Austen Gregerson, Ava Spataru, Baptiste Rozière,
+Bethany Biron, Binh Tang, Bobbie Chern, Charlotte Caucheteux, Chaya Nayak, Chloe Bi,
+Chris Marra, Chris McConnell, Christian Keller, Christophe Touret, Chunyang Wu, Corinne
+Wong, Cristian Canton Ferrer, Cyrus Nikolaidis, Damien Allonsius, Daniel Song, Danielle
+Pintz, Danny Livshits, David Esiobu, Dhruv Choudhary, Dhruv Mahajan, Diego Garcia-Olano,
+Diego Perino, Dieuwke Hupkes, Egor Lakomkin, Ehab AlBadawy, Elina Lobanova, Emily
+Dinan, Eric Michael Smith, Filip Radenovic, Frank Zhang, Gabriel Synnaeve, Gabrielle Lee,
+Georgia Lewis Anderson, Graeme Nail, Grégoire Mialon, Guan Pang, Guillem Cucurell, Hailey
+Nguyen, Hannah Korevaar, Hu Xu, Hugo Touvron, Iliyan Zarov, Imanol Arrieta Ibarra, Isabel M.
+Kloumann, Ishan Misra, Ivan Evtimov, Jade Copet, Jaewon Lee, Jan Geffert, Jana Vranes, Jason
+Park, Jay Mahadeokar, Jeet Shah, Jelmer van der Linde, Jennifer Billock, Jenny Hong, Jenya Lee,
+Jeremy Fu, Jianfeng Chi, Jianyu Huang, Jiawen Liu, Jie Wang, Jiecao Yu, Joanna Bitton, Joe
+Spisak, Jongsoo Park, Joseph Rocca, Joshua Johnstun, Joshua Saxe, Junteng Jia, Kalyan Vasuden
+Alwala, Kartikeya Upasani, Kate Plawiak, Ke Li, Kenneth Heafield, Kevin Stone, and et al.
+The llama 3 herd of models. CoRR, abs/2407.21783, 2024. doi: 10.48550/ARXIV.2407.21783.
+URL https://doi.org/10.48550/arXiv.2407.21783.
+[10] Ashkan Ebadi, Alain Auger, and Yvan Gauthier. Detecting emerging technologies and their
+evolution using deep learning and weak signal analysis. Journal of Informetrics, 16(4):101344,
+2022.
+[11] Martin Ester, Hans-Peter Kriegel, Jörg Sander, Xiaowei Xu, et al. A density-based algorithm
+for discovering clusters in large spatial databases with noise. In kdd, volume 96, pp. 226–231,
+1996.
+11
+
+
+=== PAGE 12 ===
+[12] Kenneth D. Forbus. Analogical abduction and prediction: Their impact on deception. In 2015
+AAAI Fall Symposia, Arlington, Virginia, USA, November 12-14, 2015, pp. 15–20. AAAI Press,
+2015. URL http://www.aaai.org/ocs/index.php/FSS/FSS15/paper/view/11660.
+[13] Gaël Gendron, Qiming Bao, Michael Witbrock, and Gillian Dobbie. Large language models
+are not strong abstract reasoners. In Kate Larson (ed.), Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence, IJCAI-24, pp. 6270–6278. International
+Joint Conferences on Artificial Intelligence Organization, 8 2024. doi: 10.24963/ijcai.2024/693.
+URL https://doi.org/10.24963/ijcai.2024/693. Main Track.
+[14] Amber Geurts, Ralph Gutknecht, Philine Warnke, Arjen Goetheer, Elna Schirrmeister, Babette
+Bakker, and Svetlana Meissner. New perspectives for data-supported foresight: The hybrid
+ai-expert approach. Futures & Foresight Science, 4(1):e99, 2022.
+[15] Seethalakshmi Gopalakrishnan, Luciana Garbayo, and Wlodek Zadrozny. Causality extraction
+from medical text using large language models (llms). arXiv preprint arXiv:2407.10020, 2024.
+[16] Luigi Gresele, Julius von Kügelgen, Jonas M. Kübler, Elke Kirschbaum, Bernhard Schölkopf,
+and Dominik Janzing. Causal inference through the structural causal marginal problem. In
+Kamalika Chaudhuri, Stefanie Jegelka, Le Song, Csaba Szepesvári, Gang Niu, and Sivan Sabato
+(eds.), International Conference on Machine Learning, ICML 2022, 17-23 July 2022, Baltimore,
+Maryland, USA, volume 162 of Proceedings of Machine Learning Research, pp. 7793–7824.
+PMLR, 2022. URL https://proceedings.mlr.press/v162/gresele22a.html.
+[17] Marius Hobbhahn, Tom Lieberum, and David Seiler. Investigating causal understanding in llms.
+In NeurIPS ML Safety Workshop, 2022.
+[18] Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang,
+Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, and Ting Liu. A survey on
+hallucination in large language models: Principles, taxonomy, challenges, and open questions. CoRR, abs/2311.05232, 2023. doi: 10.48550/ARXIV.2311.05232. URL https:
+//doi.org/10.48550/arXiv.2311.05232.
+[19] Zhijing Jin, Yuen Chen

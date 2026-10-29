@@ -1,0 +1,66 @@
+=== PAGE 3 (continued) ===
+mperature of 1.0; and (iii) T RI F ORCE’s ability to efficiently process
+large batches, achieving a 1.9× speedup for a batch size of six with 19K contexts per sample.
+1 The official implementation of DeepSpeed-ZeRO-Inference (Aminabadi et al., 2022) with KV cache
+offloading currently only supports a single GPU, which computes attention on CPU. Our offloading
+system transfers KV cache from CPU to GPU, benefiting from Tensor Parallelism.
+
+3
+
+
+=== PAGE 4 ===
+Published as a conference paper at COLM 2024
+
+2
+
+Background
+
+2.1
+
+Speculative Decoding
+
+Speculative decoding (Stern et al., 2018; Leviathan et al., 2023; Chen et al., 2023a; Kim et al.,
+2024; Zhang et al., 2023; Santilli et al., 2023; Hooper et al., 2023) is featured by accelerating
+LLM decoding while precisely maintaining the model’s output distribution. As the speed
+of the auto-regressive decoding process is mainly bound by the time for loading model
+weights and KV cache to GPU SRAM, speculative decoding leverages the observation that
+generating one token takes the same time as processing tens of tokens in parallel. Tree-based
+speculation methods are proposed to fully utilize the speculation budget (Fu et al., 2024;
+Li et al., 2024). Instead of making one prediction for the next token, tree-based methods
+leverage multiple candidates to boost the acceptance rate so that more tokens can get
+accepted (Miao et al., 2023; Sun et al., 2024; Chen et al., 2024). Staged speculation techniques
+(Spector & Re, 2023; Chen et al., 2023b) have been suggested to further accelerate inference
+by using a cascade of draft models, and hierarchical speculation shares similarities with
+these approaches. However, our method focuses on long sequence generation tasks, which
+presents unique challenges. We use different drafting methods for each speculation phase
+to address two distinct bottlenecks in long-context scenarios, instead of focusing on model
+weights at every stage for acceleration. Meanwhile, self-speculation approaches such as
+Medusa (Cai et al., 2024; Ankner et al., 2024), which are orthogonal to our method, require
+training efforts and can be integrated into our intermediate draft model.
+2.2
+
+KV Cache Eviction Strategies
+
+StreamingLLM (Xiao et al., 2023b) addresses the limitations of window attention and sliding
+window with re-computation by presenting a straightforward yet effective method that
+allows LLMs to handle infinitely long text sequences without fine-tuning. StreamingLLM
+stabilizes the performance by retaining critical attention sink tokens together with recent KV
+for attention computation. By prioritizing sink tokens, StreamingLLM ensures the attention
+score distribution remains stable, promoting consistent language modeling for long texts.
+H2 O (Zhang et al., 2024b) introduces a greedy but low-cost approach to processing infinitelength input streams, inspired by a simplified version of the heavy-hitters (H2 ) eviction
+policy. This method dynamically updates the KV cache based on the cumulative attention
+scores, systematically removing the least critical KV to maintain a fixed cache size. By
+leveraging a greedy algorithm based on local statistics, H2 O effectively selects which KV
+pairs to preserve in the cache, ensuring efficient inference without compromising quality.
+However, it is important to recognize that these techniques do not increase the context
+window size (Zhang et al., 2024a; Jin et al., 2024; Ge et al., 2023; Jiang et al., 2023). They focus
+on retaining only the most recent tokens along with either attention sinks or heavy-hitters,
+while discarding other tokens. These approaches limit the model to processing based on
+their designed eviction policies and recent tokens. Consequently, they might not be directly
+applicable to tasks that demand comprehensive, long-context understanding.
+2.3
+
+KV Cache Quantization
+
+Several approaches to KV cache quantization have been introduced to enhance the efficiency
+of inference for long sequence generation, aiming to maintain g

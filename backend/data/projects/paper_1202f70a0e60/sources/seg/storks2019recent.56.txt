@@ -1,0 +1,46 @@
+=== PAGE 66 (continued) ===
+arikh, & Batra, 2018; Gordon, Kembhavi, Rastegari, Redmon,
+Fox, & Farhadi, 2018). Ortiz (2016) further motivates this idea, and provides suggestions of ways
+to implement a physically embodied Turing Test. Working with agents and observing their abilities
+and limitations in understanding language and grounding language to their own sensorimotor skills
+will allow researchers to better understand the space of commonsense knowledge from a practical
+standpoint, and tackle the problem of knowledge acquisition and language inference jointly.
+Need greater emphasis on reasoning.
+Some recent results have questioned whether state-of-the-art approaches actually perform genuine
+inference and reasoning for those benchmark tasks. For example, it has shown that models which
+exploit statistical biases in benchmark data perform poorly when the biases are removed (Niven &
+Kao, 2019; Zellers et al., 2019a). For another example, Jia and Liang (2017) propose an adversarial
+evaluation scheme for SQuAD (Rajpurkar et al., 2016) which randomly inserts distractor sentences
+into passages which do not change the meaning of the passage, and shows that high-performing
+models on the benchmark drop significantly in performance. Marasović (2018) highlights several
+more similar situations where modern NLI systems can break down due to small, inconsequential
+changes in inputs. All these findings point to an important question: how do we develop and evaluate
+models that can actually perform reasoning?
+Davis and Marcus (2015) point out that in order for machines to perform comprehensive commonsense reasoning, as in the “piggy bank” example discussed in Section 1, there is a critical need
+for methods that can automatically integrate many types of reasoning such as temporal reasoning,
+plausible reasoning, and analogy. Thus, it is important to develop a more thorough understanding
+of this body of reasoning skills required in NLI. However, this is typically not given much attention
+in NLI benchmarks. Benchmark tasks often only evaluate the end result of inference (e.g., whether
+a question is correctly answered) without regard to the underlying process. Further, except for a
+few benchmarks, such as bAbI, which specifies sub-tasks by types of reasoning intended (Weston
+et al., 2016), and Event2Mind for prediction of specific psychological states surrounding events
+(Rashkin et al., 2018b), most benchmarks do not differentiate between types of reasoning. Useful
+analyses of required skills are occasionally done after benchmark creation, e.g., as done by Sugawara et al. (2017), Chu et al. (2017), and Yatskar (2018) for selected benchmarks. Nonetheless,
+the majority of benchmarks do not support a systematic evaluation of reasoning abilities. As such,
+for future benchmarks, it would be helpful to explicitly address different types of reasoning capabilities through data curation, which can provide a better understanding of machines’ commonsense
+reasoning ability and allow for targeted improvement in different areas.
+Need stronger justification and better understanding on design choices of models.
+New neural models are constantly being developed. Very often, the design choices for various
+models are neither justified nor understood. For example, design choices like parameter tuning
+strategies are often overlooked in favor of more significant or interesting model improvements, but
+these small choices can actually have a significant effect on performance. We have seen in other
+AI subfields that more complex models may lead to better performance on a particular benchmark,
+but simpler models with better parameter tuning may later lead to comparable results. For example,
+in image classification, a study by Brendel and Bethge (2019) shows that nearly all improvements
+of recent deep neural networks over earlier bag-of-features classifiers come from better fine-tuning
+rather than improvements in decision processes.
+66
+
+
+=== PAGE 67 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE

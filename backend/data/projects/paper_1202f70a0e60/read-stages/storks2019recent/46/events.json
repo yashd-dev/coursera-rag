@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.46.txt \u2014 Page 55 (continued)**\n\n- **Problem:** NLI and procedural text reasoning; models lack intuitive physics for explaining predictions on NLI benchmarks.\n- **Method:** Compares neural architectures (DNC, ENTNET, MAC, NPNs, KG-MRC) on bAbI, ProPara, and cooking-recipe tasks; KG-MRC maintains dynamic knowledge graphs updated per sentence.\n- **Reported results:** ENTNET exceeds original DNC on bAbI; optimized bidirectional DNC (Franke et al., 2018) achieves ~0.4 word error rate on bAbI, solving it near-perfectly; KG-MRC achieves F-measure 57.60 on ProPara leaderboard, outperforming PROSTRUCT.\n- **Limitations:** Source text truncated mid-sentence on PROSTRUCT (\"hard and soft commonsense const...\"); no end-to-end comparison of all models on same NLI benchmark.\n- **Quote 1 (p.55):** \"ENTNET achieves higher performance on the bAbI benchmark... than the original DNC.\"\n- **Quote 2 (p.55):** \"an optimized, bidirectional form of the DNC proposed by Franke, Niehues, and Waibel (2018) exceeds the maximum performance on bAbI over all previous models, achieving a response word error rate of about 0.4.\"\n\n**storks2019recent.46.txt \u2014 Page 56**\n\n- **KG-MRC:** Dynamic memory as knowledge graphs (bipartite entity-location connections updated per sentence); second-highest F-measure 57.60 on ProPara leaderboard; advantages over PROSTRUCT.\n- **Quote 3 (p.56):** \"According to the official ProPara leaderboard, the Knowledge Graph-Machine Reading Comprehension (KG-MRC) system from Das et al. (2019) achieves the second-highest F-measure on the benchmark, reported as 57.60 on the leaderboard.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2401,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78273df2ffeJptA68TupIkL36"
+  }
+]

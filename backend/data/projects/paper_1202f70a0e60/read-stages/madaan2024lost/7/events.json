@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# madaan2024lost \u2014 Page 6 (continued)\n\n- **Problem**: Human annotators assign inconsistent labels to premise-hypothesis pairs in ChaosNLI; at least some ambiguity exists for every example investigated.\n\n- **Method**: Analysis of accuracy versus label entropy across datasets (\u03b1NLI, MNLI, SNLI) and model scales (Llama 8B/405B, Mistral/Mixtral), using original vs. majority human labels.\n\n- **Reported results**: Llama-3.1 405B shows decreasing accuracy with increasing entropy across all three benchmarks; 8B model shows less prominent trend. All models perform better on low-entropy samples. Majority accuracy exceeds original label accuracy for most model/dataset pairs.\n\n- **Limitations**: Human annotator disagreement questions whether models should align with majority label; dataset scope limited to three benchmarks.\n\n- **Quote 1** (p.6): \u201cFor all the examples we investigated, we found that there was at least some degree of interpretation or ambiguity in assigning a label to the premise-hypothesis pair.\u201d  \n- **Quote 2** (p.6): \u201c31 out of 100 human annotators would agree with the model\u2019s judgement, despite it being labeled as \u2018incorrect\u2019.\u201d\n\n# References-only note (\u226430 words)\nSegment contains no new experimental results beyond those already documented in the paper; serves as continuation of human-annotator agreement and entropy analysis across model scales."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2524,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783edaebffekhsjzYFbadScYw"
+  }
+]

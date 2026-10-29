@@ -1,0 +1,82 @@
+=== PAGE 18 (continued) ===
+ng (EntailmentBank) on (e) Inductive setting (CLUTRR) on BARD. (f) Abductive setting (D*-Ab) on BARD.
+BARD.
+
+Fig. 16: The performances of text-davinci-003 and BARD under different number of hops. Comparison of deductive,
+inductive and abductive reasoning settings.
+Further, we consider both zero-shot setting, few-shot
+setting and chain-of-thought strategy in NeuLR. The zeroshot and few-shot prompt forms are same as the forms
+in TABLE 10. For chain-of-thought prompt, we utilize the
+explanation provided with the dataset to help generate the
+reasoning chains. Next, we will offer examples for each
+reasoning setting.
+- Deductive Reasoning
+[chain-of-thought]: There is one example of deductive reasoning: The facts are: SP1Ggwz1 are afraid of SPU4g85d.
+NPdmbdKB is a SP1Ggwz1. SPArMPn0 are afraid of
+SPU4g85d. SPU4g85d are afraid of SPArMPn0. NPd0WTGi
+is a SP1Ggwz1. NP1cTSnm is a SPU4g85d. SPFURodYs are
+afraid of SP1Ggwz1. NPpEQFEK is a SPU4g85d. The ques-
+
+tion is: What is NPpEQFEK afraid of? Because NPpEQFEK
+is a SPU4g85d and SPU4g85d are afraid of SPArMPn0.
+Therefore, the answer is: SPArMPn0.
+- Inductive Reasoning
+[chain-of-thought]: There is one example of inductive reasoning: The facts are: NP16WBQQ is a SPQFyx7i. NPerfGLN
+is a SP4Vge77. NP0V3buK is a SPGbXv1C. NPU9kOFg
+is a SPQFyx7i. NPDHuODI is a SP4Vge77. NPerfGLN is
+ADPHQuIP9. NP0V3buK is ADPmBU2ts. NP16WBQQ is
+ADP0rI59W. NPDHuODI is ADPHQuIP9.The question is:
+What property is NPU9kOFg? Because NPU9kOFg is a
+SPQFyx7i, NP16WBQQ is a SPQFyx7i and NP16WBQQ is
+ADP0rI59W. Therefore, the answer is: ADP0rI59W.
+- Abductive Reasoning
+
+
+=== PAGE 19 ===
+19
+
+[chain-of-thought]: ... Based on rule2 and tripleM, we can
+derive a new fact. Combine it with triple4. Based on rule1,
+we can derive a new fact. Combine it with rule1. In this way,
+we can finally derive the given fact...
+
+A PPENDIX F
+S UPPLEMENTARY A NALYSIS
+We also provide the performances of text-davinci-003 and
+BARD with different number of hops in Figure 16. In the
+deductive setting of text-davinci-003, model performance
+drops with the number of hops increasing. But when the hop
+number is over five, it witnesses slight gains in performance,
+which illustrates that text-davinci-003 has the potential to
+conduct multi-hop reasoning in the deductive reasoning
+setting. However, in the inductive and abductive settings,
+the performances of text-davinci-003 decrease sharply when
+the number of hops increases. Especially, it fails all the cases
+when the hop number is over six in inductive reasoning, and
+also when the hop number is greater than one in abductive
+reasoning. It is inferior to ChatGPT.
+For BARD, the situation is quite different. In deductive
+reasoning, the performance of BARD increases with the hop
+number adds. Especially, when the hop number is over five,
+the accuracy reaches 100% without reducing the rigor of
+reasoning. In inductive reasoning, the performance of BARD
+also drops at first, but it keeps stable and witnesses obvious
+gains when the hop number is over six. It demonstrates
+that BARD is better at conducting inductive reasoning and
+processing multi-hop scenarios compared with text-davinci003 and ChatGPT. In abductive reasoning, BARD struggles
+a lot, inferior to ChatGPT but is better than text-davinci-003.
+In all, in the face of complex multi-hop scenarios, LLMs
+still have much room for improvement. From the results,
+they do relatively well in deductive reasoning settings. But
+they are far from good in the inductive and abductive
+settings, which can also inspire future research on it.
+
+A PPENDIX G
+C ASE S TUDIES
+We show one reasoning case for each dataset in Table 11-25,
+where the context and question as well as output of 0-shot
+ChatGPT, 1-shot ChatGPT, 3-shot ChatGPT, 0-shot Davinci003 and 0-shot BARD are displayed. We also provided the
+annotated information about the answer correctness: ,
+explain correctness: , explain completeness: , explain
+redundancy: , evidence wrong selection: , hallucination:
+, no reasoning: , pers

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "MEI2026IMPROVING.15 NOTES\n\n- **Problem**: Analyzing adapter/head learning rates, scope choices, and pooling effects on parameter-efficient finetuning across tasks.\n\n- **Method**: Lowered head+adapter rates on H100/H20 models; tested adapter placement, pooling, and schedule changes under four fold\u2013seed settings.\n\n- **Reported results**: \n  - Lower-rate all-module refs: 50.33%/49.34% MC11 vs 50.28% core (P19 continued).\n  - NeoHorse pooling helps HellaSwag/chess; removing FFN adds 9.10/15.20 pp but lowers GSM8K/GPQA (Table 8).\n  - MC11 rises 4.43 pp from 45.90%\u219250.33% with lower rates (P21).\n  - Head-first adaptation freezes backbone early; head-only-tail places updates at \"th\" (truncated).\n\n- **Limitations**: Text cuts off mid-sentence on P21; Qwen3-4B column uses separate pointer\u2013pooling; one-epoch schedule only.\n\n- **Exact quotes**: \n  - \"The backbone runs in evaluation mode during the initial phase.\" (P21)\n  - \"Pool\u2212ptr., all\" vs \"Pool\u2212ptr., no-FFN\" in Table 8 diff column (P20)\n\n- **References-only note**: This segment presents experimental results and tables from the Mei2026improving paper (pages 19\u201321); no new findings beyond stated numbers."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2942,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78464a55ffeW6haiFhZQ3XSV2"
+  }
+]

@@ -1,0 +1,68 @@
+=== PAGE 1 (continued) ===
+ing (NLP).
+They have achieved remarkable performance in numerous
+traditional NLP tasks [11], [12], such as question answering, information retrieval, and affective computing. Under
+this circumstance, researchers have begun to question the
+efficacy of LLMs in addressing complex logical reasoning
+tasks [13], [14]and their ability to apply this knowledge
+to downstream intelligent applications. As such, a natural
+question arises: are large language models really good logical
+reasoners?
+There are already several studies to evaluate the capability of LLMs from various reasoning perspectives, e.g., multilingual reasoning [15], commonsense reasoning [16], and
+mathematical reasoning [17]. These efforts are meaningful
+and inspiring. Nevertheless, all of them are confronted with
+one or more of the following defects: (1) There are no comprehensive evaluations, which are hampered by the issue of
+lacking systematic category, limited LLMs for comparison,
+and limited data samples for evaluation; (2) The majority
+of evaluation works purely report the accuracy of answers,
+which limits fine-level analysis on the reasoning process and
+fails to explore the causes of mistakes; (3) Current logical
+reasoning benchmarks may fail to purely evaluate logical
+reasoning ability since the reasoning of LLMs can be affected
+by the content; (4) There lack a complete evaluation system
+or well-defined dimensions to comprehensively conclude
+the logical reasoning capability of LLMs. Therefore, our
+work aims to fill these gaps and provide a comprehensive
+
+
+=== PAGE 2 ===
+2
+
+Fig. 1: The overall architecture of the evaluation.
+evaluation, where the overall architecture encompasses the
+five main points as illustrated in Fig. 1: category with reasoning settings, main metrics for evaluation, perspectives of
+error analysis, dimensions for measuring logical reasoning
+capability, and new benchmark NeuLR with neutral content. In detail, we address the above limitations from the
+following aspects.
+Firstly, our work starts from systematic views and provides comprehensive evaluations. According to the classical
+definition [18], logical reasoning can be mainly categorized
+into three fundamental types, i.e., deductive, inductive and
+abductive reasoning. They together form a complete chain
+of reasoning, thus it is meaningful to evaluate LLMs from
+these views. Based on it, our comprehensive evaluation is
+reflected in three orthogonal dimensions. For the reasoning
+type view, all the evaluated datasets are categorized into
+four reasoning settings, i.e., deductive, inductive, abductive
+and mixed-forms. The former three involve the independent reasoning manner. For the dataset view, we include
+fifteen typical logical reasoning datasets according to the
+above categories. For the model view, we evaluate three
+previous LLMs (i.e., text-davinci-003 [19], ChatGPT [20] and
+BARD [21]) as well as four up-to-date LLMs (i.e., LLaMA3.1Chat 1 , Mistral-Instruct-v0.3 2 , Claude-3 3 and GPT-4 4 ).
+Secondly, our work fills the blank in fine-level evaluations of logical reasoning tasks. Current benchmarks only
+rely on a few objective metrics (e.g., accuracy) to measure
+the model capability. It may not be sufficient in the case of
+generative LLMs, since the role of LLMs is not only limited
+to correctly answer questions but also serves as practical
+tools, which are required to provide reasoning chains or
+explanations. Previous works [22], [23] conduct extensive
+experiments on popular NLP datasets, but they purely
+report the performance results. Since some LLMs (e.g., ChatGPT) function as the interactive tools for human use, it is
+necessary to introduce subjective metrics to do fine-grained
+evaluations. In this paper, we employ four dimensions of
+metrics, covering answer correctness, explanation correctness,
+1. https://llama.meta.com/
+2. https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
+3. https://claude.ai/
+4. https://openai.com/index/gpt-4/
+
+explanation completeness and explanation redundancy.

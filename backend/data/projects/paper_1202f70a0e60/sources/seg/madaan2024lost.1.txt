@@ -1,0 +1,89 @@
+=== PAGE 1 ===
+Lost in Inference: Rediscovering the Role of Natural Language Inference
+for Large Language Models
+Lovish Madaan∞♢ David Esiobu∞ Pontus Stenetorp♢♠
+Barbara Plank♣△ Dieuwke Hupkes∞
+∞
+Meta ♢ University College London
+♠
+Research and Development Center for LLMs, National Institute of Informatics
+♣
+MaiNLP, Center for Information and Language Processing, LMU Munich, Germany
+△
+Munich Center for Machine Learning (MCML), Munich, Germany
+{lovish,dieuwkehupkes}@meta.com
+
+arXiv:2411.14103v1 [cs.CL] 21 Nov 2024
+
+Abstract
+
+benchmark Multi-Genre Natural Language Inference (MNLI, Williams et al., 2018) was up until
+relatively recently one of the most popular benchmarks to evaluate language models, and is – with
+over 600 citations to date in 2024 – well-cited even
+in the recent past.
+However, with the arrival of LLMs, MNLI and
+other datasets have lost their spot on the SoTA
+leaderboards. With the exception of Brown et al.
+(2020), who reported low scores for GPT-3 on the
+NLI benchmark Adversarial NLI (ANLI, Nie et al.,
+2020a), not a single LLM release paper considers
+an NLI benchmark in their evaluation suite.1 In this
+paper, we investigate why. Are NLI benchmarks
+simply not suitable to evaluate modern-day LLMs?
+Are their examples too difficult or too easy? Are
+their scores not informative? Or do they, in fact,
+still provide a useful signal?
+Focusing on five different NLI benchmarks
+across six different models, we first show that they
+provide signal and are able to discriminate models
+of different size and quality (§ 4.1), but that one
+or more few-shot examples are needed to obtain a
+somewhat reasonable accuracy for models of any
+size. We furthermore show that performance on
+the datasets develop steadily during training, albeit
+with some fluctuations, making the benchmarks
+suitable for monitoring training progress (§ 4.2).
+For some of the benchmarks, accuracies of the
+best models are reaching 80-90%, for ANLI (Nie
+et al., 2020a), however, the accuracy of even the
+best model does not exceed 70%. Furthermore,
+we show that high scores are not caused by data
+contamination (§ 4.3).
+Next, we investigate the extent to which improvement on the higher-scored benchmarks is still possible (§ 4.4). In a manual analysis, we find that, for
+
+In the recent past, a popular way of evaluating
+natural language understanding (NLU), was to
+consider a model’s ability to perform natural
+language inference (NLI) tasks. In this paper,
+we investigate if NLI tasks, that are rarely used
+for LLM evaluation, can still be informative for
+evaluating LLMs. Focusing on five different
+NLI benchmarks across six models of different
+scales, we investigate if they are able to discriminate models of different size and quality and
+how their accuracies develop during training.
+Furthermore, we investigate the extent to which
+the softmax distributions of models align with
+human distributions in cases where statements
+are ambiguous or vague. Overall, our results
+paint a positive picture for the NLI tasks: we
+find that they are able to discriminate well between models at various stages of training, yet
+are not (all) saturated. Furthermore, we find
+that while the similarity of model distributions
+with human label distributions increases with
+scale, it is still much higher than the similarity
+between two populations of humans, making it
+a potentially interesting statistic to consider.
+
+1
+
+Introduction
+
+Before the state-of-the-art (SoTA) in NLP was constituted almost exclusively by large language models (LLMs), a popular way of evaluating models’
+understanding of natural language was to consider
+their ability to perform natural language inference
+(NLI) tasks (most famously, Bowman et al., 2015;
+Williams et al., 2018). Motivated by the idea that
+concepts such as entailment and contradiction are
+central to many aspects of language meaning (Bowman et al., 2015), in NLI tasks, a model is asked to
+judge the relationship between the meaning of two
+sentences, typically chosing between e

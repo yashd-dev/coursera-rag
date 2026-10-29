@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.65.txt \u2014 Page 76 (continued)**\n\n- **Problem**: The reference list on page 76 continues with workshop and conference citations extending into the reference section; no explicit problem statement in this segment.\n\n- **Method**: Compilation of references spanning NLP, vision, and linguistics; citations formatted by author, title, venue, and location. No novel method described in this segment.\n\n- **Reported results**: None. This segment contains only bibliography entries with no metrics, experiments, or findings.\n\n- **Limitations**: The text provides no results, methodology, or analysis\u2014only a bibliography. No limitations can be extracted from reference-only content.\n\n- **Quote (p. 76 continued)**: \u201cInternational Workshop on Paraphrasing (IWP2005), Jeju Island, Korea.\u201d  \n- **Quote (p. 77)**: \u201cOpen information extraction from the web.\u201d \u2014 Et al., *Communications of the ACM*, 2008.\n\n**storks2019recent.65.txt \u2014 Page 78**\n\n- **Problem**: Text abruptly cuts off mid-citation: \u201cGao, Q., Yang, S., Chai, J., & Vanderwende, L. (2018). Wha\u2026\u201d \u2014 incomplete reference entry.\n\n- **Method**: None; the page continues a references list that is truncated.\n\n- **Reported results**: None; citation is incomplete.\n\n- **Limitations**: The reference list on page 78 is cut off, preventing identification of the full citation or its contribution.\n\n- **Quote (p. 78)**: \u201cGao, Q., Yang, S., Chai, J., & Vanderwende, L. (2018). Wha\u2026\u201d \u2014 truncated reference."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2702,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78231e25ffebYFRZAyB30DnA5"
+  }
+]

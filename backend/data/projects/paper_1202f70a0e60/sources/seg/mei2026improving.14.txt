@@ -1,0 +1,50 @@
+=== PAGE 18 (continued) ===
+o. All arithmetic uses unrounded values; displayed means may
+therefore differ by 0.01 percentage points from the displayed paired difference. Factorial main
+effects average over both levels of the other factor, and interactions combine the corresponding
+four arms.
+A.5. Other endpoints
+JevBench [3] equally weights 18 families over 231 questions: 48 easy, 72 original, and 111 hard
+decisions. Invalid probability outputs count as incorrect, and ties follow the sorted option-key order. Kev [31] averages question-level accuracy equally over the development and test partitions
+of decision-v7, transfer-v4, and transfer-v9. After excluding the source named unknowable,
+these partitions contain 1,264/1,200, 656/656, and 1,046/1,046 questions, respectively; the testonly analysis averages the three test partitions. The fixed-checkpoint interface comparisons
+use all 1,838 PIQA validation questions and all 1,954 SocialIQA development questions, both
+outside MC11.
+18
+
+
+=== PAGE 19 ===
+A.6. Evidence coverage and reproduction
+Model development used the primary evaluation suites and fold-development data. Because the
+four reported settings share six training pools and the same evaluation questions, their standard
+errors describe variation within this design. The original GPQA few-shot configuration draws
+demonstrations from the Diamond evaluation population; Appendix B.4 reports a separate
+evaluation with disjoint demonstrations.
+Overlap screening found no exact or normalized state matches between the training corpus
+and 231 JevBench records or 6,436 Kev record occurrences, using Unicode NFKC normalization,
+case folding, and whitespace normalization. Available source identities likewise showed no
+overlap. Further screening covered 30,503 reranking source rows, including 285 MMLU demonstration rows, and the 198-row GPQA file. This coverage is limited to the recorded source text
+and identities; semantic paraphrases, substrings, pretraining exposure, synthetic chess, and
+rendered evaluation requests remain unassessed. The intermediate SetFit Amazon conversion
+has not been recovered.
+The saved predictions support independent rescoring of 72 checkpoints: the 56 core NeoHorse models, eight Qwen3 models, and eight higher-rate pointer and pooling checkpoints used
+in the fixed-interface comparison. Candidate probabilities are stored with answer identities, candidate order, population information, and eligibility rules, allowing predictions and aggregate
+scores to be recomputed while preserving repeated questions and duplicate answer texts. Some
+additional learning-rate and adapter-scope results are available only as per-model summaries.
+Reproduction requires the base weights, training records, evaluation caches, framework
+forks, and compatible runtimes specified by the code and configurations. The retained inputs
+supported reconstruction of the corpus mixture and fold exports, followed by one separate
+pointer/pooling pair from training through scoring on H20. The OpenCompass and RunWeaver
+forks are unavailable anonymously, and redistribution permissions for RunWeaver and other
+assets remain unresolved. The initial source-generation and tokenizer-based eligibility steps
+remain unreplayed, and the tested environment retains a declared Torch dependency conflict.
+CUDA determinism was disabled, allowing repeated training runs to diverge despite
+matched initial parameters and data streams. Dropout trajectories were not saved for the
+experiments that varied the head and adapter rates together. Appendix C examines execution
+variation through repeated-training controls. The 56 core NeoHorse models were trained on
+individual GPUs of a shared eight-H20 server, using 94.46 GPU hours over the measured training intervals with allocated-memory peaks of 18.32–19.81 GiB. These measurements include
+concurrent-job contention and diagnostic capture; evaluation and the additional experiments
+fall outside the timing intervals.
+
+B. Supplementary Comparisons
+B.1. Additional tra

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.7.txt - Page 8 (continued)**\n\n- **Problem:** Paper addresses the gap in coreference resolution benchmarks that focus on within-text linguistic context, overlooking the need for outside knowledge and reasoning (Rahman & Ng, 2012).\n\n- **Method:** Survey of existing reference resolution and question answering benchmarks; categorization by dependency on external knowledge and reasoning depth.\n\n- **Reported results:** \n  - MCScript, CoQA, OpenBookQA require commonsense knowledge for answering (e.g., diapers thrown away; steel as conductor; election competition).\n  - MCTest requires outside knowledge and multi-sentence reasoning; >50% of questions need synthesis from multiple locations, not shallow matching.\n\n- **Limitations:** Benchmarks like SQuAD 2.0 include unanswerable questions requiring deep reasoning over passage knowledge; existing QA tasks may be solved via linguistic context alone without deep comprehension.\n\n- **Quote (p.8):** \"Lions eat zebras because they are predators. Who are predators?\"\n\n- **Quote (p.8):** \"The trophy would not fit in the brown suitcase because it was too small.\"\n\n**storks2019recent.7.txt - Page 9**\n\n- **Method:** Description of QA benchmarks (MCTest, MCScript, CoQA, OpenBookQA, SQuAD 2.0) and their knowledge/reasoning requirements.\n\n- **Reported results:** \n  - MCScript example: commonsense knowledge that diapers are typically thrown away is useful.\n  - OpenBookQA example: steel conductor vs. jeans/cotton hat for heat travel; Democrats/ Republicans competition in elections.\n\n- **Limitations:** Not all QA benchmarks require external knowledge; many solvable via linguistic context alone.\n\n- **Quote (p.9):** \"Which of these would let the most heat travel through? a. a new pair of jeans. b. a steel spoon in a cafeteria.\"\n\n- **Quote (p.9):** \"Who is the democratic candidate? Terry McAuliffe\" (with evidence citation).\n\n**storks2019recent.7.txt - Page 10**\n\n- **Problem:** Storks, Gao, & Chai survey recent advances in NLI; anticipation of event reference resolution benchmarks requiring outside knowledge.\n\n- **Method:** Survey of QA benchmarks and their structural properties.\n\n- **Reported results:** MCTest: >50% of questions require >1 sentence to answer; systems must synthesize information from multiple locations; open-domain with stories designed for young children.\n\n- **Limitations:** Source text truncated; no explicit limitations for this segment beyond structural observations.\n\n- **Quote (p.10):** \"More than half of the questions require more than one sentence to answer, so that systems must synthesize information from multiple locations rather than using shallow matching techniques to find the answer.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2671,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7830a3a9ffeOr9SDT7AvUUDo7"
+  }
+]

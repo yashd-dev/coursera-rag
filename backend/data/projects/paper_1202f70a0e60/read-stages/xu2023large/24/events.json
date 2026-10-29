@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**xu2023large.24 \u2014 compact notes (\u2264200 words)**\n\n**Problem** (p.21 continued): The study investigates zero-shot and few-shot reasoning across abductive, machine reading comprehension, and natural language inference tasks using large language models.\n\n**Method** (p.21 continued): Systematic evaluation of model variants (0-shot, 1-shot, 3-shot) on bAbI-15 and similar datasets, using templated prompts for each task type and reporting accuracy and explanation quality.\n\n**Reported results** (p.22): Table 11 shows a bAbI-15 reasoning case. ChatGPT (0-shot) correctly answers \"Wolf\" for Jessica the sheep, with explanation: \"Jessica is a sheep and sheep are afraid of wolves. Therefore, it can be deduced that Jessica is afraid of wolf.\" Davinci-003 and ChatGPT variants also tested across shot settings.\n\n**Limitations** (p.21\u201322): No explicit limitations stated in this segment; results focus on answer accuracy and explanation generation across task types and shot counts.\n\n**Quotes** (pp.21\u201322):\n- \"Jessica is a sheep and sheep are afraid of wolves. Therefore, it can be deduced that Jessica is afraid of wolf.\" (explanation for Table 11, bAbI-15)\n- \"Jessica is afraid of nothing, as it is not specified in the given facts that she has any known natural predator or fear.\" (error-type note for Jessica)\n\n**Attribute each bullet to page marker**: p.21 continued, p.22."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2394,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783822c4ffeKYmN6QiJX2ILP7"
+  }
+]

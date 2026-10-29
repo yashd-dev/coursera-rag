@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Storks et al. (2019) Recent Survey \u2014 Section 3 Notes\n\n**Problem:** Analyze human-machine performance gaps across NLP benchmarks to assess task complexity; survey existing knowledge resources as bottleneck for commonsense reasoning.\n\n**Method:** Compare state-of-the-art machine accuracy vs. human accuracy across 18 benchmarks; visualize submission counts vs. performance gaps (Fig. 14); catalog linguistic, semantic, and commonsense knowledge resources.\n\n**Reported results:** \n- Popular benchmarks (SQuAD 1.1/2.0) show machines far surpassing human performance with many submissions.\n- Low-submission benchmarks show high variability; no clear popularity-progress relationship.\n- Human adults estimated to possess ~100M commonsense axioms (Chklovski, 2003).\n\n**Limitations:** Performance measures themselves are limited; benchmark data size, age, and popularity affect perceived complexity; low submission counts create high variability obscuring trends.\n\n**Exact quotes:**\n- \"For benchmarks with a low number of submissions, there is high variability, suggesting no relationship between popularity and progress on the benchmark.\" (p.40)\n- \"The most popular benchmarks, i.e., SQuAD 1.1 (Rajpurkar et al., 2016) and 2.0 (Rajpurkar et al., 2018), have seen the most progress, with machine performance far surpassing human performance.\" (p.40)\n\n**Ponytail skip:** Did not verify citation formats or check downstream sections for methodology replication details. Risk: Caps/author names may be inaccurately transcribed from scanned source."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2368,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782a9b3effen9robIa3I4M2D3"
+  }
+]

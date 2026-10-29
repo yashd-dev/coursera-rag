@@ -1,0 +1,69 @@
+=== PAGE 14 (continued) ===
+ternational
+Journal of Science and Mathematics Education, vol. 18, pp. 1673–1694,
+2020.
+
+[9]
+
+Z. Yang, X. Du, R. Mao, J. Ni, and E. Cambria, “Logical reasoning
+over natural language as knowledge representation: A survey,”
+CoRR, vol. abs/2303.12023, 2023.
+[10] B. Peng, C. Li, P. He, M. Galley, and J. Gao, “Instruction
+tuning with GPT-4,” CoRR, vol. abs/2304.03277, 2023. [Online].
+Available: https://doi.org/10.48550/arXiv.2304.03277
+[11] W. X. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, Y. Min,
+B. Zhang, J. Zhang, Z. Dong, Y. Du, C. Yang, Y. Chen, Z. Chen,
+J. Jiang, R. Ren, Y. Li, X. Tang, Z. Liu, P. Liu, J. Nie, and J. Wen,
+“A survey of large language models,” CoRR, vol. abs/2303.18223,
+2023.
+[12] M. M. Amin, E. Cambria, and B. W. Schuller, “Will affective
+computing emerge from foundation models and general artificial
+intelligence? A first evaluation of chatgpt,” IEEE Intelligent Systems, vol. 38, no. 2, pp. 15–23, 2023.
+[13] F. Jiao, Y. Guo, X. Song, and L. Nie, “Merit: Meta-path guided
+contrastive learning for logical reasoning,” in Findings of the Association for Computational Linguistics (Findings of ACL), 2022, pp.
+3496–3509.
+[14] F. Xu, Q. Lin, T. Zhao, J. JiaweiHan, and J. Liu, “PathReasoner:
+Modeling reasoning path with equivalent extension for logical
+question answering,” in Proceedings of the 62nd Annual Meeting
+of the Association for Computational Linguistics (Volume 1: Long
+Papers). Bangkok, Thailand: Association for Computational
+Linguistics, Aug. 2024, pp. 13 413–13 429. [Online]. Available:
+https://aclanthology.org/2024.acl-long.724
+[15] Y. Bang, S. Cahyawijaya, N. Lee, W. Dai, D. Su, B. Wilie, H. Lovenia, Z. Ji, T. Yu, W. Chung, Q. V. Do, Y. Xu, and P. Fung, “A multitask, multilingual, multimodal evaluation of chatgpt on reasoning,
+hallucination, and interactivity,” CoRR, vol. abs/2302.04023, 2023.
+[16] N. Bian, X. Han, L. Sun, H. Lin, Y. Lu, and B. He, “Chatgpt
+is a knowledgeable but inexperienced solver: An investigation
+of commonsense problem in large language models,” CoRR, vol.
+abs/2303.16421, 2023.
+[17] S. Imani, L. Du, and H. Shrivastava, “Mathprompter: Mathematical reasoning using large language models,” CoRR, vol.
+abs/2303.05398, 2023.
+[18] P. A. Flach and A. C. Kakas, “Abductive and inductive reasoning:
+background and issues,” Abduction and induction: Essays on their
+relation and integration, pp. 1–27, 2000.
+[19] L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. L. Wainwright,
+P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray, J. Schulman,
+J. Hilton, F. Kelton, L. Miller, M. Simens, A. Askell, P. Welinder,
+P. F. Christiano, J. Leike, and R. Lowe, “Training language models
+to follow instructions with human feedback,” in NeurIPS, 2022.
+[20] L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin,
+C. Zhang, S. Agarwal, K. Slama, A. Ray et al., “Training language
+models to follow instructions with human feedback,” Advances in
+Neural Information Processing Systems, vol. 35, pp. 27 730–27 744,
+2022.
+[21] R. Anil, A. M. Dai, O. Firat, M. Johnson, D. Lepikhin, A. Passos,
+S. Shakeri, E. Taropa, P. Bailey, Z. Chen et al., “Palm 2 technical
+report,” arXiv preprint arXiv:2305.10403, 2023.
+[22] C. Qin, A. Zhang, Z. Zhang, J. Chen, M. Yasunaga, and D. Yang,
+“Is chatgpt a general-purpose natural language processing task
+solver?” CoRR, vol. abs/2302.06476, 2023.
+[23] S. Tu, C. Li, J. Yu, X. Wang, L. Hou, and J. Li, “Chatlog: Recording
+and analyzing chatgpt across time,” CoRR, vol. abs/2304.14106,
+2023.
+[24] Y. Huang, Y. Bai, Z. Zhu, J. Zhang, J. Zhang, T. Su, J. Liu,
+C. Lv, Y. Zhang, J. Lei, F. Qi, Y. Fu, M. Sun, and J. He, “Ceval: A multi-level multi-discipline chinese evaluation suite for
+foundation models,” CoRR, vol. abs/2305.08322, 2023.
+[25] T. Zhang, F. Ladhak, E. Durmus, P. Liang, K. R. McKeown, and
+T. B. Hashimoto, “Benchmarking large language models for news
+summarization,” CoRR, vol. abs/2301.13848, 2023.
+[26] Y. Pan, J. Liu, L. Zhang, T. Zhao, Q. Lin, X. Hu, and Q. Wang,
+“Inductive relation predict

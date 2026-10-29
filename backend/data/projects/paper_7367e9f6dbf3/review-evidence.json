@@ -1,0 +1,167 @@
+[
+  {
+    "id": 138,
+    "page": 1,
+    "chunk_index": 0,
+    "text": "Published as a conference paper at COLM 2024\nT RI F ORCE: Lossless Acceleration of Long Sequence\nGeneration with Hierarchical Speculative Decoding\nHanshi Sun1 , Zhuoming Chen1 , Xinyu Yang1 , Yuandong Tian2 , Beidi Chen1,2\n1 Carnegie Mellon Univeristy\n2 Meta AI (FAIR)\narXiv:2404.11912v3 [cs.CL] 4 Aug 2024\n{hanshis, zhuominc, xinyuya2, beidic}@andrew.cmu.edu\nyuandong@meta.com",
+    "key": "sun2024triforce",
+    "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    "year": 2024,
+    "authors": "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    "score": 0.7877
+  },
+  {
+    "id": 188,
+    "page": 10,
+    "chunk_index": 50,
+    "text": "In this work, we introduced T RI F ORCE, a hierarchical speculative decoding system aimed\nat significantly enhancing the efficiency of serving LLMs with long contexts. Leveraging\ninsights from attention sparsity and contextual locality, T RI F ORCE mitigates the dual bottlenecks associated with KV cache and model weights. Our empirical experiments demonstrate\nT RI F ORCE\u2019s remarkable performance, including a notable speedup of up to 2.31\u00d7 on an\nA100 and 7.78\u00d7 on two RTX 4090s with offloading, achieving 0.108s/token\u2014only half as\nslow as the auto-regressive baseline on an A100. These achievements illustrate T RI F ORCE\u2019s\npotential to revolutionize the serving of long-context models for long sequence generation.\n10",
+    "key": "sun2024triforce",
+    "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    "year": 2024,
+    "authors": "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    "score": 0.7029
+  },
+  {
+    "id": 139,
+    "page": 1,
+    "chunk_index": 1,
+    "text": "Abstract\nWith large language models (LLMs) widely deployed in long content generation recently, there has emerged an increasing demand for efficient\nlong-sequence inference support. However, key-value (KV) cache, which\nis stored to avoid re-computation, has emerged as a critical bottleneck\nby growing linearly in size with the sequence length. Due to the autoregressive nature of LLMs, the entire KV cache will be loaded for every\ngenerated token, resulting in low utilization of computational cores and\nhigh latency. While various compression methods for KV cache have been\nproposed to alleviate this issue, they suffer from degradation in generation\nquality. We introduce T RI F ORCE, a hierarchical speculative decoding system that is scalable for long sequence generation. This approach leverages\nthe original model weights and dynamic sparse KV cache via retrieval as a\ndraft model, which serves as an intermediate layer in the hierarchy and is\nfurther speculated by a smaller model to reduce its drafting latency. T RI F ORCE not only facilitates impressive speedups for Llama2-7B-128K, achiev",
+    "key": "sun2024triforce",
+    "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    "year": 2024,
+    "authors": "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    "score": 0.7027
+  },
+  {
+    "id": 171,
+    "page": 7,
+    "chunk_index": 33,
+    "text": "T RI F ORCE is devised to exploit the bottlenecks associated with both model weights and KV\ncache to enhance the inference speed of LLMs for long sequence generation. We present the\npseudocode for the T RI F ORCE in Algorithm 1. It starts by prefilling the target model M p with\nfull cache C p and draft model Mq with StreamingLLM cache Cq using a given input prefix,\nand then constructs the retrieval cache Cr . The initialization and update mechanism for the\nretrieval cache Cr is guided by the insights of contextual locality discussed in Section 3.2. We\nfirst construct Cr using the last token of the prefix, arranging tokens by the descending order\nof importance. In subsequent inferences, we overwrite tokens with the least importance,\nmaintaining the relevance and utility of the cache. A reconstruction of Cr is triggered either\nwhen the rolling average acceptance rate drops below a threshold or at a designed stride.\nThe inference progresses iteratively until it reaches the target sequence length T. After each\niteration, cache Cr and Cq are updated to prepare for the subsequent speculati",
+    "key": "sun2024triforce",
+    "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    "year": 2024,
+    "authors": "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    "score": 0.6929
+  },
+  {
+    "id": 165,
+    "page": 6,
+    "chunk_index": 27,
+    "text": "Published as a conference paper at COLM 2024\n4\nT RI F ORCE\nThis section aims to introduce the T RI F ORCE, which leverages a retrieval-based KV cache\nselection policy and a hierarchical speculation system. We first argue that our retrievalbased drafting approach is intuitive and lossless compared to existing strategies such as\nStreamingLLM and H2 O. Subsequently, we introduce the hierarchical system designed to\neffectively address the dual bottlenecks in speculative decoding, facilitating a substantial\nimprovement in overall speed-up. Finally, T RI F ORCE is elaborated in Section 4.3.\n4.1\nRetrieval-based Drafting\nValue\nKey",
+    "key": "sun2024triforce",
+    "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    "year": 2024,
+    "authors": "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    "score": 0.6925
+  },
+  {
+    "id": 70,
+    "page": 9,
+    "chunk_index": 30,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 51,
+    "page": 4,
+    "chunk_index": 11,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 48,
+    "page": 3,
+    "chunk_index": 8,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 44,
+    "page": 2,
+    "chunk_index": 4,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling\ndrafting process for large language models, resulting in an effective and practical method for reducing\nsampling latency without the need for modifying the target model or biasing the sample distribution.\nDepending on the evaluation domain, SpS leads to a 2\u20132.5\u00d7 speedup when sampling from Chinchilla\n(Hoffmann et al., 2022). Notably, the mean tokens per second with SpS often exceeds the idealised\nceiling on auto-regressive sampling speed imposed by the memory bandwidth.",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8056
+  },
+  {
+    "id": 67,
+    "page": 8,
+    "chunk_index": 27,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling\nFurther, even though larger values of \ud835\udc3e may yield marginally greater mean speedups in certain\ncircumstances, it also increases variance of the time to generate a full sequence. This could be\nproblematic for settings where the P90, P99 latencies of concern.\nConclusion\nIn this work, we demonstrate a new algorithm and workflow for accelerating the decoding of language\nmodels. Speculative sampling does not require making any modifications to the target language\nmodel\u2019s parameters or architecture, is provably lossless within numerics, scales well with the appropriate draft model and complements many existing techniques for reducing latency in the small batch\nsize setting.\nWe optimise and scale the technique to Chinchilla 70B using a draft model which was easy to\ntrain with existing infrastructure, demonstrating that it yields a large speedup across benchmark tasks\nand common decoding methods in the process. We verify that it is indeed lossless empirically in its\ndownstream tasks.",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8052
+  },
+  {
+    "id": 127,
+    "page": 10,
+    "chunk_index": 48,
+    "text": "Fast Inference from Transformers via Speculative Decoding",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.8596
+  },
+  {
+    "id": 79,
+    "page": 1,
+    "chunk_index": 0,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nYaniv Leviathan * 1 Matan Kalman * 1 Yossi Matias 1\narXiv:2211.17192v2 [cs.LG] 18 May 2023\nAbstract\ndeveloped to make inference from them faster. Some approaches aim to reduce the inference cost for all inputs\nequally (e.g. Hinton et al., 2015; Jaszczur et al., 2021;\nHubara et al., 2016; So et al., 2021; Shazeer, 2019). Other\napproaches stem from the observation that not all inference steps are born alike - some require a very large model,\nwhile others can be approximated well by more efficient\nmodels. These adaptive computation methods (e.g. Han\net al., 2021; Sukhbaatar et al., 2019; Schuster et al., 2021;\nScardapane et al., 2020; Bapna et al., 2020; Elbayad et al.,\n2019; Schwartz et al., 2020) aim to use less compute resources for easier inference steps. While many of these\nsolutions have proven extremely effective in practice, they\nusually require changing the model architecture, changing\nthe training-procedure and re-training the models, and don\u2019t\nmaintain identical outputs.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7993
+  },
+  {
+    "id": 121,
+    "page": 9,
+    "chunk_index": 42,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nmark for measuring progress in statistical language modeling. In Interspeech, 2013.\nJaszczur, S., Chowdhery, A., Mohiuddin, A., Kaiser, L.,\nGajewski, W., Michalewski, H., and Kanerva, J. Sparse\nis enough in scaling transformers. In Neural Information\nProcessing Systems, 2021.\nChen, C., Borgeaud, S., Irving, G., Lespiau, J.-B., Sifre,\nL., and Jumper, J. M. Accelerating large language\nmodel decoding with speculative sampling. ArXiv,\nabs/2302.01318, 2023.\nRaffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S.,\nMatena, M., Zhou, Y., Li, W., and Liu, P. J. Exploring\nthe limits of transfer learning with a unified text-to-text\ntransformer. The Journal of Machine Learning Research,\n21(1):5485\u20135551, 2020.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7988
+  },
+  {
+    "id": 105,
+    "page": 6,
+    "chunk_index": 26,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nBase\n=3\n=7\nMp encoder\nMq encoder\nMp decoder\nMq decoder\nWall time\nFigure 5. A simplified trace diagram for a full encoder-decoder Transformer stack. The top row shows speculative decoding with \u03b3 = 7\nso each of the calls to Mp (the purple blocks) is preceded by 7 calls to Mq (the blue blocks). The yellow block on the left is the call to the\nencoder for Mp and the orange block is the call to the encoder for Mq . Likewise the middle row shows speculative decoding with \u03b3 = 3,\nand the bottom row shows standard decoding.\napproximation models. As expected we see that \u03b1 increases\nwith the size of the approximation model. Interestingly, \u03b1\nand walltime improvement are higher for argmax sampling\n(temp=0). We observe speedups of 2.6X (temp=1) and 3.4X\n(temp=0) on the translation task and slightly lower speedups\nof 2.3X (temp=1) and 3.1X (temp=0) for the summarization\ntask. These empirical results match well with the theoretical predictions, with some variance due to implementation\ndetails (see Appendix A.3).",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7807
+  },
+  {
+    "id": 80,
+    "page": 1,
+    "chunk_index": 1,
+    "text": "Inference from large autoregressive models like\nTransformers is slow - decoding K tokens takes\nK serial runs of the model. In this work we introduce speculative decoding - an algorithm to\nsample from autoregressive models faster without\nany changes to the outputs, by computing several\ntokens in parallel. At the heart of our approach lie\nthe observations that (1) hard language-modeling\ntasks often include easier subtasks that can be approximated well by more efficient models, and\n(2) using speculative execution and a novel sampling method, we can make exact decoding from\nthe large models faster, by running them in parallel on the outputs of the approximation models, potentially generating several tokens concurrently, and without changing the distribution. Our\nmethod can accelerate existing off-the-shelf models without retraining or architecture changes. We\ndemonstrate it on T5-XXL and show a 2X-3X\nacceleration compared to the standard T5X implementation, with identical outputs.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7792
+  }
+]

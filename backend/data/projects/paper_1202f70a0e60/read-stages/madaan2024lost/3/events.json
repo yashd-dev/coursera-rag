@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 2 (continued)**  \n- Problem: Annotation simplification and easier evaluation, but prior work notes human disagreements in NLP reflect lack of ground truth, not noise (de Marneffe et al., 2012; Plank et al., 2014; Pavlick & Kwiatkowski, 2019; Nie et al., 2020b); embracing disagreement is beneficial (Plank, 2022; Aroyo & Welty, 2015).  \n- Method: Analyse model accuracies and the relationship between human label disagreements and models\u2019 probability distributions across labels; use five NLI benchmarks (SNLI, MNLI, \u03b1NLI, ChaosNLI) with Llama-3.1 {8,70,405}B and Mistral 7B/Mixtral 8x{7,22}B; pre-trained base models only.  \n\n**PAGE 3**  \n- Results: Dev set of iteration 3 (most challenging) considered; \u03b1NLI contains 1,500 examples with plausible/implausible hypothesis pairs; ChaosNLI adds 100 human labels per benchmark (SNLI, MNLI, \u03b1NLI) for 1,500 examples each.  \n- Limitations: Analysis limited to pre-trained base models; post-trained/instruct models left to future work. Models fail to capture human judgement distributions in LLMs and model confidences (Baan et al., 2024; Lee et al., 2023).  \n\n**Exact quotes**  \n- \u201csimplifies the data annotation process, while also making the evaluation easier\u201d (PAGE 2 continued)  \n- \u201cmodels fail to capture human judgement distributions in LLMs and model confidences\u201d (PAGE 3)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2470,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783fd3c3ffeg784pLxKLpyBgd"
+  }
+]

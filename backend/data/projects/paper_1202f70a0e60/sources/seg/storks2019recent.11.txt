@@ -1,0 +1,78 @@
+=== PAGE 13 (continued) ===
+ions, each
+based on an accompanying text. Questions are designed to require external knowledge and reasoning, some questions are unanswerable, and most correct answers are not stated in the context
+passage. About 94% of questions require commonsense knowledge, which is the highest proportion
+seen yet for any QA benchmark requiring the comprehension of a passage. Cosmos QA can be
+downloaded at https://wilburone.github.io/cosmos/.
+MC-TACO. The Multiple Choice Temporal Common-sense (MC-TACO) benchmark by Zhou,
+Khashabi, Ning, and Roth (2019) provides about 1,900 multiple-choice questions requiring commonsense knowledge about the temporal properties of events, e.g., their duration, frequency, and
+order. Such commonsense knowledge was under-emphasized in previous benchmarks. Questions
+can have multiple correct answers. MC-TACO can be downloaded at https://leaderboard.
+allenai.org/mctaco/submissions/public.
+2.1.3 T EXTUAL E NTAILMENT
+Textual entailment is defined by Dagan et al. (2005) as a directional relationship between a text
+and a hypothesis, where it can be said that the text entails the hypothesis if a typical person would
+infer that the hypothesis is true given the text. Some benchmarks expand this task by also requiring recognition of contradiction, e.g., the fourth and fifth RTE Challenges (Giampiccolo, Dang,
+Magnini, Dagan, & Dolan, 2008; Bentivogli, Dagan, Dang, Giampiccolo, & Magnini, 2009). Like
+question answering, this task requires the utilization of several simpler language processing skills,
+such as named entity recognition and coreference resolution. Unlike question answering, since it
+also requires a sense of what a typical person would infer, commonsense knowledge is inherently
+essential to the textual entailment task. The RTE Challenges (Dagan et al., 2005) are the classic
+benchmarks for entailment, but there are now several larger benchmarks inspired by them. Examples from these benchmarks are listed in Figure 5, and they require common knowledge such as the
+concept of a snow angel, and commonsense knowledge such as the relationship between the presence of a crowd and loneliness. In the following paragraphs, we introduce several textual entailment
+benchmarks in detail.
+RTE Challenges. The Recognizing Textual Entailment (RTE) Challenge introduced the task of
+textual entailment, and aimed to evaluate a machines’ acquisition of the common background
+knowledge and reasoning capabilities a typical human needs to determine whether one text entails another (Dagan et al., 2005). The inaugural Challenge provided a task where given a text and
+5. Example extracted from the SICK data available at https://clic.cimec.unitn.it/composes/sick.
+html.
+
+13
+
+
+=== PAGE 14 ===
+S TORKS , G AO , & C HAI
+
+(A) RTE Challenge (Dagan et al., 2005)
+Text: American Airlines began laying off
+hundreds of flight attendants on Tuesday,
+after a federal judge turned aside a union’s
+bid to block the job losses.
+Hypothesis: American Airlines will recall
+hundreds of flight attendants as it steps up
+the number of flights it operates.
+Label: not entailment
+(B) SICK (Marelli, Menini, Baroni, Bentivogli, Bernardi, & Zamparelli,
+2014a)5
+Sentence 1: Two children are lying in the
+snow and are drawing angels.
+Sentence 2: Two children are lying in the
+snow and are making snow angels.
+
+(C) SNLI (Bowman et al., 2015)
+Text: A black race car starts up in front of
+a crowd of people.
+Hypothesis: A man is driving down a
+lonely road.
+Label: contradiction
+(D) MultiNLI, Telephone (Williams, Nangia, & Bowman, 2017)
+Context: that doesn’t seem fair does it
+Hypothesis: There’s no doubt that it’s fair.
+Label: contradiction
+(E) SciTail (Khot, Sabharwal, & Clark,
+2018)
+Premise: During periods of drought, trees
+died and prairie plants took over previously forested regions.
+Hypothesis: Because trees add water vapor to air, cutting down forests leads to
+longer periods of drought.
+
+Label: entailment
+
+Label: neutral
+
+Figure 5: Examples from RTE benchmarks. Answers in bold.
+
+14
+
+
+==

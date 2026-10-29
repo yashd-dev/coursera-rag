@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PROBLEM** (p.5 continued): Benchmarks like GLUE and CBT are used as Turing Test alternatives, providing training/testing data and continuous feedback for language tasks. Section surveys recent NLI benchmarks designed to evaluate inference ability.\n\n**METHOD** (p.5\u21926): Overview of benchmarks grouped by reference resolution, QA, textual entailment, plausible inference, psychological reasoning, and multiple tasks. Benchmarks introduced since early 2000s RTE Challenges. Analysis of benchmark growth trends and sizes.\n\n**REPORTED RESULTS** (p.6): Figure 2 shows benchmark size growth from 2000s to 2019. Earlier benchmarks (2005\u20132015) have relatively small sizes; post-2015 benchmarks have much larger instances, many exceeding 100,000, enabling deep learning. Dataset sizes range from 10 (Triangle-COPA) to 10,000,000 (GLUE). 2018 saw creation of more larger benchmarks than ever before.\n\n**LIMITATIONS** (p.5): Turing Test criticized for encouraging machine deception (Levesque, 2011), not providing continuous feedback (Ortiz, 2016), and being impractical (Harnad, 2000). Test data often not distributed publicly, preventing standard unbiased testing.\n\n**QUOTES** (p.5\u21926): \"In 2018, we saw the creation of more benchmarks of larger sizes than ever before\" (p.6). \"Most benchmarks developed after 2015 have a much larger number of instances\" (p.6).\n\n**NOTES** (p.6\u21927): Reference resolution remains \"unsolved problem\" due to small data magnitude. Test data non-public distribution limits standard evaluation."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2597,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78314351ffeZfrdKHRIbe0ckA"
+  }
+]

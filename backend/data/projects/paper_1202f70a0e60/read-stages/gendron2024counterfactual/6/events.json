@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**: Investigate LLM limitations on counterfactual reasoning using synthetic Cladder dataset; test Counterfactual-CI framework against baselines.\n\n**Method**: Counterfactual-CI estimates exogenous factors (U), performs do(X=x) intervention, predicts remaining variables; uses single value per U for efficiency; compares ablated Ggt models with ground-truth graphs against baselines.\n\n**Results**: Table 1 shows ablated Ggt models with ground-truth graphs significantly outperform baselines. Most LLMs do not significantly improve with causal prompting. GPT-4o-mini achieves highest accuracy. Parsing errors excluded from results.\n\n**Limitations**: Nonsensical/anti-commonsense queries hardest. Single-value approximation of U factors limits precision. LLM instruction-following and output formatting affect observed performance.\n\n> \"Most LLMs do not perform significantly better\" ([P5] abstract).\n> \"We do not include parsing errors in the computation of the results\" ([P6] evaluation).\n\n**Note**: References-only segment; no invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2212,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784401bfffeWVtuc3Bj3pqrqx"
+  }
+]

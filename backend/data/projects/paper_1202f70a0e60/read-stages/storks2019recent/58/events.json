@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**58. problem**  \n- Computational cost in NLI is escalating: training costs double every few months (Schwartz et al., 2019).  \n- Online leaderboards and shared tasks rank only by task competence, incentivizing more data or deeper networks, which disadvantages researchers without extensive resources (Rogers, 2019; Schwartz et al., 2019).  \n\n**58. method**  \n- Factoring computational efficiency into evaluation rewards better use of available training data rather than augmenting pre-training data, enabling greater participation with limited resources and encouraging greener AI practices (Schwartz et al., 2019).  \n- Recent NLI benchmarks (SocialIQA, AlphaNLI) now report runtime during prediction; more efficient models include ROBERTa (optimized pre-training to better utilize BERT parameters, achieving higher performance), ALBERT (parameter reduction allowing fewer parameters for comparable/better results when scaled deeper), and DistilBERT (model distillation compresses BERT with small performance reduction, reducing parameters by 40%, increasing prediction speed by 60%, retaining 97% GLUE performance) (Liu et al., 2019b; Lan et al., 2019; Sanh et al., 2019).  \n\n**58. reported results**  \n- DistilBERT reduces parameters by 40%, increases prediction speed by 60%, and retains 97% of GLUE performance (Sanh et al., 2019).  \n- Some leaderboards report runtime during prediction; efficient NLI models are emerging (SocialIQA, AlphaNLI).  \n\n**58. limitations**  \n- Efficiency-focused efforts are not rewarded by current leaderboard evaluation criteria; such approaches lack recognition (Rogers, 2019; Schwartz et al., 2019).  \n- Transparency: deep bidirectional architectures (e.g., BERT) are opaque; it is unclear if models capture semantic phenomena or learn statistical biases (Niven & Kao, 2019).  \n- Probing studies suggest BERT exploits statistical biases in certain NLI benchmarks, undermining trustworthiness and generalization (Schwartz et al., 2019).  \n\n**58. two short exact quotes**  \n- \u201cFactoring computational efficiency into evaluation, however, will reward approaches which make better use of available training data rather than continually augmenting pre-training data\u201d (Rogers, 2019).  \n- \u201cThrough this, they reduce model parameters by 40% and increase prediction speed by 60%, all while retaining 97% of its performance on GLUE\u201d (Sanh et al., 2019).  \n\n**69. references-only note**  \n- This segment contains citation-dense text with no new empirical results beyond those attributed to cited works (Schwartz et al., 2019; Sanh et al., 2019; Lan et al., 2019; Liu et al., 2019b; Niven & Kao, 2019; Rogers, 2019; Zellers et al., 2019). No background citations are invented; all findings originate from the referenced sources."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2681,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78248fe2ffeZc4NegFiDGMe6m"
+  }
+]

@@ -1,0 +1,205 @@
+=== PAGE 8 (continued) ===
+inci-003
+is lazier in abductive reasoning tasks.
+Furthermore, we compare the performances of LLMs
+across different reasoning modes. In deductive reasoning
+tasks, LLMs exhibit more active reasoning, while in abductive settings, they tend to display lazier performances.
+Deductive tasks are in a forward reasoning mode, which is
+more natural for both generative LLMs and humans. This
+can inspire LLMs to generate effective reasoning chains.
+Conversely, abductive reasoning requires LLMs to provide
+explanations for the given inputs, which is in a backward
+reasoning mode. It is intuitive that LLMs may struggle to
+conduct reasoning in some cases.
+
+5.5
+
+ChatGPT
+1-shot 3-shot
+
+0-shot
+
+BARD
+1-shot
+
+3-shot
+
+55.70
+3.24
+34.80
+19.61
+4.73
+
+99.00
+26.00
+80.00
+60.00
+2.00
+
+84.00
+25.00
+84.00
+63.00
+2.00
+
+62.00
+28.00
+75.00
+68.00
+0.00
+
+29.80
+1.57
+
+41.20
+0.87
+
+96.00
+2.00
+
+98.00
+6.00
+
+99.00
+14.00
+
+1.00
+70.70
+42.40
+55.30
+
+0.20
+69.70
+5.40
+27.10
+
+0.10
+64.50
+0.50
+16.70
+
+8.00
+24.00
+67.00
+18.00
+
+16.00
+32.00
+48.00
+16.00
+
+0.00
+31.00
+22.00
+2.00
+
+2.00
+1.54
+0.80
+0.17
+
+1.20
+0.77
+4.00
+0.50
+
+1.40
+1.08
+0.8
+0.17
+
+11.00
+32.00
+5.00
+11.00
+
+16.00
+35.00
+5.00
+31.00
+
+24.00
+43.00
+4.00
+4.00
+
+Are LLMs Oriented Logical Reasoners?
+
+At the outset of the reasoning process, it is crucial to
+identify the correct starting points and potential directions
+for reasoning. We consider LLMs with this capability as
+Oriented logical reasoners and present evaluation results
+based on the error type of perspective mistake in Fig. 15b.
+From the heatmap results, ChatGPT exhibits better oriented
+capability in deductive and inductive tasks compared to
+the other two LLMs. However, it frequently fails to identify
+the correct reasoning direction in abductive and mixed-form
+reasoning. Conversely, BARD performs well in identifying
+the right direction in abductive and mixed-form settings but
+struggles in deductive and inductive ones. Compared to the
+others, text-davinci-003 displays moderate performance in
+identifying reasoning perspectives.
+In light of the preceding findings, ChatGPT is a lazier
+logical reasoner, but it excels at identifying the correct
+direction for reasoning. In other words, ChatGPT is prone
+to conduct confident reasoning. Conversely, text-davinci-003
+and BARD are active in logical reasoning, but they tend to
+start from wrong directions, leading to reasoning mistakes.
+The balance of active and oriented reasoning gives an
+insightful direction in exploring the knowledge and ability
+boundary of LLMs. This implies that LLMs must understand their capabilities and limitations, avoiding tasks beyond their scope.
+
+5.6 Are LLMs Easy to Induce Hallucination in Logical
+Reasoning?
+In the typical definition, hallucination refers to generated
+content that contradicts commonsense or current facts. To
+align with logical reasoning tasks, we expand the definition
+to include cases where facts are employed that contradict the
+context or are not verified by the context. Fig. 15c displays
+the weighted performances of cases with no hallucinations.
+The darker color indicates better performance in avoiding hallucinations. Based on the results, ChatGPT exhibits
+strong and consistent competitiveness, ranking first in deductive, inductive, and mixed-form settings. It also ranks
+
+
+=== PAGE 9 ===
+9
+
+(a) bAbI15 (Deductive).
+
+(b) RuleTaker (Deductive).
+
+(c) FOLIO (Deductive).
+
+(d) Leap-of-Thought (Deductive).
+
+(e) bAbI16 (Inductive).
+
+(f) CLUTRR (Inductive).
+
+(g) α-NLI (Abductive).
+
+(h) α-NLG (Abductive).
+
+(i) AbductiveRules (Abductive).
+
+(j) D*-Ab (Abductive).
+
+(k) ReClor (Mixed-form).
+
+(l) LogiQA (Mixed-form).
+
+(m) LogiQA2.0 (Mixed-form).
+
+(n) LogiQA2NLI (Mixed-form).
+
+Fig. 6: Statistics of different error types from evidence selection process and reasoning process view. The light green bar is wrong
+selection and the dark green bar means hallucination. From dark to light blue, the bars represent No Reasoning, Mistakes
+(Perspective), and Mistakes (Process).
+
+
+=== PAGE 10 ===
+10
+
+(a) Visualization on the activity.
+
+(b)

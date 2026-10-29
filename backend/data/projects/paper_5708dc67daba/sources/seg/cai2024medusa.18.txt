@@ -1,0 +1,178 @@
+=== PAGE 16 (continued) ===
+trained with self-distillation (Zephyr-7B, Vicuna-13/33B) have weaker speedup due to the trade-off between preserving quality
+and boosting speed.
+
+Model
+
+Base speed (tokens/s)
+
+M EDUSA speed (tokens/s)
+
+Acc. rate
+
+Speedup
+
+37.07
+29.01
+17.87
+34.21
+
+106.76
+91.54
+40.43
+99.50
+
+3.23
+3.28
+2.85
+3.08
+
+2.88
+3.16
+2.26
+2.91
+
+Vicuna-7b
+Vicuna-13b
+Vicuna-33b
+Zephyr-7b
+
+Table 4. Speedup results on AlpacaEval (Li et al., 2023) dataset.
+
+G. Exploration and Modeling of Hardware Constraints and M EDUSA
+We explore the hardware constraints, specifically memory-bandwidth bound, and their impact on M EDUSA-style parallel
+decoding by incorporating a simplified Llama-series model. First, we identify that the operators involving matrix multiplications, such as linear layers and attention matrix multiplications, are the primary sources of overhead. We profile the
+performance of FLOP/s vs. Operational Intensity which is the ratio of FLOP/s to bandwidth (bytes/s), across various GPUs,
+including the A100-80GB-PCIe, A40, and A6000. Next, we examine the changes in FLOP/s vs. Operational Intensity when
+using M EDUSA for different operators. Finally, we apply a straightforward analytical model to calculate acceleration rates
+and combine it with hardware benchmarks. This provides insights into the effects under different model sizes, sequence
+lengths, and batch sizes.
+G.1. Roofline Model of Operators
+We present an analysis of the roofline model for various operators in large language models (LLMs), specifically focusing
+on Llama-7B, Llama-13B, and Llama-33B (Touvron et al., 2023). These models were benchmarked on different GPUs,
+including the A100-80GB-PCIe, A40, and A6000. We looked into the three categories of matrix multiplication operators
+since they represent the primary sources of computational overhead in these models. Our study follows the report (Chen,
+2023) which investigates the effectiveness of batch size but ours focuses more on decoding and parallel decoding.
+Table 5 details the computation and space complexity for each operator during the prefill, decoding, and M EDUSA decoding
+phases. The operators include the linear layers for query, key, and value matrices (XWQ , XWK , XWV ), the attention
+matrix multiplications (QK T , P V ), and the up/gate/down linear layers (XWu , XWg , XWd ). b stands for the batch size, s
+stands for the sequence length, h stands for the hidden dimension, i stands for the intermediate dimension, n stands for the
+number of attention heads, d stands for the head dimension and q stands for the candidate length for M EDUSA. For more
+details of these operators please refer to the articles (Touvron et al., 2023; Chen, 2023).
+Figures 9-17 show the benchmark of three categories of operators on different models (7/13/33B) under various settings. To
+evaluate each operator’s performance and throughput, we chose the combination of settings including batch sizes from 1 to
+16
+
+
+=== PAGE 17 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+Table 5. Computational and space complexity of the main operators in different phases. The table is based on Table 2 in the report (Chen,
+2023).
+Operator
+
+Input Shape
+
+Output Shape
+
+Comp. Complexity
+
+Space Complexity
+
+(b, s, h)
+
+(b, s, h)
+
+O(bsh2 )
+
+O(2bsh + h2 )
+
+(b, n, s, d), (b, n, s, d)
+(b, n, s, s), (b, n, s, d)
+
+(b, n, s, s)
+(b, n, s, d)
+
+2
+
+O(bs nd)
+
+O(2bsnd + bs2 n)
+
+(b, s, h)
+(b, s, i)
+
+(b, s, i)
+(b, s, h)
+
+O(bshi)
+
+O(bs(h + i) + hi)
+
+(b, 1, h)
+
+(b, 1, h)
+
+O(bh2 )
+
+O(2bh + h2 )
+
+(b, n, 1, d), (b, n, s, d)
+(b, n, s, 1), (b, n, 1, d)
+
+(b, n, s, 1)
+(b, n, 1, d)
+
+O(bsnd)
+
+O(bsn + bsnd + bnd)
+
+(b, 1, h)
+(b, 1, i)
+
+(b, 1, i)
+(b, 1, h)
+
+O(bhi)
+
+O(b(h + i) + hi)
+
+(b, q, h)
+
+(b, q, h)
+
+O(bqh2 )
+
+O(2bqh + h2 )
+
+(b, n, q, d), (b, n, s, d)
+(b, n, s, q), (b, n, q, d)
+
+(b, n, s, q)
+(b, n, q, d)
+
+O(bsqnd)
+
+O(bsqn + b(s + q)nd)
+
+(b, q, h)
+(b, q, i)
+
+(b, q, i)
+(b, q, h)
+
+O(bqhi)
+
+O(bq(h + i) + hi)
+
+Prefill
+XWQ , XWK , XWV
+QK
+PV
+
+T
+
+XWu , XWg
+XWd
+Decoding
+XWQ , XWK , XWV
+QK

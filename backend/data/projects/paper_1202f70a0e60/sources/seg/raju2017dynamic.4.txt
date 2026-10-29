@@ -1,0 +1,104 @@
+=== PAGE 3 (continued) ===
+ to process multiple words at once for
+attention and computation over multiple sentences makes
+memory networks especially suitable to elaborate NLI tasks,
+where the dependence between a premise and a hypothesis is
+often subtle.
+Memory networks are senior because they can keep a message
+and its reasoning and predictions, even when extended to
+multiple hops, much more genuine and sharper than the basic
+approach (Ahad et al., 2016). This characteristic is essential
+for NLI since identifying the relationships between the
+sentences frequently entails using tools that require the
+analysis of the same data several times. These networks can
+decrease the error rate on an analogous basis because they can
+adjust the memory representation learned iteratively and
+capture the dependency of NLI tasks and the logical
+relationship between them.
+
+Figure 4: Single Layer version of MemN2N model
+Dynamic Memory Networks
+DMNs, as proposed by Kumar et al. (2016), are a new
+invention of memory - augmented models for NLP. DMNs
+capture internal representations of input sentences and
+questions and feed them to an episodic memory module. By
+dynamically calculating all attention scores for alliteration,
+deletion, and syllabic analysis, this module reinforces
+memory representation and peruses each input sentence.
+Thus, the final memory representation combines these
+episodes to help the model prevent it from being
+overwhelmed by all the input data.
+The attention system in DMNs is a primary two - layer, two layer neural network where the inputs are features obtained
+from the input sentence, the question, and the current memory
+state. This design allows the DMN to make incremental
+improvements in memory, as it diagnoses the problem with
+the input data each time it cycles through the memory
+container. Because DMNs scan through essential input
+sections, they can handle several operations for reasonable
+purposes in a single step, making them suitable for NLI.
+Having a separate episodic memory module in DMNs allows
+one to notice how knowledge is built over several sessions in
+the learning process. Thus, the DMNs can address complex
+tasks that require deep thinking and multiple computation
+steps. This iterative process is very relevant to NLI because
+
+more than a simple check between a premise and a hypothesis
+is rarely possible. When using episodic memory, DMNs can
+also better understand and make inferences regarding
+relationships between sentences.
+Table 1: Summary of DMN and Memory Networks
+Approaches
+Memory
+Application
+Handling
+Context
+End - to - End Multiple Memory Sentence NLI, QnA,
+Memory
+Hops, Simpler
+Level
+Language
+Network
+Scoring
+Reasoning
+Modeling
+Dynamic
+Multi - Hop
+Episodic Memory,
+NLI, Complex
+Memory
+Episodic
+Iterative Updates
+Reasoning
+Networks
+Memory
+Episodic Memory, Dynamic
+NLI, Question DMN for NLI
+Attention
+Memory
+Answering
+Mechanism
+Updates
+Model Type
+
+Key Components
+
+Our Approach: Using DMN for NLI
+Dynamic Memory Networks have been claimed to be
+universal models that can solve all kinds of natural language
+processing problems, especially when problems are
+formulated as questions and answers (Martínez Manzanilla,
+2015). The key concept that underpins DMNs is the capacity
+to update memory states recursively from input data
+interactions to allow for improved reasoning. Based on this,
+we assume that DMNs are adequate for the NLI task, in which
+determining the relationship between two sentences, called
+the premise and the hypothesis, is essential. This means that
+by considering NLI as a QA system, we can leverage the
+ability of DMNs to preserve and update memory states and
+make better learned and more accurate inferences.
+In our model, we present the premise as a set of declarative
+propositions through which inference can be done when there
+is a lack of contextual information. The hypothesis, on the
+other hand, is enshrined as an inquiry that aims to converse
+with the premise of a proposition. This framing lends nicely
+to the standard format of the 

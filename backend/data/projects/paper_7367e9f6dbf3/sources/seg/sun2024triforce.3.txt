@@ -1,0 +1,137 @@
+=== PAGE 2 (continued) ===
+iscover that the information from
+long context tokens needed by adjacent tokens tends to be similar. This observation suggests
+2
+
+
+=== PAGE 3 ===
+80
+
+0.600
+
+70
+
+0.575
+
+60
+
+0.550
+0.525
+0.500
+Sliding-window JF68M and Llama2-7B-128K (T=0.6)
+Sliding-window JF68M and Llama2-7B-128K (T=0.8)
+StreamingLLM JF68M and Llama2-7B-128K (T=0.6)
+StreamingLLM JF68M and Llama2-7B-128K (T=0.8)
+
+0.475
+0.450
+128
+
+512
+
+2048
+
+Context Length
+
+(a)
+
+8192
+
+32768
+
+KV Cache
+Model Weights
+
+KV Cache Occupancy Rate
+
+0.625
+
+GPU HBM
+
+Natural Divergence DLK
+
+Published as a conference paper at COLM 2024
+
+50
+40
+30
+20
+
+Llama2-7B (batch size=1)
+Llama2-7B (batch size=4)
+Llama2-13B (batch size=1)
+Llama2-13B (batch size=4)
+
+0.8
+0.6
+0.4
+0.2
+
+10
+0
+
+4K
+
+8K
+
+16K
+
+32K
+
+Context Length
+
+(b)
+
+64K
+
+128K
+
+0.0
+
+1K
+
+2K
+
+4K
+
+8K
+
+16K 32K 64K 128K
+
+Context Length
+
+(c)
+
+Figure 2: (a) A continuously increasing natural divergence (Leviathan et al., 2023) between
+the draft model with StreamingLLM or Sliding-window with Re-computation and Llama27B-128K is witnessed as the sequence length increases, indicating a falling acceptance rate
+for speculative decoding with longer contexts. Additionally, temperature sensitivity signals
+a lack of robustness. (b) Compared with model weights, KV cache gradually becomes
+another bottleneck with long contexts. (c) KV cache occupies most of the memory as the
+context length increases.
+that a specific segment of the cache can be effectively reused across multiple decoding steps,
+amortizing the overhead of constructing draft cache and enhancing drafting efficiency.
+Building on these insights, we introduce a hierarchical speculation approach. For a longcontext target model (e.g., Llama2-7B-128K (Peng et al., 2023)), we leverage the original
+model weights but only with a small proportion (e.g., 3%) of KV cache as a draft to tackle
+the bottleneck of KV cache. Hierarchically, the draft model is further speculated by a
+lightweight model (e.g., Llama-68M) with StreamingLLM cache to address the bottleneck of
+model weights. We present T RI F ORCE, depicted in Figure 1, a scalable and robust speculative decoding system that integrates retrieval-based drafting and hierarchical speculation,
+optimized for both on-chip and offloading scenarios. Specifically,
+• In Section 4.1, by maintaining the full cache, we gain the flexibility to select KV pairs,
+allowing us to devise a superior selection method, termed retrieval-based drafting. This
+strategy retrieves required context information for future needs, which is characterized
+as lossless, particularly in comparison to eviction-based methods such as StreamingLLM
+and H2 O. We further demonstrated its effectiveness and robustness on different datasets.
+• In Section 4.2, we propose a hierarchical system to address the dual memory bottlenecks.
+Using a lightweight model paired with a StreamingLLM cache for initial speculations, we
+can reduce the drafting latency for the subsequent speculation stage, thereby accelerating
+end-to-end inference.
+Empirically, in Section 5, we perform extensive experiments and ablation studies to demonstrate the effectiveness of T RI F ORCE. We show that T RI F ORCE achieves up to 2.31× speedup
+for Llama2-7B-128K on a single A100 GPU on top of Hugging Face (Wolf et al., 2019) with
+CUDA graphs (NVIDIA & Fitzek, 2020). For the offloading setting, T RI F ORCE attains an
+impressive 7.78× on two RTX 4090 GPUs, reaching 0.108 s/token—only half as slow as the
+auto-regressive baseline on an A100. T RI F ORCE can efficiently serve a Llama2-13B with
+128K contexts with 0.226s/token, which is 7.94× faster on our optimized offloading system. On a single RTX 4090 GPU, T RI F ORCE is 4.86× faster than DeepSpeed-Zero-Inference
+(Aminabadi et al., 2022) 1 . Further, we show that: (i) T RI F ORCE has a theoretical 13.1×
+upper bound, demonstrating exceptional scalability when dealing with long contexts; (ii)
+T RI F ORCE is robust across various temperature settings, maintaining an acceptance rate
+above 0.9 even for a te

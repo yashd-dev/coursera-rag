@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**mei2026improving.18**  \n\n**problem** \u2013 Examines how a residual head correction and bilinear pointer scoring affect answer selection in higher\u2011rate and lower\u2011rate training regimes.  \n\n**method** \u2013 Adds a 128\u2011unit hidden layer to the option\u2011ending pointer; computes correction \ud835\udc64\u22a4GELU(\ud835\udc34\ud835\udc63\ud835\udc56+\ud835\udc4f) with 131,329 parameters. Compares corrected vs. pre\u2011correction logits, frozen branches, and trained residuals across FP32 and BF16 precision.  \n\n**reported results**  \n- *Higher rate*: Removing correction changes 4 of 185,900 answers; MC11 drops <0.001\u202fpp.  \n- Frozen\u2011branch exceeds pointer by 1.39\u00b10.38\u202fpp; trained residual adds 2.02\u00b10.97\u202fpp.  \n- *Lower rate*: Core comparisons small and reference\u2011dependent (Table\u202f11). BF16 rounding can zero the correction; corrected/pre\u2011correction logits select same option.  \n\n**limitations** \u2013 FP32 intervention isolates inference reranking; BF16 training rounds may suppress correction. Repeated pointer from same seed can reverse residual\u2011versus\u2011pointer contrast.  \n\n- \u201cRemoving the correction changes only four of 185,900 selected answers, with no correct answer becoming incorrect, and increases mean MC11 by less than 0.001\u202fpp.\u201d (p.\u202f23)  \n- \u201cThe frozen\u2011branch model exceeds the pointer by 1.39\u00b10.38\u202fpp on MC11, and the trained residual model exceeds the frozen\u2011branch model by a further 2.02\u00b10.97\u202fpp.\u201d (p.\u202f23)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2602,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78459e2dffeAxIZHbM9Zs5mP6"
+  }
+]

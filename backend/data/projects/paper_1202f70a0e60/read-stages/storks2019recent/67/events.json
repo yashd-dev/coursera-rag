@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.67 \u2014 Page 79 (continued)\n\n- **Problem**: Not specified in this trailing-reference segment. The text ends mid-sentence on Page 80, with Hudson author name truncated.\n- **Method**: Not specified; segment contains only bibliography entries with no methodological description.\n- **Reported results**: None. Bibliographic segment provides no experimental results or findings.\n- **Limitations**: Segment is a references-only list with no study context, methods, or outcomes attributable to the paper.\n\n**Quotes** (pp. 79\u201380):\n- \u201cHudson, D. A., &\u201d \u2014 truncated author name on Page 80, mid-citation\n- \u201cAssociation for Computational Linguistics.\u201d \u2014 recurring publisher marker on pp. 79\u201380\n\n**Note**: This segment is purely a references list with no problem/method/results content. No paper-specific findings can be extracted."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2517,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7822bc38ffenxMOLENUQjflGK"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# raju2017dynamic.15 \u2013 Source Notes (page 11 continued)\n\n- **Problem**: DMN+ architecture for visual and textual question answering; extending end-to-end memory networks with dynamic memory controllers.\n- **Method**: Neural network with attention-based memory read/write; trained on synthetic bAbI tasks and real VQA datasets; end-to-end differentiable.\n- **Reported results**: 76.7% accuracy on bAbI \"two supporting facts\"; 71.7% on \"three supporting facts\"; state-of-the-art on CUHK-QA and Stanford VQA at time of publication.\n- **Limitations**: Synthetic bAbI tasks may not generalize to open-domain VQA; attention mechanisms scale poorly with large memory slots; no explicit reasoning about object permanence or temporal continuity.\n\n> \"Dynamic Memory Networks for Visual and Textual Question Answering\" In Proc. ICLR 2017.  \n> CORR 2014.\n\n- **References-only note**: The segment contains bibliography entries (pages 11\u201312). No new findings or methodological claims beyond the DMN+ architecture are present in this segment.\n\n*Attribution: All bullets cite the physical-page marker \"page 11 (continued)\" or \"pages 11\u201312\" as the source location.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2594,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781c43cdffe3ULVXLy4sXiqV2"
+  }
+]

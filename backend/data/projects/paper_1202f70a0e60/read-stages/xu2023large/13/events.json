@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem** (Pg 11 cont.): Evaluates ChatGPT's multi-hop logical reasoning across deductive, inductive, and abductive settings using Answer Correct and Answer+Explain Correct metrics.\n\n**Method** (Pg 11 cont.): Compares few-shot and Chain-of-Thought (COT) prompting; introduces Program-of-Thought (PoT) relying on external solvers (Pyke) for FOL execution.\n\n**Reported results** (Pg 12, Table 5): NeuLR dataset (3,000 samples, hops 1\u20135). text-davinci-003: 0-shot 50.93, 1-shot 59.17, COT 67.90. Deductive: 0-shot 59.00\u21921-shot 69.40\u2192COT 86.10. Inductive: 0-shot 86.90\u21921-shot 89.60\u2192COT 95.60. Abductive: 0-shot 6.90\u21921-shot 18.50\u2192COT 22.00.\n\n**Limitations** (Pg 12): PoT benefits powerful LLMs but fails for open-source models lacking symbolic generation; benchmarks lack neutral content, motivating NeuLR.\n\n**- Exact quote 1 (Pg 11 cont.):** \"In the abductive reasoning setting, the majority of the test samples only need one-hop reasoning. When the hop number increases, the...\"\n**- Exact quote 2 (Pg 12):** \"It can be concluded that more powerful LLMs can derive greater advantages from the PoT.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2437,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783aa56dffecYKbogyEgqhutc"
+  }
+]

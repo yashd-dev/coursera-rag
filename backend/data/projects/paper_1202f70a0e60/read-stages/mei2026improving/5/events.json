@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Mei2026improving.5.txt \u2014 5/19\n\n## Problem\nMC11 evaluation of adapter-based models with varying readouts and parameter budgets. Goal: identify optimal scope and training recipe.\n\n## Method\nCore readout-by-scope comparison (Table 2): pointer vs. mean-span pooling across all-module, No-FFN, attention, and DeltaNet adapters at rank 64. Parameter counts from Table 3. Training diagnostics via learning-rate ablation (Table 4): one-epoch vs. two-epoch with lower/higher head and adapter rates. Final combination tested over reference pointer (+3.1 pp gain).\n\n## Reported Results\n- No-FFN rank-64 pointer: 50.28\u00b11.02; mean-span: 51.00\u00b10.21 (Table 2)\n- No-FFN rank-64 pooling improves pointer by 0.91\u00b10.35 pp (Table 2)\n- FFN adapters = 72.35M parameters (72.35M in Table 3); removal improves pointer by 2.21\u00b10.66 pp and pooling by 2.39\u00b10.35 pp (Page 7)\n- No-FFN rank-28 pointer: 58.12M params, 52.40%; vs. no-FFN rank-64 pointer: 52.49% (Page 7)\n- Mean-span > last-content control: 51.00% vs 49.11% (+1.89\u00b10.97 pp) (Page 7)\n- Bilinear head + pooling best; two-layer residual adds 0.13M params for 50.33% (Page 7)\n- Lower adapter LR improves MC11; two-epoch schedule under lower rates: pointer 43.96, mean-span 48.57 (Table 4)\n\n## Limitations\n- Results specific to rank-64 and one-epoch settings; two-epoch lower rates degrade both readouts significantly\n- Parameter budget trade-offs shift performance; no-FFN rank-28 approaches but does not surpass rank-64 no-FFN\n- Aggregation gains domain-dependent (HellaSwag/ARC strongest; Appendix B full profile)\n\n## Two Exact Quotes\n- Page 6: \"Both readouts have the same parameter count within each scope.\"\n- Page 7: \"Adapter scope. All modules. Removing FFN adapters reduces trainable parameters from 131.17M to 58.82M, a 55.2% reduction.\"\n\n## References-Only Note\nThis segment contains diagnostic tables and ablations with no new architectural findings. Reports parameter distributions, readout comparisons, and training-recipe sensitivity, but results are constrained to the tested rank/lr combinations and do not generalize beyond the reported configurations.\n\n**Attribution:** Bullets attributed to preceding physical-page markers (Page 6, Page 7) as requested."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2855,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7848ee7affeQEb9QGARxhl8cD"
+  }
+]

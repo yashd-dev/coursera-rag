@@ -1,0 +1,46 @@
+=== PAGE 18 (continued) ===
+e context each text provides, systems decide which of the four endings is most plausible in
+a task referred to as commonsense NLI. To ensure the benchmark was challenging to state-ofthe-art systems and could not be solved through shallow approaches or by exploiting data bias,
+examples were filtered with a new process called adversarial filtering (explained further in Section 6). Examples include labels for the source of the correct ending, and ordinal labels for the
+likelihood of each possible ending and the correct ending. SWAG data can be downloaded at
+https://rowanzellers.com/swag/.
+ReCoRD. The Reading Comprehension with Commonsense Reasoning (ReCoRD) benchmark
+by Zhang, Liu, Liu, Gao, Duh, and Van Durme (2018), similar to SQuAD (Rajpurkar et al., 2016),
+consists of questions posed on passages, particularly news articles. However, questions in ReCoRD
+are in cloze format, requiring more hypothetical reasoning, and many questions explicitly require
+commonsense knowledge and reasoning over multiple sentences to answer. Named entities are
+identified in the data, and are used to fill the blanks for the cloze task. The benchmark data consist
+of over 120,000 examples, most of which are claimed to require commonsense reasoning. ReCoRD
+can be downloaded at https://sheng-z.github.io/ReCoRD-explorer/.
+18
+
+
+=== PAGE 19 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+HellaSWAG. HellaSWAG by Zellers, Holtzman, Bisk, Farhadi, and Choi (2019a) is a reissue of
+SWAG (Zellers et al., 2018) consisting of 70,000 examples in the same format, but created from
+different sources, i.e., ActivityNet captions (Heilbron, Escorcia, Ghanem, & Niebles, 2015) along
+with WikiHow texts rather than text from the Large Scale Movie Description Challenge (Rohrbach,
+Torabi, Rohrbach, Tandon, Pal, Larochelle, Courville, & Schiele, 2017). Further, negative endings
+are generated with a better language model, and again adversarially filtered to be challenging for
+state-of-the-art models that were created since SWAG’s first release. HellaSWAG can be downloaded at https://rowanzellers.com/hellaswag/.
+AlphaNLI. AlphaNLI by Bhagavatula et al. (2019) is an abductive reasoning task where given
+two observations as an incomplete context, one must predict which of two hypothesized events is
+more plausible to have happened between the observations. This is similar to the Story Cloze Test
+(Mostafazadeh et al., 2016), which AlphaNLI is partially constructed from. However, rather than
+inferring the most plausible ending of an otherwise complete story, one must infer the most plausible explanation of a situation given two partial observations of it. As such, the benchmark closely
+resembles the classical formulation of abductive reasoning studied with formal logic (Peirce, 1883;
+Hobbs et al., 1993), unlike other benchmarks in this category, and performing the task requires
+reasoning with unstated commonsense implications. AlphaNLI consists of about 20,000 possible
+contexts and 200,000 hypotheses, paired to form about 170,000 examples in the training and development sets.6 AlphaNLI can be downloaded at https://leaderboard.allenai.org/
+anli/submissions/get-started.
+2.1.5 I NTUITIVE P SYCHOLOGY
+An especially significant domain in plausible inference tasks is intuitive psychology, as inference of
+emotions and intentions through behavior is a fundamental capability of humans (Gordon, 2016).
+Several benchmarks touch on this topic in some examples, e.g., the marriage proposal example in
+ROCStories (Mostafazadeh et al., 2016) from Figure 6, but some are entirely focused here. Examples from each benchmark are listed in Figure 7, and they require intuitive social and psychological
+commonsense knowledge such as plausible reactions to being punched or yelled at. In the following
+paragraphs, we introduce these benchmarks in detail.
+Triangle-COPA. Triangle-COPA by Gordon (2016) is a variation of COPA (Roemmele et al.,
+2011) based on a past social psychology experiment by Heide

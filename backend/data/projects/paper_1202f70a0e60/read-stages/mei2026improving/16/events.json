@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# mei2026improving.16.txt: Summary (16/19)\n\n**Problem**: Comparing adapter update timing and placement in separately trained pointer recipes, with MC11 as primary metric.\n\n**Method**: Factorial design varying learning rates (2.5\u00d710\u207b\u2075 vs 5\u00d710\u207b\u2075), adapter placement (head-first, head-only tail, no-FFN), and update schedules. Separately trained pointer set with four settings per recipe.\n\n**Reported results**:\n- Peak MC11: 53.54% (head-first + no-FFN, higher-rate pointer recipe)\n- Head-first alone: 52.28% MC11, exceeding head-only tail by 2.54 \u00b1 1.49 pp\n- Combined head-first/no-FFN gain is \u22122.41 \u00b1 1.61 pp smaller than sum of separate gains\n- Retraining (5\u00d710\u207b\u2075 to 2.5\u00d710\u207b\u2075): mean MC11 change \u22120.34 pp; five pairs improve, two decline (\u22122.46, \u22126.10 pp)\n- JevBench \u21911.69 pp, Kev \u21910.74 pp across retraining pairs\n\n**Limitations**: Saved initial-tensor identity not established; scope-by-schedule interaction untested with pooling; semantic overlap and pretraining exposure unmeasured; NLI option wording sensitivity underexplored\n\n**Two exact quotes**:\n- \"Head-first reaches 52.28% MC11 and exceeds head-only tail by 2.54 \u00b1 1.49 pp.\"\n- \"The combined head-first/no-FFN model uses the higher-rate pointer recipe; adding pooling to this recipe remains untested.\"\n\nPage markers: 21\u219222 (continued)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2510,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784615c2ffe03dCruLnhWThFK"
+  }
+]

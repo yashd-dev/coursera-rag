@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# 24 \u2014 Problem & Method\n\n- **Problem**: Prompt bias from imbalanced class labels reduces incremental improvement room; question-type imbalance skews QA benchmarks; superficial answer-question correlations (e.g., gender bias in NLI, Event2Mind) are hard to discern.\n\n- **Method**: Balance examples per class for fair baselines. Calculate first-word distribution to balance question types (CoQA, CommonsenseQA, SQuAD 2.0, ARC). ProPara limits entity questions to creation/destruction/movement. Force questions requiring specific skills (e.g., arithmetic in DROP). Balance gender pronouns across occupation-related words.\n\n# Reported Results\n\n- MegaVeridicality subtask within DNC has **67% majority-class baseline** vs. 50% for binary-choice, due to uneven class distribution (Poliak et al., 2018a).\n- Gender bias in NLI systems trained on biased data performs worse in gender pronoun disambiguation (Rudinger et al., 2018a); Winogender example: \"The paramedic performed CPR on the passenger even though she knew it was too late.\"\n- Similar gender biases identified in Event2Mind data derived from movie scripts (Rashkin et al., 2018b).\n\n# Limitations\n\n- Bias-avoidance strategies require careful implementation; no universal solution exists for all benchmark types.\n- Manual labeling and crowd-worker introduction may introduce new artifacts.\n\n# Two Exact Quotes\n\n- \"When class labels are balanced, a majority-class baseline will score as low as possible on the task. While binary-choice tasks should have a 50% majority class baseline, the MegaVeridicality subtask within DNC (Poliak et al., 2018a) has a 67% majority-class baseline due to unevenly distributed class labels\" (p. 31 continued).\n- \"The paramedic performed CPR on the passenger even though she knew it was too late\" (Rudinger et al., 2018a, Winogender, Fig. 3, cited p. 31 continued).\n\nAttribution: All bullets tagged to preceding physical-page marker \u3010p. 31 continued\u3011."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2412,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782ca34cffeB0WPMMUeBhIVdm"
+  }
+]

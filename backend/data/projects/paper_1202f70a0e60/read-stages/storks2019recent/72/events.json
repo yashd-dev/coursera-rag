@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.72.txt: PAGE 85 (continued) \u22c5 PAGE 86\n\n**Problem**  \nThe bibliography surveys machine comprehension, neural probing, and discourse context datasets from 1987\u20132019, focusing on question answering, word prediction, and script knowledge evaluation.\n\n**Method**  \nNo experimental method is described; this segment is a references-only list of ACL, NAACL, EMNLP, and associated conference/journal citations spanning two decades of NLP research.\n\n**Reported results**  \nNo results are reported. The text contains solely bibliographic entries with no datasets, models, or performance metrics.\n\n**Limitations**  \nAs a references-only segment, no methodology, findings, or limitations can be extracted from the source text.\n\n- \"The LAMBADA dataset: Word prediction requiring a broad discourse context\" (Paperno et al., ACL 2016, PAGE 85 continued)  \n- \"Bleu: A Method for Automatic Evaluation of Machine Translation\" (Papineni et al., ACL 2002, PAGE 86)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2490,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7821aeddffexSUJ04rMF9y3rz"
+  }
+]

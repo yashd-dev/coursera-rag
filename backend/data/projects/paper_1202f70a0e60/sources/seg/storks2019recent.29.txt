@@ -1,0 +1,105 @@
+=== PAGE 35 (continued) ===
+ers referenced in Section 2.1 and leaderboards linked to in Section 4 at
+time of writing (October 2019). Additional data collected from the leaderboards for AlphaNLI (found at https://
+leaderboard.allenai.org/anli/submissions/public), the Story Cloze Test (found at https://
+competitions.codalab.org/competitions/15333#results), and SocialIQA (found at https://
+leaderboard.allenai.org/socialiqa/submissions/public), which are not linked to in Section 4.
+
+35
+
+
+=== PAGE 36 ===
+S TORKS , G AO , & C HAI
+
+SOTA Machine Performance
+
+MC-TACO
+
+SQuAD 1.1
+
+CLOTH
+
+SQuAD 2.0
+
+GLUE
+
+SWAG
+
+SocialIQA
+
+SuperGLUE
+
+WSC
+
+WinoGrande
+
+ReCoRD
+
+AlphaNLI
+
+OpenBookQA
+
+Cosmos QA
+
+DROP
+
+RACE
+
+HellaSWAG
+
+DREAM
+
+Story Cloze Test
+
+bAbI
+
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+
+Human Performance
+
+Figure 11: Comparison of state-of-the-art accuracy to human accuracy on selected benchmarks
+where human performance is reported.
+
+between 80-90% accuracy. Machine performance has a much larger variance among these benchmarks. For some benchmarks, e.g., SQuAD 1.1 (Rajpurkar et al., 2016) and SWAG (Zellers et al.,
+2018), machine performance actually exceeds human performance. Does that mean these problems
+are easy and solved? On the other hand, those benchmarks where machine performance exceeds human performance have relatively low human performance. Does this suggest that the problems are
+actually difficult, since they seem difficult for humans? It is important to note that these performance
+measures, whether human or machine, may allow us to form some perception of task complexity,
+but they are not perfect measures for several reasons, some of which are discussed below.
+Considerations for human performance measurements. Benchmark design choices, such as the
+evaluation framework, can affect human performance measurements. If a benchmark has high variability in possible responses, human performance is likely to be lower, but this does not necessarily
+mean the benchmark is extraordinarily difficult. An example of this is SQuAD 1.1, which takes a
+span of a passage as an answer, and has a human accuracy of 77.0% (Rajpurkar et al., 2016). While
+this may suggest that the task is difficult, the state-of-the-art performance has actually far exceeded
+human performance, suggesting the opposite. When analyzing human responses, the authors found
+that errors typically occurred when humans omitted unnecessary words or phrases from their answer spans. Thus, the low human performance may have largely resulted from limitations of the
+evaluation framework rather than the difficulty of the task.
+The method of collecting human performance should also be considered. Human performance
+may be lower than expected if the measurement is crowdsourced, which is typical for recent benchmarks. Crowd workers want to complete tasks quickly to maximize their earnings, and thus may not
+spend as much time reasoning through the examples as they would in an everyday setting. Because
+of this, as discussed in Section 2.2.2, an additional human performance measurement collected from
+authors of the dataset or other experts is sometimes provided as a ceiling. However, the difference
+36
+
+
+=== PAGE 37 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+between performance of crowd workers and experts can be high, e.g., 73.5% versus 94.5% accuracy
+on RACE (Lai et al., 2017). An ensemble of crowd workers may also be used to generate a higher
+human performance measure. Again, though, the disparity between the performance of one worker
+and an ensemble of workers can be high, e.g., 82.8% to 88.0% accuracy on SWAG (Zellers et al.,
+2018) from one worker to an ensemble of five. This uncertainty raises questions about the naturalness of these performance measurement strategies, and these factors must be considered when
+interpreting human performance where crowdsourcing is involved.
+Considerations for machine performance measurements. Some tasks may actually be more difficult
+for humans than for machines based on t

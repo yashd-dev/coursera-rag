@@ -1,0 +1,86 @@
+=== PAGE 3 (continued) ===
+e LLMs (i.e., text-davinci003, ChatGPT, and BARD) and four up-to-date LLMs (i.e.,
+LLaMA3.1-Chat, Mistral-Instruct-v0.3, Claude-3 and GPT4). The details of these models are listed in the Appendix.
+3.2
+
+Evaluated Datasets
+
+According to the previous discussion, the evaluation is
+conducted systematically from deductive, inductive, abductive and mixed-form views. Therefore, this paper selects
+fifteen popular datasets in logical reasoning and divides
+them into the above four folds. Table 2 in the Appendix
+presents detailed information of these datasets. The selected
+datasets contain both generation and classification ones
+6. Appendix is at: https://github.com/DeepReasoning/NeuLR
+
+
+=== PAGE 4 ===
+4
+
+and there exist diverse forms of tasks, which illustrate
+the comprehensiveness of our evaluation. Diverging from
+prior works that only employ a limited number of samples,
+this paper significantly expands the evaluation size. Since
+ChatGPT is one of the most popular LLM for the public,
+we give much focus on it. For parts of the datasets, we
+keep all the test examples for ChatGPT evaluation (i.e.,
+EntailmentBank [35], FOLIO [36], Leap-Of-Thought [37],
+CLUTRR [38], ReClor [39], LogiQA [40], LogiQA 2.0 [41]
+and LogiQA2NLI [41]), while other large datasets (i.e., bAbI15 [42], RuleTaker [43], bAbI-16 [42], α-NLI [44], α-NLG [44],
+AbductiveRules [45] and D*-Ab [46]) are sampled to 1,000
+examples. As for the evaluation of text-davinci-003 and
+BARD, we sample 100 test examples for each dataset.
+3.3
+
+Selected Metrics
+
+The majority of prior evaluation studies solely report the
+accuracy metric, which may not be comprehensive enough
+for evaluating the effectiveness of LLMs. Consequently, we
+assert that a more nuanced assessment is necessary. To
+this end, we propose to evaluate LLMs from both objective and subjective perspectives. Specifically, we introduce
+four evaluation metrics to reflect the intermediate reasoning
+process of LLMs: answer correctness, explanation correctness,
+explanation completeness and explanation redundancy.
+•
+
+•
+
+•
+
+•
+
+Answer Correctness. This metric measures the alignment between a generated answer and the true label,
+emphasizing semantic coherence over exact token
+matching. For example, ”the car hit the tree” and
+”the tree was struck by the car” demonstrate this
+alignment despite differing expression style.
+Explanation Correctness. To reason towards the answer, explanations usually provide a logical and coherent narrative that connects the available evidence
+or premises to the ultimate conclusion. Thus this
+metric indicates whether the generated explanation
+is logically correct for the true answer.
+Explanation Completeness. It indicates whether
+there are any missing explanations to reason towards
+the true answer. An explanation is deemed complete
+if it encompasses all elements present in the true
+explanation, which means that in the reasoning process, the correct answer can be inferred through the
+selected known facts and the generated intermediate
+facts. But this does not necessarily cause answer
+correctness or explanation correctness.
+Explanation Redundancy. This suggests that the
+combination of selected established facts and additional intermediate facts surpasses the necessary
+information for arriving at a precise conclusion, leading to the inclusion of unnecessary details in the
+reasoning process. For instance, only three specific
+facts are essential for drawing a conclusion; any extra
+facts beyond this set would be redundant.
+
+Notably, the metric values of explanation correctness,
+completeness, and redundancy are independent. To identify
+prevalent logical flaws in LLMs, we establish error types
+to categorize problematic cases. This paper classifies errors
+along two primary dimensions: (1) evidence selection process
+
+and (2) reasoning process. The first dimension centers on
+evaluating the evidence selected by LLMs, whereas the
+second dimension emphasizes the logical reasoning process
+using the selected evidence. Detailedl

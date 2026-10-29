@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.30.txt \u2014 Page 37\u201338\n\n- **Problem**: CBT language modeling subtasks predict random words with/without context; prepositions hard for humans due to similar meanings; neural LMs excel, making the problem less interesting to study.\n\n- **Method**: Analysis of benchmark data size vs. SOTA accuracy; linear regression shows no significant correlation; qualitative interpretation of trends across data magnitudes.\n\n- **Reported results**: Small benchmarks (<1,000 examples, e.g., Winograd Schema) show limited improvement; large benchmarks (>100,000 examples, e.g., SQuAD 1.1, SWAG, GLUE) show highest SOTA performance and biggest improvements. bAbI achieves 100% SOTA accuracy due to synthetically generated, predictably structured data.\n\n- **Limitations**: Statistical biases in benchmark data make performance measures questionable; SOTA neural approaches lack interpretability; no way to prove machines truly outperform humans; preposition prediction is inherently easier for machines.\n\n- **Quote 1 (p.37)**: \u201cPredicting some types of words, such as prepositions, is difficult for humans (67.6% accuracy without context), perhaps because humans excel at inferring meaning, and many prepositions have similar meanings. Consequently, neural language models, more capable of capturing patterns, easily beat humans in this sub-task of CBT.\u201d\n\n- **Quote 2 (p.37)**: \u201cWhile the task is actually difficult for humans, machines are already more capable of performing it, making it less interesting of a problem to study.\u201d\n\n- **Ponytain note**: No figures or tables reproduced; only quoted text extracted. Data-size trend discussion relies on visual Figure 12 described textually\u2014exact numerical values not verified from source."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2409,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782b2f54ffeC57e6WlucaQq6O"
+  }
+]

@@ -1,0 +1,241 @@
+=== PAGE 7 (continued) ===
+.80
+46.00
+38.00
+36.00
+38.00
+5.0036.00↓ 2.0033.00↓ 1.0038.00↓ 25.9614.29↓ 21.3518.13↓ 20.4320.43↓ 29.0019.00↓ 26.0020.00↓ 19.0028.00↓
+6.00
+2.00
+1.00
+28.42
+23.20
+23.81
+34.00
+27.00
+23.00
+23.00
+26.00
+27.00
+29.19
+27.50
+26.42
+30.00
+35.00
+27.00
+38.005.00↓ 32.0010.00↓ 28.0013.00↓ 43.4011.20↓ 34.6016.20↓ 38.8016.00↓ 47.006.00↓ 39.007.00↓ 44.003.00↓
+39.00
+32.00
+28.00
+43.80
+35.20
+38.80
+47.00
+39.00
+44.00
+39.00
+32.00
+30.00
+44.20
+36.80
+40.60
+47.00
+39.00
+44.00
+57.002.00↓ 51.004.00↓ 56.002.00↓ 43.1714.67↓ 36.3317.50↓ 36.5020.50↓ 38.0010.00↓ 41.009.00↓ 37.0010.00↓
+57.00
+51.00
+56.00
+43.50
+36.50
+36.83
+40.00
+43.00
+40.00
+57.00
+51.00
+56.00
+53.50
+49.00
+50.16
+38.00
+41.00
+37.00
+
+that they would produce some redundant information to
+cover diverse conditions.
+5.3
+
+Do LLMs Have Obvious Logical Flaws?
+
+Based on the preceding statements, we establish error types
+for problematic cases (with incorrect explanations) from two
+dimensions: evidence selection process and reasoning process.
+The former dimension encompasses two error types: (i)
+wrong selection and (ii) hallucination, which are independent
+of each other. The latter dimension comprises three error
+types: (i) no reasoning, (ii) perspective mistake and (iii) process
+
+mistake. Each problematic case can only be attributed to one
+of the three errors in the reasoning process dimension.
+We visualize the attribution results for fourteen datasets
+in Fig. 6, including four deductive, two inductive, four
+abductive and four mixed-form ones. Overall speaking,
+the types of errors vary between datasets. For the wrong
+selection, 33.26% of the problematic cases fail to select the
+right answers for reasoning. Also, 27.46% suffers from the
+hallucination issue of LLMs. From the dimension of reasoning process, no reasoning error keeps a small portion in most
+of the cases, only covering 19.33% of the selected cases in
+
+
+=== PAGE 8 ===
+8
+
+text-davinci-003
+0-shot 1-shot 3-shot
+
+0-shot
+
+De.
+
+bAbI-15
+EntailmentBank
+RuleTaker
+FOLIO
+Leap-Of-Thought
+
+✓
+✓
+
+63.00
+8.00
+26.00
+14.00
+71.00
+
+56.00
+6.00
+29.00
+23.00
+55.00
+
+43.00
+7.00
+27.00
+21.00
+54.00
+
+22.60
+7.06
+21.30
+31.86
+32.74
+
+39.40
+5.88
+27.80
+22.55
+5.04
+
+In.
+
+bAbI-16
+CLUTRR
+
+✓
+✓
+
+60.00
+2.00
+
+77.00
+28.00
+
+86.00
+31.00
+
+93.60
+2.62
+
+Ab.
+
+α-NLI
+α-NLG
+AbductiveRules
+D*-Ab
+
+✓
+✓
+✓
+
+2.00
+63.00
+1.00
+85.00
+
+2.00
+61.00
+0.00
+27.00
+
+1.00
+72.00
+0.00
+17.00
+
+Mix
+
+TABLE 4: Evaluation results on the metric of explanation redundancy.
+
+ReClor
+LogiQA
+LogiQA 2.0
+LogiQA2NLI
+
+1.00
+0.00
+0.00
+0.00
+
+1.00
+5.00
+0.00
+0.00
+
+1.00
+0.00
+0.00
+0.00
+
+Dataset
+
+Gen.
+
+total. Meanwhile, perspective mistake occupies 44.47% of the
+cases and process mistake covers 36.20%.
+The primary challenge evident from the results lies in
+the ability of LLMs to locate accurate evidence and perspectives for logical reasoning tasks. Due to the limited content
+of inputs, LLMs are also prone to generate hallucinatory
+facts to aid the reasoning process, which may affect the
+reliability of LLMs in real applications. In addition, LLMs
+abandon reasoning in a considerable number of cases. Such
+phenomena of laziness are worth noting, especially when
+we depend on LLMs to help reason in the downstream
+tasks. In the following section, we will provide a detailed
+analysis of specific LLM and specific reasoning settings.
+Considering the above-mentioned obvious logical flaws, we
+will especially focus on the detailed analysis of the activity
+in reasoning, the orientation selection of LLMs and model
+hallucination.
+5.4
+
+Are LLMs Active Logical Reasoners?
+
+In this paper, we consider LLMs with fewer no reasoning
+errors as more Active logical reasoners. Fig. 15a presents
+the weighted results for measuring active reasoning cases,
+where higher values indicate LLMs are more active in reasoning, while lower values represent lazier cases. Among
+the three LLMs, BARD is the most active logical reasoner,
+excelling in deductive, inductive and abductive settings.
+ChatGPT, on the other hand, is deemed the lazier reasoner
+in deductive and inductive settings, while text-dav

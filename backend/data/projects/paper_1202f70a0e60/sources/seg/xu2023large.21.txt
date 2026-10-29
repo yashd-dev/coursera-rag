@@ -1,0 +1,331 @@
+=== PAGE 17 (continued) ===
+ the correctness, rigorousness, and self-awareness metrics.
+Mix
+
+0.56 0.57 0.08 0.21
+0.24 0.00 0.02 0.00
+
+In.
+
+Ab.
+
+Mix
+
+0.08 0.21 0.13 0.09
+
+ude
+T-4
+
+3
+
+Mi
+
+0.10 0.10 0.10 0.21
+0.46 0.05 0.16 0.42
+0.43 0.45 0.32 0.26
+
+Cla
+
+3
+T-4
+
+0.67 0.62 0.43 0.37
+
+Cla
+
+ude
+-
+
+GP
+
+(a) Active.
+
+0.43 0.34 0.49 0.44
+
+GP
+
+T-4
+
+3
+ude
+-
+
+0.82 1.00 0.91 0.87
+
+Cla
+
+0.78 0.50 0.98 0.84
+
+De.
+LL
+l-v aMA
+0.3
+3.1
+
+Ab.
+
+Mi
+
+0.40 0.50 0.49 0.00
+
+In.
+
+GP
+
+0.62 0.50 0.17 0.59
+
+De.
+
+stra
+
+Mix
+LL
+l-v aMA
+0.3
+3.1
+
+Ab.
+
+stra
+
+In.
+
+Mi
+
+stra
+
+LL
+l-v aMA
+0.3
+3.1
+
+De.
+
+(b) Oriented.
+
+(c) No hallucination.
+
+Fig. 15: Heatmap results for the activity, orientation and no-hallucination of LLMs.
+Next, we implement the automatic evaluations on
+the four trending LLMs (i.e., LLaMA3.1-Chat-8B, MistralInstruct-v0.2-7B, Claude-3, and GPT-4). Fig. 14 and 15 provide the respective results on the evaluation of six dimensions.
+
+A PPENDIX D
+P ROMPT E NGINEERING
+
+SP, ADP) and six random characters (combination of uppercase and lowercase letters and numbers). Table 9 illustrates
+examples of the replacement process.
+TABLE 9: The construction of neutral content. Example column presents some example words. Prefix represents the
+prefix for each type of words. 6-character represents examples of randomly generated combination of characters.
+
+In the implementation, we consider both the zero-shot and
+few-shot settings. To obtain appropriate model outputs, we
+construct the prompts, shown in Table 10 of Appendix.
+
+A PPENDIX E
+N EU LR DATASET
+In this section, we will provide more details on how NeuLR
+is constructed and what is the form of the prompt.
+E.1
+
+Construction of NeuLR
+
+According to the explanations in the main paper, current
+logical reasoning may fail to keep the neutral content for
+evaluation. Therefore, we propose the new dataset NeuLR
+to benchmark the pure logical reasoning capability of LLMs.
+The data is sourced from [42], [46]. Detailedly, we transform
+some of the important content (e.g., entities and properties)
+into random strings. In NeuLR, we neutralize three types
+of words, i.e., name, species and property. We replace each
+type of words with the concatenation of a prefix (i.e., NP,
+
+E.2
+
+Type
+
+Example
+
+Prefix
+
+6-character
+
+Name
+Species
+Property
+
+Bob/Lily
+Dog/Sheep
+Big/Red/Smart
+
+NP
+SP
+ADP
+
+e.g., uF52pT
+e.g., 7gfO2k
+e.g., PT01mx
+
+Prompt Forms
+
+Different from previous evaluations, we consider adding
+descriptions of content neutrality in the prompt forms.
+Specifically, we replace the previous task description prefix with the following form (take abductive reasoning for
+illustration):
+•
+
+This is a neutral-content abductive reasoning task.
+The strings starting with SP represent species. The
+strings starting with NP represent names. The strings
+starting with ADP represent property. Given a context and a fact, it is required to generate a short
+missing fact.
+
+Other parts of the prompts are the same as the previous
+form.
+
+
+=== PAGE 18 ===
+18
+
+TABLE 8: Evaluated Datasets. Gen. distinguishes whether the predicted answer is generated text or classified labels. Explain
+denotes whether the explanation is required in the task. # Davinci, # ChatGPT and # BARD columns represent the number
+of evaluation samples of each dataset for the three LLMs.
+Categories
+
+Dataset
+
+Source
+
+Gen.
+
+Explain
+
+# Davinci
+
+# ChatGPT
+
+# BARD
+
+[42]
+[35]
+[43]
+[36]
+[37]
+
+✓
+✓
+
+✓
+
+Deductive
+
+bAbI-15
+EntailmentBank
+RuleTaker
+FOLIO
+Leap-Of-Thought
+
+100
+100
+100
+100
+100
+
+1,000
+340
+1,000
+204
+1,289
+
+100
+100
+100
+100
+100
+
+Inductive
+
+bAbI-16
+CLUTRR
+
+[42]
+[38]
+
+✓
+✓
+
+100
+100
+
+1,000
+1,146
+
+100
+100
+
+Abductive
+
+α-NLI
+α-NLG
+AbductiveRules
+D*-Ab
+
+[44]
+[44]
+[45]
+[46]
+
+✓
+✓
+✓
+
+100
+100
+100
+100
+
+1,000
+1,000
+1,000
+1,000
+
+100
+100
+100
+100
+
+ReClor
+LogiQA
+LogiQA 2.0
+LogiQA2NLI
+
+[39]
+[40]
+[41]
+[41]
+
+100
+100
+100
+100
+
+500
+651
+500
+600
+
+100
+100
+100
+100
+
+mixed-form
+
+✓
+
+✓
+
+(a) Deductive setting (EntailmentBank) on (b) Inductive setting (CLUTRR) on text- (c) Abductive setting (D*-Ab) on texttext-davinci-003.
+davinci-003.
+davinci-003.
+
+(d) Deductive setti

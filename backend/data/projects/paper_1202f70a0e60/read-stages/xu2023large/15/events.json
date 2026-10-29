@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**xu2023large.15 \u2014 Page 12 (continued)**\n\n- **Problem:** Three LLM reasoners (ChatGPT, BARD, Claude-3/GPT-4) compared under deductive, inductive, abductive, and mixed-form settings.\n- **Method:** Automatic evaluation with four reasoning categories visualized in Fig. 11 & 12; assessments of correct/rigorous reasoning, self-awareness, orientation, and no-hallucination.\n- **Reported results:** \n  - ChatGPT weakest in rigorous reasoning under deductive/inductive; laziest reasoner but unique advantage in oriented reasoning and avoiding hallucination. \n  - BARD most active reasoner, strongest in benchmarks with objective metrics due to larger model size and massive data, but fails at self-awareness, orientation, and non-hallucination; generates redundant content, fails to find correct reasoning directions. \n  - All LLMs show limitations; relative strength in deductive reasoning, evident struggles in inductive settings. Evaluation benchmarks with objective metrics are insufficient.\n- **Limitations:** Benchmarks primarily depend on objective metrics; insufficient to comprehensively evaluate LLMs.\n\n**Quotes (p.12 continued):**\n> \"ChatGPT is the weakest LLM of the three, since it performs badly in showing correct and rigorous reasoning under deductive, inductive and abductive settings.\"\n> \"BARD is the most active reasoner and it keeps great competitiveness as a correct and rigorous reasoner. However, it also shows obvious flaws compared with other LLMs.\"\n\n**xu2023large.15 \u2014 Page 13**\n\n- **Future directions:** Strengthen inductive reasoning ability; enhance LLM perception of capability boundaries so they recognize limitations and know when to refrain from answering.\n- **Note:** References-only segment requires a short note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2391,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783a2dd8ffeAJEee81Jc03SZL"
+  }
+]

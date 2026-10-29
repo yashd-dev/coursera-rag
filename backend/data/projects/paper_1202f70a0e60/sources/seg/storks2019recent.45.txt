@@ -1,0 +1,42 @@
+=== PAGE 54 (continued) ===
+ility to maintain a long-term memory provides more involved tracking of the world state
+and context. On the CBT cloze task (Hill et al., 2015), it is demonstrated that memory networks
+can outperform primarily RNN- and LSTM-based approaches in predicting missing named entities
+and common nouns, and this is because memory networks can efficiently leverage a wider context than these approaches in making inferences. When tested on bAbI, M EM NNs also achieved
+high performance and outperformed LSTM baselines, and on some tasks were able to achieve high
+performance with fewer training examples than provided (Weston et al., 2016).
+Recurrent entity networks and variants. The recurrent entity network (E NT N ET) by Henaff
+et al. (2017) is composed of several dynamic memory cells, where each cell learns to represent
+the state or properties concerning entities mentioned in the input. Each cell is a gated RNN which
+only updates its content when new information relevant to the particular entity is received. Further,
+E NT N ET’s memory cells run in parallel, allowing multiple locations of memory to be updated at
+the same time.
+E NT N ET is one of the first models to pass all twenty subtasks (i.e., achieve at least 95% accuracy on all twenty subtasks) in bAbI (Weston et al., 2016), achieving 99.5% accuracy over all
+questions. It also achieves impressive results on CBT (Hill et al., 2015), outperforming memory
+network baselines on both benchmarks. E NT N ET is also used as a baseline in the Story Commonsense benchmark (Rashkin et al., 2018a) in an attempt to track the motivations and emotions of
+characters in stories from ROCStories (Mostafazadeh et al., 2016) with some success. An advantage
+of E NT N ET is that it maintains and updates the state of the world as it reads the text, unlike memory
+networks, which can only perform reasoning when the entire supporting text and the question are
+processed and loaded to the memory. For example, given a supporting text with multiple questions,
+E NT N ET does not need to process the input text multiple times to answer these questions, while
+memory networks need to re-process the whole input for each question.
+While E NT N ET achieved state-of-the-art performance on bAbI, it does not perform so well on
+ProPara (Mishra et al., 2018), another benchmark which requires tracking the world state. According to Das et al. (2019), a drawback of E NT N ET is that while it maintains memory registers for
+entities, it has no separate embedding for individual states of entities over time. They further explain that E NT N ET does not explicitly update coreferences in memory, which can certainly cause
+54
+
+
+=== PAGE 55 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+errors when reading human-authored text which is rich in coreference, as opposed to the simplystructured, automatically-generated bAbI data.
+A similar model to E NT N ET is the query reduction network (QRN) by Seo, Min, Farhadi, and
+Hajishirzi (2017), which also uses several recurrent units as memory cells controlled by an RNN to
+track entities in a procedural text. Like E NT N ET, the memory cells run in parallel, eliminating the
+vanishing gradient problem which makes it difficult for entirely RNN-based models to track longterm dependencies in procedural text. The entity representations held by the model can be queried
+at any point while processing the procedural text to predict states and locations of objects, not only
+at the end of the text as required by typical procedural text benchmarks, e.g., bAbI (Weston et al.,
+2016). QRNs achieve comparable results to E NT N ET on bAbI.
+Another similar variant, the original Differentiable Neural Computer (DNC) model proposed by
+Graves, Wayne, Reynolds, Harley, Danihelka, Grabska-Barwińska, Colmenarejo, Grefenstette, Ramalho, Agapiou, Badia, Hermann, Zwols, Ostrovski, Cain, King, Summerfield, Blunsom, Kavukcuoglu,
+and Hassabis (2016) uses several recurrent units as memory cells. Unlike the other 

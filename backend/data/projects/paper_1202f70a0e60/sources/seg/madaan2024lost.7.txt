@@ -1,0 +1,186 @@
+=== PAGE 6 (continued) ===
+iously
+mentioned dataset ChaosNLI. For all the examples
+we investigated, we found that there was at least
+some degree of interpretation or ambiguity in assigning a label to the premise-hypothesis pair. For
+example, in the first row of Table 2, whether the
+correct label is contradiction or negation would depend on a not-specified sentiment towards Cuba. In
+fact, 31 out of 100 human annotators would agree
+with the model’s judgement, despite it being labeled as “incorrect”. Also in the second row of
+Table 2, we see an example where human opinions diverge on what the correct label is. In this
+
+Accuracy versus entropy Next, we consider the
+distribution of accuracy with entropy for the three
+6
+
+
+=== PAGE 7 ===
+Example
+
+Label distribution
+
+Gold
+
+Prediction
+
+Premise: of course you could annex Cuba but they wouldn’t like that a bit
+Hypothesis: Annexing Cuba is a great idea.
+
+e: 0, n: 31, c: 69
+
+c
+
+n
+
+Premise: I thought working on Liddy’s campaign would be better than working
+on Bob’s.
+Hypothesis: I thought I would like working on Liddy’s campaign the best.
+
+e: 66, n: 32, c: 2
+
+n
+
+e
+
+Premise: Sorry but that’s how it is.
+Hypothesis: This is how things are and there are no apologies about it.
+
+e: 48, c: 40, n: 12
+
+c
+
+c
+
+Table 2: Examples from ChaosNLI with different label distributions. We show different samples from ChaosNLI
+with different annotator distributions. The first column shows the example; the second the distribution of human
+labels across the 100 collected annotations (the majority label is marked bold), the third column indicates the label
+that the example had in the original dataset and the fourth column the Llama 3.1 405B prediction.
+
+Model
+
+αNLI
+Og.
+Maj.
+
+MNLI
+Og.
+Maj.
+
+SNLI
+Og.
+Maj.
+
+Llama-3.1
+Llama-3.1
+Llama-3.1
+
+8B
+70B
+405B
+
+77.55
+86.36
+85.51
+
+78.00
+87.21
+86.10
+
+49.47
+57.66
+64.04
+
+50.97
+67.54
+69.67
+
+55.28
+60.44
+64.60
+
+55.48
+58.52
+67.31
+
+Mistral
+Mixtral
+Mixtral
+
+7B
+8x7B
+8x22B
+
+74.41
+82.44
+84.14
+
+75.78
+81.59
+83.68
+
+49.97
+54.03
+60.23
+
+53.22
+51.53
+67.04
+
+49.47
+63.14
+64.86
+
+48.15
+64.27
+67.83
+
+76.01
+
+76.21
+
+50.86
+
+55.93
+
+54.90
+
+54.35
+
+Average
+
+Table 3: Majority accuracy. For each model and dataset, we show the accuracy on the ChaosNLI subsets of αNLI,
+MNLI, and SNLI. The original accuracy (Og.) represents the accuracy as computed according to the original labels
+of the respective datasets; the majority accuracy (Maj.) expresses accuracy according to the majority label.
+
+benchmarks in Figure 4a. We only show the smallest (8B) and the largest (405B) model in the Llama
+series across the three benchmarks. We observe
+that for the largest model, there is a clear decreasing trend in accuracy with increasing entropy for
+all three benchmarks, whereas for the 8B model,
+the trend is not as prominent, and some entropy
+bins have similar accuracies. In Figure 4a, we can
+furthermore see that all models perform ‘better’ on
+samples where the entropy of the labels is low. For
+the larger models, this effect is larger on samples
+where humans have high disagreement (and the
+majority label is thus in a way more representative
+of the average human judgements), their accuracies
+are often near maximal, and they drop as human
+judgements become more dispersed. For the entropy vs accuracy distributions for other models,
+we refer the reader to Appendix B.
+
+jority label, suggesting that the performance may
+still improve as models continue training. On the
+other, the results put into question whether strong
+alignment with the majority label is in fact what we
+should strive for: if humans have low agreement
+on their judgements, should the desired behaviour
+of a model be to side with the majority? In the next
+section, we approach this question by considering
+the distribution of model outputs, rather than only
+the highest probability label.
+4.5
+
+Model versus human distributions
+
+The ChaosNLI dataset does not only help us estimate the adequacy of the original label sets of
+the respective datasets, but also reveals model behaviour in scenarios without a single 

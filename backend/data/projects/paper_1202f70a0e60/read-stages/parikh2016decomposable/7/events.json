@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# parikh2016decomposable.7\n\n**Problem:** Section references a dataset used for evaluation (referenced by later sections) but does not state the problem setting within page 7.\n\n**Method:** No methodological content on page 7; only bibliography entries [van Benthem2008], [Vendrov et al.2015], [Wang and Jiang2016], [Yin et al.2016].\n\n**Reported results:** None.\n\n**Limitations:** None (bibliographic-only page).\n\n> \"[van Benthem2008] Johan van Benthem. 2008. A brief history of natural logic. College Publications.\"\n\n> \"[Wang and Jiang2016] Shuohang Wang and Jing Jiang. 2016. Learning natural language inference with LSTM. In Proceedings of NAACL.\"\n\n**Note:** Page 7 is a references-only segment; no problem, method, or results to extract."
+  },
+  {
+    "kind": "usage",
+    "tokens": 1452,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7819f0e6ffeFKc2Kvzy8V9tQ1"
+  }
+]

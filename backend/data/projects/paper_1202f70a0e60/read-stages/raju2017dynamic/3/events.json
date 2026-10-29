@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# raju2017dynamic.3.txt \u2014 Page 3\n\n## Problem\n- NLI models need attention mechanisms to strengthen structural representations and capture sentence-level semantics.\n\n## Method\n- **Attention evolution**: Bahdanau et al. (2015) introduced attention for NLI; Rockt\u00e4schel et al. (2015) applied attention over linear LSTM encoder; Wang and Jiang (2015) substituted RNN with LSTM; Cheng et al. (2016) added intra-sentence self-attention on token hidden states.\n- **Memory networks**: Sainbayar et al. (2015) proposed end-to-end memory-based model with learned multi-hop memory operations, using straightforward sentence-level scoring function.\n\n## Reported results\n- Sainbayar et al. (2015) model performed better than baseline methods on QnA benchmark and language modeling experiments.\n- Attention mechanisms generally yielded higher performance than native LSTM/RNN across NLI and related tasks (image caption generation, machine translation, question answering).\n\n## Limitations\n- Memory network described only as conceptually similar to seq2seq attention; no detailed performance metrics or error analysis provided in this segment.\n- Text cuts off mid-sentence: *\"This ability\"* (end of Page 3).\n\n## Two short exact quotes\n- \u201cthe memory network enabled the system to focus on the most critical sentences at each time step to perform a computation to come up with the correct predictions.\u201d \u2014 Sainbayar et al. (2015), Page 3\n- \u201cThis ability\u201d \u2014 text truncated at end of Page 3.\n\n## Note on references segment\nThis segment cites prior work (Bowman 2016; Bengio 2015; Rockt\u00e4schel 2015; Wang & Jiang 2015; Cheng et al. 2016; Sainbayar et al. 2015) without reporting new findings. As a references-only segment, it requires only a descriptive summary, not invented findings.\n\n**truncated: text ends mid-sentence at \"This ability\"**"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2418,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781f8be1ffeU0lS911N4Xe9Qw"
+  }
+]

@@ -1,0 +1,405 @@
+=== PAGE 69 (continued) ===
+NGUAGE I NFERENCE : A S URVEY
+
+must answer a natural language question about an image, but must select an appropriate textual
+explanation for their answer from a set of choices. Although this setup may be similarly vulnerable
+to models overfitting on statistical artifacts of human language, it is a step in this direction.
+
+Generalization ability. A system that can generalize should be able to perform inferences on new
+data and tasks with minimal training, as humans do. With better generalization, we would expect
+models to be able to acquire knowledge from any benchmark and apply it to other benchmarks. Domain adaptation, i.e., where the distribution of training data differs significantly from the distribution
+of test data, is a good step toward generalization to unseen data, and Marasović (2018) highlights
+recent successful approaches here. In fact, state-of-the-art models like BERT (Devlin et al., 2018)
+are getting somewhat closer to this capability, being pre-trained on large text corpora and capable of
+being fine-tuned to new problems with minimal effort or task-specific modifications. Some metrics
+that explicitly measure this type of adaptation and generalization will be useful. Nonetheless, the
+requirement of iteration over large amounts of training data in order to perform well on a benchmark
+is still a limitation for generalizing over multiple problems. This perhaps calls for a new practice for
+future NLI evaluation where no training data is provided, but rather a few examples to show what
+the evaluation would look like and to resolve engineering and interface issues. This may alleviate
+some problems caused by superficial data biases and dependence on large training data, and move
+toward models that can perform reasoning and generalization.
+
+Acknowledgements
+
+We would like to thank the anonymous reviewers for their greatly helpful comments and suggestions.
+
+Appendix A. Comparison of Benchmark Creation Methods
+
+The following table gives a chronological summary of methods used in creating benchmarks. It
+considers the steps of creating the context and/or question, the correct answer and alternatives, and
+any extra annotations (useful information beyond the answer which the benchmark evaluates upon),
+as well as validating the data. M refers to manual approaches by experts, A to automatic approaches
+through language generation, T to text mining, and C to crowdsourcing. Data size is included for
+comparison of methods used.
+69
+
+
+=== PAGE 70 ===
+S TORKS , G AO , & C HAI
+Benchmark (Reference)
+
+Data Size
+
+Context/Question
+
+Answer
+
+Alternatives
+
+Annotation
+
+Validation
+
+RTE-1 (Dagan et al., 2005)
+
+1.37K
+
+M
+
+M
+
+–
+
+–
+
+M
+
+RTE-2 (Bar-Haim et al., 2006)
+
+1.60K
+
+M
+
+M
+
+–
+
+–
+
+M
+
+RTE-3 (Giampiccolo et al., 2007)
+
+1.60K
+
+M
+
+M
+
+–
+
+–
+
+M
+
+RTE-4 (Giampiccolo et al., 2008)
+
+1.00K
+
+M
+
+M
+
+–
+
+–
+
+M
+
+Conversational Entailment (Zhang & Chai, 2009)
+
+875
+
+T, M
+
+M
+
+–
+
+–
+
+M
+
+RTE-5 (Bentivogli et al., 2009)
+
+1.20K
+
+M
+
+M
+
+–
+
+–
+
+M
+
+RTE-6 (Bentivogli et al., 2010)
+
+32.7K
+
+T
+
+M
+
+–
+
+–
+
+M
+
+RTE-7 (Bentivogli et al., 2011)
+
+48.8K
+
+T
+
+M, T
+
+–
+
+–
+
+M
+
+COPA (Roemmele et al., 2011)
+
+1.00K
+
+M
+
+M
+
+M
+
+–
+
+M
+
+MCTest (Richardson et al., 2013)
+
+2.00K
+
+C
+
+C
+
+C
+
+–
+
+A
+
+SICK (Marelli et al., 2014a)
+
+9.84K
+
+M, T
+
+C
+
+–
+
+–
+
+C
+
+SNLI (Bowman et al., 2015)
+
+570K
+
+T, C
+
+C
+
+–
+
+C
+
+C
+
+CBT (Hill et al., 2015)
+
+687K
+
+T, A
+
+A
+
+A
+
+–
+
+–
+
+Triangle-COPA (Gordon, 2016)
+
+100
+
+M
+
+M
+
+M
+
+M
+
+M
+
+ROCStories (Mostafazadeh et al., 2016)
+
+98.2K
+
+C
+
+C
+
+C
+
+–
+
+C
+
+WSC (Morgenstern et al., 2016)
+
+60
+
+M
+
+M
+
+–
+
+–
+
+M
+
+bAbI (Weston et al., 2016)
+
+40.0K
+
+A
+
+A
+
+–
+
+–
+
+–
+
+LAMBADA (Paperno et al., 2016)
+
+10.0K
+
+T
+
+T
+
+–
+
+–
+
+A, C
+
+JOCI (Zhang et al., 2017)
+
+39.1K
+
+A, T
+
+C
+
+–
+
+–
+
+C
+
+RACE (Lai et al., 2017)
+
+97.7K
+
+T
+
+T
+
+T
+
+C
+
+–
+
+CLOTH (Xie et al., 2017)
+
+99.4K
+
+T
+
+T
+
+T
+
+C
+
+–
+
+IIE (White et al., 2017)
+
+313K
+
+T, A
+
+T, A
+
+–
+
+–
+
+M
+
+NarrativeQA (Kočiský et al., 2018)
+
+46.8K
+
+T, C
+
+C
+
+–
+
+C
+
+C
+
+SciTail (Khot et al., 2018)
+
+27.0K
+
+T, C
+
+C
+
+–
+
+C
+
+C
+
+ARC (Clark et al., 2018)
+
+7.79K
+
+T
+
+T
+
+T
+
+–
+
+–
+
+MCScript (Ostermann et al., 2018)
+

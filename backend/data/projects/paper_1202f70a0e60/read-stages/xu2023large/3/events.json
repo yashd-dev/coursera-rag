@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.3 \u2014 Compact Notes\n\n**Problem**  \n- LLMs' logical reasoning evaluated against benchmarks conflated with text comprehension (P2)  \n- Current benchmarks may overlap with training data, demonstrating fitting rather than reasoning (P2)  \n\n**Method**  \n- NeuLR: new 3,000-sample dataset with content-neutral deductive, inductive, and abductive reasoning items (P2)  \n- Fine-grained evaluation across six properties: Correct, Rigorous, Self-aware, Active, Oriented, No Hallucination (P3)  \n- Error types mapped to evidence-selection and reasoning-process dimensions (P2)  \n\n**Reported Results**  \n- NeuLR contains 3,000 content-neutral samples across deductive, inductive, abductive, and mixed reasoning (P3, continued on P4)  \n- Evaluates seven representative LLMs under diverse prompting strategies (P2)  \n\n**Limitations**  \n- Benchmarks strongly coupled with text comprehension, limiting test of real logical reasoning (P2)  \n- LLMs may learn biased patterns from text rather than capture logical capability (P2)  \n\n**Quotes**  \n- \u201cNotably, the whole evaluation system can be applied under both human-annotation and automatic modes.\u201d (P2)  \n- \u201cTherefore, language models may be trained to learn a biased pattern from text, rather than really capture the logical reasoning capability.\u201d (P2)  \n\n**Note** \u2014 Segment ends at page 3; NeuLR sample count continues on next page."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2213,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783cfcbdffennqMEMa1jnu1iu"
+  }
+]

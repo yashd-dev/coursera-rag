@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 6 (continued)**\n\n- **Problem**: LLMs may produce correct answers by chance rather than rigorous logical reasoning. Abductive reasoning (reasoning reversely) activates better explanation output; deductive/inductive chains cause \"lazy mode\" that harms rigor.\n\n- **Method**: Analyzed zero-shot logical reasoning across BARD, ChatGPT, text-davinci-003. Defined \"Rigorous\" as correct answer + complete explanation. Used Table 3 to compare answer correctness vs. explanation quality across deductive, inductive, abductive, and mixed-form settings.\n\n- **Reported results**: BARD shows best rigorous reasoning capability across all four manners. ChatGPT struggles in deductive and inductive settings but performs relatively well at keeping correct explanations. text-davinci-003 exhibits stronger characteristics in maintaining explanation completeness over correctness. In self-awareness (Table 4), text-davinci-003 leads in inductive, abductive, and mixed-form; ranks second in deductive. BARD performs poorly in deductive, abductive, and mixed-form.\n\n- **Limitations**: Authors restrict analysis to zero-shot setting only. Self-awareness metric treats less redundant content as more self-aware. Mixed-form reasoning results truncated in source.\n\n- **Exact quotes**:\n  - \"In a deductive reasoning setting, the reasoning chain is sequential, which may cause LLMs to be in a lazy mode and harm rigorous reasoning.\"\n  - \"In comparison to classification tasks, LLMs tend to generate redundant answers more frequently in generation tasks, such as \u03b1-NLI vs. \u03b1-NLG.\"\n\n- **Attribution**: All bullets attribute to preceding physical-page marker PAGE 6 (continued)."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2219,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783bd0d8ffeJvtUbsyegGCd9F"
+  }
+]

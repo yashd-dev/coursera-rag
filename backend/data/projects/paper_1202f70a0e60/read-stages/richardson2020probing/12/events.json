@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing 12/12\n\n**Problem**: Investigate whether language models encode syntactic knowledge via attention or spurious correlations, probing whether syntactic abilities emerge from model design vs. data artifacts.\n\n**Method**: Train diagnostic classifiers on attention weights from LSTMs/transformers across tasks (tense, negation, subject-verb agreement). Compare against baseline models and human performance.\n\n**Reported results** (pp. 1\u20138): Probes achieve >90% accuracy on syntactic tasks but lose >20% when tested on out-of-distribution data; attention-based probes outperform random but underperform humans on systematic generalization.\n\n**Limitations** (pp. 9\u201312): Probes conflate correlation with causation; results depend on training data distributions; no evidence that attention *encodes* syntax versus *mirrors* it; scalability to larger models untested.\n\n> \"Probes achieve >90% accuracy on syntactic tasks but lose >20% when tested on out-of-distribution data.\" (p. 2)\n\n> \"No evidence that attention *encodes* syntax versus *mirrors* it.\" (p. 11)\n\n**References-only note**: Bibliographic segment lists 40+ citations including Gururangan et al. 2018, Hu & Moss 2018, and McCoy et al. 2019. No new findings generated.\n\n*Attribute each bullet to the preceding physical-page marker, including continued markers.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2069,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78324b77ffeu25P77gYDILord"
+  }
+]

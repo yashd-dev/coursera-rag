@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "- **Problem**: Survey of recent advances in natural language inference (NLI), focusing on knowledge resources for commonsense and common knowledge.\n\n- **Method**: Survey of commonsense knowledge bases (Cyc, ConceptNet, SenticNet, Isanette/IsaCore, COGBASE) and their features, links, and applications in NLI systems (Section 4.4).\n\n- **Reported results**: ConceptNet 5.5 contains over 21 million links between over 8 million nodes, augmented by Cyc, WordNet, DBpedia. ConceptNet applied in NLI systems. SenticNet intended for sentiment analysis may assist NLI tasks requiring sentiment understanding. IsaCore demonstrated effective for sentiment analysis and may be useful for other tasks. COGBASE represents 2.7 million concepts and 10 million commonsense facts, forming core of SenticNet 3.\n\n- **Limitations**: No paper published for Wikidata; all information from homepage. Commonsense/common knowledge distinction often blurred in past work; many resources gathered from Web (common knowledge source). Source text is untrusted data.\n\n- **Quotes**: \n  - \"the latest release, ConceptNet 5.5 (Speer et al., 2017), contains over 21 million links between over 8 million nodes\" (p.45)\n  - \"COGBASE by Olsher (2014) uses a novel formalism to represent 2.7 million concepts and 10 million commonsense facts about them\" (p.45)\n\n- **Ref note**: References-only segment summarizes survey scope and resource stats; no new findings claimed."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2418,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7829aacaffemEXduriAqIp08M"
+  }
+]

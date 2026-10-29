@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**xu2023large.34 \u2014 page 33 (continued)**\n\n- **Problem**: Deductive reasoning task over graph rules; must infer missing facts given chaining constraints (e.g., \"If A likes B and B sees C then C is round\"). Contains multiple QA pairs with answer/explanation and \"Explain Error Type\" prompts.\n- **Method**: Rule-based inference over atomic propositions (e.g., Rule5: \"If something likes the squirrel then it is round\"; Rule6: chaining logic). Models generate answers, explanations, and error types for each case.\n- **Reported results**: TABLE 22 on page 34 evaluates 0\u2011shot and few\u2011shot prompting of models (Bard, Davinci\u2011003, ChatGPT) on a reasoning case about fruit freshness vs. temperature; class incorrectly generalized from a narrow temperature range (answer D).\n- **Limitations**: Rule chaining errors (e.g., contradictory \"likes\" vs. \"chases\" facts); over\u2011generalization from narrow temperature range; error\u2011type identification inconsistent across models.\n\n**Exact quotes**:\n- \"Rule6: If something chases the bear and the bear likes the cat then the cat likes the squirrel.\"\n- \"the class concluded that the cooler the temperature at which these varieties of fruits are stored, the longer they will stay fresh\u2026 Answer: D. The correct answer is D. Option A is not relevant to the class\u2019s reasoning, as it still made an attempt to draw a conclusion from its results.\"\n\n**Notes & risks**: Segment spans two physical pages (33 continued \u2192 34). No raw metrics or model\u2011specific scores are provided for the ReClor rules task; only the TABLE 22 prompt/answer pair is visible. Inference logic for Rule6 is vulnerable to the \"likes\"/\"chases\" contradiction noted in the error explanations."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2368,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7835f159ffef7D0HqgjH5VVJJ"
+  }
+]

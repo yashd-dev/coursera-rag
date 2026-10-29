@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## gendron2024counterfactual.15 \u2014 PAGE 15\n\n- **Problem**: Counterfactual reasoning in LMs; paper frames it via causal inference principles for commonsense causality (Rock reference [54]).  \n- **Method**: ROCK: causal inference principles applied to reason about commonsense causality using ICML 2022 framework.  \n- **Results**: None reported in this segment; segment is a references-only bibliography continuation.  \n- **Limitations**: Not applicable \u2014 no methodology or findings presented in this page.\n\n- **[54] ROCK** provides the causal inference principles underpinning the paper's approach to commonsense causality.  \n- **Bibliographic continuation**: Page 15 continues the reference list from Page 14; no study results or methods are in this segment.\n\n```\nNote: This page contains only bibliography entries. No problem/method/results/limitations content beyond citations.\n```"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2633,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7841e485ffeBkLnNHloUokUCB"
+  }
+]

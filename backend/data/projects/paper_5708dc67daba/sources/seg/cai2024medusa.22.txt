@@ -1,0 +1,131 @@
+=== PAGE 25 (continued) ===
+ly by constructing the tree
+attention described in Section 2.1.2. We omit the latency of the post-processing steps including verification and acceptance
+for M EDUSA since they introduce marginal overhead. Fig. 21 illustrates the simulated acceleration rate and speedup
+for different numbers of candidate tokens under these settings. As the number of candidate tokens increases, both the
+acceleration rate and speedup initially show improvements. However, beyond 64, the speedup starts to decline, indicating
+diminishing returns with further increases in candidate length. This aligns with the experimental results in Fig. 4b and
+suggests that there is an optimal range for the numbers of candidate tokens where M EDUSA provides the most significant
+performance gains.
+We plot the simulated speedup under different batch size settings with a fixed sequence length of 1024 in Fig. 22. The
+results indicate that when the batch size exceeds 32, the speedup decreases and may even have a negative effect. This occurs
+because the linear layers shift from being memory-bandwidth-bound to computationally bound.
+We conduct another experiment using a batch size of 4 and different sequence lengths. As shown in Fig. 23, the optimal
+number of candidate tokens remains relatively consistent across different sequence lengths. However, as the sequence length
+increases, the overall performance decreases. This performance drop is primarily due to the overhead from attention matrix
+multiplication, while the linear layer computation remains constant since the computation of linear layers is independent of
+the sequence length.
+25
+
+
+=== PAGE 26 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Our simulations show that the optimal number of candidate tokens is key for model scaling with M EDUSA, as benefits
+decrease beyond a certain range. Initially, increasing batch size improves performance through parallelism, but too large a
+batch size shifts linear layers from memory-bandwidth-bound to compute-bound, reducing speedup. Longer sequences
+increase attention matrix multiplication overhead, lowering performance, and emphasizing the need to optimize attention
+mechanisms. Effective model scaling requires balancing the number of candidate tokens, adjusting batch sizes to avoid
+compute-bound transitions, and enhancing attention mechanisms for longer sequences. These strategies ensure better
+resource utilization and higher performance, demonstrating the value of simulations in predicting performance and guiding
+acceleration strategy design.
+
+Normalized Latency/ Acc. Rate/ Speedup
+
+Llama 7B, Batch Size: 1, Sequence Length: 1024
+3.0
+2.5
+Simulated Acc. Rate
+Simulated Speedup
+qk/pv ar
+qkv linear ar
+up/gate/down ar
+
+2.0
+1.5
+1.0
+0.5
+0.0
+
+1
+
+16
+
+32
+48
+64
+80
+Number of Candidate Tokens
+
+96
+
+112
+
+Figure 21. Simulated acceleration rate, speedup, and normalized latency ablation using different numbers of candidate tokens under the
+setting of batch size 1 and sequence length 1024 for Llama-7B on an A100 80GB PCIe.
+
+26
+
+
+=== PAGE 27 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Llama 7B, Sequence Length: 1024
+
+3.0
+
+Simulated Speedup @ bs 1
+Simulated Speedup @ bs 2
+Simulated Speedup @ bs 4
+Simulated Speedup @ bs 8
+Simulated Speedup @ bs 16
+Simulated Speedup @ bs 32
+Simulated Speedup @ bs 64
+
+Speedup (%)
+
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+
+1
+
+16
+
+32 48 64 80 96
+Number of Candidate Tokens
+
+112
+
+Figure 22. Simulated speedup with sequence length 1024 for Llama-7B.
+
+Llama 7B, Batch Size: 4
+Simulated Speedup @ seq_len 128
+Simulated Speedup @ seq_len 256
+Simulated Speedup @ seq_len 512
+Simulated Speedup @ seq_len 1024
+Simulated Speedup @ seq_len 2048
+Simulated Speedup @ seq_len 4096
+Simulated Speedup @ seq_len 8192
+
+2.4
+2.2
+Speedup (%)
+
+2.0
+1.8
+1.6
+1.4
+1.2
+1.0
+1
+
+16 32 48 64 80 96 112
+Number of Candidate Tokens
+Figure 23. Simulated speedup with batch size 4 for Llama-7B.
+
+27
+

@@ -1,0 +1,124 @@
+=== PAGE 5 (continued) ===
+el to train a Premise-Only model that instead uses the
+premise text, as well as an encoder that looks at both the
+premise and hypothesis (Premise+Hyp.) separated by an artiﬁcial token (for more baselines, see Salvatore, Finger, and
+Hirata Jr (2019)).
+
+Results and Findings
+We discuss the different questions posed in Figure 1.
+Answering Questions 1 and 2. Table 1 shows the performance of baseline models and pre-trained NLI models on
+our different fragments. In all cases, the baseline models did
+poorly on our datasets, showing the inherent difﬁculty of our
+challenge sets. In the second case, we see clearly that stateof-the-art models do not perform well on our fragments,
+consistent with ﬁndings on other challenge datasets. One result to note is the high accuracy of BERT-based pre-trained
+3
+We found all models to be sensitive to learning rate, and performed comprehensive hyper-parameters searches to consider different learning rates, # iterations and (for BERT) random seeds.
+4
+Other ways of aggregating the two scores
+can be substi
+tuted. E.g., one could maximize Sfrag Mja,k while requiring that
+
+
+Sorig Mja,k is not much worse relative to when the model’s hyperparameters are optimized directly for the original dataset.
+
+8717
+
+
+=== PAGE 6 ===
+Modeltrain data
+Majority Baseline
+Hypothesis-Only biLSTM
+Premise-Only biLSTM
+Premise+Hyp. biLSTM
+BERTSNLI+MNLI
+BERTSNLI
+Decomp-AttnSNLI
+ESIMSNLI
+BERTSNLI+MNLI+frag
+ESIMMNLI+frag
+Decomp-AttnMNLI+frag
+
+SNLI Test
+
+Logic Fragments (Avg. of 6) Mono. Fragments (Avg. over 2)
+Random/Trained Baselines
+34.2
+34.6
+34.0
+69.0
+49.3
+56.7
+–
+44.3
+57.4
+–
+52.0
+59.1
+Pre-Trained NLI Models
+91.0
+47.3
+62.8
+90.7
+46.1
+56.8
+86.4
+42.1
+48.4
+88.5
+44.3
+62.8
+MNLI Dev (Avg.)
+Re-Trained Models with Fragments (frag)
+83.7
+(↓ 1.3)
+98.0
+97.8
+72.0
+(↓ 5.9)
+86.4
+96.5
+66.1
+(↓ 6.7)
+71.7
+93.5
+
+Breaking NLI
+–
+–
+–
+–
+95.8
+94.3
+49.9
+68.7
+-
+
+Table 1: Baseline models and model performance (accuracy %) on NLI benchmarks and challenge test sets (before and after
+re-training), including the Breaking NLI challenge set from Glockner, Shwartz, and Goldberg (2018). The arrows ↓ in the last
+section show the average drop in accuracy on MNLI benchmark after re-training with the fragments.
+on the different fragments. In nearly all cases, it is possible
+to train a model to master a fragment (with counting being the hardest fragment to learn). In other studies on learning fragments (Geiger et al. 2018; Salvatore, Finger, and Hirata Jr 2019), this is the main result reported, however, we
+also show that the resulting models perform below random
+chance on benchmark tasks, meaning that these models are
+not by themselves very useful for general NLI. This even
+holds for results on the GLUE diagnostic test (Wang et al.
+2018), which was hand-created and designed to model many
+of the logical phenomena captured in our fragments.
+We note that in the monotonicity examples, we included
+results on a development set (in dashed green) that was built
+by systematically paraphrasing all the nouns and verbs in
+the fragment to be disjoint from training. Even in this case,
+when lexical variation is introduced, the BERT model is robust (see Rozen et al. (2019) for a more systematic study of
+this type of generalization using BERT for NLI in different
+settings).
+Answering Question 3. Figures 6 and 7 show the results
+of the re-training study. They compare the performance of a
+retrained model on the challenge tasks (dashed lines) as well
+as on its original benchmark tasks (solid lines)5 . We discuss
+here results from the two illustrative fragments depicted in
+Figure 6. All 4 models can master Monotonicity Reasoning
+while retaining accuracy on their original benchmarks. However, non-BERT models lose substantial accuracy on their
+original benchmark when trying to learn comparatives,
+suggesting that comparatives are generally harder for models to learn. In Figure 7, we show the results for all other
+fragments, which show varied, though largely stable, trends
+depending on the partic

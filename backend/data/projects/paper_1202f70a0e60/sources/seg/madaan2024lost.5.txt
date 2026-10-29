@@ -1,0 +1,101 @@
+=== PAGE 4 (continued) ===
+ Appendix D.
+Training curves In Figure 2, we show how fourshot performance develops during training. We see
+that for most benchmarks, the 8B and 70B model
+quickly start to diverge. The 70B model starts improving after 250B tokens for ANLI and αNLI; it
+crosses fine-tuned BERT performance after 500B
+tokens. On the other hand, the development of
+performance for the 8B model is slow, not exceeding chance accuracy for HANS, MNLI, and SNLI.
+From the final model performance of 8B depicted
+in Figure 1, we can conclude that the 8B model improves fairly late in pre-training. We did not have
+the budget for a full pre-training run, but longer
+training seems to help for NLI tasks, further supporting the claim that NLI models can provide a
+useful signal.
+
+Model discriminability For discriminability, virtually all benchmarks provide a clear gap between
+the smaller and larger models for both families of
+models. For example, for the Llama series, 405B
+performs the best followed by the 70B and then the
+8B model. Though these three models are trained
+on the same amount of text tokens, performance
+clearly improves with scale. The exception to this
+pattern is αNLI, which appears to be near-saturated
+already at 70B with an accuracy of around 85%.
+
+Utility for ablations A requirement for a benchmark to provide a useful signal during training is
+that it develops relatively monotonically during
+training. The plots in Figure 2 suggest that this is
+not the case for most of the benchmarks for the 8B
+model. Following Madaan et al. (2024), we quantify the benchmarks’ monotonicity – defined as the
+rank correlation (Kendall Tau) between a monotonically increasing array and the array containing
+
+3
+For each number of few-shot examples, samples were
+chosen randomly from the dev or train set once and kept fixed
+throughout the experiments.
+
+4
+
+
+=== PAGE 5 ===
+(a) ANLI
+
+(b) HANS
+
+(c) MNLI
+
+(d) SNLI
+
+(e) αNLI
+
+Figure 1: Performance across shots. We show the accuracies for six fully pre-trained models on the five NLI
+benchmarks. Dashed lines indicate random and finetuned-BERT baselines.
+
+(a) ANLI
+
+(b) HANS
+
+(c) MNLI
+
+(d) SNLI
+
+(e) αNLI
+
+Figure 2: Performance during pre-training. We show how accuracy for the five benchmarks develops during
+pre-training for two Llama-3 style models.
+
+the benchmark scores during training – on both a
+discrete (accuracy) and continuous metric (NLL).
+In Table 1, we can see that, despite the benchmarks’
+moderate sizes, monotonicity is low for accuracy
+as well as NLL, suggesting that the benchmark
+may not be suitable for monitoring performance on
+closely-spaced checkpoints at this scale.
+4.3
+
+model-dependent, we use the 8B and 70B models
+we trained from scratch to observe the effect of
+contamination.
+In Figure 3, we plot the EPG as a function of
+the percentage of the evaluation data that is marked
+contaminated according to a given contamination
+threshold. We can see that there is virtually no
+score inflation as a consequence of contamination
+for the 8 and 70B model that we considered. For
+HANS, this is because little to no contaminated
+samples are found through 8-gram overlap. For
+MNLI, SNLI, and αNLI, instead, large parts of the
+dataset are marked contaminated at low thresholds,
+but there is no performance impact. We suspect
+that this is because the premises of the samples
+are sourced from publicly available datasets, and
+their presence per se is thus not indicitive of contamination. Likely for similar reasons, almost all
+of the ANLI samples contain at least one overlapping 8-gram, resulting in very high percentages of
+detected contamination at low thresholds. At the
+lowest threshold, also the EPG shoots up. However, the erratic behaviour as examples are gradually added to the clean set suggests that the EPG
+
+Contamination analysis
+
+Now that we have concluded that NLI benchmarks
+provide a signal both for final models and during pre-training, we analyse the extent to which
+scores may be driven by evaluation data contamination. Using the met

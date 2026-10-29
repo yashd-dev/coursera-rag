@@ -1,0 +1,14 @@
+{
+  "title": "Speculative Decoding for Lossless LLM Inference Acceleration",
+  "queries": [],
+  "sections": [
+    "Background and Methods",
+    "Evaluation and Limitations"
+  ],
+  "keywords": [
+    "speculative decoding",
+    "draft model",
+    "lossless acceleration"
+  ],
+  "request": "seeded bounded acceptance run"
+}

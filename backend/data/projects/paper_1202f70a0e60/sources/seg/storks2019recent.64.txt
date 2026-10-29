@@ -1,0 +1,52 @@
+=== PAGE 75 (continued) ===
+ional Linguistics
+(ACL 2018), pp. 845–855, Melbourne, Australia. Association for Computational Linguistics.
+Clark, P., Cowhey, I., Etzioni, O., Khot, T., Sabharwal, A., Schoenick, C., & Tafjord, O. (2018).
+Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge. arXiv:
+1803.05457.
+Collell, G., Gool, L. V., & Moens, M.-F. (2018). Acquiring Common Sense Spatial Knowledge
+through Implicit Spatial Templates. In Proceedings of the Thirty-Second AAAI Conference on
+Artificial Intelligence (AAAI-18), New Orleans, LA, USA. AAAI Press.
+Dagan, I., Glickman, O., & Magnini, B. (2005). The PASCAL Recognising Textual Entailment
+Challenge. In Quiñonero-Candela, J., Dagan, I., Magnini, B., & d’Alché-Buc, F. (Eds.), Machine Learning Challenges. Evaluating Predictive Uncertainty, Visual Object Classification,
+and Recognising Tectual Entailment, Vol. 3944, pp. 177–190. Springer Berlin Heidelberg,
+Berlin, Heidelberg.
+Dai, Z., Yang, Z., Yang, Y., Carbonell, J., Le, Q., & Salakhutdinov, R. (2019). Transformer-XL:
+Attentive Language Models beyond a Fixed-Length Context. In Proceedings of the 57th
+Annual Meeting of the Association for Computational Linguistics (ACL 2019), pp. 2978–
+2988, Florence, Italy. Association for Computational Linguistics.
+DARPA (2018). Machine Common Sense. Broad Agency Announcement HR001119S0005, Defense Advanced Research Projects Agency, Arlington, VA, USA.
+Das, A., Datta, S., Gkioxari, G., Lee, S., Parikh, D., & Batra, D. (2018). Embodied Question Answering. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
+(CVPR 2018), Salt Lake City, UT, USA. IEEE.
+75
+
+
+=== PAGE 76 ===
+S TORKS , G AO , & C HAI
+
+Das, R., Munkhdalai, T., Yuan, X., Trischler, A., & McCallum, A. (2019). Building Dynamic
+Knowledge Graphs from Text using Machine Reading Comprehension. In Proceedings of the
+7th International Conference on Learning Representations (ICLR 2019), New Orleans, LA,
+USA.
+Davidson, H. A. (1992). Alfarabi, Avicenna, and Averroes on Intellect: Their Cosmologies, Theories
+of the Active Intellect, and Theories of Human Intellect. Oxford University Press on Demand.
+Davis, E. (2017). Logical Formalizations of Commonsense Reasoning: A Survey. Journal of Artificial Intelligence Research, 59, 651–723.
+Davis, E., & Marcus, G. (2015). Commonsense reasoning and commonsense knowledge in artificial
+intelligence. Commun. ACM, 58(9), 92–103.
+Davis, E., Morgenstern, L., & Ortiz, C. (2018).
+The Winograd Schema Challenge.
+https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html.
+Davis, E., Morgenstern, L., & Ortiz, C. L. (2017). The First Winograd Schema Challenge at IJCAI16. AI Magazine; La Canada, 38(3), 97–98.
+de Marneffe, M.-C., Simons, M., & Tonhauser, J. (2019). The CommitmentBank: Investigating
+projection in naturally occurring discourse. In Proceedings of Sinn Und Bedeutung 23,
+Barcelona, Spain.
+Dechter, R. (2013). Reasoning with Probabilistic and Deterministic Graphical Models: Exact Algorithms. Synthesis Lectures on Artificial Intelligence and Machine Learning, 7(3), 1–191.
+Denkowski, M., & Lavie, A. (2011). Meteor 1.3: Automatic Metric for Reliable Optimization and
+Evaluation of Machine Translation Systems. In Proceedings of the Sixth Workshop on Statistical Machine Translation, pp. 85–91, Edinburgh, Scotland. Association for Computational
+Linguistics.
+Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. arXiv: 1810.04805.
+Doddington, G., Mitchell, A., Przybocki, M., Ramshaw, L., Strassel, S., & Weischedel, R. (2004).
+The automatic content extraction (ACE) program – tasks, data, and evaluation. In Proceedings
+of the Fourth International Conference on Language Resources and Evaluation (LREC ’04),
+Lisbon, Portugal. European Language Resources Association (ELRA).
+Dolan, W. B., & Brockett, C. (2005). Automatically Constructing a Corpus of Sentential Paraphrases. In Proceedings of the Third Internation

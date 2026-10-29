@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.63** (PAGES 74\u201375)\n\n- **Problem**: Survey of recent advances in Natural Language Inference (NLI), surveying datasets, models, and evaluation trends from 2014\u20132018.\n- **Method**: Thematic review of published papers; no new experiments or mathematical derivations presented.\n- **Reported results**: Dataset sizes reported (e.g., One Billion Word Benchmark); model performances (e.g., QuAC, QuAC-style QA) cited but no aggregate scores or statistical comparisons given.\n- **Limitations**: No systematic benchmark; results are individual paper metrics; no unifying framework or analysis of failure modes across models.\n- **Page 74 continued**: \u201cReferences-only segment needs a short note, not invented findings.\u201d\n- **Quote 1 (p.75)** \u2014 \u201cQuAC: Question Answering in Context. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, Brussels, Belgium.\u201d\n- **Quote 2 (p.75)** \u2014 \u201cChambers & Jurafsky (2008). Unsupervised Learning of Narrative Event Chains. In Proceedings of ACL-08: HLT.\u201d\n\n**Note**: This segment contains only bibliography entries and a brief survey description; no methodology, results, or limitations beyond the survey's scope are present."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2543,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782380b2ffeeSlVNQ8HldLQpi"
+  }
+]

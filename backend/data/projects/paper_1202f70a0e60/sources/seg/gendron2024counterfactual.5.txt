@@ -1,0 +1,104 @@
+=== PAGE 4 (continued) ===
+eturn its associated causal graph. The expected
+graph should contain the full set of observed causal variables, their relationships, and their attributes
+as described in the introduction of Section 3. We also ask the LLM to estimate the hidden variables
+affecting the observed events and how they are connected. Estimated hidden variables have the same
+attributes as the observed ones but do not have an observed value. Other works have studied ways to
+improve the quality of the generated causal graphs, e.g., via breadth-first search [21]. However, to
+keep our pipeline efficient, we only consider a single forward pass with chain-of-thought prompting
+[47]. We find that this simple choice is sufficient for our purpose. This is not surprising as the causal
+relationships to be found are explicitly described in the data and LLMs have been very successful at
+information retrieval tasks [4, 5, 38]. We prompt the LLM to return its answer in JSON format. Still,
+it may not always provide an extractable response. To alleviate this issue, we allow the LLM to refine
+its answer several times if it cannot be parsed automatically. If multiple documents are provided, we
+merge the causal graphs together. We describe this optional step in Appendix A.
+3.2
+
+Counterfactual Causal Inference
+
+Autoregressive LLMs are inference engines computing the conditional probability of an output token
+Y0 given an input context C: P (Y0 |C). When used for generation, they construct an output sequence
+Y = [Y0 , . . . , YN ] by computing P (Yi |Yi−1 , . . . , Y0 , C) iteratively. Due to their extensive training
+on a massive amount of data, LLMs are good estimators of P (Y0 |C) [4]. However, LLMs are also
+prone to hallucinations when providing long answers: they deviate from the instructions or state false
+information [18]. Indeed, estimating the true conditional distribution of the full output P (Y|C) is
+more challenging, especially when Y is long as it requires building a probability tree considering
+all possible values for the intermediate Yi . This tree can be approximated using beam search or
+heuristic-guided tree search algorithms [51, 46]. However, their performance is still dependent on the
+output length. We alleviate this problem by conditioning the inference query on the causal parents
+of the output, i.e. instead of providing the complete context C as an input of the LLM, we use the
+much smaller subset pa(Y) ⊂ C. Assuming knowledge of the causal graph, this choice can greatly
+reduce the size of the context window and mitigate hallucination. In the rest of this section, we
+assume that the LLM can provide a close estimate of the true conditional distribution P (Y|pa(Y)).
+We challenge this assumption in our experiments. We investigate LLMs’ causal inference abilities
+in counterfactual settings given the estimated causal model M. Counterfactual queries answer the
+question: “How would variable Y change if we had X = x instead of X = x′ ?”. This question can
+be answered by performing abduction, intervention and prediction. The abduction step estimates the
+values of the exogenous factors U from the observed quantities: P (U |x′ , y ′ ). The intervention step
+edits the causal graph with the do(X = x) operation. The prediction step computes the remaining
+variables from their parent values: P (Y |pa(Y )). The corresponding quantity is expressed as follows:
+4
+
+
+=== PAGE 5 ===
+P (Y |do(x), x′ , y ′ ) =
+
+X
+
+P (Y |do(x), u)P (u|x′ , y ′ )
+
+(1)
+
+u∈U
+
+Figure 2 illustrates these steps. To be efficient, we approximate some of them. We sample a single
+u ∼ P (U |ch(U )) using the LLM. ch(·) represents the children of U . We perform the abduction and
+prediction steps only on the variables affected by the intervention, as shown in Figure 2e where we
+use the LLM as described above to compute P (A|X, B, U ) and P (Y |A).
+U
+U
+
+U
+
+U
+
+U
+X
+
+X
+
+B
+
+X
+
+A
+
+B
+A
+
+Y
+
+(a) Factual graph.
+
+X
+
+B
+
+B
+A
+
+A
+Y
+
+X
+
+Y
+
+B
+A
+
+Y
+
+Y
+
+(b) Abduction step. (c) Intervention step. (d) Prediction step. (e) Optimise

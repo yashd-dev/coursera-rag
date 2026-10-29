@@ -1,0 +1,81 @@
+=== PAGE 5 (continued) ===
+s store and
+strengthen knowledge over many iterative processes. When it
+comes to Natural Language Inference, where the objective is
+to identify a semantic relation between a premise and a
+hypothesis, it is indeed hugely beneficial to have a system that
+can learn iteratively and enrich memory. It breaks down the
+process into a series of iterations, enabling the model to
+develop a broader and deeper appreciation of the inferential
+connection between the input sentences.
+According to our method, we have utilized an episodic
+memory model that can work update updates to increase
+memory recall ability and inference accuracy (Lopez - Paz &
+Ranzato, 2017). The truth values of the premise and
+hypothesis, which make up the input to the NLI task, have
+intricate relations that depend on each other, forcing the
+model to iterate through the content of the information several
+times. With every episodic memory update, our model
+gradually attunes its knowledge of the premise regard
+hypothesis as new memories are incorporated and stored into
+the memory state. This method resembles how humans think
+when a person may rethink various aspects of a particular
+piece of information to conclude.
+The benefit of this cyclical process is that it helps to create a
+layered memory representation. With each memory update,
+the proposed hypothesis helps the model to pay more attention
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2223
+
+
+=== PAGE 6 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+to the most critical parts of the premise. First, the model may
+abstract over a coarse - grained interpretation of the premise,
+refined with more precise details necessary for the conclusion
+as new information flows in. This progressive refinement
+guarantees that the final state memory contains all the
+information it needs to accurately judge the relationship
+between the two sentences.
+The proposed model of episodic memory updating is dynamic
+in that the relative focus of the processes can vary with each
+iteration (Gershman & Daw, 2017). For example, in the first
+few steps, the model could learn that the problem is a premise
+that must be solved. Over time, it may pay more attention to
+words or phrases directly related to the hypothesis it is putting
+out. This focus shift is essential in NLI because the difference
+between the premise and the hypothesis might often be in the
+negative words, quantities, or specific individuals.
+Other advantages of multiple episodic memory updates are
+that high noise levels and irrelevant information are averaged
+out. In natural language, not all the subparts of a sentence are
+relevant for a given task or activity. This way, in continuous
+updates, the model can progressively leave behind the lesser
+relevant data and get more and more refined with the memory
+of the premise elements most relevant to the hypothesis. Such
+selective retention of information helps enhance the model's
+overall performance, especially in situations where the
+inferential relation may not be undeniable.
+Using multiple episodic memory updates enables the model
+to accommodate a simple and complex understanding of how
+various yawp sections are connected to different sentence
+structures. Whether it is a simple input based on declarations
+or a more complex one based on relationships, by
+progressively correcting its memory, the model keeps itself
+ready for further inputs and outputs. This ability is essential
+for accurate judgment on NLI as the model gains the ability
+to generalize over numerous forms of language trends and
+interconnection. Therefore, strengthening the DMN through
+episodic memory updates by multiple cycles always increases
+the DMN's ability to perform NLI tasks. Revising the memory
+state over time improves the generality of the premise
+re

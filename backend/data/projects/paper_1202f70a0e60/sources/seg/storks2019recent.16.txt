@@ -1,0 +1,89 @@
+=== PAGE 19 (continued) ===
+r and Simmel (1944). It contains
+100 examples in the format of COPA, and accompanying videos. Questions focus specifically
+on emotions, intentions, and other aspects of social psychology. The data also includes logical
+forms of the questions and alternatives, as the paper focuses on logical formalisms for psychological commonsense knowledge and reasoning. Triangle-COPA can be downloaded at https:
+//github.com/asgordon/TriangleCOPA.
+Story Commonsense. As mentioned earlier, the stories from ROCStories by Mostafazadeh et al.
+(2016) contain sociological and psychological instances of commonsense knowledge. Motivated
+by classical theories of motivation and emotions from psychology, Rashkin et al. (2018a) cre6. The authors do not report the magnitude of any of the dataset partitions, so these counts came from the publicly
+available partitions of the dataset.
+7. Example extracted from Story Commonsense development data available at https://uwnlp.github.io/
+storycommonsense/.
+
+19
+
+
+=== PAGE 20 ===
+S TORKS , G AO , & C HAI
+
+(C) Event2Mind (Rashkin et al., 2018b)
+PersonX starts to yell at PersonY
+
+(A) Triangle-COPA (Gordon, 2016)
+A circle and a triangle are in the house and
+are arguing. The circle punches the triangle. The triangle runs out of the house.
+Why does the triangle leave the house?
+
+PersonX’s intent: to express anger, to
+vent their frustration, to get PersonY’s
+full attention
+PersonX’s reaction: mad, frustrated, annoyed
+Other’s reactions: shocked, humiliated,
+mad at PersonX
+
+a. The triangle leaves the house because it wants the circle to come
+fight it outside.
+b. The triangle leaves the house because it is afraid of being further
+assaulted by the circle.
+
+(D) SocialIQA (Sap, Rashkin, Chen, LeBras, & Choi, 2019b)
+Tracy accidentally pressed upon Austin in
+the small elevator and it was awkward.
+Why did Tracy do this?
+
+(B) SC (Rashkin, Bosselut, Sap, Knight, &
+Choi, 2018a)7
+Jervis has been single for a long time.
+He wants to have a girlfriend.
+One day he meets a nice girl at the grocery
+store.
+
+a. get very close to Austin
+
+Motivation: to be loved, companionship
+Emotions: shocked, excited, hope, shy,
+fine, wanted
+
+b. squeeze into the elevator
+c. get flirty with Austin
+
+Maslow: love
+Reiss: contact, romance
+Plutchik: joy, surprise, anticipation,
+trust, fear
+
+Figure 7: Examples from intuitive psychology benchmarks. Answers in bold.
+
+20
+
+
+=== PAGE 21 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+ated the Story Commonsense benchmark containing about 160,000 annotations of the motivations and emotions of characters in ROCStories to enable more concrete reasoning in this area.
+In addition to the tasks of generating motivational and emotional annotations, the dataset introduces three classification tasks: one for inferring the basic human needs theorized by Maslow
+(1943), one for inferring the human motives theorized by Reiss (2004), and one for inferring
+the human emotions theorized by Plutchik (1980). Story Commonsense can be downloaded at
+https://uwnlp.github.io/storycommonsense/.
+
+Event2Mind. In addition to motivations and emotions, systems may need to infer intentions and
+reactions surrounding events. To support this, Rashkin et al. (2018b) introduce Event2Mind, a
+benchmark dataset of about 57,000 annotations of intentions and reactions for about 25,000 unique
+events extracted from other corpora, including ROCStories (Mostafazadeh et al., 2016). Each event
+involves one or two participants, and presents three tasks of predicting the primary participant’s (1)
+intentions and (2) reactions, and predicting (3) the reactions of other participants. Event2Mind can
+be downloaded at https://uwnlp.github.io/event2mind/.
+
+SocialIQA. Social Intelligence QA (SocialIQA) by Sap et al. (2019b) is a multiple-choice question answering benchmark containing 45,000 questions requiring intuitive psychology and commonsense knowledge of social interactions. Each question consists of a brief context, a question
+about the context, and thre

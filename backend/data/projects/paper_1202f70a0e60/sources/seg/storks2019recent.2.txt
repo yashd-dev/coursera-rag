@@ -1,0 +1,46 @@
+=== PAGE 2 (continued) ===
+aluate NLI algorithms and models.
+These datasets have drawn significant attention from the research community, and many learning
+and inference approaches have been developed. To facilitate quantitative evaluation and encourage
+broader participation, various leaderboards for benchmarks have been set up and maintained. As
+these benchmarks become instrumental and a driving force for the community, this paper aims to
+provide an overview of recent advances in NLI focusing on existing tasks and benchmarks, knowledge resources, and learning and inference approaches, and discuss current limitations and future
+opportunities. We hope this paper will provide an entry point to those who are not familiar with but
+interested in pursuing research in this quickly evolving topic area.
+2. Although videos and images are often used for creating various benchmarks, they are not the focus of this paper.
+3. While NLI is often a term used to refer to textual entailment tasks, e.g., by Bowman, Angeli, Potts, and Manning
+(2015), we use the term here to refer to a broader sense of inference which includes but is not restricted to the textual
+entailment task formulation.
+
+2
+
+
+=== PAGE 3 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+The NLP community has a long history of creating benchmarks to facilitate algorithm development and evaluation for various language processing tasks. Many resources to support those
+approaches to the benchmarks have also been proposed. It is neither possible nor intended for
+this paper to provide a comprehensive discussion of all benchmarks and resources proposed by the
+NLP community. This survey focuses on the ongoing research effort in benchmarks, resources, and
+approaches specifically toward natural language inference (NLI), as shown in Figure 1.
+1.1 Scope of Benchmark Datasets
+There has been a long line of work toward creating benchmark datasets to evaluate machines’
+progress on language processing tasks, and facilitate development of new approaches to the tasks.
+Many early efforts focused on collecting large-scale annotations to support data-driven approaches
+for low-level tasks such as POS tagging (Marcus, Santorini, & Marcinkiewicz, 1993) and named
+entity recognition (Grishman & Sundheim, 1996). Other early benchmarks, such as the Message
+Understanding Conference (MUC) benchmarks for information extraction (Sundheim, 1993) and
+the automatic content extraction (ACE) benchmarks for coreference resolution and relation extraction (Doddington, Mitchell, Przybocki, Ramshaw, Strassel, & Weischedel, 2004), were mainly designed to explore the information found in linguistic knowledge and context. In part motivated by
+earlier works from McCarthy (1976) and Lehnert (1977), other benchmarks were created to focus on
+reading comprehension through tasks like question answering (Hirschman, Light, Breck, & Burger,
+1999; Voorhees, 2000). These early reading comprehension benchmarks often required only one
+sentence of context at a time to answer questions(Kočiský, Schwarz, Blunsom, Dyer, Hermann,
+Melis, & Grefenstette, 2018), possible through shallow linguistic approaches. Although it may be
+the case that some type of outside knowledge or reasoning may be required to reach an oracle performance, as all of these earlier benchmarks primarily targeted approaches that only applied linguistic
+context, they are outside the scope of this survey.
+Recent years have seen a shift in benchmark tasks which are beyond the use of linguistic context,
+aiming to require a deeper understanding to solve the tasks. For instance, consider this question from
+the Winograd Schema Challenge (Levesque, 2011):“The trophy would not fit in the brown suitcase
+because it was too big. What was too big?” To answer this question, linguistic constraints will not
+be able to resolve whether it refers to the trophy or the brown suitcase. Only based on external
+knowledge (i.e., the fact that an object must be bigger than another object in order to contain 

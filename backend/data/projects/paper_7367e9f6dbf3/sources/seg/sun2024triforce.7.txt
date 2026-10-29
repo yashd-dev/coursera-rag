@@ -1,0 +1,114 @@
+=== PAGE 6 (continued) ===
+reserved during the final speculation
+phase, which is identical to the standard speculative decoding algorithm (Leviathan et al.,
+2023; Chen et al., 2023a), and the proof is trivial.
+6
+
+
+=== PAGE 7 ===
+Published as a conference paper at COLM 2024
+
+4.3
+
+Algorithm
+
+T RI F ORCE is devised to exploit the bottlenecks associated with both model weights and KV
+cache to enhance the inference speed of LLMs for long sequence generation. We present the
+pseudocode for the T RI F ORCE in Algorithm 1. It starts by prefilling the target model M p with
+full cache C p and draft model Mq with StreamingLLM cache Cq using a given input prefix,
+and then constructs the retrieval cache Cr . The initialization and update mechanism for the
+retrieval cache Cr is guided by the insights of contextual locality discussed in Section 3.2. We
+first construct Cr using the last token of the prefix, arranging tokens by the descending order
+of importance. In subsequent inferences, we overwrite tokens with the least importance,
+maintaining the relevance and utility of the cache. A reconstruction of Cr is triggered either
+when the rolling average acceptance rate drops below a threshold or at a designed stride.
+The inference progresses iteratively until it reaches the target sequence length T. After each
+iteration, cache Cr and Cq are updated to prepare for the subsequent speculation phase.
+Each iteration encompasses two speculations: initially, Mq utilizes Cq to predict M p with Cr
+for γ1 steps until n ≥ γ2 . Subsequently, these n tokens are self-verified (Zhang et al., 2023)
+by M p with C p . This process constructs a hierarchy: the first layer of hierarchy employs a
+smaller, faster model Mq with local context Cq to speculate the large model M p with partial
+but high-quality global context Cr , addressing the model weights bottleneck. The second
+layer utilizes model M p with retrieval cache for self-speculation, overcoming the bottleneck
+caused by KV cache. This hierarchical speculation algorithm boosts efficiency by effectively
+addressing both bottlenecks. System implementation is detailed in Appendix A.
+Algorithm 1
+
+T RI F ORCE
+
+1: Input: Prefix [ x1 , · · · , xt ], target model M p with full cache C p , draft model Mq with
+
+StreamingLLM cache Cq , target sequence length T, speculation length γ1 , γ2 , drafting
+phase D RAFT, verification phase V ERIFY, and correction phase C ORRECT;
+2: Initialize: Prefill M p , Mq , construct retrieval cache Cr using xt , N ← t
+3: while N < T do
+4:
+n←0
+5:
+while n < γ2 do
+6:
+Set q1 , · · · , qγ1 ← D RAFT ( Mq , Cq , x≤ N )
+▷ Run Mq with eviction cache Cq
+7:
+Sample x̃i ∼ qi , i = 1, · · · , γ1
+▷ Run M p with retrieval cache Cr
+8:
+Set p̂1 , · · · , p̂γ1 +1 ← M p (Cr , x≤ N , x̃≤γ1 )
+9:
+for i = 1 to γ1 do
+10:
+if V ERIFY(x̃i , qi , p̂i ) then
+11:
+x̂n+i ← x̃i and n ← n + 1
+12:
+else
+13:
+x̂n+i ← C ORRECT (qi , p̂i ) and n ← n + 1
+14:
+Break
+15:
+end if
+16:
+end for
+17:
+If all drafted tokens are accepted, sample next token x̂n+1 ∼ p̂γ1 +1 and n ← n + 1
+18:
+end while
+19:
+Collect p̂1 , · · · , p̂n for x̂1 , · · · , x̂n
+20:
+Set p1 , · · · , pn+1 ← M p (C p , x≤ N , x̂≤n )
+▷ Run M p with full cache C p
+21:
+for i = 1 to n do
+22:
+if V ERIFY(x̂i , p̂i , pi ) then
+23:
+x N +i ← x̂i and N ← N + 1
+24:
+else
+25:
+x N +i ← C ORRECT ( p̂i , pi ) and N ← N + 1
+26:
+Break
+27:
+end if
+28:
+end for
+29:
+If all drafted tokens are accepted, sample next token x N +1 ∼ pn+1 and N ← N + 1
+30:
+Update Cr , Cq based on the accepted tokens ▷ Update KV cache for the next iteration
+31: end while
+
+7
+
+
+=== PAGE 8 ===
+Published as a conference paper at COLM 2024
+
+Table 2: On-chip results (A100): We indicate the average acceptance rate in parentheses
+alongside the speedup factor. T means sampling temperature. In the A100 on-chip experiments, with a prompt length of 122K, and a generation length of 256, we evaluate T RI F ORCE
+against the JF68M model with StreamingLLM cache (Naive Policy). The results clearly
+demonstrate that T RI F ORCE significantly surpasses its performance.
+M

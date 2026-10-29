@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## raju2017dynamic (page 5 continued)\n\n- **Problem**: GRU-based DMN struggles with NLI tasks requiring complex sentence relationships; transformers could capture long-range dependencies better than sequential RNNs.\n- **Method**: Exploring transformer and attention-based sentence encoders to replace/augment GRU encoding in DMN; evaluating self-attention mechanisms for weighing word importance and capturing premise-hypothesis interplay.\n- **Reported results**: No new results; framework redesign discussion only. Combining transformers with task-specific attention layers could refine focus on critical inputs (e.g., negation, quantifiers).\n- **Limitations**: Transformers/attention models require more computational resources than GRUs; trade-offs between accuracy gains and model efficiency/scalability must be balanced.\n\n> \"Transformers have revolutionized the natural language processing (NLP) field due to their ability to capture long range dependencies and relationships within text, which traditional RNN - based models like GRUs often miss.\" (page 5 continued)\n\n> \"Incorporating transformers into DMNs could significantly enhance the model\u2019s ability to encode sentence pairs.\" (page 5 continued)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2073,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781ea359ffe4LoMn78Fpkdhr1"
+  }
+]

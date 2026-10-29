@@ -1,0 +1,52 @@
+=== PAGE 2 (continued) ===
+ is available at: https://github.com/Strong-AI-Lab/counterfactual-llm-inference.
+
+2
+
+
+=== PAGE 3 ===
+Strategic Foresight Strategic Foresight aims to provide a structured approach to gathering information regarding plausible future scenarios and adequately preparing for change. It provides
+expert insights regarding trends and emerging issues that can be considered for strategic planning
+and policy-making. As such, it is being increasingly adopted in the public and private sectors [6, 39].
+Among the most frequently used methods, we find scenario planning [10], which aims to foresee
+relevant scenarios based on trends and factors of influence to understand better how actions can
+influence the future [48]. While the value of artificial intelligence for strategic foresight has been
+recognized, much of the work is still not automated [37, 3]. Scientific literature reports on using
+artificial intelligence for information scanning and analysis [33, 3], to identify weak signals and trends
+[14], and extract actions and outcomes that can be mapped to causal decision diagrams [35]. More
+recently, authors have proposed architectures that could automate strategic foresight. Nevertheless,
+the proposed architecture only considered a signal assessment module without explicit reference
+to testing causality among the extracted graph relationships [41, 42]. We aim to bridge this gap by
+identifying, extracting, and testing causal relationships reported in media news to construct a graph of
+causal relationships and use such a graph to build plausible future scenarios, providing expert insights
+for strategic planning and policy-making.
+
+3
+
+Counterfactual Inference with Large Language Models
+
+This section describes our proposed method for causal structure discovery and causal inference
+from text. We build a modified version of the Structural Causal Model (SCM) [34] to represent the
+described causal mechanisms. Following the SCM framework, we consider that the mechanisms
+can be represented as Directed Acyclic Graphs (DAGs). For every document D, we construct a
+DAG G = ⟨U, V, E⟩ where the observed nodes v ∈ V correspond to general depictions of the
+events in the text. Two nodes (Vi , Vj ) ∈ V × V are connected by an edge Eij = (Vi , Vj ) ∈ E if
+a causal relationship between them is explicitly mentioned in the text data (according to an LLM).
+We also represent possible exogenous factors U ∈ U describing unobserved events having a causal
+influence on the observations. Nodes and edges also have features. Nodes correspond to causal
+variables and have a domain established during extraction and a current value from this domain.
+Confounders U are not assigned values because they are not observed. As we aim to use an LLM
+for inference, we also keep attributes in plain natural language: a description of the variable and
+additional contextual information. Edges also have a description attribute. For example, given this
+sentence: “The airlines companies have seen their revenues diminishing due to travel restrictions.”,
+we can extract the following causal variables S and T , and their relationship: travel restrictions (S) →
+airlines revenues (T). Their domains can be, e.g., a boolean for S and a fixed set of categories for T
+(since we do not have access to the numerical values of the revenues). Their current values are written
+S = so and T = to . During counterfactual inference, we intervene to modify these values while the
+other attributes remain unchanged. For performance, we add contextual information to each node,
+i.e., background knowledge extracted from the text. In this example, the contextual information could
+be the country where the event takes place. The edge description can be, e.g., “travel restrictions
+diminish airlines companies revenues”.
+SCMs typically have a set of mapping functions F to infer the value of a variable V given its
+parents pa(·) (e.g., V ← fV (pa(V ))). Instead of using a set of predefined functions, we perform
+causal inference using

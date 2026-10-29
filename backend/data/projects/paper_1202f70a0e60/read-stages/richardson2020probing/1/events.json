@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing.1 \u2014 Segment 1/12\n\n**Problem:** Semantic phenomena like boolean coordination, quantification, conditionals, comparatives, and monotonicity reasoning are central to NLI but unclearly captured in existing benchmarks.\n\n**Method:** Propose \"semantic fragments\"\u2014systematically generated NLI datasets each targeting a distinct semantic phenomenon. Use library of 8 fragments to probe model behavior. Experiment with pre-trained models and few-minute finetuning with novel \"inoculation\" variation.\n\n**Reported results:** (a) State-of-the-art models (including BERT) pre-trained on existing NLI benchmarks perform poorly on these new fragments despite centrality to NLI. (b) With only few minutes of additional finetuning (carefully selected LR + inoculation), a BERT-based model masters all logic and monotonicity fragments while retaining established NLI benchmark performance.\n\n- **P1:** \"While such phenomena are involved in natural language inference (NLI) and go beyond basic linguistic understanding, it is unclear the extent to which they are captured in existing NLI benchmarks and effectively learned by models.\" [\u2020]\n- **P1:** \"To investigate this, we propose the use of semantic fragments\u2014systematically generated datasets that each target a different semantic phenomenon\u2014for probing, and efficiently improving, such capabilities of linguistic models.\" [\u2020]\n- **P2:** \"Our experiments, using a library of 8 such semantic fragments, reveal two remarkable findings:\" [\u2020]\n- **P2-(a):** \"State-of-the-art models, including BERT, that are pre-trained on existing NLI benchmark datasets perform poorly on these new fragments, even though the phenomena probed here are central to the NLI task.\" [\u2020]\n- **P2-(b):** \"with only a few minutes of additional finetuning\u2014with a carefully selected learning rate and a novel variation of 'inoculation'\u2014a BERT-based model can master all of these logic and monotonicity fragments while retaining its performance on established NLI benchmarks.\" [\u2020]\n\n**Limitations:** Only 8 fragments tested; generalization to other semantic phenomena unspecified. No analysis of failure modes beyond accuracy drop. Finetuning results not compared against training from scratch.\n\n**Quotes:**\n- \"State-of-the-art models, including BERT, that are pre-trained on existing NLI benchmark datasets perform poorly on these new fragments, even though the phenomena probed here are central to the NLI task.\"\n- \"with only a few minutes of additional finetuning\u2014with a carefully selected learning rate and a novel variation of 'inoculation'\u2014a BERT-based model can master all of these logic and monotonicity fragments while retaining its performance on established NLI benchmarks.\"\n\nA references-only segment needs a short note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2573,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7834aef5ffeDxUohfxtYFLli1"
+  }
+]

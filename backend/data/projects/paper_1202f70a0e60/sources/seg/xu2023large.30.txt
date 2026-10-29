@@ -1,0 +1,79 @@
+=== PAGE 28 (continued) ===
+ siblings-in-law.
+Inductive reasoning is a type of reasoning that uses specific examples to make a general conclusion. In this
+case, we can use the following specific examples to make the general conclusion that Reynaldo and Naomi are
+siblings-in-law:
+Maxine is the wife of Reynaldo.
+Sara is the daughter of Maxine.
+Naomi is the sister of Sara.
+Therefore, Naomi is the sister-in-law of Reynaldo.
+Here are some simple explanations for each of the specific examples:
+Maxine is the wife of Reynaldo because we are told that Reynaldo’s wife is Maxine.
+Sara is the daughter of Maxine because we are told that Maxine has a daughter named Sara.
+Naomi is the sister of Sara because we are told that Naomi went shoe shopping with her sister Sara.
+Answer and Explain:
+Explain Error Type:
+
+
+=== PAGE 29 ===
+29
+
+Bard
+of 0-shot
+
+Davinci-003
+of 0-shot
+
+ChatGPT
+of 3-shot
+
+ChatGPT
+of 1-shot
+
+ChatGPT
+of 0-shot
+
+Question, answer
+and explanation
+
+TABLE 18: A reasoning case in α-NLI.
+
+Context: When I was 19, I enlisted with the USMC. When I got back from the hospital, the USMC sent me home.
+Question: Choose the more likely explanation from following two options: A. I got injured the last day during a
+training event. B. I was shot in action but didn’t regret it.
+Answer: B
+The more likely explanation is hypothesis choice A: I got injured the last day during a training event. This is
+because the context mentions the narrator enlisting with the USMC and being sent home after getting back from
+the hospital, suggesting a military-related scenario. Hypothesis choice A of the narrator getting injured during a
+training event aligns with these details and provides a probable explanation for why they may have been sent
+home, as injuries sustained during training may prevent soldiers from fulfilling duties and may require medical
+attention. Hypothesis choice B of the narrator being shot in action doesn’t fit with the context, as there is no
+indication of any mention of being in combat or any explanation for how this would have been related to the
+narrator’s hospitalization or being sent home, and it doesn’t provide an explanation for what may have motivated
+the narrator’s military-related interests or preferences.
+Answer and Explain:
+Explain Error Type:
+The correct choice is A. The context suggests that the person was enlisted in the USMC and got sent home from
+the hospital, indicating that they likely got injured during a training event. Choice B suggests an unlikely scenario
+where the person got shot in action, which cannot be inferred from the context and contradicts the fact that the
+person did not regret it.
+Answer and Explain:
+Explain Error Type:
+The correct choice is: A. The context suggests that the narrator enlisted with the USMC and was sent home from
+the hospital. Hypothesis A, where the narrator got injured the last day during a training event, is the more likely
+explanation because it fits with the idea of being sent home from the hospital after being injured in the line of
+duty. Hypothesis B, where the narrator was shot in action but didn’t regret it, does not make sense as a plausible
+explanation for being sent home from the hospital expressed in the context.
+Answer and Explain:
+Explain Error Type:
+The more likely explanation is A. I got injured the last day during a training event. This could have been caused
+by some sort of accident with a weapon or a physical training exercise gone wrong. It is more likely that I would
+have been injured on the last day of service, as opposed to being shot in action, which would be less likely in the
+US Marine Corps.
+Answer and Explain:
+Explain Error Type:
+The more likely explanation is A. I got injured the last day during a training event.
+This is because the context states that you enlisted with the USMC at 19, and that you were sent home from the
+hospital after being injured. This suggests that the injury occurred during training, and that it was serious enough
+to warrant your discharge from the military.
+Hypothesis 

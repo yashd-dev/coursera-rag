@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## raju2017dynamic.9 (Pages 6-7)\n\n### Problem\nInvestigating memory flow in deep learning models for NLI via the Dynamic Memory Network (DMN) architecture, with focus on generalization capability for complex NLI tasks.\n\n### Method\nBuilt a context-based database for new inferences; used Stanford SNLI dataset (570,000 premise-hypothesis pairs, 3 labels: entailment, contradiction, neutrality). Employed 3-class classification accuracy as primary metric, supplemented with precision and recall per category. Trained/validation/test split established for model evaluation.\n\n### Reported Results\n- DMN architecture evaluated on SNLI dataset\n- 3-class accuracy as primary evaluation measure\n- Precision and recall calculated per category for detailed view\n- Dataset diversification assessed model generalization across sentence types, logical connections, and syntactic structures\n\n### Limitations\n- Accuracy insufficient for multi-class classification scenarios\n- Large size and variation of dataset must be clarified/made more manageable\n- High-dimensional space prohibits (text cuts off)\n\n### Direct Quotes (Page 6)\n> \"We used 3 - class classification accuracy as the primary evaluation measure in all our experiments.\"\n> \"Another disadvantage of this data set is its large size and variation, which must be clarified and made more manageable.\"\n\n### Notes\n- References-only segment: no invented findings\n- Source text truncated on page 7 continuation\n- Dataset comprised 570,000 premise-hypothesis pairs from wide range of texts"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2212,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781e383fffepHd42kXy26t6br"
+  }
+]

@@ -1,0 +1,198 @@
+=== PAGE 17 (continued) ===
+ T
+PV
+XWu , XWg
+XWd
+Parallel decoding
+XWQ , XWK , XWV
+QK
+PV
+
+T
+
+XWu , XWg
+XWd
+
+64 in powers of 2 and sequence lengths from 128 to 8192 in powers of 2 (49 settings for each operator). From all the figures,
+we observe that the datapoints of each operator in the prefill and decoding stages cluster at very similar positions across all
+GPUs and for various model sizes.
+During the prefill phase, increasing the batch size changes the FLOP/s of the attention matrix multiplications (see ‘qk/pv
+init‘) but does not affect the Operational Intensity (refer to the vertical dashed arrow in Fig. 9). In contrast, increasing
+the sequence length impacts both FLOP/s and Operational Intensity in the prefill phase (refer to the diagonal dashed arrow
+in Fig. 9). During the decoding phase, the attention matrix multiplications are significantly limited by memory bandwidth.
+Despite an increase in FLOP/s with changes in batch size and sequence length, the Operational Intensity remains nearly
+unchanged (see ‘qk/pv ar‘). This indicates suboptimal resource utilization in the self-attention mechanism.
+The linear layers in the prefill phase are mostly compute-bound (see ‘qkv mlp init‘ and ‘up/gate/down init‘).
+During the decoding phase, the datapoints of the linear layer form a line with the same slope as the GPU’s memory
+bandwidth (see ‘qkv mlp ar‘ and ‘up/gate/down ar‘). This indicates the linear layers in the decoding stage are
+also bounded by memory bandwidth. Increasing the batch size improves the achieved FLOP/s and Operational Intensity
+under memory bandwidth constraints through better parallelism. Note that linear layers only process the new token and are
+independent of sequence length (See ‘Decoding‘ section in Table 5).
+
+17
+
+
+=== PAGE 18 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+init len
+pv
+_
+qk/ e seq
+as
+e
+r
+Inc
+
+qk/pv init
+Increase bs
+
+Figure 9. The figure shows the relationship between FLOP/s and Operational Intensity for all benchmarked datapoints of Llama-7B
+operators on A100-80GB-PCIe. The dashed lines represent the HBM bandwidth limit (1,935GB/s) and the peak performance limit (312
+TFLOP/s) (NVIDIA). ‘qkv mlp’ stands for the linear layers projecting hidden features to query/key/value features. ‘up/gate/down’
+stands for the linear layers following the attention block. ‘qk/pv’ stands for the two steps of attention matrix multiplications. ‘ar’ stands
+for the decoding (autoregressive) and ‘init’ stands for the prefill phase.
+
+Roofline Model (Llama 13B, A100 80GB PCIe)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+
+1,935GB/s
+312 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+Figure 10. Llama-13B operators on A100-80GB-PCIe.
+
+18
+
+
+=== PAGE 19 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Roofline Model (Llama 33B, A100 80GB PCIe)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+
+1,935GB/s
+312 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+Figure 11. Llama-33B operators on A100-80GB-PCIe.
+
+Roofline Model (Llama 7B, A40)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+Figure 12. Llama-7B operators on A40.
+
+19
+
+696GB/s
+149.7 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+
+=== PAGE 20 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Roofline Model (Llama 13B, A40)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+
+696GB/s
+149.7 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+Figure 13. Llama-13B operators on A40.
+
+Roofline Model (Llama 33B, A40)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+Figure 14. Llama-33B operators on A40.
+
+20
+
+696GB/s
+149.7 T

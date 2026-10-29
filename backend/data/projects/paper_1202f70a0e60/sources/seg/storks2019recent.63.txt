@@ -1,0 +1,52 @@
+=== PAGE 74 (continued) ===
+G. (2018). Language to Action: Towards Interactive Task Learning with Physical Agents. In Proceedings of the Twenty-Seventh
+International Joint Conference on Artificial Intelligence (IJCAI 2018), pp. 2–9, Stockholm,
+Sweden. International Joint Conferences on Artificial Intelligence Organization.
+Chambers, N., & Jurafsky, D. (2008). Unsupervised Learning of Narrative Event Chains. In Proceedings of ACL-08: HLT, Columbus, OH, USA. Association for Computational Linguistics.
+Charniak, E., Altun, Y., Braz, R. d. S., Garrett, B., Kosmala, M., Moscovich, T., Pang, L., Pyo, C.,
+Sun, Y., Wy, W., Yang, Z., Zeller, S., & Zorn, L. (2000). Reading Comprehension Programs in
+a Statistical-language-processing Class. In Proceedings of the 2000 ANLP/NAACL Workshop
+on Reading Comprehension Tests As Evaluation for Computer-Based Language Understanding Sytems, ANLP/NAACL-ReadingComp ’00, pp. 1–5, Seattle, WA, USA. Association for
+Computational Linguistics.
+Chelba, C., Mikolov, T., Schuster, M., Ge, Q., Brants, T., Koehn, P., & Robinson, T. (2014). One
+Billion Word Benchmark for Measuring Progress in Statistical Language Modeling. In 15th
+Annual Conference of the International Speech Communication Association (INTERSPEECH
+2014), Singapore, Singapore. ISCA Archive.
+Chen, Q., Zhu, X., Ling, Z.-H., Inkpen, D., & Wei, S. (2018). Neural Natural Language Inference
+Models Enhanced with External Knowledge. In Proceedings of the 56th Annual Meeting
+of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 2406–2417,
+Melbourne, Australia. Association for Computational Linguistics.
+Chen, Q., Zhu, X., Ling, Z., Wei, S., Jiang, H., & Inkpen, D. (2017). Enhanced LSTM for Natural
+Language Inference. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017), Vancouver, BC, Canada. Association for Computational
+Linguistics.
+Chen, Z., & Ji, H. (2009). Graph-based Event Coreference Resolution. In Proceedings of the 2009
+Workshop on Graph-Based Methods for Natural Language Processing (TextGraphs-4), pp.
+54–57, Suntec, Singapore. Association for Computational Linguistics.
+Chen, Z., Cui, Y., Ma, W., Wang, S., Liu, T., & Hu, G. (2018). HFL-RC System at SemEval-2018
+Task 11: Hybrid Multi-Aspects Model for Commonsense Reading Comprehension. arXiv:
+1803.05655.
+74
+
+
+=== PAGE 75 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Chklovski, T. (2003). Learner: A System for Acquiring Commonsense Knowledge by Analogy.
+In Proceedings of the 2nd International Conference on Knowledge Capture (K-CAP ’03),
+K-CAP ’03, pp. 4–12, New York, NY, USA. ACM.
+Chklovski, T., & Pantel, P. (2004). VerbOcean: Mining the Web for Fine-Grained Semantic Verb
+Relations. In Lin, D., & Wu, D. (Eds.), Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP 2004), pp. 33–40, Barcelona, Spain.
+Association for Computational Linguistics.
+Cho, K., van Merrienboer, B., Bahdanau, D., & Bengio, Y. (2014). On the Properties of Neural Machine Translation: Encoder-Decoder Approaches. In Proceedings of the Eighth Workshop on
+Syntax, Semantics and Structure in Statistical Translation (SSST-8), Doha, Qatar. Association
+for Computational Linguistics.
+Choi, E., He, H., Iyyer, M., Yatskar, M., Yih, W.-t., Choi, Y., Liang, P., & Zettlemoyer, L. (2018).
+QuAC : Question Answering in Context. In Proceedings of the 2018 Conference on Empirical
+Methods in Natural Language Processing, Brussels, Belgium. Association for Computational
+Linguistics.
+Chu, Z., Wang, H., Gimpel, K., & McAllester, D. (2017). Broad Context Language Modeling as
+Reading Comprehension. In Proceedings of the 15th Conference of the European Chapter
+of the Association for Computational Linguistics (EACL 2017), pp. 52–57, Valencia, Spain.
+Association for Computational Linguistics.
+Clark, C., & Gardner, M. (2018). Simple and Effective Multi-Paragraph Reading Comprehension.
+In Proceedings of the 56th Annual Meeting of the Association for Computat

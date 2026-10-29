@@ -1,0 +1,168 @@
+=== PAGE 8 (continued) ===
+on
+Factual Counterfactual
+
+Self-Confidence
+Factual Counterfactual
+
+0.689
+0.506
+0.501
+0.772
+
+0.899
+0.666
+0.732
+0.820
+
+GPT-4-1106
+GPT-4o
+GPT-4o-mini
+GPT-3.5
+LLaMA-3.1
+
+0.650
+0.489
+0.452
+0.764
+
+5
+
+Experiments on Real-World Usecase
+
+5.1
+
+Experimental Setup
+
+0.907
+0.707
+0.722
+0.829
+
+We extract 5,486 media events related to the "Price of Oil" from EventRegistry [25]. These events,
+spanning the first quarters of 2015, 2020, 2022, and 2023, were selected based on geopolitical
+events highlighted by the U.S. Energy Information Administration and the Russo-Ukrainian War 3 .
+We perform experiments using LLaMA-3.1 [9] and GPT-4o [29, 30]. We provide early results on
+real-world news documents. Due to the unavailability of the ground truth, we focus our experiments
+on a handful of documents that we manually verify.
+5.2
+
+Counterfactual Inference
+
+Table 4 provides an example of results obtained with our method for a model M(D) extracted from
+a document D and under interventions M0=‘low’,9=‘False’ (D). The input text and the explanations
+given by the LLMs during inference are given in Appendix C. The document D describes how
+the COVID-19 pandemic and the rise in oil prices affect Malaysia’s economy. We perform two
+interventions on the graph and build a counterfactual world where the severity of the pandemic is low
+and a change of governement has not happened. From these interventions, the model updates the rest
+3
+
+The geopolitical events were highlighted in the following report, last accessed on August 25th 2023:
+https://www.eia.gov/finance/markets/crudeoil/spot_prices.php.
+
+8
+
+
+=== PAGE 9 ===
+Table 4: Example of counterfactual inference performed by the Counterfactual-CI model on realworld data. The first row shows the extracted factual graph and the counterfactual graph under
+interventions (in yellow) do(0=‘low’) and do(9=‘False’). The exogenous factor is in red. After
+abduction, a value is assigned to it (illustrated in blue). Variables inferred during the prediction step
+are shown in green. The bottom rows show the values of the factual and counterfactual worlds.
+Factual Graph
+
+Intervened Graph
+
+5
+H0
+4
+11
+
+4
+
+0
+11
+
+10
+
+1
+
+12
+
+0
+1
+2
+3
+4
+5
+9
+10
+11
+12
+h0
+
+H0
+9
+
+0
+
+2
+
+10
+
+1
+
+12
+
+9
+
+2
+
+3
+
+3
+
+Factual Values
+
+Counterfactual Values
+GPT-4o LLaMA-3.1
+
+Severity of COVID-19 pandemic (range element): severe
+Severity of oil price war (range element): severe
+Bursa Malaysia downtrend magnitude (int): 29%
+FBM KLCI index value (float): 1,280.63
+Selling pressure on stocks (range element): high
+Investors moving into cash (bool): True
+Malaysia’s change of coalition government (bool): True
+Downside risks to corporate earnings (range element): high
+Travel restrictions imposed worldwide (range element): severe
+Condition of oil & gas and airlines sectors (range element): bad
+Potential end of COVID-19 pandemic (bool): None
+
+low (from do operation)
+20
+1580
+
+high
+1500.00
+
+False (from do operation)
+low
+low
+none
+none
+good
+good
+False
+True
+
+of the variables and predicts a better economical situation. We emphasise that these results should be
+taken as an illustrative example only. We also observe that the two models return different values for
+the exogenous factor but reach the same conclusions.
+As in Section 4.3, we ask the LLM to self-evaluate its generated graphs. We generate four causal
+graphs from a single document and, for each graph, we automatically build six counterfactual queries.
+We summarise each graph into text format and prompt the LLM to return a plausibility score for the
+chain of events and a confidence score for its prediction (prompts are given in Appendix B.4). We
+show the results in Table 5. The LLMs generally provide higher scores to the factual graph than to the
+counterfactuals. This is not surprising as the former are extracted from real data, closer to the LLMs’
+training distribution. However, they still give high scores to the built counterfactuals. GPT-4o is
+also more consistent on the factual graphs, with a lower standard deviation, highlighting

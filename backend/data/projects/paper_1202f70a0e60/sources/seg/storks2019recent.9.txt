@@ -1,0 +1,39 @@
+=== PAGE 11 (continued) ===
+vedi, Roth, Upadhyay, and Roth (2018) is a reading comprehension dataset consisting of about 10,000 questions posed on over 800 paragraphs across a
+variety of topic domains. It differs from a traditional reading comprehension dataset in that most
+questions can only be answered by reasoning over multiple sentences in the accompanying paragraphs, answers are not spans of text from the paragraph, and the number of answer choices as
+well as the number of correct answers for each question is entirely variable. All of these features make it difficult for shallow approaches to perform well on the benchmark, and encourage a deeper understanding of the passage. Further, the benchmark includes a variety of nontrivial semantic phenomena in passages, such as coreference and causal relationships, which often require external knowledge to recognize and reason about. MultiRC can be downloaded at
+https://cogcomp.org/multirc/.
+ARCT. The Argument Reasoning Comprehension Task (ARCT) proposed by Habernal, Wachsmuth,
+Gurevych, and Stein (2018) is a different type of question answering task which provides the structures of arguments presented in online comments on news articles, requiring systems to choose one
+of two lexically similar warrants to justify a claim made in an argument. According to the authors,
+many such warrants, e.g., “most house cats face enemies,” are unstated, rather presupposed by arguments, and require external knowledge to infer. This formulation makes available some of the
+required knowledge for interpreting the presented arguments, however many of the examples require further world knowledge beyond the provided warrants (Niven & Kao, 2019). ARCT consists
+of about 2,500 examples, and is available at https://github.com/UKPLab/argumentreasoning-comprehension-task.
+SQuAD. The Stanford Question Answering Dataset (SQuAD) from Rajpurkar, Zhang, Lopyrev,
+and Liang (2016) was originally a set of about 100,000 questions posed on passages from Wikipedia
+articles, which are provided with the questions. The initial dataset did not require any external
+knowledge or reasoning to solve; answers were spans of text directly from the passage, and could be
+found based on linguistic context. To make this dataset more challenging, SQuAD 2.0 (Rajpurkar
+et al., 2018) was later released to add about 50,000 additional questions which are unanswerable
+given the passage. Such questions require one to reason about what can and cannot be inferred
+given the knowledge from the passage, which takes a deep understanding. All SQuAD data can be
+downloaded at https://rajpurkar.github.io/SQuAD-explorer/.
+CoQA. The Conversational Question Answering (CoQA) dataset by Reddy et al. (2018) contains passages each accompanied with a set of questions in conversational form, as well as their
+answers and evidence for the answers as spans of text. There are about 127,000 questions in
+the dataset total, where answers are abstractive but a rationale must be given as a span of text.
+As questions are conversational, each question pertaining to a passage must be answered given
+the conversation history generated from previous questions on the passage. Unlike other conver11
+
+
+=== PAGE 12 ===
+S TORKS , G AO , & C HAI
+
+sational QA datasets, CoQA explicitly requires external knowledge in many questions, e.g., the
+example given in Figure 4. Further, CoQA includes out-of-domain types of questions appearing
+only in the test set, and unanswerable questions throughout, encouraging reasoning beyond the passage and knowledge learned in training to answer questions. CoQA data can be downloaded at
+https://stanfordnlp.github.io/coqa/.
+QuAC. Question Answering in Context (QuAC) by Choi, He, Iyyer, Yatskar, Yih, Choi, Liang,
+and Zettlemoyer (2018) is a similar but larger conversational QA benchmark consisting of about
+98,000 questions over nearly 14,000 dialogs about nearly 9,000 passages. Answers here are spans of
+text, while in CoQA answers are abstractive, but rationalized by spans of text. 

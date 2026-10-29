@@ -1,0 +1,44 @@
+=== PAGE 47 (continued) ===
+ing. Another highly popular approach to creating knowledge bases is crowdsourcing.
+The Open Mind Common Sense project responsible for producing ConceptNet (Liu & Singh, 2004)
+used a competitive online game to accept statements from humans in free text (Singh, 2002). Later,
+researchers converted the knowledge within collected statements into a knowledge graph by automatic processes. This method of using games to attract users to perform human intelligence tasks
+for free is typically referred to as Games with a Purpose (GWAP). Other GWAPs include the one
+used to collect annotations for VerbCorner (Hartshorne et al., 2013), and the Robot Trainer knowledge acquisition game by Rodosthenous and Michael (2016), where players must teach human
+knowledge to a virtual robot. The cost of crowdsourcing effort is difficult to assess. It ranges from
+literally getting it for free (e.g., GWAPs like Open Mind Common Sense) to an estimate of $2.25
+per statement (Paulheim, 2018) for paid crowdsourcing efforts. Though the gaming approach may
+be cheaper in the long run, developing such a game platform is inevitably more time-consuming.
+47
+
+
+=== PAGE 48 ===
+S TORKS , G AO , & C HAI
+
+Another challenge of crowdsourcing, as pointed out by Davis and Marcus (2015), is that typical
+crowd workers may not be able to follow the theories and representations of knowledge that engineers have worked out. As a result, knowledge acquired by crowdsourcing can be somewhat messy,
+which again often needs human expert validation.
+Each of these methods has its own advantages and drawbacks in terms of the trade-offs between
+the cost and the quality of the acquired knowledge. Most of these knowledge resources are developed from a bottom-up fashion. The goal is to create general knowledge bases to provide inductive
+bias for a variety of learning and reasoning tasks. Nevertheless, it is not clear whether such a goal
+is met and to what extent these knowledge resources are applied to natural language inference in
+practice. A systematic study, as suggested by Davis and Marcus (2015), for Cyc and other resources
+would be useful.
+3.3 Leveraging Incomplete Resources
+Due to the high magnitude of knowledge possessed by humans, no single knowledge resource is
+complete, and even the largest resources are missing essential knowledge to perform well on NLI
+benchmarks. This was discovered, for example, of ConceptNet (Liu & Singh, 2004), which is missing many required relations for the intuitive psychology-based Event2Mind benchmark (Rashkin
+et al., 2018b). To address this problem, several methods have been proposed for leveraging incomplete knowledge bases, from dimensionality reduction techniques to extractive and automatic
+knowledge base completion techniques.
+Dimensionality reduction. One method is through dimensionality reduction. An example of this
+is AnalogySpace (Speer et al., 2008), an algorithm packaged with the latest release of ConceptNet
+(Speer et al., 2017). AnalogySpace uses principle component analysis to make analogies along
+dimensions such as goodness and difficulty, and smooth missing and noisy relations. Kuo and Hsu
+(2010) use a similar approach to compute the similarity between knowledge graph structures and
+draw analogies across them, producing new relations of which up to 77.6% are judged as accurate
+by crowd workers. The drawback of such a method is that it cannot create new terms, rather it can
+only generate confidence scores between any existing terms in a knowledge graph (Li, Taheri, Tu,
+& Gimpel, 2016).
+Extractive knowledge base completion. More recently, work has aimed to complete these knowledge bases by generating new relations. Li et al. (2016) train a neural network to distinguish relations in ConceptNet from false relations, which can then be used to score the truth of proposed new
+relations. Further, they use underlying crowdsourced text from Open Mind Common Sense Singh
+(2002) to train a word embedding which maps natural language queries to rigidly-wor

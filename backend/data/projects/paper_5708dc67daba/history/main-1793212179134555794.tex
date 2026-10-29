@@ -1,0 +1,45 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb,graphicx,url,array}
+\raggedbottom
+\makeatletter\renewenvironment{table}[1][]{\par\noindent\begin{minipage}{\linewidth}\def\@captype{table}\footnotesize}{\end{minipage}\par}\makeatother
+\begin{document}
+\title{Literature Review: Speculative Decoding for Lossless Language Model Acceleration}
+\author{\IEEEauthorblockN{Anonymous}}
+\maketitle
+\begin{abstract}
+Speculative sampling accelerates autoregressive LLM decoding by generating candidate tokens from a draft model and accepting them via modified rejection sampling against a larger target model, achieving speedups up to 2.5× across benchmarks. \cite{chen2023accelerating} Speculative decoding accelerates transformer inference by generating multiple tokens via a lightweight approximation model without altering output distribution. \cite{leviathan2022fast}
+\end{abstract}
+\begin{IEEEkeywords}speculative decoding, lossless acceleration, large language model, decoding efficiency, transformer inference\end{IEEEkeywords}
+\section{Introduction}
+Chen et al. proposed speculative sampling for accelerating LLM decoding, using a draft model to generate multiple tokens per target model call, with modified rejection sampling preserving target distribution within numerics [chen2023accelerating, p.1]. \cite{chen2023accelerating}
+
+Yaniv Leviathan, Matan Kalman, and Yossi Matias propose speculative decoding to accelerate inference from large autoregressive Transformers. \cite{leviathan2022fast}
+
+\section{Reviewed sources}
+\subsection{Accelerating Large Language Model Decoding with Speculative Sampling}
+Speculative sampling accelerates LLM decoding using a faster draft model to generate candidate tokens, which a larger target model scores and accepts via modified rejection sampling. Reported speedups of 2-2.5× on Chinchilla 70B and up to 2.46× on HumanEval with nucleus sampling, preserving target distribution without model modifications. \cite{chen2023accelerating}
+
+\subsection{Fast Inference from Transformers via Speculative Decoding}
+The source proposes speculative decoding using a small approximation model to generate candidate tokens in parallel, accelerating inference from large autoregressive Transformers without altering output distribution. Reported results show 2X–3X wall-time improvements over standard T5X on T5-XXL with identical outputs. \cite{leviathan2022fast}
+
+\section{Source comparison}
+\begin{table}[H]\centering
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.26\linewidth}|>{\raggedright\arraybackslash}p{0.235\linewidth}|>{\raggedright\arraybackslash}p{0.235\linewidth}|}\hline
+Source & Approach & Evaluation \\ \hline
+Chen 2023 \cite{chen2023accelerating} & modified rejection & decoding speedup \\ \hline
+Leviathan 2022 \cite{leviathan2022fast} & speculative decoding & wall-time comparison \\ \hline
+\end{tabular}\caption{Qualitative comparison of the processed sources.}\end{table}
+\section{Evidence limitations}
+The source authors state: "Note that as \ensuremath{\mathit{K}}
+increases, the overall speedup plateaus or even regresses, with XSum being optimal at \ensuremath{\mathit{K}} = 3." \cite{chen2023accelerating}
+
+The source authors state: "One limitation of speculative execution in general, and of
+speculative decoding in particular, is that latency is improved through increased concurrency at the cost of an increased number of arithmetic operations." \cite{leviathan2022fast}
+
+\section{Conclusion}
+Speculative sampling accelerates LLM decoding without modifying target model parameters, achieving significant speedups across benchmarks with appropriate draft models. \cite{chen2023accelerating}
+
+The narrow takeaway is that speculative decoding provides modest but reliable speedups for large transformer inference when paired with a lightweight approximation model. \cite{leviathan2022fast}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}\end{document}

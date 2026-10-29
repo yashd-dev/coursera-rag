@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## storks2019recent.9.txt \u2014 Page 11 (continued) \u2192 Page 12\n\n### Problem\nDatasets requiring multi-sentence reasoning, variable answer choices, unstated warrants, and external knowledge to perform well; traditional span-based QA insufficient.\n\n### Method\nSurvey of benchmarks: **VEDI** (Roth et al., 2018, ~10k questions, 800+ paragraphs, multi-sentence reasoning, variable answers/choices); **ARCT** (Habernal et al., 2018, 2.5k examples, argument warrant selection); **SQuAD** (Rajpurkar et al., 2016, 100k Wikipedia QA; SQuAD 2.0 adds 50k unanswerable questions requiring passage reasoning); **CoQA** (Reddy et al., 2018, 127k conversational QA, abstractive answers with span rationales, requires conversation history and external knowledge); **QuAC** (Choi et al., 2018, 98k questions over 14k dialogs, 9k passages, span answers).\n\n### Reported Results\nNo accuracy/F1 scores reported in this segment. Only dataset descriptions, sizes, and download links provided.\n\n### Limitations\nThis segment contains only dataset metadata and citations; no experimental results, error analysis, or model comparisons are included.\n\n### Exact Quotes\n- \u201cvedi, Roth, Upadhyay, and Roth (2018) is a reading comprehension dataset consisting of about 10,000 questions posed on over 800 paragraphs across a variety of topic domains.\u201d\n- \u201cSQuAD 2.0 (Rajpurkar et al., 2018) was later released to add about 50,000 additional questions which are unanswerable given the passage.\u201d\n\n### Notes\nReferences-only segment. No findings to synthesize."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2399,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783024e5ffeq2lA8nZQzP1UIe"
+  }
+]

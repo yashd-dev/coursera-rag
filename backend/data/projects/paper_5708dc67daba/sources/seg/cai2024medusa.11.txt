@@ -1,0 +1,108 @@
+=== PAGE 9 (continued) ===
+ned our methodology
+with the approach
+√ delineated by (Hewitt et al., 2022) setting the α = ϵ. Fig. 5 presents a comparative analysis of
+our model’s performance across various sampling settings.
+These settings range from a threshold ϵ starting at 0.01 and
+incrementally increasing to 0.25 in steps of 0.01. Our observations indicate a discernible trade-off: as ϵ increases, there
+is an elevation in quality at the expense of a reduced acceleration rate. Furthermore, for tasks demanding creativity, it
+is noted that the default random sampling surpasses greedy
+sampling in performance, and the proposed typical sampling
+is comparable with random sampling when ϵ increases.
+
+models. The typical acceptance scheme removes complications from rejection sampling while providing reasonable
+outputs. Our approach including two efficient training procedures, ensures high-quality output across various models
+and prompt types. We summarize the development of each
+technique and their impact on the speedup in Table 3.
+In the paper, we focus on the setting with batch size 1 for
+simplicity. Yet, we want to emphasize that the ideas presented in our paper can be generalized to larger batch-size
+settings, which are now supported by libraries like TensorRT
+and Huggingface TGI following our paper.
+
+Acknowledgements
+Quality
+Speedup
+
+Baseline
+
+Direct Fine-tuning
+
+M EDUSA-1
+
+M EDUSA-2
+
+6.17
+N/A
+
+5.925
+N/A
+
+6.23
+2.18
+
+6.18
+2.83
+
+We extend our heartfelt gratitude to several individuals
+whose contributions were invaluable to this project:
+
+Table 2. Comparison of Different Settings of Vicuna-7B. Quality
+is obtained by evaluating models on MT-Bench using GPT-4 as
+the judge (higher the better).
+
+• Zhuohan Li, for his invaluable insights on LLM serving. If you haven’t already, do check out Zhuohan’s
+vLLM project—it’s nothing short of impressive.
+
+3.3.3. E FFECTIVENESS OF T WO - STAGE F INE - TUNING
+
+• Shaojie Bai, for engaging in crucial discussions that
+helped shape the early phases of this work.
+
+Table 2 shows the performance differences between various
+fine-tuning strategies for the Vicuna-7B model. M EDUSA1, which fine-tunes only the M EDUSA heads, achieves
+a 2.18x speedup without compromising generation quality. M EDUSA-2, which employs two-stage fine-tuning
+(Section 2.2.2), maintains generation quality and provides
+greater speedup (2.83x) compared to M EDUSA-1. In contrast, direct fine-tuning the model with the M EDUSA heads
+results in degraded generation quality. The findings indicate that implementing our M EDUSA-2 for fine-tuning
+maintains the model’s quality and concurrently improves
+the speedup versus M EDUSA-1.
+
+• Denny Zhou, for introducing the truncation sampling
+scheme to Tianle and encouraging Tianle to explore
+the area of LLM serving.
+• Yanping Huang, for pointing out the memorybandwidth-bound challenges associated with LLM
+serving to Tianle.
+• Lianmin Zheng, for clarifying the different training
+recipes used in different sizes of Vicuna models.
+Jason D. Lee acknowledges the support of the NSF CCF
+2002272, NSF IIS 2107304, and NSF CAREER Award
+2144994. Deming Chen acknowledges the support from the
+AMD Center of Excellence at UIUC.
+
+Table 3. Impact of Techniques on Speedup
+
+Technique
+
+Speedup
+
+Medusa-1 heads without tree attention
+Adding tree attention
+Using optimized tree configuration
+Training heads with Medusa-2
+
+∼1.5x
+∼1.9x
+∼2.2x
+∼2.8x
+
+Impact Statement
+The introduction of M EDUSA, an innovative method to
+improve the inference speed of Large Language Models
+(LLMs), presents a range of broader implications for society, technology, and ethics. This section explores these
+implications in detail.
+
+4. Discussion
+In conclusion, M EDUSA enhances LLM inference speed by
+2.3-2.8 times by equipping models with additional predictive decoding heads, allowing for generating multiple tokens
+simultaneously and bypassing the sequential decoding limitation. Key advantages of M EDUSA include its simplicity,
+parameter efficiency, and ease of integration into existin

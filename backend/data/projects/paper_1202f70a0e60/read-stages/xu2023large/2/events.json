@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 1 (continued)**  \n- **Problem**: LLMs' efficacy in complex logical reasoning tasks is questioned; prior evaluations suffer from lack of comprehensiveness, over-reliance on accuracy, and inability to isolate logical reasoning from content bias.  \n- **Method**: Comprehensive evaluation across three orthogonal dimensions: reasoning type (deductive, inductive, abductive, mixed), dataset (15 typical logical reasoning datasets), and model (7 LLMs: text-davinci-003, ChatGPT, BARD, LLaMA3.1Chat, Mistral-Instruct-v0.3, Claude-3, GPT-4). Introduces subjective metrics (explanation correctness, completeness, redundancy) alongside answer correctness.  \n- **Reported results**: Not stated in this segment.  \n\n**PAGE 2**  \n- **Limitations**: Benchmarks may not purely evaluate logical reasoning ability due to content effects; no complete evaluation system or well-defined dimensions previously existed.  \n- **Exact quote 1**: \u201care large language models really good logical reasoners?\u201d  \n- **Exact quote 2**: \u201cfour dimensions of metrics, covering answer correctness, explanation correctness, explanation completeness and explanation redundancy.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2179,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783d33feffeH3U6AnZl76RNpD"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "- **Problem**: Storks et al. frame natural language understanding as a cloze-task where models predict the last word of the final sentence, requiring paragraph-level reasoning with human-filtered examples to prevent shortcut guessing.\n\n- **Method**: The approach uses constrained last-word prediction across benchmarks (COPA, JOCI, CLOTH, SWAG, AlphaNLI) to evaluate commonsense and reasoning capabilities, similar to CBT but with human-filtered feasibility.\n\n- **Reported results**: JOCI uses a 1\u20135 likelihood scale; SWAG provides 4-way multiple-choice endings; AlphaNLI presents premise-hypothesis pairs with textual entailment-style judgments. Figure 6 shows example instances from these benchmarks.\n\n- **Limitations**: JOCI\u2019s likelihood scale blurs the line between entailment and contradiction; SWAG includes adversarially generated distractors; human filtering, while ensuring feasibility, may still introduce annotation artifacts not generalizable to open domains.\n\n- **Quote (p. 17)**: \u201cExamples were further filtered to ensure that missing words could not be guessed without the context\u201d (Storks et al., 2019).  \n- **Quote (p. 18)**: \u201cJOCI can be downloaded from https://github.com/sheng-z/JOCI\u201d (Storks et al., 2019)."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2438,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782f06e1ffeS11V7NIeKfZF95"
+  }
+]

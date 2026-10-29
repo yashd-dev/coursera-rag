@@ -1,0 +1,50 @@
+=== PAGE 79 (continued) ===
+is, MN, USA. Association for Computational Linguistics.
+Gururangan, S., Swayamdipta, S., Levy, O., Schwartz, R., Bowman, S., & Smith, N. A. (2018).
+Annotation Artifacts in Natural Language Inference Data. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics:
+Human Language Technologies (NAACL HLT 2018), pp. 107–112, New Orleans, LA, USA.
+Association for Computational Linguistics.
+Habernal, I., Wachsmuth, H., Gurevych, I., & Stein, B. (2018). The Argument Reasoning Comprehension Task: Identification and Reconstruction of Implicit Warrants. In Proceedings of the
+2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL HLT 2018), pp. 1930–1940, New Orleans,
+Louisiana. Association for Computational Linguistics.
+Harnad, S. (2000). Minds, Machines and Turing. Journal of Logic, Language and Information,
+9(4), 425–445.
+Hartshorne, J. K., Bonial, C., & Palmer, M. (2013). The VerbCorner project: Toward an empiricallybased semantic decomposition of verbs. In Proceedings of the 2013 Conference on Empirical
+Methods in Natural Language Processing (EMNLP 2013), pp. 1438–1442, Seattle, WA, USA.
+Association for Computational Linguistics.
+Havasi, C., Speer, R., & Alonso, J. B. (2007). ConceptNet 3: A flexible, multilingual semantic
+network for common sense knowledge. In Recent Advances in Natural Language Processing
+(RANLP-07), Borovets, Bulgaria. Association for Computational Linguistics.
+Heider, F., & Simmel, M. (1944). An experimental study of apparent behavior. The American
+Journal of Psychology, 57, 243–259.
+Heilbron, F. C., Escorcia, V., Ghanem, B., & Niebles, J. C. (2015). ActivityNet: A large-scale video
+benchmark for human activity understanding. In 2015 IEEE Conference on Computer Vision
+and Pattern Recognition (CVPR 2015), pp. 961–970, Boston, MA, USA. IEEE.
+Henaff, M., Weston, J., Szlam, A., Bordes, A., & LeCun, Y. (2017). Tracking the World State with
+Recurrent Entity Networks. In Proceedings of the 5th International Conference on Learning
+Representations (ICLR 2017), p. 14, Palais des Congrès Neptune, Toulon, France.
+Hickl, A., Bensley, J., Williams, J., Roberts, K., Rink, B., & Shi, Y. (2006). Recognizing textual
+entailment with LCC’s GROUNDHOG system. In Proceedings of the Second PASCAL Challenges Workshop on Recognising Textual Entailment, Venice, Italy.
+Hilbert, D., & Ackermann, W. (1999). Principles of Mathematical Logic. American Mathematical
+Soc.
+79
+
+
+=== PAGE 80 ===
+S TORKS , G AO , & C HAI
+
+Hill, F., Bordes, A., Chopra, S., & Weston, J. (2015). The Goldilocks Principle: Reading Children’s
+Books with Explicit Memory Representations. arXiv: 1511.02301.
+Hirschman, L., Light, M., Breck, E., & Burger, J. D. (1999). Deep Read: A Reading Comprehension System. In Proceedings of the 37th Annual Meeting of the Association for Computational
+Linguistics (ACL 1999), pp. 325–332, College Park, Maryland, USA. Association for Computational Linguistics.
+Hobbs, J. R., Stickel, M. E., Appelt, D. E., & Martin, P. (1993). Interpretation as abduction. Artificial
+Intelligence, 63(1), 69–142.
+Hochreiter, S., & Schmidhuber, J. (1997). Long Short-Term Memory. Neural Comput., 9(8), 1735–
+1780.
+Hoffart, J., Suchanek, F. M., Berberich, K., & Weikum, G. (2012). YAGO2: A spatially and temporally enhanced knowledge base from Wikipedia. Artificial Intelligence, 194, 28–61.
+Huang, G., Liu, Z., van der Maaten, L., & Weinberger, K. Q. (2016). Densely Connected Convolutional Networks. In Proceedings of the 29th IEEE Conference on Computer Vision and
+Pattern Recognition (CVPR 2016), Las Vegas, NV, USA. IEEE.
+Huang, L., Bras, R. L., Bhagavatula, C., & Choi, Y. (2019). Cosmos QA: Machine reading comprehension with contextual commonsense reasoning. In Proceedings of the 2019 Conference
+on Empirical Methods in Natural Language Processing (EMNLP 2019), Hong Kong, China.
+Association for Computational Linguistics.
+Hudson, D. A., &

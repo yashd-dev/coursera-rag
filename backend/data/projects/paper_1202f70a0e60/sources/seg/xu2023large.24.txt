@@ -1,0 +1,92 @@
+=== PAGE 21 (continued) ===
+enerate a valid and
+short explanation.
+[zero-shot prompt]: The context is: [Context]. The observation is: [Observation]. Please generate a short explanation for the given context and observation.
+[task description]: Given a context and a fact, the abductive reasoning task is to generate a short missing fact.
+[zero-shot prompt]: The context is: [Context+Rule]. The
+fact is: [Fact]. Please generate a short missing fact for the
+given context and fact. And give simple explanations.
+mixed-form Reasoning
+[task description]: This is a Mahcine Reading Comprehension task, given the context and question, you are
+required to choose the correct answer from the answer
+set and give explanations.
+[zero-shot prompt]: The context is: [Context]. The question is: [Question]. [Option A]. [Option B]. [Option C].
+[Option D]. Please give the correct answer and simple
+explanations.
+[task description]: This is a Mahcine Reading Comprehension task, given the context and question, you are
+required to choose the correct answer from the answer
+set and give explanations.
+[zero-shot prompt]: The context is: [Context]. The question is: [Question]. [Option A]. [Option B]. [Option C].
+[Option D]. Please give the correct answer and simple
+explanations.
+[task description]: This is a Mahcine Reading Comprehension task, given the context and question, you are
+required to choose the correct answer from the answer
+set and give explanations.
+[zero-shot prompt]: The context is: [Context]. The question is: [Question]. [Option A]. [Option B]. [Option C].
+[Option D]. Please give the correct answer and simple
+explanations.
+[task description]: This is a Natural Language Inference
+task. Please tell whether the premise and conclusion
+entailed or NOT entailed. And give simple explanations.
+[zero-shot prompt]: The premise is: [Premise]. The conclusion is: [Conclusion]. Please give the correct answer
+and simple explanations.
+
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is: [Context]. The observation
+is: [Observation]. The explanation is: [Explanation].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is: [Context+Rule]. The observation is: [Observation]. The explanation
+is: [Explanation].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is: [Context]. The question is:
+[Question]. The correct choice is: [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is: [Context]. The question is:
+[Question]. The correct choice is: [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is: [Context]. The question is:
+[Question]. The correct choice is: [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The premise is: [Premise]. The context is:
+[Context]. The correct answer is: [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+
+
+=== PAGE 22 ===
+22
+
+Bard
+of 0-shot
+
+Davinci-003 ChatGPT ChatGPT ChatGPT Question, answer
+of 0-shot of 3-shot of 1-shot of 0-shot and explanation
+
+TABLE 11: A reasoning case in bAbI-15.
+Context: 1 Sheep are afraid of wolves. 2 Mice are afraid of wolves. 3 Winona is a sheep. 4 Gertrude is a sheep. 5
+Wolves are afraid of sheep. 6 Emily is a sheep. 7 Cats are afraid of sheep. 8 Jessica is a sheep.
+Question: What is jessica afraid of?
+Answer: Wolf
+1
+Explanation: IsSheep(jessica) (8)−
+→ Afraid(jessica, wolf)
+Jessica is afraid of nothing, as it is not specified in the given facts that she has any known natural predator or fear.
+Answer and Explain:
+Explain Error Type:
+Jessica is a sheep and sheep are afraid of wolves. Therefore, it can be deduced that Jessica is afraid of

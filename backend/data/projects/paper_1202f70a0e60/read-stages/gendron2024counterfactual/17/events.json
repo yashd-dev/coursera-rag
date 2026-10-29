@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# gendron2024counterfactual \u2014 Page 17 (continued) / Page 18\n\n**Problem**: Counterfactual inference and graph summarisation using LLMs as embedding models. The study estimates target variable values from parent causes and generates plausible counterfactual alternatives.\n\n**Method**: Graph summarisation uses node attributes (description, type, values, context) with neighbour concatenation at distance {rank}. Counterfactual inference provides parent variable attributes and causal relationships to the LLM, prompting step-by-step reasoning with confidence scores.\n\n**Results**: Not explicitly reported in this segment.\n\n**Limitations**: The hidden causal variables remain \"hidden\" \u2014 their current values are unknown since they are unobserved, limiting interpretability. The LLM's role is constrained to embedding and inference, not generation.\n\n- \"When conducting graph summarisation, we do not use the LLM as a generative model but as an embedding model.\" (P17 continued)\n- \"The value of the target variable is fully determined by its direct list of causes.\" (P18)\n\n*Risk: Results and limitations are inferred from structural description only; no empirical findings or performance metrics are provided in this segment.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2210,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78417c2fffe9QsPpW7CQBINuP"
+  }
+]

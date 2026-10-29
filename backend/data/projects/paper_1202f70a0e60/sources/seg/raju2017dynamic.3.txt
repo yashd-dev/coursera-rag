@@ -1,0 +1,86 @@
+=== PAGE 2 (continued) ===
+standing of how structural
+representations can be used to strengthen NLI. These early
+models provided the foundation for adding higher - level
+neural structures, like attention and memory, that can help
+achieve the best performance of NLI (Bowman, 2016).
+
+and Bengio (2015) demonstrated how attention mechanisms
+could be employed to decode and translate sequences of
+information in a much better way than was possible with
+traditional architectures. Constructing upon this approach,
+Rocktäschel et al. (2015) do something similar to the NLI task
+in using neural attention. Instead, they suggested building an
+encoding model that applied attention over a linear LSTM
+encoder to generate the hypothesis representation conditioned
+on the premise. More specifically, their method entailed
+feeding the hypothesis through a linear RNN that would
+attend to the states that the premise LSTM produced. The last
+attention state and the hypothesis hidden state were then
+passed into a classifier, considerably improving performance.
+Building on that concept, Wang and Jiang (2015) have made
+some modifications by substituting the disused RNN with
+LSTM in the attention mechanism. This modification was
+beneficial in approximating long sequences of the premise
+and hypothesis better, thus correcting some of the drawbacks
+observed in previous models. Cheng, Dong, and Lapata
+(2016) elaborated on these ideas through intra - sentence
+attention, allowing the model to pay attention to the hidden
+states of tokens already processed in the current sentence.
+Hence, this self - attention mechanism on the within sentence level extended a depth - expressed initialization of
+the hypothesis and the premise, providing better inference
+validity.
+Such improvements to attention mechanisms have been
+extended to a wide array of other NLP tasks apart from NLI,
+such as image caption generation (Xu et al., 2015; Vinyals et
+al., 2015), machine translation, and question answering.
+Throughout these tasks, we observe that models with
+attention have shown generally higher performance than
+native LSTM and RNN models, proving the effectiveness of
+attention in effectively capturing sequence relations and
+dependencies. Specifically, the attention mechanisms have
+shown to be very useful in NLI, where identifying the
+complex semantics between the sentences is paramount.
+
+Figure 3: S2S encoder–decoder with attention architecture.
+
+Figure 2: Natural Language Inferencing (NLI) Task
+Neural Attention for SNLI
+Neural attention has revolutionized natural language
+processing, which allows models to boost only the essential
+parts of the input data. Using this concept, Bahdanau, Cho,
+
+End - to - End Memory Networks
+Memory networks have recently been shown to be highly
+effective models for tasks that entail series operations, notably
+NLI. Sainbayar et al. (2015) proposed an end - to - end
+memory - based model capable of performing multiple
+memory hops that can be learned using basic gradient descent
+techniques. This model performs better than baseline methods
+based on experiments conducted on QnA benchmark and
+language modeling. The architecture of the memory network
+enabled the system to focus on the most critical sentences at
+each time step to perform a computation to come up with the
+correct predictions.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2220
+
+
+=== PAGE 3 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+The memory network proposed by Sainbayar et al. is
+structurally very similar in concept to the seq2seq attention
+model proposed by Bahdanau et al. (2015) but works at the
+sentence level instead of the token level. Besides, it uses a
+much more straightforward scoring function, which is helpful
+for tasks that require reasoning at the level of a single
+sentence. This ability

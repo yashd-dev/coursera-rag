@@ -1,0 +1,148 @@
+=== PAGE 4 (continued) ===
+eneration quality while
+reducing the memory consumption (Xiao et al., 2023a; Hooper et al., 2024; Sheng et al., 2023;
+Liu et al., 2023a; Zirui Liu et al., 2023; Yue et al., 2024). Quantization methods focus on
+compressing the bit width of KV cache activations, which is orthogonal to our approach.
+
+3
+
+Observation
+
+Our design of T RI F ORCE is inspired by two critical empirical observations regarding LLMs
+when dealing with long contexts, detailed as follows.
+4
+
+
+=== PAGE 5 ===
+Published as a conference paper at COLM 2024
+
+Layer
+
+0.6
+0.4
+0.2
+
+0
+
+4
+
+8 12 16 20 24 28
+
+Head
+
+(a)
+
+0.0
+
+Acceptance Rate
+
+28 24 20 16 12 8
+
+0.8
+
+1.00
+
+1.0
+
+0.95
+
+0.8
+
+0.90
+0.85
+Top-K (T=0.6)
+Top-K (T=0)
+StreamingLLM (T=0.6)
+StreamingLLM (T=0)
+H2O (T=0.6)
+H2O (T=0)
+
+0.80
+0.75
+0
+
+1024
+
+2048
+
+KV Cache Budget
+
+3072
+
+4096
+
+Recovery Rate
+
+1.0
+
+4
+
+0
+
+Recovery Rate of Top-4096=96.8%
+
+0.6
+0.4
+Layer 1
+Layer 11
+Layer 21
+Layer 31
+
+0.2
+0.0
+
+(b)
+
+0
+
+64
+
+128
+
+Token
+
+192
+
+256
+
+(c)
+
+Figure 3: (a) The Llama2-7B-128K model demonstrates significant attention sparsity with a
+120K context. Apart from the first two layers, the rest exhibit significant sparsity. (b) We
+can utilize partial KV cache and whole model weights to perform self-speculation. High
+acceptance rates are attainable using existing methods with a limited budget. (c) A notable
+degree of locality is observed in most layers, which gradually diminishes as context evolves.
+3.1
+
+Leveraging Attention Sparsity for Speculative Decoding
+
+Observation The phenomenon of attention sparsity in pre-trained LLMs has been discovered by numerous studies (Zhang et al., 2024b; Xiao et al., 2023b; Liu et al., 2023b; 2024c).
+In our study, we conduct zero-shot inference on the PG-19 test set (Rae et al., 2019) with
+Llama2-7B-128K model. By visualizing the sparsity across different attention heads, demonstrated in Figure 3a, we observe that with a context length of 120K, it is possible to recover
+over 96% of the attention score with merely 4K tokens across almost all layers.
+Analysis The presence of sparsity within the attention blocks suggests that a fraction of
+KV cache could serve as a draft cache to attain a high acceptance rate during self-speculative
+decoding. Since KV cache is the bottleneck under this setting, we can load whole model
+weights with partial KV cache as a draft model. Figure 3b demonstrates that utilizing
+only 1K tokens could theoretically achieve a 97.6% acceptance rate with Top-K selection
+method. While this scenario represents an optimal theoretical upper bound, practical
+implementations like H2 O and StreamingLLM exhibit promising results, achieving over
+90.5% acceptance rates with 1K KV cache budget. It should be noted that we maintain a full
+cache for the initial two layers for illustration purposes, while no layers are skipped in our
+practical system implementation for efficiency.
+3.2
+
+Exploiting Contextual Locality for Drafting Efficiency
+
+Observation Our exploration reveals that the information from long context tokens needed
+by adjacent tokens tends to be similar. In our experiments, with the context length established at 120K, we instruct the model to generate 256 tokens. By choosing the top-4K indices
+according to the attention score of the last prefilled token, we use these indices to gather
+the attention scores for the subsequently generated tokens and assess the score’s recovery
+rate for the initially prefilled 120K tokens. As shown in Figure 3c, it leads to high recovery
+across almost all layers and a slowly decreasing trend as the number of tokens increases.
+Insights This observation allows for a single construction of the cache to suffice for
+multiple decoding steps, thereby amortizing the latency of constructing draft cache and
+boosting efficiency. As new KV cache are introduced, guided by the understanding that
+recent words are more strongly correlated with the tokens currently being decoded, these
+entries will replace the less significant ones. Cache re-building operations can be scheduled
+at 

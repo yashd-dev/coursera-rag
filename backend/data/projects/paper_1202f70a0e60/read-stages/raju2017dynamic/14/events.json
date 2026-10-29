@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Raju2017Dynamic \u2014 14/16\n\n**Problem**\nDMN applied to NLI achieves state\u2011of\u2011the\u2011art results but relies on simpler encoders; complex encoders could improve long\u2011distance dependency capture and NLI performance.\n\n**Method**\nDynamic memory networks (DMNs) with external memory components for reasoning over sentence pairs; evaluation on natural language inference tasks.\n\n**Reported results**\nPage 10: DMN achieves 76.5% accuracy on the test set, outperforming previous models. Complex encoders are identified as a pathway to further gains.\n\n**Limitations**\nPage 10: Computational cost, naming conventions, and interpretability remain open questions. Domain applicability beyond NLI is underexplored.\n\n**Quotes**\n- Page 10: \u201cThe DMN could be improved if those more complex encoders were introduced into the learning framework about pairs of sentences for better NLI outcomes.\u201d\n- Page 11: \u201cTechniques for presenting and analyzing the memory states and attention mechanisms underlying DMNs might be especially beneficial in allowing users and researchers to understand the model's functioning and reasoning.\u201d\n\n**References note**\nPage 11 references are listed but no findings are extracted from them. A concise \u201cReferences only\u201d acknowledgment is included per source constraints."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2367,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781cd056ffemlXAjgBxejL2dL"
+  }
+]

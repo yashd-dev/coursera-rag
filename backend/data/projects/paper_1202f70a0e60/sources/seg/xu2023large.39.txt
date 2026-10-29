@@ -1,0 +1,13 @@
+=== PAGE 37 (continued) ===
+s means that even if a survey is well-constructed, respondents may still be influenced by beliefs about the
+surveyor’s expectations. This is because people are often motivated to please others, and they may believe that
+giving the answer they think the surveyor expects will make them look good.
+For example, a respondent may believe that a surveyor expects them to support a certain candidate in an election.
+Even if the survey question is not leading, the respondent may still give the answer they think the surveyor
+expects, even if they do not actually support that candidate.
+This is why it is important for surveyors to be aware of the potential for respondents to be influenced by beliefs
+about their expectations. Surveyors can try to minimize this effect by using clear and unbiased language, and by
+explaining to respondents that there are no right or wrong answers.
+Answer and Explain:
+Explain Error Type:
+

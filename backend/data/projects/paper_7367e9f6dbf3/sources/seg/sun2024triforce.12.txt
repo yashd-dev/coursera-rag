@@ -1,0 +1,60 @@
+=== PAGE 12 (continued) ===
+ Computational Linguistics, 12:157–173, 2024b.
+Zechun Liu, Barlas Oguz, Changsheng Zhao, Ernie Chang, Pierre Stock, Yashar Mehdad,
+Yangyang Shi, Raghuraman Krishnamoorthi, and Vikas Chandra. Llm-qat: Data-free
+quantization aware training for large language models. arXiv preprint arXiv:2305.17888,
+2023a.
+Zichang Liu, Jue Wang, Tri Dao, Tianyi Zhou, Binhang Yuan, Zhao Song, Anshumali
+Shrivastava, Ce Zhang, Yuandong Tian, Christopher Re, et al. Deja vu: Contextual
+sparsity for efficient llms at inference time. In International Conference on Machine Learning,
+pp. 22137–22176. PMLR, 2023b.
+Zichang Liu, Aditya Desai, Fangshuo Liao, Weitao Wang, Victor Xie, Zhaozhuo Xu, Anastasios Kyrillidis, and Anshumali Shrivastava. Scissorhands: Exploiting the persistence
+of importance hypothesis for llm kv cache compression at test time. Advances in Neural
+Information Processing Systems, 36, 2024c.
+Xupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Rae Ying Yee
+Wong, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, and Zhihao Jia. Specinfer:
+Accelerating generative llm serving with speculative inference and token tree verification.
+arXiv preprint arXiv:2305.09781, 2023.
+Péter Vingelmann NVIDIA and Frank HP Fitzek. Cuda, release: 10.2. 89.
+https://developer. nvidia. com/cuda-toolkit. Cited, pp. 148, 2020.
+12
+
+URL
+
+
+=== PAGE 13 ===
+Published as a conference paper at COLM 2024
+
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan,
+Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. Advances in neural information
+processing systems, 32, 2019.
+Bowen Peng, Jeffrey Quesnelle, Honglu Fan, and Enrico Shippole. Yarn: Efficient context
+window extension of large language models. arXiv preprint arXiv:2309.00071, 2023.
+Reiner Pope, Sholto Douglas, Aakanksha Chowdhery, Jacob Devlin, James Bradbury,
+Jonathan Heek, Kefan Xiao, Shivani Agrawal, and Jeff Dean. Efficiently scaling transformer inference. Proceedings of Machine Learning and Systems, 5, 2023.
+Jack W Rae, Anna Potapenko, Siddhant M Jayakumar, Chloe Hillier, and Timothy P Lillicrap.
+Compressive transformers for long-range sequence modelling. arXiv preprint, 2019. URL
+https://arxiv.org/abs/1911.05507.
+Varshini Reddy, Rik Koncel-Kedziorski, Viet Dac Lai, and Chris Tanner. Docfinqa: A
+long-context financial reasoning dataset. arXiv preprint arXiv:2401.06915, 2024.
+Andrea Santilli, Silvio Severino, Emilian Postolache, Valentino Maiorca, Michele Mancusi,
+Riccardo Marin, and Emanuele Rodolà. Accelerating transformer inference for translation
+via parallel decoding. arXiv preprint arXiv:2305.10427, 2023.
+Ying Sheng, Lianmin Zheng, Binhang Yuan, Zhuohan Li, Max Ryabinin, Beidi Chen, Percy
+Liang, Christopher Ré, Ion Stoica, and Ce Zhang. Flexgen: High-throughput generative
+inference of large language models with a single gpu. In International Conference on
+Machine Learning, pp. 31094–31116. PMLR, 2023.
+Amit Singhal et al. Modern information retrieval: A brief overview. IEEE Data Eng. Bull., 24
+(4):35–43, 2001.
+Benjamin Spector and Chris Re. Accelerating llm inference with staged speculative decoding.
+arXiv preprint arXiv:2308.04623, 2023.
+Mitchell Stern, Noam Shazeer, and Jakob Uszkoreit. Blockwise parallel decoding for deep
+autoregressive models. Advances in Neural Information Processing Systems, 31, 2018.
+Ziteng Sun, Ananda Theertha Suresh, Jae Hun Ro, Ahmad Beirami, Himanshu Jain, and
+Felix Yu. Spectr: Fast speculative decoding via optimal transport. Advances in Neural
+Information Processing Systems, 36, 2024.
+Gemini Team, Rohan Anil, Sebastian Borgeaud, Yonghui Wu, Jean-Baptiste Alayrac, Jiahui
+Yu, Radu Soricut, Johan Schalkwyk, Andrew M Dai, Anja Hauth, et al. Gemini: a family
+of highly capable multimodal models. arXiv preprint arXiv:2312.11805, 2023.
+Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei,
+Nikolay Bashlykov, Soumya Batra, Pra

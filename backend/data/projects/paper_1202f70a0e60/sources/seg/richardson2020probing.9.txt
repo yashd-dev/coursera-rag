@@ -1,0 +1,71 @@
+=== PAGE 6 (continued) ===
+ular linguistic phenomena.
+At the bottom of Table 1, we show the resulting accuracies on the challenge sets and MNLI bechmark for each
+model after re-training (using the optimal model M∗a,k , as
+described previously). In the case of BERTSNLI+MNLI+frag ,
+we see that despite performing poorly on these new chal-
+
+Figure 5: Dev. results on training NLI models from scratch
+on the different fragments and architectures.
+
+models on the Breaking NLI challenge set of Glockner,
+Shwartz, and Goldberg (2018), which previously proved to
+be a difﬁcult benchmark for NLI models. This result, we believe, highlights the need for more challenging NLI benchmarks, such as our new datasets.
+Figure 5 shows the results of training NLI models from
+scratch (i.e., without NLI pre-training on other benchmarks)
+
+5
+
+8718
+
+For MNLI, we report results on the mismatched dev. set.
+
+
+=== PAGE 7 ===
+Figure 6: Inoculation results for two illustrative semantic fragments, Monotonicity Reasoning (left) and Comparatives (right),
+for 4 NLI models shown in different colors. Horizontal axis: number of ﬁne-tuning challenge set examples used. Each point
+represents the model Mk∗ trained using hyperparameters that maximize the accuracy averaged across the model’s original
+benchmark dataset (solid line) and challenge dataset (dashed line).
+
+Figure 7: Inoculation results for 6 semantic fragments not included in Figure 6, using the same setup.
+lenge dataset before re-training, it can learn to master these
+fragments with minimal losses to performance on its original task (i.e., it only loses on average about 1.3% accuracy
+of the original MNLI dev set). In other words, it is possible teach BERT (given its inherent capacity) a new fragment quickly through re-training without affecting its original performance, assuming however that time is spent on
+carefully ﬁnding the optimal model.6 For the other models, there is more of a trade-off; Decomp-Attn on average
+never quite masters the logic fragments (but does master
+the Monotonicity Fragments), and incurs an average
+6.7% loss on MNLI after re-training. In the case of comparatives, the inability of the model to master this fragment likely
+reveals a certain architectural limitation of the model given
+
+that it is not sensitive to word-order. Given such losses, perhaps in such cases a more sophisticated re-training scheme
+is needed in order to optimally learn particular fragments.
+
+Discussion and Conclusion
+We explored the use of semantic fragments—systematically
+controlled subsets of language—to probe into NLI models
+and benchmarks. Our investigation considered 8 particular
+fragments and new challenge datasets that center around basic logic and monotonicity reasoning. In answering the questions ﬁrst introduced in Figure 1, we found that while existing NLI architectures are able to learn these fragments from
+scratch, the resulting models are of limited interest. Further,
+pre-trained models perform poorly on these new datasets
+(even relative to other available challenge benchmarks), revealing the weaknesses of these models. Interestingly, how-
+
+6
+We note that models without optimal aggregate performance
+are often prone to catastrophic forgetting.
+
+8719
+
+
+=== PAGE 8 ===
+ever, we show that many models can be quickly re-tuned
+(e.g., often in a matter of minutes) to master these different
+fragments using a novel variant of the inoculation through
+ﬁne-tuning strategy (Liu, Schwartz, and Smith 2019) that we
+introduce called lossless inoculation.
+Our results suggest the following methodology for improving models: Given a particular linguistic hole in an NLI
+model, one can plug this hole by simply generating synthetic data and using it to re-train a model. This methodology comes with some caveats, however: Depending on
+the model and particular linguistic phenomena, there may
+be some trade-offs with the model’s original performance,
+which should ﬁrst be looked at empirically and compared
+against other linguistic phenomena. Our work is one small
+s

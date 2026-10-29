@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.53 \u2014 Page 62 (continued)**\n\n- **Problem:** Survey of NLI tasks requiring external knowledge; gap identified between available common-knowledge resources and direct benchmark application.\n\n- **Method:** Comparative survey of knowledge resources (DBpedia, YAGO, Cyc, ConceptNet, Wikidata, search engines) across surveyed benchmarks; analysis of techniques for selecting appropriate knowledge.\n\n- **Reported results:** ConceptNet addition in OpenBookQA caused distraction, reducing performance, highlighting importance of knowledge selection. Bauer et al. (2018) used mutual information and term-frequency measures to prune ConceptNet paths in NarrativeQA, facilitating multi-step reasoning.\n\n- **Limitations:** Models likely lack commonsense knowledge typical unstated and unlikely in web pre-training. ConceptNet selection techniques remain critical but underdeveloped.\n\n- **Quote 1 (p. 62):** \u201cPopular common knowledge resources such as DBpedia (Auer et al., 2007) and YAGO (Suchanek et al., 2007) have been used in creating benchmarks, but have not been directly applied to solve any benchmarks.\u201d\n\n- **Quote 2 (p. 63):** \u201cInterestingly, they find that their adding of facts from ConceptNet causes distraction which reduces performance, suggesting that the technique for selecting the appropriate relations is important to reduce distraction.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2276,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782599d9ffeQ3WjRlS1g6h6KP"
+  }
+]

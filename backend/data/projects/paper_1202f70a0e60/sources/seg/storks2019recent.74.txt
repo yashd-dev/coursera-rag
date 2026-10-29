@@ -1,0 +1,51 @@
+=== PAGE 88 (continued) ===
+onversational Question Answering
+Challenge. arXiv: 1808.07042.
+Reiss, S. (2004). Multifaceted Nature of Intrinsic Motivation: The Theory of 16 Basic Desires.
+Review of General Psychology, 8(3), 179–193.
+Richardson, M., Burges, C. J. C., & Renshaw, E. (2013). MCTest: A Challenge Dataset for the
+Open-Domain Machine Comprehension of Text. In Proceedings of the 2013 Conference
+on Empirical Methods in Natural Language Processing (EMNLP 2013), p. 11, Seattle, WA,
+USA. Association for Computational Linguistics.
+Rodosthenous, C., & Michael, L. (2016). A Hybrid Approach to Commonsense Knowledge Acquisition. In Proceedings of the 8th European Starting AI Researcher Symposium, The Hague,
+the Netherlands.
+Roemmele, M., Bejan, C. A., & Gordon, A. S. (2011). Choice of Plausible Alternatives: An Evaluation of Commonsense Causal Reasoning. In AAAI Spring Symposium on Logical Formalizations of Commonsense Reasoning, p. 6, Stanford, CA, USA.
+Roemmele, M., & Gordon, A. (2018). An Encoder-decoder Approach to Predicting Causal Relations in Stories. In Proceedings of the First Workshop on Storytelling, pp. 50–59, New
+Orleans, LA, USA. Association for Computational Linguistics.
+Rogers, A. (2019). How the Transformers broke NLP leaderboards..
+Rohrbach, A., Torabi, A., Rohrbach, M., Tandon, N., Pal, C., Larochelle, H., Courville, A., &
+Schiele, B. (2017). Movie Description. Int. J. Comput. Vision, 123(1), 94–120.
+Rudinger, R., Naradowsky, J., Leonard, B., & Van Durme, B. (2018a). Gender Bias in Coreference Resolution. In Proceedings of the 2018 Conference of the North American Chapter of
+the Association for Computational Linguistics: Human Language Technologies (NAACL HLT
+2018), pp. 8–14, New Orleans, LA, USA. Association for Computational Linguistics.
+Rudinger, R., White, A. S., & Van Durme, B. (2018b). Neural Models of Factuality. In Proceedings
+of the 2018 Conference of the North American Chapter of the Association for Computational
+Linguistics: Human Language Technologies (NAACL HLT 2018), pp. 731–744, New Orleans,
+LA, USA. Association for Computational Linguistics.
+Saito, I., Nishida, K., Asano, H., & Tomita, J. (2018). Commonsense Knowledge Base Completion
+and Generation. In Proceedings of the 22nd Conference on Computational Natural Language
+Learning, pp. 141–150. Association for Computational Linguistics.
+Sakaguchi, K., Bras, R. L., Bhagavatula, C., & Choi, Y. (2019). WINOGRANDE: An adversarial
+winograd schema challenge at scale. arXiv: 1907.10641.
+Samardžić, T., & Merlo, P. (2016). Aspect-based Learning of Event Duration Using Parallel Corpora..
+Sanh, V., Debut, L., Chaumond, J., & Wolf, T. (2019). DistilBERT, a distilled version of BERT:
+Smaller, faster, cheaper and lighter. In Proceedings of the 5th Workshop on Energy Efficient
+Machine Learning and Cognitive Computing at NeurIPS 2019, Vancouver, BC, Canada.
+88
+
+
+=== PAGE 89 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Sap, M., LeBras, R., Allaway, E., Bhagavatula, C., Lourie, N., Rashkin, H., Roof, B., Smith, N. A.,
+& Choi, Y. (2019a). ATOMIC: An Atlas of Machine Commonsense for If-Then Reasoning. In Proceedings of the Thirty-Third AAAI Conference on Artificial Inteligence (AAAI-19),
+Honolulu, HI, USA. AAAI Press.
+Sap, M., Rashkin, H., Chen, D., LeBras, R., & Choi, Y. (2019b). SocialIQA: Commonsense Reasoning about Social Interactions. arXiv: 1904.09728.
+Schank, R. C., & Abelson, R. P. (1988). Scripts, Plans, Goals, and Understanding. Readings
+in Cognitive Science: A Perspective from Psychology and Artificial Intelligence. Morgan
+Kaufmann, San Mateo, CA, US.
+Schmitt, M., & Schütze, H. (2019). SherLIiC: A typed event-focused lexical inference benchmark
+for evaluating natural language inference. In Proceedings of the 57th Annual Meeting of the
+Association for Computational Linguistics (ACL 2019), pp. 902–914, Florence, Italy. Association for Computational Linguistics.
+Schoenmackers, S., Etzioni, O., Weld, D. S., & Davis, J. (2010). Learning First-order Horn Clauses
+from

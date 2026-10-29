@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.35 Notes\n\n- **Problem**: Reasoning task on whether extrapolating from limited temperature ranges to all fruits is valid.\n- **Method**: Class tested fruits at 10\u00b0C, 20\u00b0C, 30\u00b0C only; concluded \"cooler = fresher longer.\"\n- **Reported Results**:\n  - Q1: Option D correct\u2014class generalized too readily from narrow temp range (10/20/30\u00b0C) to entire storage range.\n  - Q2: Option D correct\u2014too hastily extrapolated from narrow range; threshold beyond 30\u00b0C possible.\n  - Q3: Option C correct\u2014generalized from tested fruits to all varieties; insufficient sample for all fruits.\n  - Q4: Option D correct\u2014tested only 3 temps; relationship may not be linear; 5\u00b0C vs 10\u00b0C possibility.\n- **Limitations**: Only 3 temperatures tested; only 3 fruit types; narrow range prevents conclusions about all varieties or full temp spectrum.\n\n> \"the class too readily made a generalization from a narrow range of temperatures (10 degrees, 20 degrees, and 30 degrees) to the entire range of temperatures at which fruits can be stored\" (P34 continued)\n> \"The class only tested three temperatures: 30 degrees Celsius, 20 degrees Celsius, and 10 degrees Celsius\" (P35)\n\n*(45 words)*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2182,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7835ba47ffedd09FnoQHqsm7T"
+  }
+]

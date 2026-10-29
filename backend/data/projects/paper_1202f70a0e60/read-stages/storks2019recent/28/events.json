@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.28 - Paper: Recent Advances in Natural Language Inference: A Survey**\n\n- **Problem**: Survey of NLI benchmarks and data collection methods; focus on trade-offs between quality, scalability, and cost.\n- **Method**: Categorization of data collection (manual, automatic, text mining, crowdsourcing) and benchmark complexity analysis via human/machine performance.\n- **Reported results**: ROCStories dataset cost ~15,000 USD (26\u00a2/story + 10\u00a2/test case); SNLI used as example for random-sample quality validation.\n- **Limitations**: No fair direct benchmark comparison feasible; complexity perception discussed via performance dimensions only.\n- **Quote (p.34)**: \u201cFor labeling tasks, multiple crowd workers can label the same examples, and agreement can be measured from this to estimate data quality.\u201d\n- **Quote (p.35)**: \u201cUltimately, each method of data collection has its own advantages and drawbacks.\u201d\n\n*Source: storks2019recent.28.txt, pages 34\u201335. Attribution follows physical-page markers.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2167,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782b9431ffeJapDAG0Y2ebrqw"
+  }
+]

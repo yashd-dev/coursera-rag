@@ -1,0 +1,114 @@
+=== PAGE 3 (continued) ===
+Hirata Jr (2019), the people and place names for testing are drawn from an entirely disjoint set from training. We
+also reserve 1,000 for development. While we were capable
+of generating more data, we follow Weston et al. (2015) in
+limiting the size of our training sets to 3,000 since our goal
+is to learn from as little data as possible, and found 3,000
+training examples to be sufﬁcient for most fragments and
+models.
+As detailed in Figure 2, these new fragments vary in complexity, with the negation fragment (which is limited to
+verbal negation) being the least complex in terms of linguistic phenomena. We also note that all other fragments include
+
+Some Semantic Fragments
+As shown in Figure 1, given a particular semantic fragment
+or linguistic phenomenon that we want to study, our starting
+point is a formal speciﬁcation of that fragment (e.g., in the
+form of a set of templates/formal grammar that encapsulate
+expert knowledge of that phenomenon), which we can sample in order to obtain a new challenge set. In this section,
+we describe the construction of the particular fragments we
+8715
+
+
+=== PAGE 4 ===
+[only-did-p(x)], ¬p(x)
+
+Rule Template: [ premise ], { hypothesis1 , ... } ⇒ label; Labeled Examples (simpliﬁed)
+⇒ CONTRADICTION
+Davex has only visited Israelp , Davex didn’t¬ visit Israelp
+
+[only-did-p(x)], ¬p’(x)
+
+⇒ ENTAILMENT
+
+[only-did-p(x)], ¬p(x )
+
+⇒ NEUTRAL
+
+Davex has only visited Israelp , Billx didn’t¬ visit Israelp
+
+[p(x1 ) ∧ ...∧p(xn )], ¬p(xj )
+
+⇒ CONTRADICTION
+
+Dustinx1 , Miltonx2 , ... have only visited Equadorp ; Dustinx1 didn’t¬ visit Equadorp
+
+[p1 (x1 ) ∧ ...∧pn (xn )], ¬pj (x )
+[p1 (x) ∧ ...∧pn (x)], ¬p (x)
+
+⇒ NEUTRAL
+⇒ ENTAILMENT
+
+Dustinx only visitedp Portugal1 and Spain2 ; Jamesx didn’t¬ visitp Spain
+Dustinx only visitedp Portugal1 and Spain2 ; Dustinx didn’t¬ visitp Germany
+
+[(p → q) ∧ p], q
+
+⇒ ENTAILMENT
+
+Dave visited Israelp and if Dave visited Israelp then→ Bill visited Russiaq ; Bill visited Russiaq .
+
+[(p → q) ∧ p], ¬q
+
+⇒ CONTRADICTION
+
+Dave visited Israelp and if Dave visited Israelp then→ Bill visited Russiaq ; Bill didn’t visit Russiap .
+
+[(p → q) ∧ ¬p], {q,¬q}
+
+⇒ NEUTRAL
+
+Dave didn’t visit Israelp , and if Dave visited Israelp then→ Bill visited Russiaq ; Bill visited Russiap .
+
+Logic Fragment
+Negation
+
+Boolean
+
+Conditional
+
+Quantifier
+
+Davex has only visited Israelp , Davex didn’t¬ visit Russiap
+
+[∀x.∀y. p(x, y)], ∃x.ιy. ¬p(x, y)
+
+⇒ CONTRADICTION
+
+[∃x.∀y. p(x, y)], ιx.∃y. {¬p(x, y),p(x, y)}
+
+⇒ NEUTRAL
+
+Someone∃x visitedp every∀ persony ; Timιx didn’t¬ visitp someone∃y
+
+[∃x.∀y. p(x, y)], ∃x.ιy. p(x, y)
+
+⇒ ENTAILMENT
+
+Someone∃x visitedp every∀ persony ; A person∃x visitedp Markιy
+
+Everyone∀x visitedp every∀ countryy ; Someone∃x didn’t¬ visitp Jordanιy
+
+Figure 3: A simpliﬁed description of some of the templates used for 4 of the logic fragments (stemming from Salvatore, Finger, and Hirata Jr (2019)) expressed in a quasi-logical notation with predicates p,q,only-did-p and quantiﬁers
+∃ (there exists), ∀ (for all), ι (there exists a unique) and boolean connectives (∧ (and), → (if-then), ¬ (not)).
+Once we have the sentences with arrows, we use the algorithm of Hu, Chen, and Moss (2019) to generate pairs of
+sentences with ENTAIL, NEUTRAL or CONTRADICTORY
+relations, as exempliﬁed in Figure 4. Speciﬁcally, we ﬁrst
+deﬁne a knowledge base that stores the relations of the lexical items in our lexicon, e.g., poodle ≤ dog ≤ mammal ≤ animal; also, waltz ≤ dance ≤ move; and every ≤ most ≤ some
+= a. For nouns, ≤ can be understood as the subset-superset
+relation. For higher-type objects like the determiners above,
+see Icard and Moss (2013) for discussion. Then to generate entailments, we perform substitution (shown in Figure 4
+in blue). That is, we substitute upward entailing tokens or
+constituents with something “greater than or equal to” (≥)
+them, or downward entailing ones with something “less than
+or equal to” them. To generate neutrals, substitution goes
+the reverse way. For example, all↑ dogs↓ danced↑ ENTA

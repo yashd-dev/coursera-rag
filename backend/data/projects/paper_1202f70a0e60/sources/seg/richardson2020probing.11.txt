@@ -1,0 +1,70 @@
+=== PAGE 8 (continued) ===
+nabith, J.; Jaspars, J.; Kamp, H.; Milward, D.; Pinkal, M.;
+Poesio, M.; et al. 1996. Using the Framework. Technical
+report, LRE 62-051 D-16, The FraCaS Consortium.
+Dagan, I.; Glickman, O.; and Magnini, B. 2005. The PASCAL Recognising Textual Entailment Challenge. In Machine Learning Challenges Workshop.
+Devlin, J.; Chang, M.-W.; Lee, K.; and Toutanova, K. 2019.
+BERT: Pre-training of Deep Bidirectional Transformers for
+Language Understanding. In NAACL.
+Gardner, M.; Grus, J.; Neumann, M.; Tafjord, O.; Dasigi,
+P.; Liu, N.; Peters, M.; Schmitz, M.; and Zettlemoyer, L.
+2018. AllenNLP: A Deep Semantic Natural Language Processing Platform. In Workshop for NLP Open Source Software (NLP-OSS).
+
+What are Models Actually Learning? One open question concerns the extent to which models trained on narrow fragments can generalize beyond them. Newer analysis
+methods that attempt to correlate neural activation patterns
+and target symbolic patterns (Chrupała and Alishahi 2019)
+8720
+
+
+=== PAGE 9 ===
+Poliak, A.; Haldar, A.; Rudinger, R.; Hu, J. E.; Pavlick, E.;
+White, A. S.; and Van Durme, B. 2018a. Collecting Diverse
+Natural Language Inference Problems for Sentence Representation Evaluation. In EMNLP.
+Poliak, A.; Naradowsky, J.; Haldar, A.; Rudinger, R.; and
+Van Durme, B. 2018b. Hypothesis Only Baselines in Natural
+Language Inference. In *SEM.
+Pratt-Hartmann, I. 2004. Fragments of Language. Journal
+of Logic, Language and Information 13(2):207–223.
+Rozen, O.; Shwartz, V.; Aharoni, R.; and Dagan, I. 2019.
+Analyzing Generalization in Natural Language Inference via
+Controlled Variance in Adversarial Datasets. In CoNLL.
+Salvatore, F.; Finger, M.; and Hirata Jr, R. 2019. Using
+Syntactical and Logical Forms to Evaluate Textual Inference
+Competence. arXiv:1905.05704.
+van Benthem, J. 1986. Essays in Logical Semantics, volume 29 of Studies in Linguistics and Philosophy. Dordrecht:
+D. Reidel Publishing Co.
+Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones,
+L.; Gomez, A. N.; Kaiser, Ł.; and Polosukhin, I. 2017. Attention is all you need. In NIPS, 5998–6008.
+Wang, A.; Singh, A.; Michael, J.; Hill, F.; Levy, O.; and
+Bowman, S. R. 2018. Glue: A Multi-task Benchmark and
+Analysis Platform for Natural Language Understanding. In
+EMNLP Workshop BlackboxNLP.
+Warstadt, A.; Cao, Y.; Grosu, I.; Peng, W.; Blix, H.; Nie, Y.;
+Alsop, A.; Bordia, S.; Liu, H.; Parrish, A.; et al. 2019. Investigating BERT’s Knowledge of Language: Five Analysis
+Methods with NPIs. In EMNLP.
+Weston, J.; Bordes, A.; Chopra, S.; Rush, A. M.; van
+Merriënboer, B.; Joulin, A.; and Mikolov, T. 2015. Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks. arXiv:1502.05698.
+White, A. S.; Rastogi, P.; Duh, K.; and Van Durme, B. 2017.
+Inference is Everything: Recasting Semantic Resources into
+a Uniﬁed Evaluation Framework. In IJCNLP.
+Williams, A.; Nangia, N.; and Bowman, S. 2018. A BroadCoverage Challenge Corpus for Sentence Understanding
+through Inference. In NAACL.
+Yanaka, H.; Mineshima, K.; Bekki, D.; Inui, K.; Sekine, S.;
+Abzianidze, L.; and Bos, J. 2019a. Can Neural Networks
+Understand Monotonicity Reasoning? In ACL Workshop
+BlackboxNLP.
+Yanaka, H.; Mineshima, K.; Bekki, D.; Inui, K.; Sekine, S.;
+Abzianidze, L.; and Bos, J. 2019b. HELP: A Dataset for
+Identifying Shortcomings of Neural Models in Monotonicity
+Reasoning. In *SEM.
+Zaenen, A.; Karttunen, L.; and Crouch, R. 2005. Local Textual Inference: Can it be Deﬁned or Circumscribed? In the
+ACL workshop on empirical modeling of semantic equivalence and entailment.
+
+Geiger, A.; Cases, I.; Karttunen, L.; and Potts, C.
+2018. Stress-Testing Neural Models of Natural Language Inference with Multiply-Quantiﬁed Sentences.
+arXiv:1810.13033.
+Geiger, A.; Cases, I.; Karttunen, L.; and Potts, C. 2019. Posing Fair Generalization Tasks for Natural Language Inference. In EMNLP.
+Glockner, M.; Shwartz, V.; and Goldberg, Y. 2018. Breaking
+NLI Systems with Sentences that Require Simple Lexical
+Inferences. In ACL.
+Goldberg, Y. 2019. Assessing BER

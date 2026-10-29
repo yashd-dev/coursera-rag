@@ -1,0 +1,92 @@
+=== PAGE 8 (continued) ===
+te?
+a. The paramedic
+
+a. The trophy
+b. The suitcase
+
+b. The passenger
+(C) (Rahman & Ng, 2012)
+Lions eat zebras because they are predators. Who are predators?
+
+The trophy would not fit in the brown suitcase because it was too small. What was
+too small?
+
+a. Lions
+
+a. The trophy
+b. The suitcase
+
+b. Zebras
+
+Figure 3: Examples from existing reference resolution benchmark tasks. Answers in bold.
+tion. As more progress is made, we anticipate event reference resolution benchmarks which require
+outside knowledge and reasoning will be created in the near future.
+2.1.2 Q UESTION A NSWERING
+Instead of providing a focused language processing task like reference resolution, many benchmarks
+instead provide a more comprehensive mix of language processing and reasoning skills within a
+single task. Question answering (QA) is one such comprehensive task, particularly the recent formulation of the task providing a passage, and requiring a system to answer questions about it to
+demonstrate its comprehension of the passage (also referred to as machine reading comprehension).
+Today, QA is a fairly well-established area in NLP, and there are many existing benchmarks for QA.
+However, not all of them require external knowledge and reasoning to solve (Ostermann, Modi,
+Roth, Thater, & Pinkal, 2018), so many can be solved only based on linguistic context without
+a deep understanding. Some QA benchmarks that do require external knowledge are MCScript
+(Ostermann et al., 2018), CoQA (Reddy, Chen, & Manning, 2018), and OpenBookQA (Mihaylov,
+Clark, Khot, & Sabharwal, 2018). Examples from these benchmarks are listed in Figure 4, where
+the commonsense knowledge that diapers are typically thrown away, and the common knowledge
+that steel is a conductor and that Democrats and Republicans compete in American elections, is
+particularly useful in answering questions. Other QA benchmarks require advanced reasoning processes beyond the text. SQuAD 2.0 is one such example, as it includes unanswerable questions
+about passages (Rajpurkar, Jia, & Liang, 2018), which require a deep reasoning over all knowledge given in the passage to identify. In the following paragraphs, we introduce all surveyed QA
+benchmarks.
+MCTest. MCTest by Richardson, Burges, and Renshaw (2013) is a collection of 500 fictional
+stories and 2,000 multiple-choice questions which require outside knowledge and various types of
+8
+
+
+=== PAGE 9 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+(C) CoQA (Reddy et al., 2018)
+The Virginia governor’s race, billed as the
+marquee battle of an otherwise anticlimactic 2013 election cycle, is shaping up to
+be a foregone conclusion. Democrat Terry
+McAuliffe, the longtime political fixer and
+moneyman, hasn’t trailed in a poll since
+May. Barring a political miracle, Republican Ken Cuccinelli will be delivering a
+concession speech on Tuesday evening in
+Richmond. In recent ...
+
+(A) MCScript (Ostermann et al., 2018)
+Did they throw away the old diaper?
+a. Yes, they put it into the bin.
+b. No, they kept it for a while.
+(B) OpenBookQA (Mihaylov et al., 2018)
+Which of these would let the most heat
+travel through?
+a. a new pair of jeans.
+b. a steel spoon in a cafeteria.
+
+Who is the democratic candidate?
+Terry McAuliffe
+Evidence: Democrat Terry McAuliffe
+
+c. a cotton candy at a store.
+d. a calvin klein cotton hat.
+
+Who is his opponent?
+Ken Cuccinelli
+Evidence: Republican Ken Cuccinelli
+
+Evidence: Metal is a thermal conductor.
+
+Figure 4: Examples from QA benchmarks which require inference through outside knowledge. Answers in bold.
+
+9
+
+
+=== PAGE 10 ===
+S TORKS , G AO , & C HAI
+
+reasoning to answer. More than half of the questions require more than one sentence to answer, so
+that systems must synthesize information from multiple locations rather than using shallow matching techniques to find the answer. The questions are open-domain with limited restriction on what
+will be asked, but stories and questions were designed so that they can be understood by young childr

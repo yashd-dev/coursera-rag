@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# madaan2024lost.8.txt (pages 7\u20139) \u2014 Compact Factual Notes\n\n**Problem**\n- Investigate how model label distributions compare to human annotations across NLI benchmarks, using Jensen-Shannon Divergence (JSD) to measure distributional distance in potentially preference-heavy LLM deployment.\n\n**Method**\n- Compute JSD between model softmax label distributions and human label distributions (following Nie et al. 2020b).\n- Evaluate across five NLI benchmarks (\u03b1NLI, ANLI, HANS, MNLI, ChaosNLI) and six models (Llama 3.1 8B/70B/405B, Mistral 7B, 8x7B, 8x22B).\n- Track JSD dynamics during training of 8B and 70B Llama-style models from scratch.\n\n**Reported Results**\n- Larger models have lower JSD (more similar to humans), contradicting Nie et al. 2020b but confirming scale effect via Figure 5 training curve.\n- JSD decreases steadily during training, suggesting human-distribution similarity is an interesting training signal.\n- On MNLI, all models have distributions more similar to humans than chance, but substantially different from human\u2013human distributions.\n- ANRI remains challenging even for largest models; with exception of \u03b1NLI, all benchmarks discriminate between model qualities.\n- Near-zero contamination effect observed across benchmarks.\n\n**Limitations**\n- Human estimate computed by Nie et al. 2020b on independent sample; within-human distributional baseline treated as fixed reference.\n- JSD trend contradicts Nie et al. 2020b finding that better/larger models do not have more similar distributions.\n\n**Two short exact quotes**\n- \u201clarger models have lower divergence, contradicting the finding of Nie et al. (2020b) that better or larger models do not have more similar distributions\u201d (p. 8).\n- \u201cthe JSD of the model softmax distributions and the human label distributions decreases steadily during training\u201d (p. 8).\n\n**Page attribution**: Bullets tagged to preceding physical-page marker; continued markers noted."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2467,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783ea3e0ffeqYBj1OT3M2rvc7"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.18.txt \u2013 Page 23 (continued)**\n\n- **Problem:** Author is surveying recent textual entailment corpora beyond RTE-5. Key collections include IIE (White et al., 2017), GLUE (Wang et al., 2018), DNC (Poliak et al., 2018a), and SuperGLUE (incomplete in segment). All are recast from prior datasets; IIE contains ~300,000 examples across semantic proto-role labeling, paraphrase, and pronoun resolution tasks in RTE format.\n\n- **Method:** Comparative survey/categorization of existing NLP benchmark collections. No new experiments or models introduced.\n\n- **Reported results:** IIE has ~300,000 examples; GLUE has over 1 million examples; DNC has ~570,000 examples across 9 entailment tasks requiring 7 reasoning types.\n\n- **Limitations:** Survey scope limited to listed corpora; no evaluation, error analysis, or new findings reported.\n\n- **Quote 1 (page 23):** \u201cBetween the tasks, IIE includes about 300,000 examples, all of which are recast from previously existing datasets.\u201d\n\n- **Quote 2 (page 24):** \u201cThe DNC benchmark consists of about 570,000 examples total, and can be downloaded at https://github.com/decompositional-semantics-initiative/DNC.\u201d\n\n**storks2019recent.18.txt \u2013 Reference-only note**\n\nThis segment catalogs existing NLP benchmarks (IIE, GLUE, DNC, SuperGLUE) without presenting original methods, results, or conclusions beyond enumeration and download links. No factual findings from this paper can be extracted beyond the reported corpus sizes and URLs."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2647,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782e2435ffevfSy6879EITZSO"
+  }
+]

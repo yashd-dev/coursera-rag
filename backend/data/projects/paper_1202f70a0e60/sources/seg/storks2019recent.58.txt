@@ -1,0 +1,46 @@
+=== PAGE 68 (continued) ===
+urces, with the cost to train models generally doubling every few months (Schwartz, Dodge, Smith, & Etzioni, 2019). As outlined by Rogers (2019),
+online leaderboards and shared tasks which rank approaches only by task competence measures
+exacerbate this problem, encouraging researchers with means to either use more data in pre-training
+or “throw a deeper network at it” to achieve state-of-the-art results. This trend discourages those researchers without the means to do this, especially academic research teams or those from emerging
+economies (Schwartz et al., 2019), from competing on leaderboards and in shared tasks. Factoring
+computational efficiency into evaluation, however, will reward approaches which make better use of
+available training data rather than continually augmenting pre-training data, and allow greater participation of researchers with limited computational resources. Additionally, this would encourage
+greener practices in AI (Schwartz et al., 2019), as training these models has a substantial carbon
+footprint (Strubell, Ganesh, & McCallum, 2019).
+In fact, we are recently beginning to see an emphasis on model efficiency in NLI benchmarks
+and approaches. Some leaderboards, such as for SocialIQA (Sap et al., 2019b)46 and AlphaNLI
+(Bhagavatula et al., 2019), 47 are now reporting runtime during prediction, which is a step in this
+direction. More efficient models for NLI are also being developed. One example is RO BERTA,
+where an optimized pre-training approach is developed to better utilize the parameters of the original
+BERT model (Devlin et al., 2018) and achieve higher performance (Liu et al., 2019b). Another
+example, motivated by hardware limitations, is ALBERT, where a parameter reduction technique
+allows the use of fewer parameters to achieve comparable results to previous models, and often
+better results when the model is scaled deeper (Lan et al., 2019). Lastly, D ISTIL BERT by Sanh,
+Debut, Chaumond, and Wolf (2019) compresses BERT with a small performance reduction by
+using model distillation, a model compression technique where a smaller model is trained to mimic
+the predictions of a larger model. Through this, they reduce model parameters by 40% and increase
+prediction speed by 60%, all while retaining 97% of its performance on GLUE (Wang et al., 2018).
+Efforts like the latter, purely toward model efficiency at the cost of performance, are not rewarded
+by the current evaluation criteria of leaderboards. Going forward, we hope such approaches will
+begin receiving greater recognition.
+Transparency. As in many sub-fields of AI where deep learning approaches are heavily applied,
+transparency of the model and the ability to explain model behaviors are important. The underlying
+reasoning process of state-of-the-art models, e.g., BERT (Devlin et al., 2018), cannot be interpreted
+due to their deep, bidirectional architectures, and thus it is quite opaque why certain conclusions are
+made by these models. It is unclear if BERT is capturing semantic phenomena or again learning
+statistical biases in the NLI benchmarks, but evidence from probing studies and adversarial evaluations, e.g., the investigation by Niven and Kao (2019), is beginning to suggest that BERT is
+indeed learning and exploiting statistical biases in certain benchmarks. A better understanding of
+the behaviors of NLI systems, especially deep learning models that achieve high performance, is
+critical to confirm that systems are trustworthy and capable of generalization. As such, evaluating
+NLI systems upon their ability to explain their underlying reasoning process and more thoroughly
+prove their understanding could be another direction to pursue. We have seen an analogue of this in
+visual question answering with the VCR benchmark (Zellers et al., 2019), where models not only
+46. https://leaderboard.allenai.org/socialiqa/submissions/public
+47. https://leaderboard.allenai.org/anli/submissions/public
+
+68
+
+
+=== PAGE 69 ===
+R ECENT A DVANCES IN NATURAL L A

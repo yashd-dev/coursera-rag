@@ -1,0 +1,84 @@
+=== PAGE 4 (continued) ===
+lly clear on their
+own and, when read alone, in the premise itself, but only when
+combined with other text sections. Multi - hop reasoning is a
+way in which the DMN reconsiders the premise many times
+throughout a process called a "hop, " which looks at the
+different aspects of the premise that may be important to the
+hypothesis. Such back and forth is essential for arriving at the
+
+fine - grain distinctions that decide whether a hypothesis is
+entailed in, contradiction to, or independent of the premise.
+In our implementation, we have made the DMN go through
+several hops across the episodic memory to ensure that the
+model updates its interpretation of the premise accordingly
+(Oliver, 2017). At each hop, the model focuses on varying
+segments of the premise depending on the memory state all
+through the hops. Such selective attention is vital in drawing
+attention to new facts or reprocessing previously given facts
+in light of the hypothesis under testing. Consequently, as the
+process advances, it develops a clearer understanding of the
+connections between sentences, making inferences more
+accurate.
+The multi - hop process is best explained as a tiered approach
+to knowledge—each hop signifies a deeper level of
+knowledge. This could mean that, in the first hop, the model
+will highlight all the instances that are straightforward and
+demonstrative of a connection between the premise and the
+hypothesis. Further iterations enable the model to uncover
+more distant or indirect dependencies and construct a layered
+picture of the general dependency. Such multi - level analysis
+is critically helpful in argumentative texts where the
+relationship between the premise and the hypothesis is
+intricate or non - linear, which might be obscured by a single
+- pass approach (Brzeziński, 2015).
+Our DMN implementation is thus better placed to meet the
+challenges of NLI because the relationships between inputs
+are complex and multi - hop. For instance, when the model is
+trying to do entailment, it might have to find a syllogism that
+leads to the hypothesis from the premise. In cases of
+contradiction, it might need to search for some parts of the
+premise that conflict with the hypothesis. Due to the cyclical
+interpretation, the DMN works more efficiently in these
+diverse cases, so the solution has high adaptability and
+repeatability.
+By applying multi - hop reasoning to DMNs, the performance
+of DMNs on the NLI task is greatly improved. With the ability
+to repeatedly revise the memory state of the model, we enable
+it to capture all the intricacies of the dependencies between
+the premise and the hypothesis. The former approach
+enhances the model's performance but matches human
+cognition for inferring meaning from text. I have further
+demonstrated this when outlining other prospects for
+enhancing NLI performance that come with further fine tuning this process, for instance, through exploring improved
+attention approaches and other approaches to encoding
+sentences (Githiari, 2014).
+
+Figure 6: Dynamic Reasoning Network for Multi - hop
+Question Answering
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2222
+
+
+=== PAGE 5 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+Exploring Alternative Sentence Encodings
+In our initial implementation of Dynamic Memory Networks
+(DMNs) for Natural Language Inference (NLI), we utilized a
+Gated Recurrent Unit (GRU) Recurrent Neural Network
+(RNN) as the primary mechanism for sentence encoding.
+GRUs are known for their efficiency and ability to capture
+temporal dependencies in sequential data, making them a
+natural choice for sentence representation tasks. However, the
+modular architecture of DMNs provides the flexibility to
+experiment with various sentence encoding techniques,
+opening the door to potentially more 

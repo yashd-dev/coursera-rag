@@ -1,0 +1,48 @@
+=== PAGE 14 (continued) ===
+= PAGE 15 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+hypothesis, systems were expected to predict whether the text entailed the hypothesis. In following
+years, more similar Challenges took place (Bar-Haim, Dagan, Dolan, Ferro, Giampiccolo, Magnini,
+& Szpektor, 2006; Giampiccolo, Magnini, Dagan, & Dolan, 2007). The fourth and fifth Challenge
+added a new three-way decision task where systems were additionally expected to recognize contradiction relationships between texts and hypotheses (Giampiccolo et al., 2008; Bentivogli et al.,
+2009). The main task for the sixth and seventh Challenges instead provided one hypothesis and
+several potential entailing sentences in a corpus (Bentivogli, Clark, Dagan, & Giampiccolo, 2010,
+2011). The eighth Challenge (Dzikovska, Nielsen, Brew, Leacock, Giampiccolo, Bentivogli, Clark,
+Dagan, & Dang, 2013) addressed a bit different problem which focused on classifying student responses as an effort toward providing automatic feedback in an educational setting. The first five
+RTE Challenge datasets consisted of around 1,000 examples each (Dagan et al., 2005; Bar-Haim
+et al., 2006; Giampiccolo et al., 2007, 2008; Bentivogli et al., 2009), while the sixth and seventh
+consisted of about 33,000 and 49,000 examples respectively. Data from all RTE Challenges can be
+downloaded at https://tac.nist.gov/.
+Conversational Entailment. The Conversational Entailment dataset, introduced by Zhang and
+Chai (2009) and further analyzed by Zhang and Chai (2010), is a small collection of 875 binary
+entailment pairs consisting of a premise from a natural language dialogue and a hypothesis that
+requires interpreting the dialogue. Many examples require predicting dialogue participants’ beliefs,
+desires, and intentions, which need to be reasoned from the context of dialogue. The dataset can be
+downloaded at https://github.com/lairmsu/ConversationalEntailment.
+SICK. The Sentences Involving Compositional Knowledge (SICK) benchmark by Marelli et al.
+(2014a) is a collection of almost 10,000 pairs of sentences. Two tasks are presented for the pairs:
+sentence relatedness and entailment. The entailment task, which is more related to our survey, is a
+3-way decision task in the style of RTE-4 (Giampiccolo et al., 2008) and RTE-5 (Bentivogli et al.,
+2009). SICK can be downloaded at https://clic.cimec.unitn.it/composes/sick.
+html.
+SNLI. The Stanford Natural Language Inference (SNLI) benchmark from Bowman et al. (2015)
+contains nearly 600,000 sentence pairs, and also provides a 3-way decision task similar to the
+fourth and fifth RTE Challenges (Giampiccolo et al., 2008; Bentivogli et al., 2009). In addition
+to gold labels for entailment, contradiction, or neutral, the SNLI data includes five crowd judgments for the label, which may indicate a level of confidence or agreement for it. This benchmark is later expanded into MultiNLI (Williams et al., 2017), which follows the same format,
+but includes sentences of various genres, such as telephone conversations. MultiNLI is included
+within the later introduced GLUE benchmark (Wang et al., 2018), while SNLI can be downloaded
+at https://nlp.stanford.edu/projects/snli/.
+SciTail. SciTail by Khot et al. (2018) consists of about 27,000 premise-hypothesis sentence pairs
+adapted from science questions into a 2-way entailment task. Unlike other entailment benchmarks,
+this one is primarily science-based, which may require domain-specific knowledge. SciTail can be
+downloaded at https://data.allenai.org/scitail/.
+SherLIiC. SherLIiC by Schmitt and Schütze (2019) is a benchmark for lexical inference in context (LIiC), i.e., a subset of textual entailment focusing on relationships between words, which
+Glockner, Shwartz, and Goldberg (2018) found that previous benchmarks lacked, and state-ofthe-art systems struggled with. SherLIiC focuses particularly on entailment relationships between
+15
+
+
+=== PAGE 16 ===
+S TORKS , G AO , & C HAI
+
+event and action verbs. It consists of about 960,000 

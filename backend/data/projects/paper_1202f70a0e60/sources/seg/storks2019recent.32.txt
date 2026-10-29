@@ -1,0 +1,104 @@
+=== PAGE 39 (continued) ===
+much, perhaps causing the benchmark to be perceived as more
+difficult. For selected benchmarks with online leaderboards, Figure 14 compares the number of
+unique, public submissions to the human-machine performance gap.
+
+11. https://competitions.codalab.org/competitions/15333#results
+
+39
+
+
+=== PAGE 40 ===
+S TORKS , G AO , & C HAI
+
+Human-Machine Performance Gap
+
+35
+MC-TACO
+
+30
+
+25
+
+Story Cloze Test
+DREAM
+Cosmos QA
+
+20
+15
+10
+
+DROP
+OpenBookQA
+HellaSWAG
+ReCoRD
+SuperGLUE
+
+AlphaNLI
+WinoGrande
+SocialIQA
+
+5
+0
+-5 1
+
+-10
+
+10
+
+CLOTH
+SWAG
+
+RACE
+
+GLUE
+
+100
+
+SQuAD 2.0
+
+1000
+
+SQuAD 1.1
+
+Leaderboard Submissions
+
+Figure 14: Number of leaderboard submissions versus gap between state-of-the-art machine accuracy and human accuracy for selected benchmarks where human performance is reported
+and public leaderboards are maintained.
+
+For benchmarks with a low number of submissions, there is high variability, suggesting no relationship between popularity and progress on the benchmark. However, for the few benchmarks
+with a much higher number of submissions, we see an increasingly negative human-machine performance gap, indicating that human performance has been exceeded. The most popular benchmarks, i.e., SQuAD 1.1 (Rajpurkar et al., 2016) and 2.0 (Rajpurkar et al., 2018), have seen the most
+progress, with machine performance far surpassing human performance.
+In conclusion, when it comes to the complexity of benchmark tasks, there is not a straightforward way to analyze this. While human and machine performance on a benchmark can shed
+some light on task complexity, we must consider various limitations of these performance measures
+themselves, as well as other factors that may hinder or drive progress in machine performance, such
+as benchmark data size, age, and popularity. All of these issues can affect how we perceive the
+complexity of benchmarks, so results must be interpreted accordingly.
+
+3. Knowledge Resources
+It is estimated that typical human adults possess up to 100,000,000 different axioms of commonsense knowledge (Chklovski, 2003). The lack of this knowledge in NLI applications is currently
+a major bottleneck. In order to remove this bottleneck, decades of efforts in AI have been spent
+on developing knowledge representations and various knowledge resources, from early works on
+semantic networks (Woods, 1975; Quillian, 1966) to the recent efforts of compiling large-scale
+commonsense knowledge graphs (Speer, Chin, & Havasi, 2017; Sap, LeBras, Allaway, Bhagavatula, Lourie, Rashkin, Roof, Smith, & Choi, 2019a). The acquired knowledge is often represented in
+various forms such as propositions, taxonomies, ontologies, and semantic networks. In this section,
+we start with an introduction to several existing knowledge resources, then discuss the main issues
+involved in building and leveraging these resources.
+40
+
+
+=== PAGE 41 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+3.1 An Overview of Existing Knowledge Resources
+As outlined in Section 1.2, to understand human language, it is important to have linguistic knowledge resources that allow computers to identify syntactic and semantic structures from language.
+These structures often need to be augmented with common knowledge and commonsense knowledge to reach a full understanding.
+3.1.1 L INGUISTIC K NOWLEDGE R ESOURCES
+Linguistic resources have been pivotal in pushing the NLP field forward in the last thirty years.
+Resources have been developed where annotations for syntactic, semantic, and discourse structures
+are provided for training machine learning models. Several knowledge bases, particularly for lexical
+semantics, have also been made available to facilitate semantic processing. Also toward semantic
+processing, various vector embeddings of word meanings have been created. In this section, we
+summarize these annotated corpora, frame semantics resources, lexical resources, and pre-trained
+semantic vectors for linguistic knowledge.
+Annotated linguistic corpora. Widely used lin

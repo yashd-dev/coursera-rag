@@ -1,0 +1,82 @@
+=== PAGE 6 (continued) ===
+abor Angeli,
+Christopher Potts, and Christopher D. Manning. 2015.
+A large annotated corpus for learning natural language
+inference. In Proceedings of EMNLP.
+[Bowman et al.2016] Samuel R. Bowman, Jon Gauthier,
+Abhinav Rastogi, Raghav Gupta, Christopher D. Manning, and Christopher Potts. 2016. A fast unified model
+for parsing and sentence understanding. In Proceedings
+of ACL.
+[Chang et al.2010] Ming-Wei Chang, Dan Goldwasser,
+Dan Roth, and Vivek Srikumar. 2010. Discriminative learning over constrained latent representations. In
+Proceedings of HLT-NAACL.
+[Cheng et al.2016] Jianpeng Cheng, Li Dong, and Mirella
+Lapata. 2016. Long short-term memory-networks for
+machine reading. In Proceedings of EMNLP.
+[Das and Smith2009] Dipanjan Das and Noah A. Smith.
+2009. Paraphrase identification as probabilistic quasisynchronous recognition. In Proceedings of ACLIJCNLP.
+[Duchi et al.2011] John Duchi, Elad Hazan, and Yoram
+Singer. 2011. Adaptive subgradient methods for online
+learning and stochastic optimization. The Journal of
+Machine Learning Research, 12:2121–2159.
+[Fader et al.2013] Anthony Fader, Luke S Zettlemoyer,
+and Oren Etzioni. 2013. Paraphrase-driven learning
+for open question answering. In Proceedings of ACL.
+[Glorot et al.2011] Xavier Glorot, Antoine Bordes, and
+Yoshua Bengio. 2011. Deep sparse rectifier neural
+networks. In Proceedings of AISTATS.
+[Haghighi et al.2005] Aria D. Haghighi, Andrew Y. Ng,
+and Christopher D. Manning. 2005. Robust textual
+inference via graph matching. In Proceedings of HLTNAACL.
+[Hickl and Bensley2007] Andrew Hickl and Jeremy Bensley. 2007. A discourse commitment-based framework
+
+for recognizing textual entailment. In Proceedings of
+the ACL-PASCAL Workshop on Textual Entailment and
+Paraphrasing. Association for Computational Linguistics.
+[Hochreiter and Schmidhuber1997] Sepp Hochreiter and
+Jürgen Schmidhuber. 1997. Long short-term memory.
+Neural computation, 9(8):1735–1780.
+[Hu et al.2014] Baotian Hu, Zhengdong Lu, Hang Li, and
+Qingcai Chen. 2014. Convolutional neural network
+architectures for matching natural language sentences.
+In Advances in NIPS.
+[Katz1972] Jerrold J. Katz. 1972. Semantic theory.
+Harper & Row.
+[Koehn2009] Philipp Koehn. 2009. Statistical machine
+translation. Cambridge University Press.
+[LeCun et al.1990] Y. LeCun, B. Boser, J.S. Denker,
+D. Henderson, R.E. Howard, W. Hubbard, and L.D.
+Jackel. 1990. Handwritten digit recognition with a
+back-propagation network. In Advances in NIPS.
+[MacCartney and Manning2009] Bill MacCartney and
+Christopher D. Manning. 2009. An extended model of
+natural logic. In Proceedings of the IWCS.
+[MacCartney et al.2006] Bill
+MacCartney,
+Trond
+Grenager, Marie-Catherine de Marneffe, Daniel Cer,
+and Christopher D Manning. 2006. Learning to
+recognize features of valid textual entailments. In
+Proceedings of HLT-NAACL.
+[MacCartney et al.2008] Bill MacCartney, Michel Galley,
+and Christopher D Manning. 2008. A phrase-based
+alignment model for natural language inference. In
+Proceedings of EMNLP.
+[Marsi and Krahmer2005] Erwin Marsi and Emiel Krahmer. 2005. Classification of semantic relations by
+humans and machines. In Proceedings of the ACL
+workshop on Empirical Modeling of Semantic Equivalence and Entailment.
+[Mou et al.2015] Lili Mou, Men Rui, Ge Li, Yan Xu,
+Lu Zhang, Rui Yan, and Zhi Jin. 2015. Natural language inference by tree-based convolution and heuristic
+matching. In Proceedings of ACL (short papers).
+[Pennington et al.2014] Jeffrey Pennington, Richard
+Socher, and Christopher D. Manning. 2014. GloVe:
+Global vectors for word representation. In Proceedings
+of EMNLP.
+[Rocktäschel et al.2016] Tim Rocktäschel,
+Edward
+Grefenstette, Karl Moritz Hermann, Tomáš Kočiskỳ,
+and Phil Blunsom. 2016. Reasoning about entailment
+with neural attention. In Proceedings of ICLR.
+[Srivastava et al.2014] Nitish Srivastava, Geoffrey Hinton,
+Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdinov. 2014. Dropout: A simple way to prevent neural
+networks from overfitting. The Jou

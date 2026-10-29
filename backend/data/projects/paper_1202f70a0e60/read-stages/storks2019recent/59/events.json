@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Storks, Gao & Chai (2019) \u2014 NLI Survey Notes\n\n**Problem:** Natural language inference requires systems to model semantic relationships and handle language artifacts; generalization to unseen data remains limited by dependence on large training sets.\n\n**Method:** Survey of NLI benchmarks, categorizing methods by context/question creation, answer/alternative generation, extra annotations, and validation. Taxonomy: M (manual), A (automatic), T (text mining), C (crowdsourcing).\n\n**Reported results:** RACE has 97.7K samples using text mining for context/question; SNLI leads at 570K with crowdsourcing; bAbI uses automatic generation; LAMBADA has 10K with text generation; I includes triangle-COPA (100 samples, manual).\n\n**Limitations:** State-of-the-art models like BERT require large training data; iteration over extensive datasets remains necessary; superficial data biases persist; no standardized metrics for generalization or domain adaptation across benchmarks.\n\n- \"With better generalization, we would expect models to be able to acquire knowledge from any benchmark and apply it to other benchmarks.\" (p.69 continued)\n- \"The requirement of iteration over large amounts of training data in order to perform well on a benchmark is still a limitation for generalizing over multiple problems.\" (p.69 continued)\n\n*Note: References-only segment contains no experimental findings; limits discussion to benchmark taxonomy and textual constraints.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2697,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78244d89ffe8W2DfU3tfU00Ja"
+  }
+]

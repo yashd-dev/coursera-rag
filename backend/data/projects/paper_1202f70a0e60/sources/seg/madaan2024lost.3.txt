@@ -1,0 +1,102 @@
+=== PAGE 2 (continued) ===
+simplifies the data annotation process,
+while also making the evaluation easier. However,
+several previous studies have noted that human disagreements in annotations for NLP datasets reflect
+the lack of a single ground truth label, rather than
+than noise in the annotation process (e.g. de Marneffe et al., 2012; Plank et al., 2014; Pavlick and
+Kwiatkowski, 2019; Nie et al., 2020b)and that we
+could benefit from embracing rather than resolving
+it (Plank, 2022; Aroyo and Welty, 2015).
+For NLI, label disagreements were captured in
+more detail in the dataset ChaosNLI (Nie et al.,
+2020b), comprising of 100 annotations for each
+sample for a subset of three benchmarks – MNLI,
+
+Related work
+
+Before presenting our analysis, we first discuss
+NLI or recognising textual entailment (RTE) tasks
+(§ 2.1) and touch upon the related topic of subjectivity for NLP tasks (§ 2.2) before presenting our
+analysis.
+2.1
+
+RTE tasks and their results
+
+In RTE tasks – also referred to as ‘natural language
+inference’ (NLI) tasks, models are asked to judge
+2
+
+Subjectivity in NLP tasks
+
+For further evidence to this claim, see Baan et al. (2022).
+
+2
+
+
+=== PAGE 3 ===
+SNLI, and αNLI. As human disagreements are
+ubiquitous yet mostly ignored in LLM evaluation,
+in our study, we analyse not only the model accuracies, but also the relationship between these disagreements and models’ probability distributions
+across the different labels. A study with a similar
+aim is presented by Chen et al. (2024). They explore whether the softmax probability distributions
+solicited by a few explanations from two LLMs
+(Mixtral and Llama 3) can approximate human
+judgement distributions (HJD) on the ChaosNLI
+and VariErr NLI (Weber-Genzel et al., 2024) benchmarks. Similarly, Baan et al. (2024) and Lee et al.
+(2023) compare human and model judgement distributions on ChaosNLI, finding that models fail to
+capture human distributions in LLMs and model
+confidences. Furthermore, Baan et al. (2024) argue
+how the softmax probability distribution can be interpreted as both an approximation to human label
+distribution and confidence estimation in language
+models.
+
+3
+
+with a human-in-the-loop setup. In our experiments, we consider the dev set of iteration 3, the
+most challenging set of the benchmark.
+αNLI αNLI or abductive NLI (Bhagavatula et al.,
+2020) has a different setup than the previous benchmarks, focusing specifically on abductive reasoning. Each sample consist of a pair of observations
+at two consecutive times, a plausible hypothesis
+that explains tho two observations, and an implausible hypothesis that does not (or to a lesser extent).
+The model has to select the most plausible hypothesis among the two choices. The dataset contains
+1500 examples.
+ChaosNLI Lastly, we consider ChaosNLI (Nie
+et al., 2020b), which contains 100 additional (human) labels for 1500 examples for each of SNLI,
+MNLI, and αNLI.
+3.2
+
+For each of these benchmarks, we compute and
+analyse scores for two different model families:
+Llama (Dubey et al., 2024) and Mistral (Jiang et al.,
+2023, 2024). Specifically, we use Meta-Llama 3.1
+{8, 70, 405}B from the Llama series, and Mistral
+7B / Mixtral 8x{7, 22}B from the Mistral series.
+We limit our analysis to pre-trained base models
+and leave the analysis on post-trained / instruct
+models to future work.
+
+Setup
+
+Before reporting our results, we first describe the
+benchmarks and models we consider in our experiments and describe our evaluation procedure.
+3.1
+
+Models
+
+Benchmarks
+
+In our experiments, we consider five NLI benchmarks as briefly described below. A more elaborate
+description can be found in Appendix A.
+
+3.3
+
+SNLI The Stanford Natural Language Inference
+(SNLI) is one of the first large-scale NLI datasets
+for NLP evaluation, sourced via Amazon Mechanical Turk. We use the dev set of the corpus, which
+comprises 10K examples.
+
+Evaluation details
+
+As nowadays common for pre-trained models, we
+consider the choice-based rather than generative
+evaluation setup for all the tasks (D

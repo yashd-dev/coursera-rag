@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.23 Notes\n\n**Problem**  \n- Baseline approaches for classification use random choice, majority-class selection, or n-gram overlap (Richardson et al., 2013; Mostafazadeh et al., 2016)  \n- Open-ended problems employ shallow lexical approaches like language models (Weston et al., 2016 bAbI benchmark)  \n- Benchmark releases report state-of-the-art baselines that evolve as new models emerge, continually boosting performance over time  \n\n**Method**  \n- Human performance measured via random subsets solved by crowdsourced judges (averaged) or majority vote across all judges  \n- \"Expert\" human performance provided as ceiling by dataset creators (RACE, SWAG examples)  \n- Systems compared against human performance, though exceeding it does not guarantee skill acquisition due to neural model unexplainability  \n\n**Reported Results**  \n- VQA first release: models learned statistical biases, answering 48% of validation questions without seeing images (Manjunatha et al., 2018)  \n- Data biases artificially inflate performance, undermining credit to underlying technology  \n\n**Limitations**  \n- Unexplainable neural models hinder proof of skill acquisition beyond baseline performance  \n- Data biases in popular benchmarks allow simple and state-of-the-art systems to exploit biases for artificially high scores  \n\n>- **Quote (p.30):** \u201cFor classification problems, simple baseline approaches are often calculated by random choice, choosing the majority class from the training data\u2026\u201d  \n>- **Quote (p.30):** \u201cHuman performance can also be measured through annotator agreement, e.g., as done for ROCStories (Mostafazadeh et al., 2016).\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2346,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782cda74ffejO6WYW038iVY2R"
+  }
+]

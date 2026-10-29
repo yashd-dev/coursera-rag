@@ -1,0 +1,161 @@
+=== PAGE 6 (continued) ===
+
+
+1×
+2.46×
+
+on 16 TPU v4s (where it achieves the aforementioned 14.1ms/token), whereas a chinchilla-optimal
+7B achieves its lowest sampling latency on 4 TPU v4s (where it achieves 5ms/token). For smaller
+models, the additional memory bandwidth and flops are insufficient to offset the additional communication overhead between more devices – serving a 7B on 16 TPUs actually increases the latency. This
+means the 7B would provide only a modest speedup if used as a draft with its optimal topology, and
+we will not make full utilisation of the hardware during drafting.
+We can sidestep this issue by training a wider model with a relatively few number of layers in
+order to minimise communication overhead. It has been observed that the performance of language
+models is relatively robust to changes in model aspect ratio (Levine et al., 2020), so this allows us
+to serve a powerful draft model which can be sampled rapidly on the same hardware as the target
+model.
+Evaluation on XSum and HumanEval
+We evaluate speculative sampling with Chinchilla on two tasks and summarize the results in Table 1:
+• The XSum (Narayan et al., 2018) benchmark. This is a natural language summarisation task
+using a 1-shot prompt where we sample a total of 11,305 sequences with a maximum sequence
+length 128.
+• The 100-shot HumanEval task (Chen et al., 2021). This is a code generation task involves the
+generation of 16,400 samples with a maximum sequence length of 512.
+Even with greedy sampling, a single token deviating due to numerics could result in two sequences
+diverging wildly. Since pseudo-random seeds are processed differently between ArS and SpS, and
+because the different computation graphs lead to different numerics, we cannot not expect identical
+outputs. However, we expect the samples to come from the same distribution within numerics and
+we empirically verify this by evaluating these benchmarks.
+We run the tasks at batch size 1 with SpS and ArS. The time taken per SpS/ArS loop has low
+variance, and we can measure it directly from TPU profiles. To obtain the average speedup, standard
+deviations and other metrics, we log the amount of tokens generated for each speculative loop. In
+Table 1 we show the performance on the XSum and HumanEval benchmarks for naive and speculative
+sampling with Chinchilla.
+
+6
+
+
+=== PAGE 7 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+We obtain a substantial speedup in both tasks, with HumanEval reaching speedups of almost 2.5×.
+Yet, we have parity in the benchmark metrics – the underlying samples distribution is provably the
+same up to numerics, and this verifies that the draft model is not biasing the results empirically. In the
+case of HumanEval and greedy XSum, this speedup exceeded the theoretical memory bandwidth limit
+of the hardware for autoregressive sampling (model size divided by the total memory bandwidth).
+Acceptance rate changes per domain
+It is apparent that the acceptance rate is dependent on the application and the decoding method.
+HumanEval achieves a significantly larger speedup — We hypothesize that this is due to a combination
+of code containing a lot of common sub-sequences (e.g. for i in range(len(arr)): would be
+relatively easy for a draft model to guess), is often decomposed into a smaller set of shorter tokens
+and the temperature value sharpening both the draft and target logits.
+
+Mean Sampling Time (128 tokens)
+Human Eval
+XSum
+
+1600
+
+Human Eval
+XSum
+
+ms
+
+22
+
+0.7
+
+1000
+800
+
+0.6
+
+600
+
+0.5
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Number of draft tokens (K)
+
+7
+
+28
+
+24
+
+0.8
+
+1200
+
+Total loop time
+26
+
+0.9
+
+1400
+
+400 0
+
+Acceptance rate
+
+1.0
+
+ms
+
+1800
+
+20
+18
+16
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Number of draft tokens (K)
+
+7
+
+14
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Number of draft tokens (K)
+
+7
+
+Figure 1 | Left: The average time to generate 128 tokens, with standard deviation. Note that as 𝐾
+increases, the overall speedup plateaus or even regresses, with XSum being optimal at 𝐾 = 3. The
+variance consistently increases with 𝐾 . Middle:

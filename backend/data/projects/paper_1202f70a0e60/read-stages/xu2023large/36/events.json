@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 35 (continued)**\n\n- **Problem**: Public concern that microwave heating alters food\u2019s molecular structure, creating unrecognizable molecules causing serious health problems (including cancer).\n- **Method**: Test questions assessing assumptions about microwave mechanisms vs. chemical change; compare answer choices that challenge or support the structural-change view.\n- **Reported results**: \n  - Q: \"Which can best question the above view?\" \u2192 Answer D selected as best challenge, stating microwaves only heat water molecules without chemical change.\n  - Q: \"China\u2019s microwave oven production standards are consistent with international/EU standards\" \u2192 Answer B selected, implying safety regulations would not exist if structural change were real.\n  - Q: \"It is also common for developed countries to use microwave ovens\" \u2192 Answer D.\n- **Limitations**: Options A, B, C deemed irrelevant to the core argument about molecular restructuring; no empirical food-safety data presented.\n- **Quote 1**: \"The microwave only heats the water molecules in the food, the food does not change chemically.\" (Option D)\n- **Quote 2**: \"The argument suggests that the use of microwave ovens to heat food changes the molecular structure of food, producing molecules that the human body cannot recognize, which can lead to serious health problems.\" (Argument summary)\n\n*Note: This segment contains only test-form content and interpretive answers; no original research findings are reported.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2116,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78358604ffegLlb37IHyyKdHt"
+  }
+]

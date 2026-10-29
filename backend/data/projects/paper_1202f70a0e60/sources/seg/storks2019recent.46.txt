@@ -1,0 +1,46 @@
+=== PAGE 55 (continued) ===
+models, DNC’s
+memory cells are controlled by a central LSTM, whereas nearly all of E NT N ET’s computation occurs in the memory cells (Henaff et al., 2017). While E NT N ET achieves higher performance on
+the bAbI benchmark (Weston et al., 2016) than the original DNC, an optimized, bidirectional form
+of the DNC proposed by Franke, Niehues, and Waibel (2018) exceeds the maximum performance
+on bAbI over all previous models, achieving a response word error rate of about 0.4. This version
+solves bAbI so close to perfectly that we are unlikely to see any new models attempt the benchmark.
+Memory, attention, and composition networks. Similar models which may be useful toward
+NLI have been developed in other areas like visual question answering (VQA). One such example is the memory, attention, and composition (MAC) network (Hudson & Manning, 2018). The
+MAC network consists of chained memory cells each consisting of a separate memory and attentive
+controller. The controller attends upon the input question to update a hidden control state which
+determines the type of reasoning required for the question, while read and write units extract information from a knowledge source (e.g., an image or paragraph of text) guided by the controller
+and write it to memory. While originally applied to a VQA task, it exceeded the performance of
+similar network architectures which have been applied to language problems, e.g., DNC (Graves
+et al., 2016). As such, MAC networks may also be useful for tracking the world state in procedural
+text.
+Neural process networks. Closely related to these models are neural process networks (NPNs)
+introduced by Bosselut, Levy, Holtzman, Ennis, Fox, and Choi (2018), which aim to simulate the
+effects of actions on entities in procedural text. It embeds input sentences in a GRU, then uses a
+multi-layer perceptron (MLP) to predict actions which occur in each sentence, and sentence-level
+and recurrent attention mechanisms to identify entities affected by actions. Selected actions and
+entities are fed into a simulation module which uses a recurrent unit and external knowledge of state
+changes caused by actions to maintain embeddings for the states of all entities in the procedural text.
+Unlike previous similar models, neural process networks also learn functional operators to represent
+actions, allowing them to explain the properties of an object that are changed by each action in a
+procedural text. Their results on a dataset of cooking recipes (Kiddon, Zettlemoyer, & Choi, 2016)
+demonstrate that learning these action embeddings allows the model to learn a more informative
+representation of procedural text. This representation not only allows the model to understand the
+text, but predict future actions in the text. Models with this suitability for learning action verb
+55
+
+
+=== PAGE 56 ===
+S TORKS , G AO , & C HAI
+
+semantics may be useful for explaining predictions on NLI benchmarks requiring intuitive physics,
+a capability that many current state-of-the-art models do not have.
+KG-MRC. The Knowledge Graph-Machine Reading Comprehension (KG-MRC) system from
+Das et al. (2019), maintains a dynamic memory similar to memory networks. However, this memory is in the form of knowledge graphs generated after every sentence of procedural text, leveraging
+research efforts from the area of information extraction. Generated knowledge graphs are bipartite,
+connecting entities in the paragraph with their locations. Connections between entities and locations are updated to generate a new graph after each sentence. According to the official ProPara
+leaderboard26 , the Knowledge Graph-Machine Reading Comprehension (KG-MRC) system from
+Das et al. (2019) achieves the second-highest F-measure on the benchmark, reported as 57.60 on
+the leaderboard. It provides advantages over P RO S TRUCT, the previous state of the art for ProPara
+(Tandon, Mishra, Grus, Yih, Bosselut, & Clark, 2018). While P RO S TRUCT manually enforces hard
+and soft commonsense const

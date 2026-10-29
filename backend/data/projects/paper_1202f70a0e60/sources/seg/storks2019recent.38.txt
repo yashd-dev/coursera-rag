@@ -1,0 +1,48 @@
+=== PAGE 46 (continued) ===
+ development over the last 35 years, since its first release in 1984. The cost of this manual encoding is high,
+with a total estimated cost of $120M (Paulheim, 2018). As a consequence, Cyc is small relative to
+other resources, and growing very slowly. On the other hand, this expert-based approach ensures
+high quality of data.
+Text mining. Text mining and information extraction tools are often applied to automatically
+generate knowledge graphs and taxonomies from information sources on the Web. One popular
+information source is Wikipedia, which was drawn from in creating common knowledge bases such
+as YAGO (Suchanek et al., 2007), DBpedia (Auer et al., 2007), WikiTaxonomy (Ponzetto & Strube,
+2007). Other knowledge bases are generated from crawling the Web, e.g., NELL (Carlson et al.,
+2010), from benchmark datasets, e.g., ATOMIC (Sap et al., 2019a), or even from other knowledge
+bases, e.g., IsaCore (Cambria et al., 2014b). KnowItAll (Etzioni, Cafarella, Downey, Popescu,
+46
+
+
+=== PAGE 47 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Shaked, Soderland, Weld, & Yates, 2005) and TextRunner (Etzioni, Banko, Soderland, & Weld,
+2008) have been popular approaches for extracting this common knowledge from online sources.
+However, as commonsense knowledge is rarely explicitly stated, it is more difficult to extract
+from text sources. Additional processes are often required to obtain knowledge beyond the text.
+For example, processes have been used to extract unstated inference and textual entailment rules,
+e.g., from Web text (Schoenmackers, Etzioni, Weld, & Davis, 2010; Gordon & Schubert, 2011),
+and knowledge graphs (Berant, Dagan, & Goldberger, 2011). Such rules could prove useful for
+many of the benchmarks introduced in Section 2. Several processes have been proposed for extracting temporal commonsense knowledge of events from text, particularly useful for benchmarks like
+MC-TACO (Zhou et al., 2019), which requires this knowledge. The expected durations of events
+can be gathered through the processes proposed by Kozareva and Hovy (2011) and Samardžić and
+Merlo (2016), and expected frequencies of events can be learned through work by Gordon and Schubert (2012). Information about the order of events and their participants can be extracted through
+processes proposed by Chambers and Jurafsky (2008) and Wang, Zhang, and Chang (2017), which
+may be useful in gathering commonsense knowledge about which events typically follow each other.
+Commonsense physical and spatial relations between objects can be inferred through processes proposed by Forbes and Choi (2017), Collell, Gool, and Moens (2018), and Yang, Birnbaum, Wang,
+and Downey (2018b). Relations and trends between numbers and language can also be identified
+and predicted through processes by Chaganty and Liang (2016) and Spithourakis and Riedel (2018).
+General comparative commonsense relations between entities, e.g., the knowledge that bears tend to
+be more dangerous than dogs, can be gathered through a process by Tandon, De Melo, and Weikum
+(2014b).
+One key advantage of these text mining approaches is cost efficiency. According to Paulheim
+(2018), creating a statement in the Wikipedia-extracted DBpedia and YAGO respectively costs 1.85
+cents and 0.83 cents (USD), which are hundreds of folds less than the cost of manually encoding
+a statement in Cyc (which was estimated at about $5.71 per statement). This makes text mining
+approaches easily scale up to create large knowledge bases. However, the drawback is that the
+acquired knowledge can be noisy and inconsistent if extracted from open online data. There exist
+some automatic error correction processes, e.g., a process by Spithourakis, Augenstein, and Riedel
+(2016) which uses language models to identify and correct textual misinterpretations of numbers.
+However, human validation is still likely to be required when automatically generating knowledge
+resources in this way (Gordon, Van Durme, & Schubert, 2010).
+Crowdsourc

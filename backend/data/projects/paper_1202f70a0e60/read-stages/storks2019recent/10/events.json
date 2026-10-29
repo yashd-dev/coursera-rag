@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.10.txt - Page 12 (continued)**\n\n- **Problem**: Survey of recent NLI advances; datasets address various reasoning gaps. QuAC questions unanswerable by string matching; workers provide dialog acts for feedback. OpenBookQA provides ~1,300 \"open book\" science facts alongside ~6,000 4-way MCQs requiring commonsense knowledge. CommonsenseQA has 9,500 three-way MCQs targeting ConceptNet disambiguation. DREAM has ~10,000 MCQs on 6,500 dialogues; 34% explicitly require external knowledge. Cosmos QA continues from Page 13.\n\n- **Method**: Dataset collection protocols described; no modeling methods reported in this segment.\n\n- **Reported results**: None. This is a survey segment describing datasets and benchmarks.\n\n- **Limitations**: QuAC does not explicitly address use of external knowledge; CommonsenseQA requires outside resources for commonsense answers; DREAM 34% external knowledge reliance challenges neural RC systems not typically used for dialogue.\n\n- **Quote 1**: \"the worker asking the questions could not see the text and thus did not know the answer, encouraging the creation of questions which cannot be answered by string matching approaches\" (p.12)\n\n- **Quote 2**: \"the answers to most questions cannot be directly extracted from the text, and will require multi-sentence reasoning. Further, 34% of questions explicitly require external knowledge to answer\" (p.12, DREAM)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2322,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782fe750ffe8aK0TOgrIjcEEP"
+  }
+]

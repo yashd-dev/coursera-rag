@@ -1,0 +1,167 @@
+[
+  {
+    "id": 119,
+    "page": 4,
+    "chunk_index": 20,
+    "text": "M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "key": "cai2024medusa",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "year": 2024,
+    "authors": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao",
+    "score": 0.8221
+  },
+  {
+    "id": 195,
+    "page": 23,
+    "chunk_index": 96,
+    "text": "M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "key": "cai2024medusa",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "year": 2024,
+    "authors": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao",
+    "score": 0.8221
+  },
+  {
+    "id": 168,
+    "page": 13,
+    "chunk_index": 69,
+    "text": "M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "key": "cai2024medusa",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "year": 2024,
+    "authors": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao",
+    "score": 0.8221
+  },
+  {
+    "id": 164,
+    "page": 12,
+    "chunk_index": 65,
+    "text": "M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads\nShazeer, N. Fast transformer decoding: One write-head is\nall you need. arXiv preprint arXiv:1911.02150, 2019.\nZheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z.,\nZhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang,\nH., Gonzalez, J. E., and Stoica, I. Judging llm-as-a-judge\nwith mt-bench and chatbot arena, 2023.",
+    "key": "cai2024medusa",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "year": 2024,
+    "authors": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao",
+    "score": 0.7984
+  },
+  {
+    "id": 105,
+    "page": 2,
+    "chunk_index": 6,
+    "text": "M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads\nfine the concept of using multiple decoding heads on top\nof the backbone model to expedite inference (Stern et al.,\n2018). We find that when applied effectively, this technique can overcome the challenges of speculative decoding,\nallowing for seamless integration into existing LLM systems. Specifically, we introduce M EDUSA, a method that\nenhances LLM inference by integrating additional decoding\nheads to concurrently predict multiple tokens. These heads\nare fine-tuned in a parameter-efficient manner and can be\nadded to any existing model. With no requirement for a\ndraft model, M EDUSA offers easy integration into current\nLLM systems, including those in distributed environments,\nensuring a user-friendly experience.",
+    "key": "cai2024medusa",
+    "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+    "year": 2024,
+    "authors": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, Jason D. Lee, Deming Chen, Tri Dao",
+    "score": 0.7979
+  },
+  {
+    "id": 31,
+    "page": 9,
+    "chunk_index": 30,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 12,
+    "page": 4,
+    "chunk_index": 11,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 9,
+    "page": 3,
+    "chunk_index": 8,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8488
+  },
+  {
+    "id": 5,
+    "page": 2,
+    "chunk_index": 4,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling\ndrafting process for large language models, resulting in an effective and practical method for reducing\nsampling latency without the need for modifying the target model or biasing the sample distribution.\nDepending on the evaluation domain, SpS leads to a 2\u20132.5\u00d7 speedup when sampling from Chinchilla\n(Hoffmann et al., 2022). Notably, the mean tokens per second with SpS often exceeds the idealised\nceiling on auto-regressive sampling speed imposed by the memory bandwidth.",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8056
+  },
+  {
+    "id": 28,
+    "page": 8,
+    "chunk_index": 27,
+    "text": "Accelerating Large Language Model Decoding with Speculative Sampling\nFurther, even though larger values of \ud835\udc3e may yield marginally greater mean speedups in certain\ncircumstances, it also increases variance of the time to generate a full sequence. This could be\nproblematic for settings where the P90, P99 latencies of concern.\nConclusion\nIn this work, we demonstrate a new algorithm and workflow for accelerating the decoding of language\nmodels. Speculative sampling does not require making any modifications to the target language\nmodel\u2019s parameters or architecture, is provably lossless within numerics, scales well with the appropriate draft model and complements many existing techniques for reducing latency in the small batch\nsize setting.\nWe optimise and scale the technique to Chinchilla 70B using a draft model which was easy to\ntrain with existing infrastructure, demonstrating that it yields a large speedup across benchmark tasks\nand common decoding methods in the process. We verify that it is indeed lossless empirically in its\ndownstream tasks.",
+    "key": "chen2023accelerating",
+    "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "year": 2023,
+    "authors": "Charlie Chen, Sebastian Borgeaud, Geoffrey Irving, Jean-Baptiste Lespiau, Laurent Sifre, John Jumper",
+    "score": 0.8052
+  },
+  {
+    "id": 88,
+    "page": 10,
+    "chunk_index": 48,
+    "text": "Fast Inference from Transformers via Speculative Decoding",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.8599
+  },
+  {
+    "id": 40,
+    "page": 1,
+    "chunk_index": 0,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nYaniv Leviathan * 1 Matan Kalman * 1 Yossi Matias 1\narXiv:2211.17192v2 [cs.LG] 18 May 2023\nAbstract\ndeveloped to make inference from them faster. Some approaches aim to reduce the inference cost for all inputs\nequally (e.g. Hinton et al., 2015; Jaszczur et al., 2021;\nHubara et al., 2016; So et al., 2021; Shazeer, 2019). Other\napproaches stem from the observation that not all inference steps are born alike - some require a very large model,\nwhile others can be approximated well by more efficient\nmodels. These adaptive computation methods (e.g. Han\net al., 2021; Sukhbaatar et al., 2019; Schuster et al., 2021;\nScardapane et al., 2020; Bapna et al., 2020; Elbayad et al.,\n2019; Schwartz et al., 2020) aim to use less compute resources for easier inference steps. While many of these\nsolutions have proven extremely effective in practice, they\nusually require changing the model architecture, changing\nthe training-procedure and re-training the models, and don\u2019t\nmaintain identical outputs.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7995
+  },
+  {
+    "id": 82,
+    "page": 9,
+    "chunk_index": 42,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nmark for measuring progress in statistical language modeling. In Interspeech, 2013.\nJaszczur, S., Chowdhery, A., Mohiuddin, A., Kaiser, L.,\nGajewski, W., Michalewski, H., and Kanerva, J. Sparse\nis enough in scaling transformers. In Neural Information\nProcessing Systems, 2021.\nChen, C., Borgeaud, S., Irving, G., Lespiau, J.-B., Sifre,\nL., and Jumper, J. M. Accelerating large language\nmodel decoding with speculative sampling. ArXiv,\nabs/2302.01318, 2023.\nRaffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S.,\nMatena, M., Zhou, Y., Li, W., and Liu, P. J. Exploring\nthe limits of transfer learning with a unified text-to-text\ntransformer. The Journal of Machine Learning Research,\n21(1):5485\u20135551, 2020.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7992
+  },
+  {
+    "id": 66,
+    "page": 6,
+    "chunk_index": 26,
+    "text": "Fast Inference from Transformers via Speculative Decoding\nBase\n=3\n=7\nMp encoder\nMq encoder\nMp decoder\nMq decoder\nWall time\nFigure 5. A simplified trace diagram for a full encoder-decoder Transformer stack. The top row shows speculative decoding with \u03b3 = 7\nso each of the calls to Mp (the purple blocks) is preceded by 7 calls to Mq (the blue blocks). The yellow block on the left is the call to the\nencoder for Mp and the orange block is the call to the encoder for Mq . Likewise the middle row shows speculative decoding with \u03b3 = 3,\nand the bottom row shows standard decoding.\napproximation models. As expected we see that \u03b1 increases\nwith the size of the approximation model. Interestingly, \u03b1\nand walltime improvement are higher for argmax sampling\n(temp=0). We observe speedups of 2.6X (temp=1) and 3.4X\n(temp=0) on the translation task and slightly lower speedups\nof 2.3X (temp=1) and 3.1X (temp=0) for the summarization\ntask. These empirical results match well with the theoretical predictions, with some variance due to implementation\ndetails (see Appendix A.3).",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7811
+  },
+  {
+    "id": 41,
+    "page": 1,
+    "chunk_index": 1,
+    "text": "Inference from large autoregressive models like\nTransformers is slow - decoding K tokens takes\nK serial runs of the model. In this work we introduce speculative decoding - an algorithm to\nsample from autoregressive models faster without\nany changes to the outputs, by computing several\ntokens in parallel. At the heart of our approach lie\nthe observations that (1) hard language-modeling\ntasks often include easier subtasks that can be approximated well by more efficient models, and\n(2) using speculative execution and a novel sampling method, we can make exact decoding from\nthe large models faster, by running them in parallel on the outputs of the approximation models, potentially generating several tokens concurrently, and without changing the distribution. Our\nmethod can accelerate existing off-the-shelf models without retraining or architecture changes. We\ndemonstrate it on T5-XXL and show a 2X-3X\nacceleration compared to the standard T5X implementation, with identical outputs.",
+    "key": "leviathan2022fast",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "year": 2022,
+    "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+    "score": 0.7794
+  }
+]

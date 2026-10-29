@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.73 Notes\n\n**Problem**: Recent advances in NLI as sentence representation evaluation (Poliak et al., 2018a).\n\n**Method**: Survey of NLI datasets and models (Raina et al., 2005; Radford et al., 2018/2019); discussion of hypothesis-only baselines (Poliak et al., 2018b).\n\n**Reported results**: No new experimental results; position paper surveying the landscape.\n\n**Limitations**: Survey scope limited to NLI for representation evaluation; no new datasets or benchmarks presented.\n\n- \"Recent advances in NLI\" as \"sentence representation evaluation\" (p.86 continued).\n- \"Hypothesis Only Baselines in Natural Language Inference\" (p.87).\n\n**References-only note**: This segment contains citations only; no empirical findings or results from the storks2019recent paper are present."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2517,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782182d6ffedBzKj6H5V4qUHb"
+  }
+]

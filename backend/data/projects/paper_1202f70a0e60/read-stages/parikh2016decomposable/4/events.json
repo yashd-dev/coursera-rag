@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# parikh2016decomposable (P4)\n\n- **Problem**: Classify SNLI sentence pairs (entailment, contradiction, neutral) using a decomposable attention model.\n\n- **Method**: Three models compared on Table 2 (SNLI dev): vanilla (80.6), intra-attention (81.6), and full model (83.7). Table 3 shows example wins/losses vs SPINN-PI and mLSTM. Complexity is O(`d\u00b2 + `\u00b2d), parallelizable over ` at test time; assumed ` < d reduces to O(`d\u00b2), same as regular LSTM.\n\n- **Reported results**: SNLI accuracy\u2014vanilla 80.6, intra-att 81.6, full 83.7. Training uses 549,367 pairs; GloVe 300d projected to 200d; Adagrad optimization; fixed embeddings.\n\n- **Limitations**: Results only on SNLI dev set; no analysis of test performance beyond reported numbers; complexity analysis relies on assumption ` < d; no ablation beyond the three listed models.\n\n- **Exact quotes**:\n  - \u201cF is evaluated O(`) times, giving a complexity of O(`d2 ). Each attention weight eij requires one dot product, resulting in a complexity of O(`2 d)\u201d (P4)\n  - \u201cunlike the LSTM, our approach has the advantage of being parallelizable over `, which can be useful at test time\u201d (P4)\n\n- **Note**: Page 5 begins immediately after; Table 3 example wins/losses continue on next page."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2523,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781b170affeVPepXrkOAe165O"
+  }
+]

@@ -1,0 +1,63 @@
+=== PAGE 2 (continued) ===
+significantly
+dec oding significantly enh acaes the
+dec oding significantly enh ances the quality model
+
+Draft Model
+
+Target Model
+
+system
+
+Speculation Phase 1: 𝛾% = 2
+
+Further verify
+𝑥! , 𝑥" , … , 𝑥#
+
+Speculation Phase 2: 𝛾& = 6
+
+dec
+dec oding significantly enh ances the model inference
+
+Return: dec oding significantly enh ances the inference
+
+Figure 1: Left: T RI F ORCE employs retrieval-based drafting and hierarchical speculation
+to effectively address the dual bottlenecks. It integrates two models and three caches,
+comprising a draft model, a target model, a StreamingLLM cache for the draft model,
+alongside a retrieval cache and a full cache for the target model. The process initiates by
+repeatedly drafting for γ1 steps, assisting the target model with retrieved partial KV cache in
+generating over γ2 tokens, which will be further verified by the target model using full KV
+cache. Right: Evaluating the Llama2-7B-128K on a needle retrieval task indicates that KV
+cache eviction-based methods, such as StreamingLLM, require a trade-off between latency
+and accuracy. In contrast, our T RI F ORCE maintains low latency without sacrificing accuracy.
+
+precisely foreseeing which KV pairs will be crucial for future text generation, they struggle
+with potential information loss, including hallucination and contextual incoherency (Yang
+et al., 2024), particularly in long contexts. Such challenges prevent these approaches from
+boosting speed without sacrificing the performance of models, as illustrated in Figure 1.
+Concurrently, speculative decoding, which leverages a lightweight draft model to sequentially predict the next few tokens and let the target model verify the predicted tokens in
+parallel, is introduced to accelerate LLM inference while provably precisely preserving
+model output (Leviathan et al., 2023; Chen et al., 2023a; Xia et al., 2024). Nonetheless, deploying it for long sequence generation faces several challenges. First, training draft models
+to match the context length of target LLMs requires massive computation and it remains
+questionable whether these small models can achieve the same accuracy with a context
+length around 1M (Beltagy et al., 2020; Peng et al., 2023; Yan et al., 2024). Second, we found
+that draft models with existing training-free methods (e.g., KV cache eviction strategies) can
+result in poor speculating performance. A continuously increasing divergence (Leviathan
+et al., 2023) is witnessed as the sequence length increases, as shown in Figure 2a.
+In pursuit of lossless acceleration, we utilize the lossless feature of speculative decoding
+as the foundation of our system. An ideal speculative decoding algorithm should (i) be
+training-free, (ii) maintain a high acceptance rate (Leviathan et al., 2023) with long contexts,
+and (iii) have low-cost drafting. However, two technical challenges need to be addressed
+to achieve the goal. First, it is not immediately apparent what we can use for low-latency
+drafting without training a smaller draft model to match the long context length. Second,
+the key factors for attaining a high acceptance rate with long contexts remain unclear.
+Fortunately, based on our preliminary exploration, three key observations pave the way for
+designing an applicable system for serving LLMs with long contexts.
+Hierarchical Speculation for Dual Memory Bottlenecks: As illustrated in Figures 2b and 2c, we
+recognize two memory bottlenecks: model weights and KV cache, and the latter gradually
+becomes the dominant bottleneck as context length increases. This inspires us to apply
+hierarchical speculation to tackle the two bottlenecks sequentially by different draft models.
+Leveraging Attention Sparsity for Speculative Decoding: We identify considerable redundancy
+within KV cache, finding that a relatively small portion of it is sufficient to achieve a high
+acceptance rate by using partial KV cache as a draft cache for self-speculation.
+Exploiting Contextual Locality for Drafting Efficiency: We d

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "```json\n{\n  \"approach\": \"mean-span readout + selective adaptation\",\n  \"evaluation\": \"MC11 eleven-configuration reranking benchmark\"\n}\n```"
+  },
+  {
+    "kind": "usage",
+    "tokens": 9384,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781972f0ffeLPOHT6nI5N52wd"
+  }
+]

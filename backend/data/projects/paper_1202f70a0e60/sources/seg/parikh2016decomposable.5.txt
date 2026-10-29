@@ -1,0 +1,86 @@
+=== PAGE 5 (continued) ===
+roaches. DA (Decomposable Attention) refers to our approach while
+SPINN-PI and mLSTM are previously developed methods (see Table 1).
+
+parentheses: network size (2-layers, each with 200
+neurons), batch size (4), 1 dropout ratio (0.2) and
+learning rate (0.05–vanilla, 0.025–intra-attention).
+All settings were run for 50 million steps (each step
+indicates one batch) but model parameters were saved
+frequently as training progressed and we chose the
+model that did best on the development set.
+5.2
+
+Results
+
+Results in terms of 3-class accuracy are shown in
+Table 1. Our vanilla approach achieves state-of-theart results with almost an order of magnitude fewer
+parameters than the LSTMN of Cheng et al. (2016).
+Adding intra-sentence attention gives a considerable
+improvement of 0.5 percentage points over the existing state of the art. Table 2 gives a breakdown of
+accuracy on the development set showing that most
+of our gains stem from neutral, while most losses
+come from contradiction pairs.
+Table 3 shows some wins and losses. Examples AC are cases where both variants of our approach are
+correct while both SPINN-PI (Bowman et al., 2016)
+and the mLSTM (Wang and Jiang, 2016) are incorrect. In the first two cases, both sentences contain
+phrases that are either identical or highly lexically
+related (e.g. “Two kids” and “ocean / beach”) and our
+approach correctly favors neutral in these cases. In
+Example C, it is possible that relying on word-order
+may confuse SPINN-PI and the mLSTM due to how
+“fountain” is the object of a preposition in the first
+sentence but the subject of the second.
+The second set of examples (D-F) are cases where
+1
+
+16 or 32 also work well and are a bit more stable.
+
+our vanilla approach is incorrect but mLSTM and
+SPINN-PI are correct. Example F requires sequential information and neither variant of our approach
+can predict the correct class. Examples D-E are interesting however, since they don’t require word order information, yet intra-attention seems to help.
+We suspect this may be because the word embeddings are not fine-grained enough for the algorithm
+to conclude that “play/watch” is a contradiction, but
+intra-attention, by adding an extra layer of composition/nonlinearity to incorporate context, compensates
+for this.
+Finally, Examples G-I are cases that all methods
+get wrong. The first is actually representative of many
+examples in this category where there is one critical
+word that separates the two sentences (close vs open
+in this case) and goes unnoticed by the algorithms.
+Examples H requires inference about numbers and
+Example I needs sequence information.
+
+6
+
+Conclusion
+
+We presented a simple attention-based approach to
+natural language inference that is trivially parallelizable. The approach outperforms considerably more
+complex neural methods aiming for text understanding. Our results suggest that, at least for this task,
+pairwise comparisons are relatively more important
+than global sentence-level representations.
+
+Acknowledgements
+We thank Slav Petrov, Tom Kwiatkowski, Yoon Kim,
+Erick Fonseca, Mark Neumann for useful discussion
+and Sam Bowman and Shuohang Wang for providing
+us their model outputs for error analysis.
+
+
+=== PAGE 6 ===
+References
+[Abadi et al.2015] Martı́n Abadi, Ashish Agarwal, Paul
+Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro,
+Greg S Corrado, Andy Davis, Jeffrey Dean, Matthieu
+Devin, et al. 2015. TensorFlow: Large-scale machine
+learning on heterogeneous systems. Software available
+from tensorflow. org.
+[Andreas et al.2013] Jacob Andreas, Andreas Vlachos,
+and Stephen Clark. 2013. Semantic parsing as machine translation. In Proceedings of ACL.
+[Bahdanau et al.2015] Dzmitry Bahdanau, Kyunghyun
+Cho, and Yoshua Bengio. 2015. Neural machine translation by jointly learning to align and translate. In
+Proceedings of ICLR.
+[Bos and Markert2005] Johan Bos and Katja Markert.
+2005. Recognising textual entailment with logical inference. In Proceedings of EMNLP.
+[Bowman et al.2015] Samuel R. Bowman, G

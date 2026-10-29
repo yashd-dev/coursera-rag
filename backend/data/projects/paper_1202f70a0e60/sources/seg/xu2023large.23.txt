@@ -1,0 +1,141 @@
+=== PAGE 19 (continued) ===
+pective mistake: , and process
+mistake: . (the last five indicators are annotated when the
+explain explanation is false).
+
+
+=== PAGE 20 ===
+20
+
+TABLE 10: Prompt Engineering.
+Dataset
+
+bAbI (task 15)
+
+EntailmentBank
+
+RuleTaker
+
+FOLIO
+
+Leap-Of-Thought
+
+Prompt of zero-shot
+Deductive Reasoning
+[zero-shot prompt]: Given facts: [Context]. Based on the
+given facts above, answer the following question using
+deductive reasoning and give simple explanations. The
+question is: [Question]
+
+[zero-shot prompt]: Given facts: [Context]. [Question].
+Please answer the question in one sentence using deductive reasoning. And give simple explanations.
+
+[zero-shot prompt]: Given facts: [Context]. Based on the
+given facts above, determine whether the following statement is true using deductive reasoning and give simple
+explanations. The statement is: [Statement].
+
+[zero-shot prompt]: Given facts: [Context]. Based on
+the given facts above, determine whether the following
+statement is true, false, or uncertain using deductive
+reasoning and give simple explanations. The statement
+is: [Statement].
+
+[zero-shot prompt]: Given facts: [Context]. Based on the
+given facts above, determine whether the following statement is true using deductive reasoning and give simple
+explanations. The statement is: [Statement].
+
+Prompt of k-shot
+There are [k] examples of deductive reasoning:
+Given facts: [Context]
+The question is: [Question]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+There are [k] examples of deductive reasoning:
+Given facts: [Context]
+The question is: [Question]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+There are [k] examples of deductive reasoning:
+Given facts: [Context]
+The statement is: [Statement]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+There are [k] examples of deductive reasoning:
+Given facts: [Context]
+The statement is: [Statement]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+There are [k] examples of deductive reasoning:
+Given facts: [Context]
+The statement is: [Statement]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+
+Inductive Reasoning
+bAbI-16
+
+CLUTRR
+
+α-NLI
+
+α-NLG
+
+[zero-shot prompt]: Given facts: [context]. Based on the
+given facts above, answer the following question using
+inductive reasoning and give simple explanations. The
+question is: [Question].
+
+[zero-shot prompt]: Given facts: [context]. [Question].
+Please answer the question in one sentence using inductive reasoning. And give simple explanations.
+
+Abductive Reasoning
+[task description]: Given a context, the abductive reasoning task is to choose the more likely explanation from
+a given pair of hypotheses choices. And give simple
+explanations.
+[zero-shot prompt]: The context is: [Context]. The hypothesis choices are: A. [Option A]. B. [Option B].
+[task description]: Given a context, the abductive reasoning task is to generate a valid and short hypothesis.
+[zero-shot prompt]: The context is: [Context]. Please generate a short hypothesis for the context and give simple
+explanations.
+
+There are [k] examples of inductive reasoning:
+Given facts: [Context]
+The question is: [Question]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+There are [k] examples of inductive reasoning:
+Given facts: [Context]
+The question is: [Question]
+The answer is: [Answer] (display k samples)
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for test.
+The context is [Context]. The hypothesis
+choice are: A. [Option A]. B. [Option B].
+The correct choice is: [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+[task description]
+Next, I will give you [k] example(s) for
+test. The context is [Context]. The correct
+answer is [Label].
+Next, I will give you an example for test.
+[zero-shot prompt]
+
+
+=== PAGE 21 ===
+21
+
+AbductiveRules
+
+D*-Ab
+
+ReClor
+
+LogiQA
+
+LogiQA 2.0
+
+LogiQA2NLI
+
+[task description]: Given a context and an observation,
+the abductive reasoning task is to g

@@ -1,0 +1,51 @@
+=== PAGE 7 (continued) ===
+agraphs, we
+introduce the few benchmarks that currently exist for reference resolution.
+Winograd Schema Challenge. The classic reference resolution benchmark is the Winograd Schema
+Challenge (WSC), inspired by Winograd (1972), originally proposed by Levesque (2011), later developed by Levesque, Davis, and Morgenstern (2012), and actualized by Morgenstern and Ortiz
+(2015) and Morgenstern et al. (2016). In this challenge, systems are presented with questions about
+sentences known as Winograd schemas. To answer a question, a system must disambiguate a pronoun whose referent may be one of two entities, and can be changed by replacing a single word
+in the sentence. Consequently, linguistic context is typically not useful in disambiguating the pronoun, and outside knowledge is required. The first Challenge dataset consisted of just 60 testing
+examples (Morgenstern, 2016), but there are more available online.4 Additionally, Rahman and
+Ng (2012) curated nearly 1,000 similar pronoun resolution problems to aid in training systems
+for the WSC; this set of problems is included within a later-mentioned dataset, and thus is not
+introduced separately. Further information about the Winograd Schema Challenge is available at
+https://commonsensereasoning.org/winograd.html.
+WinoGrande. Inspired by biases found in the original Winograd Schema Challenge (Trichelair,
+Emami, Trischler, Suleman, & Cheung, 2018), Sakaguchi et al. (2019) created WinoGrande, a largescale, adversarial version of the problem focusing primarily on intuitive physics and psychology. It
+consists of nearly 44,000 examples, but maintains the same level of difficulty, having low baseline performance but high human performance. This is the first high-quality, large-scale dataset of
+adversarial Winograd schemas, and should encourage the application of deep neural networks to
+the problem to improve machine performance on reference resolution tasks. WinoGrande can be
+downloaded at https://mosaic.allenai.org/projects/winogrande.
+Other reference resolution benchmarks. Other reference resolution benchmarks include the basic and compound coreference subtasks within bAbI (Weston, Bordes, Chopra, Rush, van Merriënboer, Joulin, & Mikolov, 2016), the definite pronoun resolution problems by Rahman and Ng
+(2012) within Inference is Everything (White, Rastogi, Duh, & Van Durme, 2017), the Winograd
+NLI subtask within GLUE (Wang et al., 2018), and the gendered anaphora-based Winogender task
+originally by Rudinger et al. (2018a) within DNC (Poliak, Haldar, Rudinger, Hu, Pavlick, White,
+& Van Durme, 2018a). The full benchmarks to which these subtasks belong are introduced in Section 2.1.6, while in Figure 3, we list several examples of challenging reference resolution problems
+across the existing benchmarks, where external knowledge, such as the knowledge that predators
+eat their prey, is useful in disambiguating pronouns.
+It is important to note that all of these benchmarks evaluate the resolution of entity references
+rather than event references. Benchmarks toward event coreference are limited, and those which do
+exist typically require only linguistic context to disambiguate event references (Doddington et al.,
+2004; Bejan & Harabagiu, 2008). On the other hand, since the linguistic structures which refer to
+specific events are much more flexible than those for entities (Chen & Ji, 2009), disambiguating
+event references may be more challenging than the existing benchmarks for entity reference resolu4. See https://cs.nyu.edu/faculty/davise/papers/WinogradSchemas/WS.html,
+https://commonsensereasoning.org/winograd.html, and
+https://commonsensereasoning.org/disambiguation.html.
+
+7
+
+
+=== PAGE 8 ===
+S TORKS , G AO , & C HAI
+
+(A) Winograd
+Schema
+Challenge
+(Levesque, 2011)
+The trophy would not fit in the brown suitcase because it was too big. What was too
+big?
+
+(B) Winogender (Rudinger et al., 2018a)
+The paramedic performed CPR on the passenger even though she knew it was too
+late. Who knew it was too la

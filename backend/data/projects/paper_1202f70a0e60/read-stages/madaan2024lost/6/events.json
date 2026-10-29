@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**  \nInvestigate contamination and dataset saturation in NLI benchmarks, focusing on how 8-gram overlap with pre-training data and label disagreements affect model performance evaluation.\n\n**Method**  \nAssign contamination scores per sample based on 8-gram occurrence in pre-training datamix; use ConTAM to select thresholds balancing EPG (estimated performance gain) against clean-set size. Analyze majority-label accuracy via ChaosNLI\u2019s 100-human annotations across MNLI, SNLI, and \u03b1NLI. Manual error analysis on Llama 3.1 405B\u2019s MNLI predictions.\n\n**Reported results**  \n- ANLI performances not exceeding 70% even for largest models; other benchmarks substantially higher.  \n- Threshold 0 marks all non-zero contamination as contaminated; increasing thresholds move samples to uncontaminated subset.  \n- Majority-label replacement alters 32% (MNLI), 25% (SNLI), 11% (\u03b1NLI) of labels.  \n- MNLI shows >10% performance increase for some models; average accuracy >5 points higher on corrected datasets.  \n- Only Llama-3.1 405B shows systematically higher majority accuracy, suggesting it has honed in on majority labels.  \n- Even Llama-3.1 405B stays below 70% on MNLI and SNLI ChaosNLI subsets, indicating room for improvement.\n\n**Limitations**  \n- EPG artefact suspected due to small clean-partition size; result likely not indicative of true performance gain.  \n- Contamination may not play participatory role in high performances for NLI benchmarks.  \n- Majority accuracy gains observed mainly for MNLI; other benchmarks show little to no difference.\n\n**Exact quotes**  \n- \u201cThus, we believe that contamination does not play a participatory role in high performances for NLI benchmarks.\u201d (p.6)  \n- \u201cEven the Llama-3.1 405B model stays below 70% for both these subsets, suggesting that there is room for improvement.\u201d (p.6)  \n\n**Note**  \nThis segment is a references-only section; no new findings are invented from cited works."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2478,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783f1b85ffe38bSNuk8zOSmAD"
+  }
+]

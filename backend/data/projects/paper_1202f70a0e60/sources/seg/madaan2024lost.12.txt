@@ -1,0 +1,127 @@
+=== PAGE 11 (continued) ===
+easoning –
+which they describe as the inference of the most
+plausible explanation for an incomplete observation. The samples in αNLI consist of a pair of
+observations at two consecutive times, and a plausible hypothesis that explains tho two observations,
+and an implausible hypothesis that does not (or to a
+lesser extent). The task is to select the most plausible hypothesis. To construct the data Bhagavatula
+et al. (2020) first draw observation pairs from a stories dataset and then ask crowd-sources to generate
+plausible and implausible hypotheses. For each
+observation pair, multiple plausible and implausible hypotheses are crowd-sourced, and adversarial
+filtering is applied to retain one challenging pair
+of hypotheses. We use the development set of the
+corpus for our experiments.
+
+MNLI
+
+The Multi-Genre NLI (MNLI) corpus (Williams
+et al., 2018) was introduced as an alternative to
+SNLI that captures more genres and more challenging examples, representing both written and spoken
+speech in a range of different styles, degrees, formalities, and topics. The data collection procedure
+of the corpus is similar to the SNLI procedure both
+in terms of sourcing and validation. Unlike SNLI,
+the MNLI premise sentences are derived from nine
+different sources, aiming to represent the full range
+of American English rather than a single image
+captioning corpus. As for SNLI, we consider the
+validation corpus of the dataset and exclude samples that have no gold label.
+11
+
+
+=== PAGE 12 ===
+Figure 6: Accuracy versus entropy. We show how the accuracy of Llama-3.1 70B and the Mistral series of models
+changes as the entropy of the human label distributions increases.
+
+B
+
+Entropy vs accuracy plots
+
+For running the evaluations, we use 16 GPUs for
+each model comprising all five NLI benchmarks
+and different shot settings in a single job. A single
+evaluation job takes on average takes around 55
+mins for the five benchmarks.
+
+In addition to Figure 4a highlighting the results on
+the Llama-3.1 8B and 405B models, we also show
+the accuracy vs entropy plots of all other models
+we use for our analysis: Llama-3.1 70B, Mistral
+7B, Mixtral 8x7B, and Mixtral 8x22B in Figure 6.
+The Mistral family of models also show a similar
+trend where larger models have lower accuracies
+for higher entropy buckets.
+
+C
+
+Prompt templates
+
+The prompt templates used for each task are presented in Table 5.
+
+D
+
+Experimental Details
+
+For the 8B and 70B models we pre-train from
+scratch, we use our custom pre-training datamix,
+a mix of data available from publicly available
+sources including web data, code, and reasoning
+datasets. For pre-training hyperparameters, we use
+similar settings as reported in Dubey et al. (2024).
+We use a batch size of 4M tokens and pre-train the
+models for 500,000 steps, resulting in a total of
+2T token training. We use 512 GPUs for a single
+pre-training run of both models.
+12
+
+
+=== PAGE 13 ===
+Benchmark
+
+Prompt Template
+
+MNLI, SNLI, ANLI
+{% for x in few_shot -%}
+Premise: {{ x["premise"] }}
+Hypothesis: {{ x["hypothesis"] }}
+A. Entailment
+B. Neutral
+C. Contradiction
+Answer: {{ x["answer"] }}
+{% endfor -%}
+Premise: {{ premise }}
+Hypothesis: {{ hypothesis }}
+A. Entailment
+B. Neutral
+C. Contradiction
+Answer: {{ choice_text }}
+AbductiveNLI
+{% for x in few_shot -%}
+Observation 1: {{ x["obs1"] }}
+Observation 2: {{ x["obs2"] }}
+A. {{ x["choices"]["A"] }}
+B. {{ x["choices"]["B"] }}
+Answer: {{ x["answer"] }}
+{% endfor -%}
+Observation 1: {{ obs1 }}
+Observation 2: {{ obs2 }}
+A. {{ choices["A"] }}
+B. {{ choices["B"] }}
+Answer: {{ choice_text }}
+HansNLI
+{% for x in few_shot -%}
+Premise: {{ x["premise"] }}.
+Hypothesis: {{ x["hypothesis"] }}.
+A. Entailment
+B. Non-Entailment
+Answer: {{ x["answer"] }}
+{% endfor -%}
+Premise: {{ premise }}.
+Hypothesis: {{ hypothesis }}.
+A. Entailment
+B. Non-Entailment
+Answer: {{ choice_text }}
+
+Table 5: Prompt Templates for each task
+
+13
+

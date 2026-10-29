@@ -1,0 +1,82 @@
+=== PAGE 13 (continued) ===
+neuroscience to strengthen LLMs’ understanding of their
+operational boundaries.
+Strengthen the rigorous reasoning to apply to real-world
+scenarios. Table 3 illustrates that current LLMs are not sufficiently rigorous for deductive, inductive, and abductive reasoning. As a result, there exist significant gaps between their
+capabilities and potential applications in real-world scenarios, particularly those that require detailed intermediate explanations. For instance, using LLMs to solve mathematical
+problems and provide precise intelligent Q&A services in
+the education field remains a significant challenge [55].
+Minimize the occurrence of hallucinations. Similar to the
+
+
+=== PAGE 14 ===
+14
+
+behaviors in other problem-solving contexts [56], LLMs may
+generate false or irrelevant hallucinations during logical
+reasoning tasks. It suggests that LLMs may not fully comprehend the question and can not solve it correctly. To
+address this issue, future research should develop more
+comprehensive evaluation metrics for hallucinations and
+explore specific strategies to minimize their occurrence.
+Improve the multi-hop reasoning capability, especially
+in inductive and abductive settings. Combined with the
+results from Fig. 10 and Fig. 1 in the Appendix, the multihop reasoning capability of LLMs still have much room for
+improvement. In fact, humans are better at decomposing
+complex questions. It can be an interesting topic for LLMs
+to capture the ability to divide and conquer questions, thus
+benefiting multi-hop reasoning.
+Increase explainability. Finally, the explainability of LLMs
+will be essential for building trust, detecting and mitigating biases, improving performance, promoting user understanding, and complying with regulations. A commonsensebased neuro-symbolic AI framework, such as the one proposed by [57] for sentiment analysis, can help increase
+the explainability of the reasoning processes required for
+decision-making, which is crucial for sensitive applications
+involving ethics, privacy and health.
+
+ACKNOWLEDGMENTS
+This work was supported by National Key Research and Development Program of China (2020AAA0108800), National
+Natural Science Foundation of China (62137002, 61937001,
+62176209, 62176207, 62106190, and 62050194).
+
+R EFERENCES
+[1]
+
+[2]
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+[7]
+
+[8]
+
+G. Antoniou and A. Bikakis, “Dr-prolog: A system for defeasible
+reasoning with rules and ontologies on the semantic web,” IEEE
+Transactions on Knowledge and Data Engineering (TKDE), vol. 19,
+no. 2, pp. 233–245, 2007.
+T. Lukasiewicz, “A novel combination of answer set programming
+with description logics for the semantic web,” IEEE Transactions on
+Knowledge and Data Engineering (TKDE), vol. 22, no. 11, pp. 1577–
+1592, 2010.
+Q. Lin, J. Liu, L. Zhang, Y. Pan, X. Hu, F. Xu, and H. Zeng, “Contrastive graph representations for logical formulas embedding,”
+IEEE Transactions on Knowledge and Data Engineering (TKDE),
+vol. 35, no. 4, pp. 3563–3574, 2023.
+L. Wu, Y. Zhou, and D. Zhou, “Towards high-order complementary recommendation via logical reasoning network,” in IEEE
+International Conference on Data Mining (ICDM), 2022, pp. 1227–
+1232.
+Q. Lin, J. Liu, F. Xu, Y. Pan, Y. Zhu, L. Zhang, and T. Zhao,
+“Incorporating context graph with logical reasoning for inductive
+relation prediction,” in The 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR),
+2022, pp. 893–903.
+J. Yu, Q. Su, X. Quan, and J. Yin, “Multi-hop reasoning question
+generation and its application,” IEEE Transactions on Knowledge and
+Data Engineering (TKDE), vol. 35, no. 1, pp. 725–740, 2023.
+F. Xu, J. Liu, Q. Lin, Y. Pan, and L. Zhang, “Logiformer: A
+two-branch graph transformer network for interpretable logical
+reasoning,” in The 45th International ACM SIGIR Conference on
+Research and Development in Information Retrieval (SIGIR), 2022, pp.
+1055–1065.
+H. Bronkhorst, G. Roorda, C. Suhre, and M. Goedhart, “Logical
+reasoning in formal and everyday reasoning tasks,” In

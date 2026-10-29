@@ -1,0 +1,95 @@
+=== PAGE 17 (continued) ===
+ot down
+on one knee.
+
+(A) COPA (Roemmele, Bejan, & Gordon,
+2011)
+I knocked on my neighbor’s door. What
+happened as result?
+a. My neighbor invited me in.
+b. My neighbor left his house.
+
+Ending:
+(B) JOCI (Zhang, Rudinger, Duh, &
+Van Durme, 2017)
+Context: John was excited to go to the fair
+Hypothesis: The fair opens.
+Label: 5 (very likely)
+
+a. Tom asked Sheryl to marry him.
+b. He wiped mud off of his boot.
+
+Context: Today my water heater broke
+Hypothesis: A person looks for a heater.
+Label: 4 (likely)
+Context: John’s goal was to learn how to
+draw well
+Hypothesis: A person accomplishes the
+goal.
+Label: 3 (plausible)
+Context: Kelly was playing a soccer match
+for her University
+Hypothesis: The University is dismantled.
+Label: 2 (technically possible)
+Context: A brown-haired lady dressed all
+in blue denim sits in a group of pigeons.
+Hypothesis: People are made of the
+denim.
+Label: 1 (impossible)
+
+(D) AlphaNLI
+(Bhagavatula,
+Bras,
+Malaviya,
+Sakaguchi,
+Holtzman,
+Rashkin, Downey, Yih, & Choi, 2019)
+Observation 1: There was ten feet of snow
+outside.
+Observation 2: In all that time I was unable to check my mail.
+Hypotheses:
+a. I couldn’t open my door against a
+drift for 3 days.
+b. It took 10 minutes for the snow plow
+to come through.
+(E) SWAG (Zellers, Bisk, Schwartz, &
+Choi, 2018)
+He pours the raw egg batter into the pan.
+He
+a. drops the tiny pan onto a plate
+b. lifts the pan and moves it around
+to shuffle the eggs.
+c. stirs the dough into a kite.
+d. swirls the stir under the adhesive.
+
+Figure 6: Examples from benchmarks requiring plausible inference. Answers in bold.
+
+17
+
+
+=== PAGE 18 ===
+S TORKS , G AO , & C HAI
+
+get word is predicted in the last sentence of each passage. This is similar to CBT Hill et al.
+(2015), but here, the missing word is constrained to always be the last word of the last sentence, there are no candidate words to choose from, and most importantly, examples were filtered by humans to ensure they were possible to guess given the context, i.e., the sentences in
+the passage leading up to the last sentence. Examples were further filtered to ensure that missing words could not be guessed without the context, ensuring that models attempting the dataset
+would need to reason over the entire paragraph to answer questions. Further, in a later study on
+a random sampling of 100 passages from LAMBADA, 24 were found to require external knowledge Chu, Wang, Gimpel, and McAllester (2017). LAMBADA can be downloaded at https:
+//zenodo.org/record/2630551#.XS5JHuhKhPZ.
+JOCI. The JHU (John Hopkins University) Ordinal Commonsense Inference (JOCI) benchmark
+by Zhang et al. (2017) consists of about 39,000 sentence pairs, each consisting of a context and
+hypothesis. Given these, systems must rate how likely the hypothesis is on a scale from 1 to 5,
+where 1 corresponds to impossible, 2 to technically possible, 3 to plausible, 4 to likely, and 5 to
+very likely. This task is similar to SNLI (Bowman et al., 2015) and other 3-way entailment tasks,
+but provides more options which essentially range between entailment and contradiction. This is
+fitting, considering the fuzzier nature of the plausible inference task compared to textual entailment.
+JOCI can be downloaded from https://github.com/sheng-z/JOCI.
+CLOTH. The Cloze Test by Teachers (CLOTH) benchmark by Xie, Lai, Dai, and Hovy (2017) is
+a collection of nearly 100,000 4-way multiple-choice cloze-style questions from middle- and high
+school-level English language exams, where the answer fills a blank in a given text. Each question
+is labeled with a type of deep reasoning it involves, where the four possible types are grammar,
+short-term reasoning, matching/paraphrasing, and long-term reasoning, i.e., reasoning over multiple
+sentences. CLOTH data can be downloaded at https://www.cs.cmu.edu/~glai1/data/
+cloth/.
+SWAG. Situations with Adversarial Generations (SWAG) from Zellers et al. (2018) is a benchmark dataset of about 113,000 beginnings of small texts each with four possible endings. Given
+th

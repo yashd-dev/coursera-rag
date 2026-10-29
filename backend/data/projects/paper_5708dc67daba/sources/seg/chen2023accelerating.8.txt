@@ -1,0 +1,132 @@
+=== PAGE 10 (continued) ===
+and Geoffrey Irving
+• Initial Implementation, Optimisation and Scaling: Charlie Chen
+• Modified Rejection Sampling Scheme: John Jumper
+• Engineering Improvements: Jean-Baptiste Lespiau and Charlie Chen
+• Experiments: Charlie Chen, Sebastian Borgeaud and Laurent Sifre
+• Draft of Manuscript: Charlie Chen and Sebastian Borgeaud
+• Manuscript Feedback: Laurent Sifre, Geoffrey Irving and John Jumper
+Acknowledgements
+We’d like to thank Oriol Vinyals and Koray Kavukcuoglu for your kind advice and leadership. We’d
+also like to thank Evan Senter for your additional feedback on the manuscript and Amelia Glaese for
+your support in navigating the publishing process. Finally, we’d like to thank Blake Hechtman, Berkin
+Ilbeyi for your valuable advice on XLA and Nikolai Grigoriev for our discussions on the various tricks
+that can be applied to the transformer architecture.
+Hyperparams
+Table 2 | Hyperparameters for the draft model
+Model
+
+𝑑model
+
+Heads
+
+Layers
+
+Params
+
+Target (Chinchilla)
+Draft
+
+8192
+6144
+
+64
+48
+
+80
+8
+
+70B
+4B
+
+Proofs
+Theorem 1 (Modified Rejection Sampling recovers the target distribution). Given discrete distributions
+𝑞, 𝑝 and a single draft sample 𝑥˜ ∼ 𝑝, let 𝑋 be the final resulting sample. For 𝑋 = 𝑥 to be true, we must
+either sample 𝑥˜ = 𝑥 and then accept it, or resample it after 𝑥˜ (of any value) is rejected. Hence:
+ℙ( 𝑋 = 𝑥 )
+= ℙ(˜
+𝑥 = 𝑥 )ℙ(˜
+𝑥 accepted|˜
+𝑥 = 𝑥 ) + ℙ(˜
+𝑥 rejected)ℙ( 𝑋 = 𝑥 |˜
+𝑥 rejected)
+For the first term, we apply the acceptance rule:
+ℙ(˜
+𝑥 = 𝑥 )ℙ(˜
+𝑥 accepted|˜
+𝑥 = 𝑥)
+
+
+𝑞( 𝑥)
+= 𝑝 ( 𝑥 ) min 1,
+𝑝( 𝑥)
+
+10
+
+
+=== PAGE 11 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+= min ( 𝑝 ( 𝑥 ) , 𝑞 ( 𝑥 ))
+For the second conditional term, we apply the resampling rule:
+ℙ( 𝑋 = 𝑥 |˜
+𝑥 rejected) = ( 𝑞 ( 𝑥 ) − 𝑝 ( 𝑥 ))+
+Where ( .)+ denotes:
+
+max(0, 𝑓 ( 𝑥 ))
+( 𝑓 ( 𝑥 ))+ = Í
+𝑥 max(0, 𝑓 ( 𝑥 ))
+
+Finally, we calculate the probability of rejection:
+ℙ(˜
+𝑥 rejected) = 1 − ℙ(˜
+𝑥 accepted)
+∑︁
+ℙ( 𝑋 = 𝑥 0, 𝑥˜ accepted)
+=1−
+𝑥0
+
+=1−
+
+∑︁
+
+min( 𝑝 ( 𝑥 0) , 𝑞 ( 𝑥 0))
+
+𝑥0
+
+=
+
+∑︁
+
+max(0, 𝑞 ( 𝑥 0) − 𝑝 ( 𝑥 0))
+
+𝑥0
+
+=
+
+∑︁
+
+𝑞 ( 𝑥 0) − min( 𝑝 ( 𝑥 0) , 𝑞 ( 𝑥 0))
+
+𝑥0
+
+=
+
+∑︁
+
+max(0, 𝑞 ( 𝑥 0) − 𝑝 ( 𝑥 0))
+
+𝑥0
+
+This is equal to the denominator of ( 𝑞 ( 𝑥 ) − 𝑝 ( 𝑥 ))+ , so:
+ℙ(˜
+𝑥 rejected)ℙ( 𝑋 = 𝑥 |˜
+𝑥 rejected) = max(0, 𝑞 ( 𝑥 ) − 𝑝 ( 𝑥 ))
+Hence:
+ℙ( 𝑋 = 𝑥 )
+= min( 𝑝 ( 𝑥 ) , 𝑞 ( 𝑥 )) + max(0, 𝑞 ( 𝑥 ) − 𝑝 ( 𝑥 ))
+= 𝑞( 𝑥)
+and we have recovered the desired target.
+
+11
+

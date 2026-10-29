@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.52: Problem, Method, Results, Limitations\n\n- **Problem**: Investigate transferability of embeddings from ELMO and BERT across tasks; examine gap between benchmark performance and external knowledge utilization.\n- **Method**: Train linear models on frozen embeddings; compare task-specific fine-tuning vs. feature extraction; evaluate WordNet/FrameNet integration in recent approaches.\n- **Results**: Linear models trained on ELMO/BERT embeddings perform comparably to state-of-the-art task-specific models. Lowest LSTM layers most transferable; middle transformer layers most transferable. ELMO fine-tuned outperforms BERT features on sentence similarity (MRPC). WordNet improves entailment; FrameNet improves event semantics when concatenated.\n- **Limitations**: Most recent neural approaches rely solely on benchmark training data + linguistic resources; external knowledge resources (Section 3) are *not applied* to achieve state-of-the-art performance; only a few applied in *any* recent approaches.\n\n### Exact Quotes (p. 61)\n> \"they find that performance on sentence similarity tasks like the Microsoft Research Paraphrase Corpus is significantly better when the model is fine-tuned to the task.\"\n> \"features from the lowest layer of LSTM models like ELMO are most transferable, while higher layers are more task-specific.\"\n\n### Exact Quote (p. 62)\n> \"none of them are actually applied to achieve state-of-the-art performance on the benchmark tasks, and only a few of them are applied in any recent approaches.\"\n\n### Note\nThis segment is a references-only continuation; no new findings beyond cited prior work are presented."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2308,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7825ce43ffePrn4g0lsoRhQ63"
+  }
+]

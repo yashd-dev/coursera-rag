@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## storks2019recent.37 (PAGES 45\u201346)\n\n**Problem:**  \n- Constructing a benchmark suite of diverse commonsense knowledge resources and datasets to evaluate reasoning models.\n\n**Method:**  \n- Survey of existing resources (BASE, WebChild, LocatedNear, ATOMIC, ASER) and discussion of knowledge-base creation approaches (manual encoding, text mining, crowdsourcing).\n\n**Reported results:**  \n- WebChild 2.0: 2M+ concepts, 18M+ assertions.  \n- LocatedNear: 5K sentence benchmark + 500 object pairs with confidence scores.  \n- ATOMIC: 300K nodes, 877K if-event-then triples (9 relation types).  \n- ASER: 194M events, 64M relations, 15 relation types; extracted from 11B tokens.\n\n**Limitations:**  \n- Resources vary in scale, granularity, and origin (crowdsourced vs. automatically extracted).  \n- No unified evaluation framework presented; coverage of fine-grained commonsense varies across datasets.\n\n**Exact quotes:**  \n- \u201cWebChild consists primarily of commonsense knowledge, as it consists of generalized, fine-grained relationships between nouns and adjectives collected from various corpora rather than structured common knowledge taken directly from a single open source like Wikipedia.\u201d (p. 45)  \n- \u201cThe second consists of 500 pairs of objects with human-produced confidence scores for how likely the objects are to appear near each other.\u201d (p. 46)\n\n**Note:** References-only segment \u2014 no background citations attributed to this paper."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2351,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782971e2ffe8bfLGM77CQEogQ"
+  }
+]

@@ -1,0 +1,105 @@
+=== PAGE 16 (continued) ===
+n of all its attributes. We omit its current value
+because we want to generate a representation of the variable and not the current instance. Motivated
+by the success of Graph Neural Networks (GNNs) at aggregating neighborhood information in graphs
+[24, 45, 50], we also add to he prompt the attributes of its immediate neighbours and how they are
+connected via the edge attributes. Then, we use a clustering algorithm to find nodes that share similar
+latent representations. We select DBSCAN [11]. Since it is a density-based algorithm, it allows use
+to restrict the sparsity of the clusters and cluster together nodes with only very close representations.
+After extracting similar nodes, we consider two ways to combine graphs: summarisation and analogy.
+Summarisation implies considering similar nodes as a single node in the merged graph, inheriting the
+edges of all the nodes in the set. This approach is straightforward and allows reducing the number of
+nodes as the graph grows. However, assessing if two causal variables can be merged is a challenging
+problem. In particular, in the absence of a lot of observations (one text only shows one observation
+per variable), the merged causal graph can be easily falsified [16].
+Analogy merging is inspired by the research on analogical reasoning [31, 12]. We view similarity
+between nodes representations as an indication that analog mechanisms are causing them. To represent
+an analogy, we do not modify the existing graphs but add a common unobserved ancestor between
+similar nodes to integrate the similarity information from the clustering process without making
+assumptions regarding the nature of their similarity. The merged graphs can share information via
+backdoor paths. Unlike summarisation, analogy does not remove nodes but adds more. However,
+this method does not introduce ways to falsify the graphs and preserve the mechanisms of the initial
+graphs. The two approaches are illustrated in Figure 5.
+
+X
+
+Z
+Y
+
+(a) Model M1
+
+X
+
+Z
+B
+(b) Model M2
+
+U
+
+A
+
+A
+Z
+Y
+
+Z1
+
+X
+B
+
+(Summarisation)
+(c) M12
+
+Y
+
+A
+Z2
+B
+
+(Analogy)
+(d) M12
+
+Figure 5: Illustration of graph merging process for two models M1 and M2 . We assume that the
+common variable Z is the same in the two graphs and should be combined. Figure 5c shows the
+merged graph using summarisation: Z is shared by the two mechanisms. Figure 5d shows the
+merged graph using analogy: the variables Z1 and Z2 from M1 and M2 remain separated but share
+a common ancestor.
+
+B
+
+Prompts Used
+
+B.1
+
+Causal Structure Discovery
+
+Here is the system prompt used for causal discovery:
+Your task is to summarise a text into a JSON dictionary of instantiated causal variables and the causal
+relationships between them.
+Variables should be as atomic and detailed as possible. Causal relationships should describe how the value
+of the first variable affects the value of the second.
+One sentence usually describes two or more variables and connects them. For each variable, the following
+questions should be answered:
+’What are the causes of this variable’s value? Is it fully explained by the available information or are
+some causes missing?’
+If some causes seem to be missing, create new (hidden) variables.
+Hidden variables represent missing information to fully explain the value of one or more observed
+variables.
+They cannot have incoming edges. Identify the major and minor variables and how they are connected.
+
+16
+
+
+=== PAGE 17 ===
+Add the missing unknown variables when necessary. Follow carefully the instructions and write down your
+answer using only the given JSON format very strictly.
+The format is as follows:
+{
+"observed_nodes": [
+{
+"node_id": (str) "0",
+"description": (str) "<high-level short atomic description of causal variable 0>",
+"type": (str) "<variable type: e.g. bool, int, set element, range element>",
+"values": (str) "<set of possible values, if applicable>",
+"current_value": (str) "<current value>",
+"context": (str) "<contextual information type> : <value of the contextual i

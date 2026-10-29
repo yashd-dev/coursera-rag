@@ -1,0 +1,63 @@
+=== PAGE 2 (continued) ===
+ It can
+provide more meaningful and complete evaluations from
+both objective and subjective views. Considering problematic cases (i.e., wrong answer or wrong explanation) can
+reflect obvious logical flaws of LLMs, we further attribute
+them to several error types from two dimensions of evidence
+selection process and reasoning process and give in-depth analysis. Notably, the whole evaluation system can be applied
+under both human-annotation and automatic modes.
+Thirdly, our work focuses on the issue of content neutrality and provides new solutions. The current benchmark
+for evaluating logical reasoning ability is strongly coupled
+with text comprehension; in other words, the rule reasoning process of LLMs may be affected by the content in
+the inputs, which limits the test of real logical reasoning
+ability. Also, LLMs are highly powerful due to their massive
+training data, which may overlap with popular benchmarks.
+As a result, testing LLMs on these benchmarks may not be
+entirely fair, as it can only demonstrate the fitting ability
+of LLMs rather than their real logical reasoning capability.
+Therefore, language models may be trained to learn a biased
+pattern from text, rather than really capture the logical reasoning capability. Some previous works [24], [25] propose
+to establish complete benchmarks for LLMs. But few works
+focus on logical reasoning and fail to attend to the contentneutral problem. To narrow this gap, we propose a new
+dataset named NeuLR, which contains 3,000 content-neutral
+samples and covers the deductive, inductive and abductive
+reasoning types. It is expected to offer a novel perspective
+for benchmarking the logical reasoning ability of LLMs.
+Finally, we conclude the extensive performance results of
+LLMs and form an evaluation scheme with six key properties, i.e., Correct, Rigorous, Self-aware, Active, Oriented and No
+Hallucination. Among them, Correct purely measures the accuracy of the answer. Rigorous measures whether LLMs give
+both correct answers and complete and correct explanations.
+Self-aware is reflected by the redundancy of the generated
+content. Active is measured by the proportion of reasoning.
+Oriented illustrates whether LLMs can reason from the right
+perspectives. No hallucination measures whether LLMs are
+more prone to produce hallucinations. The above dimensions can all be quantified from existing evaluation experiments. For deductive, inductive, abductive, and mixed
+reasoning settings respectively, we visualize the ability maps
+for each LLM. It is meaningful to identify the strengths and
+weaknesses of LLMs under the four reasoning settings, thus
+guiding future directions.
+The main contributions of the paper are listed as follows:
+(1) In view of the great success of LLMs in massive
+NLP tasks, our work is targeted at answering are LLMs
+really good logical reasoners?. In this paper, we provide a
+comprehensive evaluation and give potential directions for
+future researches.
+(2) For a comprehensive evaluation of logical reasoning,
+this paper classifies datasets into four reasoning manners,
+i.e., deductive, inductive, abductive, and mixed-form. We include fifteen typical logical reasoning datasets and evaluate
+seven representative LLMs under diverse prompting strategies, including 3 early-era LLMs (text-davinci-003, ChatGPT,
+and BARD) and 4 trending LLMs (LLaMA3.1-Chat, MistralInstruct-v0.3, Claude-3 and GPT-4).
+
+
+=== PAGE 3 ===
+3
+
+(3) Considering the drawbacks in current objective metrics, this paper gives fine-level evaluations including four
+dimensions i.e., answer correctness, explanation correctness,
+explanation completeness, and explanation redundancy. To
+explore the value of failure cases, we attribute them to
+several error types and explore the logical flaws of LLMs.
+(4) To provide fair evaluations with neutral content and
+decouple logical reasoning from text understanding, this
+paper proposes a new dataset named NeuLR5 . It contains
+3,000 content-neutral samples and covers deductive, induct

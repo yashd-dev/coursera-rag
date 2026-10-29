@@ -1,0 +1,178 @@
+=== PAGE 8 (continued) ===
+both head rates, with an average
+gain of 2.83 ± 0.79 pp (Table 4). Changing the head rate has little average effect (+0.02 ± 0.43 pp).
+Among these rate settings, the pointer performs best with the lower rate for both parameter
+groups.
+Training budget. Both readouts perform better after one epoch in every setting, with the
+largest losses from longer training on ARC and HellaSwag (Figure 2). The two-epoch pointer
+falls to 43.96%, while pooling falls to 48.57%. Pooling’s relative advantage therefore grows from
+0.73 to 4.61 pp as both models become less accurate. The one-epoch, lower-rate recipe supplies
+the strongest of these all-module pointer references at 50.28% for evaluating the two designs.
+Pointer
+
+ARC-Easy
+
+4.39
+
+ARC-Challenge
+
+4.12
+
+Mean-span
+
+15.06
+
+13.4
+9.35
+
+HellaSwag
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+12
+14
+Accuracy loss after two epochs (pp)
+
+16.12
+16
+
+18
+
+Figure 2 | Accuracy loss from one to two epochs under the lower-rate all-module recipe. Both
+readouts favor one epoch on ARC and HellaSwag.
+
+Update schedule. At the higher learning rate, training only the head for the first 30% of
+updates before enabling the adapters yields 53.54% MC11 with a no-FFN pointer (Appendix B.3).
+The core readout-by-scope comparison keeps joint training and the lower rates fixed, so each
+design change can be assessed under the same recipe. Combining the head-first schedule with
+mean-span pooling remains untested.
+5.5. Task-Level Sources of Improvement
+HellaSwag and synthetic chess account for most of the net MC11 gain (Figure 3). On HellaSwag,
+pooling adds about 4.2 pp under either adapter scope, while removing FFN adapters adds about
+9.1 pp with either readout, giving the final model an advantage of about 13.3 pp. On chess, the
+pooling gain grows from 1.95 pp under all-module adaptation to 7.35 pp without FFN adapters.
+The final model also improves both ARC configurations, both MMLU configurations, and
+WinoGrande, alongside declines on GSM8K and GPQA. Appendix B gives the component contrasts for every task. The mean pooling and scope gains remain positive under both weighting
+schemes when any one source is omitted (Appendix D).
+
+8
+
+
+=== PAGE 9 ===
+All modules
+
+No-FFN
+
+Pointer
+
+Chess
+
+Chess
+
+HellaSwag
+
+HellaSwag
+
+ARC-Easy
+
+ARC-Easy
+
+ARC-Challenge
+
+ARC-Challenge
+
+MMLU
+
+MMLU
+
+MMLU few-shot
+
+MMLU few-shot
+
+WinoGrande
+
+WinoGrande
+
+GSM8K four
+
+GSM8K four
+
+GSM8K ten
+
+GSM8K ten
+
+GPQA
+
+GPQA
+
+GPQA few-shot
+
+GPQA few-shot
+0
+
+Mean-span
+
+0
+
+10
+Pooling − pointer (pp)
+
+10
+No-FFN − all modules (pp)
+
+Figure 3 | Task-level effects of the two design choices. Left: mean-span pooling minus the pointer
+under each adapter scope. Right: removing FFN adapters for each readout. Bars are means
+over four paired settings under the one-epoch, lower-rate recipe. All configurations retain their
+original weight in MC11.
+
+6. Additional Reranking Sources and Backbone Comparison
+6.1. PIQA and CommonsenseQA
+We test the individual design choices beyond MC11 on PIQA and CommonsenseQA. PIQA
+asks the model to select between two solutions to a physical goal, whereas CommonsenseQA
+offers five candidate answers. We apply the same three-option NLI scorer to their 1,838 and
+1,221 questions, respectively, using separate matched model groups to compare learning rates,
+readouts, and adapter scope (Table 5).
+Factor
+
+Paired comparison
+
+Learning rate
+Readout
+Adapter scope
+
+Lower-rate pointer − higher-rate pointer
+Pooling − pointer, both lower-rate
+No-FFN pointer − all-module pointer
+
+Scope comparison accuracy: all-module pointer
+Scope comparison accuracy: no-FFN pointer
+
+PIQA (pp)
+
+CommonsenseQA (pp)
+
++12.17±2.49
++1.26±0.85
++5.21±1.15
+
++11.65±1.57
++4.01±1.83
++9.56±2.81
+
+75.04%
+80.25%
+
+54.24%
+63.80%
+
+Table 5 | Additional-source support for individual design choices. Changes are paired foursetting means with descriptive SEs. The learning-rate comparison changes head and adapter
+rates together; the readout comparison uses the same model group. Adapter scope is tested
+separately with lower-rate, one-epoch po

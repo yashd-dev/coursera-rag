@@ -1,0 +1,125 @@
+=== PAGE 15 (continued) ===
+e also implement two
+extra speculation cache structures, including our retrieval cache and StreamingLLM cache.
+
+B
+
+Additional Experiments
+
+B.1
+
+T RI F ORCE’s Scalability for Longer Inputs
+
+For longer inputs, a solution is offloading the KV cache to the CPU memory. Below are
+experiments on a single L40 GPU with offloading for longer inputs on LWM-Text models
+(Liu et al., 2024a) using the PG-19 dataset, showing impressive speedup.
+Model
+
+Speedup
+
+LWM-Text-256K
+LWM-Text-512K
+
+11.81×
+12.10×
+
+Table 6: T RI F ORCE’s Scalability for longer inputs
+B.2
+
+T RI F ORCE’s Scalability for Longer Outputs
+
+In the previous sections of the paper, we focused on a long input and a short output
+to illustrate the efficiency gains in a commonly encountered setting. Here we provide
+additional experiments with longer output sequences up to 2K with Llama2-7B-128K on an
+A100 GPU using the PG-19 dataset:
+Output Sequence Length
+
+Speedup
+2.31×
+2.28×
+2.34×
+2.32×
+2.28×
+2.29×
+
+256
+512
+768
+1024
+1536
+2048
+
+Table 7: T RI F ORCE’s Scalability for longer outputs
+As seen in Table 7, the performance of T RI F ORCE remains relatively stable. This stability is
+due to the retrieval cache being reconstructed at fixed intervals, ensuring it stays aligned
+with the evolving context. Furthermore, our retrieved cache can be effectively reused across
+multiple decoding steps, amortizing the overhead of retrieval. These results demonstrate
+the scalability of T RI F ORCE and its robustness in handling varying output lengths, thereby
+addressing the concern about its generalizability.
+B.3
+
+Ablation of γ1 , γ2
+
+Here we provide additional ablation results of γ1 , γ2 in Table 8 with Llama2-7B-128K on an
+A100 GPU using the PG-19 dataset. Due to the gap between JF68M with StreamingLLM
+15
+
+
+=== PAGE 16 ===
+Published as a conference paper at COLM 2024
+
+and Llama-7B-128K with retrieval cache, the acceptance rate of the first speculation phase in
+our speculation hierarchy is low. As shown in the table, the optimal value for γ1 is 2 and for
+γ2 is 6.
+γ1
+
+Speedup
+
+γ2
+
+Speedup
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+2.30×
+2.31×
+2.24×
+2.17×
+2.09×
+2.01×
+1.92×
+1.83×
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+1.62×
+1.90×
+2.13×
+2.22×
+2.26×
+2.31×
+2.24×
+2.20×
+
+(a) Speedup at different γ1 values with γ2 = 6
+
+(b) Speedup at different γ2 values with γ2 = 2
+
+Table 8: Ablation of γ1 , γ2
+
+16
+

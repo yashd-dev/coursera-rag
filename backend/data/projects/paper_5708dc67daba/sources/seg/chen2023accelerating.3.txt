@@ -1,0 +1,81 @@
+=== PAGE 3 (continued) ===
+drafts 𝑥˜1 , . . . , 𝑥˜𝐾 :
+𝑞 ( 𝑥 | , 𝑥1 , . . . , 𝑥𝑛 ) , 𝑞 ( 𝑥 | , 𝑥1 , . . . , 𝑥𝑛 , 𝑥˜1 ) , . . . , 𝑞 ( 𝑥 | , 𝑥1 , . . . , 𝑥𝑛 , 𝑥˜1 , . . . , 𝑥˜𝐾 )
+
+for 𝑡 = 1 : 𝐾 do
+Sample 𝑟 ∼ 𝑈 [0, 1] from a uniform distribution.
+𝑛+𝑡 −1 )
+if 𝑟 < min 1, 𝑞𝑝((𝑥𝑥 ||𝑥𝑥11,...,𝑥
+, then
+,...,𝑥 𝑛+𝑡−1 )
+Set 𝑥𝑛+𝑡 ← 𝑥˜𝑡 and 𝑛 ← 𝑛 + 1.
+else
+sample 𝑥𝑛+𝑡 ∼ ( 𝑞 ( 𝑥 | 𝑥1 , . . . , 𝑥𝑛+𝑡−1 ) − 𝑝 ( 𝑥 | 𝑥1 , . . . , 𝑥𝑛+𝑡−1 ))+ and exit for loop.
+end if
+end for
+If all tokens 𝑥𝑛+1 , . . . , 𝑥𝑛+ 𝐾 are accepted, sample extra token 𝑥𝑛+ 𝐾 +1 ∼ 𝑞 ( 𝑥 | , 𝑥1 , . . . , 𝑥𝑛 , 𝑥𝑛+ 𝐾 ) and
+set 𝑛 ← 𝑛 + 1.
+end while
+
+Speculative Sampling
+Conditional Scoring
+For speculative sampling (See algorithm 2), we first make the observation that computing the logits
+of a short continuation of 𝐾 tokens in parallel has a very similar latency to that of sampling a single
+
+3
+
+
+=== PAGE 4 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+token. We focus our attention on large transformers, sharded in the Megatron style (Shoeybi et al.,
+2019). For these models the majority of sampling time can be attributed to three components:
+1. Linear Layers: For small batch sizes, each linear layer only processes a small number of
+embeddings. This causes the dense matrix multiplies in the feed-forward layers, queries, keys,
+values computations and the final attention projection to become memory bound. For small 𝐾 ,
+this will continue to be memory bound and therefore take a similar amount of time.
+2. The Attention Mechanism: The attention mechanism is also memory bound. During sampling,
+we maintain a cache of all the keys and values of the previous tokens in the sequence to avoid
+re-computation. These KV-caches are large, and accounts for the majority of the memory
+bandwidth utilisation for the attention mechanism. However, since the KV-cache size does not
+change as we increase 𝐾 , there is little to no delta in this component.
+3. All-reduces: As models grow in size, its parameters need to be divided across multiple accelerators, leading to communication overheads. With Megatron, this manifests itself as an all-reduce
+after every feed-forward and attention layer. Since only the activations for a small number of
+tokens are transmitted, this operation is typically latency bound instead of throughput bound
+for both sampling and scoring (for small 𝐾 ). Again, this results in a similar amount of time
+spent in the two cases.
+Other sources of overhead may exist, depending on the exact transformer implementation. Therefore
+it is still possible that the choice of positioning encoding, decoding method (e.g. a sort might be
+required for nucleus sampling), hardware limitations etc. can introduce some deltas between scoring
+and sampling. However, if the conditions are met such that the above components dominate then
+scoring should not be significantly slower for small 𝐾 .
+Modified Rejection Sampling
+We require a method to recover the distribution of the target model from samples from the draft
+model, and logits of said tokens from both models.
+To achieve this, we introduce the following rejection sampling scheme of the drafted tokens. Given a
+sequence of tokens 𝑥1 , . . . , 𝑥𝑛 , and 𝐾 draft tokens 𝑥˜𝑛+1 , . . . , 𝑥˜𝑛+ 𝐾 generated from 𝑝 ( . | .), we accept 𝑥˜𝑛+1
+with probability:
+
+
+𝑞 (˜
+𝑥𝑛+1 | 𝑥1 , . . . , 𝑥𝑛 )
+min 1,
+𝑝 (˜
+𝑥𝑛+1 | 𝑥1 , . . . , 𝑥𝑛 )
+Where 𝑞 (˜
+𝑥𝑛+1 | 𝑥1 , . . . , 𝑥𝑛 ) and 𝑝 (˜
+𝑥𝑛+1 | 𝑥1 , . . . , 𝑥𝑛 ) are the probability of 𝑥˜𝑛+1 according to the target and
+draft models respectively, conditioned on the context so far.
+If the token is accepted, we set 𝑥𝑛+1 ← 𝑥˜𝑛+1 and repeat the process for 𝑥˜𝑛+2 until either a token
+is rejected or all tokens have been accepted.
+If 𝑥˜𝑛+1 is rejected, we resample 𝑥𝑛+1 from the following distribution:
+𝑥𝑛+1 ∼ ( 𝑞 ( 𝑥 | 𝑥1 , . . . , 𝑥𝑛 ) − 𝑝 ( 𝑥 | 𝑥1 , . . . , 𝑥𝑛 ))+
+
+Where ( .)+ denotes:
+
+max(0, 𝑓 ( 𝑥 ))
+( 𝑓 ( 𝑥 ))+ = Í
+𝑥 max(0, 𝑓 ( 𝑥 ))
+
+By applying this sequentially, we recover the distribution of the target model for the accepted tokens
+(see pr

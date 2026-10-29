@@ -1,0 +1,135 @@
+=== PAGE 6 (continued) ===
+e MC11 in every fold–seed setting. Removing
+FFN adapters reduces trainable parameters from 131.17M to 58.82M, a 55.2% reduction (Table 3).
+Adapter scope
+All modules
+
+Readout
+
+No-FFN
+
+Pointer
+Mean-span
+
+50.28±1.02
+51.00±0.21
+
+52.49±0.46
+53.39 ± 0.24
+
+Pool − pointer (pp)
+Trainable parameters (M)
+
++0.73±1.07
+131.17
+
++0.91±0.35
+58.82
+
+Table 2 | MC11 accuracy (%) and trainable parameter count for the core readout-byscope comparison. All four models use one epoch, lower head and adapter rates,
+and rank 64. Accuracies and paired changes are four-setting means with descriptive
+SEs. Both readouts have the same parameter count within each scope.
+Parameter group
+
+All modules
+
+No-FFN
+
+Attention adapters
+DeltaNet adapters
+FFN adapters
+Bilinear head
+
+12.58
+44.92
+72.35
+1.31
+
+12.58
+44.92
+0
+1.31
+
+Total trainable
+
+131.17
+
+58.82
+
+Table 3 | Trainable parameters in millions at rank 64, rounded independently.
+The pretrained backbone weights are frozen. Both readouts use the same
+bilinear head.
+The final combination gains about 3.1 pp over the reference pointer. Its readout-by-scope
+interaction is small (+0.18 ± 0.74 pp), consistent with approximately additive gains from span
+aggregation and scope restriction.
+6
+
+
+=== PAGE 7 ===
+5.2. Adapter Scope and Parameter Budget
+FFN adapters account for 72.35M trainable parameters, more than half of the all-module adapter
+budget. Removing them improves the pointer by 2.21 ± 0.66 pp and the pooling model by
+2.39 ± 0.35 pp, showing that the scope change helps with either readout.
+A similar parameter budget can instead be distributed across all projections at a lower rank.
+The all-module rank-28 pointer uses 58.12M trainable parameters and reaches 52.40%, close
+to the no-FFN rank-64 pointer’s 52.49%. Both allocations improve over the larger all-module
+reference. The no-FFN allocation uses the smaller budget while retaining rank 64 in attention
+and DeltaNet, and combines with pooling to give the strongest configuration in Table 2.
+5.3. Option Aggregation and Scoring Head
+To examine the role of aggregation, we compare mean-span pooling with a different single-token
+position and a larger scoring head. The last-content control reads the final token inside each
+option, retaining the same bilinear head and all-module training recipe. It reaches 49.11% MC11,
+below both the option-ending pointer and mean-span pooling at 51.00%. Pooling exceeds this
+control by 1.89 ± 0.97 pp, supporting aggregation across the span over either tested pointer
+position. The largest gains over last-content occur on HellaSwag (8.10 pp) and the two ARC
+tasks; Appendix B gives the complete task profile.
+Keeping the head simple. Adding a two-layer residual correction to the all-module pointer
+increases its trainable parameter count by about 0.13M and yields 50.33% MC11, close to
+the reference pointer and its repeated run. Under this recipe, the residual branch provides
+little additional benefit, so the final design retains the bilinear head and changes the option
+representation supplied to it. Appendix C examines the residual branch through inferenceremoval and training controls.
+5.4. Training Recipe and Reference Quality
+Because the head and adapters are trained jointly, the reference model’s quality depends on how
+strongly the backbone is updated. We vary the head and adapter learning rates independently
+and compare one- and two-epoch schedules, keeping the all-module, rank-64 architecture fixed.
+Adapter peak rate
+Head peak rate
+
+Lower
+
+Higher
+
+Lower
+Higher
+
+50.28±1.02
+49.66±1.24
+
+46.81±2.37
+47.46±1.35
+
+Readout
+
+Training budget, both rates lower
+One epoch
+Two epochs
+
+Pointer
+Mean-span
+
+50.28±1.02
+51.00±0.21
+
+43.96±0.91
+48.57±1.16
+
+Table 4 | Training-recipe diagnostics on MC11 (%, mean ± descriptive SE).
+The upper panel contains one-epoch pointers; the lower panel compares
+fresh runs with budget-specific schedule horizons. Lower/higher rates are
+1.25×10−5 /2.5×10−5 .
+
+7
+
+
+=== PAGE 8 ===
+Learning rates. Lowering the adapter rate improves MC11 at 

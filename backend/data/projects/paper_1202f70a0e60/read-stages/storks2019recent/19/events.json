@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.19 \u2014 3-page segment\n\n**Problem**: Survey of recent advances in natural language inference (NLI), focusing on benchmark creation criteria and task formats. GLUE suite and its constituent tasks described as comprising ~23,000 examples of difficult reframed single-sentence binary classification and 2- or 3-way entailment tasks.\n\n**Method**: Review of benchmark creation successes/lessons; analysis of task formats (classification, entailment, cloze, Q&A), evaluation schemes, data biases, collection methods, and complexity.\n\n**Results**: GLUE includes CommitmentBank, COPA, MultiRC, RTE (merged RTE-1/2/3/5), WiC, and WSC recast as binary classification. SuperGLUE downloadable at https://super.gluebenchmark.com/.\n\n**Limitations**: Text presented as untrusted data; no verification of reported numbers or task definitions attempted.\n\n> \"Many of these tasks require reasoning over multiple sentences, and using external knowledge to perform language processing tasks like word-sense disambiguation and reference resolution.\" \u2014 Pg 25\n\n> \"The goal of benchmarks is to support technology development and provide a platform to measure research progress.\" \u2014 Pg 25\n\n**Exact quotes**: Verbatim from source segment, attributed to their respective page markers."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2306,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782de0d8ffekYqZeaGiH9OXpy"
+  }
+]

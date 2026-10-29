@@ -1,0 +1,51 @@
+=== PAGE 12 (continued) ===
+Wang, Huan Sun, and Yu Su.
+2023. Mind2Web: Towards a generalist agent for the web. In Advances in Neural Information Processing
+Systems, volume 36, pages 28091–28114. Curran Associates, Inc.
+[13] Jesse Dodge, Gabriel Ilharco, Roy Schwartz, Ali Farhadi, Hannaneh Hajishirzi, and Noah A. Smith.
+2020. Fine-tuning pretrained language models: Weight initializations, data orders, and early stopping. Preprint, arXiv:2002.06305.
+[14] Timothy Dozat and Christopher D. Manning. 2017. Deep biaffine attention for neural dependency
+parsing. In International Conference on Learning Representations.
+[15] Soufiane Hayou, Nikhil Ghosh, and Bin Yu. 2024. LoRA+: Efficient low rank adaptation of large models. In Proceedings of the 41st International Conference on Machine Learning, volume 235 of Proceedings of
+Machine Learning Research, pages 17783–17806. PMLR.
+[16] Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob
+Steinhardt. 2021. Measuring massive multitask language understanding. In International Conference
+on Learning Representations.
+[17] Jeremy Howard and Sebastian Ruder. 2018. Universal language model fine-tuning for text classification. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1:
+Long Papers), pages 328–339. Association for Computational Linguistics.
+
+12
+
+
+=== PAGE 13 ===
+[18] Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang,
+and Weizhu Chen. 2022. LoRA: Low-rank adaptation of large language models. In International
+Conference on Learning Representations.
+[19] Phillip Keung, Yichao Lu, György Szarvas, and Noah A. Smith. 2020. The multilingual Amazon reviews corpus. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing
+(EMNLP), pages 4563–4568, Online. Association for Computational Linguistics.
+[20] Ananya Kumar, Aditi Raghunathan, Robbie Matthew Jones, Tengyu Ma, and Percy Liang. 2022.
+Fine-tuning can distort pretrained features and underperform out-of-distribution. In International
+Conference on Learning Representations.
+[21] Stefan Larson, Anish Mahendran, Joseph J. Peper, Christopher Clarke, Andrew Lee, Parker Hill,
+Jonathan K. Kummerfeld, Kevin Leach, Michael A. Laurenzano, Lingjia Tang, and Jason Mars. 2019.
+An evaluation dataset for intent classification and out-of-scope prediction. In Proceedings of the 2019
+Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference
+on Natural Language Processing (EMNLP-IJCNLP), pages 1311–1316. Association for Computational
+Linguistics.
+[22] Yoonho Lee, Annie S. Chen, Fahim Tajwar, Ananya Kumar, Huaxiu Yao, Percy Liang, and Chelsea
+Finn. 2023. Surgical fine-tuning improves adaptation to distribution shifts. In International Conference
+on Learning Representations.
+[23] Xin Li and Dan Roth. 2002. Learning question classifiers. In COLING 2002: The 19th International
+Conference on Computational Linguistics, pages 556–562.
+[24] Xing Li, Qingcheng Chang, Jinzhong Ning, Changfeng Xu, Shenlong Zhang, Yijia Zhang, Ling Luo,
+and Hongfei Lin. 2026. Specialized decision models vs. general-purpose LLMs: Benchmarking Jev
+across knowledge, reasoning, and multilingual tasks. Preprint, arXiv:2610.11978.
+[25] Yinheng Li and Justin Wagle. 2026. LLM-as-Jev: LLMs are already Jev-style decision models—when
+and how to fine-tune them. Preprint, arXiv:2610.02076. Version 3.
+[26] Guoming Ling, Muen Xue, and Zijian Ye. 2026. Jev in the wild: A data-driven analysis of the Jev
+model’s functionality, applications and ecosystem. Preprint, arXiv:2609.30216.
+[27] Ilya Loshchilov and Frank Hutter. 2019. Decoupled weight decay regularization. In International
+Conference on Learning Representations.
+[28] Andrew L. Maas, Raymond E. Daly, Peter T. Pham, Dan Huang, Andrew Y. Ng, and Christopher
+Potts. 2011. Learning word vectors for sentiment analysis. In Proceedings of the 49th Annual Meeting of
+the Association for 

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.1 \u2014 Section Notes\n\n## Problem (P1\u2013P2)\nMachines struggle with NLI that requires deep language understanding beyond explicit text, relying on world knowledge and reasoning. Despite NLP advances, systems remain far from human-like ability (\u00a71).\n\n## Method (P2\u2013P3)\nSurvey of benchmarks, knowledge resources, and state-of-the-art learning/inference approaches organized into symbolic, statistical, and neural models (\u00a71\u2013\u00a72).\n\n## Reported Results (P2)\nNone \u2014 descriptive survey of field architecture; no experimental findings in this segment.\n\n## Limitations (P1)\nMachines lack commonsense reasoning; world-knowledge connections and inference processes remain difficult despite decades of NLP progress (\u00a71).\n\n## Quotes\n> \"We know that a piggy bank is a container that holds coins... Since metal is a hard solid, the coins will make a sound when shaken inside of a container such as a piggy bank; if there is no sound, then there are no coins.\" (\u00a71)\n\n> \"Despite significant advances in natural language processing in the last several decades, machines are still far away from having this type of natural language inference (NLI) ability.\" (\u00a71)\n\n**Attribution**: Bullets attributed to physical-page markers P1\u2013P3 as instructed. Source text treated as untrusted data; no background citations inferred."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2257,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78321350ffegOBmy7dUB6Hf8x"
+  }
+]

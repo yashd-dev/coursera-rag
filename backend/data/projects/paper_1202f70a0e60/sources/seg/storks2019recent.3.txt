@@ -1,0 +1,50 @@
+=== PAGE 3 (continued) ===
+it) is
+it possible to resolve the pronoun it and answer the question correctly. Higher-level tasks, such as
+question answering, may appear the same as in earlier benchmarks. However, successfully solving
+these tasks will also require machines to go beyond linguistic context, and rely on reasoning and
+knowledge that is not explicitly stated in text. In this survey, we attempt to provide an overview of
+recent benchmarks like these.
+These benchmarks vary in terms of the scope of tasks, for example, from the specific and focused
+reference resolution task in the Winograd Schema Challenge (Levesque, 2011) to broader tasks
+such as textual entailment, e.g., the RTE Challenges (Dagan, Glickman, & Magnini, 2005). While
+some benchmarks only focus on one specific task, others are comprised of a variety of tasks, e.g.,
+GLUE (Wang, Singh, Michael, Hill, Levy, & Bowman, 2018). Some benchmarks target a specific
+type of knowledge, e.g., commonsense social psychology in Event2Mind (Rashkin, Sap, Allaway,
+Smith, & Choi, 2018b), while others intend to address a variety of types of knowledge, e.g., the Story
+Cloze Test (Mostafazadeh, Chambers, He, Parikh, Batra, Vanderwende, Kohli, & Allen, 2016),
+3
+
+
+=== PAGE 4 ===
+S TORKS , G AO , & C HAI
+
+which requires a wide range of facts about everyday life. How benchmark tasks are formulated also
+differs among existing benchmarks. Some are in the form of multiple-choice questions, requiring
+a binary decision or a selection from a candidate list, while others are more open-ended. Different
+characteristics of benchmarks serve different goals, and a critical question is what criteria to consider
+in order to create a benchmark that can support technology development and measurable outcome
+of research progress on deep reasoning abilities.
+Section 2 gives a detailed account of existing benchmarks and their common characteristics. It
+also summarizes important criteria to consider in building these benchmarks, including factors to
+consider in task formulation, techniques to avoid problematic data bias, data collection methods,
+and factors affecting overall benchmark complexity.
+1.2 Scope of Knowledge Resources
+Humans perform natural language inference based on a vast amount of external knowledge about
+language and the world. To support machines’ inference ability, compiled knowledge resources
+become important. It is an unsolved problem to comprehensively taxonomize all of the human
+knowledge and reasoning required to perform general inference (Davis & Marcus, 2015). For the
+purpose of this survey, though, we attempt to provide an overview of three types of knowledge resources: linguistic knowledge, common knowledge, and commonsense knowledge. Although modern approaches often rely on large text corpora to implicitly incorporate external knowledge without
+regard to what types of knowledge are required, we think it would be helpful to distinguish different
+types of knowledge to facilitate better understanding of the nature of NLI tasks.
+Linguistic knowledge. In order to comprehend human language, machines first need linguistic
+knowledge, i.e., knowledge about the language. This includes an understanding of word meanings,
+grammar, syntax, semantics, and discourse structure. Having linguistic knowledge gives a human
+or machine the basic capabilities of understanding language, and is a required property of virtually
+any NLP system, even those not created for NLI tasks.
+Common knowledge. Common knowledge refers to well-known facts about the world that are
+often explicitly stated, e.g., "canine distemper is a domestic animal disease" (Cambria, Song, Wang,
+& Hussain, 2011). This kind of knowledge is often referred to in human communication (Cambria et al., 2011). Some types of common knowledge may be domain-specific, e.g., the knowledge
+required to answer questions on an elementary-level science test (Sugawara, Yokono, & Aizawa,
+2017). While domain-specific knowledge is obviously useful for domain-specific applications,
+mu

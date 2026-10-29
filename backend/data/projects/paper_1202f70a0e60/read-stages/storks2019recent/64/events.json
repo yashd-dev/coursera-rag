@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.64\n\n**Problem** (p.75): Semantic parsing over text for knowledge graph construction, specifically building dynamic knowledge graphs from text using machine reading comprehension.\n\n**Method** (p.76): Storks, Gao & Chai propose a machine reading comprehension approach to extract entities and relations, constructing dynamic knowledge graphs that evolve as new text is processed. Uses deep learning models (BERT, Transformer-XL) as the base reader.\n\n**Reported results** (p.76): Cites related work on dynamic knowledge graphs (Das et al. ICLR 2019) and embodied question answering, but no quantitative results reported in this segment.\n\n**Limitations** (p.75\u201376): No end-to-end evaluation reported; methodology relies on pre-trained language models without ablation or error analysis presented in this segment.\n\n> \u201cThink you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge.\u201d (Clark et al., ACL 2018, p.845)\n\n> \u201cBuilding Dynamic Knowledge Graphs from Text using Machine Reading Comprehension.\u201d (Das et al., ICLR 2019)\n\n**Note**: References-only segment \u2014 no new findings or results from the target paper are contained in this text."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2581,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78234b55ffe3UnZpynILUiwZt"
+  }
+]

@@ -1,0 +1,88 @@
+=== PAGE 5 (continued) ===
+d version.
+
+Figure 2: Counterfactual inference steps. (2a) The original causal graph. (2b) We estimate the
+possible values of the exogenous factors, here U , from the observations. (2c) We perform the
+do(X = x) operation. (2d) We predict the values of the remaining variables given their parent causes.
+Here, X and U are known. B, A and Y should be predicted. (2e) However, to maintain efficiency,
+we consider a single possible value per exogenous factor and re-compute only the variables affected
+by the intervention: here B is unaffected and not re-computed.
+
+4
+
+Inference on Synthetic Data
+
+4.1
+
+Experimental Setup
+
+We verify the applicability of our method on synthetic data and use it to investigate the current
+limitations of LLMs on counterfactual reasoning tasks. Cladder is a synthetic dataset containing
+small self-contained causal graphs of three of four variables with no unobserved confounders [19].
+Queries in Cladder test the causal capabilities of a model. We focus on the counterfactual subset.
+We extract the results for the counterfactuals queries (rung 3, det-counterfactual)2 . Queries are
+divided into commonsense, nonsensical and anti-commonsense categories. Nonsensical queries are
+composed of abstract variables not conveying any semantic meaning. Anti-commonsense queries
+contain common concepts as variables but with fictive causal relationships. Figure 3 shows an
+example of anti-commonsense query from Cladder. We conduct experiments using LLaMA-3.1 [9],
+GPT-3.5 [32], GPT-4 (version 1106), GPT-4o and GPT-4o-mini [29, 30]. We query GPT models via
+the OpenAI API while we run LLaMA-3.1 locally on one GPU NVIDIA A100 using Ollama. We
+use Langchain to interface with the LLMs. We use the default hyperparameters of both models and
+allow 12 refinement steps to format the LLM answers properly. When the answer does not match the
+expected format, we add a parsing layer. The prompts used are given in Appendix B. Our framework
+is denoted Counterfactual-CI. We compare our method with baseline LLM models from [19].
+4.2
+
+Evaluation Results
+
+We compare the results using our framework against basic and causal prompting [19]. To provide
+insights into the abilities and limitations of LLMs, we also create ablated models. These models,
+denoted with Ggt are provided with the ground-truth graph (extracted by parsing the input query)
+and are only tasked to perform the counterfactual inference step. Table 1 describes the obtained
+results. We do not include parsing errors in the computation of the results as we aim to study the
+abilities of the LLMs on causal inference tasks separately from their capacity to follow instructions
+and generate structured outputs. This is not an issue for most models as they only contain a small
+number of uniformly distributed errors (see Figure 4). Most LLMs do not perform significantly better
+2
+
+We download the results divided by query type and commonsense here: https://edmond.mpg.de/
+dataset.xhtml?persistentId=doi%3A10.17617%2F3.NVRRA9.
+
+5
+
+
+=== PAGE 6 ===
+Example of Anti-Commonsense Counterfactual Query
+Imagine a self-contained, hypothetical world with only the following
+conditions, and without any unmentioned factors or causal relationships: Unobserved confounders has a direct effect on drinking coffee
+and salary. Proximity to a college has a direct effect on drinking
+coffee. Drinking coffee has a direct effect on salary. Unobserved
+confounders is unobserved. We know that confounder active or close
+to a college causes drinking coffee. confounder active or drinking
+coffee causes high salary. We observed the person lives close to a
+college and confounder inactive.
+Would the employee has a high salary if drinking coffee instead of not
+drinking coffee?
+
+H
+
+P
+
+C
+
+S
+
+(b) Ground-truth graph.
+
+H
+
+C
+
+S
+
+(a) Prompt in natural language. The correct answer is ‘yes’.
+
+(c) Counterfactual graph.
+
+Figure 3: Example of counterfactual query from the Cladder dataset. (left) The context and question
+description in natural language as

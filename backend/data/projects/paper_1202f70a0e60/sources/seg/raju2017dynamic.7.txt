@@ -1,0 +1,76 @@
+=== PAGE 5 (continued) ===
+powerful and
+sophisticated models.
+One promising direction for future exploration is the
+incorporation of transformers into the DMN framework.
+Transformers have revolutionized the natural language
+processing (NLP) field due to their ability to capture long range dependencies and relationships within text, which
+traditional RNN - based models like GRUs often miss. Unlike
+RNNs, which process sequences sequentially, transformers
+process the entire sequence simultaneously using self attention mechanisms. This allows transformers to capture
+global context more effectively, making them particularly
+well - suited for tasks that require understanding complex
+sentence relationships, such as NLI (Rein, 2014).
+Incorporating transformers into DMNs could significantly
+enhance the model’s ability to encode sentence pairs. The self
+- attention mechanism in transformers enables the model to
+weigh the importance of different words within a sentence
+relative to each other, thus creating more prosperous and more
+contextually aware representations. This is crucial in NLI,
+where the relationship between a premise and a hypothesis
+often hinges on understanding the interplay between various
+parts of each sentence. By leveraging transformers, the DMN
+could generate more nuanced sentence embeddings that better
+capture the subtleties of language, leading to improved
+reasoning capabilities and inference accuracy.
+Another alternative that merits investigation is using attention
+- based models, which have already shown substantial success
+in various NLP tasks. Attention mechanisms allow models to
+focus on the most relevant parts of the input when making
+predictions, which can be particularly advantageous in NLI.
+By integrating attention - based sentence encoders within the
+DMN framework, we could enable the model to dynamically
+focus on different parts of the premise and hypothesis during
+the encoding process. This dynamic attention could lead to
+more precise and contextually appropriate sentence
+representations, ultimately enhancing the DMN’s
+performance
+distinguishing
+between
+entailment,
+contradiction, and neutrality in NLI tasks.
+Combining transformers with attention mechanisms offers a
+compelling approach (Ablavatski et al., 2017). Transformers
+inherently rely on self - attention, but augmenting this with
+task - specific attention layers could refine the model’s focus
+on critical aspects of the input sentences (Lenz et al., 2015).
+For example, an additional attention layer could enhance the
+model’s understanding of negation or quantifiers, which are
+often pivotal in NLI. By tailoring the attention mechanisms to
+the specific challenges of NLI, the DMN could achieve higher
+interpretability and accuracy.
+
+In exploring these alternative encoding mechanisms, it is also
+essential to consider the trade - offs in terms of computational
+complexity and model training time. While transformers and
+attention - based models have the potential to offer significant
+performance improvements, they also typically require more
+computational resources compared to GRUs. Therefore, any
+proposed changes to the DMN framework must balance the
+potential gains in accuracy with the practical considerations
+of model efficiency and scalability. This balance will be
+critical as we refine our approach and push the boundaries of
+what DMNs can achieve in NLI.
+While GRUs have provided a solid foundation for our initial
+DMN implementation, exploring alternative sentence
+encoding mechanisms, such as transformers and attention based models, presents an exciting opportunity to enhance the
+model’s performance further. By incorporating these
+advanced techniques, we aim to develop a more robust and
+nuanced DMN framework that can better capture the
+complexities of natural language inference, ultimately leading
+to more accurate and reliable predictions in NLI tasks.
+
+Figure 7: Recurrent Neural Network
+Enhancing Memory Retention with Episodic Memory
+Updates
+The episodic memory module in DMNs help

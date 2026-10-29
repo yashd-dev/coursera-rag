@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# raju2017dynamic.2.txt \u2014 Compact Factual Notes\n\n**Problem** (p1 continued): NLI tasks require reasoning and iterative computation. Memory mechanisms are essential for storing and updating step-by-step information, as later sentences may force reinterpreting earlier ones. Investment in effective memory may need revision if models already understand whole-sentence relations.\n\n**Method** (p2): DMNs update memory states iteratively through sentence interaction, optimized for step-by-step reasoning. DMNs allow previously received information to be reevaluated and reconstructed for improved conclusions. Treating NLI as a QA problem\u2014premise as context, hypothesis as question\u2014enables episodic memory updates.\n\n**Reported results** (p1): DMN approach improves performance on standard NLI benchmarks compared to non-updating models. Specific accuracy figures not provided in this segment.\n\n**Limitations** (p1): It may be less beneficial for models to understand whole relations between sentences. Memory mechanism investment may need revision depending on task structure.\n\n**Exact quotes**:\n- p1: \u201cMemory mechanisms enable models to store and update information from step to step, replicating how humans approach these problems.\u201d\n- p2: \u201cTraining unlexicalized and lexicalized features supervised classifiers were their work, and the unlexicalized features yielded 50.4% accuracy compared to 78.2% of accurate lexicalized features.\u201d\n\n**Segment attribution**: All bullets attributed to preceding physical-page markers (p1 continued, p2). No background citations inferred."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2279,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781fc981ffezA20AuY6hD0iUQ"
+  }
+]

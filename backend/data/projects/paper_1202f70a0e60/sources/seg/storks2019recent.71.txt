@@ -1,0 +1,59 @@
+=== PAGE 84 (continued) ===
+ the 11th International Workshop on Semantic
+Evaluation (SemEval-2017), pp. 58–68, Vancouver, Canada. Association for Computational
+Linguistics.
+Miltsakaki, E., Prasad, R., Joshi, A., & Webber, B. (2004). The Penn Discourse Treebank. In
+Proceedings of the Fourth International Conference on Language Resources and Evaluation (LREC-2004), p. 4, Lisbon, Portugal. Evaluation and Language Resources Distribution
+Agency.
+Minard, A.-L., Speranza, M., Urizar, R., Altuna, B., van Erp, M., Schoen, A., & van Son, C. (2016).
+MEANTIME, the NewsReader Multilingual Event and Time Corpus. In Proceedings of the
+Tenth International Conference on Language Resources and Evaluation (LREC-2016), Portorož, Slovenia. European Language Resources Association (ELRA).
+Minsky, M. (1974). A Framework for Representing Knowledge. AI Memos.
+Minsky, M. (2000). Commonsense-based interfaces. Communications of the ACM, 43(8), 66–73.
+Mishra, B. D., Huang, L., Tandon, N., Yih, W.-t., & Clark, P. (2018). Tracking State Changes in
+Procedural Text: A Challenge Dataset and Models for Process Paragraph Comprehension.
+In Proceedings of the 2018 Conference of the North American Chapter of the Association
+for Computational Linguistics: Human Language Technologies (NAACL HLT 2018), New
+Orleans, LA, USA. Association for Computational Linguistics.
+Moore, R. C. (1982). The Role of Logic in Knowledge Representation and Commonsense Reasoning. In Proceedings of the Second AAAI Conference on Artificial Intelligence (AAAI ’82),
+AAAI’82, pp. 428–433, Pittsburgh, PA, USA. AAAI Press.
+Morgan, A. D. (1847). Formal Logic: Or, The Calculus of Inference, Necessary and Probable.
+Taylor and Walton.
+Morgenstern,
+L.
+(2016).
+Pronoun
+http://commonsensereasoning.org/disambiguation.html.
+
+Disambiguation
+
+Problems.
+
+Morgenstern, L., Davis, E., & Ortiz, C. L. (2016). Planning, Executing, and Evaluating the Winograd Schema Challenge. AI Magazine, 37(1), 50–54.
+Morgenstern, L., & Ortiz, C. (2015). The Winograd Schema Challenge. In Proceedings of the
+Twenty-Ninth AAAI Conference on Artificial Intelligence (AAAI-15), Austin, TX, USA. AAAI
+Press.
+84
+
+
+=== PAGE 85 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Mostafazadeh, N., Chambers, N., He, X., Parikh, D., Batra, D., Vanderwende, L., Kohli, P., & Allen,
+J. (2016). A Corpus and Cloze Evaluation Framework for Deeper Understanding of Commonsense Stories. In Proceedings of the 2016 Conference of the North American Chapter of
+the Association for Computational Linguistics: Human Language Technologies (NAACL HLT
+2016), San Diego, CA, USA. Association for Computational Linguistics.
+Mostafazadeh, N., Roth, M., Louis, A., Chambers, N., & Allen, J. (2017). LSDSem 2017 Shared
+Task: The Story Cloze Test. In Proceedings of the 2nd Workshop on Linking Models of
+Lexical, Sentential and Discourse-Level Semantics, pp. 46–51, Valencia, Spain. Association
+for Computational Linguistics.
+Negri, M., Marchetti, A., Mehdad, Y., Bentivogli, L., & Giampiccolo, D. (2012). Semeval-2012
+Task 8: Cross-lingual Textual Entailment for Content Synchronization. In Proceedings of the
+Sixth International Workshop on Semantic Evaluation (SemEval-2012), pp. 399–407, Montréal, Canada. Association for Computational Linguistics.
+Negri, M., Marchetti, A., Mehdad, Y., Bentivogli, L., & Giampiccolo, D. (2013). Semeval-2013
+Task 8: Cross-lingual Textual Entailment for Content Synchronization. In Second Joint Conference on Lexical and Computational Semantics (*SEM), Volume 2: Proceedings of the Seventh International Workshop on Semantic Evaluation (SemEval-2013), pp. 25–33, Atlanta,
+Georgia, USA. Association for Computational Linguistics.
+Nematzadeh, A., Burns, K., Grant, E., Gopnik, A., & Griffiths, T. (2018). Evaluating Theory of
+Mind in Question Answering. In Proceedings of the 2018 Conference on Empirical Methods
+in Natural Language Processing (EMNLP 2018), pp. 2392–2400, Brussels, Belgium. Association for Computational Linguistics.
+Ng, H. T., Teo, L. H., & Kwan, J. L. P. (2

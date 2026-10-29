@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.68.txt - Notes (Pages 80-81)**\n\n**Problem**: Survey of recent advances in natural language inference.\n\n**Method**: Bibliographic survey compiling datasets and algorithms for visual question answering, semantic parsing, reading comprehension, and textual entailment.\n\n**Reported results**: No experimental results reported; segment contains only reference list with citations spanning 2002\u20132019.\n\n**Limitations**: No findings, metrics, or performance data within this segment; purely bibliographic.\n\n- **Page 80** Contains citations: Manning & Hudson (GQA), Iftene (TAC 2008), Iyer et al. (Quora), Jastrz\u0119bski et al. (commonsense mining), Jia & Liang (adversarial examples), Johnson et al. (CLEVR). \n- **Page 81** Contains remaining bibliography: Kafle & Kanan (VQA survey), Kamath & Das (semantic parsing survey), Khashabi et al. (multi-sentence reading comprehension), Khot et al. (SciTail), Kiddon et al. (neural checklist models), Kim et al. (sentence matching), Kingsbury et al. (Penn TreeBank semantic annotation), Kocisk\u00fd et al. (NarrativeQA), Kotzias et al. (group-to-individual labels). \n\n**Short exact quotes**: \n1. \"Globally Coherent Text Generation with Neural Checklist Models\" (Kiddon et al., EMNLP 2016, p. 329\u2013339) \u2014 [Page 81]\n2. \"From group to individual labels using deep features\" (Kotzias et al., KDD 2015, pp. 597\u2013606) \u2014 [Page 81]\n\n**References-only note**: This segment is a bibliography-only excerpt with no analytical content, results, or claims to extract."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2697,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782291e3ffeZfQTG4O2VP7NgH"
+  }
+]

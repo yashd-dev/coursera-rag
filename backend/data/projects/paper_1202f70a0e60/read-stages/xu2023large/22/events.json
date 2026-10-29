@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## xu2023large.22 \u2014 Page 18 (continued)\n\n- **Problem**: NeuLR evaluated on CLUTRR inductive and CLUTRR abductive settings (BARD); text-davinci-003 and BARD across deductive, inductive, abductive reasoning with varying hop counts (Figure 16).\n- **Method**: Chain-of-thought prompting using dataset-provided explanations; zero-shot and few-shot forms same as TABLE 10.\n- **Results**: \n  - text-davinci-003: performance drops as hops increase in inductive/abductive; fails all cases when hops > 6 (inductive) and > 1 (abductive). Slight gains after hop 5 in deductive.\n  - BARD: accuracy reaches 100% in deductive when hops > 5; in inductive, performance drops then stabilizes with gains after hop 6; in abductive, inferior to text-davinci-003 but better than ChatGPT.\n- **Limitations**: LLMs still have much room for improvement; far from good in inductive and abductive settings.\n- **Quote (Page 18 continued)**: \"In the deductive setting of text-davinci-003, model performance drops with the number of hops increasing. But when the hop number is over five, it witnesses slight gains in performance, which illustrates that text-davinci-003 has the potential to conduct multi-hop reasoning in the deductive reasoning setting.\"\n- **Quote (Page 19)**: \"In the deductive reasoning, the performance of BARD increases with the hop number adds. Especially, when the hop number is over five, the accuracy reaches 100% without reducing the rigor of reasoning.\"\n\n## xu2023large.22 \u2014 Page 19\n\n- **Quote**: \"In inductive reasoning, the performance of BARD also drops at first, but it keeps stable and witnesses obvious gains when the hop number is over six. It demonstrates that BARD is better at conducting inductive reasoning and processing multi-hop scenarios compared with text-davinci-003 and ChatGPT.\"\n- **Quote**: \"In abductive reasoning, BARD struggles a lot, inferior to ChatGPT but is better than text-davinci-003.\"\n- **Note**: Appendix G (Table 11\u201325) contains case studies of 0-shot/1-shot/3-shot ChatGPT and 0-shot Davinci003/BARD outputs with correctness annotations, but source text is truncated."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2798,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783892ecffeepEDyLTmUSA2PL"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Compact Notes on storks2019recent.16.txt\n\n- **Problem**: Survey of recent NLI advances; organizing datasets for commonsense reasoning about motivations, emotions, intentions, and social interactions. [P19 continued]\n\n- **Method**: Describes five benchmark datasets: Triangle-COPA (100 examples, emotion/intention questions with logical forms); ROCStories (motivations/emotions ~160K annotations); Event2Mind (57K annotations, 25K events, predicting intentions/reactions); SocialIQA (45K QA requiring intuitive psychology). [P20, P21]\n\n- **Reported results**: Dataset sizes and tasks reported; authors do not report partition magnitudes. [P19 continued, P21]\n\n- **Limitations**: Authors report no dataset partition counts; counts derived from publicly available partitions only. [P19 continued fn 6]\n\n- **Exact quotes**:\n  - \"The data also includes logical forms of the questions and alternatives, as the paper focuses on logical formalisms for psychological commonsense knowledge and reasoning.\" [P19 continued]\n  - \"The authors do not report the magnitude of any of the dataset partitions, so these counts came from the publicly available partitions of the dataset.\" [P19 continued fn 6]"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2335,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782e982affe3m3lbONxDhDwnl"
+  }
+]

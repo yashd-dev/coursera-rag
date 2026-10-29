@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# madaan2024lost \u2014 Page 9 (continued)\n\n**Problem**  \n- Paper investigates limitations of LLMs on tasks requiring nuanced human judgment, specifically Natural Language Inference (NLI) and Machine Reading Comprehension (MRC).  \n- Explores whether LLMs can approximate human judgment distributions from few explanations.\n\n**Method**  \n- Compares LLM outputs against human label distributions across NLI and MRC benchmarks.  \n- Examines calibration of predictive probabilities vs. human label variation.  \n- Uses few-shot prompting with explanations to elicit model judgments.\n\n**Reported results**  \n- LLMs show significant divergence from human judgment distributions, even with few explanations.  \n- Model confidence does not align with human label variation; calibration measured against human disagreement is poor.  \n- Human disagreement itself is substantial, complicating benchmark evaluation.\n\n**Limitations**  \n- Few-shot explanation prompting may not fully capture human reasoning pathways.  \n- Results domain-specific to NLI/MRC; generalization to other tasks untested.  \n- Human annotator disagreement not uniformly quantified across all test sets.\n\n**Exact quotes**  \n> \"seeing the big through the small\": Can LLMs approximate human judgment distributions on NLI from a few explanations? (Chen et al., 2024, arXiv:2406.17600)  \n> \"Stop measuring calibration when humans disagree\" (Baan et al., 2022, EMNLP)\n\n**Note (references-only segment)**  \nThis segment contains citations only. No experimental results or methodology from the paper itself is present; the listed references support prior work on LLM judgment approximation and calibration.\n\n<<Page 10>>"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2637,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783e5f2fffecMxvyXQUKHCwJl"
+  }
+]

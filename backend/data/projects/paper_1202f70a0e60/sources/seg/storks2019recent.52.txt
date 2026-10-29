@@ -1,0 +1,48 @@
+=== PAGE 61 (continued) ===
+ic architecture. They infer that this may
+be because the LSTM architecture of ELM O must consider tokens sequentially, rather than being
+able to compare all tokens to each other across sentence pairs like BERT’s transformer architecture
+can. BERT’s output can also be used as features for a task-specific model with some success, and
+it actually outperforms ELM O in most of the studied tasks when used in this way, likely for the
+same reason. However, they find that performance on sentence similarity tasks like the Microsoft
+Research Paraphrase Corpus (Dolan & Brockett, 2005) is significantly better when the model is
+fine-tuned to the task.
+61
+
+
+=== PAGE 62 ===
+S TORKS , G AO , & C HAI
+
+Liu, Gardner, Belinkov, Peters, and Smith (2019) further investigate the transferability of embeddings produced by these models, and find that even linear models trained with them perform
+comparably to state-of-the-art task-specific models. They also find that features from the lowest
+layer of LSTM models like ELM O are most transferable, while higher layers are more task-specific.
+Meanwhile, features from the middle layers of transformer models like BERT are most transferable,
+and embeddings are not observed to become more task-specific through layers. This may shed some
+more light on performance differences of these models when used for pre-trained embeddings compared to fine-tuning them on a particular task. More investigation into these contextual models will
+be invaluable to the research community as they continue to gain popularity.
+4.4 Incorporating External Knowledge
+One challenge of the current trend of work is the disconnect between knowledge resources and approaches taken to tackle those benchmark tasks. As outlined in Section 2, most of our surveyed
+benchmarks require a large amount of external knowledge to be solved by humans. Surprisingly,
+many of the recent approaches, especially neural approaches, have relied on only the benchmark
+training data and some linguistic resources, usually pre-trained word embeddings, to build models for reasoning and inference. Despite the availability of common and commonsense knowledge
+resources discussed in Section 3, none of them are actually applied to achieve state-of-the-art performance on the benchmark tasks, and only a few of them are applied in any recent approaches.
+
+Use of linguistic resources. WordNet (Miller, 1995) is perhaps the most widely applied lexical
+resource, and its word relations are particularly useful for textual entailment problems. As such,
+WordNet has made an appearance in early statistical approaches all throughout the RTE Challenges
+(Dagan et al., 2005; Hickl et al., 2006; Giampiccolo et al., 2008; Iftene, 2008; Bentivogli et al.,
+2011; Tsuchida & Ishikawa, 2011). WordNet has also been shown to improve performance of neural
+models on more recent benchmarks. For example, Bauer, Wang, and Bansal (2018) use relations
+from WordNet to help answer questions requiring external knowledge in NarrativeQA (Kočiský
+et al., 2018). The Knowledge-Based Inference Model (KIM), a more involved approach by Chen,
+Zhu, Ling, Inkpen, and Wei (2018), improves performance on the SNLI (Bowman et al., 2015) and
+MultiNLI (Williams et al., 2017) benchmarks by using WordNet throughout. Pairs of words in the
+premise and hypothesis texts are aligned using knowledge-enriched co-attention, where if a relation
+exists in WordNet between two words in a pair, they have a higher attention score. Later, they
+use the content of these relations to help infer a class label of entailment, contradiction, or neutral.
+FrameNet (Fillmore et al., 2002) has also been a useful resource for external knowledge, particularly
+about the semantics of common events. For example, Botschen, Sorokin, and Gurevych (2018)
+used FrameNet to embed events recognized in the given context, concatenating this embedding to
+a traditional word embedding input to improve the performance of a baseline model for ARCT
+(Habernal et al., 2018).
+Use 

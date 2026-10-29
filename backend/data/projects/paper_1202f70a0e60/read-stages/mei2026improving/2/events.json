@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# mei2026improving.2 \u2014 Notes\n\n**Problem:** Improve reranking accuracy and reduce parameter count over one-epoch, lower-learning-rate adapter training, avoiding accuracy loss from longer training or higher adapter rates.\n\n**Method:** Two readout/adapter designs tested on NeoHorse-1-4B with PIQA, SocialIQA, MC11, CommonsenseQA, JevBench, Kev:\n- Pointer using final decision token hidden state + bilinear head (Eqs 3\u20134)\n- Mean-span pooling over option interior tokens (Eq 5) replacing pointer hidden state\n- Selective adapter training (55.2% params frozen)\n\n**Reported results (MC11 11-configuration):**\n- One-epoch lower LR: **50.28%** all-module pointer\n- Selective adaptation: **52.49%** (params \u2193 55.2%: 131.2M\u219258.8M)\n- + Mean-span pooling: **53.39%** same params\n- All-module + mean-span pooling: **51.00%** vs. final-content pointer **49.11%**\n- Combined model loses accuracy on JevBench and Kev direct-decision suites\n\n**Limitations:** Combined design degrades JevBench and Kev; results specific to NeoHorse-1-4B and PIQA/SocialIQA held-checkpoint regime.\n\n**Exact quotes:**\n- \"With checkpoints and questions held fixed on PIQA and SocialIQA, the pointer leads on average under direct selection, while pooling leads under entailment reranking.\" (p.2 continued)\n- \"On the eleven-configuration MC11 benchmark, the one-epoch, lower-rate recipe establishes an all-module pointer reference at 50.28% accuracy. Selective adaptation raises this to 52.49% while reducing trainable parameters by 55.2% (from 131.2M to 58.8M), and adding mean-span pooling lifts accuracy further to 53.39% at the same parameter count.\" (p.2 continued)\n\nAttribution: All bullets tagged to physical-page marker \"2 (continued)\" per source structure."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2864,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78499c16ffeR3NPqXnasZdflo"
+  }
+]

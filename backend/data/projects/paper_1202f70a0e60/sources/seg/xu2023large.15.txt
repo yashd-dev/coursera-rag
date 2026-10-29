@@ -1,0 +1,155 @@
+=== PAGE 12 (continued) ===
+uctive).
+From the perspective of common evaluations, ChatGPT
+is the weakest LLM of the three, since it performs badly in
+showing correct and rigorous reasoning under deductive,
+inductive and abductive settings. Also, it seems to be the
+laziest reasoner in deductive and inductive settings. However, it surprises us that it shows unique advantages in
+maintaining oriented reasoning and avoiding hallucination,
+
+
+=== PAGE 13 ===
+13
+
+(a) Deductive.
+
+(b) Inductive.
+
+(c) Abductive.
+
+(d) Mixed-form.
+
+Fig. 11: Visualization of three early-stage LLM capabilities under four reasoning settings.
+
+LLaMA3.1-Chat
+Mistral-Instruct-v0.3
+
+Self-aware
+
+Claude-3
+GPT-4
+
+Rigorous
+
+Active
+
+Self-aware
+
+Correct
+
+Oriented
+
+LLaMA3.1-Chat
+Mistral-Instruct-v0.3
+
+No Hallucination
+
+(a) Deductive.
+
+Claude-3
+GPT-4
+
+Rigorous
+
+Active
+
+Self-aware
+
+Correct
+
+Oriented
+
+LLaMA3.1-Chat
+Mistral-Instruct-v0.3
+
+Claude-3
+GPT-4
+
+Rigorous
+
+Active
+
+No Hallucination
+
+(b) Inductive.
+
+Self-aware
+
+Correct
+
+Oriented
+
+LLaMA3.1-Chat
+Mistral-Instruct-v0.3
+
+No Hallucination
+
+(c) Abductive.
+
+Claude-3
+GPT-4
+
+Rigorous
+
+Active
+
+Correct
+
+Oriented
+
+No Hallucination
+
+(d) Mixed form.
+
+Fig. 12: Visualization of LLM logical reasoning capability under four reasoning settings, including LLaMA3.1-Chat (8B),
+Mistral-Instruct-v0.3, Claude-3, and GPT-4 for comparisons.
+especially in deductive and inductive settings. In addition,
+it shows its comprehensive capability in the mixed-form
+setting. We argue that ChatGPT is specially designed for
+chatting, thus it does pretty well in keeping rational but is
+not good at solving complex reasoning problems.
+BARD is the most active reasoner and it keeps great competitiveness as a correct and rigorous reasoner. However,
+it also shows obvious flaws compared with other LLMs.
+BARD tends to generate redundant content, easily fails to
+find the correct reasoning directions and it usually fails to
+avoid hallucinations. In short, BARD shows great advantages in current benchmarks with objective metrics, due to
+the larger model size and massive training data. But it still
+has much room for improvement in some implicit aspects,
+i.e., self-awareness, orientation and non-hallucination.
+Overall, it can be observed that all LLMs exhibit specific
+limitations in logical reasoning, with relative strength in
+deductive reasoning but evident struggles in inductive
+settings. Moreover, current evaluation benchmarks, which
+primarily depend on objective metrics, are not sufficient to
+comprehensively evaluate LLMs.
+Additionally, we supplement the visualization of four
+trending LLMs in Fig. 12. Different from Fig. 11, these
+metrics are calculated in the automatic mode. It also verifies
+the scalability of our evaluation system. Please refer to
+the Appendix for more analysis on these four LLMs and
+evaluation settings.
+
+8
+
+F UTURE D IRECTIONS
+
+Based on the evaluation results, this paper concludes six
+future directions for logical reasoning tasks.
+
+Strengthen the reasoning ability of inductive reasoning.
+Inductive reasoning draws broad conclusions from specific
+observations, requiring a more abstract and comprehensive understanding of real-world knowledge compared to
+deductive or abductive reasoning. However, LLMs have
+shown poor performance in this area, as demonstrated in
+Section 4.1. Therefore, it is crucial to develop pre-training or
+fine-tuning strategies to enhance their inductive reasoning
+abilities. One such strategy could be constructing more
+inductive instructions to guide LLMs.
+Enhance the LLM’s perception of its capability boundaries. LLMs excel at providing answers and explanations
+for a wide range of reasoning questions, irrespective of
+complexity. However, as evidenced in Sections 5.1 and 5.4,
+they may introduce irrelevant information or fabrications,
+leading to nonsensical or illogical outcomes. A proficient
+logical reasoner should recognize its limitations and knows
+when to refrain from answering. Future investigations could
+explore human self-awareness in cognitive science and

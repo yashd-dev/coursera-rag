@@ -1,0 +1,51 @@
+=== PAGE 22 (continued) ===
+hypothesis as false.” The third is “The
+hypothesis must be true if the premise is true.”, “The hypothesis could be either true or false
+if the premise is true.”, and “The hypothesis must be false if the premise is true.” For each
+fixed checkpoint, we cross these descriptions with all six label orders, giving 18 templates while
+keeping external solution order fixed and retrieving entailment by label identity.
+Additional-source protocol. PIQA and CommonsenseQA evaluate 1,838 validation and 1,221
+development questions through NLI reranking. CLINC150 [21] evaluates all 4,500 in-scope test
+utterances through a single 150-option direct request. These evaluations cover 36 models varying
+learning rates, training schedules, or adapter placement, plus eight separately trained pointers
+comparing adapter scopes with matched initialization. The final no-FFN pooling configuration
+is evaluated on MC11, JevBench, and Kev.
+CommonsenseQA uses the question stem without its question-concept field; each of its
+five candidate answers becomes “The correct answer is: [candidate]”. The 24 questions with
+duplicate answer texts retain distinct candidate identities. Reranking candidate order follows
+the SHA-256 of canonical JSON triples containing the source revision, sample identity, and
+candidate identity, with candidate identity as a secondary key. Gold labels enter neither requests
+nor ordering. Exact ties use the first maximum. Uniform-tie credit leaves the reported pooling
+and scope effects unchanged. Registered training and development-selection materials contain
+no exact or normalized PIQA or CommonsenseQA question matches under Unicode NFKC, case,
+and whitespace normalization; semantic overlap and pretraining exposure remain unmeasured.
+On CLINC150, pooling lowers accuracy by 3.64 ± 0.54 pp in the lower-rate readout comparison, and omitting FFN adapters lowers it by 1.78 ± 0.41 pp in the separate scope comparison.
+These direct-selection losses accompany the PIQA and CommonsenseQA gains in Table 5. The
+known CLINC overlap item is retained and correctly classified by every model, contributing
+zero to each paired difference.
+The fixed-checkpoint PIQA and additional-source comparisons evaluate the same eight
+higher-rate models in two execution environments. The original inference service on H100 gives
+pointer/pooling accuracies of 65.27/73.12%, while the packaged-model service on H20 gives
+65.15/73.22%. These close aggregate scores conceal changes in about 2.6% of the 14,704 model–
+question selections, with nearly balanced correct-to-wrong and wrong-to-correct changes. We
+therefore keep each comparison within one environment: the interface tests use the packagedmodel service, and the additional-source tests use the original service. The two executions match
+22
+
+
+=== PAGE 23 ===
+weights, tokenizer, model and loading code, requests, labels, and candidate order; both use a
+BF16 backbone and FP32 head in evaluation mode. Hardware and service environment vary
+together.
+Wording changes the readout comparison even with the checkpoints fixed. Across the 18
+templates, the mean pooling effect is +3.18 ± 3.27 pp, but averaging label orders within each
+description gives +6.31, −1.80, and +5.03 pp, and the smallest fixed-template mean is −5.51 pp.
+The sign changes show why the default-template gain should be interpreted alongside this
+sensitivity to how the NLI relations are described.
+For GPQA, a separate five-shot evaluation excludes Diamond identities, normalized question
+matches, and revision aliases from the Main-split demonstration pool. On the same 198 Diamond questions and eight higher-rate checkpoints, pooling scores 36.87% against the pointer’s
+33.46%, a +3.41 ± 2.75 pp effect with two positive settings. This additional evaluation changes
+demonstration selection, candidate order, and identity handling together. Its scores are reported
+separately, with MC11 retaining the original GPQA configurations.
+
+C. Residual Corrections and Training Controls
+The re

@@ -1,0 +1,127 @@
+=== PAGE 1 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Recent Advances in Natural Language Inference:
+A Survey of Benchmarks, Resources, and Approaches
+Shane Storks
+
+SSTORKS @ UMICH . EDU
+
+arXiv:1904.01172v3 [cs.CL] 26 Feb 2020
+
+Computer Science and Engineering
+University of Michigan
+Ann Arbor, MI 48109-2121 USA
+
+Qiaozi Gao
+
+GAOQIAOZ @ MSU . EDU
+
+Computer Science and Engineering
+Michigan State University
+East Lansing, MI 48824 USA
+
+Joyce Y. Chai
+
+CHAIJY @ UMICH . EDU
+
+Computer Science and Engineering
+University of Michigan
+Ann Arbor, MI 48109-2121 USA
+
+Abstract
+In the NLP community, recent years have seen a surge of research activities that address machines’ ability to perform deep language understanding which goes beyond what is explicitly stated
+in text, rather relying on reasoning and knowledge of the world. Many benchmark tasks and datasets
+have been created to support the development and evaluation of such natural language inference
+ability. As these benchmarks become instrumental and a driving force for the NLP research community, this paper aims to provide an overview of recent benchmarks, relevant knowledge resources,
+and state-of-the-art learning and inference approaches in order to support a better understanding of
+this growing field.
+
+1. Introduction
+We humans use a variety of knowledge and reasoning to help understand meanings of language.
+For example, consider these sentences from Minsky (2000): “Jack needed some money, so he went
+and shook his piggy bank. He was disappointed when it made no sound.” From this, it is not
+difficult for us to understand that Jack did not find any money, and because of that, Jack was having
+a negative emotion. What made us come to this conclusion, which was not explicitly stated in the
+passage, is the knowledge we have about the world and the underlying reasoning process, often
+called commonsense thought (Minsky, 2000) or commonsense reasoning (Davis & Marcus, 2015),
+that allows us to connect pieces of knowledge to reach the new conclusion. We know that a piggy
+bank is a container that holds coins (not pigs) and that coins are money which are made of metal.
+Since metal is a hard solid, the coins will make a sound when shaken inside of a container such
+as a piggy bank; if there is no sound, then there are no coins. It is also likely that we can predict
+that as piggy banks are typically possessed by children, there is a good chance that Jack is a child.
+Alternatively, these predictions may be derived from similar events we have experienced as children,
+and allow us to make similar conclusions by analogy (Minsky, 2000). While this kind of knowledge
+and reasoning comes so naturally to human readers, it is notoriously difficult for machines. Despite
+1
+
+
+=== PAGE 2 ===
+S TORKS , G AO , & C HAI
+
+Symbolic Models
+Statistical Models
+
+Neural Models
+
+Learning and
+Inference
+
+Approaches
+
+Linguistic Knowledge
+
+Training and
+Dev Data
+
+Testing Data
+
+Reference Resolution
+Textual Entailment
+
+Question Answering
+Plausible Inference
+
+Data
+Curation
+
+Expert
+Knowledge
+
+Text Corpora
+
+Common Knowledge Commonsense Knowledge
+
+Annotated
+Corpora
+
+Ontologies
+
+Knowledge
+Graphs
+
+Manual Specification,
+Automatic Extraction
+
+Benchmarks
+
+Crowdsourcing
+
+Web
+Documents
+
+Videos,
+Images
+
+Resources
+
+Data Sources
+
+Figure 1: Main research efforts in natural language inference from the NLP community occur in
+three areas: benchmarks and tasks, knowledge resources, and learning and inference approaches.2
+
+significant advances in natural language processing in the last several decades, machines are still far
+away from having this type of natural language inference (NLI) ability.
+To address this problem, recent years have seen a surge of research activities on NLI: machines’ capability of deep understanding of language that goes beyond what is explicitly expressed,
+rather relying on new conclusions inferred from knowledge about how the world works.3 Many
+benchmark datasets have been created to help develop and ev

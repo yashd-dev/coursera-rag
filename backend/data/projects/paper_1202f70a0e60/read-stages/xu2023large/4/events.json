@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large \u2014 4/39\n\n**Problem**: Evaluates logical reasoning capabilities of LLMs across deductive, inductive, abductive and mixed-form reasoning.\n\n**Method**: Three early-era LLMs evaluated on logic puzzles, commonsense reasoning, and symbolic tasks using zero/few-shot prompts. Uses a framework mapping each LLM's ability across four reasoning settings.\n\n**Reported Results**: \n- Paper introduces first comprehensive evaluation scheme for LLM logical reasoning\n- Derives \"ability maps\" for each LLM under four reasoning settings\n- Concludes six key properties: Correct, Rigorous, Self-aware, Active, Oriented, No hallucination\n\n**Limitations**: Restricted to three early-era LLMs; excludes newer models; reliance on specific prompt formats in Table 3 (Appendix)\n\n> \"Furthermore, we derive the ability maps for each LLM under four reasoning settings respectively and propose future directions.\"\n> \"Because of the rapid emergence of LLMs, it is not realistic to include all LLMs in this paper. Thus, we mainly select three early-era representativ\"\n\n**Attribution**: Page 3 continued, Page 3 preliminary, Page 3 evaluation details"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2175,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783cc1aeffeI0NklJHqiIWLNw"
+  }
+]

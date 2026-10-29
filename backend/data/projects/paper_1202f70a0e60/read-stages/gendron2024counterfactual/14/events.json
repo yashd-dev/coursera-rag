@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**  \n- The paper focuses on counterfactual explanations in AI systems (implied by filename and context).  \n- Specifically investigates how AI models follow instructions via human feedback.  \n\n**Method**  \n- Explores using large language models with human feedback to generate counterfactuals.  \n- References instruction-following capabilities of foundation models (e.g., Gemini 1.5, Llama variants).  \n\n**Reported results**  \n- No specific quantitative results are presented in this segment; the text consists primarily of bibliography entries and citations.  \n\n**Limitations**  \n- The segment offers no experimental data, evaluation metrics, or discussion of limitations within the provided text.  \n\n**Exact quotes**  \n- \u201cuage models to follow instructions with human feedback. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh (eds.), Advances in Neural Information Processing\u2026\u201d (p. 13 continued)  \n- \u201cGemini 1.5: Unlocking multimodal understanding across millions of tokens of context. CoRR, abs/2403.05530, 2024.\u201d (p. 14)  \n\n**References-only note**  \n- This segment is a bibliography excerpt; no findings, methods, or results beyond cited works are present."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2653,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78421aa1ffeQ895E5KmJjwWFa"
+  }
+]

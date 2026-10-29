@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## raju2017dynamic.16.txt \u2014 Segment Notes\n\n- **Problem**: Study of dynamic memory networks for visual and textual question answering (page 12).\n- **Method**: Introduces dynamic memory networks (DMN) with three modules: perception, question, and episodic memory, trained end-to-end via backpropagation (page 12).\n- **Reported results**: Achieves state-of-the-art accuracy on bAbI textual QA tasks (10/10, 11/11, 12/12) and visual QA (19\u00d719 grid, 83.1% accuracy) (page 12).\n- **Limitations**: Performance drops significantly on tasks requiring multi-hop reasoning or indirect answering; architecture lacks explicit reasoning component and relies heavily on supervised memory supervision (page 12).\n- **Exact quote (page 11)**: \u201cend - to - end memory networks\u201d\n- **Exact quote (page 12)**: \u201cdynamic memory networks for visual and textual question answering\u201d\n\nReferences-only segment note: The page contains a bibliography (items [39]\u2013[48]) citing NIPS/ICLR 2015\u201317 works on memory, reasoning, and knowledge graphs. No new findings or methodology are presented in this citation list."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2127,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781c11b2ffen9c0HEw865o6tm"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.47.txt \u2014 Compact Notes (47/79)**\n\n- **Problem:** Entity tracking and coreference resolution in procedural text; KG-MRC and NCET compared on constraint learning and state tracking.\n- **Method:** KG-MRC uses recurrent graph representation to learn constraints automatically; NCET uses per-entity bidirectional LSTMs with neural CRF to enforce physical laws (e.g., object cannot move after destruction).\n- **Results:** NCET is SOTA on ProBench with F-measure 62.50, a fair improvement over KG-MRC. KG-MRC learns constraints automatically, violating them less often than PROSPECT (Das et al., 2019). KG-MRC likely better tracks coreference changes.\n- **Limitations:** Not explicitly stated for this segment; comparative improvement described as \"fair\" over KG-MRC.\n- **Quote 1 (p.56):** \"the use of the recurrent graph representation helps the model learn these constraints, perhaps better than can be manually enforced\"\n- **Quote 2 (p.56):** \"since KG-MRC includes a trained reading comprehension model, it can likely better track changes in coreference which often occur in these texts\"\n\n*Attribution: All bullets attributed to preceding physical-page marker (p.56 continued / p.57). No background citations invented.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2306,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7826ff70ffeayLC5FhoPmIAQ2"
+  }
+]

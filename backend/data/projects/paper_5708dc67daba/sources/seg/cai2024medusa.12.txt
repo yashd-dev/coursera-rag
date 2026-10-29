@@ -1,0 +1,97 @@
+=== PAGE 9 (continued) ===
+g
+systems. M EDUSA avoids the need for specialized draft
+
+Societal and Technological Implications
+• Accessibility and Democratization of AI: By significantly enhancing the efficiency of LLMs, M EDUSA
+makes advanced AI technologies more accessible to
+a wider range of users and organizations. Democratization can spur innovation across various sectors, in9
+
+
+=== PAGE 10 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+cluding education, healthcare, and entertainment, potentially leading to breakthroughs that benefit society
+at large.
+
+2021. URL https://openreview.net/forum?
+id=W1G1JZEIy5_.
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D.,
+Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G.,
+Askell, A., et al. Language models are few-shot learners.
+Advances in neural information processing systems, 33:
+1877–1901, 2020.
+
+• Environmental Impact: The acceleration for LLM
+inference due to M EDUSA could lead to decreased
+energy consumption and a smaller carbon footprint.
+This aligns with the growing need for sustainable AI
+practices, contributing to environmental conservation
+efforts.
+
+Chen, C., Borgeaud, S., Irving, G., Lespiau, J.-B., Sifre,
+L., and Jumper, J. Accelerating large language model
+decoding with speculative sampling. February 2023. doi:
+10.48550/ARXIV.2302.01318.
+
+• Economic Implications: The increased efficiency
+brought about by M EDUSA may lower the cost barrier
+to deploying state-of-the-art AI models, enabling small
+and medium-sized enterprises to leverage advanced AI
+capabilities. This could stimulate economic growth,
+foster competition, and drive technological innovation.
+
+Chen, L.
+Dissecting batching effects in gpt inference.
+https://le.qun.ch/en/blog/2023/
+05/13/transformer-batching/, 2023. Blog.
+Chiang, W.-L., Li, Z., Lin, Z., Sheng, Y., Wu, Z., Zhang,
+H., Zheng, L., Zhuang, S., Zhuang, Y., Gonzalez, J. E.,
+Stoica, I., and Xing, E. P. Vicuna: An open-source
+chatbot impressing gpt-4 with 90%* chatgpt quality,
+March 2023. URL https://lmsys.org/blog/
+2023-03-30-vicuna/.
+
+Ethical Considerations
+• Bias and Fairness: While M EDUSA aims to improve
+LLM efficiency, it inherits the ethical considerations
+of its backbone models, including issues related to
+bias and fairness. The method’s ability to maintain
+generation quality necessitates investigation to ensure
+that the models do not perpetuate or amplify existing
+biases.
+
+Chowdhery, A., Narang, S., Devlin, J., Bosma, M., Mishra,
+G., Roberts, A., Barham, P., Chung, H. W., Sutton, C.,
+Gehrmann, S., et al. Palm: Scaling language modeling
+with pathways. arXiv preprint arXiv:2204.02311, 2022.
+
+• Transparency and Accountability: The complexity
+of M EDUSA, particularly with its tree-based attention
+mechanism and multiple decoding heads, may pose
+challenges in terms of model interpretability. Ensuring
+transparency in how decisions are made and maintaining accountability for those decisions are crucial for
+building trust in AI systems.
+
+Dettmers, T., Lewis, M., Shleifer, S., and Zettlemoyer, L. 8bit optimizers via block-wise quantization. International
+Conference on Learning Representations, 2021.
+Dettmers, T., Lewis, M., Belkada, Y., and Zettlemoyer, L.
+Llm. int8 (): 8-bit matrix multiplication for transformers
+at scale. arXiv preprint arXiv:2208.07339, 2022.
+
+• Security and Privacy: The accelerated capabilities of
+LLMs augmented by M EDUSA could potentially be
+exploited for malicious purposes, such as generating
+disinformation at scale or automating cyber-attacks. It
+is imperative to develop and enforce ethical guidelines
+and security measures to prevent misuse.
+
+Dettmers, T., Pagnoni, A., Holtzman, A., and Zettlemoyer,
+L. Qlora: Efficient finetuning of quantized llms. arXiv
+preprint arXiv:2305.14314, 2023.
+Ding, N., Chen, Y., Xu, B., Qin, Y., Zheng, Z., Hu, S., Liu,
+Z., Sun, M., and Zhou, B. Enhancing chat language models by scaling high-quality instructional conversations,
+2023.
+
+References
+Ainslie, J., Lee-Thorp, J., de Jong, M.

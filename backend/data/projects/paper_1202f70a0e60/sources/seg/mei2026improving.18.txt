@@ -1,0 +1,88 @@
+=== PAGE 23 (continued) ===
+sidual head augments the option-ending pointer with a learned decision–option correction.
+For projected query and key vectors 𝑞, 𝑘𝑖 ∈ R256 and the bilinear pointer score 𝑠𝑖 , it uses
+𝑣𝑖 = [ 𝑞; 𝑘𝑖 ; 𝑞 ⊙ 𝑘𝑖 ; | 𝑞 − 𝑘𝑖 |],
+pair
+
+𝑠𝑖
+
+= 𝑠𝑖 + 𝑤⊤ GELU( 𝐴𝑣𝑖 + 𝑎) + 𝑏.
+
+(8)
+
+The correction adds a 128-unit hidden layer and 131,329 parameters, with output weights 𝑤 and
+bias 𝑏 initialized to zero. To examine its role during training, we compare optimization of all four
+branch tensors with a frozen branch whose output remains zero while the shared projections
+and adapters train. To examine its contribution after training, we remove the correction from a
+trained residual model and apply the softmax to 𝑠𝑖 .
+C.1. Removing the correction from a trained model
+For each of the four higher-rate residual models, we compare corrected and pre-correction logits
+from the same forward pass, keeping the trained backbone and query/key projections fixed.
+The head computes both sets of logits in FP32 without autocast, so the comparison isolates the
+correction’s contribution at inference within an already trained model.
+Removing the correction changes only four of 185,900 selected answers, with no correct
+answer becoming incorrect, and increases mean MC11 by less than 0.001 pp. This mean uses the
+same configuration weighting as the main evaluation. The learned bilinear component therefore
+recovers virtually all answer selections at these checkpoints.
+C.2. Frozen branches, repeated training, and divergence
+The training comparisons show a stronger dependence on the recipe. At the higher rate, the
+frozen-branch model exceeds the pointer by 1.39 ± 0.38 pp on MC11, and the trained residual
+model exceeds the frozen-branch model by a further 2.02 ± 0.97 pp. Under the lower-rate recipe,
+the core comparisons are small and depend on the reference run (Table 11), while the separate
+comparison with jointly reduced head and adapter rates retains a +0.57 ± 0.18 pp residual
+advantage.
+23
+
+
+=== PAGE 24 ===
+Lower-rate training comparison
+Repeated pointer − reference
+Frozen branch − reference
+Trained residual − reference
+Trained residual − frozen branch
+Trained residual − repeated pointer
+
+MC11
+
+JevBench
+
+Kev
+
++0.17 ± 0.74
++0.40 ± 0.93
++0.05 ± 0.57
+−0.35 ± 0.59
+−0.12 ± 0.58
+
+−0.66 ± 0.52
+−0.13 ± 1.60
+−0.82 ± 1.61
+−0.69 ± 0.87
+−0.16 ± 1.82
+
+−0.15 ± 0.37
+−0.06 ± 0.52
+−0.11 ± 0.41
+−0.04 ± 0.22
++0.04 ± 0.20
+
+Table 11 | Lower-rate residual controls, in percentage points (mean ± descriptive SE over four
+settings). All arms use one epoch and all-module rank-64 adapters. The repeated pointer reruns
+the reference recipe with the same nominal seed.
+Repeating the pointer from the same saved initial parameters, nominal seed, and recorded
+data streams changes its MC11 score enough to reverse the small residual-versus-pointer contrast
+(Table 11). Short matched probes help explain why identical starting conditions are insufficient:
+even pairs of ordinary pointers develop different gradients and parameters when CUDA determinism is disabled. The operations responsible and their contribution to the full-training
+differences remain unresolved.
+During lower-rate residual training, corrected and pre-correction BF16 logits select the same
+option on all recorded training questions. BF16 addition can round away a nonzero correction.
+These traces concern option choices during lower-rate training, whereas the FP32 intervention
+measures reranking selections at higher-rate checkpoints.
+
+D. Aggregation and Reference Sensitivity
+MC11 gives equal weight to eleven configurations. The seven-source alternative first averages
+configurations within ARC, GSM8K, GPQA, and MMLU, then gives these four means and
+HellaSwag, WinoGrande, and chess equal weight. Configuration-weighted leave-one-source-out
+(LOSO) removes all configurations of one source and averages the remainder; source-weighted
+LOSO averages the remaining six source means. Every omission retains all four model settings.
+The ranges in Table 12 summarize 

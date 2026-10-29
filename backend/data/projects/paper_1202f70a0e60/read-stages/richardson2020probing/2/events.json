@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing.2 \u2014 Compact Notes\n\n**Problem** (p.1 continued): NLI models must determine if a hypothesis follows from a premise; task involves diverse reasoning including knowledge beyond basic linguistics (e.g., elementary logic, monotonicity).\n\n**Method** (p.2): Probe eight linguistic fragments with pre-trained NLI architectures; test if re\u2011training/fine\u2011tuning on fragments (novel cheap inoculation Liu et al. 2019) improves performance on original tasks.\n\n**Reported results** (p.2): On eight fragments, existing NLI architectures learn the phenomena poorly; pre\u2011trained models generalize weakly. Re\u2011training yields mixed results: for comparatives, fine\u2011tuning can degrade original\u2011task performance; for monotonicity, learning is stable across models.\n\n**Limitations** (p.2): Challenge datasets limited to simple inferences (lexical, negation); adversarially generated corpora obscure precise semantic phenomena; crowd\u2011sourced datasets often too easy; need formal principles (e.g., monotonicity with nested downward\u2011monotone contexts) to test compositionality.\n\n**Two exact quotes**:\n- \u201con these eight fragments, we find that while existing NLI architectures can effectively learn these particular linguistic phenomena, pre-trained NLI models do not perform well\u201d (p.2)\n- \u201cre\u2011training some models comes at the cost of degrading performance on the original tasks, whereas for other phenomena (e.g., monotonicity) the learning is more stable, even across different models\u201d (p.2)\n\n**References\u2011only note**: This segment introduces the paper\u2019s scope and method; no new findings beyond stated observations.\n\n*Source: richardson2020probing.2.txt, pages 1\u20132 (continued). 41 words.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2297,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78347500ffeEoUOKOmz6I7IRX"
+  }
+]

@@ -1,0 +1,197 @@
+=== PAGE 14 (continued) ===
+f the training. We find this approach is equally effective. We set the
+peak learning rate of the backbone LoRA adapter to be 1e−4 and the warmup steps to be 20 since the self-distillation loss is
+relatively small. We set the λ0 in Eq. (2) to be 0.01.
+
+C. Visualization of optimized tree attention
+Fig. 6 illustrates the structure of a sparsely constructed tree for the M EDUSA-2 Vicuna-7B model. This tree structure extends
+four levels deep, indicating the engagement of four M EDUSA heads in the computation. The tree is initially formed through a
+Cartesian product approach and subsequently refined by pruning based on the statistical expectations of the top-k predictions
+from each M EDUSA head measured on the Alpaca-eval dataset (Dubois et al., 2023). The tree’s lean towards the left visually
+represents the algorithm’s preference for nodes with higher probabilities on each head.
+
+D. Results of Speculative Decoding
+In this study, speculative decoding was applied to Vicuna models (Chiang et al., 2023) with varying sizes, specifically 7B,
+13B, and 33B. The preliminary framework utilized open-source models such as Llama-68M and 160M (Miao et al., 2023),
+alongside Tiny-Llama (Zhang et al., 2024) and Tiny-Vicuna (Pan, 2023), fine-tuned from Tiny-Llama with the Vicuna-style
+instructional tuning strategy. Due to the proprietary nature of speculative decoding methods (Chen et al., 2023; Leviathan
+14
+
+
+=== PAGE 15 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Figure 6. Visualization of a sparse tree setting for M EDUSA-2 Vicuna-7B. The tree has 64 nodes representing candidate tokens and a
+depth of 4 which indicates 4 M EDUSA heads involved in calculation. Each node indicates a token from a top-k prediction of a M EDUSA
+head, and the edges show the connections between them. The red lines highlight the path that correctly predicts the future tokens.
+
+et al., 2022), open-source alternatives3 were deployed for evaluation. Additionally, we utilize torch.compile() to
+accelerate the inference speed of draft models.
+Our results shown in Fig. 7, reveal that the optimal settings of the draft model vary with the Vicuna model sizes. Specifically,
+the Llama-68M, with a setting of the draft token number γ = 4, yielded the best performance for Vicuna-7B, while the same
+draft model with γ = 3 was most effective for Vicuna-13B. For the larger Vicuna-33B, the Tiny-Vicuna (Vicuna-1B), with
+γ = 3, provided the greatest acceleration. These results suggest that the choice and setting of the drafting model should be
+tailored to the size of the LLMs, presenting an area for further exploration in the field.
+
+40
+30
+20
+0
+
+2
+
+4
+
+6
+
+8
+
+Gamma
+
+10
+
+12
+
+14
+
+45
+40
+35
+30
+
+26
+24
+22
+20
+
+25
+
+18
+
+20
+
+16
+0
+
+(a) Vicuna-7B
+
+2
+
+4
+
+6
+
+8
+
+Gamma
+
+10
+
+(b) Vicuna-13B
+
+12
+
+14
+
+Llama-68M
+Llama-160M
+Llama-1B
+Vicuna-1B
+
+28
+
+Tokens per Second
+
+50
+
+Llama-68M
+Llama-160M
+Llama-1B
+Vicuna-1B
+
+50
+
+Tokens per Second
+
+60
+
+Tokens per Second
+
+55
+
+Llama-68M
+Llama-160M
+Llama-1B
+Vicuna-1B
+
+0
+
+2
+
+4
+
+6
+
+8
+
+Gamma
+
+10
+
+12
+
+14
+
+(c) Vicuna-33B
+
+Figure 7. Inference speed of various models using speculative decoding on MT-Bench. Baseline model speeds are presented by grey
+dotted lines for comparison. γ denotes the draft token number.
+
+E. Additional Results for All Models
+We show speedup on various models in Fig. 8.
+
+F. Additional Results on AlpacalEval Dataset
+We conduct further experiments on the AlpacaEval (Li et al., 2023) dataset. M EDUSA-2 achieves consistent speedup similar
+to the results on MT-Bench.
+3
+
+https://github.com/feifeibear/LLMSpeculativeSampling
+
+15
+
+
+=== PAGE 16 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Speedup
+on different model sizes
+2.83x
+Tokens per Second
+
+120
+
+w/o Medusa
+Medusa-2
+
+2.66x
+
+100
+
+2.83x
+
+80
+60
+2.35x
+
+40
+20
+0
+
+Vicuna-7B
+
+Zephyr-7B Vicuna-13B Vicuna-33B
+
+Model Size
+
+Figure 8. Speedup of various models with M EDUSA-2. M EDUSA-2 shows significant speed improvement over all the models, while
+models 

@@ -1,0 +1,143 @@
+=== PAGE 3 (continued) ===
+ubey et al.,
+2024; Fourrier et al., 2023). In this setup, the model
+is presented with the few shot examples (if present)
+along with the question and the available choices
+in a multiple choice set-up, and is then asked to
+predict the correct letter choice. Since there are
+only a limited number of choices depending on the
+task (two or three), we append the these choices to
+the prompt and compute the negative log likelihood
+(NLL) over the letter choice. We then choose the
+option which has the lowest NLL as the model’s
+prediction. The prompt templates for all tasks are
+detailed in Table 5. We use simplistic prompt templates for each of the tasks without much prompt
+tuning, exploiting the finding presented by Dubey
+et al. (2024) that the Llama models are usually robust to prompt texts in the choice task evaluation
+setup.
+
+MNLI The Multi-Genre NLI (MNLI) corpus
+(Williams et al., 2018) was introduced as an alternative to SNLI that captures more genres and
+challenging examples. For MNLI too we consider
+the 10K examples dev set of the corpus.
+HANS The adversarial dataset Heuristic Analysis for NLI Systems (HANS, McCoy et al., 2019)
+is generated to contain examples that cannot be
+solved through heuristics like lexical overlap, and
+contains 30K examples.
+ANLI The second adversarial dataset we consider is Adversarial NLI, or ANLI (Nie et al.,
+2020a). The dataset, created with the primary aim
+to make SoTA models fail, is sourced iteratively
+3
+
+
+=== PAGE 4 ===
+4
+
+Results
+
+We now present our results, focusing in particular
+on whether NLI benchmarks provide a discriminative signal for fully trained out models (§ 4.1), how
+their performance develops during training (§ 4.2),
+and what is the impact of evaluation data contamination (§ 4.3). Next, we investigate whether there is
+still room for improvement (§ 4.4) and how model
+judgements compare to human judgements for ambiguous or vague questions (§ 4.5).
+4.1
+
+αNLI
+
+monAcc
+
+8B
+monN LL
+
+monAcc
+
+70B
+monN LL
+
+0.62
+
+0.62
+
+0.79
+
+0.79
+
+ANLI
+
+-
+
+-
+
+0.67
+
+0.47
+
+HANS
+
+0.32
+
+0.46
+
+0.57
+
+0.63
+
+MNLI
+
+0.34
+
+0.51
+
+0.77
+
+0.80
+
+SNLI
+
+0.05
+
+0.38
+
+0.64
+
+0.65
+
+Table 1: Monotonicity values during the course of
+training. We report monotonicity both for accuracy
+(monAcc ) and negative log likelihood of the correct
+answer (monN LL ).
+
+Informativeness for fully trained models
+
+To get an overall estimate of the difficulty of NLI
+and the extent to which it can discriminate models, we first consider the performance of fully pretrained models from the respective model series.
+
+We conclude from these results, that the benchmarks provide a useful signal to compare trainedout models, though it is unclear to what extent their
+performance has saturated, which we discuss in
+more detail in § 4.4.
+
+Accuracy across shots For each of the models, we compute results with a variable number
+of shots.3 We report the results in Figure 1, along
+with a chance baseline and the results of a finetuned BERT model. For all models, we observe
+rather poor zero-shot performance for all tasks,
+except αNLI, confirming previously reported results by Ohmer et al. (2024), Weber et al. (2023),
+and Dutt et al. (2024). When more few-shot examples are added, performance starkly improves.
+Even with just one in-context example, the performance is significantly better than the zero shot
+accuracy. Adding more than three or four examples
+marginally improves performance and saturates
+around ten few-shot examples. Among the five
+benchmarks, the most challenging benchmark is
+ANLI. Although the larger models in the Llama and
+Mistral series far outperform the finetuned BERT
+baseline, they do not exceed 70% accuracy – to
+some extent confirming the difficulty of the benchmark reported by Brown et al. (2020).
+
+4.2
+
+Informativeness during training
+
+Next, we investigate if NLI datasets provide a good
+signal during training. To this end, we pre-train
+Llama-3 architecture-based 8B and 70B models
+from scratch for 2T tokens. The details of the pretraining setup are provided in

@@ -1,0 +1,63 @@
+=== PAGE 8 (continued) ===
+i, M. Minderer, G. Heigold, S. Gelly, et al. An image is worth 16x16 words: Transformers for image recognition
+at scale. arXiv preprint arXiv:2010.11929, 2020.
+T. Ge, H. Xia, X. Sun, S. Chen, and F. Wei. Lossless acceleration for seq2seq generation with aggressive
+decoding. ArXiv, abs/2205.10350, 2022.
+
+8
+
+
+=== PAGE 9 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+J. Hoffmann, S. Borgeaud, A. Mensch, E. Buchatskaya, T. Cai, E. Rutherford, D. d. L. Casas, L. A.
+Hendricks, J. Welbl, A. Clark, et al. Training compute-optimal large language models. arXiv preprint
+arXiv:2203.15556, 2022.
+X. Jiao, Y. Yin, L. Shang, X. Jiang, X. Chen, L. Li, F. Wang, and Q. Liu. TinyBERT: Distilling BERT
+for natural language understanding. In Findings of the Association for Computational Linguistics: EMNLP 2020, pages 4163–4174, Online, Nov. 2020. Association for Computational Linguistics. doi: 10.18653/v1/2020.findings-emnlp.372. URL https://aclanthology.org/2020.
+findings-emnlp.372.
+Y. Kim and A. M. Rush. Sequence-level knowledge distillation. CoRR, abs/1606.07947, 2016. URL
+http://arxiv.org/abs/1606.07947.
+Y. Leviathan, M. Kalman, and Y. Matias. Fast inference from transformers via speculative decoding.
+ArXiv, abs/2211.17192, 2022.
+Y. Levine, N. Wies, O. Sharir, H. Bata, and A. Shashua. The depth-to-width interplay in self-attention.
+arXiv preprint arXiv:2006.12467, 2020.
+S. Narayan, S. B. Cohen, and M. Lapata. Don’t give me the details, just the summary! topicaware convolutional neural networks for extreme summarization. In Proceedings of the 2018
+Conference on Empirical Methods in Natural Language Processing, pages 1797–1807, Brussels,
+Belgium, Oct.-Nov. 2018. Association for Computational Linguistics. doi: 10.18653/v1/D18-1206.
+URL https://aclanthology.org/D18-1206.
+R. Pope, S. Douglas, A. Chowdhery, J. Devlin, J. Bradbury, A. Levskaya, J. Heek, K. Xiao, S. Agrawal,
+and J. Dean. Efficiently scaling transformer inference. arXiv preprint arXiv:2211.05102, 2022.
+J. W. Rae, S. Borgeaud, T. Cai, K. Millican, J. Hoffmann, F. Song, J. Aslanides, S. Henderson, R. Ring,
+S. Young, et al. Scaling language models: Methods, analysis & insights from training gopher. arXiv
+preprint arXiv:2112.11446, 2021.
+V. Sanh, L. Debut, J. Chaumond, and T. Wolf. Distilbert, a distilled version of bert: smaller, faster,
+cheaper and lighter. arXiv preprint arXiv:1910.01108, 2019.
+N. Shazeer. Fast transformer decoding: One write-head is all you need. CoRR, abs/1911.02150, 2019.
+URL http://arxiv.org/abs/1911.02150.
+M. Shoeybi, M. Patwary, R. Puri, P. LeGresley, J. Casper, and B. Catanzaro. Megatron-lm: Training
+multi-billion parameter language models using model parallelism. arXiv preprint arXiv:1909.08053,
+2019.
+Y. Song, C. Meng, R. Liao, and S. Ermon. Accelerating feedforward computation via parallel nonlinear
+equation solving. In M. Meila and T. Zhang, editors, Proceedings of the 38th International Conference
+on Machine Learning, volume 139 of Proceedings of Machine Learning Research, pages 9791–9800.
+PMLR, 18–24 Jul 2021. URL https://proceedings.mlr.press/v139/song21a.html.
+M. Stern, N. Shazeer, and J. Uszkoreit. Blockwise parallel decoding for deep autoregressive models.
+CoRR, abs/1811.03115, 2018. URL http://arxiv.org/abs/1811.03115.
+A. Wiggers and E. Hoogeboom. Predictive sampling with forecasting autoregressive models. In H. D.
+III and A. Singh, editors, Proceedings of the 37th International Conference on Machine Learning,
+volume 119 of Proceedings of Machine Learning Research, pages 10260–10269. PMLR, 13–18 Jul
+2020. URL https://proceedings.mlr.press/v119/wiggers20a.html.
+
+9
+
+
+=== PAGE 10 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+Z. Yao, R. Y. Aminabadi, M. Zhang, X. Wu, C. Li, and Y. He. Zeroquant: Efficient and affordable
+post-training quantization for large-scale transformers. arXiv preprint arXiv:2206.01861, 2022.
+
+Supplementary Materials
+Author Contributions
+• Initial proposal: Charlie Chen, John Jumper 

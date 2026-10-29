@@ -1,0 +1,68 @@
+=== PAGE 4 (continued) ===
+IL
+all poodles danced, while all↑ dogs↓ danced↑ NEUTRAL all
+mammals danced. This is due to the facts which we have
+seen: poodle ≤ dog ≤ mammal. Simple rules such as “replace some/many/every in subjects by no” or “negate the
+main verb” are applied to generate contradictions.
+Using this basic machinery, we generated two separate challenge datasets, one with limited complexity (e.g.,
+each example is limited to 1 relative clause and uses an
+inventory of 5 quantiﬁers), which we refer to throughout as monotonicity (simple), and one with more
+overall quantiﬁers and substitutions, or monotonicity
+(hard) (up to 3 relative clauses and a larger inventory of
+14 unique quantiﬁers). Both are deﬁned over the same set of
+lexical items (see Figure 2).
+
+basic negation and boolean operators, which we found to
+help preserve the naturalness of the examples in each fragment. As shown in last column of Figure 2, some of our fragments (notably, negation and comparatives) have,
+on average, sentence lengths that exceed that of benchmark
+datasets. This is largely due to the productive nature of some
+of our rules. For example, the comparatives rule set allows us to create arbitrarily long sentences by generating
+long lists of people that are being compared (e.g., In John is
+taller than .., we can list up to 15 people in the subsequent
+list of people).
+Whenever creating synthetic data, it is important to ensure that one is not introducing into the rule sets particular
+annotation artifacts (Gururangan et al. 2018) that make the
+resulting challenge datasets trivially learnable. As shown in
+the top part of Table 1, which we discuss later, we found
+that several strong baselines failed to solve our fragments,
+showing that the fragments, despite their simplicity and constrained nature, are indeed not trivial to solve.
+The Monotonicity Fragments The second set of fragments cover monotonicity reasoning, as ﬁrst discussed in the
+introduction. This fragment can be described using a regular
+grammar with polarity facts according to the monotonicity
+calculus, such as the following: every is downward monotone/entailing in its ﬁrst argument but upward monotone/entailing in the second, denoted by the ↓ and ↑ arrows in the
+example sentence every↑ small↓ dog↓ ran↑ . We have manually encoded monotonicity information for 14 types of quantiﬁers (every, some, no, most, at least 5, at most 4, etc.) and
+negators (not, without) and generated sentences using a simple regular grammar and a small lexicon of about 100 words.
+We then use the system described by Hu and Moss (2018)1
+to automatically assign arrows to every token (see Figure 4,
+note that = means that the inference is neither monotonically up or down in general). Because we manually encoded
+the monotonicity information of each token in the lexicon
+and built sentences via a controlled set of grammar rules,
+the resulting arrows assigned by Hu and Moss (2018) can be
+proved to be correct.
+1
+
+Experimental Setup and Methodology
+To address the questions in Figure 1, we experiment with
+two task-speciﬁc NLI models from the literature, the ESIM
+model of Chen et al. (2017) and the decomposable-attention
+(Decomp-Attn) model of Parikh et al. (2016) as implemented in the AllenNLP toolkit (Gardner et al. 2018), and
+the pre-trained BERT architecture of Devlin et al. (2019).2
+2
+
+We use the BERT-base uncased model in all experiments,
+as implemented in HuggingFace: https://github.com/huggingface/
+pytorch-pretrained-BERT.
+
+https://github.com/huhailinguist/ccg2mono
+8716
+
+
+=== PAGE 5 ===
+both its original and new task. More formally, let k denote the number of examples of fragment data used for
+ﬁne-tuning. Ideally, we would like to be able to ﬁne-tune
+each pre-trained NLI model architecture a (e.g., BERT) to
+learn a new fragment perfectly with a minimal k, while—
+importantly—not losing performance on the original task
+that the model was trained for (e.g., SNLI or MNLI). Given
+that ﬁne-tuning is sensitive to hyper-parameters,3 we use
+the followi

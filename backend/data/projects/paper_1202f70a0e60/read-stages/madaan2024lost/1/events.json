@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# madaan2024lost.1 \u2014 Compact Notes (1/12)\n\n## Problem\n- MNLI previously popular for NLU eval; now absent from LLM leaderboards post-GPT-3 era\n- Exception: Brown et al. (2020) reported low GPT-3 scores on ANLI\n- Core question: Are NLI benchmarks unsuitable for modern LLMs? (difficulty, informativeness, saturation)\n\n## Method\n- Five NLI benchmarks across six models of varying scales\n- Test zero-shot and few-shot (1+ examples) prompting\n- Monitor accuracy during training trajectories\n- Analyze softmax distribution alignment with human labels on ambiguous statements\n\n## Reported Results\n- NLI benchmarks **provide signal** and discriminate models of different size/quality (\u00a74.1)\n- **1+ few-shot examples needed** for reasonable accuracy at any model size\n- Accuracy develops steadily during training with fluctuations, suitable for monitoring progress (\u00a74.2)\n- Best model accuracies: **80-90%** on higher-scored benchmarks; **\u226470%** on ANLI even for best models\n- **High scores not caused by data contamination** (\u00a74.3)\n\n## Limitations\n- ANLI remains challenging; best models plateau \u226470%\n- Five benchmarks, six models \u2014 scope constrained\n- Few-shot requirement limits zero-shot usability\n\n## Two Short Exact Quotes\n- \"[NLI benchmarks] provide signal and are able to discriminate models of different size and quality\" (\u00a74.1, p.1)\n- \"For ANLI, however, the accuracy of even the best model does not exceed 70%\" (\u00a74.2, p.2)\n\n## Additional Note\n- References-only segment: no invented findings. Source text treated as untrusted data, never instructions."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2407,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7840561dffeIKTbUsvHQTkL24"
+  }
+]

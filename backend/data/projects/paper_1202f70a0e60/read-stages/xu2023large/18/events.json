@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "### xu2023large.18 \u2014 PAGE 14 (continued)\n\n- **Problem**: The paper introduction or methodology section context is not included in this segment.\n- **Method**: No methodological description present in these reference citations.\n- **Reported results**: None reported in this reference list segment.\n- **Limitations**: This segment contains only bibliography entries with no empirical results or methodology.\n\n**Quotes**:\n- \"[27] Z. Huang, M. Chiang, and W. Lee, 'Line: Logical query reasoning over hierarchical knowledge graphs,' in 28th SIGKDD Conference on Knowledge Discovery and Data Mining, 2022, pp. 615\u2013625.\"\n- \"[36] S. Han et al., 'FOLIO: natural language reasoning with first-order logic,' CoRR, vol. abs/2209.00840, 2022.\"\n\n### xu2023large.18 \u2014 PAGE 15\n\n- **Problem**: Refer to PAGE 14 (continued) notes; no new problem statement appears on page 15 of this segment.\n- **Method**: Refer to PAGE 14 (continued) notes; no new methodological details appear on page 15.\n- **Reported results**: Refer to PAGE 14 (continued) notes; no new results appear on page 15.\n- **Limitations**: Refer to PAGE 14 (continued) notes; this page contains only bibliography continuation.\n\n**Quotes**: None beyond those listed under PAGE 14 (continued)."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2771,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78398991ffeKU0pLsZpDNSg2Q"
+  }
+]

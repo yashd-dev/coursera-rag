@@ -1,0 +1,117 @@
+=== PAGE 2 (continued) ===
+mon one-epoch, lower-learning-rate recipe that avoids the
+accuracy loss observed with longer training or higher adapter rates.
+Our experiments on NeoHorse-1-4B show that the scoring interface changes the relative
+performance of option readouts, while reducing adaptation capacity can improve reranking
+accuracy. With checkpoints and questions held fixed on PIQA and SocialIQA, the pointer
+leads on average under direct selection, while pooling leads under entailment reranking. On
+the eleven-configuration MC11 benchmark, the one-epoch, lower-rate recipe establishes an
+all-module pointer reference at 50.28% accuracy. Selective adaptation raises this to 52.49% while
+reducing trainable parameters by 55.2% (from 131.2M to 58.8M), and adding mean-span pooling
+lifts accuracy further to 53.39% at the same parameter count. Both steps improve MC11 across
+all four fold–seed settings. Under all-module adaptation, mean-span pooling (51.00%) also
+outperforms a pointer at the final content token (49.11%). The individual design choices also
+improve PIQA and CommonsenseQA reranking, whereas the combined model loses accuracy
+on the JevBench and Kev direct-decision suites.
+
+2. Readout and Adaptation Design
+2.1. Typed requests and candidate reranking
+A request contains a state 𝑥 , an instruction 𝑢, and named options 𝑂 = { 𝑜1 , . . . , 𝑜 𝐾 }. Each option
+comprises a label and description between explicit delimiters. The instruction precedes the
+options; option isolation is disabled, so an option state can attend to the instruction and earlier
+options. The model returns a distribution over the options.
+Direct selection chooses the highest-probability option in one request. For entailment reranking, the state supplies the premise, and each candidate answer 𝑎 is rendered as a hypothesis in
+the instruction of a separate request. Its three options are entailment, neutral, and contradiction.
+We select
+𝑎ˆ = arg max 𝑝𝐸 ( 𝑥 , 𝑎),
+𝑎
+(1)
+𝑒𝑧 𝐸
+𝑝𝐸 = 𝑧
+,
+𝑒 𝐸 + 𝑒 𝑧 𝑁 + 𝑒 𝑧𝐶
+where 𝑧 𝐸 , 𝑧 𝑁 , 𝑧𝐶 are the three option logits. The head reads the NLI labels and descriptions.
+Although this text is shared across candidates, its hidden states depend on the preceding
+
+2
+
+
+=== PAGE 3 ===
+question in the state and the candidate hypothesis in the instruction. Each request therefore
+supplies a distinct contextual representation of the three relations (Figure 1).
+Reranking uses the full probability of entailment, even when several candidates receive
+entailment as their highest-scoring label. Equivalently,
+
+𝑝𝐸 = 𝜎 𝑧 𝐸 − log( 𝑒𝑧 𝑁 + 𝑒𝑧𝐶 ) ,
+(2)
+where 𝜎 is the logistic function. Candidates are ordered by an entailment margin against the
+combined alternatives. A change to the three scores can alter candidate ordering without
+changing the winning NLI label within individual requests.
+Decision query 𝑞
+Question 𝑥
+Candidate 𝑎
+in instruction
+Three NLI options
+
+Language model
+Attention +
+DeltaNet
+adapters
+
+Mean of each NLI
+label–
+description span
+ℎ¯ 𝐸 , ℎ¯ 𝑁 , ℎ¯ 𝐶
+
+Bilinear head
+Three-way
+softmax
+𝑝𝐸 ( 𝑥 , 𝑎)
+
+Repeat for each candidate; select 𝑎ˆ = arg max𝑎 𝑝𝐸 ( 𝑥 , 𝑎).
+
+Figure 1 | The final reranker. The candidate answer enters the instruction; pooling reads the
+three NLI option spans. The shared head scores those spans against the decision query, and the
+outer comparison selects an answer using its entailment probability.
+2.2. Option-ending and mean-span readouts
+Let ℎ𝑑 ∈ R𝑑 be the hidden state at the final decision token, which follows all options, and ℎ𝑖 ∈ R𝑑
+the state at the delimiter closing option 𝑖. The pointer uses a shared affine bilinear head [44, 14]:
+𝑞 = 𝑊𝑞 ℎ𝑑 + 𝑏𝑞 ,
+𝑞⊤ 𝑘
+
+𝑠𝑖 = √
+
+𝑘𝑖 = 𝑊𝑘 ℎ𝑖 + 𝑏𝑘 ,
+
+(3)
+
+𝑠𝑖
+
+𝑖
+
+𝑒
+𝑝𝑖 = Í 𝑠 ,
+𝑗
+𝑗𝑒
+
+,
+
+𝑑head
+
+(4)
+
+with 𝑑head = 256. Training minimizes cross-entropy against the target option distribution,
+averaging questions within each record.
+Mean-span pooling replaces ℎ𝑖 with
+ℎ¯ 𝑖 =
+
+1 ∑︁
+ℎ 𝑗,
+| 𝑆𝑖 | 𝑗 ∈ 𝑆
+
+(5)
+
+𝑖
+
+where 𝑆𝑖 contains the option’s interior label and description tokens, excluding both delimiters.
+The last-content control instead t

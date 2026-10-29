@@ -1,0 +1,94 @@
+=== PAGE 11 (continued) ===
+and Keutzer, K.
+Squeezellm: Dense-and-sparse quantization. arXiv
+preprint arXiv:2306.07629, 2023.
+
+Pillutla, K., Swayamdipta, S., Zellers, R., Thickstun, J.,
+Welleck, S., Choi, Y., and Harchaoui, Z. MAUVE: Measuring the gap between neural text and human text using
+divergence frontiers. In Beygelzimer, A., Dauphin, Y.,
+Liang, P., and Vaughan, J. W. (eds.), Advances in Neural
+Information Processing Systems, 2021. URL https:
+//openreview.net/forum?id=Tqx7nJp7PR.
+
+Kim, Y. and Rush, A. M. Sequence-level knowledge distillation. EMNLP, 2016.
+Kumar, A., Raghunathan, A., Jones, R., Ma, T., and Liang,
+P. Fine-tuning can distort pretrained features and underperform out-of-distribution. International Conference on
+Learning Representations, 2022.
+
+Pope, R., Douglas, S., Chowdhery, A., Devlin, J., Bradbury, J., Levskaya, A., Heek, J., Xiao, K., Agrawal, S.,
+and Dean, J. Efficiently scaling transformer inference.
+November 2022. doi: 10.48550/ARXIV.2211.05102.
+
+Kwon, W., Li, Z., Zhuang, S., Sheng, Y., Zheng, L., Yu,
+C. H., Gonzalez, J. E., Zhang, H., and Stoica, I. Efficient
+memory management for large language model serving
+with pagedattention. In Proceedings of the ACM SIGOPS
+29th Symposium on Operating Systems Principles, 2023.
+
+ShareGPT. ShareGPT. https://huggingface.
+co/datasets/Aeala/ShareGPT_Vicuna_
+unfiltered, 2023.
+11
+
+
+=== PAGE 12 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Shazeer, N. Fast transformer decoding: One write-head is
+all you need. arXiv preprint arXiv:1911.02150, 2019.
+
+Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z.,
+Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang,
+H., Gonzalez, J. E., and Stoica, I. Judging llm-as-a-judge
+with mt-bench and chatbot arena, 2023.
+
+Spector, B. and Re, C. Accelerating llm inference
+with staged speculative decoding.
+arXiv preprint
+arXiv:2308.04623, 2023.
+Stern, M., Shazeer, N. M., and Uszkoreit, J. Blockwise
+parallel decoding for deep autoregressive models. Neural
+Information Processing Systems, 2018.
+Touvron, H., Martin, L., Stone, K., Albert, P., Almahairi,
+A., Babaei, Y., Bashlykov, N., Batra, S., Bhargava, P.,
+Bhosale, S., et al. Llama 2: Open foundation and finetuned chat models. arXiv preprint arXiv:2307.09288,
+2023.
+Tunstall, L., Beeching, E., Lambert, N., Rajani, N., Rasul,
+K., Belkada, Y., Huang, S., von Werra, L., Fourrier, C.,
+Habib, N., Sarrazin, N., Sanseviero, O., Rush, A. M.,
+and Wolf, T. Zephyr: Direct distillation of lm alignment,
+2023.
+Xia, H., Ge, T., Chen, S.-Q., Wei, F., and Sui, Z. Speculative
+decoding: Lossless speedup of autoregressive translation,
+2023. URL https://openreview.net/forum?
+id=H-VlwsYvVi.
+Xiao, G., Lin, J., Seznec, M., Wu, H., Demouth, J., and Han,
+S. Smoothquant: Accurate and efficient post-training
+quantization for large language models. In International
+Conference on Machine Learning, pp. 38087–38099.
+PMLR, 2023a.
+Xiao, Y., Wu, L., Guo, J., Li, J., Zhang, M., Qin, T., and Liu,
+T.-y. A survey on non-autoregressive generation for neural machine translation and beyond. IEEE Transactions
+on Pattern Analysis and Machine Intelligence, 2023b.
+Ying, C., Cai, T., Luo, S., Zheng, S., Ke, G., He, D., Shen, Y.,
+and Liu, T.-Y. Do transformers really perform badly for
+graph representation? Advances in Neural Information
+Processing Systems, 34:28877–28888, 2021.
+Zhang, P., Zeng, G., Wang, T., and Lu, W. Tinyllama: An
+open-source small language model, 2024.
+Zhang, S., Roller, S., Goyal, N., Artetxe, M., Chen, M.,
+Chen, S., Dewan, C., Diab, M., Li, X., Lin, X. V.,
+et al. Opt: Open pre-trained transformer language models.
+arXiv preprint arXiv:2205.01068, 2022.
+Zhang, Z., Sheng, Y., Zhou, T., Chen, T., Zheng, L., Cai,
+R., Song, Z., Tian, Y., Ré, C., Barrett, C., et al. H 2 o:
+Heavy-hitter oracle for efficient generative inference of
+large language models. arXiv preprint arXiv:2306.14048,
+2023.
+12
+
+
+=== PAGE 13 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+A. Related Wor

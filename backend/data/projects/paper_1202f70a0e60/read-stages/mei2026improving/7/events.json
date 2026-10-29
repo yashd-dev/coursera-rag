@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## me2026improving.7.txt \u2014 Page 9 (continued) \u2192 Page 11\n\n- **Problem**: Paper examines readout-by-scope mechanisms (pointer vs. pooling) under low-rate adapter fine-tuning. Final no-FFN model untested on certain sources.\n- **Method**: Compares all-module and no-FFN pointers/poolings across MC11, JevBench, Kev, with learning-rate adjustments and pooling interactions.\n- **Reported results**:\n  - Page 9: Lowering learning rates strengthens pointers on both sources; pooling improves lower-rate models by 1.26 pp (PIQA) and 4.01 pp (CommonsenseQA). Omitting FFN adapters improves both sources in every setting (80.25% and 63.80%).\n  - Page 10: Qwen3-4B pooling improves HellaSwag (+3.91 pp) and NeoHorse (+4.23 pp); declines on four-option GSM8K (\u22124.28 pp). Overall MC11: pooling 51.70%, pointer 52.17%.\n  - Page 11 (Table 6): No-FFN pointer raises MC11 to 77.52% vs. all-module pointer 77.11%; pooling improves MC11 to 73.79% with JevBench 73.79% and Kev 78.12%. Pointer exceeds pooling on direct-selection across suites.\n- **Limitations**: Declines on four-option GSM8K outweigh gains; aggregate MC11 drops with pointer on Qwen3-4B; no-FFN model not evaluated on certain sources; pooling 3.32\u20133.25 pp below all-module pointer on direct selection.\n\n> \u201cLowering both learning rates strengthens the pointer on both sources, and pooling improves these lower-rate models by a further 1.26 pp on PIQA and 4.01 pp on CommonsenseQA.\u201d \u2014 Page 10\n\n> \u201cThe no-FFN pointer raises MC11 while maintaining JevBench accuracy, at 77.52% versus 77.11% for the all-module pointer.\u201d \u2014 Page 11"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2569,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7848734dffehcdN2YnDnk8Svg"
+  }
+]

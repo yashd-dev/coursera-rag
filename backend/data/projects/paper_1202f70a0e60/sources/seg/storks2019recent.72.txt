@@ -1,0 +1,57 @@
+=== PAGE 85 (continued) ===
+000). A Machine Learning Approach to Answering
+Questions for Reading Comprehension Tests. In 2000 Joint SIGDAT Conference on Empirical
+Methods in Natural Language Processing and Very Large Corpora, pp. 124–132, Hong Kong,
+China. Association for Computational Linguistics.
+Niven, T., & Kao, H.-Y. (2019). Probing Neural Network Comprehension of Natural Language
+Arguments. In Proceedings of the 57th Annual Meeting of the Association for Computational
+Linguistics (ACL 2019), Florence, Italy. Association for Computational Linguistics.
+Nunberg, G. (1987). Position Paper on Common-sense and Formal Semantics. In Proceedings
+of the 1987 Workshop on Theoretical Issues in Natural Language Processing (TINLAP ’87),
+TINLAP ’87, pp. 129–133, Las Cruces, NM, USA. Association for Computational Linguistics.
+Olsher, D. (2014). Semantically-based priors and nuanced knowledge core for Big Data, Social AI,
+and language understanding. Neural Networks, 58, 131–147.
+Ortiz, C. (2016). Why We Need a Physically Embodied Turing Test and What It Might Look Like.
+AI Magazine, 37(1), 55–62.
+Ostermann, S., Modi, A., Roth, M., Thater, S., & Pinkal, M. (2018). MCScript: A Novel Dataset for
+Assessing Machine Comprehension Using Script Knowledge. In Proceedings of the Eleventh
+International Conference on Language Resources and Evaluation (LREC-2018), Miyazaki,
+Japan. European Language Resources Association (ELRA).
+85
+
+
+=== PAGE 86 ===
+S TORKS , G AO , & C HAI
+
+Paperno, D., Kruszewski, G., Lazaridou, A., Pham, N. Q., Bernardi, R., Pezzelle, S., Baroni, M.,
+Boleda, G., & Fernandez, R. (2016). The LAMBADA dataset: Word prediction requiring
+a broad discourse context. In Proceedings of the 54th Annual Meeting of the Association
+for Computational Linguistics (ACL 2016), pp. 1525–1534, Berlin, Germany. Association for
+Computational Linguistics.
+Papineni, K., Roukos, S., Ward, T., & Zhu, W.-J. (2002). Bleu: A Method for Automatic Evaluation of Machine Translation. In Proceedings of 40th Annual Meeting of the Association
+for Computational Linguistics (ACL 2002), pp. 311–318, Philadelphia, Pennsylvania, USA.
+Association for Computational Linguistics.
+Paulheim, H. (2018). How much is a Triple? Estimating the Cost of Knowledge Graph Creation.
+In Proceedings of the 17th International Semantic Web Conference (ISWC 2018), Monterey,
+CA, USA. Springer.
+Peirce, C. S. (1883).
+A Theory of Probable Inference.
+In Peirce, C. S. (Ed.), Studies in Logic by Members of the Johns Hopkins University, pp. 126–181. Little, Brown, and Company, Boston, MA.
+From the Commens Bibliography |
+http://www.commens.org/bibliography/collection_article/peirce-charles-s-1883-theoryprobable-inference-studies-logic.
+Pennington, J., Socher, R., & Manning, C. (2014). Glove: Global Vectors for Word Representation.
+In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP 2014), pp. 1532–1543, Doha, Qatar. Association for Computational Linguistics.
+Peters, M., Neumann, M., Iyyer, M., Gardner, M., Clark, C., Lee, K., & Zettlemoyer, L. (2018).
+Deep Contextualized Word Representations. In Proceedings of the 2018 Conference of the
+North American Chapter of the Association for Computational Linguistics: Human Language
+Technologies (NAACL HLT 2018), pp. 2227–2237, New Orleans, Louisiana. Association for
+Computational Linguistics.
+Pilehvar, M. T., & Camacho-Collados, J. (2019). WiC: The Word-in-Context Dataset for Evaluating
+Context-Sensitive Meaning Representations. In Proceedings of the 2019 Conference of the
+North American Chapter of the Association for Computational Linguistics: Human Language
+Technologies (NAACL HLT 2019), pp. 1267–1273, Minneapolis, MN, USA. Association for
+Computational Linguistics.
+Plutchik, R. (1980). A general psychoevolutionary theory of emotion. In Theories of Emotion, pp.
+3–31. Academic Press.
+Pohl, A. (2012). Classifying the Wikipedia Articles into the OpenCyc Taxonomy. In Proceedings
+of the Web of Linked Entities Workshop in Conjunction with the 11th 

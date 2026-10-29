@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# parikh2016decomposable.2.txt \u2014 Page 2 (continued) \u2192 Page 3\n\n**Problem**  \n- Attention predominantly used with LSTMs (Rockt\u00e4schel et al., 2016; Wang and Jiang, 2016) and lesser extent CNNs (Yin et al., 2016).  \n- This work uses attention purely on word embeddings; method consists of feed-forward networks largely independent of word order.  \n\n**Method**  \n- Given input sentences a and b with word embeddings ai, bj \u2208 Rd, prepended with a \u201cNULL\u201d token.  \n- Training: labeled pairs {(a(n), b(n), y(n))}Nn=1, where y(n) is an indicator vector encoding the label and C is the number of output classes.  \n- At test time, receive sentence pair (a, b) and predict label y.  \n- **Attend**: Soft-align elements of \u0101 and b\u0304 using neural attention (Bahdanau et al., 2015); decompose into comparison of aligned subphrases.  \n- **Compare**: Separately compare each aligned subphrase to produce sets {v1,i} and {v2,j}, where each v1,i is a nonlinear combination of ai and its softly aligned subphrase in b (and analogously for v2,j).  \n- **Aggregate**: Aggregate the sets from the previous step and use the result to predict \u0177.  \n- Attention weights eij = F(\u0101i)T F(bj); decomposition reduces complexity from `a \u00d7 `b to `a + `b applications of F. F is a feed-forward ReLU network.  \n- Weights normalized via softmax (eq. 2).  \n- Optionally apply intra-sentence attention (Cheng et al., 2016) to enrich substructure encoding prior to alignment (Section 3.4).  \n- Asymptotically same total work as a vanilla LSTM encoder, but trivially parallelizable across sentence length, enabling speedups in low-latency settings.  \n\n**Reported results**  \n- Empirical results on SNLI corpus: state-of-the-art results, using almost an order of magnitude fewer parameters than complex LSTM-based approaches.  \n\n**Limitations**  \n- Vanilla version does not make use of word order (Section 3.4 extension adds minimal sequence information via intra-sentence attention).  \n\n**Exact quotes**  \n- \u201cour use of attention is purely based on word embeddings and our method essentially consists of feed-forward networks that operate largely independently of word order.\u201d (p. 2)  \n- \u201cAsymptotically our approach does the same total work as a vanilla LSTM encoder, while being trivially parallelizable across sentence length, which can allow for considerable speedups in low-latency settings.\u201d (p. 3)  \n\n*Source: parikh2016decomposable.2.txt, pages 2\u20133.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2869,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781ba825ffeWEj6KoxxBLjOh7"
+  }
+]

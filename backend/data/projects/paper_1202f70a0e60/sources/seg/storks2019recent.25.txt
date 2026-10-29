@@ -1,0 +1,44 @@
+=== PAGE 31 (continued) ===
+ (2017) has shown that the Story Cloze
+31
+
+
+=== PAGE 32 ===
+S TORKS , G AO , & C HAI
+
+Test can be solved with up to 72.4% accuracy by only looking at the two possible endings. They do
+this by exploiting human writing style biases in the possible endings rather than performing a more
+realistic reasoning. For example, they find that negative language is used more commonly in the
+wrong ending (e.g., “hates”), and the correct ending is more likely to use enthusiastic language (e.g.,
+“!”). An example of a biased negative ending is seen in Figure 9. Sharma, Allen, Bakhshandeh, and
+Mostafazadeh (2018) have begun work to update the benchmark data and remove these biases.
+While generating the Story Cloze Test data was not a fast or simple task for crowd workers,
+Gururangan et al. (2018) suggest that such biases can come from crowd workers’ adoption of predictable annotation strategies and heuristics to quickly generate data. These strategies have been
+revealed for several textual entailment benchmarks which consist of pairs of short sentences. For
+example, on the entailment task in SemEval 2014 (Marelli, Bentivogli, Baroni, Bernardi, Menini,
+& Zamparelli, 2014b) as part of the SICK benchmark (Marelli et al., 2014a), Lai and Hockenmaier
+(2014) found that the presence of negation in an example was associated with the appearance of
+the contradiction class label. Their trained classifier using this feature alone was able to achieve
+61% accuracy. Later, Poliak, Naradowsky, Haldar, Rudinger, and Van Durme (2018b) and Gururangan et al. (2018) found the presence of particular words in the hypothesis sentence can bias the
+entailment prediction in several entailment benchmarks. For example, “nobody” in contradictory
+examples from SNLI (Bowman et al., 2015) was found to be an indicator of contradiction, while
+generic words like “animal” and “instrument”, as well as gender-neutral pronouns, were found to be
+indicators of entailment. Gururangan et al. further find that a high sentence length is an indicator of
+a neutral entailment relationship, and suggest that crowd workers often remove words from the context sentences to create entailed hypothesis sentences. Using biases like these, a baseline approach
+by Poliak et al. which only used the hypothesis sentence from entailment benchmarks was able to
+outperform a majority-class baseline in SNLI, JOCI (Zhang et al., 2017), SciTail (Khot et al., 2018),
+two tasks within Inference is Everything (White et al., 2017), and the MultiNLI task within GLUE
+(Williams et al., 2017; Wang et al., 2018).
+Addressing superficial correlation bias. Various approaches have been developed to address this
+data bias problem. For example, to recognize biases, a simple technique is to calculate the mutual
+information between words and prediction classes within benchmark examples. This was performed
+by researchers in discovering stylistic biases in entailment benchmarks (Gururangan et al., 2018).
+This type of analysis should be performed on any new benchmark data when it is created.
+To avoid the biases, more involved techniques may be required. For example, in creating the
+SWAG benchmark (Zellers et al., 2018), a novel adversarial filtering process was introduced to
+ensure writing styles are consistent among ending choices, and the correct answer cannot be identified by exploitative stylistic classifiers. This is done by over-generating negative choices for each
+question with a language model, then using a collection of strong classifiers to filter out negative
+examples which are too easy to identify given an arbitrary train-test split. When SWAG was released, it was challenging to state-of-the-art classifiers. But it did not take long before a new model
+solved SWAG with a high accuracy (Devlin, Chang, Lee, & Toutanova, 2018). By incorporating this
+new model into the adversarial filtering, as well as using a newer language model to generate text,
+Zellers et al. (2019a) created an updated version called HellaSWAG, on which the 

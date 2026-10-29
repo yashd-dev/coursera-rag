@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**gendron2024counterfactual.7.txt** (pages 6\u20137 continued)\n\n- **Problem**: Evaluate LLMs\u2019 counterfactual causal reasoning on the Cladder dataset, measuring accuracy across commonsense, nonsensical, and anticommonsense queries when causal structures are withheld or provided.\n\n- **Method**: Prompt LLMs to generate factual and counterfactual causal graphs from context\u2013query pairs; self-evaluate via plausibility/confidence scores; report Graph Edit Distance (GED) between model-built and ground-truth graphs.\n\n- **Reported results**: Overall accuracy ~50% (no better than random guessing); no consistent advantage for commonsense queries. Best models: GPT-4-1106+Causal CoT and Counterfactual-CI-GPT-4o-Ggt (~10% above random). GPT-4o shows the largest accuracy improvement when the causal graph is provided; GPT-3.5 shows none. GPT-4o, GPT-4o-mini, and GPT-3.5 require <1 average GED modification to recover the true graph.\n\n- **Limitations**: LLMs not systematically able to recover true causal structures; accuracy bottleneck lies in computing P(Y|pa(Y)). Performance ~10% above random even with correct graphs. Failure cases in Section 4.4.\n\n- **Exact quotes**: \n  - \"LLMs do not demonstrate good counterfactual inference abilities even when the causal and reasoning structures are given\" (p.7)\n  - \"Our framework ensures that the right causal factors are provided to the appropriate causal variables, i.e. the value of a variable is solely determined by the value of its parents or from an intervention\" (p.6)\n\n- **References-only note**: This segment reports results and analysis only; no new findings or citations beyond the paper under review."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2336,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7843cc4bffe4G9zc7itD0awaY"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**  \n- Probing semantic depths of language models via multisense consistency (Ohmer et al., 2024).  \n- Investigate inherent disagreements in human textual inferences (Pavlick & Kwiatkowski, 2019).  \n- Address \u201cproblem\u201d of human label variation as ground truth (Plank, 2022).  \n\n**Method**  \n- Use adversarial NLI benchmarks: ANLI (human-in-the-loop, iterative), HANS (synthetic templates avoiding heuristics), \u03b1NLI (abductive NLI).  \n- Evaluate models on MNLI, SNLI, ANLI dev\u2011set round\u202f3, HANS, \u03b1NLI.  \n- Report per\u2011dataset sample counts and label distributions in Table\u202f4.  \n\n**Reported results**  \n- Table\u202f4 statistics: ANLI (30K samples, 2 labels); HANS (1200 samples, 3 labels); MNLI (9815 samples, 3 labels); SNLI (9842 samples, 3 labels); \u03b1NLI (1532 samples, 2 labels).  \n- HANS is synthetically generated from templates designed to foil heuristic shortcuts; at proposal time no SOTA model could solve such examples.  \n- ANLI round\u202f3 is the most challenging set, created to make SOTA models fail via iterative human\u2011in\u2011the\u2011loop validation.  \n\n**Limitations**  \n- ANLI, HANS deviate from crowd\u2011sourced origins; \u03b1NLI focuses on abductive r\u201d (text cuts off).  \n- No quantitative model performance numbers reported in this segment.  \n\n**Exact quotes**  \n- \u201cthe adversarial dataset Heuristic Analysis for NLI Systems (HANS, McCoy et al., 2019) is not crowd\u2011sourced, but synthetically generated using templates.\u201d (p.\u202f11, A.3)  \n- \u201cThe third round furthermore contains a set of more diverse premises.\u201d (p.\u202f11, ANLI description)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2546,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783df2c6ffejiercsFFkR2BqR"
+  }
+]

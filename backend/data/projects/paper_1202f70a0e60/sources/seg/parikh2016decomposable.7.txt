@@ -1,0 +1,15 @@
+=== PAGE 6 (continued) ===
+rnal of Machine
+Learning Research, 15(1):1929–1958.
+
+
+=== PAGE 7 ===
+[van Benthem2008] Johan van Benthem. 2008. A brief
+history of natural logic. College Publications.
+[Vendrov et al.2015] Ivan Vendrov, Ryan Kiros, Sanja Fidler, and Raquel Urtasun. 2015. Order-embeddings of
+images and language. In Proceedings of ICLR.
+[Wang and Jiang2016] Shuohang Wang and Jing Jiang.
+2016. Learning natural language inference with LSTM.
+In Proceedings of NAACL.
+[Yin et al.2016] Wenpeng Yin, Hinrich Schütze, Bing Xiang, and Bowen Zhou. 2016. ABCNN: Attentionbased convolutional neural network for modeling sentence pairs. In Transactions of the Association of Computational Linguistics.
+

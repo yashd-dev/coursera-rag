@@ -1,0 +1,54 @@
+=== PAGE 90 (continued) ===
+dings of the ThirtyFirst AAAI Conference on Artificial Intelligence (AAAI-17), San Francisco, CA, USA. AAAI
+Press.
+Suhr, A., Lewis, M., Yeh, J., & Artzi, Y. (2017). A Corpus of Natural Language for Visual Reasoning. In Proceedings of the 55th Annual Meeting of the Association for Computational
+Linguistics (ACL 2017), pp. 217–223. Association for Computational Linguistics.
+Sukhbaatar, S., Szlam, A., Weston, J., & Fergus, R. (2015). End-To-End Memory Networks. In
+Cortes, C., Lawrence, N. D., Lee, D. D., Sugiyama, M., & Garnett, R. (Eds.), Advances in
+Neural Information Processing Systems 28 (NIPS 2015), pp. 2440–2448. Curran Associates,
+Inc.
+Sun, K., Yu, D., Chen, J., Yu, D., Choi, Y., & Cardie, C. (2019). DREAM: A Challenge Dataset
+and Models for Dialogue-Based Reading Comprehension. Transactions of the Association
+for Computational Linguistics, 7(0), 217–231.
+Sundheim, B. M. (1993). Tipster/MUC-5: Information extraction system evaluation. In Proceedings
+of the 5th Conference on Message Understanding, MUC5 ’93, pp. 27–44, Baltimore, MD,
+USA. Association for Computational Linguistics.
+90
+
+
+=== PAGE 91 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Talmor, A., Herzig, J., Lourie, N., & Berant, J. (2019). CommonsenseQA: A Question Answering
+Challenge Targeting Commonsense Knowledge. In Proceedings of the 17th Annual Conference of the North American Chapter of the Association for Computational Linguistics:
+Human Language Technologies (NAACL-HLT 2019), Minneapolis, MN, USA. Association
+for Computational Linguistics.
+Tandon, N., de Melo, G., Suchanek, F., & Weikum, G. (2014a). WebChild: Harvesting and organizing commonsense knowledge from the web. In Proceedings of the 7th ACM International
+Conference on Web Search and Data Mining (WSDM ’14), pp. 523–532, New York, NY,
+USA. ACM.
+Tandon, N., De Melo, G., & Weikum, G. (2014b). Acquiring Comparative Commonsense Knowledge from the Web. In Proceedings of the Twenty-Eighth AAAI Conference on Artificial
+Intelligence (AAAI-14), AAAI’14, pp. 166–172, Québec City, QC, Canada. AAAI Press.
+Tandon, N., de Melo, G., & Weikum, G. (2017). WebChild 2.0 : Fine-Grained Commonsense
+Knowledge Distillation. In Proceedings of ACL 2017, System Demonstrations, pp. 115–120,
+Vancouver, BC, Canada. Association for Computational Linguistics.
+Tandon, N., Mishra, B. D., Grus, J., Yih, W.-t., Bosselut, A., & Clark, P. (2018). Reasoning about
+Actions and State Changes by Injecting Commonsense Knowledge. In Proceedings of the
+2018 Conference on Empirical Methods in Natural Language Processing (EMNLP 2018),
+Brussels, Belgium. Association for Computational Linguistics.
+Taylor, A., Marcus, M., & Santorini, B. (2003). The Penn Treebank: An Overview. In Treebanks,
+Vol. 20 of Text, Speech and Language Technology. Springer, Dordrecht.
+Taylor, W. L. (1953). “Cloze Procedure”: A New Tool for Measuring Readability. Journalism
+Bulletin, 30(4), 415–433.
+Tjong Kim Sang, E. F., & De Meulder, F. (2003). Introduction to the CoNLL-2003 Shared Task:
+Language-independent Named Entity Recognition. In Proceedings of the Seventh Conference
+on Natural Language Learning at HLT-NAACL 2003, CONLL ’03, pp. 142–147, Edmonton,
+AB, Canada. Association for Computational Linguistics.
+Trichelair, P., Emami, A., Trischler, A., Suleman, K., & Cheung, J. C. K. (2018). How reasonable are
+common-sense reasoning tasks: A case-study on the winograd schema challenge and SWAG.
+arXiv: 1811.01778.
+Tsuchida, M., & Ishikawa, K. (2011). IKOMA at TAC2011: A Method for Recognizing Textual
+Entailment using Lexical-level and Sentence Structure-level features. In Proceedings of the
+Fourth Text Analysis Conference (TAC 2011), Gaithersburg, MD, USA. National Institute of
+Standards and Technology.
+Turing, A. M. (1950). Computing machinery and intelligence. Mind, 49, 433–460.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is All you Need. In Guyon, I., Luxburg, U. V., Bengio,

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.6.txt \u2014 continued from PAGE 7**\n\n- **Problem**: Reference resolution benchmarks are scarce; prior work focuses on entity coreference, not event references.\n- **Method**: Introduces and describes several existing benchmarks (Winograd Schema Challenge, WinoGrande, bAbI coreference, Inference is Everything, Winogender, WNLI) as reference points; notes their design and scale.\n- **Reported results**: WinoGrande has \u201cnearly 44,000 examples, but maintains the same level of difficulty, having low baseline performance but high human performance\u201d; other benchmarks (bAbI subtasks, Winogender, WNLI) listed as subtasks of broader datasets.\n- **Limitations**: All existing benchmarks evaluate entity references, not event references; event-coreference benchmarks are limited and typically require only linguistic context.\n- **Quote (PAGE 7)**: \u201cWinoGrande\u2026 consists of nearly 44,000 examples, but maintains the same level of difficulty, having low baseline performance but high human performance.\u201d\n- **Quote (PAGE 8, Fig. 3)**: \u201cThe trophy would not fit in the brown suitcase because it was too big. What was too big?\u201d (Winograd Schema Challenge item)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2325,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7830e2dbffeFFvNFIc98T8rOg"
+  }
+]

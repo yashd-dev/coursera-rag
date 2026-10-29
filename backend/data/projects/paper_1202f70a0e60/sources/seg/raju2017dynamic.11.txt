@@ -1,0 +1,138 @@
+=== PAGE 7 (continued) ===
+ory for pass t is computed by 𝒎t =
+𝑮𝑹𝑼 (𝒄t, 𝒎t - 1). The final state from Episodic module is then
+passed to Answer model for classification.
+The figure below shows the three modules.
+
+Figure 10: Model Architecture
+Results and Analysis
+Accuracy from models
+For both baselines and advances, we trained these models in
+TensorFlow, using Standard SGD optimized with mini batch = 100. Now, the word embedding size we used was 80,
+and the number of hidden units in all the RNNs was 80. We
+did not fix the word embeddings by loading any pre - trained
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2225
+
+
+=== PAGE 8 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+embeddings into our system but trained the word vectors
+ourselves. So, the learning rate was defined as 0.001, and the
+maximum input length was set at 200 tokens. In order to
+avoid gradient explosion and overfitting, we used the
+gradient clipping technique and dropout). We started with
+three hops for the memory network based on the observation
+that subsequent hops take less time.
+It was seen that after a round of about eight epochs, the
+validation loss started increasing, which depicts that the
+model has overfitted. Below is a summary of the results
+obtained from our models:
+Model
+
+Train
+(%Accuracy)
+Baseline (Sentence Encoding)
+75.3
+Fact - Sentence encoding
+86.0
+
+Train
+(%Accuracy)
+71.7
+76.9
+
+Confusion Matrix
+To get a better understanding on how our model performs,
+we plotted the confusion matrix for Fact - Sentence encoding
+model on the test set.
+
+The three groups are evenly divided based on the distribution
+of sentence length sum. Group 1 has total length sum < 17,
+17 < Group 2 < 23 and else for Group 3.
+Table 4: Impact of Sentence Length on Model Performance
+Sentence Accuracy
+Notes
+Length Group
+(%)
+Group 1
+Stable performance across shorter
+76.5
+(< 17 words)
+sentences
+Group 2
+Consistent performance for medium
+76.7
+(17- 23words)
+length
+Group 3
+76.8
+No significant drop in longer sentences
+(> 23 words)
+
+In the current study, we failed to find major variations in
+values from the confusion matrix of each of the mentioned
+groups. One can observe that the model's performance is
+quite stable regardless of the number of words in the given
+sentence. That we employed bidirectional GRU (which
+derives semantics from longer sequences) should have been
+useful in this regard.
+
+Figure 12: Confusion Matrix for Different Sentence
+Lengths
+
+Figure 11: Confusion Matrix
+From the confusion matrix, as presented below, it is evident
+that our model could have recalled class ‘Entailment’
+appropriately (Jamil, 2017). Regarding class ‘Neutral, ’ a
+significant mistake is made by predicting these sentence
+pairs as ‘Entailment. ’ The ’Contradiction’ class overlaps
+with ‘Neutral’ and ‘Entailment. ’ In the dissected particular
+cases, manual observation showed that while it is pretty
+tricky for a human to distinguish between ‘Entailment’ and
+‘Neutral, ’ it is comparatively straightforward to distinguish
+between ‘Entailment’ and ‘Contradiction. ’ A comparison of
+the confusion matrix to this human behavior helps establish
+that the NLI system is well - trained.
+Table 3: Confusion Matrix Analysis
+True Class
+Entailment
+Neutral
+Contradiction
+
+Predicted:
+Entailment
+1420
+180
+100
+
+Predicted:
+Neutral
+230
+1100
+190
+
+Predicted:
+Contradiction
+50
+220
+1210
+
+Significance of episodic memories
+Here is what we observed when we ran the fact - sentence
+encoded model for several episodic memories. It would be
+possible to note that the test accuracies rise when using the
+hop over the facts more than once, i. e. when making the
+episodic memory updates from one to two, there is a
+significant leap, but further leaps are insignificant as seen
+below. Whatever the network has to learn to do the inference
+task, the memory networ

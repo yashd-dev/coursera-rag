@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "--gendron2024counterfactual.16--\n\n### Problem (page 16 continued)\n- Augments GNN prompt with neighbors' attributes and edge connections to capture relational structure.\n- Uses DBSCAN clustering to find nodes with similar latent representations, allowing sparsity restriction via density-based grouping.\n\n### Method (page 16 continued)\n- **Summarisation**: Collapses similar nodes into one merged node inheriting all edges; reduces graph size but risks easy falsification with sparse observations.\n- **Analogy**: Adds a common unobserved ancestor between similar nodes without modifying existing graphs; preserves initial mechanisms but cannot falsify merged graphs.\n\n### Reported results (page 16 continued)\n- No quantitative results reported; only qualitative illustration of two merging approaches via Figure 5.\n\n### Limitations (page 16 continued)\n- Summarisation: merged causal graph easily falsified without abundant observations (one observation per variable).\n- Analogy: does not introduce ways to falsify graphs or preserve initial mechanisms.\n\n### Two short exact quotes (page 16 continued)\n- \"the merged causal graph can be easily falsified [16]\" (summarisation limitation).\n- \"this method does not introduce ways to falsify the graphs and preserve the mechanisms of the initial graphs\" (analogy limitation).\n\n### Reference-only note (page 17)\n- Page 17 switches to prompt design for causal structure discovery; no new paper findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2238,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7841b210ffev7Klu62DFcxg6x"
+  }
+]

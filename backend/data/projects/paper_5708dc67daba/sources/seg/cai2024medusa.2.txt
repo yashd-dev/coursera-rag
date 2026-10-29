@@ -1,0 +1,88 @@
+=== PAGE 1 (continued) ===
+-Champaign 4 Carnegie Mellon University 5 University of Connecticut. Correspondence to: Tianle Cai
+<tianle.cai@princeton.edu>, Yuhong Li <leeyh@illinois.edu>.
+3
+
+Proceedings of the 41 st International Conference on Machine
+Learning, Vienna, Austria. PMLR 235, 2024. Copyright 2024 by
+the author(s).
+
+Instead of using a separate draft model to sequentially generate candidate outputs, in this paper, we revisit and re1
+
+
+=== PAGE 2 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+fine the concept of using multiple decoding heads on top
+of the backbone model to expedite inference (Stern et al.,
+2018). We find that when applied effectively, this technique can overcome the challenges of speculative decoding,
+allowing for seamless integration into existing LLM systems. Specifically, we introduce M EDUSA, a method that
+enhances LLM inference by integrating additional decoding
+heads to concurrently predict multiple tokens. These heads
+are fine-tuned in a parameter-efficient manner and can be
+added to any existing model. With no requirement for a
+draft model, M EDUSA offers easy integration into current
+LLM systems, including those in distributed environments,
+ensuring a user-friendly experience.
+
+training recipe and dataset availability. When the model is
+fine-tuned on a public dataset, it can be directly used for
+M EDUSA. If the dataset is unavailable or the model underwent a Reinforcement Learning with Human Feedback
+(RLHF) (Ouyang et al., 2022) process, we suggest a selfdistillation approach to generate a training dataset for the
+M EDUSA heads.
+Our experiments primarily focus on scenarios with a batch
+size of one, which is representative of the use case where
+LLMs are locally hosted for personal use. We test M EDUSA
+on models of varying sizes and training settings, including
+Vicuna-7B, 13B (trained with a public dataset), Vicuna33B (Chiang et al., 2023) (trained with a private dataset1 ),
+and Zephyr-7B (trained with both supervised fine-tuning and
+alignment). M EDUSA can achieve a speedup of 2.3 to 2.8
+times across different prompt types without compromising
+on the quality of generation.
+
+We further enhance M EDUSA with two key insights. Firstly,
+the current approach of generating a single candidate continuation at each decoding step leads to inefficient use of
+computational resources. To address this, we propose generating multiple candidate continuations using the M EDUSA
+heads and verifying them concurrently through a simple
+adjustment to the attention mask. Secondly, we can reuse
+the rejection sampling scheme as used in speculative decoding (Leviathan et al., 2022; Chen et al., 2023) to generate consistent responses with the same distribution as the
+original model. However, it cannot further enhance the
+acceleration rate. Alternatively, we introduce a typical acceptance scheme that selects reasonable candidates from the
+M EDUSA head outputs. We use temperature as a threshold
+to manage deviation from the original model’s predictions,
+providing an efficient alternative to the rejection sampling
+method. Our results suggest that the proposed typical acceptance scheme can accelerate the decoding speed further
+while maintaining a similar generation quality.
+
+❄️ 🔥
+
+🔝
+
+/
+Original Model
+LM Head
+
+Last Hidden
+
+🔥
+
+Transformer
+Layers
+
+Embedding
+
+📝
+
+Input
+
+What will happen if
+Medusa meets a llama?
+
+To equip LLMs with predictive M EDUSA heads, we propose
+two distinct fine-tuning procedures tailored to various scenarios. For situations with limited computational resources
+or when the objective is to incorporate M EDUSA into an
+existing model without affecting its performance, we recommend M EDUSA-1. This method requires minimal memory
+and can be further optimized with quantization techniques
+akin to those in QLoRA (Dettmers et al., 2023), without
+compromising the generation quality due to the fixed backbone model. However, in M EDUSA-1, the full potential of
+the backbone model is not utilized. We can further 

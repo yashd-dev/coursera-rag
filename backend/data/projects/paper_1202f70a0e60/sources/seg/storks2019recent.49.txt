@@ -1,0 +1,54 @@
+=== PAGE 58 (continued) ===
+released in November 2019,27 but this
+debate has started an important discussion about the potential dangers of and defenses against the
+current state-of-the-art language models.
+BERT. The recent Bidirectional Encoder Representations from Transformers (BERT) model
+proposed by Devlin et al. (2018) provides several advantages over past state-of-the-art systems with
+pre-trained contextual embeddings. First, it is pre-trained on larger data than previous competitive
+systems like GPT (Radford et al., 2018). Where GPT is pre-trained with a large text corpus, BERT
+is trained with two larger corpora of passages on two tasks: a cloze task where input tokens are
+randomly masked, and a sentence ordering task where given two sentences, the system must predict
+whether the second sentence could come directly after the first. This sort of transfer learning from
+large-scale supervised tasks has been demonstrated several times to be effective in NLP problems.
+Similar to GPT, BERT was further fine-tuned for each of the 11 commonsense benchmark tasks it
+originally attempted.
+Second, BERT uses a bidirectional form of the transformer architecture (Vaswani et al., 2017)
+for pre-training contextual embeddings. This better captures context, an advantage that previous
+competitive approaches like GPT (Radford et al., 2018) and ELMo (Peters et al., 2018) do not have.
+Instead, GPT uses a left-to-right transformer, while ELMo uses a concatenation of left-to-right and
+right-to-left LSTMs.
+Lastly, the structure of BERT’s input embedding is advantageous for representing context,
+which beyond a traditional embedding for tokens, also incorporates a learned embedding for the
+sentence a token belongs to (i.e., in sentence pair tasks), and learned positional embeddings for
+tokens. Consequently, the embedding can capture each unique word and its context, perhaps in a
+more sophisticated way than previous systems. Further, it can flexibly represent a sentence or a
+pair of sentences, advantageous for solving a wide variety of language processing tasks in question
+answering, textual entailment, and more.
+Upon its initial release, BERT exceeded the state-of-the-art accuracy on several benchmarks
+including GLUE (Wang et al., 2018), SQuAD 1.1 (Rajpurkar et al., 2016), and SWAG (Zellers
+et al., 2018) benchmarks. After this, it topped several other leaderboards, including those of
+CLOTH (Xie et al., 2017),28 DREAM (Sun et al., 2019),29 OpenBookQA (Mihaylov et al., 2018),30
+27. See https://openai.com/blog/gpt-2-1-5b-release/.
+28. https://www.qizhexie.com/data/CLOTH_leaderboard
+29. https://dataset.org/dream/
+30. https://leaderboard.allenai.org/open_book_qa/submissions/public
+
+58
+
+
+=== PAGE 59 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+CoQA (Reddy et al., 2018), 31 ReCoRD (Zhang et al., 2018),32 and SQuAD 2.0 (Rajpurkar et al.,
+2018). 33 Now, variants of BERT have actually topped most of the leaderboards of our surveyed
+benchmarks at least once, usually several times, especially for the benchmarks originally attempted
+by the model, e.g., GLUE. Now, BERT is seen as a baseline approach for new benchmarks, such
+as AlphaNLI (Bhagavatula et al., 2019) and SocialIQA (Sap et al., 2019b). In the latter, BERT was
+also used for a transfer learning experiment, where the model is fine-tuned to SocialIQA before finetuning to a new task. From this, new state-of-the-art results were achieved on COPA (Roemmele
+et al., 2011) and the Winograd Schema Challenge (Davis et al., 2017).
+While variants of BERT are still the state of the art on many of the surveyed benchmarks,
+its deep, complex structure makes it unexplainable. According to Devlin et al. (2018), a goal of
+future work will be to determine whether BERT truly captures the intended semantic phenomena
+in benchmark datasets. Unfortunately, results from an early investigation by Niven and Kao (2019)
+suggest that like many neural models for language tasks, BERT exploits superficial correlations
+in data to achieve high 

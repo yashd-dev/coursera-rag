@@ -1,0 +1,79 @@
+=== PAGE 5 (continued) ===
+ 2.3.3 to determine
+the optimal configuration of the tree attention. With optimized tree attention, sometimes three or four heads may
+be enough for inference. In this case, we can ignore the
+redundant heads without overhead.
+2.3. Extensions
+2.3.1. T YPICAL ACCEPTANCE
+In speculative decoding papers (Leviathan et al., 2022; Chen
+et al., 2023), authors employ rejection sampling to yield diverse outputs that align with the distribution of the original
+model. However, subsequent implementations (Joao Gante,
+2023; Spector & Re, 2023) reveal that this sampling strategy
+results in diminished efficiency as the sampling temperature increases. Intuitively, this can be comprehended in the
+extreme instance where the draft model is the same as the
+original one: Using greedy decoding, all output of the draft
+model will be accepted, therefore maximizing the efficiency.
+Conversely, rejection sampling introduces extra overhead,
+as the draft model and the original model are sampled independently. Even if their distributions align perfectly, the
+output of the draft model may still be rejected.
+
+Examining this scheme leads to several insights. Firstly,
+when the temperature is set to 0, it reverts to greedy decoding, as only the most probable token possesses non-zero
+probability. As the temperature surpasses 0, the outcome
+of greedy decoding will consistently be accepted with appropriate ϵ, δ, since those tokens have the maximum probability, yielding maximal speedup. Likewise, in general
+scenarios, an increased temperature will correspondingly
+result in longer accepted sequences, as corroborated by our
+experimental findings.
+Empirically, we verify that typical acceptance can achieve
+a better speedup while maintaining a similar generation
+quality as shown in Figure 5.
+5
+
+
+=== PAGE 6 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+2.3.2. S ELF -D ISTILLATION
+
+one tip about using self-distillation is that it is preferable to
+use LoRA without quantization in this case, otherwise, the
+teacher model will be the quantized model, which may lead
+to a lower generation quality.
+
+In Section 2.2, we assume the existence of a training dataset
+that matches the target model’s output distribution. However,
+this is not always the case. For example, the model owners
+may only release the model without the training data, or the
+model may have gone through a Reinforcement Learning
+with Human Feedback (RLHF) procedure, which makes the
+output distribution of the model different from the training
+dataset. To tackle this issue, we propose an automated selfdistillation pipeline to use the model itself to generate the
+training dataset for M EDUSA heads, which matches the
+output distribution of the model.
+
+2.3.3. S EARCHING FOR THE O PTIMIZED T REE
+C ONSTRUCTION
+In Section 2.1.2, we present the simplest way to construct
+the tree structure by taking the Cartesian product. However,
+with a fixed budget for the number of total nodes in the
+tree, a regular tree structure may not be the best choice.
+Intuitively, those candidates composed of the top predictions
+of different heads may have different accuracies. Therefore,
+we can leverage an estimation of the accuracy to construct
+the tree structure.
+
+The dataset generation process is straightforward. We first
+take a public seed dataset from a domain similar to the target
+model; for example, using the ShareGPT (ShareGPT, 2023)
+dataset for chat models. Then, we simply take the prompts
+from the dataset and ask the model to reply to the prompts.
+In order to obtain multi-turn conversation samples, we can
+sequentially feed the prompts from the seed dataset to the
+model. Or, for models like Zephyr 7B (Tunstall et al., 2023),
+which are trained on both roles of the conversation, they
+have the ability to self-talk, and we can simply feed the
+first prompt and let the model generate multiple rounds of
+conversation.
+
+Specifically, we can use a calibration dataset and calculate
+the accuracies of the top predic

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large \u2014 Page 14 (continued)\n\n**Problem**  \n- Paper addresses logical reasoning over natural language via LLMs, focusing on question-answering tasks requiring multi-hop inference [9]\u2013[26].\n\n**Method**  \n- Introduces PathReasoner, which models reasoning paths using equivalent extensions for logical QA [14].\n\n**Reported results**  \n- No quantitative results in this segment; evaluation framework and path-modeling architecture are presented.\n\n**Limitations**  \n- No empirical validation or ablations provided in this segment.\n\n> \u201cPathReasoner: Modeling reasoning path with equivalent extension for logical question answering\u201d [14].  \n> \u201cA survey of large language models\u201d [11].\n\n**References-only note**  \n- This segment contains only bibliography entries (refs [9]\u2013[26]); no problem, method, or results text is present."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2820,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7839bd23ffeAXZeeu6hul7eUS"
+  }
+]

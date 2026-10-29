@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## xu2023large.6.txt \u2014 Page 4 (continued)\n\n- **Problem**: Error taxonomy for LLM reasoning: wrong selection/hallucination (evidence) and no reasoning/perspective/process mistake (process). Inductive reasoning is more intricate than deductive/abductive, which align with typical NLP missing-fact scenarios.\n- **Method**: Experiments on 7 early-era LLMs (text-davinci-003, ChatGPT, BARD, LLaMA3.1-Chat, MistralInstruct-v0.3, Claude-3, GPT-4) across 15 logical reasoning datasets, zero-shot/one-shot/three-shot. Performance compared to SOTA; weighted results in Fig. 4a.\n- **Results**: Table 1 reports zero-shot/one-shot/three-shot percentages across datasets (bAbI-15, bAbI-16, CLUTRR, EntailmentBank, RuleTaker, FOLIO, Leap-Of-Thought, \u03b1-NLI, \u03b1-NLG, AbductiveRules, D*-Ab). BARD shows consistent superiority in deductive, inductive, abductive settings; text-davinci-003 relatively well; ChatGPT struggles except mixed-form where it performs better.\n- **Limitations**: No detailed per-dataset breakdown beyond tables; weighted results not fully detailed; findings restricted to 7 LLMs and 11 reasoning datasets; early-era models only.\n\n> \u201cLLMs do best in deductive setting, while they mostly struggle in inductive setting.\u201d (Page 4)  \n> \u201cBARD shows consistent superiority among deductive, inductive and abductive settings, while text-davinci-003 also does relatively well.\u201d (Page 4)\n\n## Page 5 (summary)\n\n- **Results**: Table 1 provides zero-shot/one-shot/three-shot correctness percentages for text-davinci-003, ChatGPT, BARD across 11 logical reasoning datasets grouped by De./In./Ab./Mix. BARD wins consistently; text-davinci-003 competitive; ChatGPT underperforms except mixed-form."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2657,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783c4a52ffe6a7ZZHhV3qKSl7"
+  }
+]

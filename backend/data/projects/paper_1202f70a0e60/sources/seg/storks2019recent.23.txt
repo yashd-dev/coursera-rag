@@ -1,0 +1,47 @@
+=== PAGE 30 (continued) ===
+ instead requiring a more advanced approach. For classification problems, simple
+baseline approaches are often calculated by random choice, choosing the majority class from the
+training data, or choosing the alternative with the highest overlap in n-grams with the question or
+provided text (Richardson et al., 2013). Examples of these baseline approaches can be found in the
+Story Cloze Test baselines, which include most of these approaches and more (Mostafazadeh et al.,
+2016). For open-ended problems, shallow lexical approaches (e.g., using language models) may
+again be used, as in the bAbI benchmark(Weston et al., 2016). When releasing a new benchmark,
+results from one or more state-of-the-art models for similar existing benchmarks will also typically
+be reported as baselines. Later, as more advanced approaches are developed for the benchmark, they
+are often used as state-of-the-art baselines on the next generation of benchmarks. This cycle continually boosts baseline performance over time, and drives the development of new and improved
+models as well as new benchmarks.
+Human performance measurement. To evaluate the progress of machine intelligence, human
+performance on benchmark tasks is often measured to provide a reference point. Human performance may be measured in a few different ways. A typical way is to select several human judges,
+which may be crowdsourced, to solve a random subset of the benchmark data. Performance may be
+averaged across judges, e.g., as done for CBT (Hill et al., 2015), or calculated through a majority
+vote of all judges, e.g., for SWAG (Zellers et al., 2018). Human performance can also be measured through annotator agreement, e.g., as done for ROCStories (Mostafazadeh et al., 2016). An
+“expert” human performance measurement may be additionally provided as a ceiling, typically by
+testing researchers involved with creating the dataset. This was done, for example, by the authors
+of RACE (Lai et al., 2017) and SWAG.
+In many benchmarks, one measure for computational models is to assess how close it comes to
+or whether it exceeds human performance. When a system exceeds human performance, this seems
+to suggest that the system has acquired the skills and knowledge required by the benchmark. However, due to the unexplainability of many neural models, this is often difficult to prove. Further, data
+biases have recently been found in many popular benchmarks (Gururangan et al., 2018), allowing
+both simple approaches (Schwartz et al., 2017) and state-of-the-art neural systems (Niven & Kao,
+2019) to exploit the biases and achieve artificially high performance. This puts these unexplainable
+systems under higher scrutiny.
+2.2.3 DATA B IASES
+When creating benchmarks, one challenge is the bias of data unintentionally introduced to the
+benchmark. For example, in the first release of the Visual Question Answering (VQA) benchmark
+(Agrawal, Lu, Antol, Mitchell, Zitnick, Parikh, & Batra, 2017), researchers found that machine
+learning models were learning several statistical biases in the data, and could answer up to 48% of
+questions in the validation set without seeing the image (Manjunatha, Saini, & Davis, 2018). This
+artificially high system performance is problematic, as it is not accredit to the underlying technology.
+Here, we summarize several key dimensions of biases encountered in previous NLI research. Some
+of these (e.g., class label distributions) are easier to avoid, while others (e.g., hidden correlation
+biases) are more difficult to address.
+Label distribution bias. Class label distribution bias is the easiest to avoid. In multiple-choice
+problems, ordinal positions of correct answers should be entirely randomized so that each possible
+30
+
+
+=== PAGE 31 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+choice appears in benchmark data in a uniform distribution. For other classification tasks where
+class labels have specific meanings, e.g., textual entailment, ensuring balance of class labels 

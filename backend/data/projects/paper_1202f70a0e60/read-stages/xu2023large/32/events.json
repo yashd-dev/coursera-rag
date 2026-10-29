@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.32 Notes\n\n**Problem** (P30): Investigate why Joy left a donut store with 13 instead of 12 donuts. Focus on factors beyond standard ordering: donut order configuration, store promotions/clerk gestures, customer negotiation/communication.\n\n**Method** (P30): Hypothetical analysis of Joy\u2019s experience. Considers: (1) an extra donut added to order configuration, (2) store clerk negotiation/generosity, (3) promotional offers, (4) clerk errors. Examines how customer service, promotions, order fulfillment, and communication skills influence outcomes.\n\n**Reported Results** (P30\u2013P31): No empirical results presented. Paper proposes four possible reasons for Joy\u2019s outcome: (a) store error, (b) promotional offer, (c) clerk mistake, (d) Joy\u2019s persuasive negotiation/communication skills. Highlights potential for unexpected bonuses in daily life.\n\n**Limitations** (P31\u2013P32): Study uses 0-shot and few-shot prompting across models (ChatGPT, Davinci-003, Bard). Reports reasoning quality varies by model and shot type but does not validate real-world donut-shop scenarios. No ground-truth data on Joy\u2019s actual transaction.\n\n**Quotes** (P30):\n- \u201cThese factors may have contributed to Joy\u2019s pleasant surprise at leaving the donut store with an extra donut, and highlight the importance of customer service, promotions, careful order fulfillment, and communication skills in the food service industry.\u201d\n- \u201cTherefore, the hypothesis proposes that the reason why Joy left the donut store with 13 instead of 12 donuts may be due to a generous gesture from the store clerk, a promotional offer that allowed her to receive an extra donut for free, a mistake made by the store clerk, or Joy\u2019s persuasive negotiation or effective communication skills.\u201d\n\n(notes continue on next page)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2436,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78365cd5ffexi2V683s9HyMpc"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.19 \u2014 Compact Factual Notes\n\n**Problem**: Study evaluates seven LLMs on mathematical reasoning (ReClor, LogiQA, LogiQA 2.0, LogiQA2NLI) using NeuLR dataset with symbolic reasoning tasks.\n\n**Method**: LLM selection (text-davinci-003, ChatGPT, BARD, LLaMA3.1-Chat, Mistral-Instruct-v0.3, Claude-3, GPT-4); prompt engineering; evaluation on theorem-proving and logic benchmarks; fact-length distribution analysis across mixed-form datasets.\n\n**Reported results**: Fact length distributions (TABLE 7) show model-dependent variation across ReClor, LogiQA, LogiQA 2.0, LogiQA2NLI; seven LLMs assessed on reasoning capabilities; NeuLR dataset employed for symbolic interface evaluation.\n\n**Limitations**: Source truncated mid-analysis; no performance metrics, accuracy scores, or error analysis provided in this segment; fact-length percentages presented without contextual interpretation.\n\n**Quotes** (\"APPENDIX A\"):\n- \"three previously representative LLMs (i.e., text-davinci-003, ChatGPT and BARD) and four up-to-date LLMs (i.e., LLaMA3.1-Chat, Mistral-Instruct-v0.3, Claude-3 and GPT-4)\"\n- \"Charge represents the charges for 1M tokens in the format of (input charge / output charge)\"\n\n**Attribution**: All bullets attributed to physical-page markers 15 (continued) and 16 as the source segment spans both pages. No background citations inferred.\n\n---\n*references-only segment: short note provided; no findings invented*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2810,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78394dacffeciryTbhW6IWBgU"
+  }
+]

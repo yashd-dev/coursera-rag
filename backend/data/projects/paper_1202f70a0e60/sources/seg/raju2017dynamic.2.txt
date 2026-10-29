@@ -1,0 +1,85 @@
+=== PAGE 1 (continued) ===
+ to incorporate memory mechanisms, which
+constitutes an essential problem for tasks that involve
+reasoning and iterative computations. Memory mechanisms
+enable models to store and update information from step to
+step, replicating how humans approach these problems. This
+capability becomes crucial in NLI since hearing the following
+sentence may force the reader to go back and reinterpret
+earlier sentences and see how they relate. It may be less
+beneficial for models to understand the whole relations
+between sentences, and investment in an effective memory
+mechanism may need to be revised.
+Given these challenges, Dynamic Memory Networks
+(DMNs) can improve NLI models. DMNs can update their
+memory states iteratively through the interaction between
+sentences, so they are highly optimized for step - by - step
+reasoning tasks (Michael et al., 2017). The DMNs allow for
+the information that was previously received to be reevaluated
+and reconstructed, enabling the improved production of
+conclusions when compared to stationary models. This type
+of iterative process is most helpful in contexts such as NLI
+because how sentences relate to one another is sometimes
+complex and may take many cycles of passes over data to
+discern.
+In this paper, we propose using DMNs to solve NLI,
+considering it a question - answering problem, where the
+premise would act as the context and the hypothesis as the
+question. We show this by showing how episodic memory
+updates with the DMN lead to achieving outstanding
+performance in inference from the two sentences as compared
+to the model that does not update its focus and is bound to
+make incremental updates to the understanding of the two
+sentences. The experiments we present in this paper
+demonstrate that this approach improves the model
+performance on standard NLI benchmarks and sheds light on
+when and how to use memory and attention mechanisms for
+solving other NLP tasks efficiently.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2219
+
+
+=== PAGE 2 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+
+Figure 1: Phases of Natural Language Processing (NLP)
+
+2. Related Work
+Deep Learning for SNLI
+The Stanford Natural Language Inference (SNLI) dataset has
+been essential in developing NLI, serving as a benchmarked
+corpus of labeled sentence pairs for model training and
+evaluation. Bowman, Angeli, et al. (2015) probably remain
+the only authors who employed deep learning techniques in
+this dataset. Training unlexicalized and lexicalized features
+supervised classifiers were their work, and the unlexicalized
+features yielded 50.4% accuracy compared to 78.2% of
+accurate lexicalized features. This approach was the first to
+highlight that feature selection is a critical issue for the NLI
+tasks. Besides these classifiers, the eight researchers proposed
+a new sentence encoding model using a 100 - dimensional
+LSTM encoder. This model trained each sentence
+individually and then joined the resultant embeddings from
+each of these training sessions, which was fed into a three layered MLP for classification, and it performed with 77.6%
+accuracy. When The hidden size was made of 300
+dimensions, accuracy was recorded at 80.6%, proving the
+effectiveness of dimensionality on the improved quality of
+feature vectors on the overall NLI task.
+Further work extended from here, seeking to vibrate even
+more complex approaches to sentence encoding. For
+example, Mou et al. (2016) developed a tree - structured
+composition model that integrated local feature extraction
+with much simpler pooling methods. This was particularly
+useful in capturing some hierarchical structures of sentences
+that are useful in analyzing syntactic relations. Through
+targeted construction of sentence features, the proposed
+method further improved the under

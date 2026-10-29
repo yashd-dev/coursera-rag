@@ -1,0 +1,44 @@
+=== PAGE 45 (continued) ===
+BASE can currently be accessed via an online interface and an API
+available at https://cogview.com/cogbase/.
+WebChild. WebChild by Tandon, de Melo, Suchanek, and Weikum (2014a) was originally a commonsense knowledge base of general noun-adjective relations extracted from Web content and other
+resources, consisting of about 78,000 distinct noun senses, 5,600 distinct adjective senses, and 4.6
+million assertions between them. These assertions captured fine-grained relations among the noun
+and adjective senses. Unlike other resources collected from the Web, WebChild consists primarily
+of commonsense knowledge, as it consists of generalized, fine-grained relationships between nouns
+and adjectives collected from various corpora rather than structured common knowledge taken directly from a single open source like Wikipedia. WebChild 2.0 (Tandon, de Melo, & Weikum, 2017)
+was later released to include over 2 million concepts and activities, and over 18 million such assertions. Data from WebChild can be browsed and downloaded online at https://www.mpi-inf.
+mpg.de/departments/databases-and-information-systems/research/yagonaga/webchild/.
+LocatedNear. Xu, Lin, and Zhu (2018a) claim that objects which tend to be near each other (e.g.,
+silverware, a plate, and a glass) is a type of commonsense knowledge lacking in previous knowledge
+bases like ConceptNet 5.5 (Speer et al., 2017). They refer to this property as LocatedNear, and to
+address this issue, they create two datasets which we refer to jointly as LocatedNear. The first
+45
+
+
+=== PAGE 46 ===
+S TORKS , G AO , & C HAI
+
+consists of 5,000 sentences describing scenes of two objects labeled for whether the objects tend to
+occur near each other, which can serve as a benchmark task similar to those introduced in Section 2.
+The second consists of 500 pairs of objects with human-produced confidence scores for how likely
+the objects are to appear near each other. These resources can be downloaded from https://
+github.com/adapt-sjtu/commonsense-locatednear.
+ATOMIC. The Atlas of Machine Commonsense (ATOMIC) by Sap et al. (2019a) is a crowdsourced knowledge graph consisting of about 300,000 nodes corresponding to short textual descriptions of events, and about 877,000 "if-event-then" triples representing nine types of if-then
+relations between everyday events. Rather than taxonomic or ontological knowledge, this graph
+contains easily-accessed inferential knowledge. Sap et al. demonstrate that neural models can
+learn simple reasoning skills from ATOMIC which can be used to make inferences about previously unseen events. ATOMIC can be browsed and downloaded for free at https://homes.
+cs.washington.edu/~msap/atomic/.
+ASER. Similar to ATOMIC, the Activities, States, Events, and Relations knowledge graph by
+Zhang, Liu, Pan, Song, Wing-Ki, and Leung (2019) consists of everyday events and relations between them which can be used for inference. It is on a much larger scale, though, containing 194
+million events, 64 million relations, and fifteen types of relations. Further, these relations are automatically extracted from 11 billion tokens of unstructured text data rather than crowdsourced.
+More information about ASER and a free download link can be found at https://hkustknowcomp.github.io/ASER/.
+3.2 Approaches to Creating Knowledge Resources
+Similar to creating the benchmarks described in Section 2, various approaches have been applied
+to create knowledge resources. These approaches range from manual encoding by experts, to text
+mining from web documents, and collection through crowdsourcing. A detailed description of these
+approaches is provided by Davis and Marcus (2015). Here, we give a brief discussion about pros
+and cons of these approaches.
+Manual encoding. Early knowledge bases were often manually created. The classic example of
+this is Cyc, which is produced by knowledge engineers who hand-code commonsense knowledge
+into the CycL formalism (Lenat & Guha, 1989). Cyc has been going through continuous

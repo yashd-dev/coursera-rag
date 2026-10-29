@@ -1,0 +1,86 @@
+=== PAGE 9 (continued) ===
+chuh, P., Shi, K., Tsvyashchenko, S.,
+Maynez, J., Rao, A., Barnes, P., Tay, Y., Shazeer, N. M.,
+Prabhakaran, V., Reif, E., Du, N., Hutchinson, B. C.,
+Pope, R., Bradbury, J., Austin, J., Isard, M., Gur-Ari,
+G., Yin, P., Duke, T., Levskaya, A., Ghemawat, S., Dev,
+S., Michalewski, H., Garcı́a, X., Misra, V., Robinson,
+K., Fedus, L., Zhou, D., Ippolito, D., Luan, D., Lim,
+H., Zoph, B., Spiridonov, A., Sepassi, R., Dohan, D.,
+Agrawal, S., Omernick, M., Dai, A. M., Pillai, T. S., Pellat, M., Lewkowycz, A., Moreira, E., Child, R., Polozov,
+O., Lee, K., Zhou, Z., Wang, X., Saeta, B., Dı́az, M., Firat, O., Catasta, M., Wei, J., Meier-Hellstern, K. S., Eck,
+D., Dean, J., Petrov, S., and Fiedel, N. Palm: Scaling language modeling with pathways. ArXiv, abs/2204.02311,
+2022.
+
+Roberts, A., Chung, H. W., Levskaya, A., Mishra, G., Bradbury, J., Andor, D., Narang, S., Lester, B., Gaffney, C.,
+Mohiuddin, A., Hawthorne, C., Lewkowycz, A., Salcianu,
+A., van Zee, M., Austin, J., Goodman, S., Soares, L. B.,
+Hu, H., Tsvyashchenko, S., Chowdhery, A., Bastings,
+J., Bulian, J., Garcı́a, X., Ni, J., Chen, A., Kenealy, K.,
+Clark, J., Lee, S., Garrette, D. H., Lee-Thorp, J., Raffel,
+C., Shazeer, N. M., Ritter, M., Bosma, M., Passos, A.,
+Maitin-Shepard, J. B., Fiedel, N., Omernick, M., Saeta,
+B., Sepassi, R., Spiridonov, A., Newlan, J., and Gesmundo, A. Scaling up models and data with t5x and
+seqio. ArXiv, abs/2203.17189, 2022.
+Scardapane, S., Scarpiniti, M., Baccarelli, E., and Uncini,
+A. Why should we add early exits to neural networks?
+Cognitive Computation, 12(5):954–966, 2020.
+
+Dehghani, M., Arnab, A., Beyer, L., Vaswani, A., and Tay,
+Y. The efficiency misnomer. ArXiv, abs/2110.12894,
+2021.
+
+Schuster, T., Fisch, A., Jaakkola, T., and Barzilay, R. Consistent accelerated inference via confident adaptive transformers. In Conference on Empirical Methods in Natural
+Language Processing, 2021.
+
+Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. Bert:
+Pre-training of deep bidirectional transformers for language understanding. ArXiv, abs/1810.04805, 2019.
+
+Schwartz, R., Stanovsky, G., Swayamdipta, S., Dodge, J.,
+and Smith, N. A. The right tool for the job: Matching
+model and instance complexities. In Annual Meeting of
+the Association for Computational Linguistics, 2020.
+
+Elbayad, M., Gu, J., Grave, E., and Auli, M. Depth-adaptive
+transformer. ArXiv, abs/1910.10073, 2019.
+Han, Y., Huang, G., Song, S., Yang, L., Wang, H., and Wang,
+Y. Dynamic neural networks: A survey. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44:
+7436–7456, 2021.
+
+Shazeer, N. M. Fast transformer decoding: One write-head
+is all you need. ArXiv, abs/1911.02150, 2019.
+
+Hendrycks, D. and Gimpel, K. Bridging nonlinearities and
+stochastic regularizers with gaussian error linear units.
+ArXiv, abs/1606.08415, 2016.
+
+So, D. R., Ma’nke, W., Liu, H., Dai, Z., Shazeer, N. M., and
+Le, Q. V. Primer: Searching for efficient transformers for
+language modeling. ArXiv, abs/2109.08668, 2021.
+
+Hennessy, J. L. and Patterson, D. A. Computer Architecture:
+A Quantitative Approach. Morgan Kaufmann, Amsterdam, 5 edition, 2012. ISBN 978-0-12-383872-8.
+
+Stern, M., Shazeer, N., and Uszkoreit, J. Blockwise parallel
+decoding for deep autoregressive models. Advances in
+Neural Information Processing Systems, 31, 2018.
+
+Hinton, G. E., Vinyals, O., and Dean, J. Distilling the
+knowledge in a neural network. ArXiv, abs/1503.02531,
+2015.
+
+Sukhbaatar, S., Grave, E., Bojanowski, P., and Joulin, A.
+Adaptive attention span in transformers. In Annual Meeting of the Association for Computational Linguistics,
+2019.
+
+Hubara, I., Courbariaux, M., Soudry, D., El-Yaniv, R., and
+Bengio, Y. Quantized neural networks: Training neural networks with low precision weights and activations.
+ArXiv, abs/1609.07061, 2016.
+
+Sun, X., Ge, T., Wei, F., and Wang, H. Instantaneous grammatical error correction with shallow aggressive decoding.
+ArXiv, abs/2106.04970, 2021.
+9
+
+
+=== PAGE 10 ===
+Fast Inference from Transformers via Speculat

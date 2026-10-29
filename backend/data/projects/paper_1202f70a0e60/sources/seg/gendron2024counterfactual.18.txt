@@ -1,0 +1,64 @@
+=== PAGE 18 (continued) ===
+a confidence score as a float between 0 and 1. Follow strictly
+the provided format.
+
+Here is the user prompt:
+The variable has the following attributes: description: {description}, type: {type}, possible values: {
+values}, context: {context}. The current value is {current_value}. Propose a counterfactual value.
+
+B.4
+
+Evaluation
+
+The evaluation of the causal factual and counterfactual models is performed by an LLM using the
+following prompts. Here is the system prompt:
+Your task is to evaluate the plausibility of a set of events linked by causal relationships. The events
+are described by a high-level description and a value. The events are linked by causal relationships.
+The causal relationships are described by a high-level description. The overall plausibility of the
+set of events corresponds to the factorization of the plausibility of each event’s occurrence given
+its causes. Reason step-by-step. Start by describing the events and the causal relationships. Explain
+in your own words the reasons for the plausibility of each event. Finally, provide an overall score
+for the plausibility of the sequence of events. Give an explanation describing your reasoning.
+Provide an overall confidence score as a float between 0 and 1. Follow strictly the provided format.
+
+The user prompt describes the events in the topological order of the causal graph. Before each event,
+the causal relationships with its parents is also described. Here is an example:
+The causal graph is composed of the following events:
+({parent rank} -> {target rank}) {edge description}.
+{target rank}. {target description}. The value is {node current_value}
+
+C
+
+Supplement to the Experiments
+
+In this section, we describe in more details the counterfactual causal inference example from Table 4.
+The document from which is extracted the causal graph is shown below:
+18
+
+
+=== PAGE 19 ===
+KUALA LUMPUR: Bursa Malaysia downtrend could be far from over as there is always more room to decline
+depending on the severity of COVID-19 pandemic and oil price war, said economists after key benchmark
+FBM KLCI took another beating in the early trading session yesterday.
+To what may be seen as continued selling pressure from last week’s Friday the 13th, the FTSE Bursa
+Malaysia KLCI (FBM KLCI) lost 44.99 points to 1,299.76 at 9.10am yesterday, compared with Friday’s
+close of 1,344.75, after opening 25.38 points lower at 1,319.37 yesterday morning.
+At market closing yesterday, the FBM KLCI closed at 4.77 per cent lower to 1,280.63 points with turnover
+at 4.473 billion shares valued at RM3.687 billion.
+Bank Islam chief economist Dr Mohd Afzanizam Abdul Rashid said if history is of any guide, the FBM KLCI
+has fallen sharply between January 11, 2008 (1,516.22 points) and October 29, 2009 (829.41 points).
+He said during the Asia Financial Crisis in 1997/1998, the FBM KLCI was down massively by 79.2 per cent
+between February 25, 1997 (1,265.01 points) and September 1, 1998 (262.7 points).
+"For now, the FBM KLCI touches its peak at 1,895.18 points on April 19, 2018 and has plunged by 29.0 per
+cent to 1,344.75 points as of March 13, 2020. There is always more room to decline obviously due to
+the virus outbreak and oil price war," he told NST Business.
+CGS-CIMB analyst Ivy Ng Lee Fang said the research firm has cut its year-end FBM KLCI target to 1,449
+points.
+"We advise investors to seek shelter in defensive and high-dividend-yield stocks until the concerns over
+the global spread of COVID-19 subside.
+"These, together with Malaysia’s unexpected change of coalition government, could pose downside risks to
+corporate earnings, which are difficult to measure at this time," it said.
+Ng said during the global financial crisis, FBM KLCI fell by 45 per cent from its peak to 829 points, its
+lowest ever and FBM KLCI earnings fell by 8.7 per cent in 2009.
+She said there is a potential earning downside risk of 10.3 per cent to its current 1.6 per cent FBM KLCI
+earnings per share growth forecast if the earnings risk

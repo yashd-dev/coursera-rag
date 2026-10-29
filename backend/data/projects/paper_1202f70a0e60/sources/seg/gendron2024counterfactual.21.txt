@@ -1,0 +1,58 @@
+=== PAGE 21 (continued) ===
+aph doesn’t explicitly link these
+other factors to the oil and gas sector condition, but they are plausible
+contributors. Overall, the sequence of events seems somewhat plausible but
+lacks explicit causal links for all influencing factors, resulting in a moderate
+score and confidence.
+The causal graph has several issues that impact its overall plausibility. First,
+the event ’FBM KLCI earnings decline in 2009’ is given a value of 5.0,
+which is plausible given the historical context of the 2008-2009 financial
+crisis. However, the subsequent events ’Severity of COVID-19 pandemic’
+and ’Severity of oil price war’ are not assigned values, making it difficult to
+evaluate their plausibility. The link between ’FBM KLCI earnings decline
+in 2009’ and ’Potential earning downside risk’ is plausible, as past earnings
+declines can influence future downside risks. However, the lack of values
+for the severity of the pandemic and oil price war significantly reduces the
+confidence in the overall plausibility of the causal graph.
+
+21
+
+
+=== PAGE 22 ===
+Table 8: Example of graph scores explanations given by LLaMA3.1 in Table 5. FG stands for Factual
+Graph and CG for Counterfactual Graph. Sc stands for Score and Cf stands for confidence. We show
+the explanations for one graph and two counterfactual graphs.
+Sc Cf LLaMA-3.1
+FG
+
+0.7
+
+0.8
+
+CG1
+
+0.6
+
+0.7
+
+CG2
+
+0.0
+
+0.8
+
+The plausibility of the sequence of events is high due to the following reasons:
+COVID-19 pandemic (event 0) has a direct impact on recessionary trends
+(event 1). Fiscal policy responses (event 2) mitigated the effects of recessionary trends. However, oil price war (event 3) influenced FBM KLCI (event 4),
+which was also impacted by COVID-19 pandemic and recessionary trends.
+The event ’COVID-19 pandemic’ with a value of True increases the likelihood of recessionary trends and has an impact on FBM KLCI. The event
+’Oil price war’ with a value of 80 influences FBM KLCI but is not directly
+linked to recessionary trends, despite its potential indirect impact. However,
+recessionary trends are False which decreases the likelihood of FBM KLCI
+being influenced by it.
+The COVID-19 pandemic has had a significant impact on the global economy,
+leading to recessionary trends. However, fiscal policy responses have mitigated some of these effects. The oil price war has also influenced the FBM
+KLCI, but its overall value remains high.
+
+22
+

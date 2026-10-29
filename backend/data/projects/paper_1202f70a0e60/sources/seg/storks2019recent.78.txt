@@ -1,0 +1,51 @@
+=== PAGE 93 (continued) ===
+sense LocatedNear
+Knowledge. In Proceedings of the 56th Annual Meeting of the Association for Computational
+Linguistics (ACL 2018), pp. 96–101, Melbourne, Australia. Association for Computational
+Linguistics.
+Xu, J., Zhou, H., Young, T., Zhao, H., Huang, M., & Zhu, X. (2018b). Commonsense Knowledge
+Aware Conversation Generation with Graph Attention. In Proceedings of the Twenty-Seventh
+International Joint Conference on Artificial Intelligence (IJCAI 2018), pp. 4623–4629, Stockholm, Sweden. IJCAI.
+Yang, D., Lavie, A., Dyer, C., & Hovy, E. (2015). Humor Recognition and Humor Anchor Extraction. In Proceedings of the 2015 Conference on Empirical Methods in Natural Language
+Processing, pp. 2367–2376, Lisbon, Portugal. Association for Computational Linguistics.
+Yang, S., Gao, Q., Sadiya, S., & Chai, J. (2018a). Commonsense Justification for Action Explanation. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language
+Processing (EMNLP 2018), pp. 2627–2637, Brussels, Belgium. Association for Computational Linguistics.
+Yang, Y., Birnbaum, L., Wang, J.-P., & Downey, D. (2018b). Extracting Commonsense Properties
+from Embeddings with Limited Human Guidance. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018), pp. 644–649, Melbourne,
+Australia. Association for Computational Linguistics.
+Yang, Z., Dai, Z., Yang, Y., Carbonell, J., Salakhutdinov, R., & Le, Q. V. (2019). XLNet: Generalized Autoregressive Pretraining for Language Understanding. arXiv: 1906.08237.
+Yatskar, M. (2018). A Qualitative Comparison of CoQA, SQuAD 2.0 and QuAC. In Proceedings
+of the 2019 Conference of the North American Chapter of the Association for Computational
+Linguistics: Human Language Technologies (NAACL HLT 2019), Minneapolis, MN, USA.
+Association for Computational Linguistics.
+Zadeh, L. A. (1975). The concept of a linguistic variable and its application to approximate reasoning—I. Information Sciences, 8(3), 199–249.
+Zang, L.-J., Cao, C., Cao, Y.-N., Wu, Y.-M., & CAO, C.-G. (2013). A Survey of Commonsense
+Knowledge Acquisition. Journal of Computer Science and Technology, 28(4), 689–719.
+Zellers, R. (2019). Why We Released Grover..
+Zellers, R., Bisk, Y., Farhadi, A., & Choi, Y. (2019). From Recognition to Cognition: Visual Commonsense Reasoning. In Proceedings of the 2019 IEEE/CVF Conference on Computer Vision
+and Pattern Recognition (CVPR 2019), Long Beach, CA, USA. IEEE.
+Zellers, R., Bisk, Y., Schwartz, R., & Choi, Y. (2018). SWAG: A Large-Scale Adversarial Dataset
+for Grounded Commonsense Inference. In Proceedings of the 2018 Conference on Empirical
+93
+
+
+=== PAGE 94 ===
+S TORKS , G AO , & C HAI
+
+Methods in Natural Language Processing (EMNLP 2018), Brussels, Belgium. Association
+for Computational Linguistics.
+Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A., & Choi, Y. (2019a). HellaSwag: Can a Machine
+Really Finish Your Sentence?. In Proceedings of the 57th Annual Meeting of the Association
+for Computational Linguistics.
+Zellers, R., Holtzman, A., Rashkin, H., Bisk, Y., Farhadi, A., Roesner, F., & Choi, Y. (2019b).
+Defending Against Neural Fake News. arXiv: 1905.12616.
+Zhang, C., & Chai, J. (2009). What do We Know about Conversation Participants: Experiments
+on Conversation Entailment. In Proceedings of the SIGDIAL 2009 Conference, pp. 206–215.
+Association for Computational Linguistics.
+Zhang, C., & Chai, J. (2010). Towards Conversation Entailment: An Empirical Investigation. In
+Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing,
+pp. 756–766. Association for Computational Linguistics.
+Zhang, H., Liu, X., Pan, H., Song, Y., Wing-Ki, C., & Leung (2019). ASER: A Large-scale Eventuality Knowledge Graph. arXiv: 1905.00270.
+Zhang, S., Liu, X., Liu, J., Gao, J., Duh, K., & Van Durme, B. (2018). ReCoRD: Bridging the Gap
+between Human and Machine Commonsense Reading Comprehension. arXiv: 1810.12885.
+Zhang, S., Rudinger, R., Duh, K., & Van Durme, B. (2017). Ordi

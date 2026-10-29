@@ -1,0 +1,91 @@
+=== PAGE 4 (continued) ===
+tion approach in
+Section 2.3.2.
+2.2.1. M EDUSA -1: F ROZEN BACKBONE
+To train M EDUSA heads with a frozen backbone model, we
+can use the cross-entropy loss between the prediction of
+M EDUSA heads and the ground truth. Specifically, given
+the ground truth token yt+k+1 at position t + k + 1, the
+(k)
+loss for the k-th head is Lk = − log pt (yt+k+1 ) where
+(k)
+pt (y) denotes the probability of token y predicted by the
+k-th head. We also observe that Lk is larger when k is larger,
+which is reasonable since the prediction of the k-th head is
+more uncertain when k is larger. Therefore, we can add a
+weight λk to Lk to balance the loss of different heads. And
+the total M EDUSA loss is:
+
+Figure 2. We demonstrates the use of tree attention to process multiple candidates concurrently. As exemplified, the top-2 predictions
+from the first M EDUSA head and the top-3 from the second result
+in a total of 2 × 3 = 6 candidates. Each of these candidates
+corresponds to a distinct branch within the tree structure. To guarantee that each token only accesses its predecessors, we devise
+an attention mask that exclusively permits attention flow from the
+current token back to its antecedent tokens. The positional indices
+for positional encoding are adjusted in line with this structure.
+
+basis for candidate formation, where sk is a designated
+hyperparameter. These candidates are established by determining the Cartesian product of the top-sk predictions
+from each head. For instance, in Figure 2, with s1 = 2 and
+s2 = 3, each first head prediction can be succeeded by any
+prediction from the second head. This leads to a tree structure where sk branches exist at the k-th level (considering a
+virtual root as the 0-level, in practice, this 0-level is for the
+prediction of the language model head of the original model,
+which can be sampled independently). Within this tree, only
+a token’s predecessors are seen as historical context, and our
+attention mask ensures that the attention is only applied on a
+token’s predecessors. By employing this mask and properly
+setting the positional indices for positional encoding, we
+can process numerous candidates simultaneously without
+the need to expand the batch size. The cumulative number
+PK Qk
+of new tokens is calculated as k=1 i=1 si .
+
+LM EDUSA-1 =
+
+K
+X
+
+(k)
+
+−λk log pt (yt+k+1 ).
+
+(1)
+
+k=1
+
+In practice, we set λk as the k-th power of a constant like
+0.8. Since we only use the backbone model for providing
+the hidden states, we can use a quantized version of the
+backbone model to reduce the memory consumption. This
+introduces a more democratized way to accelerate LLM
+inference, as with the quantization, M EDUSA can be trained
+for a large model on a single consumer GPU similar to
+QLoRA (Dettmers et al., 2023). The training only takes
+a few hours (e.g., 5 hours for M EDUSA-1 on Vicuna 7B
+model with a single NVIDIA A100 PCIE GPU to train on
+60k ShareGPT samples).
+2.2.2. M EDUSA -2: J OINT T RAINING
+To further improve the accuracy of M EDUSA heads, we can
+train M EDUSA heads together with the backbone model.
+However, this requires a special training recipe to preserve
+the backbone model’s next-token prediction capability and
+output quality. To achieve this, we propose three strategies:
+
+In this section, we demonstrate the most simple and regular
+way to construct the tree structure by taking the Cartesian
+product. However, it is possible to construct the tree structure in a more sophisticated way and exploit the unbalanced
+accuracy of different top predictions of different heads. We
+will discuss this in Section 2.3.3.
+
+• Combined loss: To keep the backbone model’s
+next-token prediction capability, we need to add the
+cross-entropy loss of the backbone model LLM =
+(0)
+− log pt (yt+1 ) to the M EDUSA loss. We also add
+a weight λ0 to balance the loss of the backbone model
+and the M EDUSA heads. Therefore, the total loss is:
+
+2.2. Training Strategies
+At the most basic level, we can train M EDUSA heads by
+freezing the backbone model a

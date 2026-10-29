@@ -1,0 +1,154 @@
+=== PAGE 4 (continued) ===
+y, evidence selection
+process category can be further divided into wrong selection
+and hallucination. The former denotes that LLMs select the
+wrong facts or ignore the necessary facts from the beginning
+of the reasoning. The latter denotes that LLMs select the
+evidence which contradicts the given context or can not
+be verified by the context. Reasoning process category can
+be further divided into no reasoning, perspective mistake and
+process mistake. The first error type signifies instances where
+LLMs fail to conduct reasoning, instead merely listing the
+given facts and the final answer. The second denotes LLMs
+starting from an irrelevant point or focusing on an improper
+perspective for the correct answer. The last refers to LLMs
+commencing from a proper viewpoint, but making mistakes
+during the reasoning process.
+
+4
+
+OVERALL E XPERIMENTS
+
+In this section, we conduct evaluation experiments on three
+early-era LLMs (i.e., text-davinci-003, ChatGPT and BARD)
+and four trending LLMs (i.e., LLaMA3.1-Chat, MistralInstruct-v0.3, Claude-3 and GPT-4) under various prompting methods. Table 1 presents the overall answer correctness
+of these three early-stage LLMs on fifteen logical reasoning
+datasets. Table 2 supplements the performances of four
+popular LLMs. Generally, LLMs’ performances on logical
+reasoning tasks still have significant room for improvement
+in comparison to the state-of-the-art (SOTA) metric. Most
+of the results fall short of those achieved by smaller-sized
+SOTA models. We provide a detailed analysis of the results
+from the following perspectives. For simplicity, we only include text-davinci-003, ChatGPT and BARD for discussion.
+Firstly, we conduct an analysis of LLMs’ performances
+across four reasoning manners, solely focusing on the zeroshot results to facilitate a clear comparison. Furthermore,
+we introduce the relative performance metric (i.e., LLM
+accuracy/SOTA) to reflect the relative capability of LLMs
+in comparison to SOTA performances in Fig. 3. We also
+calculate the weighted results of four reasoning manners in
+Fig. 4a. From the results, ChatGPT performs worse in deductive and inductive settings compared with text-davinci-003
+and BARD. In the abductive setting, three LLMs show comparable performances and BARD wins with slight advantages. In the mixed-form setting, ChatGPT performs better
+and BARD ranks second. Overall, BARD shows consistent
+superiority among deductive, inductive and abductive
+settings, while text-davinci-003 also does relatively well.
+It seems that ChatGPT struggles in the three settings, but is
+better at mixed-form reasoning. Also, we compare the LLM
+performances between deductive, inductive and abductive
+settings. LLMs do best in deductive setting, while they
+mostly struggle in inductive setting. We argue that deductive and abductive reasoning align with typical NLP scenarios, where LLMs have to provide missing facts. Conversely,
+inductive reasoning necessitates extracting high-level rules
+or knowledge from the given facts, which is more intricate
+and may not be readily available in the training corpus.
+
+
+=== PAGE 5 ===
+5
+
+text-davinci-003
+0-shot 1-shot 3-shot
+
+0-shot
+
+De.
+
+bAbI-15
+EntailmentBank
+RuleTaker
+FOLIO
+Leap-Of-Thought
+
+✓
+✓
+
+85.00
+93.00
+64.00
+48.00
+82.00
+
+76.00
+88.00
+60.00
+53.00
+90.00
+
+75.00
+89.00
+62.00
+52.00
+87.00
+
+38.40
+83.82
+42.00
+50.00
+72.61
+
+46.40
+82.06
+38.00
+50.98
+74.01
+
+In.
+
+bAbI-16
+CLUTRR
+
+✓
+✓
+
+84.00
+6.00
+
+81.00
+23.00
+
+74.00
+20.00
+
+17.10
+21.99
+
+Ab.
+
+α-NLI
+α-NLG
+AbductiveRules
+D*-Ab
+
+✓
+✓
+✓
+
+74.00
+9.00
+75.00
+8.00
+
+70.00
+10.00
+42.00
+21.00
+
+74.00
+12.00
+35.00
+23.00
+
+Mix
+
+TABLE 1: Overall results of LLMs’ answer correctness across the zero-shot, one-shot and three-shot logical reasoning
+settings. The notations De., In., Ab. and Mix correspond to deductive, inductive, abductive and mixed-form reasoning,
+respectively (as in the following tables and figures). Gen. indicates whether the task is a generation one. The percentage
+signs (%) of performance values are omitted for simplicity 

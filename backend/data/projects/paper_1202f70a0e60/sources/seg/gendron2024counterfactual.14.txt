@@ -1,0 +1,59 @@
+=== PAGE 13 (continued) ===
+uage models to follow instructions with human
+feedback. In Sanmi Koyejo, S. Mohamed, A. Agarwal, Danielle Belgrave, K. Cho, and A. Oh
+(eds.), Advances in Neural Information Processing Systems 35: Annual Conference on Neural
+Information Processing Systems 2022, NeurIPS 2022, New Orleans, LA, USA, November 28
+- December 9, 2022, 2022. URL http://papers.nips.cc/paper_files/paper/2022/
+hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html.
+[33] Nathan H Parrish, Anna L Buczak, Jared T Zook, James P Howard, Brian J Ellison, and
+Benjamin D Baugher. Crystal cube: Multidisciplinary approach to disruptive events prediction.
+In Advances in Human Factors, Business Management and Society: Proceedings of the AHFE
+2018 International Conference on Human Factors, Business Management and Society, July
+21-25, 2018, Loews Sapphire Falls Resort at Universal Studios, Orlando, Florida, USA 9, pp.
+571–581. Springer, 2019.
+[34] Judea Pearl. Causality.
+CBO9780511803161.
+
+Cambridge university press, 2 edition, 2009.
+
+doi: 10.1017/
+
+[35] Lorien Pratt, Christophe Bisson, and Thierry Warin. Bringing advanced technology to strategic
+decision-making: The decision intelligence/data science (di/ds) integration framework. Futures,
+152:103217, 2023.
+[36] Linlu Qiu, Liwei Jiang, Ximing Lu, Melanie Sclar, Valentina Pyatkin, Chandra Bhagavatula,
+Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, and Xiang Ren. Phenomenal yet puzzling:
+Testing inductive reasoning capabilities of language models with hypothesis refinement. In
+The Twelfth International Conference on Learning Representations, ICLR 2024, Vienna, Austria, May 7-11, 2024. OpenReview.net, 2024. URL https://openreview.net/forum?id=
+bNt7oajl2a.
+[37] Norbert Reez. Foresight-based leadership. decision-making in a growing ai environment. In
+International Security Management: New Solutions to Complexity, pp. 323–341. Springer, 2020.
+13
+
+
+=== PAGE 14 ===
+[38] Machel Reid, Nikolay Savinov, Denis Teplyashin, Dmitry Lepikhin, Timothy P. Lillicrap, JeanBaptiste Alayrac, Radu Soricut, Angeliki Lazaridou, Orhan Firat, Julian Schrittwieser, Ioannis
+Antonoglou, Rohan Anil, Sebastian Borgeaud, Andrew M. Dai, Katie Millican, Ethan Dyer,
+Mia Glaese, Thibault Sottiaux, Benjamin Lee, Fabio Viola, Malcolm Reynolds, Yuanzhong
+Xu, James Molloy, Jilin Chen, Michael Isard, Paul Barham, Tom Hennigan, Ross McIlroy,
+Melvin Johnson, Johan Schalkwyk, Eli Collins, Eliza Rutherford, Erica Moreira, Kareem Ayoub,
+Megha Goel, Clemens Meyer, Gregory Thornton, Zhen Yang, Henryk Michalewski, Zaheer
+Abbas, Nathan Schucher, Ankesh Anand, Richard Ives, James Keeling, Karel Lenc, Salem
+Haykal, Siamak Shakeri, Pranav Shyam, Aakanksha Chowdhery, Roman Ring, Stephen Spencer,
+Eren Sezener, and et al. Gemini 1.5: Unlocking multimodal understanding across millions of
+tokens of context. CoRR, abs/2403.05530, 2024. doi: 10.48550/ARXIV.2403.05530. URL
+https://doi.org/10.48550/arXiv.2403.05530.
+[39] Aaron B Rosa, Niklas Gudowsky, and Petteri Repo. Sensemaking and lens-shaping: Identifying
+citizen contributions to foresight through comparative topic modelling. Futures, 129:102733,
+2021.
+[40] Jose Rozanec, Beno Šircelj, Michael Cochez, and Gregor Leban. Back to the future: predicting
+causal relationships influencing oil prices. In The Second Tiny Papers Track at ICLR 2024.
+[41] Joze Rozanec, Peter Nemec, Gregor Leban, and Marko Grobelnik. Ai, what does the future hold
+for us? automating strategic foresight. In Companion of the 2023 ACM/SPEC International
+Conference on Performance Engineering, pp. 247–248, 2023.
+[42] Jože M Rožanec, Radu Prodan, Dumitru Roman, Gregor Leban, and Marko Grobelnik. Ai-based
+strategic foresight for environment protection. In Symposium on AI, Data and Digitalization
+(SAIDD 2023), volume 7, 2023.
+[43] Jože M Rožanec, Beno Šircelj, Peter Nemec, Gregor Leban, and Dunja Mladenić. Building a
+causality graph for strategic foresight. 2023.
+[44] Bernhard Schölkopf, Francesco Locatello, Stefan Bauer, Nan Rosemary Ke, Nal Kalchbrenner

@@ -1,0 +1,88 @@
+=== PAGE 5 (continued) ===
+tion receives equal weight and scores its candidates through Equation 1. The paired
+configurations of GSM8K, GPQA, and MMLU reuse their respective question populations,
+changing the candidate count or demonstration context.
+Candidate construction preserves the supplied answers for multiple-choice tasks. GSM8K
+pairs the numerical answer with three or nine generated distractors; synthetic chess pairs one
+legal move with three illegal moves. WinoGrande fills the sentence gap, and HellaSwag uses the
+candidate ending as the NLI hypothesis.
+The additional reranking evaluations use PIQA and CommonsenseQA [6, 39]; fixedcheckpoint PIQA and SocialIQA tests compare both interfaces on the same questions [36].
+JevBench equally averages 18 direct-decision families over 231 questions [3]. Kev equally
+averages six development/test selections from its decision suite and two transfer suites [31].
+Reporting. We report accuracy in percent and paired changes in percentage points (pp). For
+each contrast, we first calculate the difference within each of the four settings and then report its
+mean and descriptive SE; SEs for absolute accuracy are calculated directly from the four model
+scores. These SEs summarize variation across settings that share training pools and evaluation
+questions. Appendix D examines sensitivity to source weighting, omission of individual sources,
+and repetition of the reference run.
+
+4. Readout Behavior Across Decision Interfaces
+We compare pointer and pooling models under both request interfaces to test whether the relative
+performance of the readouts changes with how answers are scored. Each checkpoint is held
+fixed across interfaces, and both interfaces use the same PIQA and SocialIQA questions. PIQA
+contains 1,838 validation questions and uses eight higher-rate checkpoints. SocialIQA contains
+1,954 development questions and uses eight checkpoints at each of two training budgets.
+
+Population and training
+PIQA, higher-rate models
+SocialIQA, one epoch
+SocialIQA, two epochs
+
+Direct accuracy (%)
+Pointer
+Pooling
+79.33
+73.76
+73.67
+
+NLI accuracy (%)
+Pointer Pooling
+
+79.20
+71.43
+71.81
+
+65.15
+61.12
+56.82
+
+73.22
+61.40
+58.84
+
+Pooling minus pointer (pp)
+Direct
+NLI
+−0.12±1.41
+−2.33±0.64
+−1.86±0.23
+
++8.07±3.76
++0.28±0.72
++2.02±1.20
+
+Table 1 | The request interface changes the readout comparison on the same questions and fixed
+checkpoints. Accuracies are four-setting means; differences include descriptive SEs. Neither
+source enters MC11.
+On PIQA, the readouts are nearly tied under direct selection, whereas pooling leads the
+pointer under reranking: the relative difference moves from −0.12 to +8.07 pp (Table 1). SocialIQA shows the same direction of interface interaction at both budgets, with a positive
+
+5
+
+
+=== PAGE 6 ===
+interaction in every setting. Direct selection has higher mean absolute accuracy on both sources;
+within reranking, pooling becomes the stronger readout on average.
+The readout comparison also depends on the NLI option wording. Across 18 combinations of
+three descriptions and six label orders on PIQA, pooling’s mean advantage is +3.18 ± 3.27 pp; one
+description set instead favors the pointer by 1.80 pp after averaging over orders (Appendix B.4).
+
+5. Reranking Accuracy and Parameter Efficiency
+The core comparisons use the same one-epoch recipe, with peak learning rates of 1.25×10−5 for
+both the head and adapters and adapter rank 64. We first examine the combined design, then
+use controls on adapter allocation, readout, and training to explain the choices.
+5.1. Combining Selective Adaptation and Span Pooling
+Combining the two choices gives the highest MC11 accuracy among the four matched configurations, with less than half the trainable parameters of the all-module models (Table 2). Starting
+from the all-module pointer at 50.28%, removing FFN adapters raises accuracy to 52.49%, a
+paired gain of 2.21 ± 0.66 pp. Mean-span pooling then raises it to 53.39% at the same parameter
+count, adding 0.91 ± 0.35 pp. Both steps improv

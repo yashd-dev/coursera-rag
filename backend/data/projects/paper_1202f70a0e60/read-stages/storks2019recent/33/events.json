@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.33 \u2014 Page 41 (continued)\n\n**Problem:** N/A \u2014 descriptive survey of linguistic and lexical resources supporting NLP.\n\n**Method:** Survey of corpora (Penn Treebank, PDTB, OntoNotes, AMR) and lexical resources (WordNet, VerbNet, VerbOcean, VerbCorner, FrameNet, PropBank). Describes architecture and coverage of each resource.\n\n**Reported results:** N/A \u2014 no experiments, metrics, or quantitative findings. Resources characterized by origin, structure, and annotations.\n\n**Limitations:** N/A \u2014 this is a references/resource survey section; no methodology or evaluation presented.\n\n**Exact quotes:**\n- \"The Penn Discourse Treebank (PDTB) is built upon it, adding annotated discourse structures\" (p.41, continued).\n- \"Frames were defined by Minsky (1974) as cognitive data structures for information about prototypical events and situations\" (p.42).\n\n**Note:** This segment contains no problem\u2013method\u2013results structure; it is a bibliography-style survey of linguistic corpora and lexical resources. No findings or evaluations are reported."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2309,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782a582affeUjJf0A32H01Lgw"
+  }
+]

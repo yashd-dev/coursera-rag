@@ -1,0 +1,25 @@
+{
+  "title": "Literature Review: Speculative Decoding for Lossless Language Model Acceleration",
+  "queries": [
+    "speculative decoding lossless language model acceleration 2023 2024",
+    "Fast Inference Transformers via Speculative Decoding",
+    "Accelerating Large Language Model Decoding with Speculative Sampling",
+    "large language model decoding efficiency attention approximation",
+    "foundational speculative decoding method tree attention"
+  ],
+  "sections": [
+    "Introduction",
+    "Source Comparison: Fast Inference from Transformers via Speculative Decoding",
+    "Source Comparison: Accelerating Large Language Model Decoding with Speculative Sampling",
+    "Limitations and Open Challenges",
+    "Conclusion"
+  ],
+  "keywords": [
+    "speculative decoding",
+    "lossless acceleration",
+    "large language model",
+    "decoding efficiency",
+    "transformer inference"
+  ],
+  "request": "Write a concise literature review of speculative decoding for lossless language model acceleration. Compare Fast Inference from Transformers via Speculative Decoding and Accelerating Large Language Model Decoding with Speculative Sampling. Use two open-access sources and IEEE format, introduction, source comparison and limitations, conclusion and one comparison table. Report only source findings with citations; do not invent experiments or imply this review ran them."
+}

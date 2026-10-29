@@ -1,0 +1,38 @@
+=== PAGE 12 (continued) ===
+Unlike CoQA, when
+generating conversations, the worker asking the questions could not see the text and thus did not
+know the answer, encouraging the creation of questions which cannot be answered by string matching approaches. To ensure productive conversations, the worker answering the questions provided
+dialog acts which gave the other worker feedback on whether to follow up the previous question or
+change topics. Like CoQA, QuAC includes unanswerable questions, but does not explicitly address
+the use of external knowledge. QuAC can be downloaded at https://quac.ai/.
+OpenBookQA. OpenBookQA by Mihaylov et al. (2018) intends to address some shortcomings
+of previous QA datasets. Earlier datasets often do not require external knowledge or reasoning to
+solve, and those that do require vast domains of knowledge which are difficult to capture. OpenBookQA contains about 6,000 4-way multiple choice science questions which may require science
+facts (common knowledge) or commonsense knowledge, e.g., the example in Figure 4. Instead of
+providing no knowledge resource like MCScript (Ostermann et al., 2018), or a prohibitively large
+corpus of facts to support answering the questions like ARC (Clark et al., 2018), OpenBookQA
+provides an “open book” of about 1,300 science facts to support answering the questions, each
+associated directly with the question(s) they apply to. For required commonsense knowledge, the
+authors expect that outside resources will be used in answering the questions. Instructions to download OpenBookQA can be found at https://github.com/allenai/OpenBookQA.
+CommonsenseQA. CommonsenseQA by Talmor, Herzig, Lourie, and Berant (2019) is another
+QA benchmark which directly targets commonsense knowledge, consisting of 9,500 three-way
+multiple-choice questions. To ensure commonsense knowledge is used to answer questions, each
+question requires one to disambiguate a target concept from three connected concepts in ConceptNet, a popular commonsense knowledge graph (Liu & Singh, 2004). Utilizing a large, generalpurpose knowledge graph like ConceptNet ensures not only that questions target commonsense relations directly, but that the domain of commonsense knowledge required by questions is fairly comprehensive for everyday use. CommonsenseQA data can be downloaded at https://www.taunlp.org/commonsenseqa.
+DREAM. The Dialogue-Based Reading Comprehension Examination (DREAM) by Sun, Yu,
+Chen, Yu, Choi, and Cardie (2019) also targets the use of external knowledge. The benchmark
+consists of about 10,000 multiple-choice questions posed on about 6,500 selections of dialogue
+between multiple parties. Their analysis shows that the answers to most questions cannot be directly extracted from the text, and will require multi-sentence reasoning. Further, 34% of questions
+explicitly require external knowledge to answer. Such questions are challenging to current neural reading comprehension systems, especially those which are not typically used for processing
+dialogue. DREAM can be downloaded at https://dataset.org/dream/.
+12
+
+
+=== PAGE 13 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+DROP. The Discrete Reasoning Over Paragraphs (DROP) benchmark by Dua, Wang, Dasigi,
+Stanovsky, Singh, and Gardner (2019) consists of nearly 100,000 questions over about 7,000 passages from Wikipedia. Unlike previous similar benchmarks, however, the questions in DROP deliberately require systems to perform various reasoning tasks, including arithmetic (e.g., addition,
+subtraction), comparison, and more. This promotes a deep understanding of passages in order to use
+the knowledge in them for reasoning tasks. Further, the data was adversarially created, only including questions which a baseline neural system could not answer correctly. DROP can be downloaded
+at https://allennlp.org/drop.
+Cosmos QA. Commonsense Machine Comprehension (Cosmos) QA by (Huang, Bras, Bhagavatula, & Choi, 2019) consists of 35,600 multiple-choice reading comprehension quest

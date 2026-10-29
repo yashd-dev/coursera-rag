@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.42.txt \u2014 Survey Notes\n\n**Problem:** Natural Language Inference (NLI) requires modeling entailment between sentence pairs. Earlier work relied on manually specified linguistic features and external knowledge (e.g., WordNet, Web co-occurrences). Recent large benchmarks favor data-driven neural models over these statistical baselines.\n\n**Method:** Survey traces NLI evolution from feature-based statistical models (e.g., na\u00efve Bayes with web co-occurrences, RTE Challenges) to distributional word embeddings (word2vec, GloVe), then to contextual representations (ELMo, GPT, BERT). Neural architectures include RNNs (LSTMs, GRUs), CNNs, and Transformers. Pre-trained models are fine-tuned with task-specific output layers (MLP, Attention, Softmax, Decoder).\n\n**Reported results:** Earlier statistical models are \"not competitive in recent benchmarks of large data size\" but serve as useful baselines (e.g., JOCI). Transformer-based fine-tuned models top virtually all NLI leaderboards.\n\n**Limitations:** External knowledge and Web features were complementary but could not overcome data-scale disadvantages. Context-independent embeddings (word2vec, GloVe) lack sense discrimination. No novel experiments or new benchmark results are reported.\n\n**Two short exact quotes:**\n- \"the best system in the first RTE Challenge\u2026 used a na\u00efve Bayes classifier with features from the co-occurrences of word from an online search engine\" (Glickman, 2006; p.50)\n- \"these earlier statistical models have still not been competitive in recent benchmarks of large data size\" (p.51)\n\n**Attribution:** All bullets attributed to physical-page markers (pp.50\u201352) as specified. No background citations inferred."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2382,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7828292effeQaVeepLhUpsT33"
+  }
+]

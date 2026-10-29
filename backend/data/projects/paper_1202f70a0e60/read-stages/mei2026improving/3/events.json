@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Mei2026improving (Page 3\u20135) Notes\n\n- **Problem**: Two readout rules for extracting final states from transformer hidden states; comparison under selective vs. full LoRA adaptation.\n- **Method**: Affine projection pooling (Eq. 6) averages contextual token scores; pointer readout uses single selected state. Jointly train decision head and LoRA adapters (rank-64) across module scopes (all-module vs. no-FFN selective).\n- **Reported results**: MC11 evaluates reranking accuracy across ARC-Easy/Challenge, GSM8K (4/10-option), GPQA/MMLU (with/without demos), HellaSwag, WinoGrande, and synthetic chess. Training uses NeoHorse-1-4B with OneCycle schedule, peak LR 1.25\u00d710\u207b\u2075, one epoch.\n- **Limitations**: Pooling averages before softmax; pointer supplies direct path through one selected state. Selective adaptation reduces parameters requiring gradients while keeping pretrained FFN layers intact.\n- **Exact quotes**:\n  - \"The affine projection makes the pooled score an exact average of the contextual token scores\" (Page 3)\n  - \"Each option therefore requires one projected key, and reranking continues to use one backbone request per answer\" (Page 5)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2371,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78495b05ffeAl98yxYUdDAWQS"
+  }
+]

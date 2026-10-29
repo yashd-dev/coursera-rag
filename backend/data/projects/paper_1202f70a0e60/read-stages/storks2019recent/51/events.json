@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.51 (pages 60\u201361)\n\n**Problem**: Survey of recent NLI advances; evaluation of contextual embedding models on benchmarks including SQuAD 2.0, GLUE, HellaSWAG, RACE, DREAM, and others.\n\n**Method**: Benchmark comparison table of exact-match accuracy for ELMo, GPT, BERT, MT-DNN, XLNet, CLOTH, RoBERTa, ALBERT, and human performance, extracted from leaderboards (Oct 2019).\n\n**Reported results**: Humans lead on most benchmarks (e.g., SQuAD 2.0: 95.5 human vs. 86.9 best system; RACE: 94.5 best system vs. 83.2 MT-DNN; GLUE: 89.4 best system vs. 87.1 human). ALBERT achieves state-of-the-art on GLUE, SQuAD 2.0, RACE, and DROP. BERT-base competitive but generally behind ALBERT and humans.\n\n**Limitations**: Results are leaderboard snapshots (Oct 2019); fine-tuning vs. feature-extraction trade-offs noted; ELMo fine-tuning more difficult than BERT; no systems listed for several benchmarks.\n\n> \u201cThese changes along with greater attention to hyperparameter choices allowed them to pre-train BERT to a higher potential than previously done.\u201d (p.60, continued)\n\n> \u201cALBERT \u2026 implements several novel parameter reduction techniques to increase the training speed and efficiency of BERT \u2026 leading to superior performance on several leaderboards, including GLUE, SQuAD 2.0, RACE, and DROP.\u201d (p.60, continued)\n\n**Note**: References-only segment\u2014no invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2712,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78261cceffePUDwa81c8DYl13"
+  }
+]

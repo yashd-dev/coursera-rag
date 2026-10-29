@@ -1,0 +1,22 @@
+{
+  "errors": [
+    "Span1: unresolved clause grounding: an excerpt is not copied exactly from its evidence; supported verdict not verifiable, not accepted and not rewritten",
+    "Span3: unresolved clause grounding: an excerpt is not copied exactly from its evidence; supported verdict not verifiable, not accepted and not rewritten",
+    "Span4: unresolved clause grounding: an excerpt is not copied exactly from its evidence; supported verdict not verifiable, not accepted and not rewritten",
+    "Span5: operational interrupted: a review call started and no outcome was recorded; the result is unknown, it is not retried automatically and the claim is not accepted",
+    "Uncovered prose block: Speculative sampling accelerates LLM decoding by introducing a draft model to generate candidate tok",
+    "Uncovered prose block: Chen et al. propose speculative sampling to accelerate LLM decoding via draft model candidate genera",
+    "Uncovered prose block: Leviathan, Kalman, and Matias propose speculative decoding to accelerate inference from large autore",
+    "Uncovered prose block: Speculative sampling introduces a draft model to generate short candidate drafts scored by a target ",
+    "Uncovered prose block: Leviathan et al. introduce speculative decoding to accelerate inference of large autoregressive Tran",
+    "Uncovered prose block: The method uses an efficient approximation model to generate draft tokens verified in parallel again",
+    "Uncovered prose block: Chen 2023 \\cite{chen2023accelerating} & Speculative sampling with modified rejection sampling & XSum",
+    "Uncovered prose block: Leviathan 2022 \\cite{leviathan2022fast} & speculative decoding & T5-XXL translation and summarizatio",
+    "Uncovered prose block: The source authors state: \"Note that as \\ensuremath{\\mathit{K}} increases, the overall speedup plate",
+    "Uncovered prose block: The source authors state: \"One limitation of speculative execution in general, and of speculative de",
+    "Uncovered prose block: The algorithm relies on the observation that latency of parallel scoring of short continuations gene",
+    "Uncovered prose block: The method provides speedups when memory bandwidth is the bottleneck with no output distribution cha"
+  ],
+  "spans_complete": 1,
+  "spans_total": 13
+}

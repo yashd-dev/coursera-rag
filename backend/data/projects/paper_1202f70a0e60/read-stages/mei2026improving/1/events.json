@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Mei2026improving.1 \u2014 JEV Reranking Design Notes\n\n**Problem**  \nDirect selection (one request for all candidates) and entailment reranking (one NLI request per candidate) require different design choices. Reranking evaluates each candidate independently, so designs suited for in-request comparison may be less effective across requests.\n\n**Method**  \n- **Mean-span readout**: Replaces the option-ending pointer with the average of contextualized states inside each NLI option. Computes an exact average of pre-softmax token-level scores without adding head parameters.  \n- **Selective adaptation**: Retains LoRA updates in attention and gated DeltaNet projections while removing FFN adapters. Keeps pretrained FFN weights in the forward pass.\n\n**Reported results**  \n- On MC11 (accuracy over eleven reranking configurations from seven sources), selective adaptation improves NeoHorse-1-4B accuracy over the all-module baseline while reducing trainable parameters by >50%.  \n- Mean-span pooling yields further consistent gains at the same parameter count.  \n\n**Limitations**  \nThe text cuts before evaluating both designs jointly or reporting end-to-end task accuracy. No error bars or statistical significance are provided in this segment.\n\n**Exact quotes (source\u2011attributed)**  \n- [P1] \u201cBecause the bilinear head is affine in the option states under a shared decision query, pooling computes an exact average of pre-softmax token-level scores.\u201d  \n- [P1] \u201cSelective adaptation retains low-rank (LoRA) updates in the attention and gated DeltaNet projections \u2026 removing feed-forward network (FFN) adapters while keeping the pretrained FFN weights in the forward pass.\u201d\n\n**Notes**  \nThis is a references\u2011only segment with no experimental findings beyond the MC11 parameter\u2011reduction claim."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2249,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7849d393ffe1wCZFs4fvQsy2U"
+  }
+]

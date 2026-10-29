@@ -1,0 +1,214 @@
+=== PAGE 3 (continued) ===
+ompositional relationships between words
+within each sentence, as proposed by Cheng et al.
+(2016). Similar to Eqs. 1 and 2, we define
+fij := Fintra (ai )T Fintra (aj ) ,
+
+Here βi is the subphrase in b̄ that is (softly) aligned
+to āi and vice versa for αj .
+3.2
+
+v1,i := G([āi , βi ]) ∀i ∈ [1, . . . , `a ] ,
+v2,j := G([b̄j , αj ]) ∀j ∈ [1, . . . , `b ] .
+
+(3)
+
+where the brackets [·, ·] denote concatenation. Note
+that since there are only a linear number of terms in
+this case, we do not need to apply a decomposition
+as was done in the previous step. Thus G can jointly
+take into account both āi , and βi .
+
+We now have two sets of comparison vectors
+a
+b
+{v1,i }`i=1
+and {v2,j }`j=1
+. We first aggregate over
+each set by summation:
+`a
+X
+
+a0i :=
+
+v1,i
+
+,
+
+v2 =
+
+i=1
+
+`b
+X
+
+v2,j .
+
+(4)
+
+j=1
+
+and feed the result through a final classifier H, that
+is a feed forward network followed by a linear layer:
+ŷ = H([v1 , v2 ]) ,
+
+(5)
+
+where ŷ ∈ RC represents the predicted (unnormalized) scores for each class and consequently the predicted class is given by ŷ = argmaxi ŷi .
+For training, we use multi-class cross-entropy loss
+with dropout regularization (Srivastava et al., 2014):
+N
+
+C
+
+`a
+X
+
+exp(fij + di−j )
+aj .
+P`a
+k=1 exp(fik + di−k )
+j=1
+
+(7)
+
+The distance-sensitive bias terms di−j ∈ R provides
+the model with a minimal amount of sequence information, while remaining parallelizable. These terms
+are bucketed such that all distances greater than 10
+words share the same bias. The input representation
+for subsequent steps is then defined as āi := [ai , a0i ]
+and analogously b̄i := [bi , b0i ].
+
+4
+
+Aggregate
+
+v1 =
+
+(6)
+
+where Fintra is a feed-forward network. We then create the self-aligned phrases
+
+Compare
+
+Next, we separately compare the aligned phrases
+`b
+a
+{(āi , βi )}`i=1
+and {(b̄j , αj )}j=1
+using a function G,
+which in this work is again a feed-forward network:
+
+3.3
+
+Intra-Sentence Attention (Optional)
+
+Computational Complexity
+
+We now discuss the asymptotic complexity of our
+approach and how it offers a higher degree of parallelism than LSTM-based approaches. Recall that
+d denotes embedding dimension and ` means sentence length. For simplicity we assume that all hidden dimensions are d and that the complexity of
+matrix(d × d)-vector(d × 1) multiplication is O(d2 ).
+A key assumption of our analysis is that ` < d,
+which we believe is reasonable and is true of the
+SNLI dataset (Bowman et al., 2015) where ` < 80,
+whereas recent LSTM-based approaches have used
+d ≥ 300. This assumption allows us to bound the
+complexity of computing the `2 attention weights.
+Complexity of LSTMs. The complexity of an
+LSTM cell is O(d2 ), resulting in a complexity of
+O(`d2 ) to encode the sentence. Adding attention as
+in Rocktäschel et al. (2016) increases this complexity
+to O(`d2 + `2 d).
+
+1 X X (n)
+exp(ŷc )
+yc log PC
+.
+Complexity of our Approach. Application of a
+N
+c0 =1 exp(ŷc0 )
+n=1 c=1
+feed-forward network requires O(d2 ) steps. Thus,
+Here θF , θG , θH denote the learnable parameters of the Compare and Aggregate steps have complexity
+the functions F, G and H, respectively.
+O(`d2 ) and O(d2 ) respectively. For the Attend step,
+L(θF , θG , θH ) =
+
+
+=== PAGE 4 ===
+Method
+
+Train Acc
+
+Test Acc
+
+#Parameters
+
+Lexicalized Classifier (Bowman et al., 2015)
+
+99.7
+
+78.2
+
+–
+
+300D LSTM RNN encoders (Bowman et al., 2016)
+1024D pretrained GRU encoders (Vendrov et al., 2015)
+300D tree-based CNN encoders (Mou et al., 2015)
+300D SPINN-PI encoders (Bowman et al., 2016)
+
+83.9
+98.8
+83.3
+89.2
+
+80.6
+81.4
+82.1
+83.2
+
+3.0M
+15.0M
+3.5M
+3.7M
+
+100D LSTM with attention (Rocktäschel et al., 2016)
+300D mLSTM (Wang and Jiang, 2016)
+450D LSTMN with deep attention fusion (Cheng et al., 2016)
+
+85.3
+92.0
+88.5
+
+83.5
+86.1
+86.3
+
+252K
+1.9M
+3.4M
+
+Our approach (vanilla)
+Our approach with intra-sentence attention
+
+89.5
+90.5
+
+86.3
+86.8
+
+382K
+582K
+
+Table 1: Train/test accuracies on the SNLI dataset and number of parameters (excluding embeddings) for each approach.
+
+Method
+
+N
+
+E
+
+C
+
+Bowman et al. (20

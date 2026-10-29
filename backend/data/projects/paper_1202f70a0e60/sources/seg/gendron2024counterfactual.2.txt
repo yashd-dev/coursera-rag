@@ -1,0 +1,54 @@
+=== PAGE 2 (continued) ===
+ or abstract
+reasoning [13]. To explain this behavior difference, [53] advanced that LLMs cannot discover new
+causal relationships but only recall ones already seen during training. Acknowledging this limitation,
+alternative approaches have been proposed using LLMs to extract causal relationships from text
+[43, 40]. However, such approaches do not formally test whether the extracted relationships are
+causal.
+We investigate ways to overcome this restriction and propose an end-to-end causal structure discovery
+and counterfactual inference method from purely unstructured natural language text data. Our
+framework is divided into two steps: first, we use an LLM to generate the causal graph associated
+with a document, i.e., that describes the causal relationships between the events depicted in the text.
+Optionally, we merge causal graphs from multiple sources using a second LLM. Then, we use the
+built causal structure to perform an atomic intervention on the sequence of events and infer the
+consequences in this counterfactual scenario using an LLM (i.e., answer what if? questions). We
+show that our method can effectively extract causal relationships and propose plausible counterfactual
+worlds from real-world events.
+Our contributions can be summarised as follows:
+• We propose a method to perform causal structure discovery and counterfactual inference in
+an end-to-end and explainable way,
+• We demonstrate its applicability on real-world events,
+• We use our method to disentangle the steps required for counterfactual reasoning and
+highlight the limitations of LLMs. We show that LLMs can fail even when the full reasoning
+structure is given and that the bottleneck for performance comes from the prediction step.1
+
+2
+
+Related Work
+
+Causal Structure Discovery with LLMs Text data is often unstructured, high-dimensional, and
+large-scale. Causal variables may not be directly accessible from the text, and the causal relationships
+are typically vague and rare, with semantic ambiguity complicating analysis. These challenges greatly
+hinder the usability of traditional causal structure discovery methods and motivate using LLMs for
+causal structure discovery [23, 26]. [23] have achieved promising results when using LLMs to infer
+the causal direction between two variables. Nevertheless, there is some evidence that LLMs, in
+many cases, repeat embedded causal knowledge [53] and are susceptible to inferring causal relations
+from the order of two entities mentioned in a text [22]. [21] attempts to recover the full causal
+structure using a breadth-first search on a set of text variables. [17] investigates whether LLMs can
+identify the cause and the effect between two natural language sentences. This line of work uses the
+LLM’s inner knowledge to discover causal relationships between data points. However, recent work
+highlighted that LLMs do not conduct proper causal reasoning and mainly rely on domain knowledge
+and correlations [53, 20]. This approach differs from another line of work that uses the LLM as an
+information retrieval engine to extract causal relationships explicitly present in the data. For instance,
+[15] uses LLMs to extract causal relationships from medical texts. Our approach combines both
+worlds as we use an LLM to retrieve causal relationships from text and then perform causal inference
+on the extracted model to assess the quality of the causal model. NATURAL [8] is another method
+developed concurrently to our work using LLMs to perform causal inference. However, the method
+is based on the Potential Outcome Framework (POF) and computes the Average Treatment Effect
+(ATE) of a variable (i.e., outcome) under an intervention (i.e., a treatment). By contrast, our method is
+based on Structural Causal Models (SCMs) and includes a causal structure discovery step to represent
+complex causal relationships between observed variables. Our work also focuses on counterfactuals,
+while this method is suited to answer interventional queries.
+1
+
+Our code

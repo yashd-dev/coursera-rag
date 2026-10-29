@@ -1,0 +1,117 @@
+=== PAGE 10 (continued) ===
+nificant promise for capturing long - distance
+dependencies and the complex structure of a sentence. The
+DMN could be improved if those more complex encoders
+were introduced into the learning framework about pairs of
+sentences for better NLI outcomes.
+Apart from the enhancement of this model architecture,
+future research also lies in how the DMNs can be applied in
+other NLP domains besides NLI. The flexibility of DMNs
+can make them suitable for an array of tasks encompassing
+machine reading comprehension, dialogue models, and
+multiple - turn question answering. Extending the so far
+applied DMN framework to these tasks could shed some
+light on the appropriateness of memory - augmented models
+and their ability to rethink several aspects of natural
+language understanding.
+The further development of optimal DMNs may be extended
+to improve the performance of the other shown types of
+neural networks. For example, having DMNs for episodic
+memory and integrated sequence interactively with sequence
+- to - sequence models could lead to powerful language
+understanding models and response generation in dialog
+systems.
+We understand the need to build these models so that they
+are more interpretable. With the increasing sophistication
+and capability of DMNs, the logical process by which these
+systems or entities develop their decisions becomes of
+heightened importance, especially if the application requires
+accountability. Techniques for presenting and analyzing the
+memory states and attention mechanisms underlying DMNs
+might be especially beneficial in allowing users and
+researchers to understand the model's functioning and
+reasoning, fostering more trust and eventual usage of these
+models in practical applications.
+Although our work has set the foundation for employing
+dynamic memory networks in NLI, several questions still
+need to be answered. We can keep building upon the
+advancements made in the field by overcoming
+computational issues, incorporating more complex naming
+conventions, considering new uses of natural language
+understanding, and explaining the resultant models. We hope
+to investigate these exciting areas of research in the future.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2228
+
+
+=== PAGE 11 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+
+References
+[1]
+[2]
+[3]
+[4]
+[5]
+
+[6]
+
+[7]
+[8]
+[9]
+[10]
+
+[11]
+[12]
+
+[13]
+[14]
+
+[15]
+
+[16]
+[17]
+[18]
+[19]
+[20]
+
+“A large annotated corpus for learning natural
+language inference” In Proc. EMNLP 2015.
+“Ask Me Anything: Dynamic Memory Networks for
+Natural Language Processing”
+“Natural language inference by tree - based
+convolution and heuristic matching” In Proc. ACL
+2016.
+“Tree - structured composition in neural networks
+without tree - structured architectures”
+Ablavatski, A., Lu, S., & Cai, J. (2017, March).
+Enriched deep recurrent visual attention model for
+multiple object recognition. In 2017 IEEE Winter
+Conference on Applications of Computer Vision
+(WACV) (pp.971 - 978). IEEE.
+Ahad, N., Qadir, J., & Ahsan, N. (2016). Neural
+networks in wireless networks: Techniques,
+applications and guidelines. Journal of network and
+computer applications, 68, 1 - 27.
+Bahdanau, Dzmitry, Cho, Kyunghyun, and Bengio,
+Yoshua. “Neural machine translation by jointly
+learning to align and translate” In Proc. ICLR - 2015.
+Bowman, S. R. (2016). Modeling natural language
+semantics in learned representations (Doctoral
+dissertation, Stanford University).
+Brzeziński, D. (2015). Block - based and online
+ensembles for concept - drifting data streams.
+Buch, E. R., Santarnecchi, E., Antal, A., Born, J.,
+Celnik, P. A., Classen, J.,. . . & Cohen, L. G. (2017).
+Effects of tDCS on motor learning and memory
+formation: a consensus and critical position paper.
+Clinical Neurophysiology, 128 (4), 589 - 603.

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# 43/79 storks2019recent\n\n**Problem:** Survey of recent advances in natural language inference focusing on attention mechanisms, memory augmentation, and contextual representations across benchmarks like SNLI and MCScript.\n\n**Method:** Survey of state-of-the-art neural models for NLI benchmarks, organized by architectural advances: attention mechanisms, memory augmentation, and contextual representations.\n\n**Reported results:**\n- SNLI leaderboard: Kim et al. (2019) system using densely connected RNN with attention concatenation achieves best performance; example: \"Several men in front of a white building\" vs \"Several people in front of a gray building\" (p.53)\n- MCScript (SemEval 2018): Chen et al. (2018) bidirectional LSTM with attention layer achieved 84.13% accuracy (p.53)\n\n**Limitations:** RNNs with attention struggle when input-output alignment is not straightforward; Chen et al. (2018) found yes/no questions were particularly challenging (p.53, text cuts off)\n\n**Quote 1 (p.52):** \"Modeling attention has several advantages. It allows the decoder to directly go to and focus on certain parts of the input.\"\n\n**Quote 2 (p.53):** \"For tasks that require reasoning based on multiple supporting facts... memory-augmented networks like memory networks and recurrent entity networks have been shown effective.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2311,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7827eff6ffekr4ybVD1aLZZdL"
+  }
+]

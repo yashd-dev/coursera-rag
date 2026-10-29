@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Storks et al. (2019) \u2014 Notes\n\n## Problem\n- NLI models are vulnerable to superficial changes; major architectural/complexity changes yield only marginal leaderboard gains. ROBERTa shows SOTA via small pre-task changes and careful hyperparameter tuning, questioning earlier variant benefits.\n- Evaluation overemphasizes competence-centric metrics (accuracy) on popular leaderboards (e.g., SQuAD 1.1), which have known biases and limitations, incentivizing superficial improvements rather than meaningful progress.\n\n## Method\n- Survey of NLI research covering model variants, leaderboard dynamics, and evaluation critique. Compares BERT variants (loss, architecture, pre-training, complexity) and traces ROBERTa's SOTA emergence from subtle pre-task changes and hyperparameter selection.\n\n## Reported Results\n- SQuAD 1.1 is the most popular benchmark with hundreds of submissions; machine performance has surpassed human performance, but the benchmark is too simple (answers extractable from text) and lacks generalization to adversarial modifications, indicating dataset biases.\n- ROBERTa exceeds prior BERT variants on several benchmarks using the same architecture but with small pre-training task changes and more careful hyperparameter selection.\n\n## Limitations\n- Survey scope limited to NLI; does not report new experimental results or propose a new benchmark.\n- No computational cost analysis or runtime benchmarks provided.\n\n## Two Exact Quotes\n> \"SQuAD 1.1 has been considered too simple, as answers to questions can be extracted directly from the text.\"\u3010P68\u3011\n\n> \"ROBERTa exceed all of these variants and become the state of the art on several benchmarks using the same architecture as BERT, but making small changes to its pre-training tasks and more carefully selecting hyperparameters\"\u3010P67\u3011\n\n*Each bullet attributes to the preceding physical-page marker. Source text treated as untrusted data.*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2341,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7824c432ffemGRqnR3E2OOvcf"
+  }
+]

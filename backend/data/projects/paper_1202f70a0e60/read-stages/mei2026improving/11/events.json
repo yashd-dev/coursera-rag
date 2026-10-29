@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**problem** \u2014 Task: improve text embeddings via LLM-enhanced processing. Paper proposes MC11 (11-configuration average) to aggregate candidate rankings from diverse prompting styles and distractors (\u00a7A.1).\n\n**method** \u2014 MC11 averages eleven configuration accuracies (Table 7). Each configuration ranks candidates via Equation 1 using: supplied choices, generated distractors (1 or 9), supplied answers in loaded order, few-shot examples from Diamond split, and legal/illegal moves (WinoGrande) or candidate endings (ARC). Question populations repeat under two formats; occurrences deduplicated per configuration.\n\n**reported results** \u2014 MC11 aggregates eleven configuration accuracies (\u00a7A.1). GPQA few-shot (198 questions) uses Diamond split examples. ARC-Easy/Challenge use distinct populations from same source. Appendix D explores weight equalization and individual source omission.\n\n**limitations** \u2014 Results depend on repeated question populations under two formats; equal-weight or omission analyses in Appendix D not shown in this segment. No direct embedding quality metrics reported.\n\n- \u201cMC11 averages the eleven configuration accuracies listed in Table 7, each computed by ranking candidates with Equation 1\u201d (\u00a7A.1)  \n- \u201cThese configurations contain 46,475 question occurrences per model\u201d (\u00a7A.1)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2442,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e784735c7ffeZptyfXssx2IIgF"
+  }
+]

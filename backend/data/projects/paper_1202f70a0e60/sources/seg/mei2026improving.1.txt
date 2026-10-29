@@ -1,0 +1,60 @@
+=== PAGE 1 ===
+Improving JEV Entailment Reranking with Span Readouts and
+Selective Adaptation
+Haocheng Mei1 , Yuchuan Tian1 , Ye Yuan2 , Enhua Wu3
+Chao Xu1 , Allen Chen4 , Kai Han5 , Yunhe Wang5
+1 Peking University
+2 SUIBE
+
+arXiv:2610.35654v1 [cs.CL] 26 Oct 2026
+
+3 University of Macau
+4 Tsinghua University
+5 TokenRhythm Technologies
+
+Abstract
+JEV decision models pair a language model backbone with a lightweight scoring head
+to select among natural-language options. Direct selection compares candidate answers
+within one request, whereas entailment reranking evaluates each candidate in a separate natural language inference (NLI) request over fixed relation options. We examine
+whether the readout and adaptation choices used for direct selection remain effective
+for cross-request reranking. We combine a mean-span readout with selective backbone
+adaptation. Mean-span pooling replaces the option-ending pointer with an average of the
+contextualized states inside each NLI option, without adding head parameters. Selective
+adaptation retains low-rank updates in attention and gated DeltaNet projections while
+removing feed-forward adapters. On MC11, which averages accuracy over eleven reranking configurations from seven sources, selective adaptation improves NeoHorse-1-4B
+accuracy over the all-module baseline while cutting trainable parameters by more than
+half, and mean-span pooling yields further consistent gains at the same parameter count.
+Project page: https://github.com/Mei-TN/Jev-reranking.
+
+1. Introduction
+JEV models turn a natural-language state into a structured decision that software can act on.
+Their typed interfaces include Choice, which selects among described options; Noul, which
+answers a binary question; and Score, which assigns probabilities to ordered levels [43, 26].
+Open implementations such as NeoHorse-Jev and Kev attach a small bilinear scoring head to an
+adapted language model backbone [41, 31], encoding the context and options in one forward
+pass and using the hidden state at each option’s closing delimiter to produce a distribution over
+the candidates.
+These models can answer multiple-choice questions either by comparing all candidate
+answers within one request (direct selection) or by evaluating each candidate in a separate
+natural language inference (NLI) request (entailment reranking). Reranking provides a fixed
+scoring interface for externally supplied answers: their number and wording can vary while
+the head continues to score entailment, neutral, and contradiction. The question serves as
+the premise and each candidate answer enters the instruction as a hypothesis; selection then
+
+
+=== PAGE 2 ===
+compares entailment probabilities across requests. Because the NLI option text is fixed while its
+contextualized states vary with the candidate hypothesis, designs suited to comparing answers
+within one request may be less effective when candidates are scored independently. We therefore
+combine mean-span pooling over the interior option states with selective backbone adaptation,
+gathering information from more positions while updating fewer backbone projections.
+The two design choices jointly adjust how option representations are extracted and how
+they are learned. First, a mean-span readout replaces the option-ending delimiter pointer with
+the mean of the contextualized states inside each NLI option. Because the bilinear head is
+affine in the option states under a shared decision query, pooling computes an exact average
+of pre-softmax token-level scores and distributes the direct scoring gradient across the span
+without adding head parameters. Second, selective backbone adaptation retains low-rank (LoRA)
+updates in the attention and gated DeltaNet projections that participate in contextual interaction,
+removing feed-forward network (FFN) adapters while keeping the pretrained FFN weights in
+the forward pass. Because the head and adapters shape the option representations together, we
+evaluate both designs under a com

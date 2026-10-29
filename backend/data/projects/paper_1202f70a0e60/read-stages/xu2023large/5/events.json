@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**  \nEvaluates large language models (LLMs) on logical reasoning tasks using systematic deductive, inductive, abductive and mixed-form views across 15 datasets. Focuses on identifying logical flaws in evidence selection and reasoning processes.\n\n**Method**  \nSelects 15 popular logical reasoning datasets divided into four task folds. Proposes four nuanced metrics beyond accuracy: answer correctness, explanation correctness, explanation completeness and explanation redundancy. Evaluates ChatGPT on full test sets for selected datasets; samples 1,000 examples for large datasets and 100 examples for text-davinci-003 and BARD.\n\n**Reported results**  \nNo quantitative results reported in this segment. Metric definitions and error categorization frameworks are introduced, with error types categorized by evidence selection and reasoning process dimensions.\n\n**Limitations**  \nEvaluation relies on sampled subsets for many datasets; full test sets used only for ChatGPT on a subset of domains. Metric independence noted but joint effects not explored. No model performance tables or analysis provided in this segment.\n\n- Evidence selection errors center on evaluated premises; reasoning errors emphasize logical processes using selected evidence.  \n- \u201cthis paper selects fifteen popular datasets in logical reasoning and divides them into the above four folds.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2218,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783c7f87ffeDGWKfpWCJci6ko"
+  }
+]

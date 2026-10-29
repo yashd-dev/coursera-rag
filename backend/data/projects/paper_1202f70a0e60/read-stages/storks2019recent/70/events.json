@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem:** None; this segment is a references-only section (pages 83\u201384).  \n\n**Method:** N/A  \n\n**Reported results:** None  \n\n**Limitations:** None (no methods or data presented)  \n\n**Quote 1 (p. 83):** \u201cCombing Context and Commonsense Knowledge Through Neural Networks for Solving Winograd Schema Problems.\u201d  \n\n**Quote 2 (p. 84):** \u201cCan a Suit of Armor Conduct Electricity? A New Dataset for Open Book Question Answering.\u201d  \n\n**Note:** No findings, methods, or results to attribute."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2470,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78221919ffec9tX3bhQVo4CGu"
+  }
+]

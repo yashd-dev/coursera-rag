@@ -1,0 +1,52 @@
+=== PAGE 64 (continued) ===
+tween CoQA and QuAC.
+42. See https://www.evalita.it/2009/tasks/te.
+43. See https://nilc.icmc.usp.br/assin/.
+
+64
+
+
+=== PAGE 65 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Teney, Bruce, Johnson, Sünderhauf, Reid, Gould, and van den Hengel (2018). Such benchmarks
+are important to promote progress in physically grounded inference.
+
+6. Conclusion
+The availability of data and computing resources and the rise of new learning and inference methods make this an unprecedentedly exciting time for research on natural language understanding
+and inference. As more benchmarks become available and performance on the benchmarks keeps
+growing, one central question is whether the technologies developed are in fact pushing the stateof-the-art in natural language inference. To address this question, in addition to continuous efforts
+on making bias-free benchmarks (as discussed in Section 2.2.3), here are a few directions we think
+are important to pursue in the future.
+Need greater emphasis on external knowledge acquisition and incorporation.
+As discussed in Section 4.4, most approaches to NLI rely on a large amount of pre-training and
+training data to learn the model. This is far from practical, which brings up some important questions as to how to properly incorporate external knowledge in modern approaches, and how to best
+acquire relevant external knowledge for the tasks at hand. This will be challenging, since as discussed in Section 3.3, most knowledge resources are incomplete, and do not contain all required
+information for solving the benchmarks. Beyond attempting to complete or generalize over these
+resources during inference as discussed in Section 3.3, another potential avenue to address the disconnect between benchmarks and knowledge resources is to jointly develop benchmark datasets
+and construct knowledge bases. Recently, we are seeing the creation of knowledge graphs geared
+toward particular benchmarks, like the ATOMIC knowledge graph by Sap et al. (2019a) which expands upon data in the Event2Mind benchmark (Rashkin et al., 2018b), and ideally provides the
+required relations that ConceptNet is missing for solving Event2Mind. We are also seeing the creation of benchmarks geared toward particular knowledge graphs, like CommonsenseQA (Talmor
+et al., 2019), where questions were drawn from subgraphs of ConceptNet (Liu & Singh, 2004), thus
+encouraging the use of ConceptNet in approaching the benchmark tasks. We have also seen benchmarks and knowledge resources created and released together. We have seen benchmarks being
+released with unstructured corpora containing some required knowledge, such as ARC (Clark et al.,
+2018) and OpenBookQA (Mihaylov et al., 2018). A more recent example is SherLIiC (Schmitt &
+Schütze, 2019), which uses typed relations extracted from Freebase (Bollacker et al., 2008) to form
+sentence pairs in a textual entailment problem, and is made available alongside the original relations.
+A tighter coupling of benchmark tasks and knowledge resources will help understand and formalize
+the scope of knowledge needed, and facilitate the development and evaluation of approaches that
+can incorporate external knowledge. Shared tasks, such as those at the Commonsense Inference in
+NLP workshop at EMNLP 2019,44 have already begun to encourage the use of external knowledge
+in inference by providing several knowledge resources.
+Since commonsense knowledge is so intuitive for humans, it is difficult for researchers to even
+identify and formalize the needed knowledge. It may be worthwhile to explore new task formulations beyond text that involve artificial agents (in either a simulated world or the real physical
+world) which can use language to communicate, to perceive, and to act. Some example tasks can
+be formed in the context of interactive task learning (Chai et al., 2018) or embodied question an44. https://coinnlp.github.io/
+
+65
+
+
+=== PAGE 66 ===
+S TORKS , G AO , & C HAI
+
+swering (Das, Datta, Gkioxari, Lee, P

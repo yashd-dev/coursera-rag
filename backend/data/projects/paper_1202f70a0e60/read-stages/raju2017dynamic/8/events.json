@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem**: NLI requires iterative learning to model semantic relations between premise and hypothesis; static models fail to capture intricate value dependencies.\n\n**Method**: Episodic memory model with iterative updates (Lopez-Paz & Ranzato, 2017; Gershman & Daw, 2017). Progressive abstraction from coarse to fine-grained premise interpretation; focus shifts from problem-solving to hypothesis-relevant details across cycles.\n\n**Reported results**: Multiple updates average out high noise and irrelevant information; selective retention of premise elements most relevant to the hypothesis enhances performance, especially when inferential relations are not undeniable. Strengthening the DMN via iterative updates increases NLI ability.\n\n**Limitations**: Text cuts off mid-sentence (\"premre\"); no quantitative metrics, error bounds, or comparative results provided in this segment.\n\n**Quote (p.5)**: \"According to our method, we have utilized an episodic memory model that can work update updates to increase memory recall ability and inference accuracy (Lopez-Paz & Ranzato, 2017).\"\n\n**Quote (p.6)**: \"With every episodic memory update, our model gradually attunes its knowledge of the premise regard hypothesis as new memories are incorporated and stored into the memory state.\""
+  },
+  {
+    "kind": "usage",
+    "tokens": 2196,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781e6f74ffehMg763d1b3sA5A"
+  }
+]

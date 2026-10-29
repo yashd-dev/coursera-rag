@@ -1,0 +1,242 @@
+=== PAGE 7 (continued) ===
+ance bottleneck lies in the LLMs’ ability to perform accuracte prediction.
+Overall
+
+Common.
+
+Accuracy
+Nonsensical
+
+Anti-Common.
+
+LLaMA
+GPT-3 Non-Instr. (davinci)
+GPT-3 Instr. (text-davinci-001)
+GPT-3 Instr. (text-davinci-002)
+GPT-3 Instr. (text-davinci-003)
+GPT-3.5
+GPT-4-1106
+GPT-4-1106 + CausalCoT
+
+56.61
+50.00
+50.07
+51.76
+58.02
+50.49
+59.77
+62.31
+
+54.99
+47.01
+53.28
+54.13
+54.13
+51.85
+61.25
+63.53
+
+58.26
+49.17
+50.82
+51.93
+59.23
+51.38
+59.78
+60.06
+
+54.78
+47.78
+45.22
+48.99
+59.42
+47.25
+58.26
+65.78
+
+Counterfactual-CI-GPT-4-1106*
+-GPT-4o
+-GPT-4o-mini
+-GPT-3.5
+-LLaMA-3.1*
+-GPT-4o-Ggt
+-GPT-4o-mini-Ggt
+-GPT-3.5-Ggt
+-LLaMA-3.1-Ggt
+
+50.57
+52.26
+51.86
+52.31
+52.11
+60.53
+56.58
+49.80
+58.05
+
+51.17
+53.85
+54.19
+48.39
+53.00
+58.68
+53.16
+47.78
+54.33
+
+49.33
+51.39
+51.22
+53.57
+53.11
+61.23
+58.03
+48.41
+61.17
+
+52.94
+52.37
+50.80
+53.92
+48.39
+61.20
+56.91
+54.52
+54.79
+
+Table 2: Graph distances with ground-truth graph. GED stands for Graph Edit Distance. IoU-GED is
+the GED metric between the intersection and the union of the built and ground-truth graphs. The base
+metric matches the variable names while the topology metric only look at the structure. All graphs
+have either three and four nodes. Most models require less than one change in average, except for
+GPT-4o-mini and LLaMA-3.1.
+Counterfactual-CI-GPT-4-1106
+-GPT-4o
+-GPT-4o-mini
+-GPT-3.5
+-LLaMA-3.1
+
+GED
+
+IoU-DEG
+
+GEDtopology
+
+IoU-GEDtopology
+
+0.814
+0.897
+2.667
+0.582
+2.420
+
+3.929
+4.268
+5.898
+3.708
+6.198
+
+0.814
+0.897
+2.666
+0.579
+2.419
+
+2.240
+2.100
+6.175
+0.919
+4.790
+
+to attribute lower scores and confidence than their counterparts. We put these results in perspective
+with the evaluation on real-world graphs in Section 5.
+4.4
+
+Example of Reasoning Failures
+
+We show an example of failure case with GPT-4o for the example provided in Figure 3. The model
+explanation is given below:
+The target variable ’salary’ is influenced by two parent causes: ’drinking coffee’ and ’unobserved
+confounders’. Given that the person drinks coffee (true), we might expect the salary to be positively
+affected. However, the status of unobserved confounders is inactive, which suggests a lack of
+additional income influence. Thus, the overall effect results in a low salary.
+
+Although the model generates the correct causal factual and counterfactual graphs (as shown in
+the figure), the inference step fails. The model answers ‘low salary’ instead of ‘high salary’. The
+context specifies that ‘confounder active or drinking coffee causes high salary’ but the LLM makes
+a mistake and interprets it as a logical AND instead of a logical OR. This example illustrates the
+type of prediction error that is prevalent in the LLMs’ reasoning. It can be compared with the LLM
+limitations in robust and abstract reasoning tasks [49, 13, 20].
+7
+
+
+=== PAGE 8 ===
+1,500
+
+correct + formatted
+correct + parsing
+incorrect answer
+error parsing response
+error building graph
+error inference
+cyclic graph error
+unknown error
+
+1,000
+
+G
+PT
+-4
+-1
+1
+
+gt
+
+0
+
+06
+G
+P
+T
+G
+PT -4o
+-4
+om
+in
+i
+G
+PT
+LL
+3
+aM .5
+A
+G
+PT 3.1
+G
+PT -4o
+-4
+-G
+om gt
+in
+iG
+PT Ggt
+LL -3.
+aM 5-G
+g
+A
+-3 t
+.1
+-G
+
+500
+
+Figure 4: Partition of the Counterfactual-CI models results between correct, incorrect answers and
+errors. Errors in grey are not considered as counterfactual reasoning errors but as instruction errors
+and are not considered in the results of Table 1. Models can usually generate the causal structure and
+conduct inference. GPT-4-1106 and LLaMA-3.1 show a lower capacity to follow instructions and
+generate structured outputs. Models also often require to have their response parsed to extract the
+answer, particularly GPT-4o-Ggt .
+Table 3: Self-evaluation and confidence provided by the LLMs. Results for GPT-3.5 are omitted
+because the model did not return properly formatted scores on a sufficient number of samples (less
+than five). Models attribute a slightly lower score to the counterfactual graphs. Models performing
+better tend to attribute lower scores and confidence than their counterparts.
+Self-Evaluati

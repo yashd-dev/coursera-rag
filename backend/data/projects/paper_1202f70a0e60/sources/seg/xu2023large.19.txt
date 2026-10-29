@@ -1,0 +1,79 @@
+=== PAGE 15 (continued) ===
+, 2022, pp.
+218–227.
+[46] O. Tafjord, B. Dalvi, and P. Clark, “Proofwriter: Generating implications, proofs, and abductive statements over natural language,”
+in Findings of the Association for Computational Linguistics, 2021, pp.
+3621–3634.
+[47] P. Minervini, S. Riedel, P. Stenetorp, E. Grefenstette, and
+T. Rocktäschel, “Learning reasoning strategies in end-to-end differentiable proving,” in Proceedings of the 37th International Conference on Machine Learning (ICML), ser. Proceedings of Machine
+Learning Research, vol. 119, 2020, pp. 6938–6949.
+[48] Q. Dong, L. Li, D. Dai, C. Zheng, Z. Wu, B. Chang, X. Sun,
+J. Xu, and Z. Sui, “A survey for in-context learning,” arXiv preprint
+arXiv:2301.00234, 2022.
+[49] Z. Wu, Y. Wang, J. Ye, and L. Kong, “Self-adaptive in-context
+learning,” arXiv preprint arXiv:2212.10375, 2022.
+[50] W. Chen, X. Ma, X. Wang, and W. W. Cohen, “Program of thoughts
+prompting: Disentangling computation from reasoning for numerical reasoning tasks,” arXiv preprint arXiv:2211.12588, 2022.
+
+[51] L. Gao, A. Madaan, S. Zhou, U. Alon, P. Liu, Y. Yang, J. Callan, and
+G. Neubig, “Pal: Program-aided language models,” in International
+Conference on Machine Learning. PMLR, 2023, pp. 10 764–10 799.
+[52] F. Xu, Z. Wu, Q. Sun, S. Ren, F. Yuan, S. Yuan, Q. Lin, Y. Qiao,
+and J. Liu, “Symbol-LLM: Towards foundational symbol-centric
+interface for large language models,” in Proceedings of the 62nd
+Annual Meeting of the Association for Computational Linguistics
+(Volume 1: Long Papers). Bangkok, Thailand: Association for
+Computational Linguistics, Aug. 2024, pp. 13 091–13 116. [Online].
+Available: https://aclanthology.org/2024.acl-long.707
+[53] L. Pan, A. Albalak, X. Wang, and W. Wang, “Logic-lm: Empowering large language models with symbolic solvers for faithful
+logical reasoning,” in Findings of the Association for Computational
+Linguistics: EMNLP 2023, 2023, pp. 3806–3824.
+[54] J. Wei, X. Wang, D. Schuurmans, M. Bosma, B. Ichter, F. Xia, E. H.
+Chi, Q. V. Le, and D. Zhou, “Chain-of-thought prompting elicits
+reasoning in large language models,” in NeurIPS, 2022.
+[55] I. Drori, S. Zhang, R. Shuttleworth, L. Tang, A. Lu, E. Ke, K. Liu,
+L. Chen, S. Tran, N. Cheng et al., “A neural network solves,
+explains, and generates university math problems by program
+synthesis and few-shot learning at human level,” Proceedings
+of the National Academy of Sciences (PNAS), vol. 119, no. 32, p.
+e2123433119, 2022.
+[56] Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y. Xu, E. Ishii, Y. Bang,
+A. Madotto, and P. Fung, “Survey of hallucination in natural
+language generation,” ACM Computing Surveys, vol. 55, no. 12,
+pp. 248:1–248:38, 2023.
+[57] E. Cambria, Q. Liu, S. Decherchi, F. Xing, and K. Kwok, “SenticNet 7: A commonsense-based neurosymbolic AI framework for
+explainable sentiment analysis,” in LREC, 2022, pp. 3829–3839.
+
+
+=== PAGE 16 ===
+16
+
+A PPENDIX
+The following sections firstly provide comprehensive information about the seven LLMs analyzed in this study.
+Additionally, this file includes a detailed description of the
+evaluation methodology, prompt engineering techniques,
+NeuLR dataset, and supplementary analyses. Finally, the
+case studies for each dataset are presented. Together, these
+sections provide a comprehensive and detailed account of
+the methods and results of the study.
+
+TABLE 7: Fact length distributions (%) of mixed-form
+datasets.
+Model
+ReClor
+LogiQA
+LogiQA 2.0
+LogiQA2NLI
+
+B.2
+
+A PPENDIX A
+D ETAILS OF L ARGE L ANGUAGE M ODELS
+In this study, we select three previously representative LLMs
+(i.e., text-davinci-003, ChatGPT and BARD) and four upto-date LLMs (i.e., LLaMA3.1-Chat, Mistral-Instruct-v0.3,
+Claude-3 and GPT-4) for evaluation and analysis. The
+specifics are itemized in Table 6, which includes the affiliation, usage charge, pre-trained data, and model size of each
+LLM.
+TABLE 6: Details of the selected LLMs. Affi. is short for
+Affiliation. Charge represents the charges for 1M tokens in
+the format of (input charge / output charge). Data is 

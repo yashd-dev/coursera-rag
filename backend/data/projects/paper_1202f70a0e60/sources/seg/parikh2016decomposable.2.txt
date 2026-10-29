@@ -1,0 +1,174 @@
+=== PAGE 2 (continued) ===
+en predominantly used in conjunction with LSTMs
+(Rocktäschel et al., 2016; Wang and Jiang, 2016) and
+to a lesser extent with CNNs (Yin et al., 2016). In
+contrast, our use of attention is purely based on word
+embeddings and our method essentially consists of
+feed-forward networks that operate largely independently of word order.
+
+3
+
+Approach
+
+Let a = (a1 , . . . , a`a ) and b = (b1 , . . . , b`b ) be
+the two input sentences of length `a and `b , respectively. We assume that each ai , bj ∈ Rd
+is a word embedding vector of dimension d and
+that each sentence is prepended with a “NULL”
+token. Our training data comes in the form of
+(n) =
+labeled pairs {a(n) , b(n) , y(n) }N
+n=1 , where y
+(n)
+(n)
+(y1 , . . . , yC ) is an indicator vector encoding the
+label and C is the number of output classes. At test
+
+in
+the
+park
+alice
+plays
+a
+flute
+solo
+
+outside
+
+music
+
+playing
+
+someone
+
+sented by an embedding vector, we first create a soft
+alignment matrix using neural attention (Bahdanau
+et al., 2015). We then use the (soft) alignment to
+decompose the task into subproblems that are solved
+separately. Finally, the results of these subproblems
+are merged to produce the final classification. In addition, we optionally apply intra-sentence attention
+(Cheng et al., 2016) to endow the model with a richer
+encoding of substructures prior to the alignment step.
+Asymptotically our approach does the same total
+work as a vanilla LSTM encoder, while being trivially parallelizable across sentence length, which can
+allow for considerable speedups in low-latency settings. Empirical results on the SNLI corpus show that
+our approach achieves state-of-the-art results, while
+using almost an order of magnitude fewer parameters
+compared to complex LSTM-based approaches.
+
+park outside
+
+=G(
+
+,
+
+)
+
+alice someone
+
+=G( ,
+… flute+
+flute music
+
+F(
+
+,
+
+)
+
+)
+
+ŷ = H ( + +…+ )
+
+solo music
+
+=G(
+
+,
+
+)
+
+Figure 1: Pictoral overview of the approach, showing the Attend
+(left), Compare (center) and Aggregate (right) steps.
+
+time, we receive a pair of sentences (a, b) and our
+goal is to predict the correct label y.
+Input representation. Let ā = (ā1 , . . . , ā`a ) and
+b̄ = (b̄1 , . . . , b̄`b ) denote the input representation of
+each fragment that is fed to subsequent steps of the
+algorithm. The vanilla version of our model simply
+defines ā := a and b̄ := b. With this input representation, our model does not make use of word
+order. However, we discuss an extension using intrasentence attention in Section 3.4 that uses a minimal
+amount of sequence information.
+The core model consists of the following three
+components (see Figure 1), which are trained jointly:
+Attend. First, soft-align the elements of ā and b̄
+using a variant of neural attention (Bahdanau et al.,
+2015) and decompose the problem into the comparison of aligned subphrases.
+Compare. Second, separately compare each
+aligned subphrase to produce a set of vectors
+a
+b
+{v1,i }`i=1
+for a and {v2,j }`j=1
+for b. Each v1,i is
+a nonlinear combination of ai and its (softly) aligned
+subphrase in b (and analogously for v2,j ).
+a
+Aggregate. Finally, aggregate the sets {v1,i }`i=1
+b
+and {v2,j }`j=1
+from the previous step and use the
+result to predict the label ŷ.
+
+3.1
+
+Attend
+
+We first obtain unnormalized attention weights eij ,
+computed by a function F 0 , which decomposes as:
+eij := F 0 (āi , b̄j ) := F (āi )T F (b̄j ) .
+
+(1)
+
+This decomposition avoids the quadratic complexity
+that would be associated with separately applying F 0
+`a × `b times. Instead, only `a + `b applications of
+F are needed. We take F to be a feed-forward neural
+network with ReLU activations (Glorot et al., 2011).
+
+
+=== PAGE 3 ===
+These attention weights are normalized as follows:
+`b
+X
+
+βi :=
+
+j=1
+
+exp(eij )
+P`b
+
+k=1 exp(eik )
+
+b̄j ,
+
+`a
+X
+
+exp(eij )
+āi .
+P`a
+k=1 exp(ekj )
+i=1
+
+αj :=
+
+(2)
+
+3.4
+
+In the above model, the input representations are
+simple word embeddings. However, we can augment
+this input representation with intra-sentence attention
+to encode c

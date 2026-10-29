@@ -1,0 +1,55 @@
+=== PAGE 89 (continued) ===
+ Web Text. In Proceedings of the 2010 Conference on Empirical Methods in Natural
+Language Processing (EMNLP 2010), EMNLP ’10, pp. 1088–1098, Stroudsburg, PA, USA.
+Association for Computational Linguistics.
+Schuler, K. K. (2005). VerbNet: A Broad-Coverage, Comprehensive Verb Lexicon. Dissertation,
+University of Pennsylvania.
+Schwartz, R., Dodge, J., Smith, N. A., & Etzioni, O. (2019). Green AI. arXiv: 1907.10597.
+Schwartz, R., Sap, M., Konstas, I., Zilles, L., Choi, Y., & Smith, N. A. (2017). The Effect of
+Different Writing Tasks on Linguistic Style: A Case Study of the ROC Story Cloze Task.
+In Proceedings of the 21st Conference on Computational Natural Language (CoNLL 2017),
+Vancouver, BC, Canada. Association for Computational Linguistics.
+Selman, B., & Levesque, H. J. (1990). Abductive and Default Reasoning: A Computational Core.
+In Proceedings of the Eighth National Conference on Artificial Intelligence (AAAI ’90),
+AAAI’90, pp. 343–348, Boston, MA, USA. AAAI Press.
+Seo, M., Min, S., Farhadi, A., & Hajishirzi, H. (2017). Query-Reduction Networks for Question
+Answering. In Proceedings of the 5th International Conference on Learning Representations
+(ICLR 2017), Toulon, France.
+Sharma, R., Allen, J., Bakhshandeh, O., & Mostafazadeh, N. (2018). Tackling the Story Ending
+Biases in The Story Cloze Test. In Proceedings of the 56th Annual Meeting of the Association
+for Computational Linguistics (ACL 2018), pp. 752–757, Melbourne, Australia. Association
+for Computational Linguistics.
+Singh, P. (2002). The Public Acquisition of Commonsense Knowledge. In AAAI Spring Symposium
+Series, Palo Alto, CA, USA.
+Socher, R., Perelygin, A., Wu, J. Y., Chuang, J., Manning, C. D., Ng, A. Y., & Potts, C. (2013).
+Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing
+(EMNLP 2013), p. 12, Seattle, WA, USA. Association for Computational Linguistics.
+89
+
+
+=== PAGE 90 ===
+S TORKS , G AO , & C HAI
+
+Song, H.-j., Baillargeon, R., & Fisher, C. (2005). Can infants attribute to an agent a disposition to
+perform a particular action?. Cognition, 98(2), B45–B55.
+Speer, R., Chin, J., & Havasi, C. (2017). ConceptNet 5.5: An Open Multilingual Graph of General
+Knowledge.. In Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence
+(AAAI-17) and the Twenty-Ninth Innovative Applications of Artificial Intelligence Conference
+(IAAI-17), San Francisco, CA, USA. AAAI Press.
+Speer, R., Havasi, C., & Lieberman, H. (2008). AnalogySpace: Reducing the Dimensionality of
+Common Sense Knowledge. In Proceedings of the Twenty-Third AAAI Conference on Artificial Intelligence (AAAI-08), Chicago, IL, USA.
+Spithourakis, G., Augenstein, I., & Riedel, S. (2016). Numerically Grounded Language Models for
+Semantic Error Correction. In Proceedings of the 2016 Conference on Empirical Methods in
+Natural Language Processing (EMNLP 2016), pp. 987–992, Austin, Texas. Association for
+Computational Linguistics.
+Spithourakis, G., & Riedel, S. (2018). Numeracy for Language Models: Evaluating and Improving
+their Ability to Predict Numbers. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018), pp. 2104–2115, Melbourne, Australia.
+Association for Computational Linguistics.
+Strubell, E., Ganesh, A., & McCallum, A. (2019). Energy and Policy Considerations for Deep
+Learning in NLP. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL 2019), pp. 3645–3650, Florence, Italy. Association for Computational
+Linguistics.
+Suchanek, F. M., Kasneci, G., & Weikum, G. (2007). YAGO: A Core of Semantic Knowledge
+Unifying WordNet and Wikipedia. In Proceedings of the 16th International Conference on
+World Wide Web, p. 10, Amherst, MA, USA. ACM.
+Sugawara, S., Yokono, H., & Aizawa, A. (2017). Prerequisite Skills for Reading Comprehension:
+Multi-Perspective Analysis of MCTest Datasets and Systems. In Procee

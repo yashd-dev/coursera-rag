@@ -1,0 +1,101 @@
+=== PAGE 12 (continued) ===
+n column 1∼3 of TABLE 5, we provide the statistics of
+NeuLR. It contains 3k samples in total, with 1k for deductive
+reasoning, 1k for inductive reasoning and 1k for abductive
+reasoning. Limited by space, we provide the details of the
+construction of NeuLR in the Appendix.
+To evaluate the performances of LLMs on NeuLR, we
+conduct the experiments shown in TABLE 5. Especially, we
+provide three different test settings, i.e., zero-shot, one-shot
+and chain-of-thought [54] settings. Details of the prompt
+forms are included in the Appendix.
+Firstly, from the results, few-shot prompting and chainof-thought prompting can both boost the performances of
+LLMs in most cases. Overall, chain-of-thought helps most
+to the model accuracy. Especially for text-davinci-003, it witnesses consistent gains with the aid of few-shot prompting
+and chain-of-thought prompting strategies.
+Secondly, among the zero-shot results of three LLMs,
+BARD achieves the best performances on NeuLR while
+ChatGPT ranks last. The differences of zero-shot settings are
+significant. However, with the help of few-shot and chainof-thought prompting strategies, text-davinci-003 large narrows the gaps with BARD, and it surpasses BARD with
+chain-of-thought strategy. Overall, the performances of
+LLMs on NeuLR still have great room for improvement.
+Thirdly, from the perspective of different reasoning settings, there exist huge differences in results compared with
+the previous findings. Generally, the LLMs’ performances
+in inductive reasoning are better than deductive reasoning
+
+ChatGPT
+1-shot COT
+
+0-shot
+
+BARD
+1-shot
+
+COT
+
+48.00
+
+63.67
+
+65.07
+
+66.00
+
+68.30
+69.60
+6.10
+
+87.40
+96.00
+7.60
+
+93.10
+92.60
+9.50
+
+91.90
+96.30
+9.80
+
+and abductive reasoning. Especially, LLMs present obvious weakness in the abductive setting. While from fifteen
+classical datasets, the performances among the reasoning
+settings are sorted as deductive > abductive > inductive. Such
+findings can also motivate future studies. Content neutrality
+can enhance strategies for boosting inductive reasoning
+performance.
+
+7
+
+C ONCLUSION
+
+In this paper, in-depth evaluations are conducted on logical
+reasoning tasks, discussing whether LLMs are really good
+logical reasoners. First, the logical reasoning evaluations are
+organized from deductive, inductive, abductive and mixedform views. We select fifteen logical reasoning datasets to
+evaluate on three representative LLMs (i.e., text-davinci-003,
+ChatGPT and BARD) under both zero-shot and few-shot
+settings. Second, this paper provides fine-level evaluations
+on four metrics, covering both objective and subjective
+views. For problematic cases, extensive error attributions are
+conducted from two dimensions, forming five error types.
+It uncovers the logical flaws of LLMs and we provide deep
+analysis on the results. Third, to achieve a fair and pure
+benchmark for logical reasoning capability, we propose a
+dataset with neutral content, covering deductive, inductive
+and abductive settings.
+Based on the evaluation results above, we abstract six
+dimensions to measure the logical reasoning capability of
+LLMs: (1) Correct, (2) Rigorous, (3) Self-aware, (4) Active, (5)
+Oriented and (6) No hallucination. All these properties can
+be calculated with the evaluation methods proposed in
+this paper. Therefore, we propose an evaluation scheme for
+the logical reasoning capability of LLMs. Considering the
+different performances of LLMs on deductive, inductive, abductive and mixed-form settings, we respectively visualize
+each ability map in Fig. 11.
+According to the results, text-davinci-003 can maintain
+balanced performances in deductive and mixed-form settings. But it usually fails to keep oriented for reasoning
+in the inductive setting, and it also shows laziness in the
+abductive reasoning tasks. Since it is the earliest released
+LLM of the three, it is understandable that text-davinci-003
+has some limitations in logical reasoning tasks, especially in
+the more complex settings (e.g., inductive and abd

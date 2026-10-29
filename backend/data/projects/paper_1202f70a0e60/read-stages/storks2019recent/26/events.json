@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# storks2019recent.26 \u2014 Notes (200 words max)\n\n**Problem**  \nState-of-the-art models struggle on new benchmarks due to embedded statistical biases. Adversarial filtering was used to create WinoGrande and AlphaNLI by removing these biases, yielding low baseline performance. An open question remains whether all statistical biases can ever be fully removed (p.32).\n\n**Method**  \nA secondary model is trained to predict the premise given the hypothesis and class label, forcing the model to ignore superficial language artifacts in textual entailment problems (p.33).\n\n**Reported results**  \nNo quantitative results are provided in this segment. The paper describes the adversarial filtering process and the premise-prediction technique as bias-avoidance strategies, noting that continued effort will be important as state-of-the-art evolves.\n\n**Limitations**  \nThe survey cites bAbI as a \"toy task\" where automatic generation yields 100% baseline accuracy, raising questions about real-world utility. No new benchmark results or model evaluations are reported for this section.\n\n**Exact quotes**  \n- \"Variants of adversarial filtering were used in creating other benchmarks such as WinoGrande (Sakaguchi et al., 2019) and AlphaNLI (Bhagavatula et al., 2019)\" (p.32)  \n- \"Another technique to avoid these biases proposed by Belinkov et al. (2019), particularly in textual entailment problems, is to train a model to predict the premise sentence given the hypothesis sentence and class label\" (p.33)\n\n**Attribution**  \nAll bullets attributed to physical-page markers: p.32, p.33. No background citations inferred."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2274,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782c0f3effekrcI0oaCiWfvq8"
+  }
+]

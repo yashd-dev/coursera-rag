@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# Mei2026improving.13 \u2014 Page 17 (continued)\n\n- **Problem**: Transformer encoding architecture using fim delimiters (`<|fim_prefix|>`, `<|fim_middle|>`, `<|box_start|>/<|box_end|>`, `<|fim_suffix|>`); token segments tokenized separately with explicit delimiter IDs, no intervening spaces/newlines.\n\n- **Method**: TokenRhythm/NeoHorse-1-4B at revision 56f0584b; width-256 readout; zero head dropout; Rank-64 LoRA (\u03b1=128, dropout 0.05) across q/k/v/o and DeltaNet projections (in_proj_qkv, in_proj_z/a/b, out_proj); gated DeltaNet projections (gate_proj, up_proj, down_proj); OneCycle schedule with 10% warm-up, lr starting at 1/25 peak, cosine-annealing to 1/10000; BF16 autocast, gradient checkpointing, clipping at 1.0; AdamW (weight decay 0.01), microbatch size 1, accumulation over 8 records.\n\n- **Reported results**: Training packs up to 4,096 tokens with 2,048-token limit per state/branch; inference server allows 8,192 tokens. Target distributions index Choice options, false/true answers, or Score levels, assigning zero mass to missing keys before normalization; integer label defines one-hot target. Loss: \u2212\u03a3\u1d62\u1d57\u2071 log p\u1d62 averaged over questions within a record; ordered-score auxiliary loss disabled.\n\n- **Limitations**: Text not provided.\n\nQuotes:\n- \"The encoder places the state after <|fim_prefix|>, the instruction after <|fim_middle|>, each option between <|box_start|> and <|box_end|>, and a final <|fim_suffix|>.\" (P17)\n- \"Training minimizes \u2212\ud835\udc56 \ud835\udc61\ud835\udc56 log \ud835\udc5d\u1d62 averaged over questions within a record, with the ordered-score auxiliary loss disabled.\" (P17)\n\n# Mei2026improving.13 \u2014 Page 18\n\n- **Configurations, matching, and reuse**: Each configuration in Tables 2/4 trained independently from saved initialization; pointer and mean-span heads share 1,311,232 parameters; all-module LoRA adds 129,859,584 params; attention + DeltaNet adapters add 57,507,840; auxiliary all-module rank-28 control uses \u03b1=56, totals 58,124,800 trainable params, keeping \u03b1/rLoRA=2 (adapter shapes differ from rank 64).\n\n- **Training scope**: Within each fold\u2013seed, core LR models start from common saved parameters; adapter-scope and rank comparisons copy reference parameters, align initial CPU/CUDA random-generator states; separate generators control shuffling/augmentation with matching recorded orders, inputs, and traces; repeated pointer reexecutes reference recipe under same starting conditions. 28 models from four LR combos + repeated-pointer/trained-residual/frozen-branch controls across four settings; 20 adapter-scope/rank comparisons reusing four reference pointers; eight two-epoch models reusing one-epoch references \u2192 56 distinct trainings.\n\n- **Quote**: \"Within each fold\u2013seed setting, the core learning-rate models start from common saved parameters.\" (P18)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2844,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7846c900ffeZEwfkwvHvuzEIT"
+  }
+]

@@ -1,0 +1,66 @@
+=== PAGE 1 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+
+Dynamic Memory Inference Network for Natural
+Language Inference (2017)
+Rama Krishna Raju
+Abstract: In this paper, the NLI task is viewed as a question - and - answer problem, which leads to proposing the application of DMNs
+to enhance performance. NLI classifies the relationship between two sentences as entailment, contradiction, or neutral. It is necessary
+for many NLP applications, including question - answering, text summarization, and information retrieval. The most significant
+contribution of the paper is to demonstrate that DMNs are effective for episodic memory and experiment with DMNs outside of their
+original domain. This feature allows the model to incrementally update and reawaken memory, which provides a more nuanced view of
+the interactions of the sentences and hence also improves the accuracy of its inferential process. Furthermore, the paper analyses the
+aspects of the employed attention mechanisms in the structure of DMNs that enhance the capability of the model to pay attention to the
+essential words and phrases for successful task completion. The study highlights the impact of integrating the episodic memory updates
+with the attention mechanisms due to extensive experimentation, showing the benefits of such an NLI improvement and the potential for
+enhancing other NLP tasks.
+
+Keywords: Natural Language Inference, Dynamic Memory Networks, Attention
+
+1. Introduction
+
+to only constituent parts of the figure, which has boosted the
+performance of NLP tasks such as NLI.
+
+Natural Language Inference, or NLI, can be defined as a
+significant task within the NLP field, which aims at
+identifying and recognizing the logical consequences implied
+by the provided pair of sentences. Typically, these
+relationships are categorized into affirming, negation, and
+related. This may mean if one of the two is true, the other
+cannot be false; this is commonly referred to as entailment.
+This refers to the situation where one sentence correlates with
+the paradox of the other or the truth of one does not impact or
+is unsure of the other. Because of its importance in NLP, NLI
+also represents a crucial control task for machine learning’s
+semantic understanding abilities. The use of NLI is diverse
+and ranges in areas such as question answering automatic
+summarization, and information retrieval. Therefore, future
+progress in NLI can highly benefit general NLP systems.
+At the beginning of NLI studies, much of the early work
+focused on shallow forms of representation. These methods
+worked on keywords and phrases and depended on the logic
+rule to establish correspondences between two sentences. A
+second attempt at defining logical patterns based on such
+patterns of inclusion was made more formal and syntactic in
+approach, called natural logic. However, while these
+approaches constituted state of the art for their time, there
+existed significant limitations in handling human language
+where the content may have multiple embedded
+interpretations or instances of irony or sarcasm.
+Introducing deep learning has created higher models and
+increased workflow in Natural Language Understanding. For
+instance, LSTM gave the models the power to capture long range dependencies within the sentence, which perfectly fits
+tasks like NLI, in which sequence information plays a crucial
+role. Another type of network was also helpful, Convolutional
+Neural Networks (CNNs), which were initially used for
+image processing but also entered text analysis by capturing
+local patterns. TREE - structured neural networks were the
+second analysis method as they also retain the hierarchical
+structure in the sentences, which is beneficial for syntax related applications. Most importantly, attention - based
+models have been gaining grounds where models can attend
+
+Numerous existing deep learning architectures initially
+needed

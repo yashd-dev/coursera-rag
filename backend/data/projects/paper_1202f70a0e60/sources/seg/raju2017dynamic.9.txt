@@ -1,0 +1,80 @@
+=== PAGE 6 (continued) ===
+presentation by building a context - based database upon
+which new inferences can be more safely made. This
+approach enhances the generalization capability for complex
+NLI tasks and sheds light upon the memory flow in deep
+learning models for natural language processing. If these
+mechanisms are further investigated and developed, DMNs
+can provide accuracy and performance in NLI (Valli, 2016).
+
+Figure 8: The Episodic Memory System: Neurocircuitry and
+Disorders
+Baseline Model - Sentence Encoding
+For all our experiments, we used the Stanford Natural
+Language Inference (SNLI) dataset, one of the most popular
+datasets for NLI and is considered the gold standard by many
+researchers. The SNLI dataset comprises 570, 000 premise hypothesis pairs, each annotated with one of three labels: This
+relation could be further categorized into entailment,
+contradiction, or neutrality. This makes this extensive dataset
+ideal for the training and testing models intended to parse
+sentences and reason about their relations. The premise and
+hypothesis pairs are collected from a wide range of texts.
+Hence, the dataset includes examples of simple statements in
+simple declarative sentences and more complex abstractions
+(Ruppenhofer et al., 2016).
+The SNLI dataset is divided into training, validation, and test
+sets. This split helps achieve consistency when estimating the
+efficacy of models, thus facilitating the correlation of results
+between different experiments and deployments. The training
+set helps the model learn, the validation helps tune hyper
+parameters to minimize overfitting, and the testing set is used
+to test the final accuracy. By following this strictly practiced
+division, the developed experiments established a clear
+microscopic comparison standard against other models in the
+literature for our proposed method.
+The main advantage of the dataset is its versatility. The dataset
+contains many types of sentence pairs and focuses on different
+topics, levels of complexity, and syntactic structures (Rein,
+2014). This diversification is essential for assessing their
+generalization skills of NLI models because it guarantees to
+assess the selected model on a vast array of contexts rather
+than a specific group of linguistic conditions. For example,
+the dataset has semantically similar and semantically
+dissimilar sentences, differences in logical connections, and
+lexical and syntactic density. This diversity puts pressure on
+models to build representations that can understand and learn
+the possibility of natural language.
+We used 3 - class classification accuracy as the primary
+evaluation measure in all our experiments. This metric
+measures the model's ability to correctly classify each premise
+- hypothesis pair into one of the three categories: They
+described the relationship between the sentence and their
+prior knowledge as entailment, contradiction, or neutral.
+However, accuracy is insufficient for evaluating the model
+performance, especially in the multiple class classification
+scenarios. In order to have a more detailed view of how our
+model worked in each class, we also calculated precision and
+recall in each category. Accuracy measures the ratio between
+the number of true positives and the total number of positives
+made by the classifier. At the same time, Recall assesses the
+ratio between the total number of true positives and the actual
+total positives. Precision and recall thus allowed us to
+evaluate the model's efficiency in the global sense and, during
+its usage, to rate its possibility of consistently making
+qualitatively good predictions of separate classes.
+Another disadvantage of this data set is its large size and
+variation, which must be clarified and made more manageable
+(Wang, 2017). Such a high - dimensional space prohibits
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2224
+
+
+=== PAGE 7 ===
+International Jou

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.7 \u2014 Compact Notes\n\n**Problem**: Paper investigates LLM reasoning capabilities across diverse logical reasoning datasets, analyzing performance variations by prompting style, dataset type, and generation vs. classification settings.\n\n**Method**: Evaluates 4 LLMs (ChatGPT, BARD, GPT-4, Claude-3.5) on 5 dataset categories (Deductive, Inductive, Abductive, CLUTRR, bAbI) using direct and chain-of-thought prompting; reports answer correctness percentages.\n\n**Reported Results**:\n- Table 2 shows LLM performance across datasets; GPT-4 leads in most categories\n- Classification generally outperforms generation tasks\n- ChatGPT poorly on generation tasks (bAbI-15, bAbI-16, CLUTRR, abductive rules)\n- Few-shot ICL inconsistently beneficial: only text-davinci-003 shows continuous gains on abductive datasets; ChatGPT/BARD see mixed improvements\n\n**Limitations**: Author-identified \u2014 ChatGPT optimized for chatting not complex reasoning; few-shot ICL fails to provide consistent benefits for inductive and mixed-form reasoning manners\n\n**Quotes**:\n- \"few-shot in-context learning (ICL) does not necessarily bring improvements in logical reasoning tasks\" (p.7)\n- \"ChatGPT exhibits particularly poor results in generation tasks, such as bAbI-15, bAbI-16, CLUTRR, AbductiveRules and D*-Ab. This observation may result from the fact that ChatGPT is designed to improve chatting capability rather than complex reasoning\" (p.6)\n\n*Source markers: page 5 continued, page 6*"
+  },
+  {
+    "kind": "usage",
+    "tokens": 3482,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783c0fbbffe7TLCOfNFfJMa3p"
+  }
+]

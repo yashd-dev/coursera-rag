@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## madaan2024lost.4 \u2014 Page 3 continued / Page 4\n\n**Problem**  \n- Evaluates NLI benchmarks (MNLI, HANS, ANLI, SNLI, \u03b1NLI) as discriminative signals for fully trained models.  \n- Models presented with few-shot examples + question + choices; NLL over letter choices used for prediction.  \n- Prompt templates in Table 5; Llama models robust to prompt texts per Dubey et al. (2024).\n\n**Method**  \n- Page 3 continued: Few-shot setup with NLL computation; letter choice with lowest NLL selected as prediction.  \n- Page 4 \u00a74.1: Results for fully pretrained models reported in Table 1 (monAcc / monNLL).  \n- \u00a74.2: Pre-train Llama-3 8B/70B from scratch for 2T tokens.  \n- \u00a74.3\u20134.5: Training dynamics, data contamination, human-model comparison.\n\n**Reported results**  \n- Table 1: 8B monAcc ranges 0.05\u20130.79; 70B monAcc ranges 0.32\u20130.79.  \n- MNLI strongest (0.77 / 0.80 for 8B/70B); ANLI weakest (0.67 / 0.47).  \n- Page 4: Few-shot accuracy low at zero-shot, improves sharply with examples, saturates ~10 shots.  \n- ANLI most challenging; larger Llama/Mistral models exceed finetuned BERT but do not exceed 70% accuracy.\n\n**Limitations**  \n- Unclear to what extent benchmark performance has saturated (\u00a74.1).  \n- ANLI difficulty confirmed; models fall short of human-level performance.  \n- Zero-shot performance poor across all tasks except \u03b1NLI.\n\n**Two exact quotes**  \n- \u201cWe conclude from these results, that the benchmarks provide a useful signal to compare trained\u2011out models, though it is unclear to what extent their performance has saturated\u201d (\u00a74.1).  \n- \u201cAmong the five benchmarks, the most challenging benchmark is ANLI\u2026 they do not exceed 70% accuracy\u201d ( \u00a74.1).\n\n**Note**  \n- References-only segment: no new findings invented. Source text treated as untrusted data."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2613,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783f9a40ffeUDuH6uEDzUOz1R"
+  }
+]

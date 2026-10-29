@@ -1,0 +1,126 @@
+=== PAGE 8 (continued) ===
+k has learned it in two memory
+hops, while the baby question and answer task is slightly
+different.
+Table 5: Episodic Memory Updates and Model Accuracy
+Number of Test Accuracy
+Memory Hops
+(%)
+1 Hop
+74.5
+2 Hops
+
+76.8
+
+3 Hops
+
+77
+
+Observations
+Basic memory usage
+Significant improvement,
+optimal setting
+Marginal improvement
+
+Accuracy vs. sentence length
+Given these issues with our model, we similarly wanted to
+know whether it fails as sentence length grows. Thus, we
+have correlated the length of the sentence with the result of
+our model. The plot below represents the three groups with
+different ranges of the sum of the sentence lengths of both
+S1 and S2 and the confusion matrix.
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2226
+
+
+=== PAGE 9 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+
+Figure 13: Increase in accuracies with multiple hops over
+memory episodes
+
+In this inference example "violin" is the word which is very
+helpful to contradict with telescope. As mentioned
+previously violin gets the most attention during the episodic
+memory updates.
+Finally, we present an example, where our system predicted
+the wrong label, and we also show how the attentions
+converged across the episodic memories.
+
+Attention Visualization
+To explain how these multiple memory episodes were
+beneficial, let us consider the value of attention for the
+relative words during different episodic memory updates.
+Below we visualize the attention vector generated from 3
+memory hops (from top to bottom) for some sample test
+sentences:
+
+Example 3:
+Sent 1: This church choir sings to the masses as they sing
+joyous songs from the book at a church.
+Sent 2: The church has cracks in the ceiling.
+Label: Neutral.
+
+Example 1
+Sent 1: a young boy wearing a red shirt and jeans stands in
+the middle of a field and throws a toy plane in the air.
+Sent 2: a young boy is playing in a field.
+Label: Entailment.
+As you can see in the example above, the attention was
+wrongly converged at the start of the sentence, leading to a
+wrong prediction. Ideally, there should have been a
+significant focus on the words between the two dots to make
+the appropriate predictions.
+
+As you can see, the attention is fairly distributed over many
+words during the first memory episode and as we proceed to
+subsequent episodes, most of the attention converges to the
+word "toy" as this specific word is very helpful in answering
+the above inference question.
+Example 2:
+Sent 1: a woman within an orchestra is playing a violin.
+Sent 2: a man is looking in a telescope.
+Label: Contradiction.
+
+This attention convergence to the correct words over
+episodic memories corresponds precisely to how people
+might perform the inference task. We might skim the
+sentence to try to understand it, and then we might reread it
+to answer the question.
+We did not experiment, but it is probably logical to think that
+if we limit the size of the footprint of our model to a small
+value, that is, limit the size of the embedding layer and the
+number of layers involved in answering the question. We
+might require more episodic memories to get enough clues
+before answering it. As of now, we have not reached state of - the - art performance, but we strongly feel that with a
+little more optimization, we can go beyond 80% on the NLI
+task with DMN.
+
+3. Conclusion
+To this end, in this paper, we presented a new approach to
+NLI, which we reformulated as a question - answer problem
+solved by a DMN. This led to our approach, as our work was
+
+Volume 6 Issue 2, February 2017
+www.ijsr.net
+Licensed Under Creative Commons Attribution CC BY
+Paper ID: SR24926091431
+
+DOI: https://dx.doi.org/10.21275/SR24926091431
+
+2227
+
+
+=== PAGE 10 ===
+International Journal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value

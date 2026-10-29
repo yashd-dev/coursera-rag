@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 1\u20132 NOTES:**\n\n- **Problem:** Causal structure discovery from unstructured natural language faces challenges: unknown variables, absence of counterfactual data, latent variables, feedback loops, and the fundamental problem of causal inference (only one factual world observable). Real-world events are complex and multi-causing, hindering manual ground-truth annotation.\n\n- **Method:** Propose an end-to-end method using LLMs to extract instantiated causal variables from text, build causal graphs, merge graphs across data sources, and conduct counterfactual inference on the estimated graph. Causal graph conditioning reduces LLM biases and better represents causal estimands.\n\n- **Reported results:** Method demonstrated on real-world news articles. Authors state LLM limitations in counterfactual causal reasoning stem from prediction errors and propose mitigation directions.\n\n- **Limitations:** (Not yet detailed in pages 1\u20132; will emerge in later pages.) Text modality prevents traditional structure discovery; non-trivial structures with latent variables/feedback loops excluded from most DAG-based analyses; real-world data prevents ground truth accessibility.\n\n- **Exact quotes:**\n  - \"the fundamental problem of causal inference [34]: only one factual world can be observed.\"\n  - \"We use our method to show that the limitations of LLMs in counterfactual causal reasoning come from prediction errors and propose directions to mitigate them.\"\n\n*Source: Gendron, Witbrock, Ro\u017eanec, Dobbie \u2014 \"Counterfactual Causal Inference in Natural Language with Large Language Models\" (arXiv:2410.06392v1, 8 Oct 2024).*\n\n**PONYTAIL:** Skipped deeper structural and evaluation details (pages 3\u201321). Risk: missing methodological nuances, dataset specifics, or validation claims beyond page 2."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2272,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78452345ffe8lR5dOplQjOTFk"
+  }
+]

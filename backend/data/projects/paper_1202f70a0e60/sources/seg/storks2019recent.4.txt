@@ -1,0 +1,45 @@
+=== PAGE 4 (continued) ===
+ch of this knowledge may not be needed for general-purpose communication with humans.
+Commonsense knowledge. Commonsense knowledge, on the other hand, is typically unstated,
+as it is considered obvious to most humans (Cambria et al., 2011), and consists of universally
+accepted beliefs about the world (Nunberg, 1987). Davis and Marcus (2015) demonstrate this:
+“if you see a six-foot-tall person holding a two-foot-tall person in his arms, and you are told they
+are father and son, you do not have to ask which is which.” Commonsense knowledge provides
+a deeper understanding of language. While it is rarely referred to in language, humans rely on it
+in communication (Cambria et al., 2011), as it is required to reach a common ground (Chai, Gao,
+She, Yang, Saba-Sadiya, & Xu, 2018). Commonsense knowledge consists of everyday assumptions
+about the world (Zang, Cao, Cao, Wu, & CAO, 2013), and is generally learned through one’s own
+experience with the world, but can also be inferred by generalizing over common knowledge (Speer,
+4
+
+
+=== PAGE 5 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Havasi, & Lieberman, 2008). While common knowledge can vary by region, culture, and other
+factors, we expect that commonsense knowledge should be roughly typical to all humans (Davis,
+2017).
+Two particularly important domains of commonsense knowledge are intuitive physics, i.e., humans’ basic understanding of physical interactions in the world, and intuitive psychology, i.e., humans’ basic understanding of human emotion, behavior, and motives (DARPA, 2018). Also respectively referred to as naïve physics and psychology (Davis & Marcus, 2015) or physical and social
+commonsense (Sakaguchi, Bras, Bhagavatula, & Choi, 2019), these are considered fundamental as
+they have been shown to develop in humans as infants, even before language develops (Baillargeon,
+2004; Song, Baillargeon, & Fisher, 2005), and humans are capable of several kinds of intuitive physical and psychological inference at only eighteen months of age (DARPA, 2018). These types of
+knowledge allow us to make on-the-fly predictions about everyday physical and social interactions.
+Intuitive physics allows us to infer, for example, the potential consequences when dropping a glass
+of water on the floor, i.e., the glass may shatter, water will almost certainly spill on the floor, and the
+floor could become slippery. From intuitive psychology, we can further infer that dropping the glass
+was likely an accident, and the person who dropped the glass will be angry, upset, or embarrassed.
+Section 3 gives an introduction to existing knowledge resources, and several recent efforts in
+building such resources to facilitate natural language inference.
+1.3 Scope of Approaches
+To tackle the challenging benchmark tasks, many computational models have been developed.
+These range from earlier symbolic and statistical approaches to recent approaches based on deep
+neural networks. Especially for recent neural approaches, various architectures have been proposed that model context of language, take advantage of external data or knowledge resources, and
+achieve the state-of-the-art performance, and in some cases, achieve near or above human performance. However, due to the unexplainability of these recent approaches, as well as statistical biases
+recently found in benchmark datasets (Schwartz, Sap, Konstas, Zilles, Choi, & Smith, 2017; Gururangan, Swayamdipta, Levy, Schwartz, Bowman, & Smith, 2018; Niven & Kao, 2019), it remains a
+subject of debate in terms of how much progress we have made in enabling natural language inference ability. Section 4 summarizes recent learning and inference approaches, and discusses their
+performance, limitations, and trends.
+
+2. Benchmarks and Tasks
+Alan Turing perhaps is the first one who proposed an experiment, widely-known as the Turing
+Test (Turing, 1950), to evaluate whether a machine possessed intelligence. The formulation of the
+Turing Test, however, has been cr

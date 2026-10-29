@@ -1,0 +1,107 @@
+=== PAGE 37 (continued) ===
+heir individual capabilities, which should be considered
+when comparing their performance. An example of this is CBT, whose language modeling subtasks require predicting random words in a sentence with or without a preceding context paragraph
+(Hill et al., 2015). Predicting some types of words, such as prepositions, is difficult for humans
+(67.6% accuracy without context), perhaps because humans excel at inferring meaning, and many
+prepositions have similar meanings. Consequently, neural language models, more capable of capturing patterns, easily beat humans in this sub-task of CBT. While the task is actually difficult for
+humans, machines are already more capable of performing it, making it less interesting of a problem
+to study.
+On the other hand, a high machine performance does not always mean that the machine can
+truly perform better than humans on these tasks. As discussed in Section 2.2.3, the presence of
+statistical biases in benchmark data has made such a measure questionable. Further, as state-ofthe-art neural approaches lack interpretability (and benchmarks do not require it), there is no way to
+prove this. As work progresses on eliminating these biases and providing greater explanation ability
+to state-of-the-art models, machine performance measurements will become more trustworthy.
+Factors affecting perception of complexity. Beyond those limitations which must be considered
+when interpreting machine performance, some external factors can also affect the perceived complexity of the tasks. Apart from variations in the specific techniques or approaches, which will be
+discussed in Section 4, we find the training data size and the benchmark age and popularity most
+notable.
+Training data size. Benchmarks with a high magnitude of training data are well-suited for deep
+neural networks, which can learn various patterns in language, especially in datasets with statistical
+biases as discussed in Section 2.2.3. Figure 12 compares overall benchmark data size with state-ofthe-art accuracy on several benchmarks, including the improvement of the state of the art since each
+benchmark’s release.
+In the graph, performing a linear regression indicates no statistically significant correlation,
+however we can qualitatively interpret the data. With the exception of a few data points, we see
+a slightly positive trend in both the absolute state-of-the-art performance and the difference from
+the baseline performance. It appears that the highest performance and most improvement has come
+in benchmarks with greater than 10,000 examples. On small benchmarks with less than 1,000
+examples, such as the Winograd Schema Challenge (Davis et al., 2017), we have seen limited
+improvement, perhaps because neural networks struggle to converge on such small data. Conversely,
+on large benchmarks with over 100,000 examples, such as SQuAD 1.1 (Rajpurkar et al., 2016),
+SWAG (Zellers et al., 2018), and GLUE (Wang et al., 2018), we see the highest state-of-the-art
+performance, and some of the biggest improvements in state-of-the-art performance since release.
+37
+
+
+=== PAGE 38 ===
+S TORKS , G AO , & C HAI
+
+100
+
+bAbI SQuAD 1.1
+SWAG
+SQuAD 2.0
+Story Cloze Test
+RACE
+CLOTH
+HellaSWAG
+ReCoRD
+DROP
+DREAM
+AlphaNLI
+
+SuperGLUE
+
+90
+
+OpenBookQA
+
+80
+
+SOTA Performance
+
+WSC
+
+70
+
+GLUE
+
+60
+50
+
+MC-TACO
+
+Cosmos QA
+
+40
+
+SocialIQA
+
+WinoGrande
+
+30
+20
+10
+0
+10
+
+100
+
+1000
+
+10000
+
+100000
+
+1000000
+
+10000000
+
+Data Size (# examples)
+Figure 12: Data size versus state-of-the-art accuracy for selected benchmarks. Error bars indicate
+improvement from the original state-of-the-art accuracy reported by baselines in paper.
+
+While this is intuitive, we do see some anomalies. For example, while bAbI (Weston et al.,
+2016) has a relatively small magnitude of data, state-of-the-art accuracy has reached 100%. This
+is likely because the data in this benchmark is synthetically generated and predictably structured,
+another potential factor that can make a benchmark easier. We also see large benchmarks where
+p

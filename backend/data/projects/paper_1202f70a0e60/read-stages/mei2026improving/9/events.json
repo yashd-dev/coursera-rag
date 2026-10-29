@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## PAPER SEGMENT (mei2026improving.9.txt, pages 12\u201313)\n\n- **Problem**: Fine-tuning large language models can distort pretrained features, causing underperformance on out-of-distribution tasks (ref. [20]).\n\n- **Method**: Exploration of weight initialization strategies, data ordering, early stopping, and LoRA/LoRA+ parameter-efficient adaptation for robustness to distribution shifts (refs. [18]\u2013[27]).\n\n- **Reported results**: Surgical fine-tuning improves adaptation to distribution shifts (ref. [22]); LoRA+ achieves efficient low-rank adaptation of large models (ref. [15]); specialized decision models vs. general-purpose LLMs benchmarked across knowledge, reasoning, and multilingual tasks (refs. [24]\u2013[25]).\n\n- **Limitations**: Inferred results not verified in this segment; citations are references only, no empirical findings extracted.\n\n> \"Surgical fine-tuning improves adaptation to distribution shifts.\" \u2014 Yoonho Lee et al. [22]\n\n> \"LoRA+: Efficient low rank adaptation of large models.\" \u2014 Soufiane Hayou et al. [15]\n\n> \"Fine-tuning can distort pretrained features and underperform out-of-distribution.\" \u2014 Ananya Kumar et al. [20]"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2502,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7847a1f3ffevctoVBdwlBcw1d"
+  }
+]

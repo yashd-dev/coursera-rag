@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.10 \u2014 Compact Notes\n\n**Problem**\n- 14 datasets assessed on LLM logical flaw attribution across evidence selection and reasoning process dimensions.\n- Core issue: LLMs struggle to locate accurate evidence and perspectives for logical reasoning tasks.\n\n**Method**\n- Error taxonomy: wrong selection (33.26%), hallucination (27.46%), no reasoning (19.33%), perspective mistake (44.47%), process mistake (36.20%).\n- Error types attributed to one of three reasoning process categories: no reasoning, perspective mistake, or process mistake.\n- Fig. 6 visualizes attribution across four deductive, two inductive, four abductive, and four mixed-form datasets.\n\n**Reported Results**\n- No single dataset is error-free; error types vary significantly across datasets.\n- Table 4 reports explanation redundancy metrics for text-davinci-003 across 0/1/3-shot settings and datasets including bAbI-15/16, dAbI, \u03b1-NLI/NLG, abductive rules, D*-Ab, ReClor, LogiQA, LogiQA 2.0, LogiQA2NLI.\n\n**Limitations**\n- Limited input content causes LLMs to generate hallucinatory facts.\n- LLMs abandon reasoning in considerable cases (\"laziness\" phenomenon).\n- Reliability for real applications affected by evidence location and perspectival errors.\n\n**Two Short Exact Quotes**\n- \"the primary challenge evident from the results lies in the ability of LLMs to locate accurate evidence and perspectives for logical reasoning tasks\"\n- \"Due to the limited content of inputs, LLMs are also prone to generate hallucinatory facts to aid the reasoning process\"\n\n**References-Only Note**: This segment contains attribution statistics and error taxonomy without new experimental findings; no invented results are attributed."
+  },
+  {
+    "kind": "usage",
+    "tokens": 3211,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783b5178ffem10Ws2hyhzmc61"
+  }
+]

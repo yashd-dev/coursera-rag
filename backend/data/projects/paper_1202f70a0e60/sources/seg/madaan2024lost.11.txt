@@ -1,0 +1,113 @@
+=== PAGE 10 (continued) ===
+inguistics.
+
+Xenia Ohmer, Elia Bruni, and Dieuwke Hupkes. 2024.
+From Form(s) to Meaning: Probing the Semantic
+Depths of Language Models Using Multisense Consistency. Computational Linguistics, pages 1–51.
+Ellie Pavlick and Tom Kwiatkowski. 2019. Inherent
+disagreements in human textual inferences. Transactions of the Association for Computational Linguistics, 7:677–694.
+
+Leon Weber-Genzel, Siyao Peng, Marie-Catherine
+De Marneffe, and Barbara Plank. 2024. VariErr NLI:
+Separating annotation error from human label variation. In Proceedings of the 62nd Annual Meeting of
+the Association for Computational Linguistics (Volume 1: Long Papers), pages 2256–2269, Bangkok,
+Thailand. Association for Computational Linguistics.
+
+Barbara Plank. 2022. The “problem” of human label
+variation: On ground truth in data, modeling and
+evaluation. In Proceedings of the 2022 Conference
+on Empirical Methods in Natural Language Processing, pages 10671–10682, Abu Dhabi, United Arab
+Emirates. Association for Computational Linguistics.
+
+Adina Williams, Nikita Nangia, and Samuel Bowman.
+2018. A broad-coverage challenge corpus for sentence understanding through inference. In Proceedings of the 2018 Conference of the North American
+
+Barbara Plank, Dirk Hovy, and Anders Søgaard. 2014.
+Learning part-of-speech taggers with inter-annotator
+
+10
+
+
+=== PAGE 11 ===
+Benchmark
+ANLI
+HANS
+MNLI
+SNLI
+αNLI
+
+# Samples
+1200
+30000
+9815
+9842
+1532
+
+# labels
+3
+2
+3
+3
+2
+
+A.3
+
+Deviating from previous datasets, the adversarial dataset Heuristic Analysis for NLI Systems
+(HANS, McCoy et al., 2019) is not crowd-sourced,
+but synthetically generated using templates. Specifically, the templates are designed to generate examples that can not be solved through heuristics such
+as lexical, subsequence, or constituent overlap. At
+the time of proposal, none of the SOTA models
+were able to solve such examples.
+
+Table 4: Dataset details
+Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume
+1 (Long Papers), pages 1112–1122, New Orleans,
+Louisiana. Association for Computational Linguistics.
+
+A
+
+A.4
+
+SNLI
+
+Introduced by Bowman et al. (2015), the Stanford
+Natural Language Inference (SNLI) dataset was
+one of the first large-scale NLI dataset for NLP
+evaluation. The dataset comprises of 570K humanauthored English sentence pairs, sourced by asking
+Amazon Mechanical Turk workers to supply hypotheses for the three labels available in the dataset
+– entailment, neutral and contradiction – given a
+premise comprised by an image caption drawn
+from a pre-existing corpus. For 57K of the resulting samples were then labeled by four additional
+annotators. In this work, we consider the 10K development set of the corpus. Like the original paper, we exclude samples with no gold label because
+there was no label that the annotators agreed on.
+A.2
+
+ANLI
+
+The second adversarial dataset we consider is Adversarial NLI (or ANLI, Nie et al., 2020a). The
+dataset, created with the primary aim to make
+SOTA models fail, is sourced iteratively in a humanin-the-loop setup. Given a premise and a target
+label, annotators are asked to propose hypotheses
+that may fool models. The produced samples are
+then tested on a model, and the examples that do
+indeed receive an incorrect label are re-validated
+by one or more human validators. The dataset consists of three sets of increasingly challenging examples, where in each round more powerful models
+are considered that are trained on examples from
+the previous round. The third round furthermore
+contains a set of more diverse premises. For our
+experiments, we are using the dev set of round 3,
+the most challenging set of the benchmark.
+
+Benchmarks
+
+Below, we provide a more elaborate description
+of (construction of) the benchmarks we consider
+in our work. A summary of their statistics can be
+found in Table 4.
+A.1
+
+HANS
+
+A.5 αNLI
+Differing in setup from the previously described
+benchmarks, αNLI or abductive NLI (Bhagavatula et al., 2020) focuses on abductive r

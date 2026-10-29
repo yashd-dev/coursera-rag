@@ -1,0 +1,85 @@
+=== PAGE 7 (continued) ===
+correct answer. In a time where LLMs are deployed for many
+users with potentially different preferences, this
+question has become very practically relevant. To
+do so, we consider how the probability distribution of the models over the three possible labels
+Entailment, Neutral, and Contradiction) compares
+with the label distributions observed in the human
+annotations. Following Nie et al. (2020b), we consider Jensen-Shannon Divergence (JSD Menéndez
+
+Implications for saturation What the implication of these results is for the question of saturation
+of these benchmarks is, like the samples of the
+benchmark themselves, open to interpretation. On
+the one hand, it appears that for several cases, the
+model predictions do not align with the human ma7
+
+
+=== PAGE 8 ===
+(a) Accuracy vs Entropy
+
+(b) Final model JSD
+
+Figure 4: Accuracy vs entropy and final model JSDs a) Accuracy vs entropy for Llama8B and Llama 405B.
+We show how the accuracy of Llama 8B and Llama 405B changes as the entropy of the human label distributions
+increases. Accuracy-vs-entropy plots for all other models can be found in Figure 6. b) Final model JSDs for each of
+the benchmarks in ChaosNLI. JSDs are substantially lower than chance and BERT JSDs, but substantially higher
+than JSDs between humans.
+
+Figure 5: Development of JSD during training. We show how the JSD of our trained-from-scratch 8B and 70B
+model develops during training.
+
+et al., 1997) to measure the distance between the
+two distributions. Contrary to KL divergence, JSD
+is symmetric and bound between 0 and 1, making
+it more interpretable for our specific case.
+In Figure 4b, we can see that, for MNLI, all
+models have probability distributions more similar
+to the human distributions than chance, but substantially different than humans have among each
+other.5 This pattern is constant across datasets. Interestingly, larger models have lower divergence,
+contradicting the finding of Nie et al. (2020b) that
+better or larger models do not have more similar
+distributions. Yet, the effect of scale is further confirmed in Figure 5: though even trained-out models
+
+are far away from a low JSD, the JSD of the model
+softmax distributions and the human label distributions decreases steadily during training. This is
+an exciting finding, since it suggests that measuring similarity with human distributions could be an
+interesting venue to explore during training.
+
+5
+
+Conclusion
+
+In this work, we revisit natural language inference
+(NLI) benchmarks and investigate if they may still
+play a role in LLM evaluation, both during and
+after pre-training. We consider five different NLI
+benchmarks – αNLI, ANLI, HANS, and MNLI –
+and evaluate them across six different models of
+two model families: Llama 3.1 8B, 70B, and 405B,
+and Mistral 7B, 8x7B, and 8x22B. Furthermore,
+
+5
+
+The human estimate was computed by Nie et al. (2020b),
+on an independent sample of human labels on the same data.
+
+8
+
+
+=== PAGE 9 ===
+we consider how the benchmark behave during
+the training of two Llama-style 8B and 70B models. We find that, with the exception of αNLI, all
+benchmarks are able to discriminate between models of different qualities, and in particular ANLI is
+challenging even for the largest models. Furthermore, we find next to no effect of contamination
+for the benchmarks. Considering the benchmark
+ChaosNLI (Nie et al., 2020b), containing 100 human annotations for over 4500 samples of three
+of the benchmarks we consider, we also find that
+the differences between human label distributions
+and model label distributions – as measured with
+Jensen Shannon Divergence (JSD) – has decreased
+for the new generation of models. However, they
+are still substantially higher than the distributional
+difference between two populations of humans. Interestingly, contrary to the findings of Nie et al.
+(2020b), we observe a clear effect of scale. JSD
+shows a steady decrease during training, and larger
+models have lower JSD than smaller models, making it a potentially inter

@@ -1,0 +1,53 @@
+=== PAGE 73 (continued) ===
+r Publications.
+Bos, J., Basile, V., Evang, K., Venhuizen, N. J., & Bjerva, J. (2017). The Groningen Meaning Bank.
+In Handbook of Linguistic Annotation, pp. 463–496. Springer.
+Bosselut, A., Levy, O., Holtzman, A., Ennis, C., Fox, D., & Choi, Y. (2018). Simulating Action
+Dynamics with Neural Process Networks. In Proceedings of the 6th International Conference
+on Learning Representations (ICLR 2018).
+Bosselut, A., Rashkin, H., Sap, M., Malaviya, C., Celikyilmaz, A., & Choi, Y. (2019). COMET:
+Commonsense Transformers for Automatic Knowledge Graph Construction. In Proceedings
+of the 57th Annual Meeting of the Association for Computational Linguistics (ACL 2019),
+Florence, Italy. Association for Computational Linguistics.
+Botschen, T., Sorokin, D., & Gurevych, I. (2018). Frame- and Entity-Based Knowledge for
+Common-Sense Argumentative Reasoning. In Proceedings of the 5th Workshop on Argument
+Mining, pp. 90–96, Brussels, Belgium. Association for Computational Linguistics.
+Bowman, S. R., Angeli, G., Potts, C., & Manning, C. D. (2015). A large annotated corpus for
+learning natural language inference. In Proceedings of the 2015 Conference on Empirical
+Methods in Natural Language Processing (EMNLP 2015), pp. 632–642, Lisbon, Portugal.
+Association for Computational Linguistics.
+Brendel, W., & Bethge, M. (2019). Approximating CNNs with Bag-of-local-Features models works
+surprisingly well on ImageNet. In Proceedings of the 7th International Conference on Learning Representations (ICLR 2019), New Orleans, LA, USA.
+Brown, P. F., Cocke, J., Della Pietra, S. A., Della Pietra, V. J., Jelinek, F., Lafferty, J. D., Mercer,
+R. L., & Roossin, P. S. (1990). A statistical approach to machine translation. Computational
+linguistics, 16(2), 79–85.
+Brown, P. F., Della Pietra, V. J., deSouza, P. V., Lai, J. C., & Mercer, R. L. (1992). Class-Based
+n-gram Models of Natural Language. Computational Linguistics, 18(4), 467–480.
+Camacho-Collados, J., & Pilehvar, M. T. (2018). From Word to Sense Embeddings: A Survey on
+Vector Representations of Meaning. J. Artif. Int. Res., 63(1), 743–788.
+Cambria, E., Olsher, D., & Rajagopal, D. (2014a). SenticNet 3: A Common and Common-Sense
+Knowledge Base for Cognition-Driven Sentiment Analysis. In Proceedings of the TwentyEighth AAAI Conference on Artificial Intelligence (AAAI-14), Québec City, QC, Canada.
+AAAI Press.
+Cambria, E., Song, Y., Wang, H., & Howard, N. (2014b). Semantic Multidimensional Scaling for
+Open- Domain Sentiment Analysis. IEEE Intelligent Systems, 29(2), 44–51.
+Cambria, E., Song, Y., Wang, H., & Hussain, A. (2011). Isanette: A Common and Common Sense
+Knowledge Base for Opinion Mining. In 2011 IEEE 11th International Conference on Data
+Mining Workshops, pp. 315–322, Vancouver, BC, Canada. IEEE.
+Cambria, E., Speer, R., Havasi, C., & Hussain, A. (2010). SenticNet: A Publicly Available Semantic
+Resource for Opinion Mining. In AAAI Fall Symposium on Commonsense Knowledge, Menlo
+Park, CA, USA. AAAI Press.
+73
+
+
+=== PAGE 74 ===
+S TORKS , G AO , & C HAI
+
+Carlson, A., Betteridge, J., Kisiel, B., Settles, B., Jr, E. R. H., & Mitchell, T. M. (2010). Toward
+an Architecture for Never-Ending Language Learning. In Proceedings of the Twenty-Fourth
+AAAI Conference on Artificial Intelligence (AAAI-10), Atlanta, GA, USA. AAAI Press.
+Cer, D., Diab, M., Agirre, E., Lopez-Gazpio, I., & Specia, L. (2017). SemEval-2017 Task 1: Semantic Textual Similarity Multilingual and Crosslingual Focused Evaluation. In Proceedings
+of the 11th International Workshop on Semantic Evaluation (SemEval-2017), pp. 1–14, Vancouver, BC, Canada. Association for Computational Linguistics.
+Chaganty, A., & Liang, P. (2016). How Much is 131 Million Dollars? Putting Numbers in Perspective with Compositional Descriptions. In Proceedings of the 54th Annual Meeting of
+the Association for Computational Linguistics (ACL 2016), pp. 578–587, Berlin, Germany.
+Association for Computational Linguistics.
+Chai, J. Y., Gao, Q., She, L., Yang, S., Saba-Sadiya, S., & Xu, 

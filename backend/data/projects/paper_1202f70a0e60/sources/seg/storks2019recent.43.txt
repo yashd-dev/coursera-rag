@@ -1,0 +1,48 @@
+=== PAGE 52 (continued) ===
+iser, & Polosukhin, 2017) to solve specific tasks. Output layers of these networks are chosen based on the task formulation. For example, a linear layer
+and softmax are often used for classification, while a language decoder will be used for language
+generation. Because of the sequential nature of language, RNN-based architectures are widely applied and are often implemented in both baseline approaches (Bowman et al., 2015; Rashkin et al.,
+2018b) and state-of-the-art approaches (Kim, Hong, Kang, & Kwak, 2019; Chen, Cui, Ma, Wang,
+Liu, & Hu, 2018; Henaff, Weston, Szlam, Bordes, & LeCun, 2017). Given different architectures,
+neural models also benefit from techniques like attention mechanisms and memory augmentation.
+For tasks that require reasoning based on multiple supporting facts, e.g., bAbI (Weston et al., 2016),
+memory-augmented networks like memory networks (Weston, Chopra, & Bordes, 2015) and recurrent entity networks (Henaff et al., 2017) have been shown effective. And for tasks that require
+alignment between input and output, e.g., textual entailment tasks like SNLI (Bowman et al., 2015),
+or capturing long-term dependencies, it is often beneficial to adopt attention mechanisms to models.
+Next, we introduce several past and current state-of-the-art neural models for the surveyed
+benchmarks, particularly focusing on three aspects: attention mechanism, memory augmentation,
+and contextual models and representations.
+4.3.1 ATTENTION M ECHANISM
+Since the first application of attention mechanism for neural machine translation (Bahdanau, Cho,
+& Bengio, 2015), attention has been used widely in NLP tasks, especially to capture the alignment
+between an input (encoder) and an output (decoder). Modeling attention has several advantages. It
+allows the decoder to directly go to and focus on certain parts of the input. It alleviates the vanishing
+gradient problem by providing a way to account for states far away in the input sequence. Another
+advantage is that the attention distribution learned by the model automatically provides an alignment
+between inputs and outputs which allows some understanding of their relations. Because of these
+advantages, attention mechanisms have been successfully applied to many NLI benchmark tasks.
+Attention in RNN/CNN. Adding an attention mechanism to RNNs, LSTMs, CNNs, and more has
+been shown to improve performance on various tasks compared to their vanilla models (Kim et al.,
+2019). It is particularly successful for tasks which require alignment between input and output,
+such as various textual entailment tasks which require the modeling of context and hypothesis, and
+reading comprehension questions which refer directly to an accompanying passage, like MCScript
+(Ostermann et al., 2018).
+52
+
+
+=== PAGE 53 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+For example, the official leaderboard23 for the SNLI task (Bowman et al., 2015) reports that
+one of the best performing systems (Kim et al., 2019), partly inspired by D ENSE N ET (Huang, Liu,
+van der Maaten, & Weinberger, 2016), uses a densely connected RNN while concatenating features
+from an attention mechanism to recurrent features in the network. As discussed by Kim et al. (2019),
+the attentive weights resulting from this alignment help the system make accurate entailment and
+contradiction decisions for highly similar pairs of sentences. One such example given is the context
+sentence "Several men in front of a white building" compared to the hypothesis sentence "Several
+people in front of a gray building." For the MCScript task Ostermann et al. (2018) used in SemEval
+2018, online results24 indicate that the best performer (Chen et al., 2018) achieved an accuracy of
+84.13% using a bidirectional LSTM-based approach with an attention layer.
+RNNs with attention also have limitations particularly when the alignment between inputs and
+outputs is not straightforward. For example, Chen et al. (2018) found that yes/no questions were
+particula

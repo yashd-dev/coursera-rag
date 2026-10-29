@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**problem** (p.17-continued):  Benchmarks on correctness, rigorousness, and self-awareness metrics yield mixed/low scores (e.g., 0.56, 0.00, 0.02, 0.21 across dimensions), indicating poor LLM performance on structured evaluation.\n\n**method**: Automatic evaluation on four trending LLMs (LLaMA3.1-Chat-8B, MistralInstruct-v0.2-7B, Claude-3, GPT-4) across six dimensions via heatmaps (Fig. 15) and automatic prompts (Appendix A\u2013E). NeuLR dataset introduced to benchmark pure logical reasoning with neutralized content.\n\n**reported results** (p.18): Table 8 lists evaluated datasets (deductive, inductive, abductive, mixed-form) with sample counts per LLM (Davinci, ChatGPT, BARD). Heatmap Fig. 15 reports per-LLM scores across activity, orientation, and no-hallucination dimensions.\n\n**limitations**: Source text contains fragmented data (partial numbers, truncated labels) and placeholder prefixes; exact numerical results for LLMs are not fully legible. NeuLR construction relies on neutral content replacement but details of prompt engineering are in Appendix A.\n\n**two short exact quotes**:\n- \u201cMix 0.56 0.57 0.08 0.21\u201d (p.17-continued, correctness/rigor/self-awareness metrics)\n- \u201cIn. Ab. Mix 0.08 0.21 0.13 0.09\u201d (p.17-continued, mixed-mode dimension scores)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2925,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7838c8ebffe049d6LWjNyqtRD"
+  }
+]

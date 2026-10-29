@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## xu2023large.33\n\n**Problem**  \nLogic-reasoning task with 0\u2011shot and few\u2011shot prompts evaluating model ability to answer questions and generate explanations from relational facts.\n\n**Method**  \nThree model variants (Bard, Davinci-003, ChatGPT\u20110\u2011shot/3\u2011shot/1\u2011shot) presented with a fact set and asked to answer a question plus explain. Table 21 shows per\u2011model accuracy on the D*-Ab reasoning case.\n\n**Reported results**  \nExact accuracy figures not provided in this segment; only model names and prompt\u2011type tags (0\u2011shot, 3\u2011shot, 1\u2011shot) appear alongside the reasoning table.\n\n**Limitations**  \nNo quantitative results, error\u2011type breakdowns, or comparative analysis within this page. The text shifts to a \u201cQuestion\u2011Answer\u2011Explain\u201d format without publishing performance metrics.\n\n- **Exact quote 1:** \u201cDave is rough because he is bad, poor, and strong, which meets the criteria of people that are bad, poor, and strong being rough.\u201d  \n- **Exact quote 2:** \u201cDave is bad. This is evident from the fact that he is described as \u201cbad\u201d and \u201crough\u201d.\u201d"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2298,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78362308ffe8zFytkLljBrzuR"
+  }
+]

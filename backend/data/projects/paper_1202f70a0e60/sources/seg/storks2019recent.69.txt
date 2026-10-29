@@ -1,0 +1,60 @@
+=== PAGE 81 (continued) ===
+Kozareva, Z., & Hovy, E. (2011). Learning Temporal Information for States and Events. In Proceedings of the 2011 IEEE Fifth International Conference on Semantic Computing (ICSC
+’11), ICSC ’11, pp. 424–429, Washington, DC, USA. IEEE Computer Society.
+Kuo, Y.-L., & Hsu, J. Y.-J. (2010). Bridging Common Sense Knowledge Bases with Analogy
+by Graph Similarity. In Proceedings of the 2nd AAAI Conference on Collaboratively-Built
+Knowledge Sources and Artificial Intelligence, AAAIWS’10-02, pp. 22–27, Atlanta, GA,
+USA. AAAI Press.
+Lai, A., & Hockenmaier, J. (2014). Illinois-LH: A Denotational and Distributional Approach to Semantics. In Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval2014), pp. 329–334, Dublin, Ireland. Association for Computational Linguistics and Dublin
+City University.
+Lai, G., Xie, Q., Liu, H., Yang, Y., & Hovy, E. (2017). RACE: Large-scale ReAding Comprehension
+Dataset From Examinations. In Proceedings of the 2017 Conference on Empirical Methods
+81
+
+
+=== PAGE 82 ===
+S TORKS , G AO , & C HAI
+
+in Natural Language Processing (EMNLP 2017), pp. 785–794, Copenhagen, Denmark. Association for Computational Linguistics.
+Lakoff, G. (1970). Linguistics and natural logic. Synthese, 22(1), 151–271.
+Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P., & Soricut, R. (2019). ALBERT: A lite
+BERT for self-supervised learning of language representations. arXiv: 1909.11942.
+Lee, K., Artzi, Y., Choi, Y., & Zettlemoyer, L. (2015). Event detection and factuality assessment
+with non-expert supervision. In Proceedings of the 2015 Conference on Empirical Methods in
+Natural Language Processing (EMNLP 2015), pp. 1643–1648, Lisbon, Portugal. Association
+for Computational Linguistics.
+Lehnert, W. (1977). Human and Computational Question Answering*. Cognitive Science, 1(1),
+47–73.
+Lenat, D. B., & Guha, R. V. (1989). Building Large Knowledge-Based Systems; Representation and
+Inference in the Cyc Project (1st edition). Addison-Wesley Longman Publishing Co., Inc.,
+Boston, MA, USA.
+Levesque, H. J. (2011). The Winograd Schema Challenge. In AAAI Spring Symposium on Logical
+Formalizations of Commonsense Reasoning, Stanford, CA, USA. AAAI Press.
+Levesque, H. J., Davis, E., & Morgenstern, L. (2012). The Winograd schema challenge.. In Proceedings of the Thirteenth International Conference on the Principles of Knowledge Representation and Reasoning (KR2012), Rome, Italy. AAAI Press.
+Levin, B. (1993). English Verb Classes and Alternations: A Preliminary Investigation. University
+of Chicago Press, Chicago.
+Lewis, C. I., Langford, C. H., & Lamprecht, P. (1959). Symbolic Logic. Dover publications New
+York.
+Li, B., Lee-Urban, S., Johnston, G., & Riedl, M. O. (2013). Story Generation with Crowdsourced
+Plot Graphs. In Proceedings of the Twenty-Seventh AAAI Conference on Artificial Intelligence
+(AAAI-13), AAAI’13, pp. 598–604, Bellevue, Washington. AAAI Press.
+Li, X., Taheri, A., Tu, L., & Gimpel, K. (2016). Commonsense Knowledge Base Completion. In
+Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics,
+pp. 1445–1455. Association for Computational Linguistics.
+Lin, C.-Y. (2004). ROUGE: A Package for Automatic Evaluation of Summaries. In Marie-Francine
+Moens, S. S. (Ed.), Text Summarization Branches Out: Proceedings of the ACL-04 Workshop,
+pp. 74–81, Barcelona, Spain. Association for Computational Linguistics.
+Liu, H., & Singh, P. (2004). ConceptNet — A Practical Commonsense Reasoning Tool-Kit. BT
+Technology Journal, 22(4), 211–226.
+Liu, N. F., Gardner, M., Belinkov, Y., Peters, M. E., & Smith, N. A. (2019). Linguistic Knowledge
+and Transferability of Contextual Representations. In Proceedings of the 2019 Conference
+of the North American Chapter of the Association for Computational Linguistics: Human
+Language Technologies (NAACL HLT 2019), pp. 1073–1094. Association for Computational
+Linguistics.
+82
+
+
+=== PAGE 83 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Liu, Q., Jiang, H., L

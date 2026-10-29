@@ -1,0 +1,103 @@
+=== PAGE 24 (continued) ===
+how the mean effects change with benchmark composition.
+
+Contrast
+Head-rate main effect
+Adapter-rate main effect
+Pooling − pointer, all
+Pooling − pointer, no-FFN
+No-FFN − all, pointer
+No-FFN − all, pooling
+Readout-by-scope interaction
+No-FFN rank 64 − all rank 28
+Mean-span − last-content
+Trained residual − reference
+Budget interaction
+
+MC11
+
+Seven
+sources
+
+Config.-weighted
+LOSO
+
+Source-weighted
+LOSO
+
++0.02 ± 0.43
+−2.83 ± 0.79
++0.73 ± 1.07
++0.91 ± 0.35
++2.21 ± 0.66
++2.39 ± 0.35
++0.18 ± 0.74
++0.09 ± 0.42
++1.89 ± 0.97
++0.05 ± 0.57
++3.88 ± 1.13
+
+−0.11 ± 0.46
+−2.96 ± 0.65
++1.05 ± 1.11
++1.64 ± 0.57
++3.10 ± 0.64
++3.69 ± 0.40
++0.59 ± 0.66
++0.51 ± 0.59
++2.10 ± 0.77
+−0.09 ± 0.64
++3.66 ± 1.37
+
+[−0.132, +0.285]
+[−3.393, −2.240]
+[+0.363, +1.209]
+[+0.264, +1.489]
+[+1.451, +3.015]
+[+1.110, +3.259]
+[−0.341, +0.515]
+[−0.200, +0.514]
+[+1.265, +2.362]
+[−0.343, +0.338]
+[+2.530, +4.553]
+
+[−0.345, +0.314]
+[−3.408, −2.478]
+[+0.524, +1.470]
+[+0.693, +2.202]
+[+1.985, +3.854]
+[+1.773, +4.558]
+[−0.212, +0.909]
+[+0.102, +0.900]
+[+1.103, +2.488]
+[−0.407, +0.366]
+[+2.608, +4.428]
+
+Table 12 | Sensitivity of learning-rate, readout, adapter-placement, and training-budget effects to
+benchmark aggregation (pp). The first two columns are paired means ± descriptive SE. Each
+LOSO range spans seven omission-specific means. Main effects use higher minus lower rate;
+the budget interaction is the two-epoch pooling advantage minus the one-epoch advantage.
+24
+
+
+=== PAGE 25 ===
+The head-by-adapter rate interaction is +1.28 ± 1.65 pp on MC11. The pooling and no-FFN
+main comparisons retain positive four-setting means under both weighting rules and every
+source omission. The interaction between them is less stable: omitting chess reverses its MC11weighted mean. Likewise, no-FFN rank 64 versus all-module rank 28 can change sign under
+configuration-weighted omission. The near-zero head-rate and trained-residual means change
+sign under equal source weighting. These outcomes support the individual recipe comparisons
+more strongly than claims about their interactions or the ranking of near-equal arms.
+The budget result also persists under reweighting: longer training lowers both models’
+accuracy, with the pointer losing more. ARC and HellaSwag account for about 63% of the
+wider gap. Under seven-source weighting, the mean interaction remains +3.66 pp, although one
+setting has a small negative interaction of −0.20 pp.
+Replacing the reference pointer by its repeated training changes the all-module pooling
+effect to +0.55 ± 1.11 pp and the trained-residual effect to −0.12 ± 0.58 pp. No-FFN and rank-28
+pointers retain gains of +2.04 ± 0.63 and +1.95 ± 0.77 pp, each positive in all four settings. These
+larger recipe gains are less dependent on which reference execution is used.
+Pooling and scope restriction also lower Kev under the three-test-subset average, with
+declines on the decision test as well as transfer subsets. The smaller residual-control contrasts
+change sign under this weighting.
+
+25
+

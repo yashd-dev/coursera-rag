@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# richardson2020probing.11 notes\n\n**Problem** [P8c] Models trained on narrow fragments struggle to generalize beyond them; newer analysis correlates neural activations to symbolic patterns.\n\n**Method** [P9] Comparative analysis of NLI datasets and models via controlled variance in adversarial datasets, hypothesis-only baselines, and syntax/logical form evaluation.\n\n**Reported results** [P9] No specific numbers given. Mentions GLUE benchmark, BERT analysis methods (5 NPI probing methods), and adversarial datasets testing generalization. Lists NLI corpora: SNLI, MultiNLI, ANLI, HELP, and variants targeting monotonicity, lexical inference, and quantified sentences.\n\n**Limitations** [P8c\u2013P9] Paper describes the question/landscape but does not report new experimental results in this segment. Citations are bibliographic listings without analysis or findings.\n\n- \u201cWhat are Models Actually Learning? One open question concerns the extent to which models trained on narrow fragments can generalize beyond them.\u201d [P8c]\n- \u201cNewer analysis methods that attempt to correlate neural activation patterns and target symbolic patterns (Chrupa\u0142a and Alishahi 2019)\u201d [P8c]\n\nA references-only segment requiring a short note, not invented findings."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2690,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783281edffefC5YciFr4t4hdk"
+  }
+]

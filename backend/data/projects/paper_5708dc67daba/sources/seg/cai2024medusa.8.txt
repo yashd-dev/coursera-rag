@@ -1,0 +1,203 @@
+=== PAGE 6 (continued) ===
+tions of different heads. Let
+(i)
+ak denote the accuracy of the i-th top prediction of the k-th
+head2 . Assuming the accuracies are independent, we can
+estimate the accuracy of a candidate sequence composed
+by the top [i1 , i2 , · · · , ik ] predictions of different heads as
+Qk
+(ij )
+j=1 aj . Let I denote the set of all possible combinations
+of [i1 , i2 , · · · , ik ] and each element of I can be mapped to
+a node of the tree (not only leaf nodes but all nodes are
+included). Then, the expectation of the acceptance length of
+a candidate sequence is:
+
+For M EDUSA-1, this dataset is sufficient for training
+M EDUSA heads. However, for M EDUSA-2, we observe
+that solely using this dataset for training the backbone and
+M EDUSA heads usually leads to a lower generation quality.
+In fact, even without training M EDUSA heads, training the
+backbone model with this dataset will lead to performance
+degradation. This suggests that we also need to use the
+original model’s probability prediction instead of using the
+ground truth token as the label for the backbone model, similar to classic knowledge distillation works (Kim & Rush,
+2016). Concretely, the loss for the backbone model is:
+(0)
+
+X
+
+k
+Y
+
+(i )
+
+aj j .
+
+[i1 ,i2 ,··· ,ik ]∈I j=1
+
+Thinking about building a tree by adding nodes one by one,
+the contribution of a new node to the expectation is exactly
+the accuracy associated with the node. Therefore, we can
+greedily add nodes to the tree by choosing the node that is
+connected to the current tree and has the highest accuracy.
+This process can be repeated until the total number of nodes
+reaches the desired number. In this way, we can construct a
+tree that maximizes the expectation of the acceptance length.
+Further details can be found in Appendix C.
+
+(0)
+
+LLM-distill = KL(poriginal,t ||pt ),
+(0)
+
+where poriginal,t denotes the probability distribution of the
+original model’s prediction at position t.
+
+3. Experiments
+
+However, naively, to obtain the original model’s probability
+prediction, we need to maintain two models during training,
+increasing the memory requirements. To further alleviate
+this issue, we propose a simple yet effective way to exploit
+the self-distillation setup. We can use a parameter-efficient
+adapter like LoRA (Hu et al., 2021) for fine-tuning the backbone model. In this way, the original model is simply the
+model with the adapter turned off. Therefore, the distillation
+does not require additional memory consumption. Together,
+this self-distillation pipeline can be used to train M EDUSA-2
+without hurting the backbone model’s capability and introduce almost no additional memory consumption. Lastly,
+
+In this section, we present experiments to demonstrate the
+effectiveness of M EDUSA under different settings. First, we
+evaluate M EDUSA on the Vicuna-7B and 13B models (Chiang et al., 2023) to show the performance of M EDUSA-1
+and M EDUSA-2. Then, we assess our method using the
+Vicuna-33B and Zephyr-7B models to demonstrate selfdistillation’s viability in scenarios where direct access to
+the fine-tuning recipe is unavailable, as with Vicuna-33B,
+2
+Here, the accuracy is defined for the single top i-th token, i.e.,
+this accuracy is equal to top-i accuracy minus top-(i − 1) accuracy.
+
+6
+
+
+=== PAGE 7 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Speedup on different categories for Vicuna-7B
+Speedup on different model sizes
+
+(a)
+
+ng
+
+Ste
+
+on
+
+Ex
+
+tra
+
+cti
+
+g
+din
+
+th
+Ma
+
+m
+
+y
+
+ies
+
+13B
+
+Co
+
+Model Size
+
+3.01x
+
+1.0
+
+Wr
+iti
+
+7B
+
+2.77x
+
+2.0
+
+nit
+
+0
+
+2.72x
+
+1.5
+
+w/o Medusa
+Medusa-1
+Medusa-2
+
+20
+
+pla
+
+40
+
+2.58x
+
+ing
+
+60
+
+2.58x
+
+Ro
+le
+
+80
+
+2.5
+
+son
+
+2.83x
+2.33x
+
+2.7x
+
+Re
+a
+
+2.18x
+
+Hu
+ma
+
+100
+
+3.29x
+
+3.0
+
+Speedup
+
+Tokens per Second
+
+120
+
+3.62x
+
+3.5
+
+2.83x
+
+(b)
+
+Figure 3. Left: Speed comparison of baseline, M EDUSA-1 and M EDUSA-2 on Vicuna-7B/13B. M EDUSA-1 achieves more than 2×
+wall-time speedup compared to the baseline implementation while M EDUSA-2 further improves the speedup by a significant margin

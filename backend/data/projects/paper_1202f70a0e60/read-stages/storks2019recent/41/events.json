@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "## storks2019recent.41 - Section 41/79\n\n### Problem\nFocuses on NLI (Natural Language Inference) problem. Surveys evolution from symbolic approaches to statistical and neural methods. Examines how different reasoning paradigms (logic-based, statistical, neural) have been applied to NLI benchmarks including RTE Challenges and Triangle-COPA.\n\n### Method\nConducts a survey of NLI approaches across three eras: symbolic (logic-based), statistical (feature-engineered models), and neural (recent deep learning). Analyzes how each approach maps natural language to logical forms or uses different feature sets for entailment prediction. Reviews automatic semantic parsing approaches for logic-based reasoning.\n\n### Reported Results\n- Early symbolic approaches dominated early NLI problems and RTE Challenges\n- Raina et al. (2005) used abduction over logical forms with learned assumptions\n- Giampiccolo et al. (2008) used external semantic knowledge (Wikipedia, WordNet, VerbOcean) with manually authored logic rules\n- MacCartney & Manning (2007) natural logic approach combined with statistical RTE models exceeded state-of-the-art on RTE Challenge 3\n- Triangle-COPA baseline achieved 91% accuracy using manually authored logic and commonsense rules\n- Manual logic authoring is effective but not scalable for larger datasets with higher variation\n\n### Limitations\n- Manual logic authoring and language-to-logical form mappings are not scalable for recent larger-magnitude datasets\n- Variation in required knowledge and language/semantic phenomena exceeds manual authoring capacity\n- Early statistical approaches achieved only slightly better than random guessing on first two RTE Challenges\n\n### Exact Quotes\n> \"Among the surveyed benchmarks, symbolic approaches have primarily been applied in the early RTE Challenges.\" (p.49 continued)\n\n> \"More recently, the baseline approach to the Triangle-COPA benchmark achieved 91% accuracy by creating a comprehensive set of manually authored logic and commonsense rules...\" (p.50)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2442,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78287658ffejVwtZOkb3TVAtC"
+  }
+]

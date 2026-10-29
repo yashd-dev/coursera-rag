@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# gendron2024counterfactual \u2014 Page 13 Notes\n\n**Problem:** Not explicitly stated on this page; segment begins mid-citations and continues references list from Page 12.\n\n**Method:** Not applicable; purely bibliographic listing of references [25\u201332].\n\n**Reported results:** None; reference list contains no empirical findings.\n\n**Limitations:** None within this segment; no data or claims to evaluate.\n\n**Exact quotes:**\n- \"[25] Gregor Leban, Blaz Fortuna, Janez Brank, and Marko Grobelnik. Event registry: learning about world events from news. In Proceedings of the 23rd International Conference on World Wide Web, pp. 107\u2013110, 2014.\" \u2014 Page 13\n- \"[26] Jing Ma. Causal inference with large language model: A survey. arXiv:2409.09822, 2024.\" \u2014 Page 13\n\n**Unchecked:** Full content of Pages 1\u201311 and 14\u201321 not reviewed; conclusions or methods outside this reference list are unseen."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2830,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78425a95ffeg6h5gd5cusRO2E"
+  }
+]

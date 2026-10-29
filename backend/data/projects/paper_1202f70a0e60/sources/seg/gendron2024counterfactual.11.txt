@@ -1,0 +1,52 @@
+=== PAGE 10 (continued) ===
+ing, where every piece of information could be traced back to
+evidence from the real world. We expect that such a framework will have extensive applications
+in many domains, extending the use of causal reasoning to any domain where text is available. In
+particular, we expect that could lead to a greater automation of strategic foresight, democratizing and
+enabling a wider use of it to enhance decision-making at all societal levels.
+
+References
+[1] Elias Bareinboim, Juan D. Correa, Duligur Ibeling, and Thomas Icard. On pearl’s hierarchy
+and the foundations of causal inference. In Hector Geffner, Rina Dechter, and Joseph Y.
+Halpern (eds.), Probabilistic and Causal Inference: The Works of Judea Pearl, volume 36
+of ACM Books, pp. 507–556. ACM, 2022. doi: 10.1145/3501714.3501743. URL https:
+//doi.org/10.1145/3501714.3501743.
+[2] Stephan Bongers, Patrick Forré, Jonas Peters, and Joris M. Mooij. Foundations of structural
+causal models with cycles and latent variables. The Annals of Statistics, 49(5):2885 – 2915,
+2021. doi: 10.1214/21-AOS2064. URL https://doi.org/10.1214/21-AOS2064.
+[3] Patrick Brandtner and Marius Mates. Artificial intelligence in strategic foresight–current
+practices and future application potentials: Current practices and future application potentials.
+In The 2021 12th International Conference on E-business, Management and Economics, pp.
+75–81, 2021.
+[4] Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh,
+10
+
+
+=== PAGE 11 ===
+Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler,
+Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. Language models are few-shot
+learners. In Hugo Larochelle, Marc’Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan,
+and Hsuan-Tien Lin (eds.), Advances in Neural Information Processing Systems 33: Annual
+Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 612, 2020, virtual, 2020. URL https://proceedings.neurips.cc/paper/2020/hash/
+1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html.
+[5] Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece
+Kamar, Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott M. Lundberg, Harsha Nori, Hamid Palangi,
+Marco Túlio Ribeiro, and Yi Zhang. Sparks of artificial general intelligence: Early experiments
+with GPT-4. CoRR, abs/2303.12712, 2023. doi: 10.48550/arXiv.2303.12712. URL https:
+//doi.org/10.48550/arXiv.2303.12712.
+[6] George Burt and Anup Karath Nair. Rigidities of imagination in scenario planning: Strategic
+foresight through ‘unlearning’. Technological Forecasting and Social Change, 153:119927,
+2020.
+[7] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: pre-training of
+deep bidirectional transformers for language understanding. In Jill Burstein, Christy Doran, and
+Thamar Solorio (eds.), Proceedings of the 2019 Conference of the North American Chapter of
+the Association for Computational Linguistics: Human Language Technologies, NAACL-HLT
+2019, Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers), pp. 4171–
+4186. Association for Computational Linguistics, 2019. doi: 10.18653/V1/N19-1423. URL
+https://doi.org/10.18653/v1/n19-1423.
+[8] Nikita Dhawan, Leonardo Cotta, Karen Ullrich, Rahul G. Krishnan, and Chris J. Maddison. Endto-end causal effect estimation from unstructured natural language data. CoRR, abs/2407.07018,
+2024. doi: 10.48550/ARXIV.2407.07018. URL https://doi.org/10.48550/arXiv.2407.
+07018.
+[9] Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle,
+Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, Anirudh Goyal, Anthony
+Hartshorn, Aobo Yang, Archi Mitra, Archie Sravankumar, Artem Korenev, Arthur 

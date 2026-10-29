@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "- **Problem**: State-of-the-art systems on commonsense NLI benchmarks; adversarial filtering prevents shallow solutions or data bias exploitation.  \n- **Method**: Benchmarks categorized across four domains (commonsense NLI, QA, QG, intuitive psychology); each uses adversarial filtering or similar to generate challenging negatives.  \n- **Reported Results**: SWAG has 73,561 examples; ReCoRD has 120,000+ examples requiring commonsense; HellaSWAG is a 70,000-example reissue of SWAG from ActivityNet/WikiHow sources with adversarially filtered negatives; AlphaNLI has 170,000 examples from 20,000 contexts.  \n- **Limitations**: Adversarial filtering improves challenge but does not eliminate dataset artifacts; benchmark formats vary (cloze, abductive, ending prediction) limiting direct comparison.  \n\n> \u201cExamples include labels for the source of the correct ending, and ordinal labels for the likelihood of each possible ending and the correct ending.\u201d (p.18, continued)  \n> \u201cHellaSWAG can be downloaded at https://rowanzellers.com/hellaswag/.\u201d (p.19)  \n\n**Notes**: The segment catalogs four benchmark families; no model results or comparative performance are reported."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2351,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e782ed0e1ffemeyxVk17gVxo25"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**storks2019recent.62 - Notes**\n\n- **Problem**: Not specified in this segment. Text continues from previous page with bibliography entries.\n\n- **Method**: Not applicable. Segment is a bibliography continuation (references list).\n\n- **Reported results**: None. Bibliographic citations only; no experimental results presented in this segment.\n\n- **Limitations**: None applicable. No methodology, data, or findings to evaluate.\n\n- **Two short exact quotes**:\n  - [P73 continued] \u201cr Publications.\u201d\n  - [P74] \u201cCer, D., Diab, M., Agirre, E., Lopez-Gazpio, I., & Specia, L. (2017). SemEval-2017 Task 1: Semantic Textual Similarity Multilingual and Crosslingual Focused Evaluation.\u201d\n\n- **Other notes**: Segment spans pages 73 (continued) and 74. Entries appear to be reference list for the Storks, Gao & Chai paper. No problem, method, or results attributable to the source paper in this excerpt."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2577,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7823b216ffe9YhqDaiQVhNTYV"
+  }
+]

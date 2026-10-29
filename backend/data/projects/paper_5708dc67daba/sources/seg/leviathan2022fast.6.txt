@@ -1,0 +1,179 @@
+=== PAGE 5 (continued) ===
+nced walltime improvement factor
+can be up to ∼60% higher than the improvement factor with
+a fixed γ. We leave exploring this for future work4 .
+
+Other simple heuristics can be used as negligible-cost approximation models. For example, in cases where long sequences are likely to repeat, such as for summarization tasks
+or chat-like interfaces 5 , an approximation model that simply
+
+4
+
+5
+
+The above bound assumes that we still run Mp to verify the oracle’s predictions. If we skip those verifications the bound doesn’t
+hold and we would get a substantial additional improvement.
+
+E.g. where a user and a language model iterate on content, like
+text or code (“can you rewrite this story but change the ending”,
+“can you make this function also do X”).
+
+5
+
+
+=== PAGE 6 ===
+Fast Inference from Transformers via Speculative Decoding
+
+Base
+
+=3
+
+=7
+
+Mp encoder
+Mq encoder
+Mp decoder
+Mq decoder
+
+Wall time
+
+Figure 5. A simplified trace diagram for a full encoder-decoder Transformer stack. The top row shows speculative decoding with γ = 7
+so each of the calls to Mp (the purple blocks) is preceded by 7 calls to Mq (the blue blocks). The yellow block on the left is the call to the
+encoder for Mp and the orange block is the call to the encoder for Mq . Likewise the middle row shows speculative decoding with γ = 3,
+and the bottom row shows standard decoding.
+
+approximation models. As expected we see that α increases
+with the size of the approximation model. Interestingly, α
+and walltime improvement are higher for argmax sampling
+(temp=0). We observe speedups of 2.6X (temp=1) and 3.4X
+(temp=0) on the translation task and slightly lower speedups
+of 2.3X (temp=1) and 3.1X (temp=0) for the summarization
+task. These empirical results match well with the theoretical predictions, with some variance due to implementation
+details (see Appendix A.3).
+
+copies tokens from the context in case we find a matching
+prefix, might yield high values of α. These parameter-less
+approximation models, have the additional advantage of
+being even simpler to deploy from a production standpoint.
+Another type of approximation models that can be used by
+speculative decoding are non-autoregressive models, like
+those from (Stern et al., 2018). Then, instead of the autogreressive loop in Algorithm 1 we’d just call the nonautoregressive model once.
+A final example, interesting mostly from a theoretical perspective, is an approximation model which chooses tokens
+at random, which guarantees some improvement (although
+very small) for all models Mp .
+
+Table 2. Empirical results for speeding up inference from a T5XXL 11B model.
+
+4. Experiments
+4.1. Empirical Walltime Improvement
+We implement our algorithm and compare it to the implementation in the T5X codebase for accelerating T5-XXL.
+Setup We test a standard encoder-decoder T5 version 1.1
+model (Raffel et al., 2020) on two tasks from the T5 paper:
+(1) English to German translation fine tuned on WMT EnDe,
+and (2) Text summarization fine tuned on CCN/DM. For
+both tasks, we use T5-XXL (11B) for Mp . For the approximation model Mq we test several existing configurations,
+namely T5-large (800M), T5-base (250M), and T5-small
+(77M) (Raffel et al., 2020). We use existing checkpoints
+for all models. We measure walltime improvements with a
+batch size of 1 on a single TPU-v4 for both argmax sampling
+(temp=0) and standard sampling (temp=1).
+
+TASK
+
+Mq
+
+T EMP
+
+γ
+
+α
+
+S PEED
+
+ENDE
+ENDE
+ENDE
+ENDE
+ENDE
+ENDE
+
+T5- SMALL F
+T5- BASE
+T5- LARGE
+T5- SMALL F
+T5- BASE
+T5- LARGE
+
+0
+0
+0
+1
+1
+1
+
+7
+7
+7
+7
+5
+3
+
+0.75
+0.8
+0.82
+0.62
+0.68
+0.71
+
+3.4X
+2.8X
+1.7X
+2.6X
+2.4X
+1.4X
+
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+CNNDM
+
+T5- SMALL F
+T5- BASE
+T5- LARGE
+T5- SMALL F
+T5- BASE
+T5- LARGE
+
+0
+0
+0
+1
+1
+1
+
+5
+5
+3
+5
+3
+3
+
+0.65
+0.73
+0.74
+0.53
+0.55
+0.56
+
+3.1X
+3.0X
+2.2X
+2.3X
+2.2X
+1.7X
+
+4.2. Empirical α Values
+While we only implemented our method for T5, we measured α values for various tasks, sampling methods, target
+models Mp , and approximation models Mq . Specifically,
+we evaluated the expectation 

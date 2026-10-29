@@ -1,0 +1,146 @@
+=== PAGE 10 (continued) ===
+ive Decoding
+
+Thoppilan, R., Freitas, D. D., Hall, J., Shazeer, N. M., Kulshreshtha, A., Cheng, H.-T., Jin, A., Bos, T., Baker, L.,
+Du, Y., Li, Y., Lee, H., Zheng, H., Ghafouri, A., Menegali, M., Huang, Y., Krikun, M., Lepikhin, D., Qin, J.,
+Chen, D., Xu, Y., Chen, Z., Roberts, A., Bosma, M.,
+Zhou, Y., Chang, C.-C., Krivokon, I. A., Rusch, W. J.,
+Pickett, M., Meier-Hellstern, K. S., Morris, M. R., Doshi,
+T., Santos, R. D., Duke, T., Søraker, J. H., Zevenbergen, B., Prabhakaran, V., Dı́az, M., Hutchinson, B., Olson, K., Molina, A., Hoffman-John, E., Lee, J., Aroyo,
+L., Rajakumar, R., Butryna, A., Lamm, M., Kuzmina,
+V. O., Fenton, J., Cohen, A., Bernstein, R., Kurzweil, R.,
+Aguera-Arcas, B., Cui, C., Croak, M., hsin Chi, E. H., and
+Le, Q. Lamda: Language models for dialog applications.
+ArXiv, abs/2201.08239, 2022.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones,
+L., Gomez, A. N., Kaiser, Ł., and Polosukhin, I. Attention is all you need. Advances in neural information
+processing systems, 30, 2017.
+Yu, J., Xu, Y., Koh, J. Y., Luong, T., Baid, G., Wang, Z.,
+Vasudevan, V., Ku, A., Yang, Y., Ayan, B. K., Hutchinson,
+B. C., Han, W., Parekh, Z., Li, X., Zhang, H., Baldridge,
+J., and Wu, Y. Scaling autoregressive models for contentrich text-to-image generation. ArXiv, abs/2206.10789,
+2022.
+
+10
+
+
+=== PAGE 11 ===
+Fast Inference from Transformers via Speculative Decoding
+
+A. Appendix
+A.1. Correctness of Speculative Sampling
+We will now show that for any distributions p(x) and q(x), the tokens sampled via speculative sampling from p(x) and q(x)
+are distributed identically to those sampled from p(x) alone. Let β be the acceptance probability (Definition 3.1).
+Note that as p0 (x) = norm(max(0, p(x) − q(x))) = P 0 p(x)−min(q(x),p(x))
+= p(x)−min(q(x),p(x))
+, the normalizing
+0
+0
+0
+1−β
+x (p(x )−min(q(x ),p(x )))
+0
+constant for the adjusted distribution p (x) is 1 − β, where the last equation follows immediately from Lemma 3.3 and
+Theorem 3.5.
+Now:
+P (x = x0 ) = P (guess accepted, x = x0 ) + P (guess rejected, x = x0 )
+Where:
+P (guess accepted, x = x0 ) = q(x0 ) min(1,
+
+p(x0 )
+) = min(q(x0 ), p(x0 ))
+q(x0 )
+
+And:
+P (guess rejected, x = x0 ) = (1 − β)p0 (x0 ) = p(x0 ) − min(q(x0 ), p(x0 ))
+Overall:
+P (x = x0 ) = min(p(x0 ), q(x0 )) + p(x0 ) − min(p(x0 ), q(x0 )) = p(x0 ).
+As desired. 
+A.2. Speculative Sampling vs. Rejection Sampling
+Rejection sampling is the following iterative sampling procedure that looks superficially similar to ours:
+1. Sample x ∼ q(x) and r ∼ U (0, 1).
+2. If r < Mp(x)
+q(x) return x.
+3. Go to 1.
+Where M = maxx p(x)
+q(x) . We could employ a non-iterative version of rejection sampling instead of speculative sampling
+- specifically go through steps 1 and 2 above, and otherwise sample from an unmodified p(x) directly. That would
+be much less efficient than our method though. Specifically, the expected accept probability here is Ex∼q(x) Mp(x)
+q(x) =
+P
+P
+P
+q(x0 )
+q(x)
+0
+x p(x) minx p(x0 ) ≤
+x p(x) min(1, p(x) ) =
+x min(p(x), q(x)) = α is (potentially much) lower than the expected
+accept probability in our method α.
+A.3. Theoretical Predictions vs. Empirical Runtimes
+Table 4 compares the expected runtime improvements based on Theorem 3.8 to the empirically measured runtimes from
+Table 2. We estimated the values of c for the various models based on profiler traces. We can see that the theoretical
+predictions mostly match the measured runtimes. The larger differences are due to: (1) optimization differences between our
+implementation and the baseline, and (2) the simplifying assumption that the βs are i.i.d. being only an approximation (see
+Section 3.1).
+11
+
+
+=== PAGE 12 ===
+Fast Inference from Transformers via Speculative Decoding
+Table 4. Expected improvement factor (E XP) vs. empirically measured improvement factor (E MP).
+TASK
+
+Mq
+
+T EMP
+
+γ
+
+α
+
+c
+
+E XP
+
+E MP
+
+ENDE
+ENDE
+ENDE
+ENDE
+ENDE
+ENDE
+
+T5- SMALL
+T5- BASE
+T5- LARGE
+T5- SMALL
+T5- BASE
+T5- LARGE
+
+0
+0
+0
+1
+1
+1
+
+7
+7
+7
+7
+5
+3
+
+0.75
+0.8
+0.82
+0.62
+0.68
+0.71
+
+0.02
+0.04
+0.11
+0.0

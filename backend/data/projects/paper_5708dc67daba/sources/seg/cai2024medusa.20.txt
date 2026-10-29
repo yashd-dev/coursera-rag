@@ -1,0 +1,205 @@
+=== PAGE 20 (continued) ===
+FLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+
+=== PAGE 21 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Roofline Model (Llama 7B, A6000)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+
+768GB/s
+181 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+Figure 15. Llama-7B operators on A6000.
+
+Roofline Model (Llama 13B, A6000)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+Figure 16. Llama-13B operators on A6000.
+
+21
+
+768GB/s
+181 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+
+=== PAGE 22 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Roofline Model (Llama 33B, A6000)
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+10
+100
+Operational Intensity (FLOP/Byte)
+Figure 17. Llama-33B operators on A6000.
+
+22
+
+768GB/s
+181 TFLOP/s
+qkv mlp init
+qkv mlp ar
+up/gate/down init
+up/gate/down ar
+qk/pv init
+qk/pv ar
+1k
+10k
+
+
+=== PAGE 23 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+G.2. FLOP/s vs. Operational Intensity Variations in M EDUSA
+We investigate how Medusa can change Operational Intensity and elevate the FLOP/s. We choose Llama 33B on A10080GB-PCIe as the setting.
+First, we examine the attention matrix multiplication. Fig. 18 and Table 6 illustrate the effects of M EDUSA while keeping the
+batch size fixed at 16. We observe increased FLOP/s and Operational Intensity as more candidate tokens are added (original
+decoding results are plotted as grey dots). This indicates that M EDUSA can leverage additional candidate tokens to improve
+computational throughput. Compared to regular decoding, M EDUSA achieves 44× FLOP/s and 41× Operational Intensity
+under the setting of batch size 16 and sequence length 1024 with 64 candidate tokens. Fig. 19 and Table 7 illustrate the
+effects of M EDUSA decoding while keeping the sequence length fixed at 1024. Increasing the batch size does not improve
+Operational Intensity in this scenario.
+Next, we examine the linear layer, focusing on the up/gate/down linear layers. The results are shown in Fig. 20 and
+Table 8. Since the linear layers in the decoding phase only process the future tokens while the past tokens are cached,
+they are independent of the sequence length. We vary the batch size to observe the effects. As M EDUSA increases the
+number of candidate tokens with the increasing batch size, we observe a shift from a memory-bandwidth-bound region to a
+computation-bound region. This shift demonstrates how M EDUSA can transition the performance characteristics of the
+linear layers from being limited by memory bandwidth to being limited by computational capacity.
+
+Llama 33B, A100 80GB PCIe
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+1,935GB/s
+312 TFLOP/s
+qk/pv ar
+qk/pv Medusa (# cand.: 16)
+qk/pv Medusa (# cand.: 32)
+qk/pv Medusa (# cand.: 48)
+qk/pv Medusa (# cand.: 64)
+qk/pv Medusa (# cand.: 80)
+qk/pv Medusa (# cand.: 96)
+qk/pv Medusa (# cand.: 112)
+10
+100
+1k
+10k
+Operational Intensity (FLOP/Byte)
+
+Figure 18. FLOP/s vs. Operational Intensity of attention matrix multiplication with batch size 16.
+
+23
+
+
+=== PAGE 24 ===
+M EDUSA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
+
+Llama 33B, A100 80GB PCIe
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+1,935GB/s
+312 TFLOP/s
+qk/pv ar
+qk/pv Medusa (# cand.: 16)
+qk/pv Medusa (# cand.: 32)
+qk/pv Medusa (# cand.: 48)
+qk/pv Medusa (# cand.: 64)
+qk/pv Medusa (# cand.: 80)
+qk/pv Medusa (# cand.: 96)
+qk/pv Medusa (# cand.: 112)
+10
+100
+1k
+10k
+Operational Intensity (FLOP/Byte)
+
+Figure 19. FLOP/s vs. Operational Intensity of attention matrix multiplication with sequence length 1024.
+
+Llama 33B, A100 80GB PCIe
+
+Performance (FLOP/s)
+
+100T
+10T
+1T
+100G
+10G
+1
+
+1,935GB/s
+312 TFLOP/s
+up/gate/down ar
+up/gate/down spec: 16
+up/gate/

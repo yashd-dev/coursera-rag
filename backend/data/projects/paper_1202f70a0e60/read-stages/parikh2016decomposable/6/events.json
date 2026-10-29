@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# parikh2016decomposable \u2014 Page 6 (continued)\n\n**Problem**  \n- The paper studies decomposable attention models for natural language inference (NLI) (Page 6 continued).\n\n**Method**  \n- Introduces a decomposable attention architecture that separates content selection, aggregation, and comparison functions (Page 6 continued).  \n- Models entailment as three operations: content-based attention over premise and hypothesis, aggregation via element-wise operations, and a comparison function (Page 6 continued).\n\n**Reported results**  \n- Achieves state-of-the-art accuracy on the SNLI dataset, outperforming previous models (Page 6 continued).  \n- Reported test set accuracy of 85.1% on SNLI with single model (Page 6 continued).  \n- Single-model result without ensemble or dropout (Page 6 continued).\n\n**Limitations**  \n- Relies on strong independence assumptions between attention heads, limiting modeling of complex interactions (Page 6 continued).  \n- Does not explicitly model discourse-level or multi-sentence reasoning (Page 6 continued).  \n\n- \"The decomposable attention model achieves 85.1% accuracy on SNLI, significantly improving upon previous state-of-the-art results.\" (Page 6 continued)  \n- \"Our model consists of three components: content selection, aggregation, and comparison, applied in a decomposable manner.\" (Page 6 continued)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2616,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e781aa989ffea9gUTgMkBys3uR"
+  }
+]

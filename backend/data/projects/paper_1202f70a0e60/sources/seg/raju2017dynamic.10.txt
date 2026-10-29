@@ -1,0 +1,95 @@
+=== PAGE 7 (continued) ===
+rnal of Science and Research (IJSR)
+ISSN (Online): 2319-7064
+Index Copernicus Value (2015): 78.96 | Impact Factor (2015): 6.391
+effective training processes and implicates proper uses of
+computation time. Further, the variability in syntactic
+variations and rhetorical connections within the data set of the
+Linguistic Foundations necessitates the development of a
+model capable of addressing multiple syntactically and
+logically complex issues. For instance, some of these
+particular prosodic positions of the two parts of a sentence
+may contain complex negations or presuppose an
+understanding of some general knowledge of the world. On
+the other hand, there can be cases with only a few syntactic
+differences between the two parts of a sentence. Such a
+distribution requires a model that can cope with a variety of
+reasoning and representation, and the SNLI dataset provides
+an excellent opportunity to assess the viability and
+performance of the NLI models (Tan, 2017). These
+experiments were built in such a way as to find out how
+effectively our proposed DMN framework can address these
+challenges and if it has a better performance than the existing
+baseline systems. To this end, we benchmarked our model
+against three naïve sentence encoding strategies and
+discussed how memory and attention can help improve the
+NLI task. Notably, we endeavored to test whether our model
+could generalize these relations better and provide more
+precise and detailed predictions than the vanilla model
+regarding widespread and varying types of sentence pairs in
+the SNLI dataset. With these experiments, we aimed to help
+improve NLI models and create new standards for this field.
+Table 2: SNLI Dataset Characteristics
+Training
+Validation
+
+Number of
+Pairs
+550, 152
+10, 000
+
+Test
+
+10, 000
+
+Dataset Split
+
+Description
+Used to train the NLI models
+Used to tune hyperparameters
+Used to evaluate the final model
+performance
+
+Advanced Model - Fact and Sentence encoding
+Demands of a natural inference environment indicate that
+people focus on individual words and revisit a sentence
+multiple times to disambiguate referents. Thus, to capture this
+cognitive process, we named the words to attend to within the
+premise and thus defined our model (Frank & Goodman,
+2014). S1 is implemented as a set of fact vectors, and S2 is
+
+implemented as a question vector. The episodic memory
+module locates information from the input facts to answer the
+inference task by attending to relevant words.
+The attention mechanism in our model is a scalar attention
+gate per word that is established dependent on interactions
+between the premise, the hypothesis, and the episode memory
+state (Marchman & Plunkett, 2014). The contextual vector is
+generated under an attention mechanism: the attention gate
+controls the update process in the GRU.
+In passing the final state of the episodic memory module to
+the answer model for classification, the model can better
+classify the inferential relationship between the given premise
+and hypothesis.
+
+Figure 9: Schematic diagram of automated diagnosis of
+reading comprehension impairment using think - aloud
+protocol
+The episodic memory module which remains unchanged
+retrieves information from the input facts (sentence 1)
+provided to it by focusing attention on a subset of these words
+(Xiong et al., 2016). This attention is implemented by
+associating a single scalar value, the attention gate 𝒈ti, with
+each fact (word) ⃡𝒘i during pass t. This is computed by
+allowing interactions between the fact (sentence 1) and both
+the question (sentence 2) and the episode memory state as
+below:
+
+where Si1 is the 𝒊th word in sentence 1, 𝑚t - 1 is the previous
+episode 𝒊 memory, S2 is RNN final representation for
+sentence 2. ∘ is the element - wise product and [] represents
+concatenation of the vectors.
+The contextual vector 𝒄t is the final state from another
+attention - based GRU mechanism where the update gate in
+the GRU is replaced with the output of the attention gate 𝒈i.
+The episodic mem

@@ -1,0 +1,102 @@
+=== PAGE 38 (continued) ===
+erformance or improvement has been limited, e.g., the Story Cloze Test (Mostafazadeh et al., 2016)
+and Cosmos QA (Huang et al., 2019), and we predict that the age or popularity of a benchmark may
+factor into this.
+Benchmark age. How long a benchmark has been released certainly affects how much the benchmark has been worked on, and therefore must affect the state-of-the-art machine performance. Figure 13 shows the difference between the state-of-the-art and human performance with respect to the
+year when the benchmark was released. While again we cannot find a statistically significant trend,
+many of the data points qualitatively support that we have made more progress on older benchmarks. This does not mean that the newer benchmarks are more difficult than those which we have
+made more progress on, rather there may have not yet been enough time or enough people working on them to achieve similar progress. However, some interesting anomalies can be identified in
+the graph, such as the Winograd Schema Challenge (Davis et al., 2017) and the Story Cloze Test
+(Mostafazadeh et al., 2016). While the former can likely be explained by very small data size, as discussed earlier, the latter has a relatively high gap from human performance despite being available
+for a few years and having a large magnitude of training data. This may be due to the winning entry
+from Schwartz et al. (2017) in a shared task showing that the benchmark has human writing style
+biases which enable artificially high performance on the benchmark (Mostafazadeh, Roth, Louis,
+38
+
+
+=== PAGE 39 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Human-Machine Performance Gap
+
+35
+MC-TACO
+
+30
+
+DREAM
+
+25
+WSC
+
+20
+15
+
+Story Cloze Test
+
+10
+
+OpenBookQA
+RACE
+
+5
+0
+-52015
+
+-10
+
+Cosmos QA
+
+bAbI
+2016
+
+CLOTH
+
+GLUE
+
+2017
+
+DROP
+
+AlphaNLI
+
+WinoGrande
+HellaSWAG
+ReCoRD
+SuperGLUE
+SWAG
+
+SocialIQA
+
+2018
+
+SQuAD 1.1
+
+2019
+
+2020
+
+SQuAD 2.0
+Year Released
+
+Figure 13: Year released versus gap between state-of-the-art machine accuracy and human accuracy
+for selected benchmarks where human performance is reported.
+
+Chambers, & Allen, 2017), as discussed in Section 2.2.3. The last leaderboard11 submission for
+this benchmark occurred over a year ago at time of writing (October 2019), so it seems researchers
+may have lost interest in it. Meanwhile, on other large benchmarks from the same year like bAbI
+(Weston et al., 2016) and SQuAD 1.1 (Rajpurkar et al., 2016), human performance has been met or
+exceeded.
+More recent benchmarks generally have a higher gap, and this may just be because they are
+newer. This may also be partly explained by the recent trend of adversarial construction of data
+and avoiding data biases, e.g., in benchmarks like AlphaNLI (Bhagavatula et al., 2019) and WinoGrande (Sakaguchi et al., 2019), which used adversarial methods to remove some statistical biases from the data. On the other hand, benchmarks created before this research trend are likely
+to be solved easily by state-of-the-art models, and thus have a lower human-machine performance
+gap. There are exceptions, however. For example, the Winograd Schema Challenge (Davis et al.,
+2017) has a higher gap from human performance than the adversarial WinoGrande (Sakaguchi et al.,
+2019). Again, this could be because the former benchmark does not have much data, and also because it was constructed by several experts, perhaps making it much harder for neural models to
+find and exploit biases in writing style.
+Benchmark popularity. The popularity of a benchmark can also affect how many researchers are
+working on it, and consequently how much progress can be made on it and thus how difficult it may
+be perceived to be. If a benchmark is more popular, we may expect it to get more submissions on
+a leaderboard, so the gap between state-of-the-art and human performance will close rapidly. On
+the other hand, if a benchmark is less popular, it will receive fewer submissions, and the state-ofthe-art performance will not change 

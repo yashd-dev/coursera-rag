@@ -1,0 +1,107 @@
+=== PAGE 3 (continued) ===
+Arthur.
+ENTAILMENT Nellie has visited more than 10 people.
+
+Countries/Travel
+
+3,879
+
+5,000
+
+14.0
+
+Conditionals
+
+Francisco has visited Potsdam and if Francisco has visited Potsdam
+then Tyrone has visited Pampa ENTAILMENT Tyrone has visited Pampa.
+
+Countries/Travel
+
+4,123
+
+5,000
+
+15.6
+
+Comparatives
+
+John is taller than Gordon and Erik..., and Mitchell is as tall as John
+NEUTRAL Erik is taller than Gordon.
+
+People/Height
+
+1,315
+
+5,000
+
+19.9
+
+Monotonicity
+
+All black mammals saw exactly 5 stallions who danced ENTAILMENT
+A brown or black poodle saw exactly 5 stallions who danced
+
+Animals
+
+119
+
+10,000
+
+9.38
+
+SNLI+MNLI
+
+During calf roping a cowboy calls off his horse.
+CONTRADICTION A man ropes a calf successfully.
+
+Mixed
+
+101,110
+
+942,069
+
+12.3
+
+Figure 2: Information about the semantic fragments considered in this paper, where the top four fragments test basic logic
+(Logic Fragments) and the last fragment covers monotonicity reasoning (Mono. Fragment).
+investigate in this paper, which are illustrated in Figure 2.
+While these particular fragments seem to capture many of
+the core phenomena involved in NLI, we emphasize that any
+arbitrary linguistic fragment of interest could be constructed
+and subjected to the sets of experiments we describe in the
+next section.
+
+to collect datasets that target different types of inference
+phenomena (White et al. 2017; Poliak et al. 2018a), which
+have been limited in linguistic complexity. Other attempts to
+study complex phenomena such as monotonicity reasoning
+in NLI models has been limited to training data augmentation (Yanaka et al. 2019b), whereas we create several new
+challenge test sets to directly evaluate NLI performance on
+each phenomenon (see Yanaka et al. (2019a) for closely related work that appeared concurrently with our work).
+Unlike existing work on building NLI challenge datasets
+(Glockner, Shwartz, and Goldberg 2018; Naik et al. 2018),
+we focus on the trade-off between mastering a particular linguistic fragment or phenomena independent of other tasks
+and data (i.e., Question 1 from Figure 1), while also maintaining performance on other NLI benchmark tasks (i.e.,
+related to Question 3 in Figure 1). To study this, we introduce a novel variation of the inoculation through ﬁnetuning methodology of Liu, Schwartz, and Smith (2019),
+which emphasizes maximizing the model’s aggregate score
+over multiple tasks (as opposed to only on challenge tasks).
+Since our new challenge datasets focus narrowly on particular linguistic phenomena, we take this in the direction of
+seeing more precisely the extent to which a particular linguistic fragment stresses an existing NLI model. In addition
+to the task-speciﬁc NLI models looked at in Liu, Schwartz,
+and Smith (2019), we inoculate with the state-of-the-art pretrained BERT model, using the ﬁne-tuning approach of Devlin et al. (2019), which itself is based on the transformer
+architecture of Vaswani et al. (2017).
+
+The Logic Fragments The ﬁrst set of fragments probe
+into problems involving rudimentary logical reasoning. Using a ﬁxed vocabulary of people and place names, individual
+fragments cover boolean coordination (boolean reasoning
+about conjunction and), simple negation, quantiﬁcation
+and quantiﬁer scope (quantifier), comparative relations, set counting, and conditional phenomena all
+related to a small set of traveling and height relations.
+These fragments (with the exception of the conditional
+fragment, which was built specially for this study) were
+ﬁrst built using the set of verb-argument templates ﬁrst described in Salvatore, Finger, and Hirata Jr (2019). Since
+their original rules were meant for 2-way NLI classiﬁcation (i.e., ENTAILMENT and CONTRADICTION), we repurposed their rule sets to handle 3-way classiﬁcation, and
+added other inference rules, which resulted in some of the
+simpliﬁed templates shown in Figure 3. For each fragment,
+we uniformly generated 3,000 training examples and reserved 1,000 examples for testing. As in Salvatore, Finger,
+and 

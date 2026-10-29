@@ -1,0 +1,42 @@
+=== PAGE 49 (continued) ===
+e over a range of ages (Zadeh, 1975). Moore (1982) and Nunberg (1987) further
+motivated the role of logic in commonsense knowledge and reasoning in AI and semantic processing. By the early 1990s, symbolic approaches were dominant for knowledge representation and
+semantic processing of language (Birnbaum, 1991). Consequently, these approaches were heavily
+used for early NLI problems. A detailed review of these approaches is provided by Davis (2017).
+Among the surveyed benchmarks, symbolic approaches have primarily been applied in the early
+RTE Challenges. One example by Raina, Ng, and Manning (2005) parsed sentences into a logical
+49
+
+
+=== PAGE 50 ===
+S TORKS , G AO , & C HAI
+
+form, then performed abduction over them using learned assumptions and likelihoods in order to
+determine if a high-likelihood set of assumptions can be used to prove that a sentence entails another. Giampiccolo et al. (2008) used outside semantic knowledge from resources like Wikipedia,
+WordNet (Miller, 1995), and VerbOcean (Chklovski & Pantel, 2004) to augment information in the
+hypothesis sentence, then attempted to map this to words in the premise sentence using manually
+authored logic rules. A later approach developed natural logic (Lakoff, 1970) into a formalism for
+NLI, parsing the premise and hypothesis into a natural logic form and using a decision tree to compare their features and make a decision (MacCartney & Manning, 2007). They show that combining
+this approach with an existing statistical RTE model exceeds the state-of-the-art performance on the
+third RTE Challenge dataset (Giampiccolo et al., 2007). More recently, the baseline approach to the
+Triangle-COPA benchmark achieved 91% accuracy by creating a comprehensive set of manually
+authored logic and commonsense rules to use with given mappings from the natural language in the
+benchmark data to logical forms (Gordon, 2016). While manually authoring logical rules and mappings from language to logical forms has been demonstrated to be highly effective in some tasks,
+this is not scalable for recent, larger-magnitude datasets where variation in required knowledge and
+language and semantic phenomena is much higher. To facilitate more practical logic-based reasoning, another body of work focuses on developing approaches to automatically mapping natural
+language text to a logical form (Kamath & Das, 2018), coined as semantic parsing. There has been
+an extensive amount of work on this topic, and we refer readers to the survey by Kamath and Das
+(2018) for a more detailed review of this work.
+4.2 Early Statistical Approaches
+Statistical approaches dominated the NLP field from the mid 1990s until the early 2010s. These earlier statistical approaches relied on engineered features to train various types of statistical models
+based on training data for a variety of early NLP benchmarks, e.g., question answering benchmarks like the classic Remedia reading comprehension dataset (Hirschman et al., 1999) and the
+TREC datasets (Voorhees, 2000), which were largely based on linguistic context and thus outside
+of the scope of this survey. Notable early approaches often combined various word matching and
+other lexical features with handcrafted deterministic rules Charniak, Altun, Braz, Garrett, Kosmala,
+Moscovich, Pang, Pyo, Sun, Wy, Yang, Zeller, and Zorn (2000), or with traditional statistical models like decision trees (Ng, Teo, & Kwan, 2000). Similar approaches were also applied to some of
+the benchmarks we survey here, beginning with the RTE Challenges (Dagan et al., 2005). Lexical
+features, for example, based on bag-of-words and word matching were commonly used in the first
+two RTE Challenges (Dagan et al., 2005; Bar-Haim et al., 2006), but often achieved results only
+slightly better than random guessing (Bar-Haim et al., 2006). More competitive systems have used
+more linguistic features to make predictions, such as semantic dependencies and paraphrases (Hickl,
+Bensley, Williams, Roberts, Rink, & Shi, 2006),

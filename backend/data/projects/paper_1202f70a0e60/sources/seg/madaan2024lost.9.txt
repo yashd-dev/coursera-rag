@@ -1,0 +1,87 @@
+=== PAGE 9 (continued) ===
+esting quality to consider
+for model development.
+
+632–642, Lisbon, Portugal. Association for Computational Linguistics.
+Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie
+Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind
+Neelakantan, Pranav Shyam, Girish Sastry, Amanda
+Askell, Sandhini Agarwal, Ariel Herbert-Voss,
+Gretchen Krueger, Tom Henighan, Rewon Child,
+Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu,
+Clemens Winter, Christopher Hesse, Mark Chen,
+Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin
+Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario
+Amodei. 2020. Language models are few-shot learners. Preprint, arXiv:2005.14165.
+Beiduo Chen, Xinpeng Wang, Siyao Peng, Robert
+Litschko, Anna Korhonen, and Barbara Plank. 2024.
+“seeing the big through the small”: Can llms approximate human judgment distributions on nli from a few
+explanations? Preprint, arXiv:2406.17600.
+Ido Dagan, Oren Glickman, and Bernardo Magnini.
+2005. The pascal recognising textual entailment challenge. In Machine learning challenges workshop,
+pages 177–190. Springer.
+Marie-Catherine de Marneffe, Christopher D. Manning,
+and Christopher Potts. 2012. Did it happen? the pragmatic complexity of veridicality assessment. Computational Linguistics, 38(2):301–333.
+
+References
+
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and
+Kristina Toutanova. 2019. Bert: Pre-training of deep
+bidirectional transformers for language understanding. Preprint, arXiv:1810.04805.
+
+Lora Aroyo and Chris Welty. 2015. Truth is a lie: Crowd
+truth and the seven myths of human annotation. AI
+Mag., 36:15–24.
+
+Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey,
+Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman,
+Akhil Mathur, Alan Schelten, Amy Yang, Angela
+Fan, et al. 2024. The llama 3 herd of models. arXiv
+preprint arXiv:2407.21783.
+
+Joris Baan, Wilker Aziz, Barbara Plank, and Raquel
+Fernandez. 2022. Stop measuring calibration when
+humans disagree. In Proceedings of the 2022 Conference on Empirical Methods in Natural Language
+Processing, pages 1892–1915, Abu Dhabi, United
+Arab Emirates. Association for Computational Linguistics.
+
+Ritam Dutt, Sagnik Ray Choudhury, Varun Venkat Rao,
+Carolyn Rose, and V.G.Vinod Vydiswaran. 2024.
+Investigating the generalizability of pretrained language models across multiple dimensions: A case
+study of NLI and MRC. In Proceedings of the 2nd
+GenBench Workshop on Generalisation (Benchmarking) in NLP, pages 165–182, Miami, Florida, USA.
+Association for Computational Linguistics.
+
+Joris Baan, Raquel Fernández, Barbara Plank, and
+Wilker Aziz. 2024. Interpreting predictive probabilities: Model confidence or human label variation?
+In Proceedings of the 18th Conference of the European Chapter of the Association for Computational
+Linguistics (Volume 2: Short Papers), pages 268–277,
+St. Julian’s, Malta. Association for Computational
+Linguistics.
+
+Clémentine Fourrier, Nathan Habib, Julien Launay, and
+Thomas Wolf. 2023. What’s going on with the open
+llm leaderboard?
+
+Chandra Bhagavatula, Ronan Le Bras, Chaitanya
+Malaviya, Keisuke Sakaguchi, Ari Holtzman, Hannah Rashkin, Doug Downey, Wen tau Yih, and Yejin
+Choi. 2020. Abductive commonsense reasoning. In
+International Conference on Learning Representations.
+
+Albert Q Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego
+de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, et al. 2023. Mistral
+7b. arXiv preprint arXiv:2310.06825.
+
+Samuel R. Bowman, Gabor Angeli, Christopher Potts,
+and Christopher D. Manning. 2015. A large annotated corpus for learning natural language inference.
+In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing, pages
+
+Albert Q Jiang, Alexandre Sablayrolles, Antoine
+Roux, Arthur Mensch, Blanche Savary, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas,
+Emma Bou Hanna, Florian Bressand, et al. 2024.
+Mixtral of experts. arXiv preprint arXiv:2401.04088.
+
+9
+
+
+=== PAGE 10 ===

@@ -1,0 +1,58 @@
+=== PAGE 7 (continued) ===
+ The average number of tokens accepted divided by
+𝐾 + 1 – this serves as a measure of the overall efficiency of the modified rejection scheme, which
+decreases with the lookahead. Right: Average time per loop increases approximately linearly with 𝐾
+due to the increased number of model calls. Note that the gradient is slightly higher than the sampling
+speed of the draft model, due to additional overheads in nucleus decoding.
+
+Trade off between longer drafts and more frequent scoring
+We visualise the trade-off of increasing 𝐾 , the number of tokens sampled by the draft model in Figure 1.
+As 𝐾 increases, we need fewer scoring calls from the large models to generate the same sequence
+length, potentially giving us a larger speedup. However, the total loop time increases approximately
+linearly with the larger number of draft model calls and small increases in the scoring time. The
+overall efficiency of the proportion of accepted tokens decreases as 𝐾 increases, since later tokens
+depend on the acceptance of previous tokens. This results in the average speedup plateauing or
+even degrading with a larger 𝐾 (for example, XSum with nucleus’s latency is minimised at 𝐾 = 3),
+depending on the domain.
+
+7
+
+
+=== PAGE 8 ===
+Accelerating Large Language Model Decoding with Speculative Sampling
+
+Further, even though larger values of 𝐾 may yield marginally greater mean speedups in certain
+circumstances, it also increases variance of the time to generate a full sequence. This could be
+problematic for settings where the P90, P99 latencies of concern.
+
+Conclusion
+In this work, we demonstrate a new algorithm and workflow for accelerating the decoding of language
+models. Speculative sampling does not require making any modifications to the target language
+model’s parameters or architecture, is provably lossless within numerics, scales well with the appropriate draft model and complements many existing techniques for reducing latency in the small batch
+size setting.
+We optimise and scale the technique to Chinchilla 70B using a draft model which was easy to
+train with existing infrastructure, demonstrating that it yields a large speedup across benchmark tasks
+and common decoding methods in the process. We verify that it is indeed lossless empirically in its
+downstream tasks.
+
+References
+A. Arnab, M. Dehghani, G. Heigold, C. Sun, M. Lucic, and C. Schmid. Vivit: A video vision transformer.
+In 2021 IEEE/CVF International Conference on Computer Vision (ICCV), pages 6816–6826. IEEE
+Computer Society, 2021.
+T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam,
+G. Sastry, A. Askell, et al. Language models are few-shot learners. Advances in neural information
+processing systems, 33:1877–1901, 2020.
+M. Chen, J. Tworek, H. Jun, Q. Yuan, H. P. de Oliveira Pinto, J. Kaplan, H. Edwards, Y. Burda, N. Joseph,
+G. Brockman, A. Ray, R. Puri, G. Krueger, M. Petrov, H. Khlaaf, G. Sastry, P. Mishkin, B. Chan, S. Gray,
+N. Ryder, M. Pavlov, A. Power, L. Kaiser, M. Bavarian, C. Winter, P. Tillet, F. P. Such, D. Cummings,
+M. Plappert, F. Chantzis, E. Barnes, A. Herbert-Voss, W. H. Guss, A. Nichol, A. Paino, N. Tezak, J. Tang,
+I. Babuschkin, S. Balaji, S. Jain, W. Saunders, C. Hesse, A. N. Carr, J. Leike, J. Achiam, V. Misra,
+E. Morikawa, A. Radford, M. Knight, M. Brundage, M. Murati, K. Mayer, P. Welinder, B. McGrew,
+D. Amodei, S. McCandlish, I. Sutskever, and W. Zaremba. Evaluating large language models trained
+on code. CoRR, abs/2107.03374, 2021. URL https://arxiv.org/abs/2107.03374.
+A. Chowdhery, S. Narang, J. Devlin, M. Bosma, G. Mishra, A. Roberts, P. Barham, H. W. Chung,
+C. Sutton, S. Gehrmann, et al. Palm: Scaling language modeling with pathways. arXiv preprint
+arXiv:2204.02311, 2022.
+T. Dettmers, M. Lewis, Y. Belkada, and L. Zettlemoyer. Llm. int8 (): 8-bit matrix multiplication for
+transformers at scale. arXiv preprint arXiv:2208.07339, 2022.
+A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghan

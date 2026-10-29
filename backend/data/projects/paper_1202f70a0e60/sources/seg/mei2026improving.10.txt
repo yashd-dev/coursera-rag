@@ -1,0 +1,52 @@
+=== PAGE 13 (continued) ===
+Computational Linguistics: Human Language Technologies, pages 142–150, Portland,
+Oregon, USA. Association for Computational Linguistics.
+[29] Marius Mosbach, Maksym Andriushchenko, and Dietrich Klakow. 2021. On the stability of finetuning BERT: Misconceptions, explanations, and strong baselines. In International Conference on
+Learning Representations.
+[30] NeoHorse Team, Guoliang Cao, Guohao Dai, Tianyu Guo, Kai Han, Hailin Hu, Zihan Jiang, Xiang
+Kuang, Boxun Li, Yulong Li, Zehua Pei, Yuchuan Tian, Jiamin Wang, Yu Wang, Yunhe Wang, Yihong
+Wu, Haiyang Xu, Shuo Zhang, Hang Zhou, and 18 others. 2026. NeoHorse-1: Towards recursive
+self-improvement via agentic post-training with routing harness. Preprint, arXiv:2609.08183.
+[31] Jared Palmer. 2026. Kev: A family of decision models. Software repository. Accessed 11 October
+2026.
+[32] Nils Reimers and Iryna Gurevych. 2019. Sentence-BERT: Sentence embeddings using Siamese BERTnetworks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing
+and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pages
+3982–3992. Association for Computational Linguistics.
+[33] David Rein, Betty Li Hou, Asa Cooper Stickland, Jackson Petty, Richard Yuanzhe Pang, Julien
+Dirani, Julian Michael, and Samuel R. Bowman. 2024. GPQA: A graduate-level Google-proof Q&A
+benchmark. In First Conference on Language Modeling.
+[34] Joshua Robinson, Christopher Michael Rytting, and David Wingate. 2023. Leveraging large language
+models for multiple choice question answering. In The Eleventh International Conference on Learning
+Representations.
+
+13
+
+
+=== PAGE 14 ===
+[35] Keisuke Sakaguchi, Ronan Le Bras, Chandra Bhagavatula, and Yejin Choi. 2020. WinoGrande: An
+adversarial Winograd schema challenge at scale. In Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 34, pages 8732–8740.
+[36] Maarten Sap, Hannah Rashkin, Derek Chen, Ronan Le Bras, and Yejin Choi. 2019. Social IQa:
+Commonsense reasoning about social interactions. In Proceedings of the 2019 Conference on Empirical
+Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language
+Processing (EMNLP-IJCNLP), pages 4463–4473, Hong Kong, China. Association for Computational
+Linguistics.
+[37] Leslie N. Smith. 2018. A disciplined approach to neural network hyper-parameters: Part 1—learning
+rate, batch size, momentum, and weight decay. Preprint, arXiv:1803.09820.
+[38] Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D. Manning, Andrew Ng, and
+Christopher Potts. 2013. Recursive deep models for semantic compositionality over a sentiment
+treebank. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing,
+pages 1631–1642, Seattle, Washington, USA. Association for Computational Linguistics.
+[39] Alon Talmor, Jonathan Herzig, Nicholas Lourie, and Jonathan Berant. 2019. CommonsenseQA: A
+question answering challenge targeting commonsense knowledge. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language
+Technologies, Volume 1 (Long and Short Papers), pages 4149–4158. Association for Computational
+Linguistics.
+[40] Yixuan Tang and Yi Yang. 2024. Pooling and attention: What are effective designs for LLM-based
+embedding models? Preprint, arXiv:2409.02727.
+[41] TokenRhythm. 2026. NeoHorse-Jev: Prefill-only decisions for agent workflows. Software and model
+documentation. Accessed 11 October 2026.
+[42] Shubham Toshniwal, Haoyue Shi, Bowen Shi, Lingyu Gao, Karen Livescu, and Kevin Gimpel. 2020.
+A cross-task analysis of text span representations. In Proceedings of the 5th Workshop on Representation
+Learning for NLP, pages 166–176. Association for Computational Linguistics.
+[43] TypeSafe. 2026. Jev: Introduction. Model and API documentation. Accessed 13 October 2026.
+[44] Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. 2015. Pointer networ

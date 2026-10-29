@@ -1,0 +1,68 @@
+=== PAGE 34 (continued) ===
+r not, so it cannot be the correct answer. Option C is a possible flaw, but it is not stated whether the
+class attempted to generalize its results to fruits it did not test, so it cannot be the correct answer. Option D is the
+correct answer, as the class too readily made a generalization from a narrow range of temperatures (10 degrees,
+20 degrees, and 30 degrees) to the entire range of temperatures at which fruits can be stored, which is likely to be
+much broader.
+Answer and Explain:
+The correct answer is C. The class’s reasoning is flawed in that it generalized too readily from the fruits it tested to
+fruits it did not test. The experiment only tested a specific selection of fruits and did not test all varieties of fruits,
+so it is not necessarily true that cooler temperatures will always keep fruits fresh longer. Option A is incorrect
+because the class did offer an explanation for the results they discovered. Option B is not relevant to the flaw
+in the class’s reasoning. Option D is also not relevant, as the class did not extrapolate from a narrow range of
+temperatures to the entire range of temperatures.
+Answer and Explain:
+Explain Error Type:
+The correct answer is D. The class’s reasoning is flawed in that they too readily extrapolated from a narrow range
+of temperatures to the entire range of temperatures. The class only tested three temperatures, and did not consider
+the possibility of a threshold beyond which colder temperatures may not be beneficial for all fruits. Therefore, it is
+too hasty to conclude that ẗhe cooler the temperature, the longer the fruits will stay freshb̈ased on such a limited
+range of temperatures.
+Answer and Explain:
+The correct answer is C. The class’s reasoning is flawed in that the class generalized too readily from the fruits it
+tested to fruits it did not test. The class was only testing three types of fruit at three different temperatures, which
+does not truly demonstrate how all different varieties of fruits can react differently to varying temperatures. Thus,
+the class should not make a hasty generalization about how all fruits would respond to different temperatures.
+Answer and Explain:
+Explain Error Type:
+The correct answer is D. Too readily extrapolated from a narrow range of temperatures to the entire range of
+temperatures.
+The class only tested fruits at three temperatures: 30 degrees Celsius, 20 degrees Celsius, and 10 degrees Celsius.
+They concluded that the cooler the temperature, the longer the fruits will stay fresh. However, this conclusion is
+based on a very small sample size. It is possible that the relationship between temperature and freshness is not
+linear. For example, it is possible that fruits will stay fresh for the same amount of time at 10 degrees Celsius and
+5 degrees Celsius. The class would need to test fruits at a wider range of temperatures to confirm their conclusion.
+The other options are not correct. Option A is incorrect because the class did offer an explanation for their results:
+they said that the cooler the temperature, the longer the fruits will stay fresh. Option B is incorrect because the class
+did not assume that their thermometer was unreliable. Option C is incorrect because the class did not generalize
+to fruits they did not test. They only tested fruits at three temperatures, and they only made a conclusion about
+those three temperatures.
+Answer and Explain:
+
+
+=== PAGE 35 ===
+35
+
+Bard
+of 0-shot
+
+Davinci-003
+of 0-shot
+
+ChatGPT
+of 3-shot
+
+ChatGPT
+of 1-shot
+
+ChatGPT
+of 0-shot
+
+Question, answer
+and explanation
+
+TABLE 23: A reasoning case in LogiQA.
+Context: People often use microwave ovens to heat food.Some people think that microwave oven heating changes
+the molecular structure of food, producing molecules that the human body cannot recognize.These strange molecular
+formulas are unacceptable to the human body, and some are toxic and may even cause cancer. Therefore, people or
+animals who often eat microwave foods will have serious physiological chang

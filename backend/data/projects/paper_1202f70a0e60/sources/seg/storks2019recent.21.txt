@@ -1,0 +1,138 @@
+=== PAGE 27 (continued) ===
+hought and came to her desk.
+
+3 He says female teachers ca n’t keep order .
+4 He ’s started in with a spite at you on general principles , and the boys know
+it .
+
+a. last
+
+5 They know he ’ll back them up in secret , no matter what they do , just to
+prove his opinions .
+
+b. second
+
+6 Cropper is sly and slippery , and it is hard to corner him . ”
+
+c. third
+
+7 “ Are the boys big ? ”
+8 queried Esther anxiously .
+
+d. first
+
+9 “ Yes .
+10 Thirteen and fourteen and big for their age .
+11 You ca n’t whip ’em – that is the trouble .
+12 A man might , but they ’d twist you around their fingers .
+13 You ’ll have your hands full , I ’m afraid .
+14 But maybe they ’ll behave all right after all . ”
+15 Mr. Baxter privately had no hope that they would , but Esther hoped for the
+best .
+16 She could not believe that Mr. Cropper would carry his prejudices into a
+personal application .
+17 This conviction was strengthened when he overtook her walking from school
+the next day and drove her home .
+18 He was a big , handsome man with a very suave , polite manner .
+19 He asked interestedly about her school and her work , hoped she was getting
+on well , and said he had two young rascals of his own to send soon .
+20 Esther felt relieved .
+
+(D) SWAG (Zellers et al., 2018)
+On stage, a woman takes a seat at the piano. She
+a. sits on a bench as her sister plays
+with the doll.
+b. smiles with someone as the music
+plays.
+c. is in the crowd, watching the
+dancers.
+
+21 She thought that Mr. _____ had exaggerated matters a little .
+Blank: Baxter, Cropper, Esther, course, fingers, manner, objection, opinions,
+right, spite
+
+d. nervously sets her fingers on the
+keys.
+
+(B) ROCStories (Mostafazadeh et al., 2016)
+Karen was assigned a roommate her first
+year of college. Her roommate asked her
+to go to a nearby city for a concert. Karen
+agreed happily. The show was absolutely
+exhilarating.
+
+(E) ReCoRD (Zhang et al., 2018)
+... Daniela Hantuchova knocks Venus
+Williams out of Eastbourne 6-2 5-7 6-2 ...
+Query: Hantuchova breezed through the
+first set in just under 40 minutes after
+breaking Williams’ serve twice to take it
+6-2 and led the second 4-2 before _____
+hit her stride.
+Venus Williams
+
+Ending:
+a. Karen became good friends with
+her roommate.
+b. Karen hated her roommate.
+
+Figure 9: Examples from cloze tasks. Answers in bold.
+
+27
+
+
+=== PAGE 28 ===
+S TORKS , G AO , & C HAI
+
+(C) SC (Rashkin et al., 2018a)9
+Valerie was getting ready for a formal
+dance. She had been preparing for hours.
+As she was ready to leave, her acrylic nail
+broke. She snapped off all of her faux
+nails.
+
+(A) SQuAD 2.0 (Rajpurkar et al., 2018)
+In meteorology, precipitation is any product of the condensation of atmospheric
+water vapor that falls under gravity. The
+main forms of precipitation include drizzle, rain, sleet, snow, graupel and hail...
+Precipitation forms as smaller droplets coalesce via collision with other rain drops
+or ice crystals within a cloud. Short, intense periods of rain in scattered locations
+are called "showers".
+
+Maslow: esteem, stability
+Reiss: status, approval, order
+Plutchik: surprise, sadness, disgust,
+anger
+(D) DROP (Dua et al., 2019)
+That year, his Untitled (1981), a painting of a haloed, black-headed man with
+a bright red skeletal body, depicted amid
+the artists signature scrawls, was sold by
+Robert Lehrman for $16.3 million, well
+above its $12 million high estimate.
+
+What causes precipitation to fall?
+gravity
+(B) bAbI (Weston et al., 2016)
+The kitchen is north of the hallway.
+The bathroom is west of the bedroom.
+The den is east of the hallway.
+The office is south of the bedroom.
+
+Question: How many more dollars was
+the Untitled (1981) painting sold for than
+the 12 million dollar estimation?
+4300000
+
+How do you go from den to kitchen?
+west, north
+
+Figure 10: Examples from open-ended response tasks. Answers in bold.
+
+28
+
+
+=== PAGE 29 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+2.2.2 E VALUATION S CHEMES
+As mentioned earlier, the Turing Test (Turing, 1950) h

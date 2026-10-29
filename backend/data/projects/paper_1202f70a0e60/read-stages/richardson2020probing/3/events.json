@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem:** Construct challenge datasets from formal specifications to probe NLI model capabilities on monotonicity and rudimentary logic fragments (quantifiers, counting, negation), testing learnability, state-of-the-art performance, and adaptability.\n\n**Method:** Create formal rule systems for linguistic fragments, automatically generate idealized challenge datasets, and evaluate three empirical questions on model learnability, zero-shot performance, and quick adaptability.\n\n**Reported Results:** Three fragment types with vocab sizes 3,414\u20134,172 and 5,000 pairs each: Negation (CONTRADICTION), Boolean (ENTAILMENT), Quantifier (NEUTRAL); Avg. sentence lengths 9.6\u201320.8 words. Monotonicity datasets built via automatic polarity projection from van Benthem calculus.\n\n**Limitations:** Fragments are automatically constructed and \"sometimes a bit pedantic\"; focus on quick adaptability; comparison to artificial fragments in prior work; naturalistic subsets constrained by dataset generation pipeline.\n\n\"- '...we then automatically generate a new idealized challenge dataset...'\" (p.2)  \n\"- '...models should be able to efficiently learn and adapt to new phenomena as they are encountered without having to learn entirely from scratch.'\" (p.2)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2333,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78343b8fffexQbDzxcJIxuEHP"
+  }
+]

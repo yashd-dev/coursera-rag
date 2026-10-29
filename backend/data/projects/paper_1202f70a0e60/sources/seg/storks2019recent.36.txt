@@ -1,0 +1,45 @@
+=== PAGE 44 (continued) ===
+ion
+for using Wikidata can be found at https://www.wikidata.org/.
+3.1.3 C OMMONSENSE K NOWLEDGE R ESOURCES
+Commonsense knowledge, on the other hand, is considered obvious to most humans, and not likely
+to be explicitly stated (Cambria et al., 2011). There has been a long effort in capturing and encoding commonsense knowledge (Davis & Marcus, 2015), and various knowledge bases have been
+developed for this. Note that as commonsense knowledge and common knowledge are not always
+distinguished from each other in past work, and because some of these resources were gathered from
+the Web, a source of primarily common knowledge, many knowledge bases we describe here also
+contain common knowledge. We present several resources which focus on commonsense knowledge, but may also include common knowledge.
+Cyc. A well-known project toward encoding commonsense knowledge is Cyc by Lenat and Guha
+(1989), a knowledge base of rules expressing ontological relationships between objects encoded in
+the formal logic-based CycL language. The types of objects in Cyc include entities, collections,
+functions, and truth functions. Cyc also includes a powerful inference engine. ResearchCyc, a release of Cyc for the research community, can be licensed for free at https://www.cyc.com/
+researchcyc/. According to this site, the latest release of ResearchCyc contains over 7 million commonsense knowledge assertions. More recently, there have been efforts to map Cyc to
+Wikipedia articles in an attempt to connect it to other resources such as DBpedia and Freebase
+(Medelyan & Legg, 2008; Pohl, 2012).
+22. No paper has been published for Wikidata, however all information can be found at the homepage linked to at the
+end of this paragraph.
+
+44
+
+
+=== PAGE 45 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+ConceptNet Another popular knowledge base is ConceptNet from Liu and Singh (2004), a product of the Open Mind Common Sense project by Singh (2002), which collected free text common
+and commonsense knowledge from online users. This semantic network originally contained over
+1.6 million assertions of commonsense knowledge represented as links between 300,000 nodes representing entities, but subsequent releases have expanded it and added more features. The latest
+release, ConceptNet 5.5 (Speer et al., 2017), contains over 21 million links between over 8 million nodes, having been augmented by several additional resources including Cyc (Lenat & Guha,
+1989), WordNet (Fellbaum, 1999), and DBpedia (Auer et al., 2007). It includes knowledge from
+multilingual resources, and links to knowledge from other knowledge graphs. ConceptNet has been
+successfully applied in NLI systems, some of which are described in Section 4.4. ConceptNet is
+open; information for using or downloading it can be found at https://conceptnet.io/.
+SenticNet. SenticNet by Cambria, Speer, Havasi, and Hussain (2010) was originally only a commonsense knowledge base, but later versions incorporated common knowledge as well (Cambria,
+Olsher, & Rajagopal, 2014a). Though the knowledge base is intended for sentiment analysis, it may
+be useful in NLI tasks which require understanding sentiment. SenticNet is available for free at
+https://sentic.net/downloads/.
+Isanette and IsaCore. Isanette by Cambria et al. (2011) was a semantic network of both common
+and commonsense knowledge created by combining ProBase (Wu et al., 2011) and ConceptNet 3
+(Havasi, Speer, & Alonso, 2007) into a set of "is a" relationships and confidences. This work was
+later cleaned and optimized into IsaCore (Cambria, Song, Wang, & Howard, 2014b), and demonstrated to be effective for sentiment analysis. IsaCore may also be a useful resource for other tasks.
+It is available for free download at https://sentic.net/downloads/.
+COGBASE. COGBASE by Olsher (2014) uses a novel formalism to represent 2.7 million concepts and 10 million commonsense facts about them. It makes up the core of SenticNet 3 (Cambria
+et al., 2014a). Data from COG

@@ -1,0 +1,98 @@
+=== PAGE 3 (continued) ===
+akes the final state in 𝑆𝑖 . Both rules fall back to the closing delimiter for empty content. All three readouts use the same query and 512( 𝑑 + 1) head parameters,
+and each model is trained and evaluated with its own readout.
+The affine projection makes the pooled score an exact average of the contextual token scores.
+For a nonempty span,
+pool
+
+𝑠𝑖
+
+=
+
+𝑞⊤ (𝑊𝑘 ℎ¯ 𝑖 + 𝑏𝑘 )
+
+√
+
+𝑑head
+
+1 ∑︁ 𝑞⊤ (𝑊𝑘 ℎ 𝑗 + 𝑏𝑘 )
+=
+.
+√
+| 𝑆𝑖 | 𝑗 ∈ 𝑆
+𝑑head
+𝑖
+
+3
+
+(6)
+
+
+=== PAGE 4 ===
+The averaging takes place before the option softmax, with span-length normalization giving
+each option one mean score. All token contributions use the same key projection and decision
+query.
+Pooling also changes the direct training signal. Holding the query fixed, each interior state
+receives the score gradient
+pool
+
+𝜕𝑠𝑖
+
+𝜕ℎ 𝑗
+
+=
+
+𝑊𝑘⊤ 𝑞
+
+,
+√
+| 𝑆𝑖 | 𝑑head
+
+𝑗 ∈ 𝑆𝑖 .
+
+(7)
+
+The pointer supplies this direct path through one selected state; pooling supplies it through
+every interior state. Contextualization provides additional paths through the backbone in both
+cases.
+2.3. Selective adaptation
+We jointly train the decision head and LoRA adapters [18], comparing two scopes: all-module
+adaptation covers attention, gated DeltaNet, and feed-forward network (FFN) projections,
+whereas selective adaptation (no-FFN) retains adapters only in attention and DeltaNet. Both
+configurations keep every pretrained FFN layer in the forward computation. Crossing these
+scopes with the pointer and mean-span readouts lets us compare the readout choices under both
+forms of adaptation while keeping head size and adapter rank fixed.
+At inference, pooling averages hidden states already produced by the backbone before
+applying the key projection (Equation 6). Each option therefore requires one projected key,
+and reranking continues to use one backbone request per answer. Selective adaptation reduces
+the parameters requiring gradients and optimizer states during training, while the pretrained
+backbone remains intact.
+
+3. Experimental Setup
+Models and training. Our main experiments use NeoHorse-1-4B [30], a post-trained, text-only
+repackaging of Qwen3.5-4B whose backbone combines attention and gated DeltaNet layers [49].
+The reference recipe trains the decision head and rank-64 adapters jointly for one epoch with
+a OneCycle schedule [37], using a peak learning rate of 1.25×10−5 for both parameter groups.
+The learning-rate diagnostics also test 2.5×10−5 , and all comparisons evaluate the final weights
+of each run. A separate pointer–pooling comparison on Qwen3-4B [48] examines the readout
+change with another backbone.
+The training mixture combines web decisions and policy tasks with sentiment, topic, intent,
+and entailment classification. Public-source labels and model-generated reference answers are
+converted to a shared request format while retaining each question’s native options and target
+distribution. MC11 reuses the scorer learned from this mixture: each candidate answer becomes
+a separate NLI request, and its entailment probability determines its rank among the candidates.
+To keep related records together, we assign whole groups to splits before forming eight
+training pools, which contain 17,661 records and 24,001 questions. Each fold trains on seven
+pools; crossing two folds with two random seeds gives four matched settings. Within a setting,
+each configuration is trained afresh with compatible initial tensors, data order, and augmentation
+streams matched across the comparison. The learning-rate, scope, and budget studies reuse the
+same lower-rate, one-epoch reference pointers, giving their contrasts a common reference within
+
+4
+
+
+=== PAGE 5 ===
+each setting. Appendix A gives the grouping rules, augmentation procedure, and complete
+training configuration.
+Evaluation. MC11 averages candidate-reranking accuracy across ARC-Easy and ARCChallenge [10]; four- and ten-option GSM8K [11]; GPQA and MMLU with and without
+demonstrations [33, 16]; HellaSwag [51]; WinoGrande [35]; and synthetic chess. Each configura

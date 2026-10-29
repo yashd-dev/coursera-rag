@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "# xu2023large.14 \u2014 Compact Notes\n\n**Problem**  \n- Evaluate three LLMs (text-davinci-003, ChatGPT, BARD) on logical reasoning via a new dataset NeuLR (3k samples: 1k each deductive, inductive, abductive reasoning).  \n- Test zero-shot, one-shot, and chain-of-thought settings across fifteen logical reasoning datasets.\n\n**Method**  \n- Experiments in TABLE 5 with three prompt forms: zero-shot, one-shot, chain-of-thought.  \n- Prompt details in Appendix; evaluation covers four metrics (objective/subjective) and five error types.\n\n**Reported results**  \n- Few-shot and CoT boost LLM performance; CoT helps most, especially for text-davinci-003.  \n- Zero-shot: BARD best, ChatGPT last; differences significant.  \n- With few-shot+CoT, text-davinci-003 narrows then surpasses BARD.  \n- LLM performances: inductive > deductive > abductive (vs. prior finding deductive > abductive > inductive).  \n- LLMs show obvious weakness in abductive reasoning.\n\n**Limitations**  \n- NeuLR limited to 3k samples (Appendix for full construction).  \n- Results specific to three LLMs; generalizability unclear.  \n- Chain-of-thought and few-shot may not capture all reasoning pathways.\n\n**Two short exact quotes**  \n- \u201cWith the help of few-shot and chain-of-thought prompting strategies, text-davinci-003 large narrows the gaps with BARD, and it surpasses BARD with chain-of-thought strategy.\u201d (p.14)  \n- \u201cLLMs present obvious weakness in the abductive setting.\u201d (p.14)\n\n**References-only note**  \nThis segment introduces NeuLR and reports zero/few-shot CoT results for three LLMs on logical reasoning; no background citations are invented."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2433,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783a693dffeZGGBAWqGO5by6V"
+  }
+]

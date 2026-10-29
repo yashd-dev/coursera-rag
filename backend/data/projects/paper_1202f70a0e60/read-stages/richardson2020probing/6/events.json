@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**problem**: Investigate how well NLI models handle monotonicity reasoning via synthetic challenge datasets (monotonicity simple/hard) with controlled lexical items and quantifier- negation rules.\n\n**method**: Generated two monotonicity datasets (simple: \u22641 relative clause, 5 quantifiers; hard: \u22643 clauses, 14 quantifiers). Used regular grammar + Hu&Moss (2018) system to assign monotonicity arrows to tokens. Tested ESIM, Decomp-Attn, and BERT-base uncased on fine-tuning new fragments while retaining original task performance.\n\n**reported results**: (Not fully in this segment; initial tables omitted) Strong baselines failed fragments despite simplicity, confirming non-triviality. Length inflation in negation/comparatives due to productive rules. Fine-tuning experiments start on next page.\n\n**limitations**: Synthetic data may introduce annotation artifacts making datasets trivially learnable; fragment coverage limited to encoded quantifiers/negators; fine-tuning sensitivity to hyper-parameters; comparatives allow arbitrarily long sentences inflating length beyond benchmarks.\n\n- \"all poodles danced, while all \u2191 dogs \u2193 danced \u2191 NEUTRAL all mammals danced. This is due to the facts which we have seen: poodle \u2264 dog \u2264 mammal.\" (p.4 continued)\n- \"every\u2191 small\u2193 dog\u2193 ran\u2191 . We have manually encoded monotonicity information for 14 types of quantifiers (every, some, no, most, at least 5, at most 4, etc.) and negators (not, without).\" (p.5)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2430,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7833a198ffe0KLEycE4iUPbUA"
+  }
+]

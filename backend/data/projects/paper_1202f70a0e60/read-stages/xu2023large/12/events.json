@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**PAGE 10 (continued)**\n\n- **Problem**: Investigate LLMs' hallucination rates and reasoning performance across deduction, induction, and abduction. LLM hallucinations occur in 27.46% of failure cases; most prevalent in deductive reasoning.\n\n- **Method**: Analyzed ChatGPT across six datasets with varying statement counts (Fig. 8) and twelve datasets with varying token counts (Fig. 9). Three datasets provide per-sample reasoning hops (EntailmentBank, CLUTRR, D*-Ab).\n\n- **Reported results**: LLMs maintain answer/explanation correctness better with fewer statements; performance drops significantly as statement count increases. Five of six datasets show performance gains at certain statement thresholds (e.g., RuleTaker best at >17 statements). Increasing context tokens generally degrades performance, except stable accuracy in deductive settings (EntailmentBank, Leap-of-Thought).\n\n- **Limitations**: Results vary across datasets and reasoning settings; BARD ranks last in hallucination avoidance and clarity. No inference beyond stated findings.\n\n**Quotes** (page 10 continued):  \n- \"LLM hallucinations are more prevalent in deductive reasoning tasks among the settings of deductive, inductive, and abductive reasoning\"  \n- \"On average, LLMs induce hallucination in 27.46% of the failure cases\"  \n\n**PAGE 11**\n\n- **Method**: Explored reasoning hops' impact via Fig. 10 (performance across hops for EntailmentBank, CLUTRR, D*-Ab).\n\n- **Note**: Segment ends; further text not provided."
+  },
+  {
+    "kind": "usage",
+    "tokens": 2346,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e783adb33ffeAmlt2awG2bLDNX"
+  }
+]

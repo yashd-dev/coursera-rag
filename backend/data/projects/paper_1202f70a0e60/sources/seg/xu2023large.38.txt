@@ -1,0 +1,73 @@
+=== PAGE 36 (continued) ===
+ked third at
+most.
+The other answer choices are not supported by the passage. Answer choice A is not supported because the passage
+does not say that Ma Zheng’s grades are better than Zhang Qiang’s. Answer choice B is not supported because
+the passage does not say that Li Jin’s results surpass Wang Ping’s. Answer choice C is not supported because the
+passage does not say that Zhang Qiang’s performance is better than Song Zhi’s.
+Answer and Explain:
+
+
+=== PAGE 37 ===
+37
+
+Bard
+of 0-shot
+
+Davinci-003
+of 0-shot
+
+ChatGPT
+of 3-shot
+
+ChatGPT
+of 1-shot
+
+ChatGPT
+of 0-shot
+
+Question, answer
+and explanation
+
+TABLE 25: A reasoning case in LogiQA2NLI.
+Context: The premis is: Researcher: People who participate in opinion surveys often give answers they believe
+the opinion surveyor expects to hear, and it is for this reason that some opinion surveys do not reflect the actual
+views of those being surveyed. However, in well-constructed surveys, the questions are worded so as to provide
+respondents with no indication of which answers the surveyor might expect. So if a survey is well constructed,
+survey respondents’ desire to meet surveyors’ expectations has no effect on the survey’s results. The conclusion is:
+the answers of opinion-survey respondents can be influenced by beliefs about the surveyor’s expectations even if
+those beliefs are unfounded.
+Question: Determine whether the premise and conclusion entailed or NOT entailed.
+Answer: entailed
+The conclusion is not logically entailed by the given premise. The premise discusses the potential for opinion
+survey respondents to give answers they believe the surveyor expects to hear, but notes that well-constructed
+surveys prevent this by wording questions in a way that does not indicate expected answers. It then concludes
+that if a survey is well constructed, respondents’ desire to meet surveyors’ expectations has no effect on the
+survey’s results. Therefore, it does not support the conclusion that the answers of opinion-survey respondents can
+be influenced by beliefs about the surveyor’s expectations even if those beliefs are unfounded.
+Answer and Explain:
+Explain Error Type:
+The conclusion is not entailed by the given premise. While the premise discusses how well-constructed surveys
+are worded so as to provide respondents with no indication of which answers the surveyor might expect, and
+how this can mitigate respondents’ desires to meet surveyors’ expectations, it does not provide information to
+support or refute the claim that the answers of opinion-survey respondents can be influenced by beliefs about the
+surveyor’s expectations even if those beliefs are unfounded. Therefore, the conclusion cannot be reliably inferred
+from the given premise.
+Answer and Explain:
+Explain Error Type:
+Not entailed. The conclusion about the answers of opinion-survey respondents being influenced by beliefs about
+the surveyor’s expectations cannot be logically derived from the given premise.
+Answer and Explain:
+Explain Error Type:
+NOT entailed. The premise is implying that because the survey is well constructed with no indication of what
+answers the surveyor might expect, the survey respondents’ answers will not be impacted by any beliefs they
+have of the surveyor’s expectations. The conclusion is suggesting that even if those beliefs are unfounded, the
+responses will still be influenced by them. This goes against the premise as the premise has stated that wellconstructed surveys will give no indication of the surveyor’s expectations, and therefore, their beliefs of the
+surveyor’s expectations will have no influence.
+Answer and Explain:
+Explain Error Type:
+The conclusion is entailed by the premise. The premise states that people who participate in opinion surveys often
+give answers they believe the opinion surveyor expects to hear, even if those beliefs are unfounded. It also states
+that well-constructed surveys are worded so as to provide respondents with no indication of which answers the
+surveyor might expect.
+Thi

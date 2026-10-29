@@ -1,0 +1,82 @@
+=== PAGE 3 (continued) ===
+ive and abductive reasoning manners.
+(5) In view of the evaluation results, this paper forms a
+general evaluation scheme for the logical reasoning capability of LLMs for the first time, which concludes six key properties, i.e, Correct, Rigorous, Self-aware, Active, Oriented and
+No hallucination. Furthermore, we derive the ability maps
+for each LLM under four reasoning settings respectively and
+propose future directions.
+
+2
+
+P RELIMINARY
+
+Logical reasoning aims to generate logical implications that
+contain new facts using one- or multi-step inference based
+on given premises [26], [27], [28], i.e., premise⇒conclusion.
+Elements of logical reasoning typically include knowledge
+facts or premises and logical rules, for example:
+•
+•
+•
+
+rule: All eight-year-old children are in primary school.
+fact1/premise1: Jordan is a child of eight years old.
+fact2/premise2: Jordan is in primary school.
+
+According to the reasoning classification system of classical logic [18], there are three major types of logical reasoning: deductive, inductive and abductive. Drawing upon the
+aforementioned rule and facts, we can depict the objective of
+these three types of reasoning as forecasting the third item
+based on the two provided ones.
+Deductive Reasoning. Deductive reasoning is the psychological process of drawing deductive inferences that start
+from the given premises and reason with logical rules or
+commonsense to obtain certain conclusions [29], [30]. It can
+be premise1+rule⇒premise2. Fig. 2 presents an example of deductive reasoning. Its reasoning progress generates specific
+knowledge facts from general counterparts, e.g., premise2
+and rule are specific and general knowledge, respectively.
+Therefore, deductive reasoning is actually a top-down way.
+Inductive Reasoning. Distinct from deductive reasoning, inductive reasoning derives general principles from
+a body of observations which means making broad
+generalizations based on specific observations [31], [32].
+For example, an example of inductive reasoning can be
+premise1+premise2⇒rule, concluding generalized knowledge
+rule that is independent with specific item Jordan. Generally,
+the truth of the conclusion of an inductive argument is
+probable rather than certain in inductive reasoning. Thus, inductive reasoning is a bottom-up approach and is contrasted
+with deductive reasoning.
+Abductive Reasoning. Formally, abductive reasoning
+is similar to deductive reasoning which seeks conclusions
+from a set of observations. But differently, its target is to
+5. Available at https://github.com/DeepReasoning/NeuLR
+
+Fig. 2: An example of using an LLM to answer reasoning
+questions. The red words represent the generated results,
+while the blue ones represent the generated explanations.
+generate the simplest and most likely explanation for the
+given observations [33], [34]. So the result is probable like
+in inductive reasoning. An example of abductive reasoning
+can be premise2+rule⇒premise1, which means premise1 is the
+most likely cause of premise2.
+Mixed-form Reasoning. Numerous real-life reasoning
+scenarios may require multiple steps and the incorporation
+of at least two of these three types. In this paper, they
+are vieweds as a more intricate type of reasoning, namely,
+mixed-form. For example, given the following fact: 1) James is
+a crow and is black; 2) Sophia is a crow and is black; 3) Emily
+is a crow. To answer the question what color is Emily? , we
+should first get the conclusion that all crows are black using
+inductive reasoning and then conduct deductive reasoning
+on this conclusion and fact 3) to obtain the final answer black.
+
+3
+
+E VALUATION D ETAILS
+
+This section presents the comprehensive experimental settings, including the models, datasets and metrics. More
+detailed prompts for zero- or few-shot are shown in Table 3
+of the Appendix 6 .
+3.1
+
+Evaluated Models
+
+Because of the rapid emergence of LLMs, it is not realistic to include all LLMs in this paper. Thus, we mainly
+select three early-era representativ

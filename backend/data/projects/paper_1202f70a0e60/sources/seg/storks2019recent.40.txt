@@ -1,0 +1,45 @@
+=== PAGE 48 (continued) ===
+ded relations
+in ConceptNet. Jastrz˛ebski, Bahdanau, Hosseini, Noukhovitch, Bengio, and Cheung (2018) use
+such a mapping to mine novel commonsense knowledge relations from text, while Saito, Nishida,
+Asano, and Tomita (2018) train a model to jointly generate and complete knowledge bases from
+language queries to improve accuracy of proposed relations.
+Automatic knowledge base completion. Rather than extracting new relations from text, new relations may be inferred from existing relations. Angeli and Manning (2014) use a relaxed logical
+framework to infer novel relations from existing relations in a large knowledge base, and demonstrate that the new relations can be successfully used for inference in a textual entailment task.
+48
+
+
+=== PAGE 49 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+More recently, neural networks are used to generate new relations. One example is memory comparison networks (Andrade, Bai, Rajendran, & Watanabe, 2018), which generalize over existing
+temporal relations in knowledge graphs, i.e., the typical ordering of events, in order to acquire new
+temporal relations. A similar recent work by Bosselut, Rashkin, Sap, Malaviya, Celikyilmaz, and
+Choi (2019) trains a transformer on existing relations in order to infer novel relations in knowledge
+graphs. When this model was trained on ConceptNet (Speer et al., 2017), human workers rated up to
+92.1% of generated relations as accurate, demonstrating the potential effectiveness of this technique
+for already large but incomplete knowledge bases. While current efforts are promising, future work
+will need to continue to find and improve solutions to handle the long-tail phenomenon observed in
+these knowledge resources (Davis & Marcus, 2015).
+
+4. Learning and Inference Approaches
+To solve the benchmark tasks described in Section 2, a variety of approaches have been developed.
+These range from earlier symbolic and statistical approaches to recent approaches that apply deep
+learning and neural networks. This section gives a brief overview of symbolic and early statistical
+approaches to the surveyed benchmarks, followed by a more detailed description of representative
+neural approaches, which are the current state of the art on all of the benchmarks.
+4.1 Symbolic Approaches
+Symbolic approaches use logical forms and processes to make inferences. The study of human reasoning through logic has continued through history, from Aristotle’s theories of logic and deductive
+reasoning (Aristotle, 1989), to the reasoning and intellect theories of philosophers like Alfarabi,
+Avicenna, and Averroes (Davidson, 1992). These works were a foundation for modern mathematical logic, developed in influential works like the formal logic frameworks by Morgan (1847) and
+Boole (1854), and the symbolic logic theories by Hilbert and Ackermann (1999) and Lewis, Langford, and Lamprecht (1959). Later work by Selman and Levesque (1990), Poole (1990), and Hobbs
+et al. (1993) further developed this methodology. During this evolution, Peirce (1883) proposed the
+process of logical abduction, i.e., the process of making a conclusion using a limited set of observations and a minimal number of assumptions, similar to plausible inference as defined by Davis and
+Marcus (2015) for language problems. Bayesian networks have also been used for probabilistically
+reasoning with logical variables (Dechter, 2013).
+Meanwhile, theories of logic found applications in AI, e.g., in the early work on commonsense
+for machines by McCarthy (1968), and linguistics, e.g., in the theory of natural logic toward a
+semantic representation of language by Lakoff (1970). Fuzzy logic, which maps linguistic descriptions of numeric variables to probability distributions over the numeric variables, was an important
+development to handle inexactness in human language. For example, the word young can be used
+to describe someone’s age, and we may specify or calculate a likelihood of this word being used to
+describe someon

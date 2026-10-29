@@ -1,0 +1,50 @@
+=== PAGE 24 (continued) ===
+GLUE (Wang et al., 2018) with
+about 23,000 examples over a different selection of more difficult reframed single-sentence binary
+classification and 2- or 3-way entailment tasks:
+• CommitmentBank (CB) from de Marneffe, Simons, and Tonhauser (2019)
+• Choice of Plausible Alternatives (COPA) from Roemmele et al. (2011)
+• Multi-Sentence Reading Comprehension (MultiRC) from Khashabi et al. (2018)
+• Recognizing Textual Entailment (RTE), consisting of examples from RTE-1 (Dagan et al.,
+2005), RTE-2 (Bar-Haim et al., 2006), RTE-3 (Giampiccolo et al., 2007), and RTE-5 (Bentivogli et al., 2009)
+• Word-in-Context (WiC) from Pilehvar and Camacho-Collados (2019)
+• Winograd Schema Challenge (WSC) from Levesque (2011) recast instead into a singlesentence binary classification task8
+8. Consists of original Winograd Schema Challenge examples (Morgenstern et al., 2016), examples by the authors
+available online, and examples privately shared by the authors.
+
+24
+
+
+=== PAGE 25 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+Many of these tasks require reasoning over multiple sentences, and using external knowledge
+to perform language processing tasks like word-sense disambiguation and reference resolution. SuperGLUE can be downloaded at https://super.gluebenchmark.com/.
+2.2 Criteria and Considerations for Creating Benchmarks
+The goal of benchmarks is to support technology development and provide a platform to measure
+research progress. Whether this goal can be achieved depends on the nature of the benchmark. This
+section identifies the successes and lessons learned from the creation of the surveyed benchmarks,
+and summarizes key considerations and criteria that should guide the creation of the benchmarks,
+particularly in the areas of task format, evaluation schemes, data biases, data collection methods,
+and benchmark complexity.
+2.2.1 TASK F ORMAT
+In creating benchmarks, determining the formulation of the problem is an important step. Among
+existing benchmarks, there exist a few common task formats, and while some formats are interchangeable, others are only suited for particular tasks. We provide a review of these formats, indicating the types of tasks they are suitable for.
+Classification tasks. Most benchmark tasks are classification problems, where each response is a
+single choice from a finite number of options. These include textual entailment tasks, which most
+commonly require a binary or ternary decision about a pair of sentences, cloze tasks, which require a
+multiple-choice decision to fill in a blank, and traditional multiple-choice question answering tasks.
+Textual entailment tasks. A highly popular format was originally introduced by the RTE Challenges,
+where given a pair of texts, i.e., a context and hypothesis, one must determine whether the context
+entails the hypothesis (Dagan et al., 2005). In the fourth and fifth RTE Challenges, this format was
+extended to a three-way decision problem where the hypothesis may contradict the context (Giampiccolo et al., 2008; Bentivogli et al., 2009). The JOCI benchmark further extends the problem
+to a five-way decision task, where the hypothesis text may range from impossible to very likely
+given the context (Zhang et al., 2017).
+While this format is typically used for textual entailment problems like the RTE Challenges, it
+can be used for nearly any type of inference problem. Some multi-task benchmarks have adopted
+the format for several different reasoning tasks, for example, the Inference is Everything (White
+et al., 2017), GLUE (Wang et al., 2018), and DNC (Poliak et al., 2018a) benchmarks use the classic
+RTE format for most of their subtasks by automatically recasting previously existing benchmarks
+into it. Many of these problems deal either with reasoning processes more focused than the RTE
+Challenges, or more advanced reasoning than the RTE Challenges demand, showing the flexibility
+of the format. Some such tasks include reference resolution, recognition of puns, and ques

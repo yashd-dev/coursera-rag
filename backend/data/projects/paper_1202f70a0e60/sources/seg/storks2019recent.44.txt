@@ -1,0 +1,46 @@
+=== PAGE 53 (continued) ===
+rly challenging in MCScript, as they require a special handling of negation and deeper
+understanding of the question. Further, since the multiple choices to answer questions in MCScript
+are human-authored instead of extracted directly from the accompanying passage like other QA
+benchmarks, this caused some difficulties in connecting words back to the passage that stemming
+alone could not fix.
+Self-attention in transformers. In lieu of adding attention mechanisms to a typical neural model
+such as an RNN, LSTM, or CNN, the recently proposed transformer architecture is composed entirely of attention mechanisms (Vaswani et al., 2017). 25 One key difference is the self-attention
+layer in both the encoder and the decoder. For each word position in an input sequence, selfattention allows it to attend to all positions in the sequence to better encode the word. It provides
+a method to potentially capture long-range dependencies between words, such as syntactic, semantic, and coreference relations. Furthermore, instead of performing a single attention function, the
+transformer performs multi-head attention in the sense that it applies the attention function multiple
+times with different linear projections, and therefore allows the model to jointly capture different attentions from different subspaces, e.g., jointly attend to information that might indicate both
+coreference and syntactic relations.
+Another big benefit of the transformer is its suitability for parallel computing. The sequence
+models such as RNN and LSTM by their sequential nature make it difficult for parallelization. The
+transformer, which uses attention to capture global dependencies between inputs and outputs, maximizes the amount of parallelizable computations. Empirical results on NLP tasks such as machine
+translation and constituency parsing have shown impressive performance gains with a significant reduction in training costs (Vaswani et al., 2017). Transformers have recently been used in pre-trained
+contextual models like GPT (Radford et al., 2018) and BERT (Devlin et al., 2018) to achieve stateof-the-art performance on many of the surveyed language benchmarks.
+4.3.2 M EMORY AUGMENTATION
+Mentioned earlier, a popular type of approach for tasks which require comprehending passages with
+several state changes or supporting facts, such as bAbI (Weston et al., 2016) or ProPara (Mishra
+23. https://nlp.stanford.edu/projects/snli/
+24. https://competitions.codalab.org/competitions/17184#results
+25. An excellent post on the implementation of the transformer can be found at https://nlp.seas.harvard.
+edu/2018/04/03/attention.html.
+
+53
+
+
+=== PAGE 54 ===
+S TORKS , G AO , & C HAI
+
+et al., 2018), involves augmenting systems with a dynamic memory which may be maintained over
+time to represent the changing state of the world. Attention mechanisms are often applied to input
+text to identify relevant locations or entities in memory to read or update. We discuss several recent
+architectures which adopt this strategy to highlight key characteristics of such an approach.
+Memory networks. Memory networks by Weston et al. (2015), introduced as high-performing
+baseline approaches to both bAbI (Weston et al., 2016) and CBT (Hill et al., 2015), track the world
+state by adding a long-term memory component to the typical network architecture. A memory
+network consists of a memory array, an input feature map, a generalization module which updates
+the memory array given new input, an output feature map, and a response module which converts
+output to the appropriate response or action. The networks can take characters, words, or sentences
+as input. Each component of the network can take different forms, but a common implementation
+is for them to be neural networks, in which case the network is called a M EM NN. An end-toend variant of memory networks, which can be used for a higher variety of tasks, e.g., language
+modeling, has also been proposed (Sukhbaatar, Szlam, Weston, & Fergus, 2015).
+The ab

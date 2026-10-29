@@ -1,0 +1,53 @@
+=== PAGE 67 (continued) ===
+ : A S URVEY
+
+NLI models are similarly vulnerable to these kinds of issues. For example, we have recently seen
+that the BERT model (Devlin et al., 2018), was exceeded by several variants and other transformerbased models which made major changes to loss functions (Liu et al., 2019a), model architecture,
+pre-training objectives (Yang et al., 2019), and model complexity, i.e., the number of parameters
+trained (Radford et al., 2019). Even beyond these more substantial changes to the model, smaller
+tweaks to various aspects of the model have resulted in hundreds of entries on leaderboards (e.g.,
+those linked to in Section 4.3.3 and Table 2) leading only to marginal improvements. Recently,
+though, we saw RO BERTA exceed all of these variants and become the state of the art on several
+benchmarks using the same architecture as BERT, but making small changes to its pre-training tasks
+and more carefully selecting hyperparameters (Liu et al., 2019b). This demonstrates the importance
+of all model design choices, and puts into question the benefits of changes made in the earlier
+variants. More efforts on theoretical understanding and motivation for model design, pre-training
+techniques, and parameter tuning would be beneficial to better direct research efforts.
+Need broader and multidimensional metrics for evaluation.
+Evaluation, particularly through leaderboards, has been a critical component in NLI research. The
+metrics typically used on these leaderboards, e.g., accuracy and others discussed in Section 2.2.2,
+measure task competence, i.e., how well the learned model solves the benchmark task. Researchers
+are motivated to develop models that top the leaderboard by these kinds of performance measures.
+This opens up many questions about whether this competence-centric evaluation is an effective
+research practice. We argue that broader and multidimensional evaluation metrics should be considered in the future.
+Task competence. A competence-centric evaluation, while important for pushing the state of the
+art, can also lead to a less productive path if not treated carefully. A significant amount of effort
+has been spent on tuning models or parameters to surpass other models or human performance
+without a good understanding of model behaviors, even on benchmarks with obvious drawbacks.
+For example, in Figure 14, we saw that SQuAD 1.1 (Rajpurkar et al., 2016) is clearly the most
+popular benchmark. It has seen hundreds of leaderboard submissions,45 and machine performance
+has surpassed human performance. However, there are known issues with the benchmark. First,
+SQuAD 1.1 has been considered too simple, as answers to questions can be extracted directly from
+the text. As such, it was replaced with SQuAD 2.0 (Rajpurkar et al., 2018), a more interesting
+version with unanswerable questions. Further, state-of-the-art systems for SQuAD 1.1 have been
+shown to lack generalization to an adversarial modification of the benchmark data (Jia & Liang,
+2017), suggesting that there are statistical biases in the dataset which models are overfitting to.
+Because of these issues, continuously improving the task competence measure on the leaderboard
+does not lead to anything insightful, and does not bring us closer to solving the broader task of
+question answering. Rather than submitting to popular leaderboards like SQuAD 1.1 hundreds of
+times to marginally surpass other models, researchers should be encouraged to work on some new,
+interesting, and/or adversarially constructed benchmarks, e.g., WinoGrande (Sakaguchi et al., 2019)
+and SocialIQA (Sap et al., 2019b). In addition, other evaluation metrics should also be considered in
+order to provide a better understanding of the progress on natural language inference, as discussed
+next.
+
+45. https://rajpurkar.github.io/SQuAD-explorer/
+
+67
+
+
+=== PAGE 68 ===
+S TORKS , G AO , & C HAI
+
+Efficiency. Modern neural networks are becoming more and more complex and requiring more and
+more pre-training data and computational reso

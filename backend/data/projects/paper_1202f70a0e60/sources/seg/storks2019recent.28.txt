@@ -1,0 +1,43 @@
+=== PAGE 34 (continued) ===
+eparate group of workers to review generated data and identify any bad examples, e.g.,
+the validation of DNC benchmark data (Poliak et al., 2018a). For labeling tasks, multiple crowd
+workers can label the same examples, and agreement can be measured from this to estimate data
+quality, e.g., in creating the JOCI benchmark (Zhang et al., 2017).
+34
+
+
+=== PAGE 35 ===
+R ECENT A DVANCES IN NATURAL L ANGUAGE I NFERENCE : A S URVEY
+
+For complex writing tasks where both data authoring and validation are highly involved, it may
+be advantageous to present crowdsourced tasks to two interacting workers at once. Reddy et al.
+(2018), for example, do this to create CoQA from actual human conversations about provided passages on Amazon Mechanical Turk, and achieve high data quality with minimal validation. In creating the data, the two interacting workers validate each others’ work, and can even report workers
+who do not follow instructions, reducing the burden of worker qualification.
+Cost optimization. Though hiring crowd workers is typically cheaper than hiring permanent workers, the cost may still be limiting, especially if the creator wishes to properly evaluate the quality
+of generated data through verification by even more crowd workers. For example, ROCStories
+(Mostafazadeh et al., 2016), consisting of about 50,000 well-evaluated five-sentence stories and
+13,500 test cases, cost an average of 26 cents per story and an extra 10 cents per test case, resulting
+in a total cost near 15,000 USD to generate the dataset. If the cost of such thorough validation is an
+issue, validating a random sample of produced data, e.g., in validating SNLI (Bowman et al., 2015),
+can serve as an indicator of the overall quality of benchmark data.
+Ultimately, each method of data collection has its own advantages and drawbacks. While manual authoring results in high-quality, expert-verified data, it is slow and unscalable. Meanwhile, the
+quality of automatically authored data is highly dependent on the language model used, and though
+it is faster, it may require manual verification. If using text mining rather than generating from
+scratch, data is more likely to be representative of human language, however manual verification
+may still be necessary depending on the source which data are extracted from. And lastly, crowdsourcing is a quick and convenient way to collect human-authored data following any set of criteria
+or restrictions, but it comes with special considerations that address the difficulty of work, qualification of workers, data validation, and cost optimization. When developing a new benchmark, the
+above trade-offs will need to be carefully considered.
+2.2.5 B ENCHMARK C OMPLEXITY
+Given the large variety of available benchmarks for natural language inference, some understanding
+of the complexity or difficulty of these benchmarks would be helpful. However, as demonstrated
+earlier in this section, there are many variations among these benchmarks. Consequently, it is not
+feasible to have a fair and direct comparison. As such, we do not attempt to address whether one
+benchmark is more complex than another. But rather we discuss various dimensions that may affect
+the perception of the complexity of a benchmark, and consider their possible implications.10
+Perception of complexity. One natural way to think about the complexity of a task is to consider
+the performance of both machines and humans on the task; low performance may suggest high
+complexity, and vice versa. Figure 11 shows human performance and state-of-the-art machine performance for selected benchmarks. This figure seems to suggest that bAbl (Weston et al., 2016) is
+easiest for both the human and the machine. This may not be surprising, as the bAbl benchmark
+data is synthetically generated with simple structure, and these simpler language patterns can be
+well captured by deep learning models. For the majority of benchmarks, human performance is
+10. In this analysis, data was collected from pap

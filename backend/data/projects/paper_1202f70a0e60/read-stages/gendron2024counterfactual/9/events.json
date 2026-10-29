@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "**Problem** (p8): Extract 5,486 \"Price of Oil\" media events from EventRegistry across Q1 2015, 2020, 2022, 2023, focusing on geopolitical events (EIA, Russo-Ukrainian War). Manual verification due to missing ground truth.\n\n**Method** (p8\u20139): Counterfactual inference on causal graphs extracted from documents. Interventions `do(0='low')` and `do(9='False')` modify pandemic severity and government change. LLM self-evaluation of graph plausibility/confidence via prompts (Appendix B.4).\n\n**Reported results** (p9, Table 5): LLMs score factual graphs higher than counterfactuals (expected, closer to training distribution). GPT-4o more consistent on factual graphs (lower std dev). Example (Table 4): COVID severity and oil price war \"severe\"; Bursa downtrend 29%; FBM KLCI 1,280.63; counterfactuals show \"low\" severity, \"False\" government change, improved economy. Two models differ on exogenous factor but reach same conclusions.\n\n**Limitations** (p8\u20139): No ground truth; small manually verified document subset; illustrative example only; two LLMs return different exogenous factor values.\n\n- *\"GPT-4o is also more consistent on the factual graphs, with a lower standard deviation\"* (p9)\n- *\"We emphasise that these results should be taken as an illustrative example only\"* (p9)"
+  },
+  {
+    "kind": "usage",
+    "tokens": 2531,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e78435762ffeQrTuQDNj1KLk5g"
+  }
+]

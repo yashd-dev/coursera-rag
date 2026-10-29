@@ -1,0 +1,235 @@
+=== PAGE 4 (continued) ===
+16)
+Wang and Jiang (2016)
+Our approach (vanilla)
+Our approach w/ intra att.
+
+80.6
+81.6
+83.6
+83.7
+
+88.2
+91.6
+91.3
+92.1
+
+85.5
+87.4
+85.8
+86.7
+
+Table 2: Breakdown of accuracy with respect to classes on SNLI
+development set. N=neutral, E=entailment, C=contradiction.
+
+F is evaluated O(`) times, giving a complexity of
+O(`d2 ). Each attention weight eij requires one dot
+product, resulting in a complexity of O(`2 d).
+Thus the total complexity of the model is O(`d2 +
+`2 d), which is equal to that of an LSTM with attention. However, note that with the assumption that
+` < d, this becomes O(`d2 ) which is the same complexity as a regular LSTM. Moreover, unlike the
+LSTM, our approach has the advantage of being parallelizable over `, which can be useful at test time.
+
+5
+
+Experiments
+
+We evaluate our approach on the Stanford Natural
+Language Inference (SNLI) dataset (Bowman et al.,
+2015). Given a sentences pair (a, b), the task is to
+predict whether b is entailed by a, b contradicts a,
+or whether their relationship is neutral.
+5.1
+
+Implementation Details
+
+The method was implemented in TensorFlow (Abadi
+et al., 2015).
+Data preprocessing: Following Bowman et al.
+(2015), we remove examples labeled “–” (no gold
+label) from the dataset, which leaves 549,367 pairs
+
+for training, 9,842 for development, and 9,824 for
+testing. We use the tokenized sentences from the
+non-binary parse provided in the dataset and prepend
+each sentence with a “NULL” token. During training,
+each sentence was padded up to the maximum length
+of the batch for efficient training (the padding was
+explicitly masked out so as not to affect the objective/gradients). For efficient batching in TensorFlow,
+we semi-sorted the training data to first contain examples where both sentences had length less than
+20, followed by those with length less than 50, and
+then the rest. This ensured that most training batches
+contained examples of similar length.
+Embeddings: We use 300 dimensional GloVe
+embeddings (Pennington et al., 2014) to represent
+words. Each embedding vector was normalized to
+have `2 norm of 1 and projected down to 200 dimensions, a number determined via hyperparameter
+tuning. Out-of-vocabulary (OOV) words are hashed
+to one of 100 random embeddings each initialized
+to mean 0 and standard deviation 1. All embeddings
+remain fixed during training, but the projection matrix is trained. All other parameter weights (hidden
+layers etc.) were initialized from random Gaussians
+with mean 0 and standard deviation 0.01.
+Each hyperparameter setting was run on a single machine with 10 asynchronous gradient-update
+threads, using Adagrad (Duchi et al., 2011) for optimization with the default initial accumulator value of
+0.1. Dropout regularization (Srivastava et al., 2014)
+was used for all ReLU layers, but not for the final
+linear layer. We additionally tuned the following
+hyperparameters and present their chosen values in
+
+
+=== PAGE 5 ===
+ID
+
+Sentence 1
+Two kids are standing in the ocean hugging
+each other.
+A dancer in costumer performs on stage while
+a man watches.
+They are sitting on the edge of a fountain
+
+A
+B
+C
+
+Two dogs play with tennis ball in field.
+Two kids begin to make a snowman on a sunny
+winter day.
+The horses pull the carriage, holding people
+and a dog, through the rain.
+
+D
+E
+F
+
+A woman closes her eyes as she plays her
+cello.
+Two women having drinks and smoking
+cigarettes at the bar.
+A band playing with fans watching.
+
+G
+H
+I
+
+Sentence 2
+
+DA (vanilla)
+
+DA (intra att.)
+
+SPINN-PI
+
+mLSTM
+
+Gold
+
+Two kids enjoy their day at the beach.
+
+N
+
+N
+
+E
+
+E
+
+N
+
+the man is captivated
+
+N
+
+N
+
+E
+
+E
+
+N
+
+The fountain is splashing the persons seated.
+
+N
+
+N
+
+C
+
+C
+
+N
+
+Dogs are watching a tennis match.
+
+N
+
+C
+
+C
+
+C
+
+C
+
+Two penguins making a snowman.
+
+N
+
+C
+
+C
+
+C
+
+C
+
+Horses ride in a carriage pulled by a dog.
+
+E
+
+E
+
+C
+
+C
+
+C
+
+The woman has her eyes open.
+
+E
+
+E
+
+E
+
+E
+
+C
+
+Three women are at a bar.
+
+E
+
+E
+
+E
+
+E
+
+C
+
+A band watches the fans play
+
+E
+
+E
+
+E
+
+E
+
+C
+
+Table 3: Example wins and losses compared to other app
