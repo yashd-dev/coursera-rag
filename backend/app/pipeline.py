@@ -675,6 +675,20 @@ def build_loop(job, tid, root, session):
 
 def review_claims(job, tid, root, session=None, allow_purpose_repair=True):
     """Bounded model correction using real retrieval and page-exact ledger feedback."""
+    from . import claim_checker
+
+    if claim_checker.enabled():
+        # Laya-only claim assessment (PAPERFORGE_CLAIM_CHECKER=laya): no hosted reviewer, no rewrite step.
+        if claim_checker.review_claims_laya(job, tid, root):
+            return True, session
+        try:
+            summ = json.loads((root / claim_checker.SUMMARY_FILE).read_text())
+        except (OSError, ValueError):
+            summ = {}
+        (root / "review-feedback.json").write_text(
+            json.dumps({"errors": [f"Claim check unavailable: {summ.get('error', 'unknown')}"], "spans_complete": 0, "spans_total": summ.get("total", 0)})
+        )
+        return False, session
     from . import evidence
 
     feedback = []
@@ -926,6 +940,12 @@ def start_banner(resume_phase, label):
     return f"Starting a **{label}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
 
 
+def claim_checker_label(root):
+    from . import claim_checker
+
+    return claim_checker.summary_text(root) if claim_checker.enabled() else ""
+
+
 def review_pause_message(root):
     """Plain description of why claim review stopped and what the user can do. Reads only the saved ledger."""
     base = "Claim review is paused. Existing source vectors retained."
@@ -959,14 +979,16 @@ def review_pause_message(root):
     return "\n".join(lines)
 
 
-def run_create(job, tid, text, template):
+def create_prelude(job, tid, text, template):
+    """Environment checks and the resume-from-pause branches. Returns the project root when a fresh/continued
+    pipeline run should proceed, or None when the request was already handled."""
     root = latexbuild.prepare(tid, template)
     ok, ver = opencode.available()
     if not ok:
         job.finish(
             f"OpenCode CLI not found ({ver}). Install it (`npm i -g opencode-ai`) or set OPENCODE_BIN."
         )
-        return
+        return None
     opencode.write_config(root, ["pdflatex *", "bibtex *", "python3 rag.py *"])
     phase = db.get_thread(tid)["phase"]
     if phase in ("link_paused", "edit_paused"):
@@ -976,7 +998,7 @@ def run_create(job, tid, text, template):
             job.finish(
                 "Missing edit checkpoint; original retained. Send the edit request again."
             )
-            return
+            return None
         current = root / "paper/main.tex"
         if (
             pending.get("before_sha256")
@@ -988,13 +1010,13 @@ def run_create(job, tid, text, template):
             run_create(job, tid, "/resume", template)
         else:
             run_edit(job, tid, pending["request"], original=pending["original"])
-        return
+        return None
     if phase in ("editing", "build_failed", "review_paused", "export_paused"):
         res, session = build_loop(job, tid, root, None)
         if not res["ok"]:
             db.update_thread(tid, phase="build_failed")
             job.finish("Build still needs correction.")
-            return
+            return None
         reviewed, session = review_claims(job, tid, root, session)
         if not reviewed:
             db.update_thread(tid, phase="review_paused")
@@ -1008,12 +1030,12 @@ def run_create(job, tid, text, template):
                     + "\n".join(f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in drafts)
                 )
             job.finish(msg)
-            return
+            return None
         res, session = build_loop(job, tid, root, session)
         if not res["ok"]:
             db.update_thread(tid, phase="build_failed")
             job.finish("Reviewed draft did not build.")
-            return
+            return None
         files, v = export_all(job, tid, template)
         if (
             not v
@@ -1023,16 +1045,24 @@ def run_create(job, tid, text, template):
         ):
             db.update_thread(tid, phase="export_paused")
             job.finish("Word export check did not pass.")
-            return
+            return None
         db.update_thread(tid, phase="ready", custom={"session": session})
         job.text(
-            "Reviewed exports are ready.\n\n"
+            ((claim_checker_label(root) + "\n\n") if claim_checker_label(root) else "Reviewed exports are ready.\n\n")
             + "\n".join(
                 f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in files
             )
         )
         job.finish()
-        return
+        return None
+    return root
+
+
+
+# ---- fresh-run stages. run_create runs them in order; the LangGraph orchestrator runs each as a graph node.
+# Each returns True to continue, False when it stopped (the job is already finished and threads.phase says why).
+def stage_discover(job, tid, ctx):
+    root, template, text = ctx["root"], ctx["template"], ctx["text"]
     resume_discovery = db.get_thread(tid)["phase"] == "discovery_paused"
     resume_reading = db.get_thread(tid)["phase"] in ("reading_paused", "draft_paused")
     if not resume_reading and not resume_discovery:
@@ -1058,7 +1088,13 @@ def run_create(job, tid, text, template):
         job.finish(
             "No open-access PDFs could be downloaded and indexed for this topic. Try a more specific topic."
         )
-        return
+        return False
+    ctx.update(p=p, n=n, text=text)
+    return True
+
+
+def stage_read(job, tid, ctx):
+    root, p = ctx["root"], ctx["p"]
     db.update_thread(tid, phase="reading_paused")
     notes = read_papers(job, tid, root)
     if not notes:
@@ -1066,8 +1102,14 @@ def run_create(job, tid, text, template):
         job.finish(
             "Reading is incomplete. No draft was created. Send `/resume` to continue unfinished segments without repeating discovery or embeddings."
         )
-        return
+        return False
     used = latexbuild.write_bib(tid)
+    ctx["used"] = used
+    return True
+
+
+def stage_draft(job, tid, ctx):
+    root, template, p, used = ctx["root"], ctx["template"], ctx["p"], ctx["used"]
     tc = job.tool_start(
         "draft_paper",
         {
@@ -1091,7 +1133,13 @@ def run_create(job, tid, text, template):
     if not ok:
         db.update_thread(tid, phase="draft_paused")
         job.finish("Drafting stopped at a failed stage; the last failed tool entry above says which. Source checkpoints retained; send /resume to retry.")
-        return
+        return False
+    ctx["session"] = session
+    return True
+
+
+def stage_build_review(job, tid, ctx):
+    root, session = ctx["root"], ctx.get("session")
     db.update_thread(
         tid, phase="editing"
     )  # Draft is saved; resume build, never regenerate it.
@@ -1105,13 +1153,20 @@ def run_create(job, tid, text, template):
             job.finish(
                 "Claim review did not complete with valid page evidence. Checkpoint retained, not marked ready."
             )
-            return
+            return False
     else:
         db.update_thread(tid, phase="build_failed")
         job.finish(
             "The final PDF build did not pass. Draft retained, not marked ready."
         )
-        return
+        return False
+    ctx.update(res=res, session=session)
+    return True
+
+
+def stage_export(job, tid, ctx):
+    root, template, p, used = ctx["root"], ctx["template"], ctx["p"], ctx["used"]
+    res, session = ctx["res"], ctx["session"]
     db.update_thread(tid, custom={"session": session})
     if not res["ok"] or not (root / "paper" / "main.pdf").exists():
         db.update_thread(tid, phase="build_failed")
@@ -1138,9 +1193,29 @@ def run_create(job, tid, text, template):
         f"- [{f['label']}]({f['url'] if False else '/api/threads/'+tid+'/files/'+f['name']})"
         for f in files
     )
+    label = claim_checker_label(root)
+    if label:
+        msg += "\n\n" + label
     msg += "\n\nAsk me about any source or citation and I'll answer from the retrieved passages. Start a message with `/edit` to change the paper."
     job.text("\n\n" + msg)
     job.finish()
+
+
+PIPELINE_STAGES = (stage_discover, stage_read, stage_draft, stage_build_review)
+
+
+def run_pipeline(job, tid, ctx):
+    for stage in PIPELINE_STAGES:
+        if not stage(job, tid, ctx):
+            return
+    stage_export(job, tid, ctx)
+
+
+def run_create(job, tid, text, template):
+    root = create_prelude(job, tid, text, template)
+    if root is None:
+        return
+    run_pipeline(job, tid, dict(root=root, template=template, text=text))
 
 
 # ---------------------------------------------------------------- ask (read-only RAG)

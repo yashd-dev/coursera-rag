@@ -6,8 +6,15 @@ pgvector==0.5.1
 pydantic==2.14.1
 numpy==2.2.6
 pypdf==6.21.3
+langchain-core==1.7.1
+langchain==1.4.7
+langgraph==1.2.18
+langgraph-checkpoint-postgres==3.2.0
+langchain-nvidia-ai-endpoints==1.5.0
 # Dev/test only (PAPERFORGE_EMBED_PROVIDER=local). Not used by the default Voyage setup. ~1 GB RAM.
 # fastembed==0.9.1
 # pgserver==0.1.4   # bundled PostgreSQL+pgvector for machines without Docker
 
+# Claim checker (default). First use downloads ~843 MB of weights from Hugging Face.
+laya==0.4.17
 tokenizers==0.23.3

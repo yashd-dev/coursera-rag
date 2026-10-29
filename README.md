@@ -63,6 +63,35 @@ npm run dev
 
 Open http://127.0.0.1:5173. Choose IEEE/Springer, then enter a topic. It is a template selector, not an LLM selector. The API does not create tables during a read unless explicit initialization is enabled. First have the database owner enable pgvector (`CREATE EXTENSION vector`) and authorize a dedicated `paperforge` schema. For initial setup only, set PAPERFORGE_DB_INITIALIZE=enabled; after setup set it back to disabled. All app table queries are qualified into PAPERFORGE_DB_SCHEMA; public/system schemas are rejected. Existing public tables are not reused. A database initialized with another embedding model must not be reused without re-embedding or a fresh database.
 
+## Orchestrator (LangGraph, default) and claim checker (Laya, default)
+
+Each chat turn goes through a LangGraph `StateGraph` (`backend/app/orchestrator/`). Claims are checked by Laya (`laya==0.4.17`, in `requirements.txt`), run on CPU in short-lived worker processes; the first check downloads about 843 MB of weights, and on machines under 6 GB RAM a low-memory loader is used automatically. The final message says the claims are model-assessed, not verified. No setup flags are needed. To roll back, set `PAPERFORGE_ORCHESTRATOR=legacy` and `PAPERFORGE_CLAIM_CHECKER=legacy` (the previous router and LLM claim review).
+
+```
+fast_route -> scope | resume | edit | ask          slash commands, resume and questions: no model call
+fast_route -> classify (forced Intent tool call)
+classify -> find_agent <-> find_tools -> find_report   search only; nothing is downloaded, indexed or written
+classify -> ask_consent -> consent (interrupt) -> write_paper
+classify -> clarify
+```
+
+- `find papers ...` only searches arXiv/OpenAlex through LangChain tools that the graph executes (max 2 rounds) and lists candidates.
+- A paper is written only on an explicit write request ("write a literature review on ...") or after a yes to the consent question. Unclear input gets a clarifying question, never a run.
+- The consent question is a LangGraph `interrupt`; the checkpoint lives in Postgres schema `paperforge_lg` and survives a restart. `threads.phase` stays the source of truth, and `write_paper` refuses to start unless the phase is `new` or `failed_early`.
+- Model: the owner's NVIDIA model through `langchain-nvidia-ai-endpoints`. That endpoint rejects `with_structured_output` and `max_retries`, so intent uses a forced tool call. Hosted calls still need `PAPERFORGE_ANSWER_CALLS=enabled`; without them, rules decide and the graph only searches or asks.
+- OpenCode is unchanged: it still does the file editing and drafting. The claim review is unchanged; LangGraph does not verify claims. An unresolved span is never marked verified and the draft downloads stay labelled "not verified".
+
+What the graph owns today, and what is still the previous code:
+
+| Stage | Owner |
+| --- | --- |
+| Turn routing, intent classification, find_papers search loop, write consent and its checkpoint | LangGraph |
+| Fresh paper run: discover/index, read, draft, build+claim review, export | One LangGraph node per stage (`discover`, `read`, `draft`, `build_review`, `export`), conditional edges stop at the first failed stage |
+| The code inside each stage (plan, OpenCode file work, drafting, claim review, build, export) | Existing `pipeline.py` / `drafting.py` / `review.py`, unchanged; `run_create` (legacy) calls the same stage functions |
+| Scope clarification, ask (retrieval + answer + citation check), edit, resume of a paused run | Existing functions, called as one graph node each |
+
+Stage context (project root, plan, session) is held in process memory during a run. After a restart the run is picked up through `threads.phase` and `/resume`, exactly as before. Only the consent question is checkpointed in Postgres. Stages are not yet re-entrant graph nodes, and `ask`, `edit` and `resume` are not decomposed.
+
 ## Workflow and provenance
 
 arXiv API and OpenAlex open-access works search provide candidates. A PDF link is not evidence that the paper was downloaded. Downloads are checked for a PDF header, extracted per page with pdftotext, optionally sent to hosted Unstructured for OCR, chunked with page/source IDs, embedded, and stored under the thread's collection. Every retrieval SQL query filters `thread_id`.
