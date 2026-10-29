@@ -97,8 +97,11 @@ class H(BaseHTTPRequestHandler):
         except Exception:
             body = {"_unparsed": True}
         with forward_lock:
-            paced, est = pace(body) if isinstance(body, dict) else (0.0, 0)
+            # Check the cap and breaker first: a blocked request must return at once, not after a pacing sleep.
             k = bump()
+            paced, est = (
+                pace(body) if k not in (None, "tripped") and isinstance(body, dict) else (0.0, 0)
+            )
             rec = {
                 "path": self.path,
                 "forward_index": k,
@@ -114,11 +117,16 @@ class H(BaseHTTPRequestHandler):
                     else "request cap reached"
                 )
                 open(LOG, "a").write(json.dumps(rec) + "\n")
-                self.send_response(429)
+                # 403, not 429: OpenCode retries 429 up to 5 times. This is a deliberate local stop with no
+                # provider call, so it must be terminal for the client.
+                self.send_response(403)
                 self.send_header("Content-Type", "application/json")
-                self.send_header("retry-after", "1")
                 self.end_headers()
-                self.wfile.write(b'{"error":"local stop"}')
+                self.wfile.write(
+                    json.dumps(
+                        {"error": "bounded review proxy stopped this request locally: " + rec["blocked"] + "; no provider call was made"}
+                    ).encode()
+                )
                 return
             t0 = time.time()
             try:

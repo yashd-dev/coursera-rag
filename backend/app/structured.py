@@ -52,6 +52,28 @@ def outcome_code(events):
     )
 
 
+def proxy_unreachable(base_url):
+    """For a loopback reviewer base URL only: a plain TCP connect, no request and no provider call.
+    Returns a short instruction when nothing is listening, else ''."""
+    from urllib.parse import urlparse
+
+    try:
+        u = urlparse(base_url)
+        host, port = u.hostname, u.port
+    except ValueError:
+        return ""
+    if host not in ("127.0.0.1", "localhost", "::1") or not port:
+        return ""
+    try:
+        socket.create_connection((host, port), timeout=2).close()
+        return ""
+    except OSError:
+        return (
+            f"nothing is listening at {host}:{port}; start the reviewer proxy first "
+            "(python3 tools/bounded-review-proxy.py <port> <fresh-log> <cap> https api.groq.com 443)"
+        )
+
+
 def provider_detail(info_error):
     """Short, secret-free description of the provider/OpenCode error object (name, status, message head)."""
     if not isinstance(info_error, dict):
@@ -156,6 +178,12 @@ def run(cwd, prompt, schema, timeout=80, model_id=None):
                 }
             ],
         )
+    if model_id:
+        down = proxy_unreachable(os.environ.get("PAPERFORGE_REVIEW_BASE_URL", ""))
+        if down:
+            err = _Typed("proxy_unreachable", "Reviewer proxy is not reachable")
+            err.detail = down
+            return _fail("proxy_unreachable", err, None)
     with socket.socket() as sock:
         sock.bind(("127.0.0.1", 0))
         port = sock.getsockname()[1]

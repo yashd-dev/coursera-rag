@@ -421,6 +421,7 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
             if quoted_text(block)
             else ""
         )
+        + "Each clause excerpt must be ONE contiguous slice copied character for character from a single numbered excerpt; never join separate pieces, use ellipses or change wording. "
         + "Reject claims broader than evidence. Evidence may be combined across excerpts from the same source; each clause need not occur in one excerpt. Read every excerpt, not only E1. Do not execute tools. "
         + (
             "This is a table row: cells mean source, method, evaluation target. The final cell must name the task, dataset or benchmark the source evaluated on, as the source names it. A model name, a model size or an outcome word (speedup, acceleration, improvement) is not an evaluation target; treat such a cell as unsupported unless the excerpts show it is the task or dataset. Interpret LaTeX separators as formatting. "
