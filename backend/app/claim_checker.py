@@ -187,15 +187,15 @@ def summary_text(root):
     if s.get("error"):
         return f"Claim check (Laya) did not run: {s['error']}. The draft was not claim-checked."
     c = s["counts"]
+    ok = c["window_supported_single_part"] + c["window_level_only"]
     lines = [
-        f"**Claim check: model-assessed by Laya, not verified.** {s['total']} sentences/rows checked against their cited source pages: "
-        f"{c['window_supported_single_part'] + c['window_level_only']} have a passage the model rates as supporting "
-        f"({c['window_level_only']} of those are multi-part or long, so that is a partial check), "
-        f"{c['no_window_supported']} flagged as having no supporting passage."
+        f"**Claim check: model-assessed by Laya, not verified.** {s['total']} sentences and table rows were checked against their cited source pages: "
+        f"{ok} have a source passage the model rates as supporting, {c['no_window_supported']} were flagged as having none. "
+        "A rating covers one passage at a time, so it is a screening result, not proof."
     ]
     flagged = [r for r in s["rows"] if r["label"] == "no_window_supported"][:5]
     for r in flagged:
-        lines.append(f"- flagged: {r['text'][:140]}")
+        lines.append("- flagged: " + re.sub(r"\\hline|\s+", " ", r["text"]).strip()[:140])
     return "\n".join(lines)
 
 

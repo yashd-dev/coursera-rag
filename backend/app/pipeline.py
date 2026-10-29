@@ -1048,7 +1048,7 @@ def create_prelude(job, tid, text, template):
             return None
         db.update_thread(tid, phase="ready", custom={"session": session})
         job.text(
-            ("Exports are ready (claims model-assessed, not verified).\n\n" if claim_checker_label(root) else "Reviewed exports are ready.\n\n")
+            ((claim_checker_label(root) + "\n\n") if claim_checker_label(root) else "Reviewed exports are ready.\n\n")
             + "\n".join(
                 f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in files
             )
