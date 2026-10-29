@@ -1,0 +1,900 @@
+=== PAGE 1 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+
+Publisher
+http://jssidoi.org/esc/home
+
+GREEN HUMAN RESOURCE MANAGEMENT- THE LATEST TREND OR STRATEGIC
+NECESSITY? *
+
+Edyta Bombiak
+Siedlce University of Natural Sciences and Humanities, Faculty of Economic and Legal Science,
+2 Konarskiego, 08-110 Siedlce, Poland
+E-mail: edyta.bombiak@uph.edu.pl
+
+Received 10 December 2018; accepted 10 April 2019; published 30 June 2019
+
+Abstract. Our dynamically developing market economy has, for some time now, been a witness to a growing interest in the concept of
+business management involving conscious activities oriented not only at financial profits and economic aspects but also at broadly
+understood social and ecological interests. Such an approach, termed sustainable development, is becoming an imperative in the
+contemporary world, hence the decision processes of entrepreneurs tend to be more and more often guided by the principles of
+environmental corporate responsibility. The author of the study reckons that the implementation of the above business model requires, most
+of all, the engagement of the human factor. Eco-oriented management is performed exclusively by employees with positive attitudes
+towards the environment, green competencies, and responsible for the environmental consequences of their actions. Therefore, human
+resource management oriented at supporting the implementation of the principles of ecological development and the development of
+environmentally-friendly attitudes of employees referred to as Green Human Resource Management plays an unprecedented role in
+environmental performance. Green Human Resource Management is a novel approach to the performance of the HR function within
+organizations – one where environmental contexts constitute the foundation of all initiatives. This involves the application of HR policies
+in order to promote the sustainable use of company resources, to support ecology and development of ecological sensitivity in workers.
+This is because ecological awareness of employees and managers is key to the operations of any company complying with the concept of
+sustainability. The purpose of the study is to present the relevance of Green Human Resource Management to the operations of
+contemporary companies and indicate practices which can be undertaken in the field to promote knowledge related to the subject matter
+and extend the scope of concept application as a tool for constructing sustainable companies. The theoretical part of the study, drafted on
+the basis of a world’s literature overview, identifies several environmental practices that can be employed in the field of human resource
+management at each stage of the personnel process, starting with work design, employee selection, work discipline shaping, to the
+development of “green” competencies and “green” working conditions. The empirical part of the research demonstrates the results of a
+questionnaire conducted at a random population of 300 Polish enterprises. The research approach used enabled the researcher to identify
+
+*
+
+The research was carried out under the research theme No. 500/18/S financed from by a science grant provided by the
+Ministry of Science and Higher Education of Poland.
+
+1647
+
+
+=== PAGE 2 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+these initiatives in the field of Green HRM that, in the opinion of the study managers, play the key role in the process of shaping enterprise
+sustainable development.
+Keywords: sustainability; environmental corporate social responsibility; green human resources management
+Reference to this paper should be made as follows: Bombiak, E. 2019. Green human resource management – the latest trend or strategic
+necessity? Entrepreneurship and Sustainability Issues 6(4): 1647-1662. http://doi.org/10.9770/jesi.2019.6.4(7)
+JEL Classifications: M12, M14, Q56, 015
+Additional disciplines: ecology and environment
+
+1. Introduction
+Progressive degradation of the natural environment due to human exploitation brought about the need to introduce
+the concept of sustainable development. The sustainable development paradigm not only offers a new quality of
+management (Skowroński 2006) but also requires that novel sources of competitive advantage are sought to meet
+corporate economic goals and to heed broadly understood social and environmental interests (Hart, Milstein 2003;
+Abidin, Pasquire 2007; Joonhyun, Jinsoo 2018; Jabłoński 2018). Irrespective of the fact this concept has been
+explored for more than a dozen years now, whether at the macroeconomic or microeconomic level, it was not
+until recently that the relations between sustainable development and human resources in organizations were
+noted. However, it is the human factor which stimulates practices oriented at the improvement of organizations'
+environmental effectiveness. Eco-oriented management is performed exclusively by humans expressing a positive
+attitude towards the environment, competent in ecology, and bearing a sense of responsibility for environmental
+implications of their actions (Bombiak, Marciniuk-Kluska 2018; Smaliukienė, Monn 2019). Needless to say,
+Green Human Resource Management (GHRM) plays a significant role in the development of environmentallyfriendly practices within organizations.
+Green Human Resource Management (GHRM) is an element of Sustainable Human Resource Management
+(Stankevičiūtė, Savanevičienė 2018; Beck-Krala, Klimkiewicz 2017) oriented at generating value for company
+stakeholders through a simultaneous consideration for efficiency, social and environmental aspects in HR
+processes. HR processes play a significant role not only in the practical application of sustainable development
+policies (Renwick et al. 2008; Ulrich, Brockbank, Johnson 2009) but also in the construction of a sustainable
+development culture (Liebowitz 2010; Harmon, Fairfield, Wirtenberg 2010). That is why, the method of human
+resource management is crucial to environmental goals’ attainment.
+Despite the gravity of the subject area, Green HRM is relatively unknown among managers, which indicates that
+it is in its early phase of development. Source literature provides for a relatively low number of studies on the
+practical implementation of the concept. The author intends to bridge the gap, at least to some extent.
+The objective of the study is to present the nature of the concept and assess the impact pro-environmental human
+resource practices may have on the sustainable development of organizations. In the course of research, attempts
+were made to verify the hypothesis assuming that GHRM practices have an impact on the sustainable
+development of organizations, and as such they may provide strategic support to concept implementation. The
+study was conducted based on a source literature inquiry and a diagnostic survey method involving a
+questionnaire survey.
+
+1648
+
+
+=== PAGE 3 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+
+2. Environmental Responsibility as a Factor for Corporate Competitiveness: theoretical aspects
+Competitiveness is a feature delineating the outstanding skills of a given enterprise to take up activities ensuring
+its stable and enduring development, and contributing to its market value (Walczak 2010). Within contemporary
+economies, it is viewed as synergy effects of numerous internal factors (such as human resources, time and cost of
+production, technology, price, distribution network), as well as external mechanisms and preconditions
+(e.g. consumer preferences) (Gorynia 2000; Krawczyk 2012). Nowadays, due to growing social awareness with
+respect to the importance of green competitiveness – perceived as an ability to compete and take advantage of
+environmental actions (Adamkiewicz-Drwiłło, Kruk, Skrzeszewska 2008).
+The meaning of environmentally-friendly activities is a consequence of an increase in sustainable development
+concept popularity, more and more often treated as a new business opportunity and a tool for gaining a
+competitive edge (Holliday 2001). According to its principals, to achieve success, organizations should focus not
+only on economic but also on social and environmental factors (Daily, Bishop, Steiner 2007). The enterprisesociety-environment symbiosis is crucial (Olejniczak 2013), hence entrepreneurs become increasingly guided by
+Environmental Corporate Social Responsibility (ECSR). Its essence is to increase the value of an enterprise
+through (Chodyński, Jabłoński, Jabłoński 2008):
+- the development of an effective business model based on environmental criteria;
+- the creation of environmental innovations related to enduring corporate development;
+- the distribution of tangible and intangible assets in the context of adopted environmental criteria;
+- environmental standard reporting.
+The ECSR approach signifies, above all, a concept whereby companies integrate environmental concerns in their
+business operations and in their interaction with their stakeholders on a voluntary basis.
+Studies indicate a positive impact of environmental practices on a reduction in operating costs and new
+opportunities for development, which translates into improved financial performance (Olkiewicz 2016; Beurden,
+Gőssling 2008; Matejun 2009; Lin et al. 2010) and competitive advantages (Wagner 2007). Environmental
+corporate responsibility may contribute to the creation of new business undertakings and improve interactions
+with stakeholders. Yet another effect of ECSR is environmental innovation, which not only brings about novel
+products and processes, delivering added value to both companies and customers, but also raises effectiveness of
+natural resource use in the economy and reduces the negative impact human activities have on the environment
+(Seroka-Stolka 2012; Ottman 2011; OECD 2011; Kemp, Pearson 2008). What is more, environmental corporate
+involvement facilitates winning local community acceptance and investor interest, thereby increasing access to
+funding. Needless to say, investors are keen on cooperating with companies which may take pride not only in
+their financial performance but also in operational transparency, honest development of corporate image and
+positive relations with third parties (Słupik 2014; Mishra, Suar 2010; Lai et al. 2010). Finally, the importance of
+other, non-financial effects, such as security increase, better working conditions, raised employee motivation to
+engage in environmentally-friendly activities are also highlighted.
+Given the foregoing, it can be stated that at present environmental corporate responsibility is not only beneficial
+but also, and above all, requisite. Nonetheless, the implementation of such a business model is mainly determined
+by the human factor. Sustainable company development based on green practices is only possible if the staff has
+relevant competencies relating to the implementation of its principles into practice, provided that such
+competencies are continuously developed and effectively applied. Therefore, the following thesis may be formed:
+the role of human resource management oriented at supporting the implementation of the principles of green
+development and shaping environmentally-friendly attitudes in employees, referred to as Green Human Resource
+Management, is irreplaceable.
+
+1649
+
+
+=== PAGE 4 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+
+3. The Essence of Green Human Resource Management: literature review
+Human resource management is defined as a total of actions aiming at a provision of a required number of
+employees, demonstrating suitable skills and competencies, and creating conditions stimulating effective behavior
+of the staff, at a specific time and place (Pocztowski 1993). The core basis of the concept is formed by a
+subjective approach to human resources seen as a component of company assets and a source of corporate
+competitiveness.
+Green Human Resource Management (GHRM) is an innovative approach to the performance of the HR function
+within an organization, in which the environmental context constitutes the basis of all undertaken initiatives
+(Pabian 2015). This means the application of HR policies to promote sustainable use of company resources and
+ecology (Mampra 2013; Zoogah 2011). GHRM is a key tool for the implementation of sustainable development
+(Urbaniak 2017; Gholam et al. 2016; Bangwal & Tiwari 2015; Renwick et al. 2013). A growing number of
+studies devoted to GHRM, as shown by the analysis of international databases (Figure 1), clearly reflects that
+many have become aware of that fact. However, we ought to bear in mind that the issue is relatively new,
+examined for less than twenty years, which indicates its early phase of development.
+
+Figure 1. The number of publications containing the term “Green Human Resource Management” in selected databases
+Source: own research
+
+Green initiative undertaken as part of GHRM are a part of wider corporate social responsibility programs (Mandip
+2012). Its primary objective is to develop ecological sensitivity in employees and to make them aware of how
+their own behaviors may affect the environment. This is about motivation and making one feel proud of
+participation in green initiatives. This way, Green HRM supports the creation of a green workforce, who
+understands, appreciates, and practices ecological initiatives (Ahmad 2015; Opatha, Arulrajah 2014). The results
+of research suggest that green programs have a significant positive relationship to environmental performance
+(AnuSingh, Shikha 2015). Green Human Resource Management has been becoming a key business strategy for
+the significant organizations where human resource departments play an active part in going green at the
+organizations (Kar, Praharaj 2017). It has extended the boundaries of conventional HRM practices towards more
+sustainable and environmental strategies (Peerzadah, Mufti, Nazir 2018). Authors engaged in GHRM issues draw
+attention to a number of environmental practices applicable to the field of human resource management at each
+stage of the HR process. A selection of them is presented in Table 1.
+
+1650
+
+
+=== PAGE 5 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+
+Table 1. Examples of green practices at each stage of the HR function
+Green practice example
+- inclusion of tasks related to environmental protection in job descriptions,
+- inclusion of green competencies as a part of a competency profile for each position,
+- creation of positions accountable for environmental corporate management.
+Employee selection
+- inclusion of environmental criteria in job announcements,
+(recruitment, selection,
+- notifying candidates of employer’s commitment to environment,
+adaptation)
+- exposure of environmental values in job vacancy advertising,
+- asking questions related to ecology during candidate selection,
+- giving preference to candidates with competencies and experience in environmental projects,
+- introducing new employees to environmental standards of organization
+Developing working
+- setting a set of transparent rules and regulation concerning green conduct principles,
+discipline
+- developing a disciplinary system to discipline employees breaching the principles of green conduct,
+- pursuing disciplinary actions with respect to employees breaching the rules (warning, suspension, etc.)
+Green development
+- analysis and identification of employee needs with respect to environmental training,
+- provision of environmental training to develop green competencies,
+- encouraging employees to develop green competencies
+Green performance
+- conduct of environmental audits,
+evaluation
+- inclusion of environmental criteria in performance appraisals,
+- establishment of goals and responsibilities in relation to ecological initiative implementation
+- provision of regular feedback to employees on their progress in attaining ecological goals or improvement of
+their environmental effectiveness
+Green employee
+- providing opportunities to engage in green projects,
+relations
+- encouraging employees to submit ecological initiatives,
+- allowing employees to feel free when it comes to the formulation and experimenting with environmental
+projects,
+- provision of green projects advisory services and support,
+- joint consultations regarding the solving of corporate environmental issues,
+- sharing knowledge about environmental initiatives or programs
+Green working
+- reducing paper use in offices,
+conditions
+- energy-efficient bulbs,
+- turning off computers, television sets, and lights when the work is done,
+- giving preference to reusable energy sources (e.g. solar panels),
+- recycling programs,
+- initiatives aimed at occupational stress and occupational diseases reduction
+Source: compiled on the basis of: (Bangwal & Tiwari 2015; Arulrajah et al. 2015; Renwick at al. 2013; Opatha 2013; Ahmad 2015;
+Mathapati 2013; Opatha, Arulrajah 2014).
+HRM function
+Green job design and
+analysis
+
+The analysis of environmental HR practices shown in Table 2 allows one to conclude that GHRM covers various
+initiatives which popularize environmental thinking amongst employees (Mishra, Sarkar, Kiranmai 2014) and
+encourage environmentally-friendly attitudes. It is underpinned in source literature that GHRM has long ago
+ceased to be a non-mandatory addition and instead became a necessity (Ackermann 2017; Müller–Camen,
+Zdravkovic 2012). Thus, it is vital to identify those GHRM practices, which support corporate sustainable
+development to the largest extent.
+4. Research methodology
+The objective of the study is to assess the impact pro-environmental human resource practices may have on the
+sustainable development of organizations. The study was conducted based on a source literature inquiry and a
+diagnostic survey method involving a questionnaire survey. In the course of analyses, the following research
+problems were addressed:
+- Are Polish managers familiar with the Green Human Resource Management concept?
+
+1651
+
+
+=== PAGE 6 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+- Which Green Human Resource Management practices are key to sustainable development of organizations in
+the Polish reality?
+- Which Green Human Resource Management practices are most often used in Polish organizations?
+In the course of research, attempts were made to verify the hypothesis assuming that GHRM practices have an
+impact on the sustainable development of organizations, and as such they may provide strategic support to
+concept implementation.
+The subject matter of the research were environment-friendly human resource practices implemented across
+Polish enterprises. The diagnosis was conducted with reference to 7 areas of human resource policy:
+- Green job design and analysis;
+- Green recruitment;
+- Shaping of green discipline at work;
+- Green development;
+- Green performance evaluation;
+- Green motivation;
+- Green HRM procedures.
+The research attempted to evaluate the impact individual practices have on the sustainable development of the
+enterprises studied. The assessment of the impact was conducted with the application of a five-level Likert scale,
+where 1 signified a very low impact and 5 a very high impact of a given practice. To evaluate the scope of GHRM
+concept implementation in the Polish reality, the popularity of individual environmental human resource practices
+was analyzed.
+The survey was conducted in 2018 on a random representative population of 300 medium and large enterprises
+with their seat in Poland. The study was conducted with the application of the CATI technique. The study sample
+was selected on a layer basis. First, 50 entities from each of the six Polish regions were drawn: Central, South,
+East, North-West, South-West and North. The survey targeted individuals in charge of human resource policy
+development in the enterprises studied. The characteristic features of the study population are shown in Table 2.
+Table 2. Details of enterprises covered by the research
+Criterion
+Number of Enterprises
+Percentage
+Employment number:
+50-249 employees
+125
+41.7%
+250-499 employees
+94
+31.3%
+500-749 employees
+33
+11.0%
+More than 500 employees
+48
+16.0%
+Time on the market:
+up to 3 year
+150
+50.0%
+3-5 years
+5-7 years
+7-9 years
+More than 9 years
+Type of ownership:
+limited liability company
+joint-stock company
+state-owned enterprise
+Scope of operations:
+international
+national
+regional
+local
+Main type of activity:
+services
+production
+
+14
+8
+2
+126
+
+4.7%
+2.7%
+0.6%
+42.0%
+
+179
+52
+69
+
+59.7%
+17.3%
+23.0%
+
+130
+82
+38
+50
+
+43.3%
+27.3%
+12.7%
+16.7%
+
+162
+119
+
+54.0%
+39.7%
+
+1652
+
+
+=== PAGE 7 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+trade
+
+19
+
+6.3%
+
+Source: own research
+
+The most frequent type of ownership of young organizations was limited liability company (59.7%). The
+geographical coverage of the enterprises was highly-diversified, with the most numerous operating globally
+(43.3%). The prevailing type of business activity of the study entities was the provision of services (54%). The
+enterprises which prevailed in the population studied were medium-sized, i.e. employing between 50 and 249
+employees (41.7%), operating on the market up to 3 years (50.0%). The analysis of research results in the group
+of young enterprises is presented in another paper (Bombiak, Marciniuk-Kluska 2018).
+5. The Effect of GHRM on Corporate Sustainable Development in the Light of Empirical Research
+The subject matter of the research were environmental practices implemented in the area of GHRM, further
+grouped into 7 areas of HR policy. The research attempted to evaluate the impact individual practices have on the
+sustainable development of the enterprises studied. The assessment of the impact was conducted with the
+application of a five-level Likert scale, where 1 signified a very low impact and 5 a very high impact of a given
+practice. The results of the analysis are presented in Tab. 3.
+Table 3. The impact of GHRM practices on the sustainable development of organizations (scale of 1 to 5)
+Area of
+Mean impact
+Mean
+GHRM
+assessment
+impact
+Activities
+of an activity assessment
+of an area
+Green job design 1. Inclusion of tasks related to environmental protection in job descriptions
+2.9
+and analysis
+2. Inclusion of green competencies (such as ecological knowledge) as a part
+of competency requirements for each position
+2.5
+2.7
+3. Creation of positions accountable for environmental corporate
+management
+2.8
+Green recruitment
+4. Communication of employer’s commitment to ecology during recruitment
+2.3
+5. Exposure of environmental values in job vacancy advertising
+2.2
+6. Verification of candidate’s ecological knowledge and skills during
+2.3
+recruitment process
+2.2
+7. Giving preference to candidates with competencies and experience in
+environmental projects
+2.2
+8. Introducing new employees to environmental standards of organization
+during adaptation
+2.5
+The shaping of 9. Establishment of a clear set of rules and provisions regarding employee
+green discipline at conduct in relation to environmental protection
+2.7
+work
+2.5
+10. Development of a disciplinary system to discipline employees breaching
+the principles of ecological conduct
+2.4
+11. Implementation of disciplinary actions (such as warning, penalty,
+suspension, dismissal) against employees breaching the provisions and rules
+of environmental protection
+2.4
+Green
+12. Analysis and identification of employee needs with regards to ecological
+development
+training
+2.4
+2.4
+13. Provisions of ecological training for employees and managers to develop
+ecological skills and knowledge
+2.4
+14. Incentives for workers to develop green competencies
+2.3
+Green performance 15. Inclusion of environmental criteria in performance appraisals
+2.2
+evaluation
+16. Establishment of goals and responsibilities in relation to ecological
+initiative implementation
+2.4
+2.4
+17. Conduct of environmental audits
+2.6
+18. Provision of regular feedback to employees on their progress in attaining
+ecological goals or improvement of their environmental effectiveness
+2.4
+Green motivation
+19. encouraging employees to submit ecological initiatives (e.g. ecological
+2.4
+
+1653
+
+
+=== PAGE 8 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+project competitions)
+20. Provision of advisory services and support to solve ecological problems
+21. Sharing knowledge about environmental initiatives or programs
+22. Development of a rewards system for completion of ecological projects
+(awards, subsidies to wages)
+23. Promoting environmentally-friendly attitudes when performing
+professional tasks (such as paper use reduction, waste sorting)
+Green
+HRM 24. Inclusion of environmental goals of HRM in company strategy
+procedures
+25. Measurement of effectiveness of environmental actions in HRM
+26. Provision for HRM environmental actions-related expenditure in the
+budget
+27. HRM environmental action progress monitoring
+28. Drafting reports on environmental actions in HRM
+Average impact of GHRM practices on the sustainable development of organizations
+
+2.3
+2.4
+
+2.6
+
+2.3
+3.5
+2.6
+2.4
+2.4
+
+2.4
+2.3
+2.3
+2.5
+
+Source: own research
+
+The analysis of data demonstrated in Table 3 allows one to confirm the indication that pro-environmental actions
+undertaken in the area of human resource management have an impact, with variations, on the sustainable
+development of the studied organizations. The impact assessment of individual activities ranged from 2.3 to 3.5.
+The activity with the greatest impact, in the opinion of the respondents, was activity no. 23, i.e. promoting
+environmentally-friendly attitudes when performing professional tasks (such as paper use reduction, waste
+sorting). The respondents assessed the impact of the activity at 3.5 on the 5-level scale. Other activities the
+respondents found crucial were:
+ inclusion of tasks related to environmental protection (duties and responsibilities) in job descriptions
+(activity no. 1), with an impact average of 2.9;
+ creation of positions responsible for environmental management aspects across organizations (activity no.
+3), with an impact average of 2.8;
+ establishment of a clear set of rules and provisions regarding employee conduct in relation to
+environmental protection (activity 9), with an impact average of 2.7;
+ consideration Inclusion of environmental goals of HRM in company strategy (activity 24), and
+conducting environmental audits (activity 17), with an impact average of 2.6.
+On the contrary, a very small impact on the sustainable development in organizations was associated by
+respondents with the following:
+ exposure of environmental values in job vacancy advertising (activity 5);
+ verification of candidate’s ecological knowledge and skills during recruitment process (activity 6);
+ giving preference to candidates with competencies and experience in environmental projects (activity 7);
+ inclusion of environmental criteria in performance appraisals (activity 15).
+The impact of the above activities was assessed at 2.2 on the 5-level scale used. Similar results were obtained by
+analyzing pro-ecological practices in the group of young enterprises (Bombiak, Marciniuk-Kluska 2018).
+The analysis of the impact of individual GHRM areas demonstrates that the respondents perceive them as having
+a moderate impact on the sustainable development of organizations - the mean average regarded as the arithmetic
+mean of the assessment of individual areas was 2.5 points on the 5-level scale applied. The importance of
+individual areas varied in the opinion of the respondents. The area with the strongest impact was the work
+analysis and design stage, with the average impact calculated as the arithmetic mean of the assessment of
+individual practices divided by their number in a given area, was 2.7 points. In addition, a relatively high impact
+was ascribed to the area of encouraging employees to take up environmentally-friendly actions (2.6 points). These
+areas were regarded as principal from the point of view of the input of the HR function in the sustainable
+development of organizations. The effectiveness of Green motivation was also confirmed by the studies
+
+1654
+
+
+=== PAGE 9 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+conducted in Denmark, which showed that green motivation programs increased employee participation in proenvironmental initiatives (Forman, Joergensen 2001). In addition, research carried our in 376 Pakistani
+companies demonstrated the key role of educational practices for the purpose of attainment of environmental
+management goals (Bhutto, Auranzeb 2016). Needless to say, Green development practices appear
+underestimated in Poland, as they were listed fourth in terms of their impact on the sustainable development of
+organizations.
+Relatively low ratings are also given to the importance of acquisition of job candidates with green competencies –
+the recruitment was ranked the lowest, with an impact average of merely 2.3 points. The insignificant impact of
+green acquisition of employees was also demonstrated by the studies conducted by Owino and Kwasira (Owino,
+Kwasira 2016) and Guerci et al. (Guerci et al. 2016). The latter of the studies referred to revealed that green
+recruitment was perceived as an activity having no impact on environmental performance of organizations.
+Against this background, the scope of implementation of individual GHRM practices becomes a crucial research
+issue.
+6. The Elements of GHRM in the Practice of the Study Enterprises
+To evaluate the scope of GHRM concept implementation in the Polish reality, the popularity of individual
+environmental human resource practices was analyzed. The study outcomes are illustrated in Chart 2. The most
+popular activity appeared to be promoting environmentally-friendly attitudes when performing professional tasks
+(such as paper use reduction, waste sorting). This practice was implemented relatively often - in as many as
+78.7% of the study entities. Nearly a half of the analyzed enterprises (45.3%) included tasks related to
+environmental protection in job descriptions. In more than 1/3 of the studied entities:
+ a clear set of rules and provisions regarding employee conduct in relation to environmental protection was
+established;
+ positions accountable for environmental corporate management were created;
+ ecological HRM goals were accounted for in company strategy;
+ new employees were introduced to environmental standards of organization during adaptation.
+Contrary to the above, the rarest implemented practices covered:
+ exposure of environmental values in job vacancy advertising, implemented in 11.7% of the studied
+entities;
+ giving preference to candidates with competencies and experience in environmental projects,
+implemented in merely 13.3% of the studied enterprises;
+inclusion of environmental criteria in performance appraisals, implemented in only 13.7% of the covered entities.
+Similar results were obtained by analyzing pro-ecological practices in the group of young enterprises. In
+this case, also the most popular activity turned out to be activity promoting environment-friendly attitudes when
+performing professional tasks (such as paper use reduction, waste sorting). The remainder of practices were
+carried out by less than half of the study enterprises (Bombiak, Marciniuk-Kluska 2018).
+
+1655
+
+
+=== PAGE 10 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+
+Note: the y-axis shows the numbers of activities included in Table 3
+
+Figure 2. The scope of implementation of GHRM practices in Polish enterprises (data shown in %)
+Source: own research
+
+The results presented in Figure 2 demonstrate that the GHRM concept is rather unpopular in Polish organizations.
+Polish managers appear to be lagging far behind American companies in terms of GHRM concept application, as
+the latter have been commonly using environmental goal-based bonuses for the management (Wehrmeyer 1997).
+Studies conducted in Poland showed that ecological practices are implemented mainly to improve company image
+or to gain financial benefits (Beck-Krala, Klimkiewicz 2017). The development of environmentally-friendly
+attitudes of the staff is largely seen as a secondary advantage. However, the implementation of GHRM is indeed
+vital, for the pro-ecological attitudes developed in companies may actually be transferred to private lives
+(Whitmarsh, O’Neill 2010; Muster, Schrader 2011; Urbaniak 2017).
+We can observe no systemic approach in the enterprises studies, the consequence of which is selecting a few,
+individual environmental practices in the GHRM area. The reason behind it could be, above all, limited
+knowledge in the field (Bombiak, Marciniuk-Kluska 2018). Such competency gap was confirmed by the analyses
+performed. Insight into Green HRM was confirmed by only one in four managers (26% of the respondents). In
+Poland, environmental corporate social responsibility (ECSR), a part of which is GHRM, remain a relatively
+unknown initiative in Poland. It is neither long-standing nor deep rooted in Polish enterprises. The main problem
+is the absence of perceiving environmental issues as elements of strategic management. Many entrepreneurs
+expect these to be handled by politicians and public officials. The main mechanism of environmental practices
+
+1656
+
+
+=== PAGE 11 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+implementation in the approach given becomes prescriptive legislation (Słupik 2014). GHRM practices, however,
+continue to be voluntary.
+One of the difficulties related to GHRM implementation may also be a different perception of green economy
+(Urbaniak 2017). Whereas the management is inclined to create a more idealistic picture of a green company, the
+staff demonstrate a more cynical approach. These discrepancies may indicate a lack of green organizational
+culture (Harris, Crane 2002). It is underpinned in source literature that from the point of view of environmental
+performance of organizations GHRM practice formalization is required (Jabbour 2011).
+7. Conclusions
+Environmental protection presents a considerable challenge for contemporary enterprises facing the need to find a
+balance between the economic expansion and environment-friendly actions. As demonstrated by the research,
+GHRM offers vital support to the green strategy implementation. GHRM is a new area of research within HRM
+oriented at the development of environmentally-friendly organizational culture and employee attitudes. Both the
+review of world’s literature and the empirical studies confirm the thesis that pro-environmental actions
+undertaken in the area of GHRM have an impact on sustainable development.
+In response to the question posed in the title to the study, it may be said that GHRM is not only a new trend but
+also a strategic necessity in the context ofan increase in both social awareness concerning the environment and
+environmental protection requirements.The implementation of GHRM contributes to the development of the
+unique resource - the “green” human capital - which features an above-average environmental sensitivity and
+efficiency. Therefore, we may conclude that GHRM is the basis for the development of a continued
+
+competitive advantage for organizations.
+Nevertheless, the concept appears undervalued and with a narrow scope of implementation in Polish companies.
+This proves that the HR function in Poland is still not considered a strategic partner, actively participating in the
+processes generating an added value for a variety of stakeholders. A development of GHRM qualifications is an
+essential condition to ensure an increased role of HRM in the shaping of sustainable organizations, for it is the
+absence of managers’ knowledge in the field which is the main obstacle to the practical implementation of the
+concept. To overcome it, the nature of GHRM needs to be promoted in business circles, extensive research must
+be carried out on the impact of environmental human resource practices on sustainable development, and good
+practices in the area have to be displayed in social reports. A considerable challenge is further presented by the
+measurement of the impact of GHRM activities and their effect on financial performance of enterprises, as said
+activities should not exclude the principles of economic calculation. GHRM may yield an added value only when
+the pro-environmental goals of HRM are integrated into the general business policy of an enterprise.
+This study contributes to source literature by diagnosing a gap associated with human resource policy use as a
+tool for supporting corporate sustainable development under Polish conditions, which constitutes the foundation
+for taking up corrective actions by managers. In the opinion of the author, the results of the cited studies may
+stimulate interest in the implementation of the GHRM concept in Polish organizations and the widening of the
+scope of its use as a tool for sustainable enterprise development.
+
+1657
+
+
+=== PAGE 12 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+References:
+Abidin, N.Z.; Pasquire, Ch.L. 2007. Revolutionize value management: A mode towards sustainability, International Journal of Project
+Management 25: 275-282. https://doi.org/10.1016/j.ijproman.2006.10.005
+Ackermann, K.-F. 2017. Exploring Green Human Resource Management: Knowledge–based State of the Art, Human Resource
+Management 6(119): 21-10.
+Adamkiewicz-Drwiłło, H.G., Kruk, H., Skrzeszewska, K. 2008. Konkurencyjność przedsiębiorstw w świetle wymagań rozwoju trwałego i
+zrównoważonego [Enterprise competitiveness in the light of the requirements of sustainable and lasting development], Prace Naukowe
+Uniwersytetu Ekonomicznego we Wrocławiu 20: 13-20.
+Ahmad, S. 2015. Green Human Resource Management: Policies and Practices, Cogent Business & Management 2(1): 1-13.
+https://doi.org/10.1080/23311975.2015.1030817
+AnuSingh, L.; Shikha, G. 2015. Impact of Green Human Resource Factors on Environmental Performance in Manufacturing Companies:
+An Empirical Evidence, Interational Journal of Engineering and Management Sciences 6 (1): 23-30. Retrieve from
+http://scienceandnature.org/IJEMS-Vol6(1)-Jan2015/IJEMS%20Vol6(1)-6.pdf
+Arulrajah, A.A.; Opatha H. H. D. N. P.; Nawaratne N. N. J. 2015. Green Human Resource Management Practices: A Review, Sri Lankan
+Journal of Human Resource Management 5: 1–16. http://doi.org/10.4038/sljhrm.v5i1.5624
+Bangwal, D.; Tiwari P. 2015. Green HRM – A way to greening the environment, IOSR Journal of Business and Management 17(12): 4553. https://doi.org/10.9790/487X-171214553
+Beck-Krala, E.; Klimkiewicz, K. 2017. Reward Programs Supporting Environmental Organizational Policy, Human Resource Management
+6(119): 41-56.
+Beurden, P.; Gőssling, T. 2008. The worth of values – A literature review on the relation between corporate social and financial
+performance, Journal of Business Ethics 82(2): 407-424. https://doi.org/10.1007/s10551-008-9894-x
+Bhutto, S. A.; Auranzeb. 2016. Effects of Green Human Resources Management on Firm Performance: An Empirical Study on Pakistani
+Firms,
+European
+Journal
+of
+Business
+and
+Management
+8(16):
+119-125.
+Retrieve
+from
+https://www.iiste.org/Journals/index.php/EJBM/article/viewFile/30983/31815
+Bombiak, E.; Marciniuk- Kluska, A. 2018. Green Human Resource Management as a Tool for the Sustainable Development of Enterprises:
+Polish Young Company Experience, Sustainability 10(6): 1739. https://doi.org/10.3390/su10061739
+Chodyński, A.; Jabłoński, A.; Jabłoński, M. 2008. Environmental Corporate Social Responsibility (ECSR) – koncepcja strategiczna
+budowy wartości firmy oparta na kryteriach ekologicznych [Environmental Corporate Social Responsibility (ECSR) – a strategic concept
+based on environmental criteria], Przegląd Organizacji 3: 30-32.
+Daily, B. F.; Bishop, J.; Steiner, R. 2011. The mediating role of EMS teamwork as it pertains to HR factors and perceived environmental
+performance, Journal of Applied Business Research 23(1): 95–109. https://doi.org/10.19030/jabr.v23i1.1411
+Forman M.; & Joergensen, M.S. 2001. The Social Shaping of the Participation of Employees in Environmental Work within Enterprises –
+Experiences form the Danish Context, Technology Analysis & Strategic Management 13(1): 71-90. DOI: 10.1080/09537320120040455
+Gholami, G.; Rezaei G.; Saman M. Z. M. Sharif S.; Zakuan N. 2016. State–of–the–Art Green HRM System: Sustainability in the Sports
+Center in Malaysia Using a Multi–Methods Approach and Opportunities for Future Research, Journal of Cleaner Production 124: 142-163.
+https://doi.org/10.1016/j.jclepro.2016.02.105
+Gorynia, M. 2000. Luka konkurencyjna w przedsiębiorstwach a przystąpienie Polski do Unii Europejskiej [Competitiveness gap in
+enterprises vs Polish accession to the European Union], Gospodarka Narodowa 10: 48–67. Retrieve from
+http://www.mariangorynia.pl/prasa/gn/Luka%20konkurencyjna%20w%20przedsi%C4%99biorstwach%20a%20przyst%C4%85pienie%20
+Polski%20do%20Unii%20Europejskiej,%20GN_2000_nr_10.pdf
+
+1658
+
+
+=== PAGE 13 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+Guerci, M.; Longoni, A.; Luzzini, D. 2016. Translating Stakeholder Pressures into Environmental Performance: The Mediating Role of
+Green
+HRM
+Practices,
+The
+International
+Journal
+of
+Human
+Resource
+Management
+27(2):
+262–289.
+https://doi.org/10.1080/09585192.2015.1065431
+Harmon, J.; Fairfield, K. D.; Wirtenberg, J. 2010. Missing an opportunity: HR leadership and sustainability, People & Strategy 33(1), 16–
+21. Retrieve from http://transitioningtogreen.com/wordpress/wp-content/uploads/2015/02/article-missing-opportunity.pdf
+Hart S. L.; Milstein M. B. 2003. Creating sustainable value, Academy of Management Executive 17(2): 56–67. Retrieve from
+https://www.kuleuven.be/emeritiforum/em/Forumgesprekken/F1617/230217/creating-sustainable-value-stuart-l-hart-and-mark.pdf
+Harris, L. C.; Crane A. 2002. The Greening of Organizational Culture: Management Views on the Depth, Degree and Diffusion of Change,
+Journal of Organizational Change Management 15(3): 214-234. https://doi.org/10.1108/09534810210429273
+Holliday, C. 2001. Sustainable growth, the DuPont way, Harvard Business Review 79 (8): 129-132. Retrived from
+https://hbr.org/2001/09/sustainable-growth-the-dupont-way
+Jabbour, Ch. J. 2011. How Green Are HRM Practices, Organizational Culture, Learning and Teamwork? A Brazilian Study, Industrial and
+Commercial Training 43(2): 98-105. https://doi.org/10.1108/00197851111108926
+Jabłoński, M. 2018. Value Migration to the Sustainable Business Models of Digital Economy Companies on the Capital Market,
+Sustainability 10, 3113; https://doi.org/10.3390/su10093113
+Joonhyun, K. J.; Jinsoo, K. 2018.
+https://doi.org/10.3390/su10051455
+
+Corporate Sustainability Management and Its Market Benefits, Sustainability 10, 1455;
+
+Kar, A.K.; Praharaj, L. 2017. Green HRM: An Innovative Practice for Organisational Sustainability, Indo-Iranian Journal of Scientific
+Research 1(1):46-56. Retrived from http://iijsr.com/data/uploads/1006.pdf
+Kemp R.; Pearson, A. 2008. Measuring Eco-Innovation. Final report of MEI project for DG Research of the European Commission,
+Brussels. Retrived from https://www.oecd.org/env/consumption-innovation/43960830.pdf
+Krawczyk, M. 2012. Konkurencyjność przedsiębiorstw w świetle uwarunkowań ekologicznych [Company competitiveness in the light of
+environmental preconditions], Studia i Prace WNEiZ 25: 343- 356. Retrived from https://wneiz.pl/nauka_wneiz/sip/sip25-2012/SiP-25343.pdf
+Liebowitz, J. 2010. The role of HR in achieving a sustainability culture, Journal of Sustainable Development 3(4): 50–57.
+https://doi.org/10.5539/jsd.v3n4p50
+Lin, Ch-P., Lyau, N-M., Tsai, Y-H., Chen, W-Y., Chiu, Ch-K. 2010. Modeling corporate citizenship and its relationship with
+organizational citizenship behaviors. Journal of Business Ethics, 95(3): 357–372. https://doi.org/10.1007/s10551-010-0364-x
+Mandip, G. 2012. Green HRM: People Management Commitment to Environmental Sustainability, Research Journal of Recent Sciences,
+1: 244-252. Retrived from http://www.isca.in/rjrs/archive/v1/iISC-2011/38.ISCA-ISC-2011-18CLM-Com-03.pdf
+Mampra, M. 2013. Green HRM: Does it help to build a competitive service sector? A study. Proceedings of tenth AIMS International
+Conference on Management 2013, January 6–9: 1273–1281. Retrived from https://pl.scribd.com/document/126544005/green-HRMcompetitive-service-sector-pdf
+Matejun, M. 2009. Zarządzanie innowacjami ekologicznymi we współczesnym przedsiębiorstwie [Ecological innovation management in
+contemporary enterprises], in Grądzki, R.; Matejun, M. (Eds.), Rozwój zrównoważony – zarządzanie innowacjami ekologicznymi
+[Sustainable development – managing ecological innovations]. Łódź: Wydawnictwo Media Press, 19-31.
+Mathapati, C. M. 2013. Green HRM: A strategic facet, Tactful Management Research Journal 2(2): 1–6.
+Mishra, R. K.; Sarkar, S.; Kiranmai J. 2014. Green HRM: Innovative Approach in Indian Public Enterprises, World Review of Science,
+Technology and Sustainable Development 11(1): 26-42. https://doi.org/10.1504/WRSTSD.2014.062374
+
+1659
+
+
+=== PAGE 14 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+Mishra, S.; Suar, D. 2010. Does corporate social responsibility influence firm performance of Indian companies? Journal of Business
+Ethics 95(4): 571–601. https://doi.org/10.1007/s10551-010-0441-1
+Müller–Camen, M.; Zdravkovic, D. 2012. Green HRM: Schon Realität oder noch Zukunftsvision? [Green HRM: Already reality or still
+vision for the future?]. Retrieve from http://www.hrm.de/fachartikel/green-hrm:-schon-realit%C3%A4t-oder-noch-zukunftsvision%3F
+Muster, V.; Schrader, U. 2011. Green work-life balance: A new perspective for Green HRM, Zeitschrift Fur Personalforschung 25(2):
+140–156. Retrieve from https://www.econstor.eu/bitstream/10419/71050/1/73759781X.pdf
+OECD. 2011. Towards Green Growth. Paris OECD. Retrieve from https://www.oecd.org/greengrowth/48012345.pdf
+Olejniczak, K. 2013. Wpływ wybranych czynników ekologicznego aspektu CSR na przewagę konkurencyjną przedsiębiorstw działających
+na terenie województwa śląskiego [The impact of selected environmental factors of the CSR aspect on competitive advantage of companies
+operating across the Silesian Province], Rocznik Ochrony Środowiska 15(3): 2840—2849. Retrived from https://docplayer.pl/5382023Wplyw-wybranych-czynnikow-ekologicznego-aspektu-csr-na-przewage-konkurencyjna-przedsiebiorstw-dzialajacych-na-tereniewojewodztwa-slaskiego.html
+Olkiewicz, M. 2016. Ekoinnowacje jako efekt foresightu strategicznego. [Eco-innovations as an effect of a strategic foresight] Roczniki
+Naukowe
+Stowarzyszenia
+Ekonomistów
+Rolnictwa
+i
+Agrobiznesu,
+18(6):
+152-156.
+Retrived
+from
+http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.agro-2c463d54-47dc-4a0e-b74d-dd8f3c96f72e
+Opatha, H. H. D. N. P.; Arulrajah, A. 2014. Green Human Resource Management: A Simplified General Reflections, International
+Business Research 7 (8): 101-112. https://doi.org/10.5539/ibr.v7n8p101
+Opatha, H.H.D.N.P. 2013. Green Human Resource Management: A Simplified Introduction, Proceedings of the HR Dialogue 1(1): 11-21.
+Retrived from
+http://dr.lib.sjp.ac.lk/bitstream/handle/123456789/3734/Green%20Human%20Resource%20Management%20A%20Simplified.pdf;jsession
+id=ED070AAD2A41DA66829D94D09D6142BA?sequence=1
+Ottman, J. 2011. The New Rules of Green Marketing: Strategies, Tools, and Inspiration for Sustainable Branding. Brussels: Greenleaf
+Publishing.
+Owino W.A., Kwasira. J. 2016. Influence of Selected Green Human Resource Management Practices on Environmental Sustainability at
+Menengai Oil Refinery Limited Nakuru, Kenya, Journal of Human Resource Management 4(3): 19-27.
+https://doi.org/10.11648/j.jhrm.20160403.11
+Peerzadah, S.A; Mufti, S.; Nazir, N.A. 2018. Green Human Resource Management: A Review, International Journal of Enhanced
+Research in Management & Computer Applications 7(3): 790-795.
+Pabian, A. 2015. Zrównoważone zarządzanie zasobami ludzkimi [Sustainable human resource management], Zeszyty Naukowe Politechniki
+Częstochowskiej Zarządzanie 17(7): 7-16. Retrived from http://bazekon.icm.edu.pl/bazekon/element/bwmeta1.element.ekon-element000171396555.
+Pocztowski, A. 1993. Rozwój potencjału pracy jako problem zarządzania zasobami ludzkimi w przedsiębiorstwie [Development of
+working potential as problem in human resource management in a company. Kraków: Akademia Ekonomiczna w Krakowie.
+Renwick, D.; Redman, T.; Maguire, S. 2013. Green human resource management: a review and research agenda, Intern. J. Manag. Rev. 15
+(1): 1–14.
+Seroka-Stolka, O. 2012. Ekologiczna i społeczna odpowiedzialność biznesu w opinii przedsiębiorstw regionu częstochowskiego
+[Environmental and social corporate responsibility in the opinion of entrepreneurs of the Częstochowa region], Journal of Ecology and
+Health 16(3): 119-125. Retrived from http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.baztech-article-BAR8-0020-0046.
+Skowroński, A. 2006. Zrównoważony rozwój perspektywą dalszego postępu cywilizacji [Sustainable development as a perspective of
+further civilization progress], Problemy ekorozwoju 1(2): 47-57. Retrived from http://ekorozwoj.pol.lublin.pl/no2/e.pdf.
+Słupik, S. 2014. Ekologiczna społeczna odpowiedzialnośc biznesu w strategiach rozwoju firm [Environmental corporate social
+responsibility in company development strategies], Gospodarka w praktyce i teorii 3(36): 74-87. Retrived from
+http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.ekon-element-000171381247
+
+1660
+
+
+=== PAGE 15 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+Smaliukienė, R.; Monni, S. 2019. A step-by-step approach to social marketing in energy transition, Insights into Regional
+Development 1(1): 19-32. https://doi.org/10.9770/ird.2019.1.1(2)
+Stankevičiūtė, Ž.; Savanevičienė, A. 2018. Designing Sustainable HRM: The Core Characteristics of Emerging Field, Sustainability 10,
+4798. https://doi.org/10.3390/su10124798
+Ulrich D.; Brockbank, W. 2005. The HR Value Proposition. Boston Massachusetts: Harvard Business School Press.
+Ulrich, D.; Brockbank, W.; Johnson, D. 2009. The role of strategy architect in the strategic HR organization, People and Strategy 32(1):
+24–31. Retrived from https://arwana007.files.wordpress.com/2012/02/the-role-of-strategy-architect-in-the-strategic-hr-organization.pdf
+Urbaniak, B. 2017. Colorful Human Resource Management: What Are We Talking About? Human Resource Management 6(119): 9-19.
+Wagner, M. 2009. Innovation and competitive advantages from the integration of strategic aspects with social and environmental
+management in European firms, Business Strategy and the Environment 18(5): 291–306. https://doi.org/10.1002/bse.585.
+Walczak, A. 2010. Analiza czynników wpływających na konkurencyjność przedsiębiorstw [The analysis of factors affecting company
+competitiveness], E-mentor 5(37). Retrieved from http://www.e-mentor.edu.pl/artykul/index/numer/37/id/784
+Wehrmeyer, W. 1997. Going Green Is Good for Business ... and for HR Staff, Management Development Review 10 (1): 30-31.
+https://doi.org/10.1108/EUM0000000004350
+Whitmarsh, L.; O’Neill, S. 2010. Green identity, green living? The role of pro-environmental self-identity in determining consistency
+across
+diverse
+pro-environmental
+behaviors,
+Journal
+of
+Environmental
+Psychology
+30(3):
+305–314.
+https://doi.org/10.1016/j.jenvp.2010.01.003
+Zoogah, D. 2011. The dynamics of Green HRM behaviors: A cognitive social information processing approach, Zeitschrift fur
+Personalforschung 25(2): 117–139. https://doi.org/10.1177/239700221102500204
+
+Aknowledgements
+The research was carried out under the research theme No. 500/18/S financed from by a science grant provided by the
+Ministry of Science and Higher Education of Poland.
+
+1661
+
+
+=== PAGE 16 ===
+ENTREPRENEURSHIP AND SUSTAINABILITY ISSUES
+ISSN 2345-0282 (online) http://jssidoi.org/jesi/
+2019 Volume 6 Number 4 (June)
+http://doi.org/10.9770/jesi.2019.6.4(7)
+Edyta BOMBIAK (PhD) is the Doctor of Sciences (Economics) at Siedlce University of Natural Sciences and Humanities, Vice-Dean for
+Research of Faculty of Economic and Legal Sciences. Research interests: human resource management, human resources risk management,
+intellectual capital in the organization, sustainability.
+ORCID ID: orcid.org/0000-0002-0273-6228
+
+Register for an ORCID ID:
+https://orcid.org/register
+
+Copyright © 2019 by author(s) and VsI Entrepreneurship and Sustainability Center
+This work is licensed under the Creative Commons Attribution International License (CC BY).
+http://creativecommons.org/licenses/by/4.0/
+
+1662
+

@@ -1,0 +1,621 @@
+=== PAGE 1 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+Latest Trends and New Tools Being Used in Strategic
+Management
+F. DAVID1, B. BITTNER2, T. KOVÁCS3, H. MADAI4, A. NAGY5, A. NÁBRÁDI6
+1University of Debrecen, Faculty of Economics and Business, The Károly Ihrig Doctoral School,
+
+forestdavid5@gmail.com
+2University of Debrecen, Faculty of Economics and Business, Department of Business Management,
+bittner.beata@econ.unideb.hu
+3University of Debrecen, Faculty of Economics and Business, The Károly Ihrig Doctoral School,
+kovacs.tunde.zita@econ.unideb.hu
+4University of Debrecen, Faculty of Economics and Business, Department of Business Management,
+madai.hajnalka@econ.unideb.hu
+5University of Debrecen, Faculty of Economics and Business, Department of Business Management,
+nagy.adrian@econ.unideb.hu
+6University of Debrecen, Faculty of Economics and Business, Department of Business Management,
+nabradi.andras@econ.unideb.hu
+Abstract. In today’s rapidly changing world, there is an increased need for excellent strategic planning. A firm’s
+survival may indeed hinge on the firm’s planning process being exemplary. Various aspects of the strategic planning
+process are under review today as organizations wrestle to compete more effectively in an ever-changing world. This
+paper reveals and describes five new trends or tools being utilized today by firms to more effectively engage in
+strategic planning. Specifically, the new trends and tools to be discussed in this paper are as follows: increased need
+to follow a strategic planning model; increased need to develop quality vision and mission statements; a new improved
+method for incorporating SWOT analysis into practice. Utilizing two matrices one internal and one external to provide
+a less biased way to access the current strategy fit with conditions facing the firm. Explain the use of a decision matrix
+commonly called the QSPM (Quantitative Strategic Planning Matrix) for assessing the relative attractiveness of
+various strategies being considered for implementation. The purpose of this paper is to familiarize readers with basic
+new tools and techniques being used by organizations to effectively develop an improved strategic plan for the firm.
+Keywords: strategic management, new strategy trends, new strategy techniques.
+
+Introduction
+In today’s world, firms are forced to be clearer than ever in their strategic plans and strategic decisions
+regarding markets to avoid, rivals to acquire, products to pursue, markets to enter, businesses to divest,
+and many other strategic aspects. The survival or failure of a firm can hinge on these decisions being
+made correctly and appropriately. Striving for a sustainable competitive advantage requires that
+effective strategies being implemented efficiently through operational, tactical and strategic activities.
+
+73
+
+
+=== PAGE 2 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+Operational and tactical activities include hiring, motivating, cost control, benchmarking, outsourcing,
+and facilities layout, among others.
+Strategy-implementation activities must be continually be monitored by strategists. However, effective
+strategy formulation more so than cost cutting or precise tactics is more critical to achieve sustained
+competitive advantage. This is because the former can be easily copied whereas formulated strategies
+are much more difficult to copy. Accordingly, this paper aims to enhance the process that firms utilize
+to formulate and ultimately decide upon particular strategies to implement.
+To help achieve a sustainable competitive advantage, firms must accept trade-offs and strive for
+uniqueness on the products and services they offer. Apple for example has long prided itself on having
+its own operating system for phones, ipads, and computers. This requires concessions from the firm and
+saying no to many aspects that otherwise may seem reasonable. Making decisions regarding trade offs
+necessitates having a detailed strategy process and having a clear vision and mission statement as the
+beginning stage of strategic management. A clear vision and mission is the first step to establish
+uniqueness.
+Having a clear strategic plan in business is akin to building a sporting team. Deciding where to compete,
+how to compete, and what products to offer are similar to deciding what style of offense or defence a
+team will play. Profit margins can be quite slim among firms and in some industries may be as low as
+five percent or less leaving little error in the development of a strategic plan. Simply no resources can
+be wasted. For example, hiring the wrong person is a mistake but can be corrected, but opening a new
+plant in the wrong location could wipe out a firm’s entire profit margin!
+Difficult and uncomfortable managerial choices go into the development of a quality strategic plan and
+characterize numerous good alternatives. The ability to commit to specific markets, policies,
+procedures, and operations in lieu of other “less desirable” courses of action is the hallmark of a good
+strategist and strategic plan. Simply doing a little bit of everything to be safe or chasing the latest fads is
+not effective from a strategic perspective. This paper aims to provide direction for developing and
+maintaining a sustainable competitive advantage. Once a firm gains a significant advantage, competitors
+will follow and emulate the firm’s actions. The following guidelines are recommended for better
+attainment of maintaining a competitive advantage [1]
+
+
+Continually adapting to changes in external trends and events and internal capabilities,
+competencies, and resources.
+
+
+
+Effectively formulating, implementing, and evaluating strategies that capitalize on those factors.
+
+
+
+Offering products that are unique and not easily duplicated by rivals.
+
+
+
+Accepting trade-offs by deciding what not to do; no firm can be everything to everybody.
+
+This paper aims to reveal and describe five recent trends or tools that are enabling firms to gain
+competitive advantage over rival firms through engagement in more effective strategic planning.
+Specifically, the five new activities or practices being utilized are:
+
+
+Increased need to follow a strategic planning model.
+
+
+
+Increased need to develop quality vision and mission statements.
+
+
+
+A new improved method for incorporating SWOT analysis into practice.
+74
+
+
+=== PAGE 3 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+
+
+Utilizing two matrices one internal and one external to provide a less biased way to access the
+current strategy fit with conditions of the firm.
+
+
+
+Explain the use of a decision matrix commonly called the QSPM (Quantitative Strategic Planning
+Matrix) for assessing the relative attractiveness of various strategies being considered for
+implementation.
+
+1. Trend 1: Increased need to follow a strategic planning model
+The first trend of this paper, the increased need to follow a strategic planning model, encapsulates the
+other 4 trends and reminds strategists that there is a proper order for conducting strategy. The model
+can be viewed as a road map on where to go and how to get there. However, the model, much like a road
+map, does not do any of the driving, thinking, and planning; it is only a map, but vital to follow especially
+for managers new to the concept of strategic planning. The overall strategy process and model can be
+viewed to consist of seven steps as follows: 1) Develop a clear vision and mission statement with the
+recommended components and characteristics, 2) Perform external and internal assessments, including
+the use of many tools such as the External Factor Evaluation (EFE) Matrix, Internal Factor Evaluation
+(IFE) Matrix, Value Chain Analysis, and Five Forces Analysis. 3) Establish objectives as clearly as
+possible; objectives should be short and long term but all must be related to the vision and mission
+statement, 4) Generate alternative strategies using various tools such as SWOT analysis, Boston
+Consulting Group (BCG) portfolio analysis, and Internal-External (IE) portfolio analysis; one of the key
+aspects of this Step 4 is ensuring all factors considered are written from an Actionable, Quantitative,
+Comparative, and Divisional aspect, also known as AQCD. 5) Decide upon a basket of strategies to
+implement using such tools as the Quantitative Strategic Planning Matrix (QSPM) to select among
+strategies in a less biased way. 6) Implement strategies, inclusive of designing an effective
+organizational structure, utilizing perceptual mapping, and performing EPS/EBIT analysis and
+corporate evaluation. 7) Evaluate strategies, which includes usage of such tools as developing balanced
+scorecards, projected financial statements, and ratio analysis.
+
+2. Trend 2: Increased need to develop quality vision and mission
+statements
+Vision and mission statements are the foundation for why a business exists and why the firm is serving
+the customers it serves. These statements are much more than simply words listed on a website or
+framed and placed on a wall. Customers, employees, salespersons and other stakeholders should know
+and have a passion behind the company and know what the reason for being is for the firm. New
+characteristics and components are revealed in this paper that should be included in vision and mission
+statements. Like mentioned previously, establishing a clear vison and a clear mission is the first step to
+gain and sustain a competitive advantage.
+A problem that firms sometimes face is that they are more focused on profit, the trends of the day, and
+other noise in the business environment than focusing on vision and mission. There are simply other
+motivators that seem at the time to be more important than having a clearly constructed, effective vision
+or mission statement. All businesses must return a profit to survive, but this is best done through having
+75
+
+
+=== PAGE 4 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+well thought out vision and mission statements. In addition, many stakeholders including employees
+may negatively perceive firms that only focus on profit. Therefore, aside from being more organized,
+many employees may actually be more productive with a firm that is viewed as working toward more
+than simply profit as evidenced in the characteristics and components of a well-written mission
+statement.
+
+2.1. Vision Statements
+It is vitally important for executives and top-level managers in any organization to come to a consensus
+on a clear vision that the organization strives to achieve out five or more years. A vision statement
+should answer the basic question, “What do we want to become?” The foundation for developing a
+comprehensive mission statement is predicated upon having a clear vision statement. Although firms
+need both a vision and mission statement, having a quality vision statement must come first; a firm must
+know what they wish to become before they can determine what business they are going to compete.
+Vision statements are recommended to be a single sentence in length. No matter the length, a vision
+statement should make reference to at least the industry the firm operates within. For example, a vision
+that says, “to become the best retailing firm in the United States,” is too broad because that firm’s
+business could range from selling apples (A) to zebras (Z). Although typically a single sentence and
+identifying the product or service a firm offers, vision statements should be written from a customer
+perspective as firms want to align their actions with the demands and desires of their customers. An
+important aspect of a vision statement is that it helps to facilitate change within an organization. The
+statement needs to be challenging yet obtainable.
+Firms today are developing vision statements that include five characteristics. These characteristic or
+attributes help in construction of writing quality vision statements. We propose a 5 out of 5 test where
+the following five characteristics should be included in all quality vision statements.
+
+
+Clear: reveals type of industry and what firm strives to become
+
+
+
+Futuristic: reveals what the firm strives to become or accomplish within 5 years
+
+
+
+Concise: one sentence in length
+
+
+
+Unique: reveals the firm’s competitive advantage
+
+
+
+Inspiring: motivates to readers to support the firm
+
+There is no single best vision statement for a particular company, but the 5 out of 5 test can be used to
+both develop and evaluate vision statements. Three hypothetical, exemplary vision statements that
+meet the 5 out of 5 test are provided below:
+• Dr Pepper Snapple: to be the best beverage business globally; our brands are synonymous with
+refreshment, fun, and flavour today and tomorrow.
+• IBM: to be the world’s most successful information technology company focused on helping
+customers apply technology to solve their problems now and in the future.
+
+76
+
+
+=== PAGE 5 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+• Hilton Worldwide: to fill the Earth with the light and warmth of hospitality by delivering exceptional
+experiences—every hotel and guest for all time
+Source: [1]
+
+2.2. Mission Statements
+A mission statement is a statement of purpose that distinguishes one business from other similar firms
+and that identifies the scope of a firm’s operations in product and market terms. An effective mission
+addresses the question: “What is our business?” that all strategist face. A well-constructed mission
+statement outlines the values and priorities of an firm or organization. Mission development compels
+strategists to consider the nature and scope of current operations and to analyse the relative
+attractiveness of future markets and business opportunities. A mission statement provides a roadmap
+for the future direction of an organization and serves as an ongoing reminder to its stakeholder the
+reasons why the organization exists.
+Missions may be referred to in various ways that include a creed statement, a statement of purpose, a
+statement of philosophy, a statement of beliefs, a statement of business principles, or a statement
+“defining our business.” A mission statement reveals what an organization wants to be and who it serves.
+All businesses and organizations have a reason for existing and serving the customers they do, even if
+managers have not formally articulated this reason for being. A sizable portion of managers
+unfortunately spend most of every day on administrative and tactical concerns, at the risk of overlooking
+the development of a vision and mission statement. This problem is so widespread that many
+corporations, organizations, and small businesses have not yet developed a formal vision or mission
+statement or have statements that are not followed.
+A mission statement outlines where the organization will compete, what products or services it will use
+and the customers it will serve. For two significant reasons, mission statements should be broad in
+scope. First, a broad mission statement facilitates generation of a range of various alternative objectives
+and strategies without supressing management creativity. Excess detail would limit the true power of
+creative growth for the business. However, mission statements should not be too general as an overly
+vague mission may fail to exclude any ineffective strategy alternatives. Apple’s mission statement, for
+example, should be precise enough to not allow for diversification into pesticides—or Ford Motor
+Company’s into food processing.
+Secondly, a mission statement needs to be broad to reconcile differences effectively among, and appeal
+to, an organization’s diverse stakeholders, the individuals and groups of individuals who have a special
+stake or claim on the company. The statement of mission should be broad enough to allow clear
+interpretations about the most promising growth directions and those considered less promising. Raw
+numbers should not be included in a mission statement.
+An effective mission statement should not be too lengthy; less than 100 words is ideal. Quality mission
+statements should arouse positive feelings and emotions about a firm; the mission should be inspiring
+and motivate stakeholders to action. A mission statement is also enduring, indicating that a mission may
+need to be changed at any time depending on changes anywhere in the integrative model of strategic
+77
+
+
+=== PAGE 6 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+management. An effective mission generates the impression that a firm is successful and worthy of time,
+support, and investment from all stakeholders.
+It is recommended that up to nine components (customers, products or services, markets, technology,
+concern for survival/growth/profits, philosophy, distinctive competence, concern for public image, and
+concern for employees) should be included in a mission statement. In addition to these nine
+components, organization are striving to construct and utilize missions that include ten characteristics
+to help insure the firm has an excellent foundation for engaging in strategic planning. The ten
+characteristics are as follows:
+1. Broad in scope; does not include monetary amounts, numbers, percentages, ratios, or objectives
+2. Concise; fewer than one hundred words in length
+3. Inspiring
+4. Identifies the utility of a firm’s products
+5. Reveals that the firm is socially responsible
+6. Reveals that the firm is environmentally responsible
+7. Includes nine components: customers, products or services, markets, technology, concern for
+survival/growth/profits, philosophy, distinctive competence, concern for public image, concern for
+employees
+8. Reconciliatory; resolves divergent views among stakeholders
+9. Enduring but never cast in stone
+10. Attracts customers; is written from a customer perspective
+Source: [1]
+
+3. Trend 3: A new improved method for incorporating SWOT
+analysis into practice
+Weihrich [2] stated that matching key external and internal factors is the foundation of SWOT analysis.
+External opportunities and threats include economic, social, cultural, demographic, environmental,
+political, legal, governmental, technological, and competitive trends and events in the environment that
+could significantly alter the course of a firm’s future. Opportunities and threats are considered beyond
+the control of a single organization, thus, the word external. In contrast, internal strengths and
+weaknesses are an organization’s controllable activities. These activities that are performed especially
+well are strengths or is performed poorly are weaknesses. These internal factors are derived from the
+activities of management, marketing, finance/accounting, production, and information systems of a
+business. Internal assessment is an essential activity in strategic planning through identifying and
+evaluating organizational strengths and weaknesses. Once the SWOT is formulated, organizations
+attempt to pursue strategies that take advantage on strengths and improve weaknesses.
+
+78
+
+
+=== PAGE 7 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+SWOT Analysis aids managers in developing four types of strategies: SO (strengths-opportunities)
+strategies, WO (weaknesses-opportunities) strategies, ST (strengths-threats) strategies, and WT
+(weaknesses-threats) strategies by matching internal and external factors. Matching these external and
+internal factors is a vitally important activity in strategic planning. Thousands of organizations and
+companies around the world annually perform SWOT (strength-weakness-opportunity-threat)
+analysis. However, most SWOT analyses in practice incorporate too much vagueness in the process.
+Vagueness is disastrous in strategic planning [3] [4], thus providing part of the aim for this paper.
+Underlying external and internal considerations that are included in SWOT analysis need to be detailed
+to best provide a robust foundation for the generation of strategies [5]. The need to be specific in
+performing SWOT analysis led to creation of AQCD (actionable, quantitative, comparative, and
+divisional) guidance. SWOT analysis is arguably the most widely used strategic planning tool in the
+world, and incorporating AQCD factors significantly increases SWOT’s chances for success.
+This paper reveals that the key to effective SWOT analysis is the consideration of external and internal
+factors that meet AQCD criteria. Specifically, each external and internal factor included in a SWOT
+analysis needs to be communicated in AQCD terms to the extent possible. By being clear and
+incorporating AQCD, misinterpretation is minimized and it paves the way for the generation of
+strategies that are sufficiently specific, enabling the assignment of costs to those actions. The need for
+specificity is too commonly replaced by vagueness in performing strategic planning.
+
+3.1. The AQCD Test
+When identifying and prioritizing key external and internal factors in strategic planning, all SWOT
+factors need to meet AQCD criteria to the extent possible [6]. External and internal assessments are
+conducted in order to develop a finite list of opportunities that may benefit an organization, threats that
+should be avoided or mitigated, strengths that need capitalizes on, and weaknesses that need to be
+avoided or improved upon [7]. As the term finite suggests, the external and internal assessments are not
+aimed at developing an all inclusive list of every possible factor that could influence the business. Thus,
+each SWOT factor should be specific and useful, which the AQCD test aims to assure. Typically ten
+opportunities, ten threats, ten strengths, and ten weaknesses comprise the foundational information in
+a SWOT analysis [8].
+
+3.1.1. Actionable
+In a SWOT analysis, the term “actionable” indicates the need for each internal and external factor to be
+written in a way that ultimately deciding what actions or strategies a firm should consider pursuing are
+possible. When factors are written in an actionable fashion, firms can respond either offensively or
+defensively much easier to the factors through formulating strategies that capitalize on external
+opportunities, minimize the impact of potential threats, take advantage of strengths, and/or improve
+upon weaknesses. Actionable factors should be specific and within the control of management [9]. For
+example, including a factor such as “the firm’s current ratio is 2.25” is not actionable because many
+variables are included in current assets and current liabilities.
+
+3.1.2. Quantitative
+
+79
+
+
+=== PAGE 8 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+The importance of quantitative strategic planning has long been advocated in management literature
+[10] [11]. When constructing SWOT analysis, the term “quantitative” implies that each external and
+internal factor to include percentages, ratios, dollars, and numbers to the extent possible. Quantification
+is imperative so managers can assess the magnitude of SWOT factors and take appropriate actions. For
+example, rather than saying “Advertising is moving rapidly to the Internet,” strategists need to conduct
+research and find, for example, that “spending on online advertisements in the US is increasing 19
+percent annually and represents about 46 percent of total advertising spending in the USA.” Strategies
+should be formulated and implemented based on specific factual information to the extent possible
+because of the implications with strategic planning.
+
+3.1.3. Comparative
+In a SWOT analysis, the term “comparative” refers to the need for external and internal factors to reveal
+changes over time or be compared to a competitor or to other options. It is difficult to put any fact or
+number in perspective without another comparative fact or number to reveal the change over time or
+versus a rival firm or industry average. Thus, SWOT factors to be included ideally should be
+communicated in comparative terms, so the top managers or users can more effectively use the
+information in the matching process to formulate attractive alternative strategies. For example,
+comparative factors can help to identify distinctive competencies [12] or reveal the least desirable or
+most desirable locations to source and market products [13]. Vagueness is harmful in factor generation,
+particularly considering that millions or even billions of dollars could ultimately hinge on the strategic
+decisions that the factors provide a basis for making.
+
+3.1.4. Divisional
+In a SWOT analysis, the term “divisional” refers to the geographic locations the firm operates or the
+products or services they offer. Focusing on divisional aspects is especially important since increasingly
+firms are shifting strategic management responsibilities from the corporate level to the divisional level
+[14]. Arguably one of the most vital strategic decision that companies and organizations annually are
+faced with is how best to allocate resources across its segments (divisions), regions, or products.
+Therefore, to the extent possible, stating external and internal factors in divisional terms, rather than
+whole firm terms, is helpful and actually essential in deciding how to allocate scarce resources across
+divisions/segments.
+
+4. Trend 4: Utilizing two matrices one internal and one external to
+provide a less biased way to access the current strategy fit with
+conditions facing the firm.
+Another key trend being recently incorporated by organizations in more effectively doing strategic
+planning is to utilize the External Factors Evaluation (EFE) Matrix and the Internal Factors Evaluation
+(IFE) Matrix. Both of these matrices operate similarly, with the only difference being the focus on
+internal or external aspects. The main advantage of using these two matrices for firms is each
+incorporates 20 factors for consideration and weight each factor based on how important the factor is
+
+80
+
+
+=== PAGE 9 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+to the industry. After the rating process, a score of 1 to 4 is applied for each factor that addressed the
+question how well are our current strategies capitalizing on each factor. After multiplying the weights
+and ratings and summing them, a composite score is generated. A score of 2.5 is considered average. For
+example, if a firm received a score of 3.5 for the IFE Matrix that would imply that the current strategies
+being implemented by the firm align well with the firm’s strengths and avoid or counter the firm’s
+weaknesses. Anytime a total weighted score is below 2.5, firms should consider adjusting their current
+strategies.
+
+5. Trend 5: Explain the use of a decision matrix commonly called the
+QSPM (Quantitative Strategic Planning Matrix) for deciding
+among various strategies to formulate.
+No firm has unlimited resources such as financing, facilities, and quality employees. During the strategy
+formulation process, decisions begin to commit a firm to specific products, markets, resources, and
+technologies over an extended period of time. Strategies determine long-term competitive advantages
+and have long-term effects on an organization. Strategists have the best perspective to clearly anticipate
+the consequences of strategy-formulation decisions; they have the ability to commit the resources
+necessary for implementation.
+Firms could and do simply rank strategies to determine their respective relative attractiveness, but
+organizations are increasingly using QSPM (Quantitative Strategic Planning Matrix) analysis [10] [5].
+The QSPM is a matrix that enables managers to evaluate alternative strategies less subjectively, based
+on previously identified external and internal key success factors. Like other strategy-formulation
+analytical tools, the QSPM requires the assignment of ratings (called attractiveness scores), but making
+“small” rating estimates enables strategists to make “big” decisions, such as which region to invest a
+$100 million dollars in to sell a product. Conceptually, the QSPM determines the relative attractiveness
+of various strategies based on the extent that key external and internal factors are capitalized on or
+improved. The relative attractiveness of each strategy is calculated by determining the cumulative
+impact of each internal and external factor. Typically two strategies are included in a QSPM but any
+number may be included in reality.
+The basic format of the QSPM is illustrated in Table 1. Note that the left column of a QSPM consists of
+key external and internal factors, and the top row consists of feasible alternative strategies. Specifically,
+the left column of a QSPM consists of information obtained directly from a SWOT analysis’ respective
+external and internal factors. In a QSPM, strategies should be stated in specific terms, such as “Open 290
+new stores in China,” rather than “Expand in Europe” or “Open new stores in USA.” Specificity is vital
+because ultimately a monetary value must be established for each recommended strategy; it would be
+impossible to establish a value for “expand globally.” If you are unable to reasonably assign a monetary
+value to a QSPM (or SWOT) strategy, then the strategy is too vague. Companies today have come to
+realize that vagueness is disastrous in strategic planning.
+Table 1 – The QSPM Basic Format
+
+81
+
+
+=== PAGE 10 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+Strategic Alternatives
+Key Factors
+
+Weight
+
+Strategy 1
+
+Strategy 2
+
+Strategy 3
+
+AS TAS
+
+AS TAS
+
+AS TAS
+
+Key External Factors
+Economy
+Political/Legal/Governmental
+Social/Cultural/Demographic/Envi
+ronmental
+Technological
+Competitive
+Total
+
+1.0
+
+Key Internal Factors
+Management
+Marketing
+Finance/Accounting
+Production/Operations
+Research and Development
+MIS
+Total
+
+1.0
+
+Source: [1]
+As indicated in Table 1, the components of a QSPM include: strategic alternatives, key factors, weights,
+attractiveness scores (AS), total attractiveness scores (TAS), and the sum total attractiveness score. The
+three new terms just introduced—(1) attractiveness score, (2) total attractiveness score, and (3) the
+sum total attractiveness score—are defined and explained as the six steps required to develop a QSPM
+are discussed below [1]:
+Step 1 - List of the firm’s key external opportunities and threats and internal strengths and
+weaknesses in the left column of the QSPM. This information should be taken directly from a SWOT
+analysis.
+Step 2 - Assign weights to each key external and internal factor. These weights are identical to those
+in the EFE (External Factor Evaluation) Matrix and IFE (Internal Factor Evaluation) Matrix. The weights
+are presented in a straight column just to the right of the external and internal factors.
+
+82
+
+
+=== PAGE 11 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+Step 3 - Identify alternative strategies that the organization should consider implementing. Record
+these strategies in the top row of the QSPM.
+Step 4 - Determine the Attractiveness Scores (AS), defined as numerical values that indicate the
+relative attractiveness of each strategy considering a single external or internal factor. AS scores are
+determined by examining each key external or internal factor, one at a time, and asking the question,
+“Does this factor affect the choice of strategies being made?” If the answer to this question is yes, then
+the strategies should be compared relative to that key factor. Specifically, AS should be assigned to each
+strategy to indicate the relative attractiveness of one strategy over others, considering the particular
+factor. The range for AS is 1 = not attractive, 2 = somewhat attractive, 3 = reasonably attractive, and 4 =
+highly attractive. By “attractive,” we mean the extent that one strategy, compared to others, enables the
+firm to either capitalize on the strength, improve on the weakness, exploit the opportunity, or avoid the
+threat. Work row by row in developing a QSPM. If the answer to the previous question is no, indicating
+the respective key factor has no effect on the specific choice being made, then do not assign AS to the
+strategies in that set. Use a dash (or 0 if using the template) to indicate that the key factor does not affect
+the choice being made. Note: If you assign an AS score to one strategy, then assign an AS score(s) to the
+other—in other words, if one strategy receives a dash (or 0)—then all others must receive a dash (or 0)
+in a given row.
+Step 5 - Compute the Total Attractiveness Scores (TAS). TAS are defined as the product of multiplying
+the weights (Step 2) by the AS (Step 4) in each row. The TAS indicate the relative attractiveness of each
+alternative strategy, considering only the impact of the adjacent external or internal critical success
+factor. The higher the TAS, the more attractive the strategic alternative (considering only the adjacent
+critical success factor).
+Step 6 - Compute the Sum Total Attractiveness Score. Add TAS in each strategy column of the QSPM.
+The Sum Total Attractiveness Scores (STAS) reveal which strategy is most attractive in each set of
+alternatives. Higher scores indicate more attractive strategies, considering all the relevant external and
+internal factors that could affect the strategic decisions. The magnitude of the difference between the
+STAS in a given set of strategic alternatives indicates the relative desirability of one strategy over
+another.
+
+Conclusion
+Quality strategic planning enables a firm to be proactive rather than reactive in shaping its own future;
+it allows an entity to initiate and influence (rather than just respond to) events, and thus, to exert control
+over its own destiny. Small business owners, chief executive officers, presidents, and managers of many
+for-profit and non-profit institutions have recognized the importance of doing strategic planning
+effectively – and they are increasingly using the five new trends/tools/techniques described in this
+paper to be successful in this endeavour. To gain and sustain competitive advantages, firms must create
+and nurture a clear vision and mission, and then systematically perform SWOT and QSPM analyses
+utilizing AQCD oriented factors.
+Consistent business success rarely happens by luck or chance; it most often results from careful
+planning followed by diligent, intelligent, hard work. If the process were easy, every business would be
+83
+
+
+=== PAGE 12 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+successful. Scanning appropriate external and internal sources of information, as described in this
+paper, to identify and prioritize key AQCD oriented external and internal factors is critically important
+– rather than just brainstorming and deciding upon vague, useless, external and internal factors.
+Consistent success requires that strategists gather and assimilate relevant data, make tough trade-off
+decisions among various options that would benefit the firm, energize and reward employees, and
+continually adapt to change. Additionally, using modern strategic planning software just as described at
+www.strategyclub.com to facilitate staying on track in working through the planning process is
+increasingly being practiced.
+Most persons or organizations realize that developing an excellent strategic plan can be the difference
+between organizational success and failure. Hopefully this paper provides guidance to managers of
+small and large, profit and non-profit organizations as they strive to continually improve “how they do
+strategic planning” to help gain and sustain competitive advantage.
+
+References
+[1] David, F. R., David, F.R., David, M.E. (2020) ‘Strategic Management Concepts and Cases - A
+Competitive Advantage Approach’, 17 ed., Boston: Pearson Education, ISBN 9780135192221
+[2] Wiehrich, H. (1982), ‘The TOWS matrix—A tool for situational analysis’, Long Range Planning, vol.
+15(2), pp. 54-66, doi: 10.1016/0024-6301(82)90120-0.
+[3] George, R., MacMillan, I. (1985) ’Corporate Venturing: Venture Management Challenges’, The
+Journal of Business Strategy, vol.6(2), pp. 85-91.
+[4] Love, L. G., Priem, R. L., Lumpkin, G. (2002), ’Explicitly Articulated Strategy and Firm Performance
+Under Alternative Levels of Centralization’, Journal of Management, vol.28(5), pp. 611-627, doi:
+10.1177/014920630202800503.
+[5] David, M. E., David, F. R., David, F. R. (2017), ’The quantitative strategic planning matrix: a new
+marketing tool’, Journal of Strategic Marketing, vol.25(4), pp. 342-352, doi:
+10.1080/0965254X.2016.1148763.
+[6] David, F.R., Creek, S. A., David, F.R. (2019), ’What is the Key To Effectice SWOT Analysis, Including
+AQCD Factors’, SAM Advancement Management Journal, vol.84(1), pp. 25-35.
+[7] Capps, C. J. III, Glissmeyer, M. D. (2012), ’Extending The Competitive Profile Matrix Using Internal
+Factor Evaluation And External Factor Evaluation Matrix Concepts’, Journal of Applied Business
+Research (JABR), vol.28(5), pp. 1059-1062, doi: 10.19030/jabr.v28i5.7245.
+[8] Kearns, K. P.(1992), ’From comparative advantage to damage control: Clarifying strategic issues
+using swot analysis’, Nonprofit Management & Leadership, vol 3(1), pp. 3-22, doi:
+10.1002/nml.4130030103.
+
+84
+
+
+=== PAGE 13 ===
+International Journal of Engineering and Management Sciences (IJEMS) Vol. 6. (2021). No. 1
+DOI: 10.21791/IJEMS.2021.1.7.
+
+[9] Coman, A., Ronen, B. (2009), ’Focused SWOT: Diagnosing critical strengths and weaknesses’,
+International Journal of Production Research, vol.47(20), pp. 5677-5689, doi:
+10.1080/00207540802146130.
+[10] David, F. R. (1986), ’The strategic planning matrix - a quantitative approach’, Long Range Planning,
+vol.19(5), pp. 102-107.
+[11] Tavana, M., Banerjee, S. (2015), ’Strategic Assessment Model (SAM): A Multiple Criteria Decision
+Support System for Evaluation of Strategic Alternatives’, Decision Sciences, vol.26(1), pp. 119-143,
+doi: 10.1111/j.1540-5915.1995.tb00840.x.
+[12] Kumar, S., Massie, C., Dumonceaux, M. D. (2006), ’Comparative innovative business strategies of
+major players in cosmetic industry’, Industrial Management & Data Systems, vol.106(3), pp. 285306, doi: 10.1108/02635570610653461.
+[13] Kogut, B. (1985), ’Designing global strategies: Comparative and competitive value-added chains’,
+Sloan Management Review, vol.26(4), p. 16.
+[14] Grant, R. M. (2003), ’Strategic planning in a turbulent environment: evidence from the oil majors’,
+Strategic Management Journal, vol.26(4), pp. 491-517, doi: 10.1002/smj.314.
+
+85
+

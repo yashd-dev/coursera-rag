@@ -1,0 +1,1114 @@
+=== PAGE 1 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+Military Robotics: Latest Trends and Spatial Grasp
+Solutions
+Peter Simon Sapaty
+Institute of Mathematical Machines and Systems
+National Academy of Sciences
+Kiev, Ukraine
+
+Abstract—A review of some latest achievements in the area of
+military robotics is given, with main demands to management of
+advanced unmanned systems formulated. The developed Spatial
+Grasp Technology, SGT, capable of satisfying these demands will
+be briefed. Directly operating with physical, virtual, and
+executive spaces, as well as their combinations, SGT uses highlevel holistic mission scenarios that self-navigate and cover the
+whole systems in a super-virus mode. This brings top operations,
+data, decision logic, and overall command and control to the
+distributed resources at run time, providing flexibility, ubiquity,
+and capability of self-recovery in solving complex problems,
+especially those requiring quick reaction on unpredictable
+situations. Exemplary scenarios of tasking and managing robotic
+collectives at different conceptual levels in a special language will
+be presented. SGT can effectively support gradual transition to
+automated up to fully robotic systems under the unified
+command and control.
+Keywords—military robots; unmanned systems; Spatial Grasp
+Technology; holistic scenarios; self-navigation; collective behavior;
+self-recovery
+
+I.
+
+INTRODUCTION
+
+Today, many military organizations take the help of
+military robots for risky jobs. The robots used in military are
+usually employed within integrated systems that include video
+screens, sensors, grippers, and cameras. Military robots also
+have different shapes and sizes according to their purposes,
+and they may be autonomous machines or remote-controlled
+devices. There is a belief that the future of modern warfare
+will be fought by automated weapons systems.
+The U.S. Military is investing heavily in research and
+development towards testing and deploying increasingly
+automated systems. For example, the U.S. Army is looking to
+slim down its personnel numbers and adopt more robots over
+the coming years [1, 2]. The Army is expected to shrink from
+540,000 people down to 420,000 by 2019. To keep things just
+as effective while reducing manpower, the Army will bring in
+more unmanned power, in the form of robots. The fact is that
+people are the major cost, and first of all their life. Also,
+training, feeding, and supplying them while at war is pricey,
+and after the soldiers leave the service, there's a lifetime of
+medical care to cover.
+Military robots are usually associated with the following
+categories: ground, aerial, and maritime, with some of the
+latest works in all three discussed in the paper, including those
+oriented on collective use of robots.
+
+Most military robots are still pretty dumb, and almost all
+current unmanned systems involve humans in practically
+every aspect of their operations. The Spatial Grasp ideology
+and technology described in the rest of this paper can enhance
+individual and collective intelligence of robotic systems,
+especially distributed ones. It can also pave the real way to
+massive use of advanced mobile robotics in human societies,
+military systems including and particularly.
+II.
+
+SOME LATEST DEVELOPMENTS AND DEMANDS TO
+MILITARY ROBOTICS
+
+A. Ground Robots
+The ability of robots to save lives has secured future path
+for ground robotics alongside the warfighter. Ground robotics
+can be engaged in different missions including Explosive
+Ordnance
+Disposal
+(EOD),
+Combat
+Engineering,
+Reconnaissance, and many others. The US Army plans to
+refurbish 1,477 of its ground robots, which is about 60 percent
+of the total fleet [3]. The following may be named among the
+latest developments in ground robotics.
+Boston Dynamics designed the LS3 "robot mules" to help
+soldiers carry heavy loads [4], see Fig. 1a-c. LS3 is a roughterrain robot designed to go anywhere Marines and Soldiers
+go on foot, helping carry their load. Each LS3 carries up to
+400 lbs of gear and enough fuel for a 20-mile mission lasting
+24 hours. LS3 automatically follows its leader using computer
+vision, so it does not need a dedicated driver. It also travels to
+designated locations using terrain sensing and GPS.
+
+a)
+
+b)
+
+c)
+
+Fig. 1. Boston Dynamics robot mules: a) Carrying heavy loads; b)
+Following soldiers; c) Moving through complex terrains
+
+The Boston Dynamics' Cheetah robot (Fig. 2a-b) is the
+fastest legged robot in the World, surpassing 29 mph, a new
+land speed record for legged robots [5]. The Cheetah robot has
+an articulated back that flexes back and forth on each step,
+increasing its stride and running speed, much like the animal
+does. The current version of the Cheetah robot runs on a highspeed treadmill in the laboratory where it is powered by an
+
+9|P age
+www.ijarai.thesai.org
+
+
+=== PAGE 2 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+off-board hydraulic pump and uses a boom-like device to keep
+it running in the center of the treadmill.
+
+a)
+
+b)
+
+c)
+
+Fig. 4. Northrop Grumman X-47B: a) Front view; b) Land-launched; c)
+Carrier-launched
+a)
+
+b)
+
+c)
+
+Fig. 2. Boston Dynamics robots: a) The Cheetah concept; b) Cheetah on a
+high-speed treadmill; c) Cheetah becoming Wild Cat running untethered
+
+The next generation Cheetah robot, WildCat, Fig. 2c, is
+designed to operate untethered. WildCat is an early model for
+field testing. It sports a noisy combustion onboard engine.
+Named the WildCat, the outdoor runner is funded by the
+Defense Advanced Research Projects Agency (DARPA), and
+is being developed for military use. With a large motor
+attached, WildCat isn't as fast as its 28mph-plus cousin, being
+currently limited to around 16mph on flat terrain.
+New military technology 2014 supersoldier robot has been
+developed [6]: all-terrain, highly mobile, and with high
+precision shooting (Fig. 3a-c). It is logical to assume that
+killer robots are already here, and the new science discoveries
+of 2014 may be used to create real terminators.
+
+a) Ammunition
+
+b) All terrain chassis
+
+The X-47B first flew in 2011, and as of 2014, it is
+undergoing flight and operational integration testing, having
+successfully performed a series of land- and carrier-based
+demonstrations. In August 2014, the US Navy announced that
+it had integrated the X-47B into carrier operations alongside
+manned aircraft. Northrop Grumman intends to develop the
+prototype X-47B into a battlefield-ready aircraft, the
+Unmanned Carrier-Launched Surveillance and Strike
+(UCLASS) system, which will enter service around 2019. X47B can stay in the air for 50 hrs, carry 2 tons of weaponry,
+and be refuelled in the air.
+Doubling the Threat: Drones + Lasers. The research and
+development arm of the US Department of Defense plans to
+establish drone-mounted laser weapons, a scheme referred to
+as ‗Project Endurance‘ in the agency‘s 2014 budget request
+[9], see Fig. 5a-c. The Pentagon edged closer to mounting
+missile-destroying lasers on unmanned and manned aircraft,
+awarding $26 million to defense contractors to develop the
+technology.
+
+c) Field trials
+
+Fig. 3. Supersoldier robot
+
+B. Aerial Robotics
+The US Army, Air Force, and Navy have developed a
+variety of robotic aircraft known as unmanned flying vehicles
+(UAVs). Like the ground vehicles, these robots have dual
+applications: they can be used for reconnaissance without
+endangering human pilots, and they can carry missiles and
+other weapons [7].
+The best known armed UAVs are the semi-autonomous
+Predator Unmanned Combat Air Vehicles (UCAV) built by
+General Atomics which can be equipped with Hellfire
+missiles. The military services are also developing very small
+aircraft, sometimes called Micro Air Vehicles (MAV) capable
+of carrying a camera and sending images back to their base.
+Some newest UCAV developments are mentioned below.
+
+a)
+
+b)
+
+c)
+
+Fig. 5. Drones with lasers: a) HELLADS mounted on a drone, b-c) Drone
+laser in operation
+
+General Atomics is getting increasingly excited by the
+HELLADS— the High-Energy Liquid Laser Defense System.
+It is designed to shrink a flying laser into a package small
+enough to cram into an aircraft. This will give a potentially
+unlimited shooting magazine to the drone.
+Hypersonic aircraft. The SR-72 [10] could fly as fast as
+Mach 6, will have the ability to gather intelligence, conduct
+surveillance and reconnaissance, and launch combat strikes at
+an unprecedented speed, see Fig. 6a. SR-72 could be
+operational by 2030. At this speed the aircraft would be so fast
+that adversary would have no time to react or hide.
+
+The Northrop Grumman X-47B is a demonstration
+unmanned combat air vehicle (UCAV) designed for carrierbased operations [8], see Fig. 4a-c. Developed by the
+American defense technology company Northrop Grumman,
+the X-47 project began as part of DARPA's J-UCAS program,
+and is now part of the United States Navy's Unmanned
+Combat Air System Demonstration (UCAS-D) program.
+a)
+
+b)
+
+Fig. 6. Hypersonic vehicles: a) SR-72 with Mach 6; b) DARPA HTV-2 with
+Mach 20
+
+10 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 3 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+DARPA rocket-launched HTV-2, 13,000 mph Hypersonic
+Glider [11] (see Fig. 6b), was designed to collect data on three
+technical challenges of hypersonic flight: aerodynamics,
+aerothermal effects, and guidance, navigation and control. A
+technology demonstration and data-gathering platform, the
+HTV-2‘s second test flight was conducted to validate current
+models and increase technical understanding of the hypersonic
+regime. The flight successfully demonstrated stable
+aerodynamically-controlled flight at speeds up to Mach 20.
+C. Maritime Robotics
+Sea-based robots—unmanned maritime systems, or UMSs,
+can be either free-swimming or tethered to a surface vessel, a
+submarine, or a larger robot [12], see examples in Fig. 7.
+Tethers simplify providing power, control, and data
+transmission, but limit maneuverability and range. Recently
+developers have built highly autonomous systems that can
+navigate, maneuver, and carry out surprisingly complex tasks.
+UMSs can operate on the ocean‘s surface, at or just below the
+surface, or entirely underwater. Operating above or near the
+surface simplifies the power and control, but compromises
+stealth. The U.S. Navy has devoted particular attention to
+unmanned underwater vehicles (UUSs) during the past 10-15
+years. Its unmanned surface vehicles (USVs) are much less
+far along (Fig. 7a); the Navy has put a higher priority on using
+automation to reduce crew size in U.S. warships. Some latest
+works on UUSs follow.
+Large Displacement Unmanned Undersea Vehicle
+(LDUUV) [13], see Fig. 7b, is to conduct missions longer than
+70 days in open ocean and littoral seas, being fully
+autonomous, long-endurance, land-launched, with advanced
+sensing for littoral environments. The vehicle's manufacturing
+and development phase will begin in 2015 with testing
+planned for 2018. According to the Navy's ISR Capabilities
+Division, LDUUV will reach initial operating capability as a
+squadron by 2020 and full rate production by 2025.
+
+Fig. 7. a) Unmanned surface vehicle; b) Large Displacement Unmanned
+Undersea Vehicle, LDUUV; c) Underwater glider
+
+operated without any direct human control: they acted as a
+robot boat swarm. This capability points to a future where the
+U.S. Navy and other militaries may deploy multiple
+underwater, surface, and flying robotic vehicles to defend
+themselves or attack a hostile force.
+
+a)
+
+b)
+
+c)
+
+Fig. 8. a) Swarm of autonomous boats; b) Harvard University multiple
+robots operating without central intelligence; c) Sci-fi image of future robotic
+armies
+
+Harvard University scientists have devised a swarm of
+1,024 tiny robots that can work together without any guiding
+central intelligence [16], see Fig. 8b. Like a mechanical flash
+mob, these robots can assemble themselves into five-pointed
+stars, letters of the alphabet and other complex designs.
+Swarm scientists are inspired by nature's team players—social
+insects like bees, ants and termites; schools of fish; and flocks
+of birds. These creatures collaborate in vast numbers to
+perform complicated tasks, even though no single individual is
+actually in charge. These results are believed to be useful for
+the development of advanced robotic teams even armies, (with
+futuristic image in Fig. 8c).
+E. General Demands to Military Robotic Systems
+A thorough analysis of aims and results of the
+development and implementation of military robots, including
+the ones briefed above, helps us formulate general demands
+with regard to their overall management and control, which
+may be as follows.
+ Despite the diversity of sizes, shapes, and orientations,
+they should all be capable of operating in distributed,
+often large, physical spaces, thus falling into the
+category of distributed systems.
+ Their activity is to include navigation, movement,
+observation, gathering data, carrying loads which may
+include ammunitions or weapons, and making impact
+on other manned on unmanned units and the
+environment.
+
+Underwater gliders [14], see Fig. 7c, will not require fuel
+but will instead use a process called ―hydraulic buoyancy,‖
+which allows the drone to move up and down and in and out
+of underwater currents that will help it move at a speed of
+about one mile per hour. Carrying a wide variety of sensors,
+they can be programmed to patrol for weeks at a time,
+surfacing to transmit their data to shore while downloading
+new instructions at regular intervals.
+
+ They should have certain, often high, degree of
+autonomy and capability of automatic decision making
+to be really useful in situations where human access
+and activity are restricted.
+
+D. Collectively Behaving Robots
+To be of real help in complex military applications, robots
+should be integral part of manned systems, they should also be
+capable of being used massively, in robotic collectives. The
+tests on Virginia's James River represented the first large-scale
+military demonstration of a swarm of autonomous boats
+designed to overwhelm enemies [15], see Fig. 8a. The boats
+
+ They should be capable of effective swarming for
+massive use, and this swarming should be strongly
+controlled from outside -- from manned parts of the
+system or from other, higher-level, unmanned units.
+
+ They should effectively interact with manned
+components of the systems and operate within existing
+command and control infrastructures, to be integral
+parts of the system.
+
+ Their tasking and retasking (including that of swarms)
+should be flexible and convenient to humans to
+
+11 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 4 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+guarantee runtime reaction on changing goals and
+environments, especially on battlefields.
+
+
+The use of unmanned units should be safe enough to
+humans and systems they are engaged in.
+
+
+
+Their behaviour should satisfy ethical and international
+norms, especially in life-death situations.
+
+III.
+
+SPATIAL GRASP TECHNOLOGY FOR MANAGEMENT OF
+ROBOTIC SYSTEMS
+
+The developed high-level Spatial Grasp ideology and
+Technology, SGT, for coordination and management of large
+distributed systems [17] allows us to investigate, develop,
+simulate, and implement manned-unmanned systems in their
+integrity and entirety. Also gradually move to fully unmanned
+systems with dynamic tasking and managing individual robots
+and their groups, regardless of the group‘s size. SGT can
+believably satisfy most of the demands to military robotic
+systems formulated above.
+
+Fig. 10. Collective spatial interpretation of SGL scenarios
+
+Capable of representing any parallel and distributed
+algorithms, these scenarios can start from an arbitrary node,
+covering at runtime the whole system or its parts needed with
+operations, data, and control, as shown in Fig. 11. Different
+scenarios can intersect in the networked space while
+cooperating or competing (Fig. 11).
+
+A. SGT General Issues
+SGT is based on coordinated integral, seamless, vision &
+navigation & coverage & surveillance & conquest of physical,
+virtual, or execution spaces, as shown in Fig. 9a-b.
+
+Fig. 11. Spreading scenarios intersection & cooperation,
+
+They can establish distributed runtime information and
+control infrastructures that can support distributed databases,
+command and control, situation awareness, autonomous
+decisions, also any other existing or hypothetical
+computational and/or control models (Fig. 12).
+a)
+
+b)
+
+Fig. 9. SGT basics: a) Controlled parallel and incremental space grasp;
+Symbolic physical analogy
+
+b)
+
+It has a strong psychological and philosophical
+background reflecting how humans, especially top
+commanders, mentally plan, comprehend and control
+operations in complex and distributed environments. SGT
+pursues holistic, gestalt [18], or over-operability [19] ideas
+rather than traditional multi-agent philosophy [20], with
+multiple agents and their interactions appearing and
+disappearing dynamically, on the implementation level, and
+only if and when needed in particular places and moments of
+time.
+SGT can be practically implemented in distributed systems
+by a network of universal control modules embedded into key
+system points (humans, robots, sensors, mobile phones, any
+electronic devices, etc.), which altogether, collectively,
+understand and interpret mission scenarios written in a special
+high-level Spatial Grasp Language, SGL [17], see Fig. 10.
+
+Fig. 12. Creating spatial infrastructures
+
+B. Spatial Grasp Language, SGL
+SGL allows us to directly move through, observe, and
+make any actions and decisions in fully distributed
+environments. SGL scenario develops as parallel transition
+between sets of progress points (or props) reflecting
+progressive spatial-temporal-logical stages of the scenario
+development, which may be associated with different
+physical, virtual or execution locations in distributed worlds.
+Any sequential or parallel, centralized or distributed,
+stationary or mobile algorithm operating with information
+and/or physical matter can be written in SGL at any levels.
+
+12 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 5 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+SGL directly operates with the following worlds:
+
+
+Physical World (PW), infinite and continuous, where
+each point can be identified and accessed by physical
+coordinates, with certain precision.
+
+
+
+Virtual World (VW), which is finite and discrete,
+consisting of nodes and semantic links between them.
+
+
+
+Executive world (EW) consisting of active doers which
+may be humans, robots, sensors or any intelligent
+machines capable of operations on matter, information,
+or both, i.e. on the previous two worlds.
+
+Directly working with different worlds, SGL can provide
+high flexibility, convenience, and compactness in expressing
+complex scenarios within the same formalism. From one side,
+it can support high level, semantic descriptions abstracting
+from physical resources which can vary and be assigned at
+runtime, and from the other side, detailing some or all such
+resources, and to the full depth, if necessary.
+For example, working directly with PW, like moving
+through and impacting it, can be free from naming physical
+devices which can do this (e.g. humans, robots), the latter
+engaged and disengaged automatically upon necessity,
+availability, or uselessness. Directly working with VW, like
+creating knowledge, operational, or C2 infrastructures, can
+also abstract away from physical resources (humans or
+computing facilities) which can be assigned or reassigned at
+runtime. Working directly with EW, can bring any necessary
+details for execution of missions, like particular human,
+robotic or sensor units and their interactions and
+subordination. Any combination and integration of these three
+worlds can be possible, with direct management of the mixture
+in SGL too. Integration between PW and VW can be named as
+PVW, with other cases presented as PVW, PEW, VEW, and
+all three together as PVEW.
+SGL has universal recursive syntactic structure shown in
+Fig. 13 capable of representing any parallel, distributed and
+spatial algorithm working with arbitrary complex data. This
+structure, following the spatial grasp ideology of SGT
+mentioned above, also allows any language obeying it to be
+arbitrarily extended with new operations, data and control.
+
+Mentioning some SGL details may be helpful for
+understanding the rest of this paper, as follows. The basic
+language construct, rule, can represent, for example, the
+following categories (this list being far from complete):
+ Elementary arithmetic, string or logic operation.
+ Hop or move in a physical, virtual, or combined space.
+ Hierarchical fusion and return of local or remote data.
+ Distributed control, both sequential and parallel.
+ A variety of special contexts for navigation in space
+(influencing embraced operations and decisions).
+ Type or sense of a value or its chosen usage, assisting
+automatic interpretation.
+ Creation or removal of nodes and links in distributed
+knowledge infrastructures.
+ Composition of other rules.
+Working in fully distributed physical, virtual, executive or
+combined environments, SGL has different types of variables,
+called spatial, effectively serving multiple cooperative
+processes. They belong to the following four categories:
+ Heritable variables – starting in a prop and serving all
+subsequent props which can share them in read & write
+operations.
+ Frontal variables – individual and exclusive prop‘s
+property (not shared with other props), being
+transferred between consecutive props and replicated if
+from a single prop a number of other props emerge –
+thus propagating together with the evolving spatial
+control.
+ Environmental variables – accessing different elements
+of the physical and virtual words when navigating
+them, also basic parameters of the internal world of
+SGL interpreter.
+ Nodal variables – adding individual temporary
+property to VW, PW, EW or combined nodes; they can
+be accessed and shared by all activities currently
+associated with these nodes.
+For simplifying and shortening complex scenarios (say,
+reducing nested parentheses in them), SGL programs can
+additionally use syntactic constructs common for traditional
+languages, as will be seen from the forthcoming examples of
+this paper, always remaining, however, within the general
+structure depicted in Fig. 13.
+C. Elementary Examples in SGL
+Let us consider some elementary scenarios from the
+mentioned three worlds (PW, VW, and EW), as shown in Fig.
+14a-f.
+
+Fig. 13. Universal recursive structure of SGL
+
+13 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 6 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+Fig. 15. SGL interpreter architecture
+
+Fig. 14. Some elementary scenarios for programming in SGL
+
+They all can be expressed within the same spatial grasp
+ideology and unified SGL syntax, as follows.
+
+
+Assignment (Fig.14a):
+assign(Result, add(27, 33, 55.6)) or
+Result = 27+33+55.6
+
+
+
+Moves in physical space to coordinates (x1, y3), and
+(x5, y8) independently or in parallel (Fig.14b):
+move(location(x1,y3), location(x5,y8))
+
+
+
+Creation of a virtual node (Fig.14c):
+create(‘Peter’)
+
+
+
+Extending virtual network with a new link-node pair
+(Fig.14d):
+advance(hop(‘Peter’),
+create(+‘fatherof’,‘Alex’)) or
+hop(‘Peter’); create(+‘fatherof’,‘Alex’)
+
+
+
+The network of the interpreters can be mobile and open,
+runtime changing the number of nodes and communication
+structure between them. The SGL interpreters can be
+concealed if to operate in hostile environments.
+The dynamically networked SGL interpreters are
+effectively forming a sort of a universal parallel spatial
+machine capable of solving any problems in a fully distributed
+mode, without any special central resources. ―Machine‖ rather
+than a computer or ―brain‖ because it can operate with
+physical matter too, and can move partially or as a whole in
+physical environment, possibly, changing its distributed shape
+and the space coverage. This machine can operate
+simultaneously on many mission scenarios which can be
+injected at any time from its arbitrary nodes/interpreters.
+Tracks-Based Automatic Command & Control. The
+backbone and ―nerve system‖ of the distributed interpreter is
+its spatial track system covering the spaces navigated and
+providing overall awareness, ad hoc automatic command and
+control of multiple distributed processes, access to and life of
+different types of spatial variables, as well as self-optimization
+and self-recovery from damages. Different stages of its
+operation during parallel space navigation are shown in Fig.
+16a-d.
+
+Giving direct command to robot Shooter to fire at
+coordinates (x, y) (Fig. 14e):
+hop(robot(Shooter)); fire(location(x,y)
+
+
+
+Order soldier John to fire at coordinates (x, y) by using
+robot Shooter and confirm robot‘s action in case of its
+success (Fig. 14f):
+hop(soldier:John);
+if((hop(robot:Shooter);
+fire(location:x,y)),
+report:done)
+
+D. SGL Interpreter Architecture
+SGL interpreter consists of specialized modules handling
+& sharing specific data structures, as shown in Fig. 15.
+Fig. 16. The evolving
+infrastructure
+
+track-based
+
+automatic
+
+command
+
+and
+
+control
+
+14 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 7 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+The symbols in Fig. 16 have the following meanings:
+— nodal variables,
+— frontal variables,
+— heritable
+— track nodes, and
+
+variables,
+
+— track links.
+
+E. Integration with Robotic Functionalities
+By embedding SGL interpreters into robotic vehicles, as in
+Fig. 17, we can provide any needed behavior of them, on any
+levels, from top semantic to detailed implementation. The
+technology can be used to task and control single robots as
+well as their arbitrary groups, with potentially unlimited
+number and diversity of individual robots (some hypothetic
+group scenarios shown in Fig. 17). For the robotic teams (or
+even possible future armies) it can describe and organize any
+collective behavior needed — from semantic task definition of
+just what to do in a distributed environment — to loose
+swarming — to a strongly controlled integral unit strictly
+obeying external orders. Any mixture of different behaviors
+within the same scenario can be guaranteed too.
+
+The corresponding SGL program will be as follows:
+maximum(
+move((50.433, 30.633),
+(50.417, 30.490),
+(50.467, 30.517));
+evaluate(damage))
+
+This task can be executed by different number of available
+mobile robots (actually from one to four, using more robots
+will have no much sense), and let three robots be available in
+the area of interest for our case, as in Fig. 18. The semantic
+level scenario can be initially injected into any robot (like R1),
+Fig. 18a, and then the distributed networked SGL interpreter
+installed in all robots automatically takes full care of the
+distributed task solution, with different stages depicted in Fig.
+18b-d.
+
+Fig. 18. Solving the task with three robots
+
+Fig. 17. Embedding SGL interpreters into robotic units and examples of
+collective scenarios
+
+IV.
+
+APPLICATION OF SGT TO ROBOTICS
+
+A. Collective Spatial Task Execution, Purely Semantic Level
+At the semantic level we can describe in SGL only what to
+do in a distributed space and the top decisions needed,
+regardless of a possible hardware or even system organization
+to accomplish this — these can be effectively shifted to
+intelligent automatic networked interpretation of the language.
+Let us consider the following task:
+Go to physical locations of the disaster zone with
+coordinates:
+(50.433, 30.633), (50.417, 30.490), and (50.467, 30.517).
+Evaluate damage in each location and return the
+maximum damage value on all locations.
+
+The robots, with installed SGL interpreters and
+communicating with each other, are effectively forming
+integral distributed spatial machine that solves the problem
+defined purely semantically, with runtime partitioning,
+modifying, distributing, replicating and interlinking the
+emerging scenario parts automatically.
+B. Explicit Collective Behavior Set Up
+In contrast to the previous task defined on the level ―what
+to do‖ only, different kinds of explicit behaviours can be
+expressed in SGL too, which, when integrated with each other,
+can provide very flexible, powerful, and intelligent global
+behaviour. Imagine that a distributed area needs to be
+investigated by multiple unmanned aerial vehicles that should
+search the space in a randomized way (preserving, however,
+some general direction of movement), create and update ad
+hoc operational infrastructure of the group (for it to follow
+global goal and be controlled from outside if needed), collect
+information on the discovered objects throughout the region
+covered, classifying them as targets, and organize collective
+reaction on the targets, as in Figure 19a-d.
+
+15 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 8 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+
+ Collecting & selecting & attacking targets on the whole
+territory controlled (starting from the updated central
+node and using the updated spatial infrastructure
+leading to all nodes, to be used repetitively until the
+infrastructure is updated again), let it be called
+targets:
+nonempty(frontal(Seen) =
+repeat(
+free(detect(targets)), hop(+infra)));
+repeat(
+free(select_move_shoot(Seen)),
+hop(+infra))
+
+ Using these SGL scenarios for different behavioral
+stages, we can easily integrate them within the global
+one, as follows.
+Fig. 19. Different aspects of the group‘s behavior: a) Distributed organization
+of cooperative swarm movement; b) Updating & hopping to the topological
+center; c) Creating & updating of spatial runtime infrastructure starting from
+the updated center; d) Collecting, distributing, selecting & attacking targets
+
+The different stages depicted in Fig. 19 can be easily
+expressed in SGL and altogether integrated into the resultant
+holistic group scenario, as follows.
+
+
+Randomized swarm movement (starting in any node,
+with minimum, threshold, distance between moving
+nodes allowed), naming it swarm:
+
+hop(all_nodes);
+frontal(Limits = (dx(0, 8), dy(-2, 5)),
+Threshold = 50);
+repeat(
+nodal(Shift) = random(Limits);
+if(empty(hop(WHERE + Shift, Range, all)),
+shift(Shift)))
+
+
+
+Regular updating and subsequent hopping to
+topological center (as the latter may change in time due
+to randomized movement resulting in varying distances
+between nodes and also possible spatial shape of the
+group); starting from any node, including the current
+center), naming it center:
+
+frontal(Average) =
+average(hop(all_nodes); WHERE);
+min_destination(
+hop(all_nodes);
+distance(Average, WHERE))
+
+
+
+Regular creating & updating of spatial runtime
+infrastructure (starting from the updated central node,
+using semantic links ―infra‖ and maximum allowed
+physical distance, or range, between nodes to form
+direct links), naming the program as infra:
+
+stay(
+frontal(Range) = 100;
+repeat(
+remove(previous_links);
+linkup(+infra, first_come, Range)))
+
+independent(
+swarm,
+repeat(center; infra;
+or_parallel(
+loop(targets),
+wait(time_delay))))
+
+The obtained resultant scenario, which can start from any
+mobile unit, combines loose swarm movement in a distributed
+space with regular updating of topologically central unit and
+runtime hierarchical infrastructure between the units. The
+latter regularly controls observation of the distributed territory,
+collects data on targets and distributes them back to all units
+for individual selections and impact operations. The resultant
+scenario is setting certain time interval (time_delay) for
+preserving status of the current central node and emanating
+from it infrastructure before updating them due to possible
+change of distances between freely moving nodes.
+V.
+
+OTHER APPLICATIONS: FORMALIZING & AUTOMATING
+COMMAND AND CONTROL
+
+Formalization of Command Intent (CI) and Command and
+Control (C2) are among the most challenging problems on the
+way to creation of effective multinational forces, integration
+of simulations with live control, and transition to robotized
+armies. The existing specialized languages for unambiguous
+expression of CI and C2 (BML, C-BML, JBML, geoBML,
+etc.) [21] are not programming languages themselves,
+requiring integration with other linguistic facilities and
+organizational levels. Working directly with both physical and
+virtual worlds, SGL, being a universal programming language,
+allows for effective expression of any military scenarios and
+orders, drastically simplifying their straightforward
+implementation in robotized systems. SGL scenarios are much
+shorter and simpler than in BML or related languages, and can
+be created at runtime, on the fly. Typical battlefield scenario
+example, borrowed from [21], is shown in Fig. 20
+
+16 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 9 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+(PL:Ruby, OBJ:LION, T:TP4));
+seize(LION, T:TP4)
+
+ Further up, setting main stages only, with starting and
+final time only known:
+deploy(Denver, T:TP0);
+advance(PL:(Boston, Austin, Atlanta, Ruby));
+seize(LION, T:TP4)
+
+ And final goal only:
+seize(LION, T:TP4)
+Fig. 20. Example of a battlefield scenario
+
+The task is to be performed by two armoured squadrons
+BN-661 Coy1, and BN-661 Coy3, which are ordered to
+cooperate in coordination. The operation is divided into four
+time phases: from TP0 to TP1, from TP1 to TP2, from TP2 to
+TP3, and from TP3 to TP4, to finally secure objective LION,
+and on the way to it, objective DOG. Their coordinated
+advancement should be achieved by passing Denver, Boston,
+Austin, Atlanta, and Ruby lines, while fixing and destroying
+enemy units Red-1-182, Red-2-194, Red-2-196, and Red-2191.
+This scenario can be presented in SGL as follows.
+FIXER:BN_661_Coy1;
+SUPPORTER_DESTROYER:BN_661_Coy3;
+deploy(Denver, T:TP0);
+advance_destroy(
+(PL:Boston, TARGET:Red_1_182, T:TP1),
+(PL:Austin, OBJ:DOG, TARGET:Red_2_194, T:TP2),
+(PL:Atlanta, TARGET:Red_2_196, T:TP3),
+(PL:Ruby, OBJ:LION, TARGET:Red_2_191, T:TP4));
+seize(LION, T:TP4)
+
+This description is much clearer, and more compact (about
+10 times) than if written in BML on the level of interacting
+individual units, as in [21]. This simplicity may allow us
+redefine the whole scenario or its parts at runtime, on the fly,
+when the goals and environment change rapidly, also naturally
+engage robotic units instead of manned components. Similar
+to possibility of expressing different levels of organization of
+robotic swarms in the previous section, we may further
+represent this current battlefield scenario at different levels
+too, for example, moving upwards with its generalization, as
+follows:
+
+
+Not mentioning own forces, which may become clear
+at runtime only:
+
+deploy(Denver, T:TP0);
+advance_destroy(
+(PL:Boston, TARGET:Red_1_182, T:TP1),
+(PL:Austin, OBJ:DOG, TARGET:Red_2_194, T:TP2),
+(PL:Atlanta, TARGET:Red_2_196, T:TP3),
+(PL:Ruby, OBJ:LION, TARGET:Red_2_191, T:TP4));
+seize(LION, T:TP4)
+
+
+
+Further up, not mentioning adversary‘s forces, which
+may not be known in advance but should be destroyed
+if discovered, to move ahead:
+
+deploy(Denver, T:TP0);
+advance(
+(PL:Boston, T:TP1),
+(PL:Austin, OBJ:DOG, T:TP2),
+(PL:Atlanta, T:TP3),
+
+Having the same formal language for any system levels
+and their any mixtures, provides us with high flexibility for
+organization of advanced missions, especially with limited or
+undefined resources and unknown environments; also
+possibility of potentially unlimited engagement of robotic
+components under the unified command and control
+philosophy.
+VI.
+
+CONCLUSIONS
+
+Robots can assist humans in many areas, especially in
+dangerous and hazardous situations and environments. But the
+fate of robotics, military especially, will depend on how it
+conceptually and organizationally integrates with manned
+systems within overall management and command and
+control.
+The developed high-level distributed control technology,
+SGT, based on holistic and gestalt principles can effectively
+support a unified transition to automated up to fully unmanned
+systems with massive use of advanced robotics. The practical
+benefits may be diverse and numerous. One of them, for
+example, may be effective management of advanced robotic
+collectives, regardless of their size and spatial distribution, by
+a single human operator only, due to high level of their
+internal self-organization and integral responsiveness provided
+by SGT. More on the SGT philosophy and history, details of
+SGL with its networked implementation, and the researched
+applications, some of which have been mentioned throughout
+this paper, can be found elsewhere [22-28].
+[1]
+
+[2]
+
+[3]
+
+[4]
+[5]
+[6]
+
+[7]
+
+REFERENCES
+―U.S. Army Considers Replacing Thousands of Soldiers with Robots‖,
+U.S.S. Enterprise, IEEE Starship U.S.S Enterprise Section, 2015,
+http://sites.ieee.org/uss-enterprise/u-s-army-considers-replacingthousands-of-soldiers-with-robots/.
+E. Ackerman, ―U.S. Army Considers Replacing Thousands of Soldiers
+with
+Robots‖,
+IEEE
+Spectrum,
+22
+Jan
+2014,
+http://spectrum.ieee.org/automaton/robotics/military-robots/armyconsiders-replacing-thousands-of-soldiers-with-robots.
+―US Army Works Toward Single Ground Robot‖, Defense News, Nov.
+15,
+2014,
+http://archive.defensenews.com/article/20141115/DEFREG02/31115003
+3/US-Army-Works-Toward-Single-Ground-Robot.
+―LS3 - Legged Squad Support Systems‖, Boston Dynamics,
+http://www.bostondynamics.com/robot_ls3.html.
+―CHEETAH - Fastest Legged Robot‖, Boston Dynamics, 2013,
+http://www.bostondynamics.com/robot_cheetah.html.
+W. Rodriguez, ―New Military Technology 2014 Supersoldier Robot
+Developed‖, Latest New Technology Gadgets, Sept. 28, 2014,
+http://latestnewtechnologygadgets.com/wp/new-military-technology2014-supersoldier-robot-developed/.
+P. Lin, G. Bekey, K. Abney, ―Autonomous Military Robotics: Risk,
+Ethics, and Design‖. US Department of Navy, Office of Naval Research
+
+17 | P a g e
+www.ijarai.thesai.org
+
+
+=== PAGE 10 ===
+(IJARAI) International Journal of Advanced Research in Artificial Intelligence,
+Vol. 4, No.4, 2015
+December
+20,
+2008.http://www.unog.ch/80256EDD006B8954/(httpAssets)/A70E329D
+E7B5C6BCC1257CC20041E226/$file/Autonomous+Military+Robotics
++Risk,+Ethics,+and+Design_lin+bekey+abney.pdf.
+[8] ―X-47BUCAS,
+Capabilities‖,
+Northrop
+Grumman,
+2015,
+http://www.northropgrumman.com/Capabilities/X47BUCAS/Pages/defa
+ult.aspx.
+[9] A. McDuffee, ―DARPA Plans to Arm Drones With Missile-Blasting
+Lasers‖, WIRED, 11.01.13, http://www.wired.com/2013/11/dronelasers/.
+[10] ―Meet
+the
+SR-72‖,
+Lockheed
+Martin,
+2013,
+http://www.lockheedmartin.com/us/news/features/2013/sr-72.html.
+[11] Engineering Review Board Concludes Review of HTV-2 Second Test
+Flight,
+DARPA,
+April
+20,
+2012,
+http://www.darpa.mil/newsevents/releases/2012/04/20.aspx.
+[12] B. Berkowitz, ―Sea Power in the Robotic Age‖, ISSUES in Science and
+Technology, 2015, http://issues.org/30-2/bruce-2/.
+[13] ―Large Displacement Unmanned Underwater Vehicle Innovative Naval
+Prototype
+(LDUUV
+INP)‖,
+in
+Naval
+Drones,
+http://www.navaldrones.com/LDUUV-INP.html.
+[14] Wood, Stephen, ―Autonomous Underwater Gliders‖, Florida Institute of
+Technology, http://my.fit.edu/~swood/26_Wood_first.pdf.
+[15] J. Hsu, ―U.S. Navy Tests Robot Boat Swarm to Overwhelm Enemies‖,
+IEEE
+Spectrum,
+5
+Oct
+2014.
+http://spectrum.ieee.org/automaton/robotics/military-robots/us-navyrobot-boat-swarm.
+[16] R. L. Hotz, ―Harvard Scientists Devise Robot Swarm That Can Work
+Together‖. The Wall Street
+Journal. Aug. 15, 2014.
+http://www.wsj.com/articles/harvard-scientists-devise-robot-swarm-thatcan-work-together-1408039261.
+[17] P. Sapaty, ―The World as an Integral Distributed Brain under Spatial
+Grasp Paradigm‖, book chapter in Intelligent Systems for Science and
+
+Information,
+Springer,
+Feb
+4,
+2014.
+http://link.springer.com/chapter/10.1007/978-3-319-04702-7_4.
+[18] M. Wertheimer, Gestalt theory. Erlangen, Berlin. 1924.
+[19] P.S. Sapaty, ―Over-Operability in Distributed Simulation and Control‖,
+The MSIAC's M&S Journal Online, Winter 2002 Issue, Volume 4, No.
+2, Alexandria, VA, USA.
+[20] M. Minsky, The Society of Mind, Simon & Schuster, 1988.
+[21] U. Schade, M. R. Hieb, M. Frey, K. Rein, ―Command and Control
+Lexical Grammar (C2LG) Specification‖, FKIE Technical Report
+ITF/2010/02, July 2010.
+[22] P.S. Sapaty, ―Unified Transition to Cooperative Unmanned Systems
+under Spatial Grasp Paradigm‖, International journal Transactions on
+Networks and Communications (TNC), Vol.2, Issue 2, Apr 2014.
+http://scholarpublishing.org/index.php/TNC.
+[23] P.S. Sapaty, ―Distributed Human Terrain Operations for Solving
+National and International Problems‖, International Relations and
+Diplomacy,
+Vol.
+2,
+No.
+9,
+September
+2014.
+http://www.davidpublishing.com/journals_info.asp?jId=2094.
+[24] P.S. Sapaty, ―From Manned to Smart Unmanned Systems: A Unified
+Transition‖, SMi‘s Military Robotics, Holiday Inn Regents Park
+London,
+21-22
+May
+2014.
+http://www.smionline.co.uk/defence/archive/5-2014/conference/military-robotics.
+[25] P.S. Sapaty, ―Integration of ISR with Advanced Command and Control
+for Critical Mission Applications‖, SMi‘s ISR conference, Holiday Inn
+Regents Park, London, 7-8 April 2014. http://www.smionline.co.uk/defence/archive/4-2014/conference/isr.
+[26] P.S. Sapaty, Ruling distributed dynamic worlds. John Wiley & Sons,
+New York, 2005.
+[27] P.S. Sapaty, Mobile processing in distributed and open environments.
+John Wiley & Sons, New York, 1999.
+[28] P.S. Sapaty, A distributed processing system. European Patent No.
+0389655, Publ. 10.11.93, European Patent Office, 1993.
+
+18 | P a g e
+www.ijarai.thesai.org
+

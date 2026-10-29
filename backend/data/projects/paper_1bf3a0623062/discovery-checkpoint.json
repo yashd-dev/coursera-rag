@@ -1,0 +1,361 @@
+{
+  "search_arxivrecent:just help me find papers management what is": [],
+  "search_openalexrecent:just help me find papers management what is": [
+    {
+      "title": "D-KULT: data and tools for routine eco-efficient flight operations",
+      "authors": "Sigrun Matthes, Klaus Gierens, Christine Fr\u00f6mming, Bj\u00f6rn Beckmann, Luca Bugliaro, Katrin Dahlmann, Simone Dietm\u00fcller, Maleen Hanst, Sina Hofer, Julian Jene, Simon Kirschler, Carmen K\u00f6hler, Alexander Lau, Ralph Leem\u00fcller, Aline Liedtke, Maximilian Mendiguchia Meuser, Patrick Peter, Vanessa Santos Gabriel, Ines K\u00f6hler, Gerd Saueressig, Linda Schlemmer, Jonas Sperling, Swen Schlobach, Ralph Schultz, Kristina von Sack, Nathalie Waltenberg, Zarah Lea Zengerling",
+      "year": 2026,
+      "venue": "Journal of Environmentally Compatible Air Transport System",
+      "doi": "10.5194/jecats-1-5-2026",
+      "url": "https://doi.org/10.5194/jecats-1-5-2026",
+      "pdf_url": "https://jecats.copernicus.org/articles/1/5/2026/jecats-1-5-2026.pdf",
+      "abstract": "Abstract. The climate effect of aviation is significant and expected to increase. Reducing the sector\u2019s environmental footprint to contribute to global temperature targets will require not only investments in airframe and engine technologies but also operational strategies such as eco-efficient flight routing, focusing on reducing non-CO2 effects. The D-KULT project (Demonstrator Climate and Environmentally Friendly Air Transport), funded under the German Federal Aviation Research Programme (LuFo), aims to demonstrate the feasibility of optimising flight trajectories with respect to climate effect. The project addresses a multi-objective optimisation problem in which flight trajectories minimise climate effects while maintaining operational and economic efficiency. Operational constraints such as meteorological hazards, regulatory requirements, airspace and airport capacity need to be incorporated to ensure real-world applicability. This work provides a comprehensive overview of the project, describing new developments and major challenges on implementation pathways and summarizes the key findings. D-KULT developed an end-to-end information chain integrating aviation weather forecasting, flight planning, air traffic control, and climate benefit assessment to enable eco-efficient flight routing for testing purposes. Achieving this complex operational and environmental objective required close collaboration across multiple disciplines and substantial upgrades to the majority of participating components. Novel aviation weather products were generated that estimate the climate sensitivity of emissions under prevailing meteorological conditions. Flight planning tools have been extended to take this information into account in addition to the standard data in the flight planning optimization algorithms. In this way, flight planning tools can calculate emissions and corresponding climate effects along flights, both as part of strategic (pre-departure) and tactical (pre-take-off and in-flight) eco-efficient flight optimisation. Developments within D-KULT were tested through a large-scale national contrail avoidance flight trial campaign, including enhanced satellite-based contrail detection methods and assessment and workflow implications in a high-fidelity simulator environment. Results demonstrate substantial progress toward operational climate-optimised aviation but also highlight remaining challenges, including uncertainties in weather forecast and non-CO2 climate effects, automation needs along the workflow and increased controller workload in dense airspaces. A key requirement for operational implementation is transparent information of prediction uncertainties, enabling informed decision-making when rerouting for climate benefit. These remaining research of achievable climate benefits. Further evaluation focused on operational integration, examining air traffic control procedures, and development needs form the basis for the planned successor programme to D-KULT.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Let\u2019s Not Talk About Archives: Open Research for Every Ethnomusicologist",
+      "authors": "Rebecca Draisey-Collishaw",
+      "year": 2026,
+      "venue": "Traditions of Music and Dance",
+      "doi": "10.1017/tmd.2026.10062",
+      "url": "https://doi.org/10.1017/tmd.2026.10062",
+      "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E780AE8574F4B5595E775CDE08EF836D/S3033423326100626a.pdf/div-class-title-let-s-not-talk-about-archives-open-research-for-every-ethnomusicologist-div.pdf",
+      "abstract": "Abstract This article makes a case for why ethnomusicologists\u2014not just those with specialised interests in archives, information management, and intellectual property law\u2014need a serious conversation about open research. Drawing on examples of ethical, regulatory, and infrastructure challenges encountered in the UK-based Access Folk project, I suggest the necessity of dialogue that crosses fault lines about data ownership and control. Articulating a coherent disciplinary-level stance about what open research means in ethnomusicology is an essential step toward a more ethical research praxis, positioning us to confront twenty-first-century technical and regulatory challenges.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Role of Stakeholders in the Policy Process: A Case of Ghana\u2019s National Health Insurance Scheme",
+      "authors": "Richard Osei Boateng, Francis A. Adzei, Aaron Abuosi, NN Appiah Agyekum",
+      "year": 2026,
+      "venue": "Theory and Practice in Social Studies",
+      "doi": "10.65343/tpss.v2i4.161",
+      "url": "https://doi.org/10.65343/tpss.v2i4.161",
+      "pdf_url": "https://www.focuscholar.com/journal/index.php/tpss/article/download/161/150",
+      "abstract": "Policies are declarations of intentions or plans for action. Policies comprise the principal objective and the systematic processes for implementation, monitoring, and evaluation, comprising specifics about resources, stakeholders, and environment. This paper assessed the roles of stakeholders in the policy process and how their roles influence the success or failures of policy formulation and implementation. This was done using the formulation and implementation of the National Health Insurance Scheme as a case study. A qualitative approach was used for this study. Data was collected by face-to-face interview using semi-structured questionnaires. Eighteen (18) participants were interviewed after purposely sampling participants from the Ministry of Health, National Health Insurance Authority, Ghana Health service, some hospitals and subscribers. The actions \u10fff various stakeholders in bringing the scheme t\u10ff reality was very relevant. From the eff\u10ffrts \u10fff the agenda setters thr\u10ffugh the p\u10fflicy f\u10ffrmulat\u10ffrs and implementers. There were vari\u10ffus levels \u10fff interacti\u10ffns between the stakeh\u10fflders and this was very integral t\u10ff the success \u10fff the p\u10fflicy. Every stakeh\u10fflder br\u10ffught their kn\u10ffwledge, ide\u10ffl\u10ffgies and beliefs t\u10ff bear. Feedback fr\u10ffm beneficiaries and pr\u10ffviders has been very useful f\u10ffr the streamlining \u10fff key aspects \u10fff the scheme. Stakeh\u10fflder engagements are still \u10ffrganized t\u10ff help scheme managers c\u10ffrrect and understand challenges \u10ffn the pr\u10ffvider and client sides.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Possibilities of applying kinesthetic digital games in teaching at vocational studies",
+      "authors": "Milorad Muric",
+      "year": 2026,
+      "venue": "Research Square",
+      "doi": "10.21203/rs.3.rs-10927729/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-10927729/v1",
+      "pdf_url": "https://www.researchsquare.com/article/rs-10927729/latest.pdf",
+      "abstract": "",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Contexts, future time perspectives, and senior entrepreneurship in Thailand",
+      "authors": "Thitikan Khamwan",
+      "year": 2026,
+      "venue": "Humanities, Arts and Social Sciences Studies",
+      "doi": "10.69598/hasss.26.3.280615",
+      "url": "https://doi.org/10.69598/hasss.26.3.280615",
+      "pdf_url": "https://so02.tci-thaijo.org/index.php/hasss/article/download/280615/190694",
+      "abstract": "Senior entrepreneurship is a significant phenomenon resulting from population ageing, with senior entrepreneurs increasingly playing an important role in economic activity. The selection of entrepreneurship pursuit amongst older people depends on the context in which they reside and their perception of future time, as entrepreneurial motivations can change across the lifespan. This exploratory qualitative research explores the role of institutional, spatial, and social contexts and draws on the lifespan theory of motivation\u2014socioemotional selectivity theory\u2014to discuss entrepreneurship in later life in Thailand. The research participants consisted of 19 individuals aged 50 years or over who commenced micro, small, and medium-sized businesses in Thailand, a country that became an aged society in 2022 and has a less generous welfare state. The findings suggest that institutional, spatial, and social contexts influence senior entrepreneurs to engage in entrepreneurial activities in several ways. Despite the perception of limited future time, older individuals facing financial adversity may, at times, prioritize financial motives by entering entrepreneurship, challenging the central assumption of socioemotional selectivity theory. Research into senior entrepreneurship in the Thai context emphasises that the phenomenon is complex and context-dependent. This study provides insights into how context influences older individuals\u2019 decisions to become business owners in Thailand and how entry into entrepreneurship helps them address those challenges that come with age.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Substance use among helping professionals: rationalization and negotiation of professional identity",
+      "authors": "Gabriel Kwun Wa Lee, Gloria Hongyee Chan, Yiu Tsang Andrew Low, T. Wing Lo",
+      "year": 2026,
+      "venue": "Frontiers in Psychiatry",
+      "doi": "10.3389/fpsyt.2026.1953018",
+      "url": "https://doi.org/10.3389/fpsyt.2026.1953018",
+      "pdf_url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1953018/pdf",
+      "abstract": "Introduction Given the scarce research on the drug use situation among helping professionals and the existing organizational structures that may affect them, this study explores how helping professionals in Hong Kong make sense of personal drug use and negotiate professional identity. Methods Narrative, semi-structured interviews were conducted with 15 helping professionals. Interviews were conducted in Cantonese, transcribed verbatim, and translated into English, prioritizing semantic equivalence for colloquialisms. Culturally specific terms were retained in parentheses with brief explanatory notes where needed. An interpretivist, reflexive thematic analysis was undertaken using NVivo. Results Drug use served coping, social and/or sexual functions. Participants managed cognitive dissonance through compartmentalization, normalization and critiques of illegality, and by reframing lived experience as strengthening rapport and credibility with clients. Conclusion While their drug use may not have directly caused impairment, their rationalization of behavior instead of disclosing it and seeking professional support suggests underlying organizational and institutional issues. Anticipated workplace sanctions and professional impairment discourse fostered concealment and delayed help-seeking. Therefore, rather than adopting a zero-tolerance governance approach, establishing clear practice-related thresholds and providing confidential, harm reduction-informed workforce supports may better protect these professionals\u2019 wellbeing and ensure service quality.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Clinical translation of liquid biopsy in early cancer screening: biofluid selection, model construction, and clinical validation",
+      "authors": "Pin Cui, Shu Xu, Xiaohui Lin, Shiyi Song, Bingding Huang, Zhiming Xu",
+      "year": 2026,
+      "venue": "Frontiers in Oncology",
+      "doi": "10.3389/fonc.2026.1946352",
+      "url": "https://doi.org/10.3389/fonc.2026.1946352",
+      "pdf_url": "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2026.1946352/pdf",
+      "abstract": "Global cancer incidence continues to rise, underscoring the urgent need for effective early detection strategies. Liquid biopsy shows promise as a minimally invasive approach, yet only a limited number of assays have successfully transitioned from research to clinical practice. This review examines the critical decisions and challenges encountered along the translational pathway for liquid biopsy based early cancer screening, covering biofluid selection, biomarker characteristics, multi-omics integration, model construction, and the hierarchy of clinical evidence. We highlight the importance of biologically driven complementarity in biomarker combination, rigorous control group design, and prospective real-world validation, while also identifying key gaps that currently constrain clinical adoption. Collectively, these considerations aim to inform more efficient development strategies and help bridge the gap between technological innovation and clinically impactful tests.",
+      "cited_by": 0,
+      "origin": "openalex"
+    }
+  ],
+  "search_arxivrecent:just help me find": [
+    {
+      "title": "Heat Reveals What Clouds Conceal: Global Carbon & Longitudinally Asymmetric Chemistry on LTT 9779 b",
+      "authors": "Reza Ashtari, Sean Collins, Jared Splinter, Kevin B. Stevenson, Vivien Parmentier, Jonathan Brande, Suman Saha, Sarah Stamer, Ian J. M. Crossfield, James S. Jenkins, K. Angelique Kahle, Joshua D. Lothringer, Nishil Mehta, Nicolas B. Cowan, Diana Dragomir, Laura Kreidberg, Thomas M. Evans-Soma, Tansu Daylan, Olivia Venot, Xi Zhang",
+      "year": 2025,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/2510.04863v1",
+      "pdf_url": "https://arxiv.org/pdf/2510.04863v1",
+      "abstract": "LTT-9779 b is an ultra-hot Neptune (Rp ~ 4.7 Re, Mp ~ 29 Me) orbiting its Sun-like host star in just 19 hours, placing it deep within the \"hot Neptune desert,\" where Neptunian planets are seldom found. We present new JWST NIRSpec G395H phase-curve observations that probe its atmospheric composition in unprecedented detail. At near-infrared wavelengths, which penetrate the high-altitude clouds inferred from previous NIRISS/SOSS spectra, thermal emission reveals a carbon-rich atmosphere with opacity dominated by carbon monoxide (CO) and carbon dioxide (CO2). Both species are detected at all orbital phases, with retrieved mixing ratios of 10^-1 for CO and 10^-4 for CO2, indicating a globally well-mixed reservoir of carbon-bearing gases. We also moderately detect water vapor (H2O) and tentatively detect sulfur dioxide (SO2), providing insight into its chemistry and possible photochemical production under intense stellar irradiation. From these detections we infer a carbon-to-oxygen ratio near unity (C/O ~ 1) and a metallicity exceeding 500X Solar, consistent with equilibrium chemistry predictions for high-temperature atmospheres. This enrichment raises the mean molecular weight, reducing atmospheric escape, and likely helps LTT-9779 b retain a substantial atmosphere despite extreme irradiation. Our findings show that LTT-9779 b survives where few planets can, maintaining a carbon-rich atmosphere in a region where hot Neptune-class worlds are expected to evaporate. This makes LTT-9779 b a valuable laboratory for studying atmospheric escape and chemical processes under extreme conditions, offering new insight into the survival of planets in the hot Neptune desert.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    },
+    {
+      "title": "Issues with the High Definition Space Telescope (HDST) ExoEarth Biosignature Case: A Critique of the 2015 AURA Report \"From Cosmic Birth to Living Earths: the future of UVOIR Astronomy\"",
+      "authors": "Martin Elvis",
+      "year": 2015,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/1509.07798v1",
+      "pdf_url": "https://arxiv.org/pdf/1509.07798v1",
+      "abstract": "\"From Cosmic Birth to Living Earths\" advocates a 12-meter optical/near-IR space telescope for launch ~2035. The goal that sets this large size is the detection of biosignatures from Earth-like planets in their habitable zones around G-stars. The discovery of a single instance of life elsewhere in the universe would be a profound event for humanity. But not at any cost. At 8-9B USD this High Definition Space Telescope (HDST) would take all the NASA astrophysics budget for nearly 20 years, unless new funds are found. For a generation NASA could build no \"Greater Observatories\" matching JWST in the rest of the spectrum. This opportunity cost prompted me to study the driving exobiosphere detection case for HDST. I find that: (1) the focus on G-stars is not well justified; (2) only G-stars require the use of direct imaging; (3) in the chosen 0.5 - 2.5 micron band, the available biosignatures are ambiguous and a larger sample does not help; (4) the expected number of exobiospheres is 1, with a 5% chance of zero; (5) the accessible sample size is too small to show that exobiospheres are rare; (6) a sufficiently large sample would require a much larger telescope; (7) the great progress in M-star planet spectroscopy - both now and with new techniques, instruments and telescopes already planned - means that a biosignature will likely be found before HDST could complete its search in ~2045. For all these reasons I regretfully conclude that HDST, while commendably ambitious, is not the right choice for NASA Astrophysics at this time. The first exobiosphere discovery is likely to be such a major event that scientific and public pressure will produce new funding across a range of disciplines, not just astrophysics, to study the nature of Life in the Universe. Then will be the time when a broader science community can advocate for a mission that will make definitive exobiosphere measurements.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    },
+    {
+      "title": "Entanglement-Enhanced Classical Communication",
+      "authors": "David A. Herrera-Mart\u00ed",
+      "year": 2008,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/0810.2041v2",
+      "pdf_url": "https://arxiv.org/pdf/0810.2041v2",
+      "abstract": "This thesis will be focused on the classical capacity of quantum channels, one of the first areas treated by quantum information theorists. The problem is fairly solved since some years. Nevertheless, this work will give me a reason to introduce a consistent formalism of the quantum theory, as well as to review fundamental facts about quantum non-locality and how it can be used to enhance communication. Moreover, this reflects my dwelling in the spirit of classical information theory, and it is intended to be a starting point towards a thorough study of how quantum technologies can help to shape the future of telecommunications. Whenever it was possible, heuristic reasonings were introduced instead of rigorous mathematical proofs. This finds an explanation in that I am a self-taught neophyte in the field, and just about every time I came across a new concept, physical arguments were always more compelling to me than just maths. The technical content of the thesis is twofold. On one hand, a quadratic classification based on optimization programs that I devised for distinguishing entangled states is presented in Chapter 4. In second place, a less difficult yet I hope equally interesting technical part consists of versions of some proofs throughout the text.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    }
+  ],
+  "search_openalexrecent:just help me find": [
+    {
+      "title": "From Chopin to Kitsch? Pauline Viardot's Vocal Mazurkas and the popularisation of classical music",
+      "authors": "Stacy Olive Jarvis",
+      "year": 2026,
+      "venue": "Journal of Music Theory and Transcultural Music Studies",
+      "doi": "10.5281/zenodo.21377581",
+      "url": "https://doi.org/10.5281/zenodo.21377581",
+      "pdf_url": "https://jmttms.com/index.php/jmmtms/article/download/43/40",
+      "abstract": "This article examines the concept of \u2018popular music\u2019 in the context of the work of Fr\u00e9d\u00e9ric Chopin (1810\u20131849). The paper analyses six mazurkas by the Polish composer and their transcription for voice and piano, performed by the opera diva Pauline Viardot (1821\u20131910) to words by the French poet Louis Pomme (1831\u20131901). This chamber vocal cycle, composed by Viardot, illustrates the established poetics of the salons of the second third of the 19th century, where literature and music converged. Based on an analysis of various sources, this study examines the history of the works\u2019 creation, their imagery and intonation, as well as the harmonic features of these vocal miniatures, whilst reconstructing their context. As a result, a connection is revealed between Viardot\u2019s vocal mazurkas and Chopin\u2019s songs, composed between 1829 and 1847, in the themes of love and loneliness. The aim of this article is to investigate how the opera singer bridges the gap between classical music and the mass audience and becomes a creator of kitsch. The research methodology includes an analysis of historical sources, as well as a musical and literary analysis of Chopin\u2019s and Viardot\u2019s mazurkas. The author concludes that kitsch emerges at the intersection of classical and popular music, where the integration of various elements from different mazurkas helps Viardot achieve a precise correspondence between the expressive content of the text and Chopin\u2019s musical language.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "The tale of two systems: EFL teachers' lived realities in Addis Ababa",
+      "authors": "Yoseph F. Sahle, Abebe Gebretsadik Woldearegawi",
+      "year": 2026,
+      "venue": "Journal of Second and Multiple Language Acquisition",
+      "doi": "10.5281/zenodo.22679221",
+      "url": "https://doi.org/10.5281/zenodo.22679221",
+      "pdf_url": "https://science-res.com/index.php/jsmula/article/download/282/200",
+      "abstract": "Journal of Second and Multiple Language Acquisition-JSMULA",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "EXPLORING LEARNING GAPS AND SUPPORT NEEDS IN DIFFERENTIATION AND INTEGRATION TOPIC",
+      "authors": "Maziharita Mohamood",
+      "year": 2026,
+      "venue": "MALAYSIAN JOURNAL OF INNOVATION IN ENGINEERING AND APPLIED SOCIAL SCIENCES (MYJIEAS)",
+      "doi": null,
+      "url": "https://openalex.org/W7220164756",
+      "pdf_url": "https://myjieas.psa.edu.my/myjieas/article/download/125/90",
+      "abstract": "The purpose of this research was to explore any learning difficulties faced by students enrolled in Differentiation and Integration under the course DBM20173 of Engineering Mathematics 2. The aim was to pinpoint possible reasons that affected students\u2019 comprehension and utilization of concepts of calculus, especially for questions related to interpretation, selection of methods, visualization, and problem-solving. This was accomplished using a combination of methods, namely, pre-test results, error identification, survey from students, interview or focus group discussion and observation by lecturer. The results revealed that students experienced difficulty only with the unfamiliar and application-based questions rather than direct procedural ones. According to the pre-test results, volume of bounded regions represented the highest number of difficulties among the participants with 25 out of 30 participants (83.3%), while trigonometric, exponential and reciprocal integration involved 24 students (80.0%) and area under a curve involved 23 students (76.7%). As many as 248 errors occurred during the process; formula error was found to be the most common type of errors occurring in 58 cases (23.4%), while visualisation error occurred in 43 cases (17.3%), followed by method-selection error with 42 occurrences (16.9%). The questionnaire results revealed that the level of readiness to engage in digital and immersive learning assistance was very high, as the mean score equaled 4.39, while need for visualisation and application-based assistance was also very high (mean score 4.34).",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "The feasibility of a psychometric measure for the experinces of funerals",
+      "authors": "Julie Rugg, Peter Branney, Elizabeth R. Walters, Adam Patel, Sarah Jones",
+      "year": 2026,
+      "venue": "White Rose Research Online (University of Leeds, The University of Sheffield, University of York)",
+      "doi": null,
+      "url": "https://openalex.org/W7223428032",
+      "pdf_url": "https://eprints.whiterose.ac.uk/id/eprint/247062/1/The_feasibility_of_a_psychometric_measure_for_the_experiences_of_funerals.pdf",
+      "abstract": "To test the feasibility and reliability and validity of the Experiences of Funerals measure (EIFFEL) measure in a community population. Using a non-experimental psychometric design, 194 participants completed EIFFEL, which was analysed using item completion rates, exploratory and confirmatory factory analyses and corroborated with free-text comments. EIFFEL shows good acceptability although internal consistency was low (Cronbach\u2019s alpha of 0.41,N= 49). Analysis has allowed us to make three practical recommendations: (1) focus on people who had, or felt they should have had, a role in co-arranging the funeral and (2) use numerical rather than categorical scales and (3) provide scale anchoring. Combined, we have developed a second EIFFEL version for further study. Given its acceptability, the second version of EIFFEL could be used in practice with caution, taking care to evaluate its use, particularly its reliability and validity.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Doing Game Design in Theatre",
+      "authors": "Ben J. Kirman, Charline Foch, David Gochfeld, Marian F. Ursu",
+      "year": 2026,
+      "venue": "White Rose Research Online (University of Leeds, The University of Sheffield, University of York)",
+      "doi": null,
+      "url": "https://openalex.org/W7170997623",
+      "pdf_url": "https://eprints.whiterose.ac.uk/id/eprint/243733/1/ludicdramaturgy.pdf",
+      "abstract": "Games and Theatre have a long shared history, but are often separated along disciplinary lines. We investigate this from a practical and design perspective, and present a unique project that supported nine professional theatres bringing game design and game technologies into their work over five years. Based on a series of interviews, discussions and direct reflections on game design work embedded within the project, we investigate the frictions and opportunities that emerge when game design practice operates within professional theatres. This includes practical issues, such as complexities of rehearsing shows with thousands of variations, differing expectations around technology development, to surprising design problems like convincing audiences that the game choices are actually real and not a theatrical trick. We highlight that while frictions between disciplines run deep, a shared spirit of experimentation, and desire to tell interesting and rewarding stories, creates genuine opportunities for creative exchange that can enrich both disciplines.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Vrste kampilobaktrov v klavnicah za perutnino: pregled",
+      "authors": "Ivana Zuber Bogdanovi\u0107",
+      "year": 2026,
+      "venue": "Repository of the University of Ljubljana (University of Ljubljana)",
+      "doi": null,
+      "url": "https://openalex.org/W7202417848",
+      "pdf_url": "https://repozitorij.uni-lj.si/Dokument.php?id=244205&dn=",
+      "abstract": "Campylobacter is a constant concern in ensuring food safety, as it is one of the most common pathogens in food. The main source of Campylobacter species in food is poultry meat, and the primary production of this meat is a critical point where measures need to be taken to reduce its presence in the food chain. Therefore, poultry slaughterhouses are recognized as places where it is necessary to implement measures to control and reduce the number of Campylobacter spp. Food business operators are obliged to ensure greater hygiene on the slaughter line, through the inspection of equipment for each step of slaughter and the application of regular cleaning protocols. Continuous monitoring of the presence and abundance of Campylobacter spp. on the slaughter line provides data on the validity of hygiene control measures in the slaughterhouse, as well as the data needed to assess the microbiological risk in poultry meat. Monitoring the presence of Campylobacter spp. in poultry slaughterhouses is a basic activity that is necessary for taking measures to reduce contamination, improve microbiological safety in poultry processing and thus improve the food safety system as a whole. This review aims to highlight the importance of investigating the prevalence of Campylobacter spp. in poultry slaughterhouses, but also the importance of applying measures to prevent and control this pathogen both on farms and in slaughterhouses. These measures are necessary to minimize the presence and transmission of Campylobacter in poultry, thereby reducing the risk of foodborne diseases.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Lived Experiences of Couples Regarding Grief Caused by Recurrent Miscarriages in Infertile Women: A Phenomenological Study",
+      "authors": "Hoda Zaraj, Manijeh Firoozi, Katayon Vakilian, Fatimah Nosrati",
+      "year": 2026,
+      "venue": "Psychology of Woman Journal",
+      "doi": null,
+      "url": "https://openalex.org/W7216638656",
+      "pdf_url": "https://journals.kmanpub.com/index.php/psywoman/article/download/5487/9907",
+      "abstract": "Objective: This study aimed to gain an in-depth understanding of couples\u2019 lived experiences of grief caused by recurrent miscarriages in infertile women. Methods and Materials: This qualitative study was conducted using a descriptive phenomenological approach. Seventeen participants (14 women and 3 men) with a history of at least two consecutive miscarriages and infertility were purposively selected from specialized infertility centers in Tehran and Qom in 2025. Data were collected through semi-structured interviews (individual and couple interviews) and analyzed using Colaizzi\u2019s seven-step method. Findings: Six main themes emerged: emotional turmoil (shock, anxiety, guilt, chronic sorrow, and hopelessness); continuity of loss (multilayered, disenfranchised, and complicated grief); distorted self-concept (sense of bodily defectiveness, doubts about gender identity, and reduced self-esteem); the relationship under the shadow of loss (mutual empathy, distance resulting from differences in grieving styles, and strengthened bond); coping and adaptation (individual strategies, social support, and the role of healthcare staff); and search for meaning (religious meaning-making, post-traumatic growth, and redefinition of goals). Conclusion: Recurrent miscarriage is an existential, relational, and culture-based phenomenon. Grief in this context is multilayered, chronic, and often overlooked. A deep understanding of this experience can contribute to the design of couple-centered interventions and enhance healthcare providers\u2019 sensitivity.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "Motivations for internationally qualified physiotherapists to study Masters' degrees in the United Kingdom [Abstract]",
+      "authors": "Bendall, Amy, Jones, Karen",
+      "year": 2026,
+      "venue": "ORCA Online Research @Cardiff (Cardiff University)",
+      "doi": "10.1016/j.physio.2026.102236",
+      "url": "https://doi.org/10.1016/j.physio.2026.102236",
+      "pdf_url": "https://orca.cardiff.ac.uk/id/eprint/182582/1/Abstract%20695%20Bendall%20%26%20Jones.pdf",
+      "abstract": "",
+      "cited_by": 0,
+      "origin": "openalex"
+    }
+  ],
+  "search_arxiv:management what is latest trend": [
+    {
+      "title": "Natural User Interfaces: Trend in Virtual Interaction",
+      "authors": "Dr. Manju Kaushik, Rashmi Jain",
+      "year": 2014,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/1405.0101v1",
+      "pdf_url": "https://arxiv.org/pdf/1405.0101v1",
+      "abstract": "Based on the fundamental constraints of natural way of interacting such as speech, touch, contextual and environmental awareness,immersive 3D experiences-all with a goal of a computer that can see listen, learn talk and act. We drive a set of trends prevailing for the next generation of user interface: Natural User Interface (NUI).New technologies are pushing the boundaries of what is possible without touching or clicking an interface- paving the way of interaction to information visualization and opportunities in human towards more natural interaction than ever before. In this paper we consider the trends in computer interaction through that must be taken into consideration to come up-in the near future with a well-designed-NUI.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    },
+    {
+      "title": "What will they do? Modelling self-evacuation archetypes",
+      "authors": "Dhirendra Singh, Ken Strahan, Jim McLennan, Joel Robertson, Bhagya Wickramasinghe",
+      "year": 2021,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/2105.12366v1",
+      "pdf_url": "https://arxiv.org/pdf/2105.12366v1",
+      "abstract": "A decade on from the devastating Black Saturday bushfires in Victoria, Australia, we are at a point where computer simulations of community evacuations are starting to be used within the emergency services. While fire progression modelling is embedded in strategic and operational settings at all levels of government across Victoria, modelling of community response to such fires is only just starting to be evaluated in earnest. For community response models to become integral to bushfire planning and preparedness, the key question to be addressed is: when faced with a bushfire, what will a community really do? Typically this understanding has come from local experience and expertise within the community and services, however the trend is to move towards more informed data driven approaches. In this paper we report on the latest work within the emergency sector in this space. Particularly, we discuss the application of Strahan et al.'s self-evacuation archetypes to an agent-based model of community evacuation in regional Victoria. This work is part of the consolidated bushfire evacuation modelling collaboration between several emergency management stakeholders.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    },
+    {
+      "title": "Machine Learning for a Sustainable Energy Future",
+      "authors": "Zhenpeng Yao, Yanwei Lum, Andrew Johnston, Luis Martin Mejia-Mendoza, Xin Zhou, Yonggang Wen, Alan Aspuru-Guzik, Edward H. Sargent, Zhi Wei Seh",
+      "year": 2022,
+      "venue": "arXiv",
+      "doi": null,
+      "url": "https://arxiv.org/abs/2210.10391v1",
+      "pdf_url": "https://arxiv.org/pdf/2210.10391v1",
+      "abstract": "Transitioning from fossil fuels to renewable energy sources is a critical global challenge; it demands advances at the levels of materials, devices, and systems for the efficient harvesting, storage, conversion, and management of renewable energy. Researchers globally have begun incorporating machine learning (ML) techniques with the aim of accelerating these advances. ML technologies leverage statistical trends in data to build models for prediction of material properties, generation of candidate structures, optimization of processes, among other uses; as a result, they can be incorporated into discovery and development pipelines to accelerate progress. Here we review recent advances in ML-driven energy research, outline current and future challenges, and describe what is required moving forward to best lever ML techniques. To start, we give an overview of key ML concepts. We then introduce a set of key performance indicators to help compare the benefits of different ML-accelerated workflows for energy research. We discuss and evaluate the latest advances in applying ML to the development of energy harvesting (photovoltaics), storage (batteries), conversion (electrocatalysis), and management (smart grids). Finally, we offer an outlook of potential research areas in the energy field that stand to further benefit from the application of ML.",
+      "cited_by": 0,
+      "origin": "arxiv"
+    }
+  ],
+  "search_openalex:management what is latest trend": [
+    {
+      "title": "Green human resource management \u2013 the latest trend or strategic necessity?",
+      "authors": "Edyta Bombiak",
+      "year": 2019,
+      "venue": "Journal of Entrepreneurship and Sustainability Issues",
+      "doi": "10.9770/jesi.2019.6.4(7)",
+      "url": "https://doi.org/10.9770/jesi.2019.6.4(7)",
+      "pdf_url": "https://jssidoi.org/jesi/article/download/310",
+      "abstract": "Our dynamically developing market economy has, for some time now, been a witness to a growing interest in the concept of business management involving conscious activities oriented not only at financial profits and economic aspects but also at broadly understood social and ecological interests.Such an approach, termed sustainable development, is becoming an imperative in the contemporary world, hence the decision processes of entrepreneurs tend to be more and more often guided by the principles of environmental corporate responsibility.The author of the study reckons that the implementation of the above business model requires, most of all, the engagement of the human factor.Eco-oriented management is performed exclusively by employees with positive attitudes towards the environment, green competencies, and responsible for the environmental consequences of their actions.Therefore, human resource management oriented at supporting the implementation of the principles of ecological development and the development of environmentally-friendly attitudes of employees referred to as Green Human Resource Management plays an unprecedented role in environmental performance.Green Human Resource Management is a novel approach to the performance of the HR function within organizationsone where environmental contexts constitute the foundation of all initiatives.This involves the application of HR policies in order to promote the sustainable use of company resources, to support ecology and development of ecological sensitivity in workers.This is because ecological awareness of employees and managers is key to the operations of any company complying with the concept of sustainability.The purpose of the study is to present the relevance of Green Human Resource Management to the operations of contemporary companies and indicate practices which can be undertaken in the field to promote knowledge related to the subject matter and extend the scope of concept application as a tool for constructing sustainable companies.The theoretical part of the study, drafted on the basis of a world's literature overview, identifies several environmental practices that can be employed in the field of human resource management at each stage of the personnel process, starting with work design, employee selection, work discipline shaping, to the development of \"green\" competencies and \"green\" working conditions.The empirical part of the research demonstrates the results of a questionnaire conducted at a random population of 300 Polish enterprises.The research approach used enabled the researcher to identify * The research was carried out under the research theme No. 500/18/",
+      "cited_by": 89,
+      "origin": "openalex"
+    },
+    {
+      "title": "Latest trends in Top Public Management in the European Union",
+      "authors": "Herma Kuperus, Anita. Rode",
+      "year": 2010,
+      "venue": "Archive of European Integration (AEI) (University of Pittsburgh)",
+      "doi": null,
+      "url": "https://openalex.org/W1524718779",
+      "pdf_url": "http://aei.pitt.edu/14695/1/20100519110701_Eipascope_2010_1PublicManagement.pdf",
+      "abstract": "Top public managers play a vital role in national developments. They take decisions that have a great impact on national policies and different stakeholders. They also have the role of employer for civil servants. All these responsibilities imply that they should acquire certain skills and competences as well as different support systems and employment conditions than those of other civil servants. This article examines different top public management models in the 27 EU Member States. It starts by grouping all European top public management systems in five models, and then follows the trends in employment and recruitment systems for top public mangers and defines competences that are necessary for top managers in public administration. The article describes differences between management and leadership skills during the reform process in public administration, and illustrates main tendencies through some best practices in local, regional or national public administrations in Europe. It also looks at the representation of women in top public management positions.",
+      "cited_by": 4,
+      "origin": "openalex"
+    },
+    {
+      "title": "Latest Project Management Trends and Challenges with COVID-19",
+      "authors": "Rajesh Dominic Savio",
+      "year": 2021,
+      "venue": "Eximia",
+      "doi": null,
+      "url": "https://openalex.org/W3204616895",
+      "pdf_url": "https://eximiajournal.com/index.php/eximia/article/download/53/19",
+      "abstract": "Since the COVID-19 crisis struck, organizations in vulnerable sectors worldwide have seen their revenues drop substantially in a matter of weeks \u2014 in some cases, dwindling to almost nothing. Countless companies have taken reactive and efficient steps to ward off major losses, such as establishing remote work arrangements, securing supply chains, reducing employee workload, cutting costs, and applying for government support. However, as the COVID-19 continues its disruption, the livelihood of many entrepreneurs and small business owners continues to remain threatened.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "What's the Latest? Cultural Age Deadlines for Family Transitions",
+      "authors": "Richard A. Settersten, Gunhild O. Hagestad",
+      "year": 1996,
+      "venue": "The Gerontologist",
+      "doi": "10.1093/geront/36.2.178",
+      "url": "https://doi.org/10.1093/geront/36.2.178",
+      "pdf_url": "https://academic.oup.com/gerontologist/article-pdf/36/2/178/1522858/36-2-178.pdf",
+      "abstract": "Several questions about the degree to which cultural schedules exist for the timing of life transitions, as well as the nature of these schedules, remain unexplored. In this article, we examine age timetables for central family transitions. Do individuals perceive age deadlines for these transitions, and by what ages do they think that men or women should have experienced them? How much consensus exists about these deadlines? Why are they considered important, and what consequences are perceived for men or women who miss them? A key theoretical question with which we are concerned is whether contemporary thinking about these deadlines can be considered \"normative.\" A random sample of 319 adults from the Chicago metropolitan area were interviewed about eleven separate life-course transitions, six of which were from the family sphere. By and large, the majority of respondents perceived deadlines for most of the family transitions discussed. While the deadlines cited were quite variable in range, they were also concentrated within a narrow band of ages. The dimensions underlying individuals' thinking about deadlines were centered primarily on the development of self and personality, or were linked to concerns about the sequencing of roles and experiences over lifetime. However, late timing was generally thought to be acceptable, accompanied by little social tension, and without consequences for the individual's life or the lives of other persons to whom one is intimately connected. While a rough, \"normal biography\" of family life existed in the minds of our respondents, the deadlines attached to that biography were flexible guidelines for the course of family life, not rigid, normative principles. These findings are discussed in light of recent debates about life-course theory and research.",
+      "cited_by": 347,
+      "origin": "openalex"
+    },
+    {
+      "title": "Latest Trends and New Tools Being Used in Strategic Management",
+      "authors": "Andr\u00e1s N\u00e1br\u00e1di, David Forest, Be\u00e1ta Bittner, T\u00fcnde Zita Kov\u00e1cs, Hajnalka Madai, Adrian  Szil\u00e1rd Nagy",
+      "year": 2021,
+      "venue": "International Journal of Engineering and Management Sciences",
+      "doi": "10.21791/ijems.2021.1.7.",
+      "url": "https://doi.org/10.21791/ijems.2021.1.7.",
+      "pdf_url": "https://ojs.lib.unideb.hu/IJEMS/article/download/9103/8449",
+      "abstract": "In today\u2019s rapidly changing world, there is an increased need for excellent strategic planning. A firm\u2019s survival may indeed hinge on the firm\u2019s planning process being exemplary. Various aspects of the strategic planning process are under review today as organizations wrestle to compete more effectively in an ever-changing world. This paper reveals and describes five new trends or tools being utilized today by firms to more effectively engage in strategic planning. Specifically, the new trends and tools to be discussed in this paper are as follows: increased need to follow a strategic planning model; increased need to develop quality vision and mission statements; a new improved method for incorporating SWOT analysis into practice. Utilizing two matrices one internal and one external to provide a less biased way to access the current strategy fit with conditions facing the firm. Explain the use of a decision matrix commonly called the QSPM (Quantitative Strategic Planning Matrix) for assessing the relative attractiveness of various strategies being considered for implementation. The purpose of this paper is to familiarize readers with basic new tools and techniques being used by organizations to effectively develop an improved strategic plan for the firm.",
+      "cited_by": 1,
+      "origin": "openalex"
+    },
+    {
+      "title": "Primary Bone Cancers: Latest Trends in Pathogenesis, Diagnosis and Management",
+      "authors": "Nursuffi Rathiyah binti Mohd Hizam, Kaswinna Malar A, P Ananthan, Nur Zahrin Syahirah binti Raman, Kishore Gopal Banerjee",
+      "year": 2021,
+      "venue": "International Journal of Sciences: Basic and Applied Research",
+      "doi": null,
+      "url": "https://openalex.org/W3168004059",
+      "pdf_url": "https://gssrr.org/JournalOfBasicAndApplied/article/download/12556/5963",
+      "abstract": "Primary bone tumours arising from the bony tissue are further classified into three groups; bone-producing, cartilage-producing, and tumours of unknown origin. In this review article, we have analyzed the latest trends in the pathogenesis, diagnosis, and management of the key primary malignant tumours (osteosarcoma, chondrosarcoma, and Ewing sarcoma) of bony origin. The Hippo-Yap signaling pathway is a newly discovered pathogenesis for osteosarcoma, and the inhibition contributes to the treatment of the malignancy. Moreover, carbon-ion particle therapy is proven to be a remedy for radioresistant tumours. The advancement of diagnosis methods for osteosarcoma is hastened with the identification of biomarker microRNA, liquid biopsy, and \u2018Omic\u2019 technology. Chondrosarcoma has a different and tailored approach to manage patients. Due to the unknown pathogenesis, treatments are being considered holistically depending on the patients\u2019 age, overall health, medical history, type and stages of chondrosarcoma, the severity of the carcinoma, and patients' preference or opinion on the treatment plans. It has no specific treatment, and the ideal goal is to remove the mass and reduce the likelihood of relapse. Lastly, for Ewing sarcoma, there is a variety of new targeted therapy such as Lysine-specific demethylase-1(LSD-1), PRKCB, Poly(ADP-Ribose)polymerase1 inhibitors(PARBP1) have been developed to treat recurrent ES, and a large dose of chemotherapy with autologous hematopoietic stem cell has been identified to cause toxicity in Ewing sarcoma. The origin of Ewing sarcoma remained unknown, but the rearrangement of the gene is thought to be the cause of tumorigenesis of Ewing sarcoma.",
+      "cited_by": 0,
+      "origin": "openalex"
+    },
+    {
+      "title": "The International Epidemiology of Lung Cancer: Latest Trends, Disparities, and Tumor Characteristics",
+      "authors": "Ting\u2010Yuan David Cheng, Susanna M. Cramb, Peter David Baade, Danny R. Youlden, Chukwumere E. Nwogu, Mary E. Reid",
+      "year": 2016,
+      "venue": "Journal of Thoracic Oncology",
+      "doi": "10.1016/j.jtho.2016.05.021",
+      "url": "https://doi.org/10.1016/j.jtho.2016.05.021",
+      "pdf_url": "http://www.jto.org/article/S1556086416304968/pdf",
+      "abstract": "",
+      "cited_by": 599,
+      "origin": "openalex"
+    },
+    {
+      "title": "Military Robotics: Latest Trends and Spatial Grasp Solutions",
+      "authors": "Peter \u0160imon",
+      "year": 2015,
+      "venue": "INTERNATIONAL JOURNAL OF ADVANCED RESEARCH IN ARTIFICIAL INTELLIGENCE",
+      "doi": "10.14569/ijarai.2015.040402",
+      "url": "https://doi.org/10.14569/ijarai.2015.040402",
+      "pdf_url": "http://thesai.org/Downloads/IJARAI/Volume4No4/Paper_2-Military_Robotics_Latest_Trends_and_Spatial_Grasp_Solutions.pdf",
+      "abstract": "A review of some latest achievements in the area of military robotics is given, with main demands to management of advanced unmanned systems formulated. The developed Spatial Grasp Technology, SGT, capable of satisfying these demands will be briefed. Directly operating with physical, virtual, and executive spaces, as well as their combinations, SGT uses high-level holistic mission scenarios that self-navigate and cover the whole systems in a super-virus mode. This brings top operations, data, decision logic, and overall command and control to the distributed resources at run time, providing flexibility, ubiquity, and capability of self-recovery in solving complex problems, especially those requiring quick reaction on unpredictable situations. Exemplary scenarios of tasking and managing robotic collectives at different conceptual levels in a special language will be presented. SGT can effectively support gradual transition to automated up to fully robotic systems under the unified command and control.",
+      "cited_by": 93,
+      "origin": "openalex"
+    }
+  ]
+}

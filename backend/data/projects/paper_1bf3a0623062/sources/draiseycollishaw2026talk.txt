@@ -1,0 +1,1827 @@
+=== PAGE 1 ===
+Traditions of Music and Dance (2026), 1–35
+doi:10.1017/tmd.2026.10062
+
+R E S E A R C H A RT I C L E
+
+Let’s Not Talk About Archives: Open Research
+for Every Ethnomusicologist
+Rebecca Draisey-Collishaw
+School of Languages, Arts and Societies, The University of Sheffield, UK
+Email: r.b.draisey-collishaw@sheffield.ac.uk
+(Received 12 February 2026 UTC; revised 21 July 2026 UTC; accepted 28 August 2026 UTC)
+
+Abstract
+This article makes a case for why ethnomusicologists—not just those with specialised
+interests in archives, information management, and intellectual property law—need a
+serious conversation about open research. Drawing on examples of ethical, regulatory,
+and infrastructure challenges encountered in the UK-based Access Folk project, I suggest
+the necessity of dialogue that crosses fault lines about data ownership and control.
+Articulating a coherent disciplinary-level stance about what open research means in
+ethnomusicology is an essential step toward a more ethical research praxis, positioning us
+to confront twenty-first-century technical and regulatory challenges.
+
+Keywords: CARE principles; data management; FAIR principles; open research; risk
+management
+
+The Access Folk project supports culture change within England’s folk singing
+scene through research that prioritises accessibility, participation, and, ultimately, sustainability. This five-year project responds to a perceived decline in
+folk clubs since the height of England’s second folk revival in the 1960s (Butler et
+al. 2023; Hield et al. 2026; cf. Hield and Mansfield 2019; MacKinnon [1993] 1994). In
+the twenty-first century, participation in folk singing skews to aging, male,
+heteronormative, white, middle-class, and well-educated demographics, though,
+as our research also shows, local realities are considerably more varied (Kay and
+Hield 2024; Kay 2025; Hield et al. 2026). Based at The University of Sheffield
+(TUoS), funded by a United Kingdom Research and Innovation (UKRI) Future
+Leaders Fellowship, and staffed by four ethnomusicologists—primary investigator Fay Hield and research associates Esbjörn Wettermark (2022–2027), Kirsty
+© The Author(s), 2026. Published by Cambridge University Press on behalf of the International Council for
+Traditions of Music and Dance. This is an Open Access article, distributed under the terms of the Creative Commons
+Attribution licence (http://creativecommons.org/licenses/by/4.0), which permits unrestricted re-use, distribution
+and reproduction, provided the original article is properly cited.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 2 ===
+2
+
+Rebecca Draisey-Collishaw
+
+Kay (2022–2024), and myself (2023–2027)—as well as project manager Helen
+Grindley (2022–2027) and communications officer Rowan Piggott (2022–2027),
+the Access Folk team is guided by an advisory board of thirteen academics, arts
+organisations, and community members representing different interest groups
+from within/adjacent to England’s folk scene (Access Folk 2026a).1 Each stage of
+our project has prioritised consultation and co-production: research with—not
+on—the folk scene (cf. Vaughn and Jacquez 2020). Indeed, the participatory and
+activist nature of our research is an essential backdrop for thinking through the
+ethics and logistics making generated knowledge accessible beyond the life of the
+project. If the aim of our co-produced research is culture change that supports
+sustainable participation in singing, then stakeholders must have access to
+supporting datasets so that they can be self-determining in the application,
+deployment, and development new knowledge (UKRI 2025b).2
+I came to the Access Folk project not as a scholar with deep expertise in
+English-language folk singing, but as an ethnomusicologist whose previous work
+included experience of participatory research design and practice research.
+Added to this mix were stints in sound and photo archives working on projects
+that developed historical collections for digital dissemination—projects that
+involved digitisation, metadata development, complex rights research, repatriation, and community engagement. Importantly, I came to this project as a
+precariously employed academic who has worked for five different institutions
+in three separate countries, on close to a dozen different contracts, on projects
+with distinct partners over the last decade. For me, this means persistent worries
+about my interlocutors’ needs when I lose access to the systems that store their
+data. In sum, I came to the Access Folk project with the skills, the knowledge, and
+a personal stake in developing a participatory research project with the robust
+data management processes required for open research.
+I joined the Access Folk team in October 2023 when the project, which began in
+February 2022, was already well underway. Building on foundational work about
+challenges to sustainable participation in the folk scene, my first task was
+
+1
+
+The Access Folk project relies on contributions from the entire research team, a supportive
+advisory board, and our external co-researchers. This includes Small Project Grant holders based
+throughout England: Steph Meskell-Brocken (The Met, Bury), Rupert Philbrick (Music at the Heart of
+Teesdale, Durham), Anna Anise (Sunday Socials, Devon), Sophie Crawford (Harrison Singaround,
+London), Jennifer John (Folk to Folk, Liverpool), Miriam McDonald and Sarah Hinds (Heartwood CIC,
+Derby), Nev Meek and Kate Neale (Carols of the Roseland, Cornwall), Joanie Bones (Elephant in the
+Womb, London), Imi Fell (Songs from the Land, London), Jon Coley (Scribbling Town Folk Club,
+Manchester), Nigel Carden (Saltburn Folk Festival, North Yorkshire), Roary Skaista (Oxford), and
+Rosie Hodgson (Soundpost, Sheffield). Special thanks to Dr. Jenni Adams, Ric Campbell, and Kate
+O’Neill for their ongoing specialised support for Access Folk’s open research goals. Comments and
+advice offered through open peer review by Dr. Muriel Swijghuisen Reigersberg and by an anonymous peer reviewer are sincerely appreciated.
+2
+The Access Folk project did not begin with explicit open research goals. For details of how we
+approached making the project retrospectively open, see “Winners and runners-up of the Open
+Research Prize 2025” (Open Research n.d.). Data supporting this publication can be freely downloaded
+from the University of Sheffield research data repository at https://doi.org/10.15131/shef.da
+ta.c.7126222, under the terms of the open license specified in collection metadata.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 3 ===
+Traditions of Music and Dance
+
+planning a new project phase that supported stakeholders to pilot their own
+locally relevant access interventions. Encouragement from our funder (UKRI
+2025a) and changing priorities within our institutional research environment
+combined with the participatory nature of our project to suggest an additional
+goal: making our research design as open as possible by integrating the “FAIR
+Principles of Data Governance” into our planning (TUoS 2026a). Given that the
+participatory nature of the Access Folk project meant that we perceived an
+ethical imperative to support knowledge sharing among our stakeholders,
+following open research design principles seemed like a logical route to achieving this end. Realising these goals, however, has proven more complicated than
+we ever imagined. As our project stretches towards its finish line in January 2027,
+I’m conscious of the many setbacks that have hampered our efforts to deliver a
+truly open participatory research project that is focused on creative practices.
+Some of the stumbling blocks are the inevitable glitches, missteps, and unconsidered realities of ethnographic fieldwork. But often our challenges have been
+procedural, institutional, systemic, and, I will argue, disciplinary.
+Ethnomusicological texts addressing major theoretical, methodological, and
+ethical issues in the first decades of the twenty-first century remain silent on the
+implications of external pushes for open research (e.g., Post 2017; Diamond and
+Castelo-Branco 2021; Stock and Diamond 2022).3 Given the wide-ranging nature
+of challenges, it is perhaps not surprising that most discussions of open music
+research come from the perspective of quantitative computational and empirical
+musicology (e.g., Moss and Neuwirth 2021), with entangled issues also being
+raised in literatures on sound archiving (e.g., Seeger 1986, 1996; Landau and
+Fargion 2012; Cooper 2013; Western 2019), and information (e.g., Swijghuisen
+Reigersberg 2015, 2019) and rights management (e.g., Jaarsma 2002; Bachner
+2005; Weintraub and Yung 2009; Carugno 2018; Born and Eisenberg 2025). While
+textbooks instruct on the importance of good record-keeping during fieldwork
+and the importance of generating quality documentation (e.g., Gilman and Fenn
+2019), many ethnomusicologists still lack the necessary knowledge of data
+governance to enable data sharing outside of their direct control (Hemmasi
+and Brown 2025).
+In this article, I make a case for why ethnomusicologists—and not just those
+with specialised interests in (sound) archives, information management, and
+intellectual property law—need a serious conversation about the relevance of
+open research to our discipline. I will do this by first describing what I mean by
+open research, defining data, and summarising the data governance principles
+that support openness. I will then offer up the Access Folk project as a case study
+3
+While these anthologies might not explicitly address open research, they all raise related issues.
+Post’s introduction flags the tendency to lock data away in personal archives (2017:32–33), as well as
+tensions between intellectual property rights and cultural rights (2017:25). Subsequent chapters by
+Diamond et al. (2017) on performing protocol, Stobart (2017) on the colonial nature of global
+intellectual property regimes, Wong (2017) on the cultural rights of minorised musicians, Vallier
+(2017) on the entangled disciplinary history of ethnomusicology and sound archiving, and Lobley
+(2017) on the future-oriented relationship of sound archives and communities raise key ethical,
+cultural, and regulatory issues.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+3
+
+
+=== PAGE 4 ===
+4
+
+Rebecca Draisey-Collishaw
+
+of the ethical, regulatory, and infrastructure challenges that impede data sharing. Finally, I will conclude with suggestions for how we might work at a
+disciplinary level to achieve greater levels of openness.
+Notably, this is not an article about archives or a case study of a bespoke
+archiving solution that works around contextual complexities. Rather, it is an
+attempt to highlight how open research design challenges pertain to anyone
+who documents music, movement, and creative practices. My position will,
+inevitably, be incomplete, not least because my experience is limited to
+Canadian, Irish, and UK contexts, and my case study is based firmly in England.
+But that is part of my point: collectively, ethnomusicologists have incredible
+knowledge of local regulations and wide-ranging cultural protocols. We recognise that there are disparate understandings of ownership and access across
+the world, and value the decolonisation of knowledge production. We also
+understand sonic, visual, and kinaesthetic expressions as knowledge with
+intrinsic value for the people who produce it. Bringing this disciplinary mindset to questions about data governance, the ethics of sharing, and the functionality of supporting infrastructure is essential for realising more equitable
+relationships with the people who enable our research. Starting a dialogue that
+crosses fault lines about ownership and access to knowledge, the purpose of
+preservation, and, more broadly, about what open research means in ethnomusicology is an essential step towards a more ethical research praxis that
+positions us to confront new regulatory, technical, and data governance
+challenges head on.
+
+The case for open research
+At the broadest level, open research4 prioritises making the data and processes
+upon which research outputs are constructed transparent, public, and accessible.
+Originating in the sciences—disciplines that typically prioritise experimental
+research design, large sample sizes, strict anonymisation procedures, and alphanumeric datasets—open research increasingly dominates the priorities of
+research institutions, funding bodies, and professional associations in a variety
+of national and disciplinary contexts (e.g., ERC n.d.; United Nations n.d.; Zhang
+et al. 2023; Chawla 2024; UKRI 2025a). The reasons for this push vary, but typically
+include reproducibility, developing extant datasets, transparent use of public
+funding, and equalising access to knowledge (Borgman 2012; Kraus and Eberhard
+2022; Hemmasi and Brown 2025).
+Some of these rationales may seem irrelevant to ethnomusicologists, who are
+often more concerned with maintaining relationships than thinking about the
+nature of the data produced. Our work, after all, is frequently inductive and based
+on long-term engagements with participants who help shape research questions
+4
+“Open research” and “open science” are synonymous. I’ve preferred “open research” throughout as “‘science’ in anglophone jurisdictions is a term that tends not to include [arts, humanities, and
+social sciences] disciplines, although this is not the case in other languages where the term is
+inclusive of a broader range of academic fields” (Adams et al. 2026).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 5 ===
+Traditions of Music and Dance
+
+and analyse results. What we see as data often extend beyond information
+generated by a clearly defined research question that launches a controlled
+set of experiments or observations in a particular location for a finite period. Our
+prioritisation of deep contextual and relational knowledge, too, may foster
+scepticism about open research or data sharing more generally. Jerolmack
+et al., for example, outline the contested relationship between open research
+and ethnographic data, emphasising the questionable relevance of “positivistic
+standards of verification … to the interpretive enterprise of ethnography,” the
+potential for “fetishization of ‘factual details’” to lend a false sense of objectivity
+to reflexive engagements with complex systems, and the risk that data transparency will further marginalise vulnerable and historically minoritised populations (2024:1).
+And yet, speaking specifically to ethnographic datasets, anthropologists
+Wolfgang Kraus and Igor Eberhard suggest justifications for pursuing open
+research that are thoroughly rooted in the relational and contextual nature of
+our research. They point out that the complexity and volume of data generated
+through ethnographic research is rarely “fully exploited” in the original analysis
+—a circumstance that fails to do justice to the labour of producing the data in the
+first place. And second, they reason, ethnographic data are “historical by nature”
+such that the passage of time may make the data “interesting and relevant in
+unforeseeable ways, not only for researchers and their scientific communities,
+but also for those being researched” (Kraus and Eberhard 2022:192).
+Awareness of the unique circumstances of each site of ethnomusicological
+research—of the complexities of negotiating international and local regulatory
+systems (Jensenius 2021; Münnich 2021; Born and Eisenberg 2025), of diverse
+cultural norms and protocols (Weintraub and Yung 2009; Post 2017; Reed 2019),
+and the ethical and economic consequences of sharing research data (Zemp 1996;
+Jaarsma 2002; Pruett 2011)—has fostered a head-in-the-sand approach to data
+management and stalled disciplinary level conversations about how to approach
+open research. Speaking to archival practice, ethnomusicologist Anthony Seeger
+long ago chastised our discipline, stating “Ethnomusicologists have not only
+failed to consider legal issues in an intellectual way, many have also failed to
+assist the people they record to protect their own rights to their music, dance,
+and performing arts” (1996:88). Little has changed in terms of the core arguments for better data governance in the forty years since he articulated his
+position (Seeger 1986), though new possibilities and threats have emerged
+alongside regulatory and technological developments (Seeger 2023).
+The net result of ongoing failures to address not just how and why we might
+share our data, but the very nature of that data, means that a disproportionate
+amount of the knowledge generated through our work remains locked away in
+personal archives—or destroyed at the ends of projects, careers, and lives
+(cf. Luyk 2015; Post 2017:32). Dwelling in the unique characteristics of each case
+means that there is no need to develop a core set of tools and workflows. In effect,
+we are always starting from the beginning and building bespoke solutions (e.g.,
+Giri 2025). This approach is, quite simply, hard. And time-consuming. And while
+best-case scenarios may result in some truly remarkable solutions for both
+communities and researchers, often it means that data—the knowledge
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+5
+
+
+=== PAGE 6 ===
+6
+
+Rebecca Draisey-Collishaw
+
+generated with and by our interlocutors—rapidly becomes inaccessible in the
+face of resource deficits, technology changes, and regulatory challenges.
+
+Open research beyond reproducibility
+UNESCO defines open research as “an inclusive construct,” based on “key pillars
+[of]: open scientific knowledge, open science infrastructures, science communication, open engagement of societal actors and open dialogue with other knowledge systems” (UNESCO 2021:II.6). But as Adams et al. stress, open research “as it
+is operationalised in practice, especially in Global North contexts, fails to align
+with UNESCO’s diverse and inclusive vision” (2026:4). Scholarly systems of
+incentives, institutional and funder requirements, and official metrics tend to
+overemphasise the first of these pillars. The open research that counts prioritises
+open access publishing (i.e., making scholarly research outputs like articles and
+monographs freely available) and open science infrastructure (i.e., repositories
+for sharing datasets) in pursuit of the reproducibility goals that are most
+relevant in medical-scientific research practices (2026:4). This version of open
+research narrowly focuses on dissemination to other researchers. Noting the
+host of practices common in the social sciences and humanities that emphasise
+research communication, engagement with societal actors, and dialogue across
+knowledge systems, Adams et al. (2026) propose a more flexible inventory of
+open research practices that move beyond scholarly publishing and data sharing.5 This is still nascent work, but holds promise for validating and systematising the types of knowledge sharing that are most common in
+ethnomusicology.
+Though reproducibility is rarely a priority, ethnomusicology has a higher rate
+of open access publishing than most other music disciplines (Franke 2021).
+Indeed, ethnomusicologists have debated and innovated open access formats,
+critically engaging the form and purpose of knowledge dissemination, as well as
+notions of authorship (Mueller et al. 2014; Swijghuisen Reigersberg 2019). We
+have also tended to take a leadership role in publishing open access translations
+of ethnomusicological texts.6 This investment of resources reflects a
+disciplinary-level prioritisation of access to knowledge within and beyond the
+academy, as well as a valuing of dialogue across cultural and linguistic barriers
+(Franke 2021).7 Open access publications, however, are typically interpretive:
+reliant on the training, analytical priorities, and cultural perspectives of
+researchers. But as Seeger long ago pointed out, “The people from whose music
+5
+
+These practices of openness include co-production, collaborative translation, participatory
+research, documenting creative methods, sharing creative outputs, documenting failures, checking
+data with interlocutors, and foregrounding positionality.
+6
+E.g., The Society for Ethnomusicology publishes Ethnomusicology Translations with the goal of
+increasing “access to the global scope of music scholarship and advance ethnomusicology as an
+international field of research and communication” (Ethnomusicology Translations 2026).
+7
+E.g., Traditions of Music and Dance (ICTMD), Ethnomusicology Forum (BFE), and Ethnomusicology
+(SEM) all support varied levels of open access, with associated costs assumed by authors, their
+institutions, and professional societies.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 7 ===
+Traditions of Music and Dance
+
+we have developed our general theories about music-making are not always
+enthusiastic about the theories we have produced”—it is the materials upon
+which those theories are based that hold fascination (1986:266). While we might
+rightly take pride in investments by researchers, professional societies, granting
+agencies, and research institutions in open access publishing, the results of such
+efforts still mediate access to our interlocutors’ knowledge through substantive
+analytical, creative, and/or editorial processes (Franke 2021). Moreover, Franke
+(2021) explains that the high costs associated with open access publishing
+replicate historical academic inequalities as authors and institutions from the
+Global South are effectively excluded. Such investments, in other words, do not
+necessarily engage the priorities of societal actors (cf. UNESCO 2021) or address
+systemic global inequalities.
+Publishing—open access, scholarly, or otherwise—is a mechanism of openness, offering potential for methodological innovation and co-production, while
+also providing a route to research data. Ethnomusicologists have long advocated
+the use of digital and multimedia technologies to enable access to audiovisual
+examples as supplements to published textual analysis (Harley et al. 2010:508;
+Mueller et al. 2014). Especially since the early 2000s, tucking a CD into the cover
+of a monograph or using passwords to access streaming playlists on publisher
+websites has become normative.8 Less formal options, such as YouTube links or
+content hosted on personal websites, are now commonplace options for sharing
+audiovisual examples—with varied risks and often frustrating results, as anyone
+who has followed a broken link in a journal article knows (Messarra et al. 2026)!
+Digital and online technologies offer gateways to data for non-academic stakeholders, with ethnomusicologists and archivists exploiting the potential of the
+digital humanities for widely accessible, online, and curated collections (e.g.,
+Landau and Fargion 2012; Diamond and Brodie 2013; Giri 2025). At their best,
+these websites offer public access to stably preserved collections with long-term
+maintenance plans. Unfortunately, such projects too often end without resourcing for updates, suffer link rot, intellectual property and cultural rights prove
+too complex or costly to maintain, and access disappears (Seeger 2023; Western
+2019). The results of such efforts offer insight into sustainability and infrastructure challenges, but their ad hoc nature does not equate to open research (Harley
+et al. 2010; Tal-Socher and Ziderman 2020).
+
+Data governance
+A recent special issue of MUSICultures on “Archives, Access, and Ethnomusicology”
+(Risk and Tulk 2025) offers an important exception to the silence on open research
+in our field. A case study by Hemmasi and Brown details the structural,
+8
+
+E.g., Diamond et al. (2017) provide an extended discussion of negotiating relevant cultural
+protocols and intellectual property rights to enable inclusion of an accompanying CD with her Native
+American Music in Eastern North America (2008). The types of documentation required, systems of
+permission, and challenge of doing this work retrospectively are relevant to any discussion of open
+research.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+7
+
+
+=== PAGE 8 ===
+8
+
+Rebecca Draisey-Collishaw
+
+methodological, and rights-based challenges to sharing music research data. They
+highlight the labour involved in such undertakings and advocate that ethnomusicologists treat their data management plans with “as much care and consideration as every other facet of research design” (2025:90). Fundamentally, open
+research is about data governance—about methods that are built into research
+projects from their inception that support clear understanding of what (and how)
+data are produced, as well as how that data should be responsibly accessed in the
+future. Open research does not mean putting raw data online or blindly sharing
+sensitive, proprietary, or otherwise restricted knowledge. It does mean actively
+documenting data management procedures to enable responsible decisionmaking about what constitutes the dataset, along with how and with whom data
+might be shared—ideally without relying exclusively on the gatekeeping of
+individual researchers.
+Many ethnomusicologists first encounter the challenges of sharing data when
+projects—or careers—come to a close (e.g., Kraus and Eberhard 2022; Russell
+2024). They discover the “tricky and time consuming” nature of “adding metadata and other documentation ‘after the fact’” (Hemmasi and Brown 2025:84;
+cf. Diamond et al. 2017; Seeger 1986). Names, dates, locations, and details of what
+the data captures may be lost to memory, along with the potential for securing
+necessary agreements for data to be legally and ethically shared. Hemmasi and
+Brown (2025) report on a long-term ethnographic study of punk and metal music
+venues in the Kensington Market area in Toronto, Canada, focusing on how they
+implemented data governance procedures. The team-based and longitudinal
+approach meant that data processing was not always handled by a single person
+and that the researchers who collected the data sometimes moved on before data
+were fully processed. As their case study highlights, failure to follow a shared
+data management plan created scenarios where data were not just unshareable,
+but where the project team could not access collected data in fulfilment of their
+research goals.
+The potential for effective collaborative working depends on research data
+being findable, accessible, interoperable, and re/usable (FAIR)—qualities
+defined in the dominant paradigm for designing open research (GoFair n.d.;
+Wilkinson et al. 2016):
+• Findable: Data should be easy for humans and computers to find and
+interpret. Data are richly described with relevant metadata
+(i.e., description of what the data is), meta/data are assigned persistent
+identifiers, and meta/data are registered or indexed in a searchable
+resource.
+• Accessible: Once found, people need to understand how to access data. Even
+when data itself cannot be made openly available, metadata should detail
+storage location, methods of authentication, and terms for authorising
+access.
+• Interoperable: Data need to be in formats that enable integration with
+other data for the purposes of analysis, storage, and processing. Typically,
+this means preferring open file formats and formulating metadata according to established standards.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 9 ===
+Traditions of Music and Dance
+
+• Reusable: Metadata clearly describe the provenance and ownership of data,
+supporting compliance with privacy and other data protection requirements and terms of reuse (i.e., licensing).
+One of the goals of the Norway-based MusicLab project is methodological
+innovation in empirical music research, including FAIR research design for
+documenting performance events (Jensenius 2021). While concluding that robust
+data management goes a long way towards answering calls for greater openness,
+Jensenius (2021) notes that music scholarship—or, I would argue, any scholarship that centres ethnographic observation, creative and/or expressive practices, and co-produced knowledge—involves specific challenges to the FAIR
+Principles. These are: (1) the multimedia and multimodal nature of data;
+(2) privacy and data protection; and (3) intellectual property and cultural rights.
+To these challenges, I’m inclined to add a fourth related to the participatory and
+co-produced nature of much ethnomusicological data: visibility and access
+beyond the “official” structures of research institutions. A notable limitation
+of the FAIR Principles is that they prioritise description of data over consideration of the people producing the knowledge or the uses to which it will be put
+(GIDA NA). The co-produced and relational nature of ethnomusicological data
+creates an ethical prerogative to make data findable and accessible to stakeholders who cannot depend on institutional affiliations to demonstrate their
+“legitimate interest” in the data.
+Multimedia and multimodal data
+
+One of the challenges of open research design in ethnomusicology is clarity over
+the definition of data. Archivist Sean Luyk points out that there is a “notable gap
+in the literature regarding humanities research data, and very little about
+ethnomusicology, or music at all for that matter” (2015:3). This is a problem
+for ethnomusicologists because our data takes so many forms, extending considerably beyond the audiovisual recordings that tend to be the focus of available
+literature. Our data include text-based formats that are common across the
+social sciences and humanities—like questionnaires, interview transcripts, and
+fieldnotes. But it also includes music notation and transcriptions that may
+require specialised knowledge, systems, and software to generate, preserve,
+and access. The ephemera of performances and participatory cultural activities
+are data, and include promotional materials, sacred or ceremonial items, documentation of protocol, or elements of material culture—like instruments and
+costumes. Our data include the methods and results of creative processes that
+exist in a variety of formats, each with distinct challenges for preservation and
+sharing—and which may be best suited to storage within a physical archive or
+museum. Our data also comprise sound and video recordings that document
+wide-ranging sound and movement practices situated in vastly varied contexts.
+Recordings serve a variety of purposes, ranging from documentation of
+performance practices and repertoire to supporting ethnographic observation
+(or other methodological functions), aiding transmission processes, and surfacing relevant cultural protocols. The range of functions for field recordings is
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+9
+
+
+=== PAGE 10 ===
+10
+
+Rebecca Draisey-Collishaw
+
+broad, with implications for the nature and re/use of recordings (e.g., quality,
+perspective, technology, and audience). Landau and Fargion (2012) prompt
+consideration of what is meant by recording “for our own research purposes”
+in their preface to a special issue of Ethnomusicology Forum. Included articles offer
+twenty-first-century case studies of how archival recordings offer meaningful
+tools for community engagement and collaboration, with ethnomusicologists
+filling roles as “culture brokers” in efforts to repatriate and/or proactively build
+local archives. The special issue challenges the ambivalence to archives that
+emerged as a response to our discipline’s colonial history during the twentieth
+century by demonstrating the decolonising potential of sound collections.
+The authors do not, however, clarify what ethnomusicological data are or
+differentiate uses for recording. As Landau and Fargion point out, “much of the
+deliberation and debate” related to the methods, technologies, and ethics of
+collecting and disseminating ethnomusicological data has tended to happen “for
+and within the audiovisual archiving world” even though “recordings, archives
+and ethnomusicology have been inextricably linked throughout their histories”
+(2012:128). They suggest that, despite being written by ethnomusicologists who
+are also archivists, “the existing literature on audiovisual archiving has not
+reached many ethnomusicologists” (2012:128). This siloing of discussion in
+specialist literature misses something important about the nature of ethnomusicological data: its multimodal nature. Commentary instead focuses on recording for documentation—recording that prioritises the creation of archival
+objects that are understandable as standalone artefacts—without explicit consideration of how sound recording functions as a research process (cf. Fargion
+2009).
+Roshanak Kheshti’s (2015) theorisation of the “aural traces” of sound recordists, though directed at the production of world music recordings, is useful for
+thinking through this question of recording for documentation versus research,
+and what that means in terms of the production and preservation of data.
+Kheshti points out that recordings capture more than sound; decision-making
+based on the recordist’s priorities also leaves marks, influencing focus, start and
+end points, mix, and so on (2015:32). Recordings made “for our own research
+purposes” include traces of research methods and goals. They might, for example, offer low-quality sources that support transcription, document a transmission process rather than sonic or visual practice, or support practitioner
+reflections on their praxis. Recordings “for research purposes” may document
+something quite distinct from music or dance, and meaning may be contingent
+on other types of documentation. Data, in other words, that are truly multimodal, methodological, and ill-suited for publication without substantive contextualisation or links to larger datasets. Focusing the debate about data,
+preservation, and dissemination within specialist discussions of sound archiving
+neglects this multimodal nature, leaving us ill-equipped to address challenges
+inherent in the unique nature of our research.
+This lack of clarity has implications beyond our discipline: if we cannot clearly
+articulate what our data is, how can we expect the people who support us to
+understand? The multidisciplinary research ethics boards responsible for
+reviewing our methods and developing institutional policies, for example, may
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 11 ===
+Traditions of Music and Dance
+
+misunderstand the nature of data generated through ethnomusicological
+research, resulting in frustrations on all sides and overly risk-averse processes
+that do not necessarily serve the interests of stakeholders (Bishop 2009;
+cf. Wakaruk et al. 2025). Definitional clarity is also a problem for data management professionals, whose systems may be ill-equipped to deal with collections
+featuring widely varied forms and formats with specific regulatory challenges.
+Many libraries and archives divide responsibility for their collections by format,
+meaning that contextualising texts, transcripts, or notation may be separated
+from audiovisual recordings (e.g., Wittgren 2025). This challenge is compounded
+by a reality that not all libraries, archives, and repositories have the infrastructure, knowledge, or mandate to preserve and disseminate all data types. Writing
+on the proliferation of born-digital heritage objects—inherently multimodal
+objects that require “the existence of increasingly complex and flexible
+systems”—Goudarouli et al. point to the increased necessity of “high levels of
+technical skill from both curator and researcher” to manage “unique preservation and access challenges” (2026:4). In other words, effective management
+solutions for multimodal data require multidisciplinary collaborations.
+
+Privacy and data protection
+
+Much of the tension between open and ethnographic research relates to the
+privacy of our interlocutors. Ethnographic research depends on rich contextual
+details that are likely to identify research participants, even when direct identifiers are stripped from the data. Such details are essential to the meaning and
+significance of the data. Ethnomusicologists take a negotiated approach to
+identifying research participants, recognising that the co-produced nature of
+our research comes with ethical obligations to respect interlocutors’ wishes
+about how they are identified. Some musicians and dancers want to be publicly
+recognised for their contributions, while others eschew acknowledgement or
+prefer anonymity (Hield et al. 2024). The nature of our research area, too, means
+that separating traditional knowledge from originator(s) poses risks to creators
+and communities: tracking data provenance is essential to ensuring appropriate
+access and usage (Zemp 1996; Guy 2002; Draisey-Collishaw 2025). In short,
+research that focuses on expressive practices often requires identification of
+practitioners because (1) documenting the practice requires accurate capture of
+physical likenesses and/or identifying sonic features, and (2) practitioners need
+to be named in the metadata to protect their intellectual property and/or
+cultural rights.
+Research contexts come with distinct regulatory and structural challenges
+when it comes to identifying research participants. General Data Protection
+Regulation in the UK (like the European Union) defines legitimate terms for
+processing and storing personal data. Under UK GDPR (2016), personal data are
+“any information relating to an identified or identifiable natural person (‘data
+subject’),” including “a name, an identification number, location data, an online
+identifier or to one or more factors specific to the physical, physiological,
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+11
+
+
+=== PAGE 12 ===
+12
+
+Rebecca Draisey-Collishaw
+
+genetic, mental, economic, cultural or social identity of that natural person” (ICO
+n.d.9). This definition covers any information that can identify a person, including images and recorded sounds. While UK GDPR (2016) defines processing
+personal data for research and archiving as legitimate interests, this regulatory
+context complicates access to infrastructure for preservation and data sharing,
+especially when it comes to data that include ethnographic description or
+creative outputs.10 Digital data repositories that make collections freely available
+online, for example, will not accept data where individuals are identifiable
+without their explicit consent. This can be a difficult bar to meet, especially if
+documentation includes public, informal, and/or participatory performance
+events.
+Archives and repositories that offer “controlled access”—that is, where
+access is limited to authorised individuals or groups who demonstrate legitimate
+interest—are better able to preserve and share datasets that include unconsented personal data and data with complex intellectual property and cultural
+rights, but the availability of suitable options is limited in England and internationally (e.g., Harley et al. 2010; Hofmann et al. 2021). A 10 July 2026 search of the
+Registry of Research Data Repositories (re3data.org n.d.) listed only twenty-four
+repositories specialising in “musicology” data worldwide, with this number
+increasing to twenty-nine if “social and cultural anthropology and ethnology”
+repositories were included. Repositories that have specific geographic and/or
+cultural remits are often better situated to evaluate what constitutes legitimate
+access and take risk-managed approaches that are in dialogue with the needs of
+researchers and the communities they service (e.g., PARADISEC 2026). Research
+and cultural traditions that fall outside of these specialist remits, however,
+remain underserviced.
+The ethics of privacy are of global relevance and especially complex in the
+present moment. Widespread adoption of artificial intelligence (AI) is coupled
+with regulatory uncertainty, resulting in unforeseen risks to individuals and
+communities represented in research data (Oruc 2025; Brunschweiger 2026).
+Preserving and disseminating data in 2026 involves privacy considerations that
+simply were not relevant in 1986, when accessing data involved visiting a
+physical premises and negotiating usage with an archivist. Even in 2006, when
+digital and online technologies were changing how data were shared and
+introducing new threats, there was not the same potential for completely
+uncontrolled access and unauthorised dissemination by generative AI. And
+yet, these same technologies hold potential for safeguarding and servicing the
+needs of our interlocutors. Hemment et al. (2025) point to AI’s potential for
+responsibly and ethically processing data. Technologies like smart contracts, for
+example, may support reliable provenance tracking and responsible reuse
+according to creator/community licensing terms, as well as enabling the
+9
+
+The Information Commissioner’s Office (ICO) is the UK’s independent regulator for Data
+Protection and Freedom of Information (see also UK GDPR 2016).
+10
+The Access Folk project’s legal bases for processing personal data is “a task carried out in the
+public interest” (UK GDPR 2016:Article 6(1)(e)), and “for archiving purposes in the public interest,
+scientific research purposes or statistical purposes” (UK GDPR 2016:Article 9(2)(j)).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 13 ===
+Traditions of Music and Dance
+
+confidentiality of data sources. Assessing the risks and accessing the potential of
+such technologies, however, requires good data governance to start.
+
+Intellectual property and cultural rights
+
+Ethnomusicologists have long been aware that recordings made in the field have
+the potential to attract the interest of individuals who lack commitment to the
+rights of our interlocutors. Materials get taken and repurposed, used without
+reference to cultural meaning or protocols, and creators go unacknowledged and
+uncompensated for their knowledge and art. Scenarios for the exploitation of
+intellectual property and/or the violation of cultural rights are well-documented
+(e.g., Zemp 1996; Guy 2002; Pruett 2011), as are the incommensurate nature of
+cultural rights and existing intellectual property right regimes (e.g., Weintraub
+and Yung 2009; Post 2017; Reed 2019) and unequal impacts of regulation across
+traditions and geographies (e.g., Stobart 2017; Born and Eisenberg 2025). More
+positively, concurrent with the rise of easy-to-access digital technologies,
+archiving projects are demonstrating how ownership, control, and access to
+knowledge might be re/negotiated, either through repatriation of extant collections or through community-engaged digital preservation initiatives (e.g.,
+Landau and Fargion 2012; Giri 2025; Risk and Tulk 2025). While the issues raised
+by these initiatives are relevant to open research, reporting tends to be on
+individual projects with bespoke “archive as output” solutions. Little attention is
+given to more systemic approaches to data governance and mobilisation, or how
+risks and rewards might play out in research that does not prioritise archiving as
+a named project output (cf. Seeger 2023).
+Why does taking a more systemic approach to rights management matter?
+Even under the best of circumstances, rights research is challenging and slow.11
+Clearing an entire dataset retrospectively is almost impossible without metadata
+documenting provenance and terms of reuse (Diamond et al. 2017). Indeed, lack
+of relevant documentation is often a key factor that keeps ethnomusicological
+data locked away in private collections. That is because sharing data with
+intellectual property rights involves risks—risks to rights holders, risks to the
+people and platforms doing the sharing, and risks to (re)users. These legal,
+financial, and ethical risks are amplified in digital contexts where sharing is,
+to a degree, uncontrolled (and without the statutory and moral safeguards
+traditionally provided by brick-and-mortar archives).12 Open data repositories,
+in consequence, tend to be risk intolerant: only data that exist in the public
+domain or that have clear agreements in place with all rights holders can be
+deposited (e.g., UK Data Service 2026a; cf. Hemmasi and Brown 2025; Korn et al.
+2026).
+11
+Simply tracing rights holders takes half a day per item in the case of “orphan works”
+(copyrighted works with unknown or untraceable rights holders), estimates Korn et al. (2026:403).
+12
+My analysis focuses on intellectual property rights and associated economic risks as these are
+what most impact the capacity to share via existing institutional structures. Cultural rights typically
+do not receive the same level of legal protection, though a compelling ethical case for clearly
+documenting rights holders and terms of reuse exists (Hudson 2024).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+13
+
+
+=== PAGE 14 ===
+14
+
+Rebecca Draisey-Collishaw
+
+Risk aversion—and the desire to protect rights holders—might be reasonable, but digging into what this means in practice reveals the impracticalities. UK
+intellectual property law, for example, grants creators automatic and nontransferable moral rights over their creations. This includes the right of attribution: the right to be named as a creator. Original works also hold copyright(s)
+that give creators the exclusive right to control the use of their work. While
+moral rights do not expire, copyright typically lasts for at least fifty years after
+the death of the creator (Berne Convention 1886), though many countries—like
+the UK—have extended this to seventy years (UK Intellectual Property Act 2014).
+Given the multiplicity of rights holders involved in documentation of creative
+practices (e.g., rights holders for a single audio recording potentially include
+musicians, composers and lyricists, publishers, and the recordist), it is often
+impractical to identify (let alone gain consent from) everyone involved. Indeed,
+the increased duration of copyright over the twentieth and twenty-first centuries, when combined with the non-commercial nature of documentation and
+high rates of risk aversion, has resulted in what intellectual property rights
+scholar Naomi Korn terms “a black hole of 20th [and 21st] century content”
+suitable for digital preservation and dissemination (Korn et al. 2026).
+While UK Intellectual Property Law includes a “fair dealing” exception that is
+relevant for research and preservation,13 applying this exemption requires a
+degree of risk tolerance that is lacking in practice. Fair dealing lacks a statutory
+definition, meaning that the courts assess it on a case-by-case basis that accounts
+for whether usage affects the market for the original work, as well as whether the
+amount of the work taken is reasonable and appropriate (Wakaruk et al. 2025).
+Updates in 2014 broadened fair dealing exceptions, especially in the areas of
+parody, citation, and research, but invoking exceptions in relation to data
+preservation tends to depend on the availability of controlled access archives
+(Intellectual Property Office 2014). Small and specialist multimedia archives that
+more commonly handle these types of data may use a variety of risk management tools (like provenance research and takedown notices) to assess, make
+available data, and manage potential rights infringements (Korn 2021; Korn et al.
+2026), but such services are unequally available and often underresourced.
+Keeping data locked away might be a natural response to avoiding risks, but it
+also neglects the interests of the people with whom we do research and avoids
+surfacing the necessity of disciplinary-level debate about what constitutes
+ethical risk-managed approaches to sharing data with complex rights (Bishop
+2009). While informed consent processes (written, aural, and/or continuous),
+contracts, and recording/image release forms might be norms in our discipline,
+
+“Fair dealing,” defined in Sections 29 and 30 of the UK’s Copyright, Designs and Patents Act
+(1988), is a much more limited concept than that of “fair use” as defined in US law. “Fair dealing”
+allows limited use for non-commercial research and private study; text and data mining for noncommercial research; criticism, review, and reporting current events; teaching; helping disabled
+people; time-shifting; and parody, caricature, and pastiche. Fair dealing is also found in Commonwealth nations, including Canada, Australia, New Zealand, Singapore, and South Africa, with local
+variations.
+13
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 15 ===
+Traditions of Music and Dance
+
+15
+
+workflows tend to be designed on a per-project basis and may prioritise mitigating institutional risk over long-term rights management with implications
+for data preservation and reuse beyond the project. More disciplinary knowledge
+is needed about the types of metadata tracking that need to be built into data
+collection or how use of culturally appropriate and internationally recognisable
+rights and licensing regimes—including Creative Commons, Traditional Knowledge Labels, Nwulite Obodo Open Data Licences (NOODL)—can become a foundation for relationship building with participants and partners (Local Contexts
+n.d.; Creative Commons 2026; Licensing African Datasets 2026).14
+Co-produced knowledge and access
+
+Despite the specific challenges that ethnomusicological research poses to the
+FAIR Principles, they are an effective starting point for planning research,
+encouraging attention to consistent data description, use of open storage formats, and consideration of how data might legally and ethically be processed into
+the future. FAIR also offers standardised language for interdisciplinary communication about research and data management requirements. A fundamental
+limitation of the Principles, however, is their narrow focus on the characteristics
+of the data. Indeed, with their origins in the sciences and prioritisation of a
+digital-first understanding of data, the FAIR Principles do not adequately account
+for the ethical obligations inherent in co-produced datasets.
+Data produced in conjunction with research institutions typically flows
+through researchers and remains in restricted project archives in compliance
+with data protection, privacy, and intellectual property regulations. With forethought and planning, researchers can resist this enclosure through contracts
+and agreements that ensure partners retain control of their data. These efforts,
+however, are constrained by broader structural challenges (Vince-Myers 2025).
+Institutional data repositories serve the needs of researchers, with little consideration of other potential users; external partners are thus unable to directly
+deposit their data, necessitating dependence on researchers with institutional
+affiliations. Moreover, authentication processes that are in place to assess “legitimate interest” may restrict access to researchers with institutional affiliations.
+The authority to sustainably preserve, share, and benefit from data remains under
+the control of research institutions—a significant problem when the goal is more
+equitable access to knowledge (Ball et al. 2019).
+The Global Indigenous Data Alliance (GIDA) prompts attention to how histories and power differentials implicate the nature of data sharing. They explain
+14
+
+Creative Commons is an open licensing framework that enables rights holders to specify
+conditions of reuse (e.g., reuse is allowable if the creator is attributed or reuse is non-commercial,
+etc.). Traditional Knowledge labels, in contrast, are suitable for use in contexts where the concept of
+intellectual property is culturally inappropriate. The labels enable communication of collective
+cultural rights in a framework that is compatible with international data management standards.
+Developed beginning in 2022, NOODL addresses inequalities in resourcing that result in open African
+datasets being commercialised and sold back to source communities without regard for community
+ownership. This framework enables source communities to set conditions on reuse that support
+communal benefit.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 16 ===
+16
+
+Rebecca Draisey-Collishaw
+
+that “greater data sharing alone creates a tension for Indigenous Peoples who are
+also asserting greater control over the application and use of Indigenous data
+and Indigenous Knowledge for collective benefit” (GIDA n.d.). As an alternative to
+FAIR, they propose the CARE Principles (Collective benefit, Authority to control,
+Responsibility, and Ethics) as a people- and purpose-oriented approach to data
+governance that both supports open research and prioritises the interests of
+stakeholder communities. The CARE Principles have been systematised through
+initiatives like the Traditional Knowledge Labels (Local Contexts n.d.), offering
+evidence from a variety of global contexts about how open research practices can
+be compatible with (1) local interests and cultural rights and (2) the data
+management systems of research, heritage, and memory institutions (Hudson
+2024). Notably, applying the CARE Principles depends on the availability of an
+authoritative body (e.g., band council, council of elders, or appointed community
+advisory board) that can speak for collective interests (cf. Schulder and Hanke
+2022). Even in the absence of such a body, core ideas about how communities
+benefit, who has authority over the data, researcher responsibility, and ethical
+usage are critical for addressing the shortcomings of the FAIR Principles for
+ethnomusicological research and data—and for designing the systems that support access.
+
+Access Folk and the challenge of openness
+My first task on joining the Access Folk team was to realise a framework for
+action research initiatives that tested strategies for increasing access to participatory folk singing opportunities within England. Action research is an iterative
+methodology that is most frequently deployed in messy, real-world scenarios
+where change is sought but too many uncontrolled variables exist to disentangle.
+Instead, plans are made to work towards a desired goal. Those plans are acted
+upon, and then participants, organisers, and researchers reflect on whether
+the desired end was met. This kicks off another iterative cycle, with small
+changes that enable progress towards the desired outcome (Lewin 1946; Reason
+and Bradbury 2024). Positioned as responses to our earlier research (especially
+Bones et al. 2024; Butler et al. 2023), we made available thirteen £1000 Small Project
+Grants (SPGs) for individuals and/or organisations interested in running projects
+that offered novel approaches to widening participation. By inviting project proposals, we sought to recruit knowledgeable local experts with varied lived experiences to weigh in on what access means to them.15 We envisaged each project as a
+case study for a particular context, with feedback about what worked, what
+showed potential, and ideas for next steps that could be iterated in an extension
+phase or passed on to other organisers to adapt and trial in their respective
+contexts. Sharing data about projects with our research partners and the wider
+folk singing scene, in other words, was essential. We did not, however, conceptualise SPG projects as including a bespoke archival or digital humanities output.
+15
+
+See Access Folk (2026b) for the call for applicants and supporting materials.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 17 ===
+Traditions of Music and Dance
+
+SPG holders ran their initiatives independently with the academic team
+providing support for planning, research, and networking. As the participatory
+folk singing scene typically relies on voluntary labour (Hield et al. 2024), we
+sought to minimise data collection activities for our partners. SPG holders
+attended a planning meeting and completed a series of four reflections
+(typically a conversation with a member of the academic team) about their
+projects’ successes, failures, and next steps. This was the primary data associated
+with each project. We also requested that SPG holders share any naturally
+occurring data about their projects (e.g., organisational policy documents,
+promotional materials, handouts, etc.) and, if appropriate, allow a member of
+the academic team to attend and document an activity—only public-facing
+events where the presence of the academic team would not disrupt event flow
+or interpersonal dynamics were deemed appropriate. SPG holders sometimes
+requested that the academic team help design supporting data collection,
+facilitate focus groups with participants, or design feedback questionnaires.
+Some SPG partners also shared other forms of documentation, like photographs
+or recordings of meaningful moments that illustrated a key process or culminating moment in their project.16 Datasets from each project typically were
+multimedia and multimodal; they included a mixture of written documents,
+meeting minutes, recorded interviews, and materials ranging from posters to
+participant feedback, lesson plans to songbooks, and photographs to song
+recordings.17
+The challenge of sharing data between SPG holders and the wider folk scene
+was highlighted in May 2025 when the academic team hosted a networking
+event that brought together SPG holders, other Access Folk collaborators, and
+stakeholders from the wider folk scene to discuss equality, diversity, and
+inclusion in folk singing. In addition to sharing details of SPGs, participants
+discussed next steps, resource sharing, and mechanisms for mutual support.
+Participants expressed their desire to continue supporting each other and
+developing knowledge garnered through their projects, even after the Access
+Folk project concludes. However, connecting a geographically dispersed and
+largely voluntary network of organisers or sustainably hosting shared data
+remain unresolved challenges. Individual SPG holders may host details about
+16
+Some SPG holders also published and disseminated their own outputs. Examples include a carol
+book with instructions on how to organise a traditional carol tour (Neale et al. 2024), a documentary
+film that explores how a group of women came to live in a multicultural urban centre through folk
+song (Crean 2025), and an album that re/writes women into folk repertoire (Bones 2025). SPG holder
+Jennifer John and her “Folk to Folk” project also featured in a BBC podcast (Elliot 2025). These
+published outputs offer windows into the scope of issues tackled through the SPG projects, but only
+represent projects with specific performative outcomes.
+17
+Detailed description of the projects, methods, and ethics of this work—including consultations
+and decision-making about payments—is beyond the scope of this paper. In keeping with the
+principles of open research as defined by UNESCO (2021), our methodology and supporting research
+tools (including terms of the collaboration agreements with SPG holders) are available via ORDA (see
+Draisey-Collishaw et al. 2025a, 2025b). A series of blogs that report on individual projects is currently
+under preparation, as is a peer-reviewed article addressing the methodological underpinnings of the
+project and related ethical challenges.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+17
+
+
+=== PAGE 18 ===
+18
+
+Rebecca Draisey-Collishaw
+
+their projects on their websites or post updates on social media platforms, but
+these strategies for sharing often result in a siloing of information: data are
+not reliably findable, accessible, or reusable for a diverse national network of
+scene organisers. These platforms, too, are not stable. Shared links to Instagram posts detailing developments in SPG projects, for example, were often
+dead within a matter of months—sometimes before data could be fully
+processed by the academic team. As digital humanist Luca Messarra points
+out in a report for the Internet Archive, “significant cultural hubs that
+seemingly have the impression of lasting ‘forever’ have also been sites of
+large-scale, unrecoverable loss” (2026:18). Based on a sampling of almost a
+million URLs active between 2013 and 2023, the Pew Research Center reports
+that a quarter are no longer accessible (cited in Messarra et al. 2026). Reliance
+on the corporate interests behind social media sites for stable hosting results
+in content disappearing without warning.18 Finding ways to support data
+sharing across the folk scene, especially after the Access Folk project ceases
+to exist in 2027, became an increasingly pressing priority as we witnessed
+practical challenges.
+Making a plan: Institutional repositories and open research
+
+We initially planned to deposit data generated through the SPGs in TUoS’s
+institutional repository, ORDA.19 Using ORDA, research support services told
+us, is strongly encouraged in the absence of “a subject-specific repository or data
+centre” (TUoS 2026b)—something we lacked. As the academic team had already
+used ORDA to store and share early outputs, continuing with the same platform
+allowed us to build on our existing knowledge and keep our data in a single
+location. Though intended for making non-sensitive data publicly available
+online, we (wrongly) hoped that ORDA’s capacity to restrict and/or embargo
+access would enable us to navigate issues like the identifiability of our research
+subjects or the complex intellectual property rights inherent in our data
+(Draisey-Collishaw 2025). We remained keenly aware that ORDA is not a particularly intuitive or externally discoverable interface, especially for nonacademics,20 but we planned on using more user-friendly and audience-focused
+formats to curate the stable links (also known as DOIs—digital object identifiers)
+generated through the platform. It was not an ideal solution but, faced with a
+dearth of viable alternatives, we figured that ORDA at least offered a stable, longterm access solution.
+18
+E.g., when SmugMug purchased Flickr in 2019, millions of photos were deleted from free
+accounts (Hern 2018). MySpace lost all music uploaded between 2003 and 2015 (Tiffany 2019) and
+Google deleted data from Google+ accounts when it shut down its social media platform in 2019
+(Liptak 2019). For other examples, see Messarra et al. 2026.
+19
+ORDA is TUoS’s instance of Figshare.
+20
+Institutional repositories enable researchers to meet funder demands for open data sharing.
+They often exist without consideration of the purpose(s) of preservation and may lack clear
+dissemination strategy or defined collection management plan. The broadness of their remit enables
+flexible adoption across wide-ranging research contexts but also limits their capacity to meet specific
+disciplinary priorities.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 19 ===
+Traditions of Music and Dance
+
+19
+
+Based on guidance from TUoS’s open research and copyright teams about key
+regulatory challenges, our planning prioritised the FAIR Principles. We contemplated the data we anticipated collecting, how we sought to use it, and the risks
+associated with reuse. Based on CARE, we also considered who might benefit
+from access. We developed protocols—and elaborate spreadsheets—for recording critical metadata. Our consent forms flagged intentions to share data beyond
+the project and offered detailed explanations about what it means to be identifiable. We developed written guidelines for what our partners and their participants could share with us, highlighting preferred formats and file types. We also
+offered detailed descriptions of how intellectual property rights work in England
+and encouraged creators to apply Creative Commons licences as a means of
+protecting their rights and enabling reuse. After several iterations of the various
+forms, templates, collaboration agreements, and supporting workflows, research
+support services reviewed our proposed processes and deemed them adequate to
+our open research goals.
+
+Practical challenges: Folk singing in England
+
+The SPG projects focused on amateur participation in the folk scene. Labels like
+“singaround,” “song share,” “folk club,” “singing session,” “floor spot,” or “chorus
+singing” are insider terms describing a variety of communal singing practices that
+involve people coming together, often in a pub, around the practice of singing
+(Wettermark 2025). Participation includes both professionals and amateurs,
+though status and role within the singing activity have more to do with perceived
+relationship to “the tradition” than professional standing. While there are clear
+leaders in the performance, that role may pass to others as people take turns,
+sometimes singing solo, sometimes in groups, and sometimes joining a soloist on
+choruses (MacKinnon [1993] 1994; Hield and Crossley 2014; Dunn [1980] 2015;
+Gordon et al. 2024).21 Gatherings typically depend on volunteers for organisation,
+with those individuals determining the character of the activities they lead
+through (often unconscious) decision-making about everything from times and
+places for gathering, to the layout of spaces, flow, how participants join in (Hield
+2013), behaviour moderation (Hield and Mansfield 2019), the nature of acceptable
+contributions (Mansfield 2026; Miller 2026), and marketing.
+21
+See Curry (2026) for examples of the types of repertoire and participatory practices that are
+typical of the folk scene in England. One of the access challenges identified by SPG holder Sophie
+Crawford is that newcomers to folk singing, regardless of their experience as musicians, struggle to
+understand the participatory nature of events. In collaboration with Crawford and participants in the
+Harrison Singaround, Access Folk commissioned Fifth Column Films to create a short documentary
+depicting what a typical twenty-first-century singaround looks and sound like. Staging a singaround,
+rather than directly sharing ethnographic research data, is a workaround for openly sharing project
+data; it comes with labour and production costs but ensures that (1) everyone in the room has signed
+appropriate waivers, and (2) only repertoire that is public domain or that has full rights clearances is
+included. The film, along with short reels for sharing over social media platforms, is an awareness
+raising tool for folk organisers, and freely available for download and reuse under an open licence (CC
+BY-NC-ND 4.0).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 20 ===
+20
+
+Rebecca Draisey-Collishaw
+
+The scene is steeped in discourses about the Commons, tradition, volunteerism, and aural transmission of repertoire, often mitigating desires to understand
+intellectual property law as relevant. Informal participatory music scenes such
+as this one depend on ideas about goodwill, fair play, and shared heritage to
+function (MacKinnon [1993] 1994; cf. McCann 2001)—though these values may be
+contested when creators perceive their rights to have been violated.22 Regular
+gatherings of singers, musicians, and dancers make recordings that they share,
+either informally on social media or through archives and commercial recording
+projects. Session facilitators, too, make recordings, compile songbooks, and share
+playlists that help participants learn repertoire. And, dancers use recordings
+they find on YouTube to accompany themselves in the absence of live musicians.
+As Jones and Cameron point out, “historically many tunes that have become part
+of the folk repertoire have a traceable author. Likewise, it would take a real purist
+not to acknowledge that much modern music has been written in a traditional
+style and assimilated to what many would now call folk music” (2005:260).
+Consent from creators to share their work is often assumed by scene
+membership, enabling largely informal and non-commercial practices to continue with minimal supporting infrastructure.
+Though valuing shared heritage practices might discourage some practitioners from thinking too closely about intellectual property rights, understanding how relevant legal concepts apply is particularly important in the context of
+digital sharing, where reach and usage have unknown dimensions and consequences. One SPG holder, for example, realised there were additional personal
+and legal risks when they sought to translate their hardcopy songsheets into a
+shareable online resource. As they often did not have documentation of song
+sources—let alone relevant rights clearances—they were unable to assess which
+materials might violate copyright or licensing terms. Given the significant
+required labour, they opted to put that element of their project on hold until
+they could adequately assess the risks.
+Similar challenges existed across the datasets associated with Access Folk’s
+research, often related to ongoing efforts by both the academic team and SPG
+holders to square norms of the scene with the requirements of research
+institutions. For data to be held in institutional data repositories, full clearance of intellectual property rights is non-negotiable. For audiovisual documentation, this means identifying and gaining the explicit consent of all
+performers, requesting licenses from the people who created the documentation, and clearing third-party copyrights for all songs. Similar clearances
+are needed for ephemera associated with singing activities, like songsheets.
+At a minimum, this sort of rights research is labour intensive, requiring
+detailed record-keeping about performers and extensive archival searches
+to identify unknown songs, sources, and creation dates. Given the nature of
+22
+
+E.g., The Morris Federation released a compilation CD of dance music in 2025 (Morris Federation
+2025). Misunderstandings about how copyright and licensing work resulted in withdrawal of the
+recording, some heated social media debates, and clear upset on the part of some (not all) performers
+whose rights were infringed. The varied reactions of performers, volunteer producers, and observers
+revealed differing understandings of ownership that are not fully compatible with local regulations.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 21 ===
+Traditions of Music and Dance
+
+the folk scene and song-sharing activities, not to mention gaps in available
+records about song sources, this type of rights research and clearance often is
+not possible.23
+The informal nature of participation also poses challenges for privacy, data
+protection, and consent. Participants drop in and out of activities held in public
+or semi-public spaces. Sometimes they become session regulars but, just as often,
+they share a single song, coming and going before anyone can catch their name
+—or a song title and source. Participants, too, might be well-known professionals
+or local legends who are identifiable to anyone with a passing knowledge of
+England’s folk scene, ruling out potential for anonymity. Participating might
+involve singing a solo, joining in imperceptibly on a rowdy mass chorus, or
+sitting quietly and observing. The nature of such events makes it equally difficult
+to identify or anonymise everyone present, let alone gain research institutionapproved consents and permissions. This is especially true in a scene that
+depends on the labour of time-poor volunteers who may not have relevant
+specialised knowledge or the capacity to tackle the substantial documentation
+associated with provenance and rights clearances.
+The participatory nature of the SPG projects added to the inherent challenges,
+making our open research goals particularly difficult to manage. SPG holders
+signed collaboration agreements with Access Folk that specified their roles in
+research activities, obligations for data sharing, identification in relation to their
+data, and withdrawal processes, but the academic team often did not have direct
+relationships with participants. Based on the set of templates and processes that
+TUoS research services approved, informed consent procedures were adapted on
+a case-by-case basis in consultation with SPG holders. Alterations accounted for
+distinctions in whether the partner was an organisation (with its own robust
+consent, safeguarding, and data management procedures) or an individual; the
+knowledge and experience of the SPG holder; the types of participants involved;
+the public or private nature of interventions; and the nature of risks associated
+with data collection activities. In a few cases, the academic team directly ran
+consent procedures and data collection activities, but more often the SPG
+partner took a leading role in assessing and administering the most appropriate
+procedures for their specific context.
+As the academic team were rarely present during project activities, we
+depended on SPG holders to institute negotiated procedures and gather required
+documentation. This might include posting a notice about research activities,
+sharing a consent form, circulating a survey, or facilitating contact with a rights
+holder. The SPG holders’ varied circumstances meant the results were uneven.
+Shared data, for example, sometimes lacked necessary details about provenance,
+consent, and licensing. It was not that SPG holders perceived these details as
+unimportant, but their primary concern was efficiently enabling participation
+on terms that suited their participants’ needs. One intervention, for example,
+23
+Korn et al. also point out that historically marginalised groups, like women, are less likely to be
+included in the existing digital record, making it much more difficult to find rights holders. This
+absence ends up exacerbating the underrepresentation of minoritised groups in archives and
+repositories when rights cannot be cleared (2026:404).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+21
+
+
+=== PAGE 22 ===
+22
+
+Rebecca Draisey-Collishaw
+
+that was situated in a multicultural urban centre, targeted young, historically
+marginalised, and politically active participants for informal drop-in singing
+sessions in an outdoor setting. Written documentation imposed a problematic
+level of formality on the event and was greeted with suspicion by some participants, so organisers preferred careful conversations for explaining data usage
+and ways of opting out.24 The SPG holder only shared data once they were
+satisfied that identifiable participants were happy with its use by the Access Folk
+project. Though this arguably is the most ethical approach given the circumstances, the lack of documentation trail has proven tricky to manage downstream.
+We sought to minimise the administrative burden associated with the
+research elements of projects by providing SPG holders with templates for
+recording key details about the data they shared—though as feedback from
+some SPG holders later revealed, we sometimes needed to go further to streamline research processes. We learned that even when we summarise relevant
+regulations and ethical considerations, our partners may not take that information on board, either due to capacity or interest. SPG holders generously shared
+photos and videos that they gathered from participants alongside descriptive
+accounts of their planning, processes, and impact. But data sometimes were
+shared in formats (or via platforms) that we could not accept. Some SPG holders,
+for example, preferred the convenience of WhatsApp to secure file uploads;
+unfortunately, Meta’s lack of compliance with UK GDPR (2016) meant we were
+unable to accept data over WhatsApp. Repeatedly asking for the same data to be
+shared differently tested everyone’s patience! Likewise, we all struggled to
+understand why it was okay to publicly share recordings and photos over
+Instagram, Facebook, or on partner websites, but that same material could not
+be included as research data without considerable extra labour on the part of SPG
+holders and their participants.
+While asking our partners to document consent and licensing agreements was
+the right thing to do in terms of protecting people’s rights (and fulfilling our
+institutional requirements), relations with some SPG holders soured if requests
+were perceived as only relevant to university systems—or, indeed, if conversations about ethics and governance were perceived as suggesting negligence on
+the part of research partners. But without formal documentation of consent and
+licensing from all rights holders, our options for processing the data remain
+limited. And there is the rub. At the end of this project, we will be able to produce
+academic papers reporting on the results of the project. The supporting datasets
+—the videos, photos, and creative outputs—that are most valuable to our
+partners may not be findable, accessible, or reusable by scene stakeholders,
+24
+
+This preference for informal conversation to written documentation is perhaps best understood with reference to legal actions taken against protesters in the UK. From the repressive use of
+public order laws to quash disruptive but peaceful climate protests organised by Extinction Rebellion
+(Taylor and Murray 2020) to the proscription of Palestine Action under the Terrorism Act (2000)
+in 2025, journalists, academics, and political campaigners consistently report a chilling effect that
+influences decisions to “act or to speak when it would have been perfectly lawful to do so” (Mead
+2026).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 23 ===
+Traditions of Music and Dance
+
+given the high burden of labour required of community partners (cf. Luyk
+2015:10; Post 2017; Seeger 1986).
+A plan undone: The limits of our institutional repository
+
+Despite our carefully planned consent and data intake processes, within a year it
+became apparent that ORDA was not fit for our purposes. Our first brush with this
+reality came in September 2024 when we tried to share a short field recording
+from a workshop run by SPG holders Sarah Hinds and Miriam McDonald
+(Heartwood Social Farming Centre n.d.). Seeking to improve rural access and
+mobilise multiple “folk song adjacent” interest groups, the duo offered workshops that explored intersections between landwork, craft, song, and folkloric
+knowledge at Heartwood Social Farming Centre, just outside of
+Matlock, Derbyshire (Draisey-Collishaw and Wettermark 2024; cf. Camlin
+2024). Sharing this particular field recording via ORDA should have been
+straightforward: I was the recordist and the video was framed so that Hinds’s
+image and voice were the only identifiable elements. The workshop participants
+had, in any case, consented to videorecording, photography, long-term archiving, and reuse—details that I discussed directly with the participants before I
+made the recording. Trying to share the recording showed up a first major
+structural barrier to using ORDA to store ethnographic data.
+The field recording features Hinds using a call-and-response approach to
+teach a song chorus while participants harvest willow branches for use in basket
+weaving. The chorus is from “Willow,” an original song by Rachel Newton and
+Sechou Keita that was released in 2019 on The Lost Words (Spell Songs 2019). The
+content of the field recording, in other words, includes third-party copyrights
+that require clearance before sharing via ORDA. In this case, identifying the
+songwriters was easy, though finding out who owns the publishing rights has
+proven complicated—as of February 2026, we still do not have a license to share
+the recording. But we also questioned whether we needed a license. Given the
+content and quality of the recording, did our usage constitute “fair dealing”?
+Rather than high-quality audiovisual documentation of a performance and song,
+this lo-fi field recording—made “for our own research purposes”—features a
+single line of the song chorus sung repetitively. The recording focuses on the
+means and context for participant engagement, illustrating details outlined in
+reporting by SPG holders, testimonials by participants, and my own fieldnotes
+about how the functional approach to singing supports access for different
+populations. The song and performance are incidental and the recording is
+unlikely to affect the market value of the original work.
+This example exemplifies the nature of multimodal ethnomusicological data:
+the recording is only meaningful data when combined with other documentation. While the data infrastructure for ORDA is well-suited to preserve and share
+multimodal digital data, the risk-intolerant nature of the repository means that
+content under copyright—even when there is an applicable fair dealing exception—cannot be stored or shared. As Wakaruk et al. explain, “Anyone who works
+with copyright in higher education knows that the interpretation of related legal
+provisions is often case-specific and does not lend itself to bright-line legal tests.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+23
+
+
+=== PAGE 24 ===
+24
+
+Rebecca Draisey-Collishaw
+
+Fair dealing is also similarly constructed,” often leading to overly conservative
+assessments of what is possible in the existing regulatory context (2025:12–13).
+When ambiguities exist about songs or rights holders, the assumption must be
+that content is still under copyright or usage is unconsented, as institutional
+repositories are risk intolerant. Indeed, as Wakaruk et al. (2025) reveal, growing
+rates of “copyright anxiety” in the higher education sector result in changes to
+research, publication, and teaching outcomes that avoid potential risks associated with copyrighted materials, even where a risk-managed approach might be
+more appropriate (cf. The National Archives 2021).
+While we interpreted copyright infringement risks associated with our field
+recording as low, we were also pragmatic about our chances of swaying ORDA’s
+intake policies. We started looking for workarounds. We queried, for example,
+whether licensing from the Performing Rights Society for Music25 might work as
+a strategy for ensuring copyright compliance and royalty payment to relevant
+rights holders (PRS 2025). As researchers, however, we were unable to purchase a
+streaming licence for our collection. PRS’s suggestion that the repository might
+opt to licence their entire platform likewise proved impractical, running to a cost
+of thousands of pounds per year. Even our research team had to concede that this
+was an unsustainable expense, especially given that (1) we were among the only
+current users seeking a streaming licence, (2) the small number of streams we
+expected, and (3) the overall low risk associated with the content.
+The challenge of depositing our data to ORDA also involved privacy and data
+protection considerations. Another SPG holder, Rupert Philbrick of Music at the
+Heart of Teesdale, shared audiovisual documentation of a Wassail event with
+Access Folk, alongside written reflections and interviews about introducing
+singing into the activities of an existing youth folk band (ages 11–17).26 The
+recording features Philbrick leading a group of interested young musicians in
+singing “The Wassail Song” at a community event in Weardale, Co. Durham.
+Again, sharing this recording seemed straightforward: “The Wassail Song” is in
+the public domain; Music at the Heart of Teesdale applied a Creative Commons
+license to the recording itself; and, because the Wassail event was the focus of a
+short documentary being made by an external funder (see Weardale Together
+2025), all participants signed recording releases. The recording in question is an
+outtake that provides high-quality documentation of Philbrick’s work with
+young folk musicians. While we hold correspondence from Music at the Heart
+of Teesdale explaining that all persons identifiable in the recording have consented, we do not directly hold documentation of their consent. This introduces
+questions about data provenance and whether we have the right to deposit the
+recording as part of our dataset. Though the documentation relates to Access
+Folk’s research, it was generated by a non-academic partner. As Philbrick does
+not have a university affiliation, he cannot directly deposit the recording in
+ORDA. Philbrick, as well, is conscious of the youthful nature of the participants;
+25
+The organisation that licenses usage and distributes royalties for all registered musical works
+and musicians in the UK.
+26
+Wassail is a winter folk tradition in England that involves blessing orchards for a good harvest in
+the coming season.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 25 ===
+Traditions of Music and Dance
+
+while happy for the recording to be part of the project dataset—accessible and
+reusable for future research—he does not want the recording to be freely
+downloadable online. His terms of sharing demanded controlled access—a
+specification that ORDA simply cannot answer (Research Data Services, email
+to author, 29 May 2025).
+Investigating alternatives and weighing priorities
+
+In early summer 2025, we turned to the UK Data Service—the UK’s largest digital
+repository for social science and humanities research—as a solution for our data
+sharing challenges. Like ORDA in terms of function, this specialist service offers
+controlled access to data collections, a characteristic that we hoped would enable
+a risk-managed approach to the rights and provenance issues inherent in our
+data. Depositing to this service, however, requires institutional affiliation. Even
+more problematically given our prioritisation of data sharing with stakeholders
+in the folk scene, institutional affiliation is also required to use controlled access
+collections. In the end, asking “open for whom” proved unnecessary. The risks
+around consent and anonymity inherent in our data, the UK Data Service
+assessed, would require their SecureLab, a service that “provides controlled
+access to data that are too detailed, sensitive or confidential to be made available
+under the standard End User Licence or Special License” (UK Data Service 2026b).
+Unfortunately, this service is only available for use with quantitative datasets,
+which ruled us out.
+Our discussions with the UK Data Service made one thing very clear: though
+most of our data take the form of interview transcriptions, written reflections,
+and fieldnotes, even minimal inclusion of audiovisual formats with complex
+rights all but requires involvement of a sound archive. More specifically, we
+needed specialist knowledge of relevant regulatory issues, as well as the capacity
+to take a more risk-managed approach to our dataset. In late autumn 2025, we
+turned to the British Library Sound Archive: to our knowledge, the only sound
+archive available to us in England with a national remit suitable to the scope of
+our project.
+In theory, depositing our data with the British Library was an ideal solution:
+they handle multimedia data, provide controlled access, take a risk-managed
+approach to rights management, and, importantly, they are accessible to the
+public—our stakeholders would be able to access the data. The complicating
+factor was a cyberattack that targeted The British Library in October 2023. The
+attack crippled the organisation and, more than two years later, leaves the
+organisation working at reduced capacity (Ash 2024; Keating 2024; Stavrou
+2025). In this context, curators are reluctant to accession data from external
+researchers. Beyond capacity and regardless of their ability to manage multimedia data, one curator informed me that the structure of the institution may
+not be suitable for the preservation and dissemination of multimodal datasets.
+The curators at the British Library approach data intake by modality; individual
+curators are responsible for different types of data (e.g., audiovisual recordings,
+photos, and scores). Each curator evaluates data items separately according to
+their section’s collection priorities. Different curators, for example, would assess
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+25
+
+
+=== PAGE 26 ===
+26
+
+Rebecca Draisey-Collishaw
+
+the lo-fi field recording of Sarah Hinds teaching “Willow” and the accompanying
+documentation that gives the data meaning. While there is potential to link
+accessioned data and liaise with relevant curators, it is unlikely that our multimodal dataset would be accepted in its entirety. Initial conversations suggest
+that depositing our data with the British Library will not be simple given the
+institution’s current reduced capacity, the complexity of our dataset, and the
+time limits imposed by the end of Access Folk’s funding.
+It is now January 2026, and I have been working on Access Folk’s open research
+strategy for more than two years. I have not been alone on this journey. I am part
+of an incredible team of researchers, each offering specialised and complementary knowledge relevant to achieving our research goals. Yet even with the
+luxury of a well-resourced project and a dedicated multi-person team working in
+concert with the stated priorities of our institution and funder—and with
+support from key stakeholders within the folk scene—realising the full extent
+of our open research objectives remains elusive. Our participatory methods,
+prioritisation of co-produced research and outputs, and publication of results in
+open non/academic formats mean we have done a good job on the “science
+communication, open engagement of societal actors and open dialogue with
+other knowledge systems” elements of UNESCO’s open research definition
+(2021). Indeed, after the Access Folk project wraps up at the end of January
+2027, our open access outputs will continue to be stably shared on ORDA for
+anyone with the interest and know-how to locate an institutional repository. But
+though we’ll have a well-documented dataset that is mostly compliant with the
+FAIR Principles, that data will nevertheless remain largely inaccessible to
+stakeholders interested in building on our work.
+
+Open research in ethnomusicology
+The challenges I’ve outlined in this article are complexly entangled and play out
+in highly localised ways. Finding solutions cannot depend on lone ethnomusicologists engineering bespoke workarounds to their data management needs—
+or, indeed, ignoring core challenges by locking data away in personal archives.
+Nor can we depend on institutional research support teams or external repositories and archives to engineer solutions to challenges that they are ill-positioned to
+fully comprehend. Their interests and priorities, moreover, may at times exist in
+tension with those of music scholars. Structured with anonymous quantitative
+datasets in mind, institutional repositories, for example, support academic publishing and enable researchers to meet funder requirements for open datasets.
+They are often ill-suited to host ethnographic data that include in/direct identifiers and complex intellectual property rights, or to accession co-produced data
+that require interfacing beyond researcher communities. Given the costs and
+complexities, there is little motivation to proactively address key challenges for
+music scholars. Archives, on the other hand, tend to prioritise potential for
+dissemination and community engagement. Capacity and resource limits, however, mean that they are often reluctant to preserve data with limited potential for
+reuse because of problems with provenance or regulatory restrictions.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 27 ===
+Traditions of Music and Dance
+
+Finding solutions that meet the needs of ethnomusicological research, I would
+like to suggest, requires four concerted disciplinary-level actions:
+1. Defining ethnomusicological data in terms of recognised data governance principles (e.g., FAIR, CARE, or other) so that we can more effectively
+articulate our data management needs to relevant non-ethnomusicologist
+stakeholders. This includes identifying the limits of extant systems when it
+comes to methodological priorities and disciplinary norms, ethical considerations, data ownership, approaches to risk management, regulatory
+compliance, and infrastructure. Arriving at a definition of ethnomusicological data that is useful beyond individual circumstance will require the
+input and expertise of ethnomusicologists working in a variety of inter/
+national contexts and to vastly varying ends.
+2. Multidisciplinary collaborations on systematic approaches to data
+management that have potential for application beyond individual projects and research contexts. Bringing together ethnomusicologists with
+data management professionals, systems engineers, and legal scholars
+offers potential for exploring solutions, like how the structures of open
+data repositories might more effectively interface with traditional brickand-mortar archives or how smart contracts might use Creative Commons
+Licences and Traditional Knowledge labels to track provenance, enable
+access, and protect rights holders. The possibilities for creative solutions
+are vast if we bring a clear definition of our data management needs (and
+those of the communities we work with) into dialogue with the ingenuity
+of multidisciplinary teams.
+3. Replicating data management solutions in wide-ranging inter/national
+contexts. Testing approaches to data management that are intended for
+more systematic application in a variety of research, regulatory, and
+cultural contexts offers potential for understanding how systems can be
+localised without requiring reinvention. Developing standardised workflows, systems, and infrastructure offers greater potential for supporting
+sustainable access to the knowledge that our partners and participants
+share.
+4. Education on data management, especially how principles of data governance might more consistently be integrated into research design. This
+recommendation might involve creating training materials based on
+solutions proposed through multidisciplinary collaborations or leveraging
+existing publication structures to broaden awareness (and incentivise)
+engagement with existing approaches to data sharing.
+The challenges of open research are unlikely to go away anytime soon. While
+open research involves more than data sharing, robust data governance procedures are nevertheless necessary for sustainable openness. Discussing the
+data governance principles that support open research highlights how
+disciplinary-level neglect of data management fails our interlocutors and
+limits potential for systems reform. We need tough conversations about who
+owns and has the right to access knowledge (not just ethically, but also in legal
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+27
+
+
+=== PAGE 28 ===
+28
+
+Rebecca Draisey-Collishaw
+
+terms), how preservation perpetuates or resists colonisation, how technology
+might help us negotiate more equitable research relationships, and the data
+governance commonalities that cross our research sites. We need, in short, to
+look beyond the risks and unique qualities that distinguish each research site so
+that we can bring the incredible knowledge that exists between us to bear on
+new regulatory, technical, and data governance challenges.
+References
+Access Folk. 2026a. “Who We Are.” https://web.archive.org/web/20260708153730/https://access
+folk.sites.sheffield.ac.uk/about/who-we-are (accessed 8 July 2026).
+Access Folk. 2026b. “Call For Applicants.” https://web.archive.org/web/20260708153711/https://
+accessfolk.sites.sheffield.ac.uk/activities/action-research (accessed 8 July 2026).
+Adams, Jenni, Miranda Barnes, Samuel Moore, Stephen Pinfield, and Siddharth Soni. 2026. Openness in
+the Arts, Humanities and Social Sciences: Documenting Open Research Practices Beyond STEM. Report.
+United Kingdom: MORPHSS Project. https://doi.org/10.17613/jn1y1-mj246.
+Ash, Lamorna. 2024. “Thanks to a Shadowy Hacker Group, the British Library is Still on Its Knees. Is
+There Any Way to Stop Them?” The Guardian (6 February): https://web.archive.org/web/
+20260504023442/https://www.theguardian.com/commentisfree/2024/feb/06/hacker-britishlibrary-cybersecurity-cybercrime-uk (accessed 17 July 2026).
+Bachner, Bryan. 2005. “Facing the Music: Traditional Knowledge and Copyright.” Human Rights Brief,
+12(3):9.
+Ball, John, Tony Bowring, Fay Hield, and Kate Pahl. 2019. “Co-Writing about Co-Producing Musical
+Heritage: What Happens when Musicians and Academics Work Together?” In Heritage as Community
+Research: Legacies of co-Production, ed. Vergunst, Jo, and Helen Graham, pp. 51–64. Bristol: Policy
+Press. https://doi.org/10.1332/policypress/9781447345299.003.0003.
+Berne Convention. 1886. “Berne Convention for the Protection of Literary and Artistic Works.”
+(9 September): https://www.wipo.int/en/web/treaties/ip/berne/index (accessed 14 July 2026).
+Bishop, Libby. 2009. “Ethical Sharing and Reuse of Qualitative Data.” The Australian Journal of Social
+Issues 44(3):255–272. https://doi.org/10.1002/j.1839-4655.2009.tb00145.x.
+Bones, Joanie. 2025. “The Elephant in the Womb.” https://web.archive.org/web/20260317153930/
+https://www.joaniebones.com/the-elephant-in-the-womb.html (accessed 17 July 2026).
+Bones, Joanie, Oliver Cross, and Esbjörn Wettermark. 2024. Access Folk Podcast. Sheffield: The University of Sheffield. https://doi.org/10.15131/shef.data.24763410.
+Borgman, Christine L. 2012. “The Conundrum of Sharing Research Data.” Journal of the American Society
+for Information Science and Technology 63(6):1059–1078. https://doi.org/10.1002/asi.22634.
+Born, Georgina, and Andrew J.Eisenberg, eds. 2025. “Music, Digital Transformation, and Intellectual
+Property in the Global South.” Journal of Popular Music Studies 37(2):1–10. https://doi.org/10.1525/
+jpms.2025.37.2.1.
+Brunschweiger, Alane. 2026. “Addressing the Impact of AI Bots on Repositories: OpenAIRE’s New
+Working Group.” OpenAIRE (16 June): https://web.archive.org/web/20260623215545/https://
+www.openaire.eu/addressing-the-impact-of-ai-bots-on-repositories-openaires-new-workinggroup (accessed 17 July 2026).
+Butler, Christopher, Morag Butler, Fay Hield, and Esbjörn Wettermark. 2023. Accessing Folk Singing in
+England: A Gathering of Views. Report. Sheffield: The University of Sheffield. https://doi.
+org/10.15131/shef.data.24542122.
+Camlin, David A. 2024. “What Does it Mean to Sing with the Earth?” Music Education Research 26(3):
+209–222. https://doi.org/10.1080/14613808.2024.2347636.
+Carugno, Giovanna. 2018. “How to Protect Traditional Folk Music? Some Reflections upon Traditional
+Knowledge and Copyright Law.” International Journal for the Semiotics of Law - Revue Internationale de
+Sémiotique Juridique 31(2):261–274. https://doi.org/10.1007/s11196-017-9536-7.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 29 ===
+Traditions of Music and Dance
+
+29
+
+Chawla, Dalmeet Singh. 2024. “Japan’s Push to Make All Research Open Access is Taking Shape.” Nature
+(3 June): https://www.nature.com/articles/d41586-024-01493-8 (accessed 29 January 2026).
+Cooper, Jennifer. 2013. “Accessibility of Field Recordings in United States Ethnomusicology and Folk
+Archives.” Music Reference Services Quarterly 16(1):18–35. https://doi.org/10.1080/10588167.
+2013.756342.
+Crean, Saoirse, dir. 2025. Folk to Folk Documentary Trailer. Featuring Jennifer John. Liverpool: Folk to
+Folk Film. https://www.youtube.com/watch?v=sJGlr3IyxPM (accessed 17 July 2026).
+Creative Commons. 2026. “Homepage.” https://creativecommons.org/ (accessed 22 January 2026).
+Curry, Rob. 2026. The Singaround. Featuring the Harrison Singaround. London: Fifth Column Films &
+Access Folk. https://doi.org/10.15131/shef.data.32938913.
+Diamond, Beverley. 2008. Native American Music in Eastern North America: Experiencing Music, Expressing
+Culture. New York: Oxford University Press.
+Diamond, Beverley, and Ian Brodie. 2013. “MacEdward Leach and the Songs of Atlantic Canada.” Oral
+Tradition 28(2):335–340. https://doi.org/10.1353/ort.2013.0017.
+Diamond, Beverley, and Salwa El-Shawan Castelo-Branco. 2021. Transforming Ethnomusicology, Vols 1
+and 2. Oxford: Oxford University Press.
+Diamond, Beverley, Aaron Corn, Frode Fjellheim, Cheryl L’Hirondelle, Moana Maniapoto, Allan
+Marett, Taqralik Partridge, John Carlos Peria, Ulla Pirttijärvi, and Per Niila Stålka. 2017. “Performing Protocol: Indigenous Traditional Knowledge as/and Intellectual Property.” In Post, Ethnomusicology, 44–76.
+Draisey-Collishaw, Rebecca. 2025. “‘Negotiating the Right to be Named’—Reporting on the PRN’s
+Intellectual Property Rights and Participatory Research Training Workshop.” iHuman Blog,
+4 March. Sheffield: The University of Sheffield. https://web.archive.org/web/20260508085809/
+https://sheffield.ac.uk/ihuman/news/negotiating-right-be-named-reporting-prns-intellectualproperty-rights-and-participatory-research (accessed 12 January 2026).
+Draisey-Collishaw, Rebecca, and Esbjörn Wettermark. 2024. “Issues and Approaches to Open Access
+for Ethnographic, Participatory, and Creative Practice Methodologies,” OpenFest 2024 Day 1 recordings - Open Research @ Sheffield talks and presentations (10 September): https://doi.org/10.15131/
+shef.data.27100444.v1.
+Draisey-Collishaw, Rebecca, Fay Hield, Helen Grindley, and Esbjörn Wettermark. 2025a. Access Folk
+Small Project Grants: Methodology. Report. Sheffield: The University of Sheffield. https://doi.
+org/10.15131/shef.data.29369831.
+Draisey-Collishaw, Rebecca, Fay Hield, Helen Grindley, and Esbjörn Wettermark. 2025b. Access Folk
+Small Project Grants: Research Methods, Tools, and Timelines. Report. Sheffield: The University of
+Sheffield. https://doi.org/10.15131/shef.data.29369834.v1.
+Dunn, Ginette. [1980] 2015. The Fellowship of Song: Popular Singing Traditions in East Suffolk. London:
+Routledge. https://doi.org/10.4324/9781315667324.
+Elliot, Meg. 2025. “The Folk” (episode 3). Heart & Stone. https://www.bbc.co.uk/programmes/p0ks7by5
+(accessed 17 July 2026).
+Ethnomusicology Translations. 2026. “About the Journal.” https://scholarworks.iu.edu/journals/
+index.php/emt/about (accessed 9 February 2026).
+European Research Council (ERC). n.d. “Open Science.” https://web.archive.org/web/20260621014001/
+https://erc.europa.eu/manage-your-project/open-science (accessed 23 January 2026).
+Fargion, Janet Topp. 2009. “‘For My Own Research Purposes?’: Examining Ethnomusicology Field
+Methods for a Sustainable Music.” The World of Music 51(1):75–93.
+Franke, Matthew. 2021. “Open-Access Music Journals and the Possibility of Global Dialogue.” College
+Music Symposium 61(2):24–40.
+Gilman, Lisa, and John Fenn. 2019. Handbook for Folklore and Ethnomusicology Fieldwork. Bloomington:
+Indiana University Press. https://doi.org/10.2307/j.ctvd58sf5.
+Giri, Subash. 2025. “Community Collaborative Participatory Archive (CCPA): Towards a New Archival
+Practice in Ethnomusicology.” Traditions of Music and Dance 57(1):95–114. https://doi.org/10.1017/
+tmd.2024.5.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 30 ===
+30
+
+Rebecca Draisey-Collishaw
+
+Global Indigenous Data Alliance (GIDA). n.d. “CARE Principles for Indigenous Data Governance.”
+https://web.archive.org/web/20260713135929/https://www.gida-global.org/careprinciples
+(accessed 6 January 2026).
+GoFair. n.d. “FAIR Principles.” https://www.go-fair.org/fair-principles/ (accessed 10 January 2026).
+Gordon, Christopher, Fay Hield, Emily Porter, Trista Selous, and Esbjörn Wettermark. 2024. Ask a
+Friend: Thoughts about Folk Singing in England from People Outside of the Folk Scene. Report. Sheffield:
+The University of Sheffield. https://doi.org/10.15131/shef.data.25895428.v1.
+Goudarouli, Eirini, Anna-Maria Sichani, and Jane Winters. 2026. Exploring Digital Cultural Heritage: Access,
+Use, Value and Sustainability. London: University of London Press. https://doi.org/10.63674/bxds6730.
+Guy, Nancy. 2002. “Trafficking in Taiwan Aboriginal Voices.” In Handle with Care: Ownership and Control
+of Ethnographic Materials, ed. Jaarsma, Sjoerd R., pp. 195–210. Pittsburgh: University of Pittsburgh
+Press.
+Harley, Diane, Sophia Krzys Acord, Sarah Earl-Novell, Shannon Lawrence, and C. Judson King. 2010.
+Assessing the Future Landscape of Scholarly Communication: An Exploration of Faculty Values and Needs in
+Seven Disciplines. Berkeley: Center for Studies in Higher Education, UC Berkeley. http://escholar
+ship.org/uc/cshe_fsc.
+Heartwood Social Farming Centre. n.d. “Finding Roots.” https://web.archive.org/web/
+20260716115601/https://www.heartwoodsfc.com/finding-roots.html (accessed 16 July 2026).
+Hemmasi, Farzaneh, and Hannah M. Brown. 2025. “Digital Ethnomusicological Research Data and the
+Institutional Repository.” MUSICultures 52:69–100. https://journals-lib-unb-ca/index.php/MC/
+article/view/35835.
+Hemment, Drew, Cody Kommers, Ruth Ahnert, Maria Antoniak, Glauco Arbix, Vaishak Belle, Steve
+Benford, Alexandra Brintrup, Nick Bryan-Kinns, Mercedes Bunz, Baptiste Caramiaux, Sougwen
+Chung, Martin Disley, Yali Du, Edgar A. Duéñez-Guzman, Evelyn Gius, Francisco Gómez Medina,
+Lauren Goodlad, Naama Ilany-Tzur, Leif Isaksen, Marina Jirotka, Helen Kennedy, David Leslie,
+Dalaki Livingstone, Hoyt Long, Meredith Martin, Johanna Nalau, Chris Nathan, Ashley Noel-Hirst,
+Kirsten Ostherr, Andrew Prahl, Omer Rana, Matt Ratto, Tobias Revell, Jenny Rhee, Isaac Rutenberg,
+Brent Seales, Stephanie Sherman, Richard Jean So, Adam Sobey, Jack Stilgoe, Marion Thain, Elaine
+Ubalijoro, Ted Underwood, Aditya Vashishta, Matjaz Vidmar, Matthew Wilkens, Youyou Wu, Sizhe
+Yuen, and Martin Zeilinger. 2025. “Doing AI Differently: Rethinking the Foundations of AI via the
+Humanities.” White Paper. London: The Alan Turing Institute. https://web.archive.org/web/
+20260411174701/https://www.turing.ac.uk/news/publications/doing-ai-differently (accessed
+11 February 2026).
+Hern, Alex. 2018. “Flickr to Delete Millions of Photos as It Reduces Allowance for Free Users.” The
+Guardian (2 November): https://web.archive.org/web/20260703212742/https://www.theguar
+dian.com/technology/2018/nov/02/flickr-delete-millions-photos-reduce-allowance-free-users
+(accessed 17 July 2026).
+Hield, Fay. 2013. “Negotiating Participation in an English Singing Session.” In Taking Part in Music: Case
+Studies in Ethnomusicology, ed. Russell, Ian, and Catherine Ingram, pp. 99–120. Aberdeen: Aberdeen
+University Press, in association with the European Seminar in Ethnomusicology.
+Hield, Fay, and Nick Crossley. 2014. “Tastes, Ties and Social Space: Exploring Sheffield’s Folk Singing
+World.” In Social Networks and Music Worlds, ed. Crossley, Nick, Siobhan McAndrew, and Paul
+Widdop, pp. 214–238. London: Routledge.
+Hield, Fay, and Paul Mansfield. 2019. “Anything Goes? Recognising Norms, Leadership and Moderating Behaviours at Folk Clubs in England.” Ethnomusicology Forum 28(3):338–361. https://doi.
+org/10.1080/17411912.2020.1765827.
+Hield, Fay, Esbjörn Wettermark, Tiffany Hore, Nigel Packett, Sue Whitehead, Lucy Shields, and Amy
+Wilson. 2024. Participatory Research in Music. Report. Sheffield: The University of Sheffield. https://
+doi.org/10.15131/shef.data.25003310.
+Hield, Fay, Esbjörn Wettermark, and Kirsty Kay. 2026. “Experiences of Accessing Folk Singing in
+England”. The International Journal of Traditional Arts 5:1–28. https://tradartsjournal.ncl.ac.uk/
+index.php/ijta/article/view/80.
+Hofmann, Alex, Tomasz Miksa, Peter Knees, Asztrik Bakos, Hande Sağlam, Ardian Ahmedaja, Boonsit
+Yimwadsana, Clare Chan, and Andreas Rauber. 2021. “Enabling FAIR Use of Ethnomusicology Data
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 31 ===
+Traditions of Music and Dance
+—Through Distributed Repositories, Linked Data and Music Information Retrieval.” Empirical
+Musicology 16:47–64. https://doi.org/10.18061/emr.v16i1.7632.
+Hudson, Maui. 2024. “Traditional Knowledge Labels in the Archive: Supporting Community Provenance, Protocols and Permissions.” ICH North—Passing on our Musical Heritage Webinar (10 April):
+https://youtu.be/OHyk2_4WgI0?si=qqP7PijeBSotj9NR (accessed 12 January 2026).
+Information Commissioner’s Office (ICO). n.d. “What is Personal Data?” Information Commissioner’s
+Office. https://web.archive.org/web/20260614021337/https://ico.org.uk/for-organisations/ukgdpr-guidance-and-resources/personal-information-what-is-it/what-is-personal-data/what-ispersonal-data/ (accessed 16 January 2026).
+Intellectual Property Office. 2014. Exceptions to Copyright: Libraries, Archives and Museums. Newport:
+Intellectual Property Office Online. https://assets.publishing.service.gov.uk/media/5a7492b9ed915
+d0e8e399483/Libraries_Archives_and_Museums.pdf (accessed 30 January 2026).
+Jaarsma, Sjoerd R., ed. 2002. Handle with Care: Ownership and Control of Ethnographic Materials.
+Pittsburgh: University of Pittsburgh Press.
+Jensenius, Alexander Refsum. 2021. “Best Versus Good Enough Practices for Open Music Research.”
+Empirical Musicology 16:5–15. https://doi.org/10.18061/emr.v16i1.7646.
+Jerolmack, Colin, Alexandra K. Murphy, and Victoria Reyes. 2024. “Editorial: Ethnography in the Open
+Science and Digital Age: New Debates, Dilemmas, and Issues.” Frontiers in Sociology 9. https://doi.
+org/10.3389/fsoc.2024.1392012.
+Jones, Richard, and Euan Cameron. 2005. “Full Fat, Semi-Skimmed or no Milk Today—Creative
+Commons Licences and English Folk Music.” International Review of Law, Computers & Technology
+19(3):259–275. https://doi.org/10.1080/13600860500348143.
+Kay, Kirsty. 2025. Folk Singing Survey: A Report into Folk Singing Participation and Organising in
+England. Report. Sheffield: The University of Sheffield. https://doi.org/10.15131/shef.data.
+28668428.v1.
+Kay, Kirsty, and Fay Hield. 2024. Folk Singing Survey: Data. Data set. Sheffield: The University of
+Sheffield. https://doi.org/10.15131/shef.data.25896607.
+Keating, Sir Roly. 2024. “Learning Lessons from the Cyber-Attack.” British Library Blog Series: Knowledge
+Matters (8 March): https://web.archive.org/web/20260710000158/https://www.bl.uk/stories/
+blogs/posts/learning-lessons-from-the-cyber-attack (accessed 17 July 2026).
+Kheshti, Roshanak. 2015. Modernity’s Ear: Listening to Race and Gender in World Music. New York: NYU
+Press. http://www.jstor.org/stable/j.ctt15zc66p.
+Korn, Naomi. 2021. “Orphan Works and UK GLAMS: The Case for a Risk Managed Approach.”
+Europeana Pro Blog (10 June): https://web.archive.org/web/20250923162924/https://pro.europea
+na.eu/post/orphan-works-and-uk-glams-the-case-for-a-risk-managed-approach (accessed 31 January 2026).
+Korn, Naomi, Smita Kheria, and Melissa Terras. 2026. “Orphan Works, Mass-Digitisation of Cultural
+Heritage, and Licensing Barriers: Lessons from the United Kingdom’s Experience.” Journal of
+Intellectual Property Rights 31(3):402–410. https://doi.org/10.56042/jipr.v31i3.28459.
+Kraus, Wolfgang, and Igor Eberhard. 2022. “Managing Data, Managing Contradictions: Archiving and
+Sharing Ethnographic Data.” In Interrogating Datafication: Towards a Praxeology of Data, ed. Marcus
+Burkhardt, Daniela van Geenen, Sam Hind, Timo Kaerlein, Danny Lämmerhirt, and Axel Volmar,
+185–206. Bielefeld: Transcript Verlag. https://doi.org/10.1515/9783839455616.
+Landau, Carolyn, and Janet Topp Fargion, eds. 2012. “Ethnomusicology, Archives and Communities:
+Methodologies for an Equitable Discipline.” Special issue, Ethnomusicology Forum 21(2).
+Lewin, Kurt. 1946. “Action Research and Minority Problems.” Journal of Social Issues 2(4):34–46.
+https://doi.org/10.1111/j.1540-4560.1946.tb02295.x.
+Licensing African Datasets. 2026. “The NOODL Framework.” https://web.archive.org/web/
+20260626040848/https://licensingafricandatasets.com/ (accessed 17 July 2026).
+Liptak, Andrew. 2019. “The Internet Archive is Working to Preserve Public Google+ Posts Before It
+Shuts Down.” The Verge (17 March): https://web.archive.org/web/20241006113656/https://
+www.theverge.com/2019/3/17/18269707/internet-archive-archiveteam-preserving-public-goo
+gle-plus-posts (accessed 16 July 2026).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+31
+
+
+=== PAGE 32 ===
+32
+
+Rebecca Draisey-Collishaw
+
+Lobley, Noel. 2017. “‘Curating Sound Is Impossible’: Views from the Streets, Galleries, and
+Rainforests.” In Post, Ethnomusicology, pp. 480–496.
+Local Contexts. n.d. “TK Labels.” https://web.archive.org/web/20260708051314/https://localcon
+texts.org/labels/traditional-knowledge-labels/ (accessed 22 January 2026).
+Luyk, Sean. 2015. “The ‘Data’ of Ethnomusicology Research: Recent Developments and Challenges.”
+Presentation slides for Canadian Centre for Ethnomusicology/FolkwaysAlive! Meeting (February 4):
+https://doi.org/10.7939/R3V11VS8V.
+MacKinnon, Niall. [1993] 1994. The British Folk Scene: Musical Performance and Social Identity. Popular
+Music in Britain. Buckingham: Open University Press.
+Mansfield, Paul. 2026. “‘I’d Better Not Sing that Here’: Musical Environments, Genre Stereotypes and
+Folk Singers’ Performance Strategies.” International Journal of Traditional Arts 5:1–12. https://
+tradartsjournal.ncl.ac.uk/index.php/ijta/article/view/72.
+McCann, Anthony. 2001. “All that Is Not Given Is Lost: Irish Traditional Music, Copyright, and
+Common Property.” Ethnomusicology 45(1):89–106. https://doi.org/10.2307/852635.
+Mead, David. 2026. “Court Ruled Against the Government, and What It Means for the Future of
+Protest.” The Conversation (18 February): https://web.archive.org/web/20260220171030/https://
+theconversation.com/palestine-action-why-the-high-court-ruled-against-the-government-andwhat-it-means-for-the-future-of-protest-275976 (accessed 17 July 2026).
+Messarra, Luca, Freeland, Chris, and Ziskina, Juliya. 2026. Vanishing Culture: A Report on our Fragile
+Cultural Record. San Francisco: Internet Archive Press. https://archive.org/details/vanishingculture-2026.
+Miller, Hugh. 2026. “What Are People Singing in Folk Song Clubs?—Reflections on Songs Sung in Two
+East Midlands Folk Clubs 2017–2023.” International Journal of Traditional Arts 5:1–8. https://tradarts
+journal.ncl.ac.uk/index.php/ijta/article/view/74.
+Morris Federation. 2025. “The Bells of Jubilee.” Talking Elephant Records. https://web.archive.org/
+web/20260312194522/https://www.talkingelephant.co.uk/product/the-bells-of-jubilee/
+(accessed 2 February 2026).
+Moss, Fabian C., and Markus Neuwirth, eds. 2021. “FAIR, Open, Linked: Introducing the Special Issue
+on Open Science in Musicology.” Empirical Musicology Review 16(1):1–4. https://doi.org/10.18061/
+emr.v16i1.8246.
+Mueller, Darren, Justin Schnell, Wendy F. Hsu, James R. Cowdery, Alex W. Rodriguez, and Guthrie P.
+Ramsey, Jr. 2014. “Ethnomusicological Perspectives on Open Access Publication.” Ethnomusicology
+Review 19:1–22.
+Münnich, Stefan. 2021. “FAIR for Whom? Commentary on Hofmann et al. (2021).” Empirical Musicology
+16:151–153. https://doi.org/10.18061/emr.v16i1.8154.
+Neale, Kate, Terry Knight, and Nev Meek. 2024. Carols of the Roseland, Including Tregony. Cornwall:
+Federation of Old Cornwall Societies.
+Open Research. n.d. “Open Research Case Studies.” The University of Sheffield. https://web.archi
+ve.org/web/20260617095821/https://sheffield.ac.uk/openresearch/casestudies#ProfessorFay
+HieldDrRebeccaDraiseyCollishawDrEsbjrnWettermarkDrHelenGrindleyandRowanPiggottAccess
+FolkProjectSchoolofLanguagesArtsandSocieties (accessed 31 January 2026).
+Oruc, Pinar. 2025. “Cultural Heritage as AI Training Data.” IIC - International Review of Intellectual
+Property and Competition Law 56(8):1455–1459. https://doi.org/10.1007/s40319-025-01659-5.
+PARADISEC. 2026. “Pacific and Regional Archive for Digital Sources in Endangered Cultures.” https://
+www.paradisec.org.au/ (accessed 10 July 2026).
+Performing Rights Society for Music (PRS). 2025. “Homepage.” https://web.archive.org/web/
+20260715161717/https://www.prsformusic.com/ (accessed 22 January 2026).
+Post, Jennifer C. 2017. Ethnomusicology: A Contemporary Reader, Vol. 2. New York: Routledge.
+Pruett, David. 2011. “When the Tribe Goes Triple Platinum: A Case Study toward an Ethnomusicology
+of Mainstream Popular Music in the U.S.” Ethnomusicology 55(1):1–30. https://doi.org/10.5406/
+ethnomusicology.55.1.0001.
+re3data.org. n.d. “Registry of Research Data Repositories.” https://doi.org/10.17616/R3D.
+Reason, Peter, and Hilary Bradbury, eds. 2024. The SAGE Handbook of Action Research, 2nd ed. https://
+doi.org/10.4135/9781848607934.
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 33 ===
+Traditions of Music and Dance
+
+33
+
+Reed, Trevor. 2019. “Pu’ Itaaqatsit Aw Tuuqayta (Listening to our Modern Lives).” In Music and
+Modernity among First Peoples of North America, ed. Levine, Victoria Lindsay, and Dylan Robinson,
+pp. 258–264. Middletown, CT: Wesleyan University Press.
+Risk, Laura, and Janice Esther Tulk, eds. 2025. “Archives, Access, and Ethnomusicology.” Special issue,
+MUSICultures 52: https://journals.lib.unb.ca/index.php/MC/issue/view/2449.
+Russell, Maureen. 2024. “Sharing Soundscapes: The Bake/Jairazbhoy Digital Archive of South Asian
+Traditional Music and Arts.” In Conference presentation for British Forum for Ethnomusicology &
+International Council for Traditional Music Ireland Joint-Annual Conference, University College Cork,
+Ireland (5 April).
+Schulder, Marc, and Thomas Hanke. 2022. “How to Be FAIR when you CARE: The DGS Corpus as a Case
+Study of Open Science Resources for Minority Languages.” In Proceedings of the 13th Conference on
+Language Resources and Evaluation Conference, 164–173. https://web.archive.org/web/
+20260602124207/https://aclanthology.org/2022.lrec-1.18.pdf.
+Seeger, Anthony. 1986. “The Role of Sound Archives in Ethnomusicology Today.” Ethnomusicology
+30(2):261–276. https://doi.org/10.2307/851997.
+Seeger, Anthony. 1996. “Ethnomusicologists, Archives, Professional Organizations, and the Shifting
+Ethics of Intellectual Property.” Yearbook for Traditional Music 28:87–105. https://doi.org/10.
+2307/767808.
+Seeger, Anthony. 2023. “Archives, Repatriation, Agency, and Changing Circumstances: Reflections on
+Shared Soundscapes, Collaborative Activations, and Repatriations in Latin America.” The Journal of
+Latin American and Caribbean Anthropology 28(3):230–238. https://doi.org/10.1111/jlca.12683.
+Spell Songs. 2019. The Lost Words. Featuring performances by Karine Polward, Julie Fowlis, Sechou
+Keita, Kris Drever, Rachel Newton, Beth Porter, and Jim Molyneux. England: Folk by the Oak.
+1 compact disc.
+Stavrou, Athena. 2025. “‘People Have Had to Move House’: Inside the British Library, Two Years on
+from Devastating Cyber Attack.” Independent (1 November): https://web.archive.org/web/
+20260512053952/https://www.independent.co.uk/news/uk/home-news/british-library-strikecyber-attack-b2855495.html (accessed 17 July 2026).
+Stobart, Henry. 2017. “‘Justice with My Own Hands’: The Serious Play of Piracy in Bolivian Indigenous
+Music Videos.” In Post, Ethnomusicology, pp. 77–105.
+Stock, Jonathan P. J, and Beverley Diamond, eds. 2022. The Routledge Companion to Ethics and Research in
+Ethnomusicology, 1st ed. London: Taylor & Francis. https://doi.org/10.4324/9781003043904.
+Swijghuisen Reigersberg, Muriel. 2015. “Problematizing Digital Research Evaluation Using DOIs in
+Practice-Based Arts, Humanities and Social Science Research.” F1000Research 4(193):193. https://
+doi.org/10.12688/f1000research.6506.1.
+Swijghuisen Reigersberg, Muriel. 2019. “Ethical Scholarly Publishing Practices, Copyright and Open
+Access: A View from Ethnomusicology and Anthropology.” In Whose Book Is it Anyway? A View from
+Elsewhere on Publishing, Copyright and Creativity, ed. Jefferies, Janis, and Sarah Kember. Cambridge:
+Open Book Publishers. https://doi.org/10.11647/OBP.0159.
+Tal-Socher, Michal, and Adrian Ziderman. 2020. “Data Sharing Policies in Scholarly Publications:
+Interdisciplinary Comparisons.” Prometheus 36(2):116–134. https://doi.org/10.13169/prometheus.
+36.2.0116.
+Taylor, Matthew, and Jessica Murray. 2020. “Extinction Rebellion: Rights Experts Say Peaceful Protest
+in UK Under Threat.” The Guardian (3 September): https://web.archive.org/web/20260716024731/
+https://www.theguardian.com/environment/2020/sep/03/extinction-rebellion-rights-peace
+ful-protest-threat-police (accessed 17 July 2026).
+The National Archives. 2021. “Orphan Works: Guidance for Archive Services on Reasonable Searches to
+Identify Rights Holders,” Ver. 1.0. London: Government of the United Kingdom. https://cdn.natio
+nalarchives.gov.uk/documents/archives/orphan-works-guidance.pdf (accessed 13 January 2026).
+The University of Sheffield (TUoS). 2026a. “Open Research.” https://web.archive.org/web/
+20260120042114/https://sheffield.ac.uk/openresearch (accessed 12 January 2026).
+The University of Sheffield (TUoS). 2026b. “ORDA.” The University Library. https://web.archive.org/
+web/20260122144812/https://sheffield.ac.uk/library/research-data-management/orda
+(accessed 12 January 2026).
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 34 ===
+34
+
+Rebecca Draisey-Collishaw
+
+Tiffany, Kaitlyn. 2019. “Myspace, Which Still Exists, Accidentally Deleted 12 years’ Worth of Music.”
+Vox (18 March): https://web.archive.org/web/20241009101108/https://www.vox.com/the-goods/
+2019/3/18/18271088/myspace-music-deleted-internet-archive-flickr-tumblr (18 July 2026).
+UK Data Service. 2026a. “Copyright.” UK Data Service. https://web.archive.org/web/20251113103734/
+https://ukdataservice.ac.uk/learning-hub/research-data-management/rights-in-data/copy
+right/ (accessed 20 January 2026).
+UK Data Service. 2026b. “What is the UK Data Service SecureLab?” UK Data Service. https://web.arch
+ive.org/web/20260113093404/https://ukdataservice.ac.uk/help/secure-lab/what-is-securelab/
+(accessed 20 January 2026).
+UK General Data Protection Regulation (UK GDPR). 2016. No. 679. https://web.archive.org/web/
+20260710223039/https://www.legislation.gov.uk/eur/2016/679 (accessed 20 July 2026).
+UK Intellectual Property Act. 2014. https://web.archive.org/web/20260714221939/https://www.le
+gislation.gov.uk/ukpga/2014/18/contents (accessed 20 July 2026).
+UNESCO. 2021. UNESCO Recommendation on Open Science. Report. Paris: UNESCO. https://doi.org/
+10.54677/MNMH8546.
+United Kingdom Research and Innovation (UKRI). 2025a. “Open Research.” Good Research Resource
+Hub. https://www.ukri.org/manage-your-award/good-research-resource-hub/open-research/
+(accessed 12 January 2026).
+United Kingdom Research and Innovation (UKRI). 2025b. “Co-Production in Research.” Good Research
+Resource Hub. https://web.archive.org/web/20260218153725/https://www.ukri.org/manageyour-award/good-research-resource-hub/research-co-production/ (accessed 1 February 2026).
+United Kingdom Research and Innovation (UKRI). 2026. “Research Excellence Framework.” How
+Research England Supports Research Excellence. https://web.archive.org/web/20260506091546/
+https://www.ukri.org/who-we-are/research-england/research-excellence/research-excellenceframework/ (accessed 10 July 2026).
+United Nations. n.d. “Open Science and Open Scholarship Conference.” https://www.un.org/en/
+library/OS25 (accessed 23 January 2026).
+Vallier, John. 2017. “Preserving the Past, Activating the Future: Collaborative Archiving in
+Ethnomusicology.” In Post, Ethnomusicology, pp. 459–496.
+Vaughn, Lisa M., and Farrah Jacquez. 2020. “Participatory Research Methods—Choice Points in
+the Research Process.” Journal of Participatory Research Methods 1(1):1–14. https://doi.org/10.
+35844/001c.13244.
+Vince-Myers, Bryony. 2025. The Co-Production Futures Inquiry: Response to the Call for Evidence and Ideas.
+Report. Sheffield: The University of Sheffield. https://doi.org/10.15131/shef.data.29598833.
+Wakaruk, Amanda, Jane Secker, and Chris Morrison. 2025. “Copyright Anxiety and Legal Chill in
+Higher Education: A Comparison of Canada and the United Kingdom (UK).” Special issue, Journal of
+Copyright in Education & Librarianship 8(1):1–29. https://doi.org/10.17161/jcel.v8i1.23058.
+Weardale Together. 2025. “Weardale Wassail.” YouTube Video. 4:04. https://youtu.be/O_8-7oQSgnI?
+si=aOvs3JhDMLclS2Ki (added by Northern Heartlands, 7 March 2025; accessed 22 January 2026).
+Weintraub, Andrew N., and Bell Yung. 2009. Music and Cultural Rights. Chicago: University of Illinois
+Press.
+Western, Tom. 2019. “‘Start the Forgetting Machine’! A Review of Online Sound Archives of European
+Traditional Music.” Yearbook for Traditional Music 51:325–330. https://doi.org/10.1017/ytm.
+2019.38.
+Wettermark, Esbjörn. 2025. “‘Like Folk Singing Was Supposed to Be …’ The English Public House,
+Access, Inclusion and Folk Singing.” Presentation at the Royal Musical Association Study Day, Newcastle
+University (14 April). https://doi.org/10.15131/shef.data.30399403.
+Wilkinson, Mark D., Michel Dumontier, I Jsbrand Jan Aalbersberg, Gabrielle Appleton, Myles Axton,
+Arie Baak, Niklas Blomberg, Jan-Willem Boiten, Luiz Bonino da Silva Santos, Philip E. Bourne, Jildau
+Bouwman, Anthony J. Brookes, Tim Clark, Mercè Crosas, Ingrid Dillo, Olivier Dumon, Scott
+Edmunds, Chris T. Evelo, Richard Finkers, Alejandra Gonzalez-Beltran, Alasdair J. G. Gray, Paul
+Groth, Carole Goble, Jeffrey S. Grethe, Jaap Heringa, Peter A. C. ’t Hoen, Rob Hooft, Tobias Kuhn,
+Ruben Kok, Joost Kok, Scott J. Lusher, Maryann E. Martone, Albert Mons, Abel L. Packer, Bengt
+Persson, Philippe Rocca-Serra, Marco Roos, Rene van Schaik, Susanna-Assunta Sansone, Erik
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+
+=== PAGE 35 ===
+Traditions of Music and Dance
+Schultes, Thierry Sengstag, Ted Slater, George Strawn, Morris A. Swertz, Mark Thompson, Johan
+van der Lei, Erik van Mulligen, Jan Velterop, Andra Waagmeester, Peter Wittenburg, Katherine
+Wolstencroft, Jun Zhao, and Barend Mons. 2016. “The FAIR Guiding Principles for Scientific Data
+Management and Stewardship.” Scientific Data 3(1):160018. https://doi.org/10.1038/sdata.2016.18.
+Wittgren, Bengt. 2025. “Digital Resources for Folk Music.” ICH North—Passing on our Musical Heritage.
+Kokkola: Centria University of Applied Sciences. http://www.wittgren.net/wp-content/uploads/
+2026/01/Digital-resources-for-folk-music.pdf (accessed 16 January 2026).
+Wong, Chuen-Fung. 2017. “Modernist Reform, Virtuosity, and Uyghur Instrumental Music in Chinese
+Central Asia.” In Post, Ethnomusicology, 106–126.
+Zemp, Hugo. 1996. “The/an Ethnomusicologist and the Record Business.” Yearbook for Traditional
+Music 28:36–56. https://doi.org/10.2307/767806.
+Zhang, Xiyuan, Stefan Reindl, Hongjun Tian, Minghan Gou, Ruijie Song, Taoran Zhao, Liz Jackson, and
+Petar Jandric. 2023. “Open Science in China: Openness, Economy, Freedom & Innovation.” Educational Philosophy and Theory 55(4):432–445. https://doi.org/10.1080/00131857.2022.2122440.
+Rebecca Draisey-Collishaw is a research associate on the UKRI-funded Access Folk project at The
+University of Sheffield in the United Kingdom. She completed her PhD in ethnomusicology at
+Memorial University of Newfoundland, Canada, and has subsequently taught and researched at
+universities and memory institutions in Canada, Ireland, and the United Kingdom. Her research
+interests include public service broadcasting and intercultural music-making, as well as folk music
+traditions of the North Atlantic.
+
+Cite this article: Draisey-Collishaw, Rebecca. 2026. “Let’s Not Talk About Archives: Open Research
+for Every Ethnomusicologist.” Traditions of Music and Dance 1–35, https://doi.org/10.1017/
+tmd.2026.10062
+
+https://doi.org/10.1017/tmd.2026.10062 Published online by Cambridge University Press
+
+35
+
