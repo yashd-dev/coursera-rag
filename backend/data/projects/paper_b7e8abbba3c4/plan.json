@@ -1,0 +1,25 @@
+{
+  "title": "Literature Review: Vector Retrieval-Augmented Generation for Basic Paper",
+  "queries": [
+    "vector retrieval augmented generation fundamentals",
+    "vector database RAG systems implementation",
+    "semantic search vector RAG recent advances",
+    "graph retrieval augmented generation vs vector RAG",
+    "hybrid vector graph RAG architecture"
+  ],
+  "sections": [
+    "Foundational Concepts and Vector Embeddings",
+    "Vector RAG Architecture and Retrieval Mechanisms",
+    "Recent Advances in Vector RAG (2024-2026)",
+    "Comparison: Vector RAG vs. Graph RAG and Other Paradigms",
+    "Practical Implementation Guidelines and Open Challenges"
+  ],
+  "keywords": [
+    "vector embeddings",
+    "semantic retrieval",
+    "retrieval augmented generation",
+    "vector databases",
+    "context augmentation"
+  ],
+  "request": "i need a basic paper on vector rag"
+}
