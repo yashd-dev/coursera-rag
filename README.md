@@ -85,11 +85,12 @@ What the graph owns today, and what is still the previous code:
 
 | Stage | Owner |
 | --- | --- |
-| Turn routing, intent classification, find_papers search loop, write consent and its checkpoint | LangGraph (this package) |
-| Scope clarification, ask (retrieval + answer + citation check), edit, resume | Existing `pipeline.py` functions, called as graph nodes |
-| Planning, discovery/indexing, drafting, claim review, build, export | Existing `pipeline.run_create` (OpenCode for file work), unchanged |
+| Turn routing, intent classification, find_papers search loop, write consent and its checkpoint | LangGraph |
+| Fresh paper run: discover/index, read, draft, build+claim review, export | One LangGraph node per stage (`discover`, `read`, `draft`, `build_review`, `export`), conditional edges stop at the first failed stage |
+| The code inside each stage (plan, OpenCode file work, drafting, claim review, build, export) | Existing `pipeline.py` / `drafting.py` / `review.py`, unchanged; `run_create` (legacy) calls the same stage functions |
+| Scope clarification, ask (retrieval + answer + citation check), edit, resume of a paused run | Existing functions, called as one graph node each |
 
-So this is an orchestration front end, not a rewrite of every stage: the long write pipeline is still one node that calls the existing code. Moving stages into separate graph nodes is future work.
+Stage context (project root, plan, session) is held in process memory during a run. After a restart the run is picked up through `threads.phase` and `/resume`, exactly as before. Only the consent question is checkpointed in Postgres. Stages are not yet re-entrant graph nodes, and `ask`, `edit` and `resume` are not decomposed.
 
 ## Workflow and provenance
 

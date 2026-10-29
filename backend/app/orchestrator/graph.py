@@ -2,7 +2,7 @@
 
   START -> fast_route -+-> scope | resume | edit | ask            (slash commands, resume, questions: no model call)
                        +-> classify -> find_agent <-> find_tools -> find_report   (search only: never writes)
-                                    -> consent -> write_paper      (interrupt before any paper is written)
+                                    -> consent -> write_paper -> discover -> read -> draft -> build_review -> export
                                     -> clarify
 
 Side effects (writing files, indexing, review) live only in nodes after the consent interrupt and each guards on
@@ -35,6 +35,7 @@ class State(TypedDict, total=False):
     messages: list
     rounds: int
     candidates: str
+    go: bool
 
 
 def _job(state):
@@ -203,20 +204,52 @@ def declined(state):
     return {}
 
 
+_CTX = {}  # per-process stage context for a running pipeline; a restart resumes through threads.phase (/resume)
+
+
 def write_paper(state):
+    """Guard + prelude (environment check, resume branches). Returns go=True only for a fresh pipeline run."""
     tid, job = state["tid"], _job(state)
     thread = db.get_thread(tid)
     if thread["phase"] not in ("new", "failed_early"):
         job.text("This chat already has a paper in progress, so I did not start another. Use /resume or /edit.")
         job.finish()
-        return {}
+        return {"go": False}
     from .. import scope
 
     if scope.clarify(state["text"]):
         pipeline.run_scope(job, tid, state["text"])
-    else:
-        pipeline.run_create(job, tid, state["text"], state["template"])
-    return {}
+        return {"go": False}
+    root = pipeline.create_prelude(job, tid, state["text"], state["template"])
+    if root is None:
+        return {"go": False}
+    _CTX[tid] = dict(root=root, template=state["template"], text=state["text"])
+    return {"go": True}
+
+
+def _stage_node(fn):
+    def node(state):
+        tid = state["tid"]
+        ok = fn(_job(state), tid, _CTX[tid])
+        if not ok:
+            _CTX.pop(tid, None)
+        return {"go": bool(ok)}
+
+    node.__name__ = "run_" + fn.__name__
+    return node
+
+
+def _after_stage(nxt):
+    return lambda state: nxt if state.get("go") else END
+
+
+def export_node(state):
+    tid = state["tid"]
+    try:
+        pipeline.stage_export(_job(state), tid, _CTX[tid])
+    finally:
+        _CTX.pop(tid, None)
+    return {"go": False}
 
 
 def _wrap(fn):
@@ -257,6 +290,15 @@ def build(checkpointer):
         ("edit", edit_node), ("ask", ask_node),
     ]:
         g.add_node(name, fn)
+    stages = [("discover", pipeline.stage_discover), ("read", pipeline.stage_read), ("draft", pipeline.stage_draft), ("build_review", pipeline.stage_build_review)]
+    for name, fn in stages:
+        g.add_node(name, _stage_node(fn))
+    g.add_node("export", export_node)
+    g.add_conditional_edges("write_paper", _after_stage("discover"), ["discover", END])
+    chain = [n for n, _ in stages] + ["export"]
+    for cur, nxt in zip(chain, chain[1:]):
+        g.add_conditional_edges(cur, _after_stage(nxt), [nxt, END])
+    g.add_edge("export", END)
     g.add_edge(START, "fast_route")
     g.add_conditional_edges("fast_route", pick_after_route, ["classify", "scope", "resume", "edit", "ask"])
     g.add_conditional_edges("classify", pick_after_classify, ["write_paper", "ask_consent", "find_agent", "ask", "clarify"])
@@ -264,7 +306,7 @@ def build(checkpointer):
     g.add_edge("find_tools", "find_agent")
     g.add_edge("ask_consent", "consent")
     g.add_conditional_edges("consent", pick_after_consent, ["write_paper", "declined"])
-    for n in ("find_report", "clarify", "declined", "write_paper", "scope", "resume", "edit", "ask"):
+    for n in ("find_report", "clarify", "declined", "scope", "resume", "edit", "ask"):
         g.add_edge(n, END)
     return g.compile(checkpointer=checkpointer)
 

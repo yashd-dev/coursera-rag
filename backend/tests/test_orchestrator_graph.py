@@ -70,7 +70,7 @@ class GraphTests(unittest.TestCase):
         self.thread = dict(THREAD)
         self.patches = [
             mock.patch("app.db.get_thread", lambda tid: self.thread),
-            mock.patch("app.pipeline.run_create", lambda j, tid, t, tpl: self.created.append(t)),
+            mock.patch("app.pipeline.create_prelude", lambda j, tid, t, tpl: (self.created.append(t), None)[1]),
             mock.patch("app.pipeline.run_ask", lambda j, tid, t, note: (self.asked.append(t), j.finish())),
             mock.patch("app.pipeline.run_scope", lambda j, tid, t: j.finish()),
             mock.patch("app.research.search_arxiv", lambda q, n=8, recent=False: [dict(title="Paper A", year=2024, venue="arXiv", url="http://a", pdf_url="p", origin="arxiv", authors="X")]),
