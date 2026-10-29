@@ -247,6 +247,9 @@ def author_spelling_mismatch(data, authors):
     return False
 
 
+NO_LIMITATIONS_MARKER = "% evidence-limitations: no supported limitation passage extracted for any source"
+
+
 def generate(job, tid, root, title, template, timeout=80):
     sources = [s for s in db.sources(tid) if s["status"] == "indexed"]
     sections = []
@@ -435,7 +438,18 @@ def generate(job, tid, root, title, template, timeout=80):
 
         limitation = limitations.classify_candidates(job, root, s, timeout=timeout)
         if limitation is None:
+            job.tool_done(
+                tc,
+                {
+                    "error": "Limitation classification failed (model or output error), not a finding about the source. Retry with /resume."
+                },
+                error=True,
+            )
             return False, None
+        if limitation == limitations.NOT_EXTRACTED:
+            job.text(
+                f"No supported limitation passage was extracted for {key}; its limitation line is omitted (this does not mean the source has none)."
+            )
         data["limitations"] = limitation
         checkpoint.write_text(json.dumps({"fingerprint": fingerprint, "data": data}))
         (work / "section.json").write_text(json.dumps(data, indent=2))
@@ -534,12 +548,14 @@ def generate(job, tid, root, title, template, timeout=80):
             + r" \\ \hline"
             + "\n"
         )
-    body += (
-        r"\end{tabular}\end{table}" + "\n" + r"\section{Evidence limitations}" + "\n"
-    )
-    for s, d in sections:
-        if d["limitations"]:
-            body += escape(d["limitations"]) + cite(s["key"]) + "\n\n"
+    body += r"\end{tabular}\end{table}" + "\n"
+    if any(d["limitations"] for _, d in sections):
+        body += r"\section{Evidence limitations}" + "\n"
+        for s, d in sections:
+            if d["limitations"]:
+                body += escape(d["limitations"]) + cite(s["key"]) + "\n\n"
+    else:
+        body += NO_LIMITATIONS_MARKER + "\n"
     body += (
         r"\section{Conclusion}"
         + "\n"

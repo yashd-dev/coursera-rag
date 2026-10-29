@@ -68,7 +68,13 @@ class ClassifierTests(unittest.TestCase):
                     [],
                 ),
             ) as run:
-                self.assertIsNone(l.classify_candidates(J(), Path(td), {"key": "a"}))
+                # Bound exhausted with every candidate unsupported: not an error, not a
+                # claim of absence; the caller omits the line (NOT_EXTRACTED, distinct from None).
+                self.assertEqual(
+                    l.classify_candidates(J(), Path(td), {"key": "a"}),
+                    l.NOT_EXTRACTED,
+                )
+                self.assertIsNotNone(l.NOT_EXTRACTED)
                 self.assertEqual(run.call_count, 4)
             with patch.object(l, "excerpts_for", return_value=rows), patch.object(
                 l.structured, "run", return_value=("", False, None, [])
