@@ -883,6 +883,31 @@ def start_banner(resume_phase, label):
     return f"Starting a **{label}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
 
 
+def review_pause_message(root):
+    """Plain description of why claim review stopped and what the user can do. Reads only the saved ledger."""
+    base = "Claim review is paused. Existing source vectors retained."
+    try:
+        fb = json.loads((root / "review-feedback.json").read_text())
+    except (OSError, ValueError):
+        return base
+    errs = [e for e in fb.get("errors", []) if isinstance(e, str) and e.startswith("Span")]
+    if not errs:
+        return base
+    lines = [base, ""]
+    if fb.get("spans_total"):
+        lines.append(f"Reviewed and verified: {fb.get('spans_complete', 0)} of {fb['spans_total']} spans. The paper is not marked verified.")
+    for e in errs[:6]:
+        lines.append("- " + e[:240])
+    if any("unresolved" in e or "insufficient evidence" in e for e in errs):
+        lines.append("")
+        lines.append(
+            "Unresolved spans are never accepted automatically. To continue, ask me to rewrite the named sentence to match what its source states (other verified spans stay cached), or add a source that covers it."
+        )
+    if any(": operational " in e for e in errs):
+        lines.append("Operational failures are not verdicts on the claim: they replay on resume and are retried only with a new PAPERFORGE_REVIEW_NEW_ATTEMPT value.")
+    return "\n".join(lines)
+
+
 def run_create(job, tid, text, template):
     root = latexbuild.prepare(tid, template)
     ok, ver = opencode.available()
@@ -922,7 +947,7 @@ def run_create(job, tid, text, template):
         reviewed, session = review_claims(job, tid, root, session)
         if not reviewed:
             db.update_thread(tid, phase="review_paused")
-            job.finish("Claim review is paused. Existing source vectors retained.")
+            job.finish(review_pause_message(root))
             return
         res, session = build_loop(job, tid, root, session)
         if not res["ok"]:

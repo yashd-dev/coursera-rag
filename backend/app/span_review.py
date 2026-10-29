@@ -381,7 +381,9 @@ def _detail(events):
     return f" ({d})" if d else ""
 
 
-def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
+def review_one(
+    root, index, block, sources, vector_packet, timeout=80, limit=4, correction=""
+):
     # Isolated directory contains only this span and exact candidate excerpts.
     work = root / "span-review" / str(index)
     work.mkdir(parents=True, exist_ok=True)
@@ -432,6 +434,7 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
         + block
         + "\nSOURCE EXCERPTS:\n"
         + (work / "evidence.txt").read_text()
+        + (("\nCORRECTION: " + correction + "\n") if correction else "")
     )
     schema = {
         "type": "object",
@@ -533,9 +536,38 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
     if not ok or r.get("status") != "supported" or not selected:
         return [], [f"Span{index}: {r.get('reason','not supported')}"]
     gap = clause_grounding_gap(block, r.get("clauses"), evidence)
+    if gap and not correction and gap.startswith("an excerpt is not copied"):
+        # One bounded correction re-ask for a mechanical copy error. The guard is unchanged: the corrected
+        # answer must pass the same verbatim check or the span stays unresolved. Never a loosened comparison.
+        norm = lambda t: re.sub(r"\s+", " ", plain_source(t)).strip().lower()
+        allev = norm(" ".join(e["quote"] for e in evidence))
+        bad = next(
+            (
+                c["excerpt"]
+                for c in r.get("clauses", [])
+                if len(norm(c["excerpt"])) < 8 or norm(c["excerpt"]) not in allev
+            ),
+            "",
+        )
+        return review_one(
+            root,
+            index,
+            block,
+            sources,
+            vector_packet,
+            timeout,
+            limit,
+            correction=(
+                "Your previous clause excerpt was not found as one contiguous slice of the evidence: "
+                + json.dumps(bad[:160])
+                + ". Return only excerpts copied character for character from one place (PDF figure text may contain stray numbers between lines: do not skip over them). "
+                "If no contiguous slice supports a clause, return insufficient_evidence."
+            ),
+        )
     if gap:
         return [], [
             f"Span{index}: unresolved clause grounding: {gap}; supported verdict not verifiable, not accepted and not rewritten"
+            + ("; still not verbatim after one correction re-ask" if correction else "")
         ]
     return [
         {
