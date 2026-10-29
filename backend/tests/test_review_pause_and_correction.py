@@ -9,17 +9,21 @@ class PauseMessage(unittest.TestCase):
     def test_lists_unresolved_with_action_and_never_says_verified(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
+            (root / "paper").mkdir()
+            (root / "paper/main.tex").write_text("\\maketitle\nFirst sentence is fine. \\cite{a}\n\nSecond unresolved sentence here. \\cite{b}\n\\bibliographystyle{x}")
             (root / "review-feedback.json").write_text(json.dumps({
                 "spans_complete": 1, "spans_total": 52,
                 "errors": [
                     "Span2: unresolved clause grounding: an excerpt is not copied exactly from its evidence",
                     "Span3: operational native_error: the review call returned no usable result; this is not a verdict on the claim",
                 ]}))
-            m = pipeline.review_pause_message(root)
+            with mock.patch.object(span_review, "spans", return_value=["First fine. \\cite{a}", "Second unresolved sentence here. \\cite{b}"]):
+                m = pipeline.review_pause_message(root)
         self.assertTrue(m.startswith("Claim review is paused. Existing source vectors retained."))
         self.assertIn("1 of 52", m)
         self.assertIn("not marked verified", m)
         self.assertIn("rewrite the named sentence", m)
+        self.assertIn('Sentence: "Second unresolved sentence here."', m)
         self.assertIn("PAPERFORGE_REVIEW_NEW_ATTEMPT", m)
 
     def test_missing_ledger_keeps_plain_message(self):

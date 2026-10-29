@@ -6,7 +6,7 @@ import re
 import hashlib, json, os, re, shutil, time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from . import config, db, rag, research, opencode, latexbuild, answering, scope
+from . import config, db, rag, research, opencode, latexbuild, answering, scope, span_review
 from .jobs import Job
 
 EDIT_RE = re.compile(
@@ -896,8 +896,16 @@ def review_pause_message(root):
     lines = [base, ""]
     if fb.get("spans_total"):
         lines.append(f"Reviewed and verified: {fb.get('spans_complete', 0)} of {fb['spans_total']} spans. The paper is not marked verified.")
+    try:
+        blocks = span_review.spans((root / "paper/main.tex").read_text())
+    except (OSError, ValueError):
+        blocks = []
     for e in errs[:6]:
         lines.append("- " + e[:240])
+        m = re.match(r"Span(\d+):", e)
+        if m and 0 < int(m.group(1)) <= len(blocks):
+            text = re.sub(r"\s+", " ", re.sub(r"\\cite(?:\[[^]]*\])?\{[^}]+\}", "", blocks[int(m.group(1)) - 1])).strip()
+            lines.append('  Sentence: "' + (text[:200] + "..." if len(text) > 200 else text) + '"')
     if any("unresolved" in e or "insufficient evidence" in e for e in errs):
         lines.append("")
         lines.append(
