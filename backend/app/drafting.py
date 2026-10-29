@@ -48,6 +48,88 @@ GENERIC_LABEL_TOKENS = {
 }
 
 
+def parse_cells(text):
+    """Parse a JSON object reply, tolerating code fences. Only when plain parsing fails AND every double
+    quote in the reply is backslash-escaped (the whole reply was echoed as an escaped string) are the
+    escapes removed; replies that already contain unescaped quotes are never rewritten."""
+    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
+    try:
+        out = json.loads(t)
+    except ValueError:
+        if '\\"' not in t or re.search(r'(?<!\\)"', t):
+            raise
+        out = json.loads(t.replace('\\"', '"').replace("\\n", "\n"))
+    if not isinstance(out, dict):
+        raise ValueError("not an object")
+    return out
+
+
+PHRASE_RE = re.compile(
+    r"\b((?:[A-Za-z][\w\-]*\s+){1,3})(?:datasets?|benchmarks?|tasks?)\b"
+)
+PHRASE_STOP = {
+    "the", "a", "an", "our", "these", "this", "those", "that", "each", "all", "other",
+    "same", "different", "such", "of", "in", "on", "for", "and", "or", "with", "to",
+    "by", "from", "as", "two", "three", "four", "five", "several", "many", "various",
+    "more", "most", "both", "any", "some", "new", "if", "are", "is", "its", "their", "was", "were", "be", "than", "which", "whether", "how", "what", "can", "we", "it",
+}
+
+
+def grounded_phrases(source_text, approach="", title="", limit=4):
+    """Task/dataset names copied verbatim from the paper body, each already passing the same guards the
+    evaluation cell must pass (no metric/model word, verbatim near an experiment word, not a restatement).
+    Candidates only; the model still chooses and its answer is re-validated."""
+    if not source_text:
+        return []
+    body = re.split(r"(?m)^\s*(?:References|REFERENCES|Bibliography)\s*$", source_text)[0]
+    flat = re.sub(r"\s+", " ", body)
+    counts = {}
+    for m in PHRASE_RE.finditer(flat):
+        words = m.group(1).split()
+        while words and words[0].casefold() in PHRASE_STOP:
+            words.pop(0)
+        while words and words[-1].casefold() in PHRASE_STOP:
+            words.pop()
+        if not words or len(words) > 3:
+            continue
+        phrase = " ".join(words)
+        if any(w.casefold() in PHRASE_STOP for w in words):
+            continue
+        counts[phrase] = counts.get(phrase, 0) + 1
+    out = []
+    for phrase, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        # Precision first: a dataset/benchmark name (acronym or CamelCase token) or a phrase seen 3+ times.
+        named = any(re.search(r"[A-Z].*[A-Z]|[A-Z]{2,}", w) for w in phrase.split())
+        if not named and not (len(phrase.split()) >= 2 and n >= 3):
+            continue
+        if outcome_label(phrase) or ungrounded_label(phrase, source_text):
+            continue
+        if restates_method(phrase, approach, title):
+            continue
+        if phrase.casefold() in {x.casefold() for x in out}:
+            continue
+        out.append(phrase)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def cell_problems(cells, bad_evaluation):
+    """Plain-language reasons a compact table answer is rejected, fed back on the retry."""
+    problems = []
+    if not isinstance(cells, dict):
+        return ["reply was not a JSON object with approach and evaluation"]
+    for k in ("approach", "evaluation"):
+        v = cells.get(k)
+        if not isinstance(v, str) or len(v) <= 4:
+            problems.append(f"{k} is missing or too short")
+        elif len(v.split()) > 8 or len(v) > 100:
+            problems.append(f"{k} must be at most 8 words and 100 characters")
+    if isinstance(cells.get("evaluation"), str):
+        problems += bad_evaluation(cells)
+    return problems
+
+
 def strip_raw_citations(text, keys):
     """Convert bracketed raw source keys such as [key, p.1] into private markers; render_cites() turns the
     markers into real LaTeX citations that keep the page, e.g. \\cite[p.~1]{key}, after escaping.
@@ -377,6 +459,21 @@ def generate(job, tid, root, title, template, timeout=80):
                 d["evaluation"], d.get("approach", ""), s.get("title", "")
             )
         )
+
+        def bad_reasons(d):
+            if outcome_label(d["evaluation"]):
+                return [
+                    "evaluation contains a metric/outcome word or the word model(s)/method/algorithm; name only the task or dataset"
+                ]
+            if ungrounded_label(d["evaluation"], src_text):
+                return [
+                    "evaluation names something that does not appear verbatim in the source experiments; copy dataset or task names exactly from the notes"
+                ]
+            if restates_method(d["evaluation"], d.get("approach", ""), s.get("title", "")):
+                return [
+                    "evaluation only repeats words of the approach or the title; name the task or dataset instead"
+                ]
+            return []
         if bad_cell(data) or any(
             len(data[k].split()) > 8 or len(data[k]) > 100
             for k in ("approach", "evaluation")
@@ -388,6 +485,14 @@ def generate(job, tid, root, title, template, timeout=80):
                 + notes
             )
             compact_prompt += '\nCopy the dataset or task names verbatim from the notes (for example "XSum and HumanEval" or "translation and summarization"); do not describe results, metrics or paraphrase.'
+            candidates = grounded_phrases(
+                src_text, data.get("approach", ""), s.get("title", "")
+            )
+            if candidates:
+                compact_prompt += (
+                    "\nTask or dataset names that appear verbatim in the source (choose from these or a short combination of them, copied exactly): "
+                    + "; ".join('"' + c + '"' for c in candidates)
+                )
             cells = None
             rejected = ""
             for attempt in range(2):
@@ -403,9 +508,7 @@ def generate(job, tid, root, title, template, timeout=80):
                     )
                 ).write_text(json.dumps(events, indent=2))
                 try:
-                    cells = json.loads(
-                        re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
-                    )
+                    cells = parse_cells(text)
                     if not ok or not all(
                         isinstance(cells.get(k), str)
                         and 4 < len(cells[k]) <= 100
@@ -418,12 +521,21 @@ def generate(job, tid, root, title, template, timeout=80):
                     data.update({k: cells[k] for k in ("approach", "evaluation")})
                     break
                 except (ValueError, TypeError, AttributeError):
-                    rejected = (
-                        "\nYour previous cells were rejected because evaluation was not a task or dataset name present in the source experiments. REJECTED: "
-                        + json.dumps(cells)
-                        if isinstance(cells, dict)
-                        else ""
-                    )
+                    if isinstance(cells, dict):
+                        why = cell_problems(cells, bad_reasons) or [
+                            "the answer was not accepted"
+                        ]
+                        rejected = (
+                            "\nYour previous answer was rejected: "
+                            + "; ".join(why)
+                            + ". Rejected approach: "
+                            + str(cells.get("approach", ""))[:200]
+                            + " | Rejected evaluation: "
+                            + str(cells.get("evaluation", ""))[:200]
+                            + "\nReturn plain JSON (no backslash escapes) with approach and evaluation, each 2-4 words, no numbers or percentages."
+                        )
+                    else:
+                        rejected = "\nYour previous reply was not valid JSON. Return one plain JSON object with approach and evaluation only."
                     cells = None
             if cells is None:
                 job.tool_done(
