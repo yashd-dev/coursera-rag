@@ -272,6 +272,9 @@ def generate(job, root, source, timeout=80):
     return None
 
 
+NOT_EXTRACTED = ""  # distinct from None, which means a classifier/provider failure
+
+
 def classify_candidates(job, root, source, timeout=80):
     """Fixed four independent classifications, no model global selection step."""
     base = root / "limitations-classification" / source["key"]
@@ -291,6 +294,12 @@ def classify_candidates(job, root, source, timeout=80):
         and saved.get("contract") == "classifier-v1"
     ):
         return saved["sentence"]
+    try:
+        flag = json.loads((base / "not_extracted.json").read_text())
+    except (OSError, ValueError):
+        flag = {}
+    if digest and flag.get("source_sha") == digest and flag.get("contract") == "classifier-v1":
+        return NOT_EXTRACTED
     work = base / uuid.uuid4().hex
     work.mkdir(parents=True)
     opencode.write_config(work, [])
@@ -387,11 +396,21 @@ def classify_candidates(job, root, source, timeout=80):
                 },
             )
             return sentence
+    # Not an error and not a claim that the source has no limitations: the keyword
+    # filter plus fixed candidate bound found no passage the classifier supported.
+    # The caller omits the limitation line instead of inventing one.
     job.tool_done(
         tc,
         {
-            "error": "No supported passage within fixed candidate bound; no absence assumed"
+            "source": source["key"],
+            "status": "not_extracted",
+            "candidates": len(candidates),
+            "note": "No supported limitation passage extracted; this does not mean the source has no limitations",
         },
-        error=True,
     )
-    return None
+    if digest:
+        base.mkdir(parents=True, exist_ok=True)
+        (base / "not_extracted.json").write_text(
+            json.dumps({"source_sha": digest, "contract": "classifier-v1"})
+        )
+    return NOT_EXTRACTED

@@ -991,7 +991,7 @@ def run_create(job, tid, text, template):
     job.tool_done(tc, {"structured_source_stages": True, "completed": ok}, error=not ok)
     if not ok:
         db.update_thread(tid, phase="draft_paused")
-        job.finish("OpenCode failed while drafting. Source checkpoints retained.")
+        job.finish("Drafting stopped at a failed stage; the last failed tool entry above says which. Source checkpoints retained; send /resume to retry.")
         return
     db.update_thread(
         tid, phase="editing"

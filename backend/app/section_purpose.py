@@ -12,7 +12,11 @@ def check_limitations(job, root, timeout=60):
         re.S,
     )
     if not match:
-        return False
+        # Section deliberately omitted by drafting when no source yielded a supported
+        # limitation passage. Only that exact marker passes; a deleted section still fails.
+        from .drafting import NO_LIMITATIONS_MARKER
+
+        return NO_LIMITATIONS_MARKER in tex
     content = match.group(1).strip()
     fingerprint = hashlib.sha256(content.encode()).hexdigest()
     work = root / "section-purpose"
