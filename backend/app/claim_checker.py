@@ -114,6 +114,7 @@ import hashlib
 import json
 
 SUMMARY_FILE = "claim-assessment.json"
+RECYCLE_EVERY = 8
 
 
 def _plain_claim(block):
@@ -141,32 +142,31 @@ def review_claims_laya(job, tid, root):
     except (OSError, ValueError):
         cache = {}
     tc = job.tool_start("assess_claims_laya", {"sentences": len(blocks), "checker": "laya", "model": "convaiinnovations/laya"})
-    rows = []
+    items = []
     for i, block in enumerate(blocks, 1):
-        ev = span_review.candidates(block, sources, [], 4)
-        ev = ev[:6]  # best-ranked passages only: unattributed sentences can pull dozens, which makes CPU runs crawl
+        ev = span_review.candidates(block, sources, [], 4)[:6]  # best-ranked only: unattributed sentences can pull dozens
         passages = [e["quote"] for e in ev]
         claim = _plain_claim(block)
         key = hashlib.sha256(
             ("|".join(["laya-v1", "convaiinnovations/laya", str(THRESHOLD), str(MAX_PASSAGE_CHARS), claim])
              + "".join(passages)).encode()
         ).hexdigest()
-        res = cache.get(key)
-        if res is None:
-            res = assess(claim, passages)
-            if res is None:
-                res = {"label": "no_window_supported", "max_window_score": 0.0, "window_scores": [], "windows": 0,
-                       "multi_clause": multi_clause(claim), "verified": False, "note": "no retrieved passage"}
-            if "error" in res:
-                job.tool_done(tc, {"error": res["error"]}, error=True)
-                write_summary(root, {"error": res["error"], "total": len(blocks)})
-                return False
-            cache[key] = res
-            cache_file.write_text(json.dumps(cache))
-            _free_memory()
+        items.append((i, claim, passages, key, ev))
+    todo = [{"key": k, "claim": c, "passages": p} for _, c, p, k, _ in items if k not in cache and p]
+    if todo and not _run_batches(todo, cache, cache_file):
+        err = "Laya could not finish (missing package, weights or memory)"
+        job.tool_done(tc, {"error": err}, error=True)
+        write_summary(root, {"error": err, "total": len(blocks)})
+        return False
+    rows = []
+    for i, claim, passages, key, ev in items:
+        res = cache.get(key) or {"label": "no_window_supported", "max_window_score": 0.0, "verified": False}
+        if "error" in res:
+            write_summary(root, {"error": res["error"], "total": len(blocks)})
+            job.tool_done(tc, {"error": res["error"]}, error=True)
+            return False
         rows.append({"span": i, "text": claim[:220], "label": res["label"], "score": res["max_window_score"],
-                     "pages": sorted({(e["source_key"], e["page"]) for e in ev})[:4] and
-                              [f"{k} p.{p}" for k, p in sorted({(e["source_key"], e["page"]) for e in ev})[:4]]})
+                     "pages": [f"{k} p.{p}" for k, p in sorted({(e["source_key"], e["page"]) for e in ev})[:4]]})
     counts = {k: sum(r["label"] == k for r in rows) for k in ("window_supported_single_part", "window_level_only", "no_window_supported")}
     summary = {"checker": "laya", "total": len(rows), "counts": counts, "rows": rows, "verified": False}
     write_summary(root, summary)
@@ -210,3 +210,35 @@ def _free_memory():
         ctypes.CDLL("libc.so.6").malloc_trim(0)
     except OSError:
         pass
+
+
+def _run_batches(todo, cache, cache_file, batch=8, per_batch_seconds=300):
+    """Assess the uncached claims in short-lived worker processes (model memory never accumulates in the server).
+    Returns False when a batch makes no progress (laya missing, weights missing, out of memory)."""
+    import subprocess
+    import sys
+    import tempfile
+
+    pending = list(todo)
+    while pending:
+        chunk = pending[:batch]
+        with tempfile.TemporaryDirectory() as d:
+            jf, rf = os.path.join(d, "jobs.json"), os.path.join(d, "res.json")
+            json.dump(chunk, open(jf, "w"))
+            try:
+                subprocess.run([sys.executable, "-m", "app.claim_worker", jf, rf], timeout=per_batch_seconds,
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                               cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            except subprocess.TimeoutExpired:
+                pass
+            try:
+                got = json.load(open(rf))
+            except (OSError, ValueError):
+                got = {}
+        good = {k: v for k, v in got.items() if v and "error" not in v}
+        if not good:
+            return False
+        cache.update(good)
+        cache_file.write_text(json.dumps(cache))
+        pending = [j for j in pending if j["key"] not in cache]
+    return True
