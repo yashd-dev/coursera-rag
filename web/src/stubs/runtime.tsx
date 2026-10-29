@@ -19,8 +19,11 @@ function syncTemplate(value: string) {
     new CustomEvent("paperforge-template", { detail: value }),
   );
 }
+// Same-origin by default (Vite dev proxy). For a hosted frontend, set VITE_API_BASE at build time
+// to the backend origin, e.g. https://paperforge-api.up.railway.app (no trailing slash needed).
+const API_BASE = ((import.meta as any).env?.VITE_API_BASE ?? "").replace(/\/+$/, "");
 const j = async (u: string, init?: RequestInit) => {
-  const r = await fetch(u, {
+  const r = await fetch(API_BASE + u, {
     headers: { "content-type": "application/json" },
     ...init,
   });
@@ -39,7 +42,7 @@ function makeAdapter(
         .join("");
       let id = await getId();
       if (!id) throw new Error("No thread id");
-      const res = await fetch(`/api/threads/${id}/chat`, {
+      const res = await fetch(`${API_BASE}/api/threads/${id}/chat`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ text, template: templateRef.current }),
