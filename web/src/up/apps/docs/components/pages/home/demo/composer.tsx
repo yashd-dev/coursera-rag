@@ -96,7 +96,11 @@ export function Composer(): ReactNode {
             <ComposerPrimitive.Input disabled={serverRunning} asChild>
               <textarea
                 data-composer-input
-                placeholder="Send a message..."
+                placeholder={
+                  serverRunning
+                    ? "This chat is still working on the server..."
+                    : "Send a message..."
+                }
                 rows={1}
                 className="placeholder:text-muted-foreground field-sizing-content max-h-48 w-full resize-none bg-transparent px-4 pt-3 pb-2 text-base leading-6 focus:outline-none"
               />
