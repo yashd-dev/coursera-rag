@@ -19,6 +19,37 @@ ASK_RE = re.compile(
 )
 
 
+IMPLICIT_RESUME_PHASES = (
+    "link_paused",
+    "edit_paused",
+    "discovery_paused",
+    "reading_paused",
+    "draft_paused",
+    "build_failed",
+    "review_paused",
+    "export_paused",
+)
+RESUME_RE = re.compile(
+    r"\b(continue|resume|proceed|go ahead|go on|carry on|keep going|try again|retry)\b",
+    re.I,
+)
+NOT_RESUME_RE = re.compile(
+    r"\b(stop|cancel|abort|never ?mind|forget it|don'?t|do not|new (?:topic|chat))\b|^\s*/(ask|edit)\b",
+    re.I,
+)
+
+
+def is_resume_request(text):
+    """A short, non-question message asking a paused run to carry on. Questions, explicit
+    /ask or /edit, and stop/cancel/new-topic wording are never treated as resume."""
+    t = text.strip()
+    if not t or len(t.split()) > 20 or "?" in t:
+        return False
+    if NOT_RESUME_RE.search(t) or ASK_RE.search(t):
+        return False
+    return bool(RESUME_RE.search(t))
+
+
 def route(text, thread):
     """Deterministic router. Questions never mutate the paper; ambiguous input is answered, not executed."""
     if text.strip().lower().startswith("/resume") and thread["phase"] in (
@@ -34,6 +65,8 @@ def route(text, thread):
     ):
         return "resume", None
     t = text.strip()
+    if thread["phase"] in IMPLICIT_RESUME_PHASES and is_resume_request(t):
+        return "resume", None
     if thread["phase"] == "scope_pending":
         return "scope", None
     if t.lower().startswith("/ask"):
@@ -98,6 +131,53 @@ def run_scope(job, tid, text):
 
 
 # ---------------------------------------------------------------- create
+FALLBACK_STOP = {
+    "a", "an", "the", "of", "for", "and", "or", "in", "on", "with", "to", "by",
+    "from", "literature", "comparison", "survey", "review", "evaluation",
+}
+REQUEST_LEAD_RE = re.compile(
+    r"(?i)^(?:(?:just|please|kindly|can you|could you|would you|help me|help|find me|find|show me|get me|give me|i want|i need|i would like|me|some|any)\b[\s,]*)+"
+)
+REQUEST_NOUN_RE = re.compile(
+    r"(?i)^(?:(?:research )?(?:papers?|articles?|studies|literature|surveys?|reviews?)\b[\s,]*(?:on|about|regarding|for|in|of)?\b[\s,]*)+"
+)
+REQUEST_TAIL_RE = re.compile(
+    r"(?i)[\s,]*\b(?:and\s+)?(?:(?:tell me|show me)\s+)?(?:what|which)\s+(?:is|are|was|were)\b.*$"
+)
+RECENCY_RE = re.compile(
+    r"(?i)\b(?:the\s+)?(?:latest|recent|current|newest|state[ -]of[ -]the[ -]art)\b(?:\s+(?:trends?|advances?|advancements?|developments?|research))?"
+)
+
+
+def fallback_plan(topic):
+    """Queries derived from the user's own words when the model plan is unusable. Strips request
+    filler ("just help me find papers on ...", "what is the latest trend") but never adds topic words
+    the user did not write. The original request is kept by the caller."""
+    t = re.sub(r"(?i)^.*?\b(papers?|survey|review)\s+(on|about)\s+", "", topic).strip(" .")
+    cleaned = REQUEST_TAIL_RE.sub("", t)
+    cleaned = REQUEST_LEAD_RE.sub("", cleaned)
+    cleaned = REQUEST_NOUN_RE.sub("", cleaned)
+    cleaned = RECENCY_RE.sub(" ", cleaned).strip(" .,")
+    words = cleaned or t
+    terms = [
+        w
+        for w in re.findall(r"[A-Za-z0-9][A-Za-z0-9-]*", words)
+        if w.lower() not in FALLBACK_STOP
+    ]
+    compact = " ".join(terms[:8])
+    queries = [compact, " ".join(terms[:4]), " ".join(terms[-5:])]
+    if research.wants_recent(topic) and compact:
+        queries.append(compact + " trends")
+    queries = list(dict.fromkeys(q for q in queries if len(q) > 2))
+    return {
+        "title": words.title(),
+        "queries": queries,
+        "sections": [],
+        "keywords": [],
+        "fallback": True,
+    }
+
+
 def plan(job, tid, topic, root):
     tc = job.tool_start("plan_research", {"topic": topic})
     work = root / "plan-stage"
@@ -149,42 +229,7 @@ def plan(job, tid, topic, root):
     except (ValueError, TypeError, AttributeError):
         pass
     if not p or not p.get("queries"):
-        words = re.sub(
-            r"(?i)^.*?(paper|survey|review)\s+(on|about)\s+", "", topic
-        ).strip(" .")
-        stop = {
-            "a",
-            "an",
-            "the",
-            "of",
-            "for",
-            "and",
-            "or",
-            "in",
-            "on",
-            "with",
-            "to",
-            "by",
-            "from",
-            "literature",
-            "comparison",
-            "survey",
-            "review",
-            "evaluation",
-        }
-        terms = [
-            w
-            for w in re.findall(r"[A-Za-z0-9][A-Za-z0-9-]*", words)
-            if w.lower() not in stop
-        ]
-        compact = " ".join(terms[:8])
-        p = {
-            "title": words.title(),
-            "queries": [compact, " ".join(terms[:4]), " ".join(terms[-5:])],
-            "sections": [],
-            "keywords": [],
-            "fallback": True,
-        }
+        p = fallback_plan(topic)
     job.tool_done(
         tc,
         {
