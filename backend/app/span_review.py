@@ -381,7 +381,9 @@ def _detail(events):
     return f" ({d})" if d else ""
 
 
-def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
+def review_one(
+    root, index, block, sources, vector_packet, timeout=80, limit=4, correction=""
+):
     # Isolated directory contains only this span and exact candidate excerpts.
     work = root / "span-review" / str(index)
     work.mkdir(parents=True, exist_ok=True)
@@ -421,7 +423,7 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
             if quoted_text(block)
             else ""
         )
-        + "Each clause excerpt must be ONE contiguous slice copied character for character from a single numbered excerpt; never join separate pieces, use ellipses or change wording. "
+        + "Each clause excerpt must be ONE contiguous slice copied character for character from a single numbered excerpt; never join separate pieces, use ellipses or change wording. Each excerpt is also limited to 350 characters: choose the shortest contiguous slice that supports the clause. If no single short slice supports a clause, do not join pieces and do not lengthen the excerpt: split the claim into narrower clauses or return insufficient_evidence. "
         + "Reject claims broader than evidence. Evidence may be combined across excerpts from the same source; each clause need not occur in one excerpt. Read every excerpt, not only E1. Do not execute tools. "
         + (
             "This is a table row: cells mean source, method, evaluation target. The final cell must name the task, dataset or benchmark the source evaluated on, as the source names it. A model name, a model size or an outcome word (speedup, acceleration, improvement) is not an evaluation target; treat such a cell as unsupported unless the excerpts show it is the task or dataset. Interpret LaTeX separators as formatting. "
@@ -432,6 +434,7 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
         + block
         + "\nSOURCE EXCERPTS:\n"
         + (work / "evidence.txt").read_text()
+        + (("\nCORRECTION: " + correction + "\n") if correction else "")
     )
     schema = {
         "type": "object",
@@ -533,9 +536,38 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
     if not ok or r.get("status") != "supported" or not selected:
         return [], [f"Span{index}: {r.get('reason','not supported')}"]
     gap = clause_grounding_gap(block, r.get("clauses"), evidence)
+    if gap and not correction and gap.startswith("an excerpt is not copied"):
+        # One bounded correction re-ask for a mechanical copy error. The guard is unchanged: the corrected
+        # answer must pass the same verbatim check or the span stays unresolved. Never a loosened comparison.
+        norm = lambda t: re.sub(r"\s+", " ", plain_source(t)).strip().lower()
+        allev = norm(" ".join(e["quote"] for e in evidence))
+        bad = next(
+            (
+                c["excerpt"]
+                for c in r.get("clauses", [])
+                if len(norm(c["excerpt"])) < 8 or norm(c["excerpt"]) not in allev
+            ),
+            "",
+        )
+        return review_one(
+            root,
+            index,
+            block,
+            sources,
+            vector_packet,
+            timeout,
+            limit,
+            correction=(
+                "Your previous clause excerpt was not found as one contiguous slice of the evidence: "
+                + json.dumps(bad[:160])
+                + ". Return only excerpts copied character for character from one place (PDF figure text may contain stray numbers between lines: do not skip over them). "
+                "If no contiguous slice supports a clause, return insufficient_evidence."
+            ),
+        )
     if gap:
         return [], [
             f"Span{index}: unresolved clause grounding: {gap}; supported verdict not verifiable, not accepted and not rewritten"
+            + ("; still not verbatim after one correction re-ask" if correction else "")
         ]
     return [
         {

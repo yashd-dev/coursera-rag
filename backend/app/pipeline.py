@@ -6,7 +6,7 @@ import re
 import hashlib, json, os, re, shutil, time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from . import config, db, rag, research, opencode, latexbuild, answering, scope
+from . import config, db, rag, research, opencode, latexbuild, answering, scope, span_review
 from .jobs import Job
 
 EDIT_RE = re.compile(
@@ -872,6 +872,49 @@ def export_all(job, tid, template):
     return files, v
 
 
+FINAL_FILES = ("paper.pdf", "paper.docx", "paper-source.zip")
+DRAFT_FILES = ("paper-draft.pdf", "paper-draft.docx", "paper-draft-source.zip")
+
+
+def export_draft(job, tid, template):
+    """Mechanical copies of the built draft while claim review is incomplete. No model call, no review claim,
+    and never the final file names, which stay gated on a passed review."""
+    tc = job.tool_start("export_draft_files", {"formats": ["pdf", "docx", "source zip"], "verified": False})
+    root = db.thread_dir(tid)
+    for n in DRAFT_FILES:
+        (root / n).unlink(missing_ok=True)
+    files = []
+    pdf = root / "paper/main.pdf"
+    if pdf.exists():
+        shutil.copy(pdf, root / "paper-draft.pdf")
+        files.append({"name": "paper-draft.pdf", "label": "PDF draft (claim review incomplete, not verified)"})
+    log = None
+    try:
+        d = latexbuild.export_docx(tid, template)
+    except Exception as e:  # conversion is best effort for a draft
+        d = {"ok": False, "log": f"{type(e).__name__}: {e}"}
+    if d["ok"]:
+        shutil.copy(d["path"], root / "paper-draft.docx")
+        files.append({"name": "paper-draft.docx", "label": "Word draft (converted from LaTeX, not checked, not verified)"})
+    else:
+        log = d.get("log")
+    try:
+        latexbuild.source_zip(tid, "paper-draft-source.zip")
+        files.append({"name": "paper-draft-source.zip", "label": "LaTeX source draft (not verified)"})
+    except OSError as e:
+        log = (log or "") + f" source zip: {e}"
+    job.tool_done(
+        tc,
+        {
+            "files": [dict(f, url=f"/api/threads/{tid}/files/{f['name']}") for f in files],
+            "verified": False,
+            "conversion_log": log,
+        },
+        error=bool(log),
+    )
+    return files
+
+
 def start_banner(resume_phase, label):
     """Honest start line: a resume names the stage it resumes at and claims only what it checks."""
     if resume_phase == "draft_paused":
@@ -881,6 +924,39 @@ def start_banner(resume_phase, label):
     if resume_phase == "discovery_paused":
         return f"Resuming the **{label}** paper at source discovery and indexing. Sources already indexed are kept.\n\n"
     return f"Starting a **{label}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
+
+
+def review_pause_message(root):
+    """Plain description of why claim review stopped and what the user can do. Reads only the saved ledger."""
+    base = "Claim review is paused. Existing source vectors retained."
+    try:
+        fb = json.loads((root / "review-feedback.json").read_text())
+    except (OSError, ValueError):
+        return base
+    errs = [e for e in fb.get("errors", []) if isinstance(e, str) and e.startswith("Span")]
+    if not errs:
+        return base
+    lines = [base, ""]
+    if fb.get("spans_total"):
+        lines.append(f"Reviewed and verified: {fb.get('spans_complete', 0)} of {fb['spans_total']} spans. The paper is not marked verified.")
+    try:
+        blocks = span_review.spans((root / "paper/main.tex").read_text())
+    except (OSError, ValueError):
+        blocks = []
+    for e in errs[:6]:
+        lines.append("- " + e[:240])
+        m = re.match(r"Span(\d+):", e)
+        if m and 0 < int(m.group(1)) <= len(blocks):
+            text = re.sub(r"\s+", " ", re.sub(r"\\cite(?:\[[^]]*\])?\{[^}]+\}", "", blocks[int(m.group(1)) - 1])).strip()
+            lines.append('    - Sentence: "' + (text[:200] + "..." if len(text) > 200 else text) + '"')
+    if any("unresolved" in e or "insufficient evidence" in e for e in errs):
+        lines.append("")
+        lines.append(
+            "Unresolved spans are never accepted automatically. To continue, send `/edit` and ask me to rewrite the named sentence to match what its source states (other verified spans stay cached), or add a source that covers it."
+        )
+    if any(": operational " in e for e in errs):
+        lines.append("Operational failures are not verdicts on the claim: they replay on resume and are retried only with a new PAPERFORGE_REVIEW_NEW_ATTEMPT value.")
+    return "\n".join(lines)
 
 
 def run_create(job, tid, text, template):
@@ -922,7 +998,16 @@ def run_create(job, tid, text, template):
         reviewed, session = review_claims(job, tid, root, session)
         if not reviewed:
             db.update_thread(tid, phase="review_paused")
-            job.finish("Claim review is paused. Existing source vectors retained.")
+            msg = review_pause_message(root)
+            drafts = export_draft(job, tid, template)
+            if drafts and not any(f["name"] == "paper-draft.docx" for f in drafts):
+                msg += "\n\nThe Word draft could not be produced here (pandoc 2.11+ is required for the Word conversion); the PDF and LaTeX source drafts are below."
+            if drafts:
+                msg += (
+                    "\n\n**Draft outputs (claim review incomplete, not verified):**\n"
+                    + "\n".join(f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in drafts)
+                )
+            job.finish(msg)
             return
         res, session = build_loop(job, tid, root, session)
         if not res["ok"]:

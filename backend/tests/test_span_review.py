@@ -798,7 +798,7 @@ class QuoteBoundaryTests(unittest.TestCase):
                 "clause is not copied",
             ),
         ):
-            (ent, fail), _ = self.go(self.BLOCK, self.PAGE, [mk(bad)])
+            (ent, fail), _ = self.go(self.BLOCK, self.PAGE, [mk(bad), mk(bad)])
             self.assertEqual(ent, [])
             self.assertIn("unresolved clause grounding", fail[0])
             self.assertIn(word, fail[0])
