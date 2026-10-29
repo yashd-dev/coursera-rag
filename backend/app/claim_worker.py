@@ -5,7 +5,7 @@ import json
 import os
 import sys
 
-os.environ["PAPERFORGE_CLAIM_CHECKER"] = "laya"
+os.environ.setdefault("PAPERFORGE_CLAIM_CHECKER", "laya")
 from app import claim_checker as cc  # noqa: E402
 
 jobs = json.load(open(sys.argv[1]))

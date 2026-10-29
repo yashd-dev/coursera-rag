@@ -1,3 +1,5 @@
+import os as _os
+_os.environ["PAPERFORGE_CLAIM_CHECKER"] = "legacy"  # these tests cover the legacy LLM review path
 """Controlled local orchestration acceptance; no hosted provider success implied."""
 
 import json, tempfile, unittest

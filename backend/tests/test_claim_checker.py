@@ -19,7 +19,11 @@ class ClaimCheckerTests(unittest.TestCase):
         cc.set_agent(None)
         os.environ.pop("PAPERFORGE_CLAIM_CHECKER", None)
 
-    def test_disabled_by_default_and_does_not_import_laya(self):
+    def test_default_is_laya_and_legacy_switch_disables_it_without_importing_laya(self):
+        os.environ.pop("PAPERFORGE_CLAIM_CHECKER", None)
+        self.assertTrue(cc.enabled())
+        os.environ["PAPERFORGE_CLAIM_CHECKER"] = "legacy"
+        self.assertFalse(cc.enabled())
         self.assertIsNone(cc.assess("c", ["p"]))
         self.assertNotIn("laya", sys.modules)
 

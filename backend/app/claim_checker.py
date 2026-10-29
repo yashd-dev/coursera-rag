@@ -22,13 +22,28 @@ _agent = None
 
 
 def enabled():
-    return os.environ.get("PAPERFORGE_CLAIM_CHECKER", "") == ENABLED_VALUE
+    """Laya is the default claim checker. PAPERFORGE_CLAIM_CHECKER=legacy (or off) restores the old LLM review."""
+    return os.environ.get("PAPERFORGE_CLAIM_CHECKER", ENABLED_VALUE).lower() == ENABLED_VALUE
+
+
+def low_ram():
+    """PAPERFORGE_LAYA_LOW_RAM=1/0 forces it; by default it turns on when the machine has under 6 GB of RAM."""
+    v = os.environ.get("PAPERFORGE_LAYA_LOW_RAM")
+    if v in ("0", "1"):
+        return v == "1"
+    try:
+        for line in open("/proc/meminfo"):
+            if line.startswith("MemTotal:"):
+                return int(line.split()[1]) < 6 * 1024 * 1024
+    except (OSError, ValueError):
+        pass
+    return False
 
 
 def _load():
     global _agent
     if _agent is None:
-        if os.environ.get("PAPERFORGE_LAYA_LOW_RAM") == "1":
+        if low_ram():
             from . import laya_lowram
 
             laya_lowram.apply()

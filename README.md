@@ -63,9 +63,9 @@ npm run dev
 
 Open http://127.0.0.1:5173. Choose IEEE/Springer, then enter a topic. It is a template selector, not an LLM selector. The API does not create tables during a read unless explicit initialization is enabled. First have the database owner enable pgvector (`CREATE EXTENSION vector`) and authorize a dedicated `paperforge` schema. For initial setup only, set PAPERFORGE_DB_INITIALIZE=enabled; after setup set it back to disabled. All app table queries are qualified into PAPERFORGE_DB_SCHEMA; public/system schemas are rejected. Existing public tables are not reused. A database initialized with another embedding model must not be reused without re-embedding or a fresh database.
 
-## Orchestrator (LangGraph, opt-in)
+## Orchestrator (LangGraph, default) and claim checker (Laya, default)
 
-`PAPERFORGE_ORCHESTRATOR=langgraph` routes each chat turn through a LangGraph `StateGraph` (`backend/app/orchestrator/`). The default is `legacy` (the previous deterministic router), so you can roll back by unsetting the variable.
+Each chat turn goes through a LangGraph `StateGraph` (`backend/app/orchestrator/`). Claims are checked by Laya (`laya==0.4.17`, in `requirements.txt`), run on CPU in short-lived worker processes; the first check downloads about 843 MB of weights, and on machines under 6 GB RAM a low-memory loader is used automatically. The final message says the claims are model-assessed, not verified. No setup flags are needed. To roll back, set `PAPERFORGE_ORCHESTRATOR=legacy` and `PAPERFORGE_CLAIM_CHECKER=legacy` (the previous router and LLM claim review).
 
 ```
 fast_route -> scope | resume | edit | ask          slash commands, resume and questions: no model call
