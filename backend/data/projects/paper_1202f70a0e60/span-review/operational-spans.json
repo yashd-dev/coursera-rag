@@ -1,10 +1,10 @@
 {
-  "55241167174d5d7a0deeadce63f2ca62f1455539c4c3b3a9bf5eceaa4e489761": {
-    "span": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \\cite{mei2026improving}",
-    "token": "",
+  "09587247af8712f090bc92de999ea1c56afad167862d3566e7009f3ebd4b846d": {
+    "span": "Lovish Madaan, David Esiobu, Pontus Stenetorp, Barbara Plank, and Dieuwke Hupkes investigate NLI benchmarks' suitability for evaluating large language models, analyzing five benchmarks across six model scales to assess signal quality, discrimination ability, and saturation. \\cite{madaan2024lost}",
+    "token": "probe1",
     "code": "native_error",
     "failures": [
-      "Span1: operational native_error: the review call returned no usable result; this is not a verdict on the claim"
+      "Span3: operational native_error: the review call returned no usable result; this is not a verdict on the claim"
     ],
     "history": []
   }

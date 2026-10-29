@@ -1,4 +1,14 @@
 {
   "draft_sha256": "7512b3638015fd994b722a4dacea9ce59c6fcf9b42c135c63cc37d7e1727ba44",
-  "claims": []
+  "claims": [
+    {
+      "claim": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \\cite{mei2026improving}",
+      "draft_quote": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \\cite{mei2026improving}",
+      "source_key": "mei2026improving",
+      "page": 1,
+      "quote": "Improving JEV Entailment Reranking with Span Readouts and\nSelective Adaptation\nHaocheng Mei1 , Yuchuan Tian1 , Ye Yuan2 , Enhua Wu3\nChao Xu1 , Allen Chen4 , Kai Han5 , Yunhe Wang5\n1 Peking University\n2 SUIBE\n\narXiv:2610.35654v1 [cs.CL] 26 Oct 2026\n\n3 University of Macau\n4 Tsinghua University\n5 TokenRhythm Technologies\n\nAbstract\nJEV decision models pair a language model backbone with a lightweight scoring head\nto select among natural-language options. Direct selection compares candidate answers\nwithin one request, whereas entailment reranking evaluates each candidate in a separate natural language inference (NLI) request over fixed relation options. We examine\nwhether the readout and adaptation choices used for direct selection remain effective\nfor cross-request reranking. We combine a mean-span readout with selective backbone\nadaptation. Mean-span pooling replaces the option-ending pointer with an average of the\ncontextualized states inside each NLI option, without adding head parameters. Selective\nadaptation retains low-rank updates in attention and gated DeltaNet projections while\nremoving feed-forward adapters. On MC11, which averages accuracy over eleven reranking configurations from seven sources, selective adaptation improves NeoHorse-1-4B\naccuracy over the all-module baseline while cutting trainable parameters by more than\nhalf, and mean-span pooling yields further consistent gains at the same parameter count.\nProject page: https://github.com/Mei-TN/Jev-reranking.\n\n1. Introduction\nJEV models turn a natural-language state into a structured decision that software can a",
+      "status": "supported",
+      "review_reason": "Excerpts confirm authors, span readout, selective adaptation, consistent accuracy gains, and parameter reduction."
+    }
+  ]
 }

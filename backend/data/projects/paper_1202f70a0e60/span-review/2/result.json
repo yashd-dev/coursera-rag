@@ -1,0 +1,19 @@
+{
+  "clauses": [
+    {
+      "clause": "The paper proposes a framework for causal structure discovery and evaluation from natural language text using LLMs",
+      "evidence_id": "E1",
+      "excerpt": "Figure 1: Overview of the proposed framework. (1) An LLM extracts causal variables and their corresponding causal relationships from the input text. (4) The LLM self-evaluates the original and counterfactual graphs."
+    },
+    {
+      "clause": "dividing work into extraction, summarisation, counterfactual queries, and graph evaluation stages",
+      "evidence_id": "E1",
+      "excerpt": "1. Causal Graph Extraction\n\n2. Graph Summarisation\n\n3. Counterfactual queries\n\n4. Causal Graph Evaluation"
+    }
+  ],
+  "evidence_ids": [
+    "E1"
+  ],
+  "reason": "All clauses are directly supported by excerpts from the paper.",
+  "status": "supported"
+}
