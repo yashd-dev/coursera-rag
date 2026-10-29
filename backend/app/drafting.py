@@ -48,6 +48,34 @@ GENERIC_LABEL_TOKENS = {
 }
 
 
+def parse_cells(text):
+    """Parse a JSON object reply. Tolerates fences and a reply whose quotes/newlines came back
+    backslash-escaped (seen when a rejected answer is echoed to the model); validation is unchanged."""
+    t = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
+    try:
+        return json.loads(t)
+    except ValueError:
+        if '\\"' not in t:
+            raise
+        return json.loads(t.replace('\\"', '"').replace("\\n", "\n"))
+
+
+def cell_problems(cells, bad_evaluation):
+    """Plain-language reasons a compact table answer is rejected, fed back on the retry."""
+    problems = []
+    if not isinstance(cells, dict):
+        return ["reply was not a JSON object with approach and evaluation"]
+    for k in ("approach", "evaluation"):
+        v = cells.get(k)
+        if not isinstance(v, str) or len(v) <= 4:
+            problems.append(f"{k} is missing or too short")
+        elif len(v.split()) > 8 or len(v) > 100:
+            problems.append(f"{k} must be at most 8 words and 100 characters")
+    if isinstance(cells.get("evaluation"), str):
+        problems += bad_evaluation(cells)
+    return problems
+
+
 def strip_raw_citations(text, keys):
     """Convert bracketed raw source keys such as [key, p.1] into private markers; render_cites() turns the
     markers into real LaTeX citations that keep the page, e.g. \\cite[p.~1]{key}, after escaping.
@@ -103,7 +131,7 @@ def raw_key_left(text, keys):
 
 
 MODEL_LABEL = re.compile(
-    r"(?i)\b(?:models?|draft|target|approximation|algorithm|method)\b|\bM[a-z]\b"
+    r"(?i)\b(?:models?|draft|target|approximation|algorithm|method)\b|(?-i:\bM[a-z]\b)"
 )
 
 
@@ -377,6 +405,21 @@ def generate(job, tid, root, title, template, timeout=80):
                 d["evaluation"], d.get("approach", ""), s.get("title", "")
             )
         )
+
+        def bad_reasons(d):
+            if outcome_label(d["evaluation"]):
+                return [
+                    "evaluation contains a metric/outcome word or the word model(s)/method/algorithm; name only the task or dataset"
+                ]
+            if ungrounded_label(d["evaluation"], src_text):
+                return [
+                    "evaluation names something that does not appear verbatim in the source experiments; copy dataset or task names exactly from the notes"
+                ]
+            if restates_method(d["evaluation"], d.get("approach", ""), s.get("title", "")):
+                return [
+                    "evaluation only repeats words of the approach or the title; name the task or dataset instead"
+                ]
+            return []
         if bad_cell(data) or any(
             len(data[k].split()) > 8 or len(data[k]) > 100
             for k in ("approach", "evaluation")
@@ -403,9 +446,7 @@ def generate(job, tid, root, title, template, timeout=80):
                     )
                 ).write_text(json.dumps(events, indent=2))
                 try:
-                    cells = json.loads(
-                        re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
-                    )
+                    cells = parse_cells(text)
                     if not ok or not all(
                         isinstance(cells.get(k), str)
                         and 4 < len(cells[k]) <= 100
@@ -418,12 +459,21 @@ def generate(job, tid, root, title, template, timeout=80):
                     data.update({k: cells[k] for k in ("approach", "evaluation")})
                     break
                 except (ValueError, TypeError, AttributeError):
-                    rejected = (
-                        "\nYour previous cells were rejected because evaluation was not a task or dataset name present in the source experiments. REJECTED: "
-                        + json.dumps(cells)
-                        if isinstance(cells, dict)
-                        else ""
-                    )
+                    if isinstance(cells, dict):
+                        why = cell_problems(cells, bad_reasons) or [
+                            "the answer was not accepted"
+                        ]
+                        rejected = (
+                            "\nYour previous answer was rejected: "
+                            + "; ".join(why)
+                            + ". Rejected approach: "
+                            + str(cells.get("approach", ""))[:200]
+                            + " | Rejected evaluation: "
+                            + str(cells.get("evaluation", ""))[:200]
+                            + "\nReturn plain JSON (no backslash escapes) with approach and evaluation, each 2-4 words, no numbers or percentages."
+                        )
+                    else:
+                        rejected = "\nYour previous reply was not valid JSON. Return one plain JSON object with approach and evaluation only."
                     cells = None
             if cells is None:
                 job.tool_done(

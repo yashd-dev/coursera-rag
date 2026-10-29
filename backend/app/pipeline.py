@@ -872,6 +872,17 @@ def export_all(job, tid, template):
     return files, v
 
 
+def start_banner(resume_phase, label):
+    """Honest start line: a resume names the stage it resumes at and claims only what it checks."""
+    if resume_phase == "draft_paused":
+        return f"Resuming the **{label}** paper at drafting. Sources already indexed are not downloaded or embedded again; reading notes are reused where their saved progress matches, and drafting continues from saved source sections.\n\n"
+    if resume_phase == "reading_paused":
+        return f"Resuming the **{label}** paper at reading. Sources already indexed are not embedded again; each source shows its saved segment count and only unfinished segments are read.\n\n"
+    if resume_phase == "discovery_paused":
+        return f"Resuming the **{label}** paper at source discovery and indexing. Sources already indexed are kept.\n\n"
+    return f"Starting a **{label}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
+
+
 def run_create(job, tid, text, template):
     root = latexbuild.prepare(tid, template)
     ok, ver = opencode.available()
@@ -942,7 +953,10 @@ def run_create(job, tid, text, template):
     if not resume_reading and not resume_discovery:
         db.update_thread(tid, phase="running", template=template)
     job.text(
-        f"Starting a **{config.TEMPLATES[template]['label']}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
+        start_banner(
+            db.get_thread(tid)["phase"] if (resume_discovery or resume_reading) else "",
+            config.TEMPLATES[template]["label"],
+        )
     )
     if resume_discovery:
         p = json.loads((root / "plan.json").read_text())
