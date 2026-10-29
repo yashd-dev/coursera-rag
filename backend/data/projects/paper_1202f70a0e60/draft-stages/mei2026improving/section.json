@@ -1,0 +1,9 @@
+{
+  "summary": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving 53.39% MC11 accuracy while reducing trainable parameters by over 50%. Mean-span pooling and selective LoRA updates in attention and DeltaNet projections yield consistent gains over all-module baselines.",
+  "limitations": "",
+  "approach": "mean-span pooling + selective",
+  "evaluation": "MC11 eleven-configuration",
+  "abstract": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters.",
+  "introduction": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters.",
+  "conclusion": "Selective adaptation retains LoRA updates in attention and gated DeltaNet projections while removing FFN adapters, improving NeoHorse-1-4B MC11 accuracy and reducing trainable parameters by over 50%."
+}

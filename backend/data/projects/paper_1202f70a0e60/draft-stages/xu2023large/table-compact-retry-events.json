@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\\n  \\\"approach\\\": \\\"content-neutral NeuLR dataset 3k samples\\\",\\n  \\\"evaluation\\\": \\\"Logical reasoning benchmark zero-shot few-shot\\\"\\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 14420,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7803a219ffe40IDrzEGYv9ZL9"
+  }
+]

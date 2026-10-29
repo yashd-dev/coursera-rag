@@ -1,0 +1,30 @@
+[
+  {
+    "source_key": "gendron2024counterfactual",
+    "page": 10,
+    "quote": "6\n\nLimitations\n\nLLMs provide free-text answers that can be different from the format provided in the instructions.",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "gendron2024counterfactual",
+    "page": 10,
+    "quote": "This\nexpands previous findings on the limitations of LLMs on reasoning tasks [49, 13, 20].",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "gendron2024counterfactual",
+    "page": 2,
+    "quote": "Moreover, while being able to perform some causal reasoning tasks\nsuccessfully [28], notably on commonsense causal reasoning [23, 54], LLMs have shown limitations\non tasks that require robust reasoning, such as arithmetic tasks in unfamiliar settings [49], or abstract\nreasoning [13].",
+    "score": 20,
+    "id": "E2"
+  },
+  {
+    "source_key": "gendron2024counterfactual",
+    "page": 2,
+    "quote": "Acknowledging this limitation,\nalternative approaches have been proposed using LLMs to extract causal relationships from text\n[43, 40].",
+    "score": 20,
+    "id": "E2"
+  }
+]

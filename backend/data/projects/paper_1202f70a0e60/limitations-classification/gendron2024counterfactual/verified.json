@@ -1,0 +1,14 @@
+{
+  "source_key": "gendron2024counterfactual",
+  "page": 10,
+  "quote": "6\n\nLimitations\n\nLLMs provide free-text answers that can be different from the format provided in the instructions.",
+  "score": 20,
+  "id": "E1",
+  "sentence": "The source authors state: \"6\n\nLimitations\n\nLLMs provide free-text answers that can be different from the format provided in the instructions.\"",
+  "verdict": {
+    "status": "supported",
+    "reason": "The passage explicitly states a limitation of the reviewed method: LLMs provide free-text answers that can differ from the format provided in instructions."
+  },
+  "source_sha": "61d75b098bcb2a26952371fbeda8d1ba4bbf29a6cf341d69befcf585caa17c10",
+  "contract": "classifier-v1"
+}

@@ -1,0 +1,9 @@
+{
+  "summary": "NLI benchmarks provide signal and discriminate models of different size and quality; 1+ few-shot examples needed for reasonable accuracy; best models plateau \u226470% on ANLI; high scores not caused by data contamination.",
+  "limitations": "",
+  "approach": "Five NLI benchmarks across six models",
+  "evaluation": "MNLI, ANLI benchmarks",
+  "abstract": "Lovish Madaan, David Esiobu, Pontus Stenetorp, Barbara Plank, and Dieuwke Hupkes investigate NLI benchmarks' suitability for evaluating large language models, analyzing five benchmarks across six model scales to assess signal quality, discrimination ability, and saturation.",
+  "introduction": "Lovish Madaan, David Esiobu, Pontus Stenetorp, Barbara Plank, and Dieuwke Hupkes explore whether natural language inference benchmarks remain suitable for evaluating modern large language models.",
+  "conclusion": "The benchmarks provide a useful signal to compare trained\u2011out models, though it is unclear to what extent their performance has saturated."
+}

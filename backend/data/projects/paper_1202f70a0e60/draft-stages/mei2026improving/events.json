@@ -1,16 +1,16 @@
 [
   {
     "kind": "text",
-    "text": "{\n  \"summary\": \"Mei et al. investigate span readouts and selective adapter LoRA design choices for JEV entailment reranking across MC11 configurations. Selective adaptation reducing FFN trainable parameters by >50% and mean-span pooling consistently improve accuracy over all-module baselines, with combined gains reaching 3.1 pp accuracy improvement while halving parameter counts. Within reranking, pooling leads the pointer readout, while pointer excels under direct selection.\",\n  \"limitations\": \"\",\n  \"approach\": \"Mean-span pooling + selective LoRA\",\n  \"evaluation\": \"MC11 eleven-configuration average\",\n  \"abstract\": \"Mei et al. investigate how span readout and selective adapter LoRA design choices affect JEV entailment reranking across MC11 configurations.\",\n  \"introduction\": \"Mei et al. investigate span readout and selective adapter LoRA design choices for JEV entailment reranking across MC11 configurations.\",\n  \"conclusion\": \"Selective adaptation reduces trainable parameters by >50% while improving NeoHorse-1-4B MC11 accuracy over the all-module baseline.\"\n}"
+    "text": "{\n  \"summary\": \"Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving 53.39% MC11 accuracy while reducing trainable parameters by over 50%. Mean-span pooling and selective LoRA updates in attention and DeltaNet projections yield consistent gains over all-module baselines.\",\n  \"limitations\": \"\",\n  \"approach\": \"mean-span pooling + selective\",\n  \"evaluation\": \"MC11 eleven-configuration\",\n  \"abstract\": \"Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters.\",\n  \"introduction\": \"Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters.\",\n  \"conclusion\": \"Selective adaptation retains LoRA updates in attention and gated DeltaNet projections while removing FFN adapters, improving NeoHorse-1-4B MC11 accuracy and reducing trainable parameters by over 50%.\"\n}"
   },
   {
     "kind": "usage",
-    "tokens": 9833,
+    "tokens": 9826,
     "cost": 0
   },
   {
     "kind": "done",
     "ok": true,
-    "session": "ses_e7819bc49ffeaQVOtPqMOCJPD8"
+    "session": "ses_e780779d3ffeYwwMwx2LJvoiX0"
   }
 ]

@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"approach\": \"Comprehensive evaluation across three dimensions: reasoning type, dataset, and model; proposes fine-level metrics (answer correctness, explanation correctness/completeness/redundancy) and error taxonomy across evidence selection and reasoning process dimensions.\",\n  \"evaluation\": \"Logical reasoning benchmarks across 15 datasets with 7 LLMs; error categories: wrong selection (33.26%), hallucination (27.46%), no reasoning (19.33%), perspective mistake (44.47%), process mistake (36.20%)\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 14359,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7803ce67ffeFEtaEVsLyVo2CT"
+  }
+]

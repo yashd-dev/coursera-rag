@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"summary\": \"Xu and colleagues evaluate large language models' logical reasoning across 15 datasets and seven model families, introducing a framework for error taxonomy and fine-grained metric measurement beyond answer correctness.\",\n  \"limitations\": \"\",\n  \"approach\": \"framework evaluation\",\n  \"evaluation\": \"15 datasets 7 models\",\n  \"abstract\": \"The study investigates LLM reasoning capabilities across diverse logical reasoning datasets, analyzing performance variations by prompting style, dataset type, and generation versus classification settings.\",\n  \"introduction\": \"Xu, Lin, Han, Zhao, Liu, and Cambria propose a comprehensive evaluation framework for LLM logical reasoning.\",\n  \"conclusion\": \"LLMs present obvious weakness in the abductive setting.\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 14627,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e7803fbc7ffe1qZzfGdOT3oas0"
+  }
+]
