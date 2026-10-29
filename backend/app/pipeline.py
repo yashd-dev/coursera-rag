@@ -675,6 +675,20 @@ def build_loop(job, tid, root, session):
 
 def review_claims(job, tid, root, session=None, allow_purpose_repair=True):
     """Bounded model correction using real retrieval and page-exact ledger feedback."""
+    from . import claim_checker
+
+    if claim_checker.enabled():
+        # Laya-only claim assessment (PAPERFORGE_CLAIM_CHECKER=laya): no hosted reviewer, no rewrite step.
+        if claim_checker.review_claims_laya(job, tid, root):
+            return True, session
+        try:
+            summ = json.loads((root / claim_checker.SUMMARY_FILE).read_text())
+        except (OSError, ValueError):
+            summ = {}
+        (root / "review-feedback.json").write_text(
+            json.dumps({"errors": [f"Claim check unavailable: {summ.get('error', 'unknown')}"], "spans_complete": 0, "spans_total": summ.get("total", 0)})
+        )
+        return False, session
     from . import evidence
 
     feedback = []
@@ -926,6 +940,12 @@ def start_banner(resume_phase, label):
     return f"Starting a **{label}** paper. I'll plan, find open-access sources, embed every PDF into PostgreSQL (pgvector), have OpenCode read each paper, then draft and build the PDF.\n\n"
 
 
+def claim_checker_label(root):
+    from . import claim_checker
+
+    return claim_checker.summary_text(root) if claim_checker.enabled() else ""
+
+
 def review_pause_message(root):
     """Plain description of why claim review stopped and what the user can do. Reads only the saved ledger."""
     base = "Claim review is paused. Existing source vectors retained."
@@ -1028,7 +1048,7 @@ def create_prelude(job, tid, text, template):
             return None
         db.update_thread(tid, phase="ready", custom={"session": session})
         job.text(
-            "Reviewed exports are ready.\n\n"
+            ("Exports are ready (claims model-assessed, not verified).\n\n" if claim_checker_label(root) else "Reviewed exports are ready.\n\n")
             + "\n".join(
                 f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in files
             )
@@ -1173,6 +1193,9 @@ def stage_export(job, tid, ctx):
         f"- [{f['label']}]({f['url'] if False else '/api/threads/'+tid+'/files/'+f['name']})"
         for f in files
     )
+    label = claim_checker_label(root)
+    if label:
+        msg += "\n\n" + label
     msg += "\n\nAsk me about any source or citation and I'll answer from the retrieved passages. Start a message with `/edit` to change the paper."
     job.text("\n\n" + msg)
     job.finish()

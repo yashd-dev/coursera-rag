@@ -82,3 +82,24 @@ class ClaimCheckerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SummaryTests(unittest.TestCase):
+    def test_label_says_model_assessed_not_verified(self):
+        import tempfile
+        from pathlib import Path
+
+        os.environ["PAPERFORGE_CLAIM_CHECKER"] = "laya"
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                root = Path(d)
+                cc.write_summary(root, {"checker": "laya", "total": 3, "verified": False,
+                    "counts": {"window_supported_single_part": 1, "window_level_only": 1, "no_window_supported": 1},
+                    "rows": [{"span": 3, "text": "Odd claim", "label": "no_window_supported", "score": 0.1, "pages": []}]})
+                t = cc.summary_text(root)
+                self.assertIn("model-assessed by Laya, not verified", t)
+                self.assertIn("flagged: Odd claim", t)
+                cc.write_summary(root, {"error": "OSError: out of memory", "total": 3})
+                self.assertIn("did not run", cc.summary_text(root))
+        finally:
+            os.environ.pop("PAPERFORGE_CLAIM_CHECKER", None)
