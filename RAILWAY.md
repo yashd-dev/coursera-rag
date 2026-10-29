@@ -41,12 +41,12 @@ variable empty to skip the proxy and call the reviewer provider directly.
   running jobs do not.
 - Existing local data is NOT moved: files on your laptop stay on your laptop.
   The volume starts empty unless you copy data into it yourself.
-- Hosted frontend: `main.py` rejects non-GET requests whose Origin is not localhost:5173/8000. A frontend on another domain will get HTTP 403 on changes until that allowlist is made configurable. Not changed here.
+- Hosted frontend: build `web/` with `VITE_API_BASE=https://<this backend's origin>` and set `PAPERFORGE_ALLOWED_ORIGINS=https://<frontend origin>` on this service (exact origin, no wildcard). Without it the browser gets HTTP 403 on changes. This is an origin check, not login: keep the backend URL private/trusted. Tested locally with curl: allowed origin passes the guard and CORS preflight, other origins get 403 and no CORS header.
 - Single replica only: run state is process-local.
 
 ## Not verified
 
-- The image has NOT been built or run (no Docker daemon was available). Package names (poppler-utils, libreoffice-writer, texlive-*) and the Node copy step are standard Debian bookworm choices but untested. The LibreOffice and TeX Live layers make the image large; check it against your Railway plan's image size limit.
+- The image has NOT been built or run (no Docker daemon, podman or buildah was available). The app was started directly with uvicorn on 0.0.0.0:$PORT instead: `/api/config` (the healthcheck URL) returned 200. Package names (poppler-utils, libreoffice-writer, texlive-*) and the Node copy step are standard Debian bookworm choices but untested. The LibreOffice and TeX Live layers make the image large; check it against your Railway plan's image size limit.
 - The pdflatex build of the bundled IEEE template was not run inside this image.
 
 ## Frontend

@@ -1,4 +1,4 @@
-import json, threading, time
+import json, os, threading, time
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Header, Request
 from fastapi.responses import FileResponse, StreamingResponse, JSONResponse
@@ -18,25 +18,49 @@ LOCAL_ORIGINS = {
 }
 
 
+def parse_allowed_origins(value):
+    """PAPERFORGE_ALLOWED_ORIGINS: comma-separated exact origins (scheme://host[:port]) of a hosted
+    frontend. No wildcards, paths or other schemes; anything else stops startup rather than being
+    silently ignored. This only widens which browser origins may call the API. It is not
+    authentication."""
+    import re
+
+    out = set()
+    for item in (value or "").split(","):
+        item = item.strip()
+        if not item:
+            continue
+        if not re.fullmatch(
+            r"https?://[A-Za-z0-9]([A-Za-z0-9.-]*[A-Za-z0-9])?(:\d{1,5})?", item
+        ):
+            raise ValueError(
+                "PAPERFORGE_ALLOWED_ORIGINS entries must be exact origins such as "
+                "https://app.example.com (no wildcard, path or trailing slash); got: " + item
+            )
+        out.add(item)
+    return out
+
+
+ALLOWED_ORIGINS = LOCAL_ORIGINS | parse_allowed_origins(
+    os.environ.get("PAPERFORGE_ALLOWED_ORIGINS", "")
+)
+
+
 @app.middleware("http")
 async def local_mutation_guard(request: Request, call_next):
     if request.method not in ("GET", "HEAD", "OPTIONS"):
         origin = request.headers.get("origin")
-        if origin and origin not in LOCAL_ORIGINS:
+        if origin and origin not in ALLOWED_ORIGINS:
             return JSONResponse(
-                {"detail": "Only local app origins may make changes."}, status_code=403
+                {"detail": "This origin is not allowed to make changes."},
+                status_code=403,
             )
     return await call_next(request)
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
-        "http://127.0.0.1:8000",
-        "http://localhost:8000",
-    ],
+    allow_origins=sorted(ALLOWED_ORIGINS),
     allow_methods=["*"],
     allow_headers=["*"],
 )
