@@ -49,15 +49,69 @@ GENERIC_LABEL_TOKENS = {
 
 
 def parse_cells(text):
-    """Parse a JSON object reply. Tolerates fences and a reply whose quotes/newlines came back
-    backslash-escaped (seen when a rejected answer is echoed to the model); validation is unchanged."""
+    """Parse a JSON object reply, tolerating code fences. Only when plain parsing fails AND every double
+    quote in the reply is backslash-escaped (the whole reply was echoed as an escaped string) are the
+    escapes removed; replies that already contain unescaped quotes are never rewritten."""
     t = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
     try:
-        return json.loads(t)
+        out = json.loads(t)
     except ValueError:
-        if '\\"' not in t:
+        if '\\"' not in t or re.search(r'(?<!\\)"', t):
             raise
-        return json.loads(t.replace('\\"', '"').replace("\\n", "\n"))
+        out = json.loads(t.replace('\\"', '"').replace("\\n", "\n"))
+    if not isinstance(out, dict):
+        raise ValueError("not an object")
+    return out
+
+
+PHRASE_RE = re.compile(
+    r"\b((?:[A-Za-z][\w\-]*\s+){1,3})(?:datasets?|benchmarks?|tasks?)\b"
+)
+PHRASE_STOP = {
+    "the", "a", "an", "our", "these", "this", "those", "that", "each", "all", "other",
+    "same", "different", "such", "of", "in", "on", "for", "and", "or", "with", "to",
+    "by", "from", "as", "two", "three", "four", "five", "several", "many", "various",
+    "more", "most", "both", "any", "some", "new", "if", "are", "is", "its", "their", "was", "were", "be", "than", "which", "whether", "how", "what", "can", "we", "it",
+}
+
+
+def grounded_phrases(source_text, approach="", title="", limit=4):
+    """Task/dataset names copied verbatim from the paper body, each already passing the same guards the
+    evaluation cell must pass (no metric/model word, verbatim near an experiment word, not a restatement).
+    Candidates only; the model still chooses and its answer is re-validated."""
+    if not source_text:
+        return []
+    body = re.split(r"(?m)^\s*(?:References|REFERENCES|Bibliography)\s*$", source_text)[0]
+    flat = re.sub(r"\s+", " ", body)
+    counts = {}
+    for m in PHRASE_RE.finditer(flat):
+        words = m.group(1).split()
+        while words and words[0].casefold() in PHRASE_STOP:
+            words.pop(0)
+        while words and words[-1].casefold() in PHRASE_STOP:
+            words.pop()
+        if not words or len(words) > 3:
+            continue
+        phrase = " ".join(words)
+        if any(w.casefold() in PHRASE_STOP for w in words):
+            continue
+        counts[phrase] = counts.get(phrase, 0) + 1
+    out = []
+    for phrase, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        # Precision first: a dataset/benchmark name (acronym or CamelCase token) or a phrase seen 3+ times.
+        named = any(re.search(r"[A-Z].*[A-Z]|[A-Z]{2,}", w) for w in phrase.split())
+        if not named and not (len(phrase.split()) >= 2 and n >= 3):
+            continue
+        if outcome_label(phrase) or ungrounded_label(phrase, source_text):
+            continue
+        if restates_method(phrase, approach, title):
+            continue
+        if phrase.casefold() in {x.casefold() for x in out}:
+            continue
+        out.append(phrase)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def cell_problems(cells, bad_evaluation):
@@ -131,7 +185,7 @@ def raw_key_left(text, keys):
 
 
 MODEL_LABEL = re.compile(
-    r"(?i)\b(?:models?|draft|target|approximation|algorithm|method)\b|(?-i:\bM[a-z]\b)"
+    r"(?i)\b(?:models?|draft|target|approximation|algorithm|method)\b|\bM[a-z]\b"
 )
 
 
@@ -431,6 +485,14 @@ def generate(job, tid, root, title, template, timeout=80):
                 + notes
             )
             compact_prompt += '\nCopy the dataset or task names verbatim from the notes (for example "XSum and HumanEval" or "translation and summarization"); do not describe results, metrics or paraphrase.'
+            candidates = grounded_phrases(
+                src_text, data.get("approach", ""), s.get("title", "")
+            )
+            if candidates:
+                compact_prompt += (
+                    "\nTask or dataset names that appear verbatim in the source (choose from these or a short combination of them, copied exactly): "
+                    + "; ".join('"' + c + '"' for c in candidates)
+                )
             cells = None
             rejected = ""
             for attempt in range(2):

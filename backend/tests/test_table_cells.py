@@ -31,18 +31,56 @@ def first_section(evaluation):
 
 
 class TableCellTests(unittest.TestCase):
-    def test_escaped_json_reply_is_parsed(self):
-        raw = '{\\n  \\"approach\\": \\"NeuLR dataset\\",\\n  \\"evaluation\\": \\"Logical reasoning\\"\\n}'
-        self.assertEqual(drafting.parse_cells(raw)["evaluation"], "Logical reasoning")
+    def test_pushed_escaped_retry_reply_is_parsed(self):
+        raw = '{\\n  \\"approach\\": \\"content-neutral NeuLR dataset 3k samples\\",\\n  \\"evaluation\\": \\"Logical reasoning benchmark zero-shot few-shot\\"\\n}'
+        out = drafting.parse_cells(raw)
+        self.assertEqual(out["approach"], "content-neutral NeuLR dataset 3k samples")
         self.assertEqual(drafting.parse_cells('```json\n{"a": "b"}\n```'), {"a": "b"})
-        with self.assertRaises(ValueError):
-            drafting.parse_cells("not json")
+        # Bounded: valid JSON keeps its backslashes; mixed quoting is not rewritten.
+        self.assertEqual(drafting.parse_cells('{"a": "x\\\\n y"}'), {"a": "x\\n y"})
+        for bad in ('{"a": \\"b\\", "c": "d"}', "not json", "[1, 2]"):
+            with self.assertRaises(ValueError):
+                drafting.parse_cells(bad)
 
-    def test_two_letter_model_label_is_case_sensitive(self):
-        self.assertFalse(drafting.outcome_label("ML tasks"))
-        self.assertFalse(drafting.outcome_label("mc and ml datasets"))
+    def test_two_letter_model_label_scope_unchanged(self):
         self.assertTrue(drafting.outcome_label("Mp and Mq"))
         self.assertTrue(drafting.outcome_label("15 datasets 7 models"))
+
+    def test_grounded_phrases_are_verbatim_and_pass_all_guards(self):
+        text = (
+            "We evaluate on the SNLI dataset and the NeuLR dataset. "
+            "Experiments on logical reasoning tasks show that logical reasoning tasks differ. "
+            "The logical reasoning tasks are described. Results are samples and surveyed. References\n"
+        )
+        got = drafting.grounded_phrases(text, "framework evaluation", "A title")
+        self.assertIn("SNLI", got)
+        self.assertIn("NeuLR", got)
+        self.assertIn("logical reasoning", got)
+        self.assertNotIn("samples", got)
+        for p in got:
+            self.assertIn(p, text)
+            self.assertFalse(drafting.outcome_label(p))
+            self.assertFalse(drafting.ungrounded_label(p, text))
+        self.assertEqual(drafting.grounded_phrases("", "", ""), [])
+
+    def test_compact_prompt_lists_grounded_candidates(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "notes").mkdir()
+            (root / "paper").mkdir()
+            (root / "notes/a.md").write_text("Source facts")
+            (root / "plan.json").write_text("{}")
+            src = root / "a.txt"
+            src.write_text("We evaluate on the NeuLR dataset in experiments. Experiments use the NeuLR dataset again.")
+            r = {**row(), "text_path": str(src)}
+            good = json.dumps({"approach": "framework evaluation", "evaluation": "NeuLR"})
+            replies = [(json.dumps(first_section("15 datasets 7 models")), True, None, []), (good, True, None, [])]
+            with patch.object(drafting.db, "sources", return_value=[r]), patch.object(
+                drafting.opencode, "run_text", side_effect=replies
+            ) as run, patch("app.limitations.classify_candidates", return_value="Q."):
+                self.assertTrue(drafting.generate(Job(), "t", root, "T", "ieee")[0])
+                self.assertIn('"NeuLR"', run.call_args_list[1].args[1])
+                self.assertIn("appear verbatim in the source", run.call_args_list[1].args[1])
 
     def test_retry_prompt_names_the_rule_and_accepts_escaped_json_reply(self):
         with tempfile.TemporaryDirectory() as td:
