@@ -84,6 +84,26 @@ npm run build
 
 Tests use synthetic data/mocks and a local fake sleeping process for the watchdog. They make no model, embedding or OCR API calls. A separate development check used real PostgreSQL 16 + pgvector 0.6.2, two synthetic source collections with identical vectors, and verified each retrieval returned only its own chat. Embeddings in that test were synthetic, not Voyage outputs. The route tests verify Q&A uses the direct adapter without OpenCode/project writes, while edit invokes OpenCode (mocked). They do not establish end-to-end correctness.
 
+## Optional: separate reviewer model
+
+Drafting and answer generation use the default model. Claim review and per-sentence Q&A verification can run on a different model: set `PAPERFORGE_REVIEW_MODEL=provider/model` (and, for a rate-limited free account, `tools/bounded-review-proxy.py`, which caps requests and stops on the first upstream error; it does not log auth headers). This was tested once with Groq `openai/gpt-oss-120b`; it is not required.
+
+## Ownership by person (proposed, going forward)
+
+This is how the work is divided from now on. It says nothing about who wrote what so far; for that, use the git history. Names are placeholders until filled in. Shared code is split by feature, not dumped on one person: whoever's feature needs a change in a shared file makes it.
+
+| Owner | Area | Files |
+| --- | --- | --- |
+| Yash | Complete frontend, final PDF/Word build, deployment files | `web/`; `backend/app/latexbuild.py`, `backend/app/templates/`; `Dockerfile`, `RAILWAY.md`, `.env.example`, `tools/docker-entrypoint.sh`; tests `check_exports.py` |
+| Person 2 | Sources, retrieval and long-running jobs: discovery, URL/PDF ingestion, chunking, embeddings, pgvector, retrieval, job resume | `backend/app/research.py`, `source_links.py`, `firecrawl.py`, `transform.py`, `db.py`, `rag.py`, `voyage_guard.py`, `evidence.py`, `scope.py`, `jobs.py`, `continuation.py`; the source and job endpoints in `main.py`; the discovery and reading stages in `pipeline.py` (`plan`, discovery, ingestion); tests `test_discovery_guard.py`, `test_candidate_classifier.py`, `test_firecrawl.py`, `test_source_links.py`, `test_transform.py`, `test_embedding_validation.py`, `test_voyage_guard.py`, `test_scope.py`, `test_evidence.py`, `test_continuation.py`, `test_budget_integration.py`, `check_postgres.py`, `check_schema.py` |
+| Person 3 | Drafting and verification: drafting, model runner, claim review, Q&A | `backend/app/drafting.py`, `sections.py`, `section_purpose.py`, `limitations.py`, `structured.py`, `opencode.py`, `span_review.py`, `answering.py`; the chat, edit and ask endpoints in `main.py`; message routing and the drafting, review and export-orchestration stages in `pipeline.py`; tests `test_drafting.py`, `test_limitations.py`, `test_section_purpose.py`, `test_structured.py`, `test_span_review.py`, `test_review_model.py`, `test_routes.py`, `test_resume_and_fallback.py`, `test_contract_wording.py`, `test_operational_outcomes.py` |
+| Shared | Touch only with the feature owner's review | `config.py`, `test_core.py`, `README.md`, `requirements.txt`, `docker-compose.yml` |
+
+What each person can demo on their own machine:
+- Yash: the chat UI end to end, ending in the compiled PDF/Word (LaTeX runs on his laptop only).
+- Person 2: add papers by search or URL, show the indexed chunks with page numbers, run retrieval for a question, and resume a paused job. No LaTeX needed.
+- Person 3: draft a section, show claims marked supported or unresolved with evidence, and ask a question answered with page citations. No LaTeX needed.
+
 ## Credits
 
 Web chat components copied from assistant-ui commit 42ec2ba61de4361a31a1cefb4b2daf131fe8f63e (MIT license in licenses/assistant-ui-MIT.txt), then adapted for PaperForge. Source: https://github.com/assistant-ui/assistant-ui. Template notices are in backend/licenses.
