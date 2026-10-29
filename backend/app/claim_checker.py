@@ -212,7 +212,7 @@ def _free_memory():
         pass
 
 
-def _run_batches(todo, cache, cache_file, batch=8, per_batch_seconds=300):
+def _run_batches(todo, cache, cache_file, batch=4, per_batch_seconds=90):
     """Assess the uncached claims in short-lived worker processes (model memory never accumulates in the server).
     Returns False when a batch makes no progress (laya missing, weights missing, out of memory)."""
     import subprocess
