@@ -198,12 +198,18 @@ def get_sources(tid: str):
 
 @app.get("/api/threads/{tid}/files/{name}")
 def files(tid: str, name: str):
-    if name not in ("paper.pdf", "paper.docx", "paper-source.zip"):
+    if name not in pipeline.FINAL_FILES + pipeline.DRAFT_FILES:
         raise HTTPException(404)
     thread = db.get_thread(tid)
     if not thread:
         raise HTTPException(404)
-    if thread["phase"] != "ready":
+    if name in pipeline.DRAFT_FILES:
+        # Unverified drafts are served only while the paper is not ready, under names that say so.
+        if thread["phase"] not in ("review_paused", "export_paused"):
+            raise HTTPException(
+                409, "Draft outputs exist only while claim review is paused."
+            )
+    elif thread["phase"] != "ready":
         raise HTTPException(
             409,
             "Final exports are unavailable until build, source review and export checks pass.",

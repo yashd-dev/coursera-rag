@@ -872,6 +872,49 @@ def export_all(job, tid, template):
     return files, v
 
 
+FINAL_FILES = ("paper.pdf", "paper.docx", "paper-source.zip")
+DRAFT_FILES = ("paper-draft.pdf", "paper-draft.docx", "paper-draft-source.zip")
+
+
+def export_draft(job, tid, template):
+    """Mechanical copies of the built draft while claim review is incomplete. No model call, no review claim,
+    and never the final file names, which stay gated on a passed review."""
+    tc = job.tool_start("export_draft_files", {"formats": ["pdf", "docx", "source zip"], "verified": False})
+    root = db.thread_dir(tid)
+    for n in DRAFT_FILES:
+        (root / n).unlink(missing_ok=True)
+    files = []
+    pdf = root / "paper/main.pdf"
+    if pdf.exists():
+        shutil.copy(pdf, root / "paper-draft.pdf")
+        files.append({"name": "paper-draft.pdf", "label": "PDF draft (claim review incomplete, not verified)"})
+    log = None
+    try:
+        d = latexbuild.export_docx(tid, template)
+    except Exception as e:  # conversion is best effort for a draft
+        d = {"ok": False, "log": f"{type(e).__name__}: {e}"}
+    if d["ok"]:
+        shutil.copy(d["path"], root / "paper-draft.docx")
+        files.append({"name": "paper-draft.docx", "label": "Word draft (converted from LaTeX, not checked, not verified)"})
+    else:
+        log = d.get("log")
+    try:
+        latexbuild.source_zip(tid, "paper-draft-source.zip")
+        files.append({"name": "paper-draft-source.zip", "label": "LaTeX source draft (not verified)"})
+    except OSError as e:
+        log = (log or "") + f" source zip: {e}"
+    job.tool_done(
+        tc,
+        {
+            "files": [dict(f, url=f"/api/threads/{tid}/files/{f['name']}") for f in files],
+            "verified": False,
+            "conversion_log": log,
+        },
+        error=bool(log),
+    )
+    return files
+
+
 def start_banner(resume_phase, label):
     """Honest start line: a resume names the stage it resumes at and claims only what it checks."""
     if resume_phase == "draft_paused":
@@ -905,7 +948,7 @@ def review_pause_message(root):
         m = re.match(r"Span(\d+):", e)
         if m and 0 < int(m.group(1)) <= len(blocks):
             text = re.sub(r"\s+", " ", re.sub(r"\\cite(?:\[[^]]*\])?\{[^}]+\}", "", blocks[int(m.group(1)) - 1])).strip()
-            lines.append('  Sentence: "' + (text[:200] + "..." if len(text) > 200 else text) + '"')
+            lines.append('    - Sentence: "' + (text[:200] + "..." if len(text) > 200 else text) + '"')
     if any("unresolved" in e or "insufficient evidence" in e for e in errs):
         lines.append("")
         lines.append(
@@ -955,7 +998,16 @@ def run_create(job, tid, text, template):
         reviewed, session = review_claims(job, tid, root, session)
         if not reviewed:
             db.update_thread(tid, phase="review_paused")
-            job.finish(review_pause_message(root))
+            msg = review_pause_message(root)
+            drafts = export_draft(job, tid, template)
+            if drafts and not any(f["name"] == "paper-draft.docx" for f in drafts):
+                msg += "\n\nThe Word draft could not be produced here (pandoc 2.11+ is required for the Word conversion); the PDF and LaTeX source drafts are below."
+            if drafts:
+                msg += (
+                    "\n\n**Draft outputs (claim review incomplete, not verified):**\n"
+                    + "\n".join(f"- [{f['label']}](/api/threads/{tid}/files/{f['name']})" for f in drafts)
+                )
+            job.finish(msg)
             return
         res, session = build_loop(job, tid, root, session)
         if not res["ok"]:

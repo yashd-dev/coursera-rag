@@ -244,9 +244,9 @@ def build(tid):
     }
 
 
-def source_zip(tid):
+def source_zip(tid, name="paper-source.zip"):
     paper = db.thread_dir(tid) / "paper"
-    out = db.thread_dir(tid) / "paper-source.zip"
+    out = db.thread_dir(tid) / name
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         for f in paper.iterdir():
             if (
