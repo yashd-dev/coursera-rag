@@ -7,7 +7,7 @@ export function useFullscreenOverlay(): {
   toggle: () => void;
   overlayRef: RefObject<HTMLDivElement | null>;
 } {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

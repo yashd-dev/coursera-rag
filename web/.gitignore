@@ -189,3 +189,5 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/python,react
+# web/src/**/lib holds app source; the Python "lib/" rule above must not hide it
+!src/**/lib/
