@@ -1,7 +1,7 @@
 """Optional experimental claim checker (Laya, convaiinnovations/laya). Opt-in: PAPERFORGE_CLAIM_CHECKER=laya.
 
-Contract: assess(claim, passages) -> {"checker": "laya", "p_support": float, "label": "model_assessment_supported" |
-"model_assessment_not_supported", "verified": False, "note": str}. The result is a model assessment, never
+Contract: assess(claim, passages) -> {"checker": "laya", "label": window_supported_single_part | window_level_only |
+no_window_supported, "max_window_score", "window_scores", "verified": False, "note"}. Window-level labels only. The result is a model assessment, never
 verification: it gives no quote or page evidence and it is not used to mark a span verified. On a 44-case
 single-reader benchmark it accepted two stitched false claims at p=0.91 and 0.97 and rejected supported ones, so
 it is shown as an assessment only. Imports are lazy: without the opt-in, the laya/torch packages are never loaded.
@@ -48,30 +48,58 @@ def _windows(passage):
     return [passage[i : i + MAX_PASSAGE_CHARS] for i in range(0, max(1, len(passage) - step), step)]
 
 
+MULTI_RE = re.compile(r"(;|\bwhile\b|\bwhereas\b|\band\b[^.]*\band\b|,[^,.]*,[^,.]*,|\.\s+[A-Z])", re.I)
+
+
+def multi_clause(claim):
+    return bool(MULTI_RE.search(claim))
+
+
 def assess(claim, passages):
-    """Highest p(support) over passage windows. Returns None when disabled or the package is unavailable;
-    callers must treat None as 'no assessment', never as support."""
+    """Per-window assessment. The benchmarked prompt asks whether ONE passage supports the claim, so a high score on
+    one window cannot mean the whole claim is supported when it has several parts or the passage was split. The label
+    therefore says what was actually assessed:
+      window_supported_single_part   one window scored >= threshold and the claim has one part and fit in one window
+      window_level_only              a window scored >= threshold but the claim has several parts or was windowed:
+                                     says nothing about the claim as a whole
+      no_window_supported            no window scored >= threshold
+    Returns None when disabled or the package is unavailable; callers must treat None as 'no assessment'.
+    Scores are model outputs, not calibrated probabilities."""
     if not enabled() and _agent is None:
         return None
     try:
         agent = _load()
     except Exception as e:  # not installed, no weights, out of memory: the app keeps working without it
         return {"checker": "laya", "error": f"{type(e).__name__}: {str(e)[:120]}", "verified": False}
-    best = None
+    windows = []
     for passage in passages:
-        for w in _windows(passage):
-            state = f"Claim: {claim}\n\nEvidence passage from the cited source: {w}"
-            try:
-                p = float(agent.predict(state, QUESTION)["answers"]["support"]["noul"])
-            except Exception as e:
-                return {"checker": "laya", "error": f"{type(e).__name__}: {str(e)[:120]}", "verified": False}
-            best = p if best is None else max(best, p)
-    if best is None:
+        windows.extend(_windows(passage))
+    scores = []
+    for w in windows:
+        state = f"Claim: {claim}\n\nEvidence passage from the cited source: {w}"
+        try:
+            scores.append(round(float(agent.predict(state, QUESTION)["answers"]["support"]["noul"]), 3))
+        except Exception as e:
+            return {"checker": "laya", "error": f"{type(e).__name__}: {str(e)[:120]}", "verified": False}
+    if not scores:
         return None
+    best = max(scores)
+    multi = multi_clause(claim)
+    if best < THRESHOLD:
+        label = "no_window_supported"
+    elif multi or len(windows) > 1:
+        label = "window_level_only"
+    else:
+        label = "window_supported_single_part"
     return {
         "checker": "laya",
-        "p_support": round(best, 3),
-        "label": "model_assessment_supported" if best >= THRESHOLD else "model_assessment_not_supported",
+        "label": label,
+        "max_window_score": best,
+        "window_scores": scores,
+        "windows": len(windows),
+        "multi_clause": multi,
         "verified": False,
-        "note": "Model assessment, not verification: no quote or page evidence, and it can accept claims that stitch separate facts.",
+        "note": "Model assessment of single passage windows, not verification and not a calibrated probability. "
+        "No quote or page evidence. A window score says nothing about claim parts that need other passages; "
+        "it accepted stitched false claims in a small benchmark.",
     }
