@@ -90,20 +90,19 @@ Drafting and answer generation use the default model. Claim review and per-sente
 
 ## Ownership by person (proposed, going forward)
 
-This is how the work is divided from now on. It says nothing about who wrote what so far; for that, use the git history. Names are placeholders until filled in.
+This is how the work is divided from now on. It says nothing about who wrote what so far; for that, use the git history. Names are placeholders until filled in. Shared code is split by feature, not dumped on one person: whoever's feature needs a change in a shared file makes it.
 
 | Owner | Area | Files |
 | --- | --- | --- |
-| Yash | Complete frontend and final PDF/Word build | `web/` (all of it), `backend/app/latexbuild.py`, `backend/app/templates/`, `backend/tests/check_exports.py` |
-| Person 2 | Sources and retrieval: discovery, URL/PDF ingestion, chunking, embeddings, pgvector, retrieval | `backend/app/research.py`, `source_links.py`, `firecrawl.py`, `transform.py`, `db.py`, `rag.py`, `voyage_guard.py`, `evidence.py`, `scope.py`; tests `test_discovery_guard.py`, `test_candidate_classifier.py`, `test_firecrawl.py`, `test_source_links.py`, `test_transform.py`, `test_embedding_validation.py`, `test_voyage_guard.py`, `test_scope.py`, `test_evidence.py`, `check_postgres.py`, `check_schema.py` |
-| Person 3 | Drafting and verification: pipeline, model runner, jobs, claim review, Q&A | `backend/app/pipeline.py`, `drafting.py`, `sections.py`, `section_purpose.py`, `limitations.py`, `structured.py`, `opencode.py`, `jobs.py`, `continuation.py`, `span_review.py`, `answering.py`, `main.py`, `config.py`; tests `test_drafting.py`, `test_limitations.py`, `test_section_purpose.py`, `test_structured.py`, `test_continuation.py`, `test_span_review.py`, `test_review_model.py`, `test_routes.py`, `test_resume_and_fallback.py`, `test_core.py`, `test_budget_integration.py`, `test_operational_outcomes.py`, `test_contract_wording.py` |
+| Yash | Complete frontend, final PDF/Word build, deployment files | `web/`; `backend/app/latexbuild.py`, `backend/app/templates/`; `Dockerfile`, `RAILWAY.md`, `.env.example`, `tools/docker-entrypoint.sh`; tests `check_exports.py` |
+| Person 2 | Sources, retrieval and long-running jobs: discovery, URL/PDF ingestion, chunking, embeddings, pgvector, retrieval, job resume | `backend/app/research.py`, `source_links.py`, `firecrawl.py`, `transform.py`, `db.py`, `rag.py`, `voyage_guard.py`, `evidence.py`, `scope.py`, `jobs.py`, `continuation.py`; the source and job endpoints in `main.py`; the discovery and reading stages in `pipeline.py` (`plan`, discovery, ingestion); tests `test_discovery_guard.py`, `test_candidate_classifier.py`, `test_firecrawl.py`, `test_source_links.py`, `test_transform.py`, `test_embedding_validation.py`, `test_voyage_guard.py`, `test_scope.py`, `test_evidence.py`, `test_continuation.py`, `test_budget_integration.py`, `check_postgres.py`, `check_schema.py` |
+| Person 3 | Drafting and verification: drafting, model runner, claim review, Q&A | `backend/app/drafting.py`, `sections.py`, `section_purpose.py`, `limitations.py`, `structured.py`, `opencode.py`, `span_review.py`, `answering.py`; the chat, edit and ask endpoints in `main.py`; message routing and the drafting, review and export-orchestration stages in `pipeline.py`; tests `test_drafting.py`, `test_limitations.py`, `test_section_purpose.py`, `test_structured.py`, `test_span_review.py`, `test_review_model.py`, `test_routes.py`, `test_resume_and_fallback.py`, `test_contract_wording.py`, `test_operational_outcomes.py` |
+| Shared | Touch only with the feature owner's review | `config.py`, `test_core.py`, `README.md`, `requirements.txt`, `docker-compose.yml` |
 
 What each person can demo on their own machine:
 - Yash: the chat UI end to end, ending in the compiled PDF/Word (LaTeX runs on his laptop only).
-- Person 2: add papers by search or URL, show the indexed chunks with page numbers, and run retrieval for a question. No LaTeX needed.
+- Person 2: add papers by search or URL, show the indexed chunks with page numbers, run retrieval for a question, and resume a paused job. No LaTeX needed.
 - Person 3: draft a section, show claims marked supported or unresolved with evidence, and ask a question answered with page citations. No LaTeX needed.
-
-Shared files (`README.md`, `requirements.txt`, `docker-compose.yml`) are changed by whoever's feature needs it.
 
 ## Credits
 
