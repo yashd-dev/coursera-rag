@@ -1,6 +1,6 @@
 """Native OpenCode schema output via a bounded loopback server, same owner model."""
 
-import json, os, socket, subprocess, time
+import json, os, re, socket, subprocess, time
 import httpx
 from . import config
 
@@ -52,7 +52,25 @@ def outcome_code(events):
     )
 
 
+def provider_detail(info_error):
+    """Short, secret-free description of the provider/OpenCode error object (name, status, message head)."""
+    if not isinstance(info_error, dict):
+        return ""
+    data = info_error.get("data") if isinstance(info_error.get("data"), dict) else {}
+    parts = [str(info_error.get("name", ""))[:60]]
+    for k in ("statusCode", "status"):
+        if data.get(k) is not None:
+            parts.append(f"status={str(data[k])[:10]}")
+            break
+    msg = re.sub(r"\s+", " ", str(data.get("message", info_error.get("message", ""))))[:200]
+    msg = re.sub(r"(?i)(bearer\s+|api[_-]?key[\"':= ]+|gsk_|sk-|nvapi-)[A-Za-z0-9._\-]{6,}", r"\1***", msg)
+    if msg:
+        parts.append(msg)
+    return " ".join(x for x in parts if x)
+
+
 def _fail(code, error, sid):
+    detail = getattr(error, "detail", "")
     return (
         "",
         False,
@@ -62,6 +80,7 @@ def _fail(code, error, sid):
                 "kind": "error",
                 "code": code,
                 "message": type(error).__name__ + ": native schema stage failed",
+                **({"detail": detail} if detail else {}),
             },
             {"kind": "done", "ok": False, "session": sid},
         ],
@@ -223,7 +242,9 @@ def run(cwd, prompt, schema, timeout=80, model_id=None):
             result = r.json()
             info = result.get("info", {})
             if info.get("error"):
-                raise _Typed("native_error", "Native structured output failed")
+                err = _Typed("native_error", "Native structured output failed")
+                err.detail = provider_detail(info["error"])
+                raise err
             value = info.get("structured", info.get("structured_output"))
             if value is None:
                 raise _Typed("empty", "Native structured output was empty")

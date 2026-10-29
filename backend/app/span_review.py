@@ -376,6 +376,11 @@ def adjudicate_quote(root, index, block, window, timeout=60):
     return {"verdict": "rejected", "reason": r["context_phrase"], "raw": r}
 
 
+def _detail(events):
+    d = next((e.get("detail") for e in events or [] if e.get("kind") == "error" and e.get("detail")), "")
+    return f" ({d})" if d else ""
+
+
 def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
     # Isolated directory contains only this span and exact candidate excerpts.
     work = root / "span-review" / str(index)
@@ -469,7 +474,7 @@ def review_one(root, index, block, sources, vector_packet, timeout=80, limit=4):
         # Operational failure (timeout, transport, server, empty or schema-invalid output). It is not a semantic
         # verdict: never a rejection and never supported.
         return [], [
-            f'Span{index}: operational {structured.outcome_code(events) if events else "empty"}: the review call returned no usable result; this is not a verdict on the claim'
+            f'Span{index}: operational {structured.outcome_code(events) if events else "empty"}{_detail(events)}: the review call returned no usable result; this is not a verdict on the claim'
         ]
     text = "\n".join(
         e.get("text", "") for e in events if e.get("kind") == "text"
@@ -899,7 +904,7 @@ def review_all(job, tid, root, packet, timeout=80, max_spans=30):
                 errors.extend(failures)
                 break
             if failures and all(is_operational(f) for f in failures):
-                code = failures[0].split(": operational ", 1)[1].split(":", 1)[0]
+                code = failures[0].split(": operational ", 1)[1].split(":", 1)[0].split(" (", 1)[0]
                 _outcome_log(
                     root,
                     {
