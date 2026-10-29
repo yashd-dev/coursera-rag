@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "error",
+    "code": "native_error",
+    "message": "_Typed: native schema stage failed"
+  },
+  {
+    "kind": "done",
+    "ok": false,
+    "session": "ses_e77e74f34ffeqjUKribtW9gq2R"
+  }
+]

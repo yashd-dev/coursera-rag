@@ -1,12 +1,11 @@
 [
   {
-    "kind": "error",
-    "code": "native_error",
-    "message": "_Typed: native schema stage failed"
+    "kind": "text",
+    "text": "{\"clauses\": [{\"clause\": \"Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation\", \"evidence_id\": \"E1\", \"excerpt\": \"We combine a mean-span readout with selective backbone adaptation.\"}, {\"clause\": \"achieving consistent accuracy gains\", \"evidence_id\": \"E1\", \"excerpt\": \"mean-span pooling yields further consistent gains at the same parameter count.\"}, {\"clause\": \"while reducing trainable parameters\", \"evidence_id\": \"E1\", \"excerpt\": \"cutting trainable parameters by more than half\"}], \"evidence_ids\": [\"E1\"], \"reason\": \"Excerpts confirm authors, span readout, selective adaptation, consistent accuracy gains, and parameter reduction.\", \"status\": \"supported\"}"
   },
   {
     "kind": "done",
-    "ok": false,
-    "session": "ses_e77f48236ffexKrEMNI5A9hrQc"
+    "ok": true,
+    "session": "ses_e77e7ce30ffeQmnxEGZXqw38k5"
   }
 ]

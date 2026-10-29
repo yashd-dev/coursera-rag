@@ -1,0 +1,10 @@
+{
+  "497d638963942fc410bf13d81ba0da1d6ab61324c58982214f2cafec5317df9d": {
+    "span": "The paper proposes a framework for causal structure discovery and evaluation from natural language text using LLMs, dividing work into extraction, summarisation, counterfactual queries, and graph evaluation stages. \\cite{gendron2024counterfactual}",
+    "token": "probe1",
+    "failures": [
+      "Span2: unresolved clause grounding: an excerpt is not copied exactly from its evidence; supported verdict not verifiable, not accepted and not rewritten"
+    ],
+    "history": []
+  }
+}
