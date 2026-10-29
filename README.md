@@ -81,6 +81,16 @@ classify -> clarify
 - Model: the owner's NVIDIA model through `langchain-nvidia-ai-endpoints`. That endpoint rejects `with_structured_output` and `max_retries`, so intent uses a forced tool call. Hosted calls still need `PAPERFORGE_ANSWER_CALLS=enabled`; without them, rules decide and the graph only searches or asks.
 - OpenCode is unchanged: it still does the file editing and drafting. The claim review is unchanged; LangGraph does not verify claims. An unresolved span is never marked verified and the draft downloads stay labelled "not verified".
 
+What the graph owns today, and what is still the previous code:
+
+| Stage | Owner |
+| --- | --- |
+| Turn routing, intent classification, find_papers search loop, write consent and its checkpoint | LangGraph (this package) |
+| Scope clarification, ask (retrieval + answer + citation check), edit, resume | Existing `pipeline.py` functions, called as graph nodes |
+| Planning, discovery/indexing, drafting, claim review, build, export | Existing `pipeline.run_create` (OpenCode for file work), unchanged |
+
+So this is an orchestration front end, not a rewrite of every stage: the long write pipeline is still one node that calls the existing code. Moving stages into separate graph nodes is future work.
+
 ## Workflow and provenance
 
 arXiv API and OpenAlex open-access works search provide candidates. A PDF link is not evidence that the paper was downloaded. Downloads are checked for a PDF header, extracted per page with pdftotext, optionally sent to hosted Unstructured for OCR, chunked with page/source IDs, embedded, and stored under the thread's collection. Every retrieval SQL query filters `thread_id`.
