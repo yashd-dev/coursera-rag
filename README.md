@@ -63,6 +63,24 @@ npm run dev
 
 Open http://127.0.0.1:5173. Choose IEEE/Springer, then enter a topic. It is a template selector, not an LLM selector. The API does not create tables during a read unless explicit initialization is enabled. First have the database owner enable pgvector (`CREATE EXTENSION vector`) and authorize a dedicated `paperforge` schema. For initial setup only, set PAPERFORGE_DB_INITIALIZE=enabled; after setup set it back to disabled. All app table queries are qualified into PAPERFORGE_DB_SCHEMA; public/system schemas are rejected. Existing public tables are not reused. A database initialized with another embedding model must not be reused without re-embedding or a fresh database.
 
+## Orchestrator (LangGraph, opt-in)
+
+`PAPERFORGE_ORCHESTRATOR=langgraph` routes each chat turn through a LangGraph `StateGraph` (`backend/app/orchestrator/`). The default is `legacy` (the previous deterministic router), so you can roll back by unsetting the variable.
+
+```
+fast_route -> scope | resume | edit | ask          slash commands, resume and questions: no model call
+fast_route -> classify (forced Intent tool call)
+classify -> find_agent <-> find_tools -> find_report   search only; nothing is downloaded, indexed or written
+classify -> ask_consent -> consent (interrupt) -> write_paper
+classify -> clarify
+```
+
+- `find papers ...` only searches arXiv/OpenAlex through LangChain tools that the graph executes (max 2 rounds) and lists candidates.
+- A paper is written only on an explicit write request ("write a literature review on ...") or after a yes to the consent question. Unclear input gets a clarifying question, never a run.
+- The consent question is a LangGraph `interrupt`; the checkpoint lives in Postgres schema `paperforge_lg` and survives a restart. `threads.phase` stays the source of truth, and `write_paper` refuses to start unless the phase is `new` or `failed_early`.
+- Model: the owner's NVIDIA model through `langchain-nvidia-ai-endpoints`. That endpoint rejects `with_structured_output` and `max_retries`, so intent uses a forced tool call. Hosted calls still need `PAPERFORGE_ANSWER_CALLS=enabled`; without them, rules decide and the graph only searches or asks.
+- OpenCode is unchanged: it still does the file editing and drafting. The claim review is unchanged; LangGraph does not verify claims. An unresolved span is never marked verified and the draft downloads stay labelled "not verified".
+
 ## Workflow and provenance
 
 arXiv API and OpenAlex open-access works search provide candidates. A PDF link is not evidence that the paper was downloaded. Downloads are checked for a PDF header, extracted per page with pdftotext, optionally sent to hosted Unstructured for OCR, chunked with page/source IDs, embedded, and stored under the thread's collection. Every retrieval SQL query filters `thread_id`.

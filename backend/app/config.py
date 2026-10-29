@@ -94,3 +94,6 @@ FIRECRAWL_FREE_VERIFIED = (
     os.environ.get("PAPERFORGE_FIRECRAWL_FREE_VERIFIED", "disabled") == "enabled"
 )
 FIRECRAWL_CREDIT_CAP = int(os.environ.get("PAPERFORGE_FIRECRAWL_CREDIT_CAP", "20"))
+
+# legacy = deterministic router (default). langgraph = LangGraph StateGraph orchestrator.
+ORCHESTRATOR = os.environ.get("PAPERFORGE_ORCHESTRATOR", "legacy")

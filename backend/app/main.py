@@ -243,7 +243,11 @@ def chat(tid: str, b: Chat):
 
     def go():
         try:
-            if kind == "scope":
+            if config.ORCHESTRATOR == "langgraph":
+                from .orchestrator import run as lg_run
+
+                lg_run(job, tid, b.text, template if kind != "resume" else t["template"])
+            elif kind == "scope":
                 pipeline.run_scope(job, tid, b.text)
             elif kind in ("create", "resume"):
                 pipeline.run_create(
