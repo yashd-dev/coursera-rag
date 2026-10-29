@@ -1,0 +1,9 @@
+{
+  "summary": "Storks, Gao, and Chai survey benchmarks, knowledge resources, and state-of-the-art learning/inference approaches across symbolic, statistical, and neural models, mapping NLI field architecture without reporting experimental findings.",
+  "limitations": "The source authors state: \"A key limitation that Yang et al. identify\nin BERT is that since tokens are randomly masked for pre-training tasks, there is a discrepancy\nbetween language data in pre-training and fine-tuning.\"",
+  "approach": "survey of benchmarks and models",
+  "evaluation": "NLI benchmarks and datasets",
+  "abstract": "Storks, Gao, & Chai survey recent advances in natural language inference, focusing on benchmarks, resources, and inference approaches across symbolic, statistical, and neural models.",
+  "introduction": "Storks, Gao, and Chai survey recent advances in natural language inference to map the field's benchmarks, knowledge resources, and inference approaches.",
+  "conclusion": "Machines lack commonsense reasoning; world-knowledge connections and inference processes remain difficult despite decades of NLP progress."
+}

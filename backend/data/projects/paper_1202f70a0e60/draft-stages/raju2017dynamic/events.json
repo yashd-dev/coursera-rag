@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"summary\": \"Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms, improving inferential accuracy beyond single-pass models.\",\n  \"limitations\": \"\",\n  \"approach\": \"memory attention updates\",\n  \"evaluation\": \"SNLI dataset\",\n  \"abstract\": \"Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms.\",\n  \"introduction\": \"Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms.\",\n  \"conclusion\": \"Raju et al. report that DMN achieves 76.5% accuracy on the SNLI test set, outperforming previous models.\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 7020,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f84dbdffe6rkmVad95V1h4R"
+  }
+]

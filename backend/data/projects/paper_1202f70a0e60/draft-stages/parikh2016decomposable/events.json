@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"summary\": \"Parikh et al. propose a decomposable attention model for natural language inference that aligns local text substructures via attention, solves subproblems separately, and aggregates information without relying on word order. The model achieves state-of-the-art accuracy on SNLI with significantly fewer parameters than complex LSTM-based approaches.\",\n  \"limitations\": \"\",\n  \"approach\": \"attention-based alignment\",\n  \"evaluation\": \"SNLI corpus\",\n  \"abstract\": \"The decomposable attention model aligns local text substructures via attention to solve NLI subproblems separately, enabling trivially parallelizable computation with fewer parameters than deep models.\",\n  \"introduction\": \"Parikh et al. introduce a decomposable attention model for natural language inference that processes premise and hypothesis sentence pairs.\",\n  \"conclusion\": \"The decomposable attention model achieves state-of-the-art accuracy on SNLI with almost an order of magnitude fewer parameters than prior work.\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 4131,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f7ea0affe7ZlGn5kMVpX15D"
+  }
+]

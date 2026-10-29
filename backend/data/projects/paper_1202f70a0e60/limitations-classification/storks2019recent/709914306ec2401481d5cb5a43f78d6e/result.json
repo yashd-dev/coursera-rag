@@ -1,0 +1,14 @@
+{
+  "source_key": "storks2019recent",
+  "page": 59,
+  "quote": "A key limitation that Yang et al. identify\nin BERT is that since tokens are randomly masked for pre-training tasks, there is a discrepancy\nbetween language data in pre-training and fine-tuning.",
+  "score": 20,
+  "id": "E3",
+  "sentence": "The source authors state: \"A key limitation that Yang et al. identify\nin BERT is that since tokens are randomly masked for pre-training tasks, there is a discrepancy\nbetween language data in pre-training and fine-tuning.\"",
+  "verdict": {
+    "status": "supported",
+    "reason": "The quoted passage identifies a key limitation of BERT as identified by Yang et al.: a discrepancy between language data in pre-training and fine-tuning due to random token masking. This is a stated assumption/scope boundary of the reviewed method (BERT) and qualifies."
+  },
+  "source_sha": "15cf1a65f609563e34ee665c540bf23fb3eb45efafe2ca042665bd14ea845a6d",
+  "contract": "classifier-v1"
+}

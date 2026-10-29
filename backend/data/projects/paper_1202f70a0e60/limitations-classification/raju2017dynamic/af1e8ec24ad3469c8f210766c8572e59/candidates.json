@@ -1,0 +1,30 @@
+[
+  {
+    "source_key": "raju2017dynamic",
+    "page": 10,
+    "quote": "This work also showed some limitations that can be\novercome and improvements that can be made.",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "raju2017dynamic",
+    "page": 1,
+    "quote": "However, while these\napproaches constituted state of the art for their time, there\nexisted significant limitations in handling human language\nwhere the content may have multiple embedded\ninterpretations or instances of irony or sarcasm.",
+    "score": 20,
+    "id": "E2"
+  },
+  {
+    "source_key": "raju2017dynamic",
+    "page": 3,
+    "quote": "Based on this,\nwe assume that DMNs are adequate for the NLI task, in which\ndetermining the relationship between two sentences, called\nthe premise and the hypothesis, is ess",
+    "score": 7,
+    "id": "E5"
+  },
+  {
+    "source_key": "raju2017dynamic",
+    "page": 3,
+    "quote": "Based on this,\nwe assume that DMNs are adequate for the NLI task, in which\ndetermining the relationship between two sentences, called\nthe premise and the hypothesis, is essential.",
+    "score": 7,
+    "id": "E6"
+  }
+]

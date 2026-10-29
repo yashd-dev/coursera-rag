@@ -1,0 +1,14 @@
+{
+  "source_key": "raju2017dynamic",
+  "page": 10,
+  "quote": "This work also showed some limitations that can be\novercome and improvements that can be made.",
+  "score": 20,
+  "id": "E1",
+  "sentence": "The source authors state: \"This work also showed some limitations that can be\novercome and improvements that can be made.\"",
+  "verdict": {
+    "status": "supported",
+    "reason": "States a limitation of the reviewed method: 'This work also showed some limitations that can be overcome and improvements that can be made.'"
+  },
+  "source_sha": "f94244924ccc3a0d98d58691c4ffd12244383376f82d2f2d37d6d425a8824fd4",
+  "contract": "classifier-v1"
+}

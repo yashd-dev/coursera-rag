@@ -1,0 +1,30 @@
+[
+  {
+    "source_key": "parikh2016decomposable",
+    "page": 3,
+    "quote": "For simplicity we assume that all hidden dimensions are d and that the complexity of\nmatrix(d \u00d7 d)-vector(d \u00d7 1) multiplication is O(d2 ).",
+    "score": 7,
+    "id": "E1"
+  },
+  {
+    "source_key": "parikh2016decomposable",
+    "page": 3,
+    "quote": "A key assumption of our analysis is that ` < d,\nwhich we believe is reasonable and is true of the\nSNLI dataset (Bowman et al., 2015) where ` < 80,\nwhereas recent LSTM-based approaches have used\nd \u2265 300.",
+    "score": 7,
+    "id": "E1"
+  },
+  {
+    "source_key": "parikh2016decomposable",
+    "page": 3,
+    "quote": "This assumption allows us to bound the\ncomplexity of computing the",
+    "score": 7,
+    "id": "E1"
+  },
+  {
+    "source_key": "parikh2016decomposable",
+    "page": 3,
+    "quote": "This assumption allows us to bound the\ncomplexity of computing the `2 attention weights.",
+    "score": 7,
+    "id": "E2"
+  }
+]

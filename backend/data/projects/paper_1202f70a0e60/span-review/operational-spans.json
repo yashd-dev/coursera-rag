@@ -1,0 +1,11 @@
+{
+  "55241167174d5d7a0deeadce63f2ca62f1455539c4c3b3a9bf5eceaa4e489761": {
+    "span": "Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \\cite{mei2026improving}",
+    "token": "",
+    "code": "native_error",
+    "failures": [
+      "Span1: operational native_error: the review call returned no usable result; this is not a verdict on the claim"
+    ],
+    "history": []
+  }
+}

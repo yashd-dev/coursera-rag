@@ -1,0 +1,30 @@
+[
+  {
+    "source_key": "xu2023large",
+    "page": 13,
+    "quote": "Overall, it can be observed that all LLMs exhibit specific\nlimitations in logical reasoning, with relative strength in\ndeductive reasoning but evident struggles in inductive\nsettings.",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "xu2023large",
+    "page": 13,
+    "quote": "A proficient\nlogical reasoner should recognize its limitations and knows\nwhen to refrain from answering.",
+    "score": 20,
+    "id": "E2"
+  },
+  {
+    "source_key": "xu2023large",
+    "page": 8,
+    "quote": "This implies that LLMs must understand their capabilities and limitations, avoiding tasks beyond their scope.\n\n5.6 Are LLMs Easy to Induce Hallucination in Logical\nReasoning?",
+    "score": 20,
+    "id": "E3"
+  },
+  {
+    "source_key": "xu2023large",
+    "page": 12,
+    "quote": "Since it is the earliest released\nLLM of the three, it is understandable that text-davinci-003\nhas some limitations in logical reasoning tasks, especially in\nthe more complex settings (e.g., inductive and abductive).",
+    "score": 20,
+    "id": "E4"
+  }
+]

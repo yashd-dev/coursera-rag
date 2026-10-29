@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "text",
+    "text": "{\"status\": \"supported\", \"reason\": \"The reviewed method (Natural Language Inference model) has an architectural limitation: it is not sensitive to word-order, which prevents it from mastering comparative fragments.\"}"
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f91877ffeWDmk1ycfgtD8Sw"
+  }
+]

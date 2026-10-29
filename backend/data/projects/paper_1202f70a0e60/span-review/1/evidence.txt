@@ -1,0 +1,95 @@
+E1 source=mei2026improving physical_page=1
+Improving JEV Entailment Reranking with Span Readouts and
+Selective Adaptation
+Haocheng Mei1 , Yuchuan Tian1 , Ye Yuan2 , Enhua Wu3
+Chao Xu1 , Allen Chen4 , Kai Han5 , Yunhe Wang5
+1 Peking University
+2 SUIBE
+
+arXiv:2610.35654v1 [cs.CL] 26 Oct 2026
+
+3 University of Macau
+4 Tsinghua University
+5 TokenRhythm Technologies
+
+Abstract
+JEV decision models pair a language model backbone with a lightweight scoring head
+to select among natural-language options. Direct selection compares candidate answers
+within one request, whereas entailment reranking evaluates each candidate in a separate natural language inference (NLI) request over fixed relation options. We examine
+whether the readout and adaptation choices used for direct selection remain effective
+for cross-request reranking. We combine a mean-span readout with selective backbone
+adaptation. Mean-span pooling replaces the option-ending pointer with an average of the
+contextualized states inside each NLI option, without adding head parameters. Selective
+adaptation retains low-rank updates in attention and gated DeltaNet projections while
+removing feed-forward adapters. On MC11, which averages accuracy over eleven reranking configurations from seven sources, selective adaptation improves NeoHorse-1-4B
+accuracy over the all-module baseline while cutting trainable parameters by more than
+half, and mean-span pooling yields further consistent gains at the same parameter count.
+Project page: https://github.com/Mei-TN/Jev-reranking.
+
+1. Introduction
+JEV models turn a natural-language state into a structured decision that software can a
+
+E2 source=mei2026improving physical_page=11
+on and entailment reranking can favor
+different option readouts, indicating that design choices for single-request selection need not
+transfer unchanged to cross-request reranking. Motivated by this observation, we pair meanspan pooling over each NLI option with selective backbone adaptation restricted to attention and
+DeltaNet projections, jointly adjusting how option states are extracted and how the backbone
+is updated. Matched comparisons under a tuned one-epoch recipe establish the gains from
+both choices, while pointer-position, parameter-budget, and head-capacity controls clarify their
+respective contributions.
+On NeoHorse-1-4B, selective adaptation improves MC11 from 50.28% to 52.49%, and adding
+mean-span pooling reaches 53.39%, with both steps positive in all four fold–seed settings.
+Together, these changes improve reranking accuracy by about 3.1 pp while reducing trainable
+parameters by 55.2%.
+
+11
+
+
+
+
+E3 source=mei2026improving physical_page=2
+textual interaction,
+removing feed-forward network (FFN) adapters while keeping the pretrained FFN weights in
+the forward pass. Because the head and adapters shape the option representations together, we
+evaluate both designs under a common one-epoch, lower-learning-rate recipe that avoids the
+accuracy loss observed with longer training or higher adapter rates.
+Our experiments on NeoHorse-1-4B show that the scoring interface changes the relative
+performance of option readouts, while reducing adaptation capacity can improve reranking
+accuracy. With checkpoints and questions held fixed on PIQA and SocialIQA, the pointer
+leads on average under direct selection, while pooling leads under entailment reranking. On
+the eleven-configuration MC11 benchmark, the one-epoch, lower-rate recipe establishes an
+all-module pointer reference at 50.28% accuracy. Selective adaptation raises this to 52.49% while
+reducing trainable parameters by 55.2% (from 131.2M to 58.8M), and adding mean-span pooling
+lifts accuracy further to 53.39% at the same parameter count. Both steps improve MC11 across
+all four fold–seed settings. Under all-module adaptation, mean-span pooling (51.00%) also
+outperforms a pointer at the final content token (49.11%). The individual design choices also
+improve PIQA and CommonsenseQA reranking, whereas the combined model loses accuracy
+on the JevBench and Kev direct-decision suites.
+
+2. Readout and Adaptation Design
+2.1. Typed requests and candidate reranking
+A request contains a state 𝑥 , an instruction 𝑢, and named options 𝑂 = { 𝑜1 , . . . , 𝑜 𝐾 }. Each option
+comprises a
+
+E4 source=mei2026improving physical_page=1
+removing feed-forward adapters. On MC11, which averages accuracy over eleven reranking configurations from seven sources, selective adaptation improves NeoHorse-1-4B
+accuracy over the all-module baseline while cutting trainable parameters by more than
+half, and mean-span pooling yields further consistent gains at the same parameter count.
+Project page: https://github.com/Mei-TN/Jev-reranking.
+
+1. Introduction
+JEV models turn a natural-language state into a structured decision that software can act on.
+Their typed interfaces include Choice, which selects among described options; Noul, which
+answers a binary question; and Score, which assigns probabilities to ordered levels [43, 26].
+Open implementations such as NeoHorse-Jev and Kev attach a small bilinear scoring head to an
+adapted language model backbone [41, 31], encoding the context and options in one forward
+pass and using the hidden state at each option’s closing delimiter to produce a distribution over
+the candidates.
+These models can answer multiple-choice questions either by comparing all candidate
+answers within one request (direct selection) or by evaluating each candidate in a separate
+natural language inference (NLI) request (entailment reranking). Reranking provides a fixed
+scoring interface for externally supplied answers: their number and wording can vary while
+the head continues to score entailment, neutral, and contradiction. The question serves as
+the premise and each candidate answer enters the instruction as a hypothesis; selection then
+
+

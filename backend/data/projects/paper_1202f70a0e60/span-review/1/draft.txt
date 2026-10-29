@@ -1,0 +1,1 @@
+Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \cite{mei2026improving}

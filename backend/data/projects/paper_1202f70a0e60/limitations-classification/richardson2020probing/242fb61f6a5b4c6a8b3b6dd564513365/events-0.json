@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "text",
+    "text": "{\"status\": \"unsupported\", \"reason\": \"The passage discusses positive results (that BERT can be taught a new fragment without affecting original performance) and general trade-offs in model performance after re-training, but does not state an actual limitation, tradeoff, assumption, or scope boundary of the reviewed method (Probing Natural Language Inference Models through Semantic Fragments). It describes experimental outcomes and comparisons between models, not a methodological limitation of the reviewed work itself.\"}"
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f944abffehD242ZSum8H060"
+  }
+]

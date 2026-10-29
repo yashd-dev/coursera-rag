@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Span1: operational native_error: the review call returned no usable result; this is not a verdict on the claim",
+    "Empty claim ledger"
+  ],
+  "spans_complete": 0,
+  "spans_total": 52
+}

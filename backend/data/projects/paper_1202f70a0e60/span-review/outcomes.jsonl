@@ -1,0 +1,2 @@
+{"event": "start", "attempt": "afa48c23d614", "span": 1, "cache_key": "55241167174d5d7a0deeadce63f2ca62f1455539c4c3b3a9bf5eceaa4e489761", "token": "", "contract": "span-v6", "source_sha256": "23c27b1273f5f90fcb7303869c815f8526fddd1ba40435e4d825a8c9f8c55f15", "block_sha256": "51b9144c26ce01eb8d234e60f553871abbfe12df74bb373e474b5846f7e1a074", "ts": 1793283812.3305094}
+{"event": "end", "attempt": "afa48c23d614", "span": 1, "cache_key": "55241167174d5d7a0deeadce63f2ca62f1455539c4c3b3a9bf5eceaa4e489761", "outcome": "operational", "code": "native_error", "ts": 1793283885.417259}

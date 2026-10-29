@@ -39,8 +39,6 @@
     "edit": "allow",
     "bash": {
       "*": "deny",
-      "pdflatex *": "allow",
-      "bibtex *": "allow",
       "python3 rag.py *": "allow"
     },
     "webfetch": "deny",

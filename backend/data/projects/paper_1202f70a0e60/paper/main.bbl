@@ -1,0 +1,54 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{gendron2024counterfactual}
+Gendron, Gaël, Rožanec, J.M., Witbrock, M., Dobbie, G.: {Counterfactual
+  Causal Inference in Natural Language with Large Language Models}. arXiv
+  (Cornell University)  (2024). \doi{10.48550/arxiv.2410.06392},
+  \url{https://doi.org/10.48550/arxiv.2410.06392}
+
+\bibitem{madaan2024lost}
+Madaan, L., Esiobu, D., Stenetorp, P., Plank, B., Hupkes, D.: {Lost in
+  Inference: Rediscovering the Role of Natural Language Inference for Large
+  Language Models}. arXiv (Cornell University)  (2024).
+  \doi{10.48550/arxiv.2411.14103},
+  \url{https://doi.org/10.48550/arxiv.2411.14103}
+
+\bibitem{mei2026improving}
+Mei, H., Tian, Y., Yuan, Y., Wu, E., Xu, C., Chen, A., Han, K., Wang, Y.:
+  {Improving JEV Entailment Reranking with Span Readouts and Selective
+  Adaptation}. arXiv preprint 2610.35654v1 (2026),
+  \url{https://arxiv.org/abs/2610.35654v1}
+
+\bibitem{parikh2016decomposable}
+Parikh, A.P., Täckström, O., Das, D., Uszkoreit, J.: {A Decomposable
+  Attention Model for Natural Language Inference}. arXiv (Cornell University)
+  (2016). \doi{10.48550/arxiv.1606.01933},
+  \url{https://doi.org/10.48550/arxiv.1606.01933}
+
+\bibitem{raju2017dynamic}
+Raju, R.K.: {Dynamic Memory Inference Network for Natural Language Inference
+  (2017)}. International Journal of Science and Research (IJSR)  (2017).
+  \doi{10.21275/sr24926091431}, \url{https://doi.org/10.21275/sr24926091431}
+
+\bibitem{richardson2020probing}
+Richardson, K., Hu, H., Moss, L.S., Sabharwal, A.: {Probing Natural Language
+  Inference Models through Semantic Fragments}. AAAI Publications (The
+  Association for the Advancement of Artificial Intelligence (AAAI))  (2020).
+  \doi{10.1609/aaai.v34i05.6397},
+  \url{https://doi.org/10.1609/aaai.v34i05.6397}
+
+\bibitem{storks2019recent}
+Storks, S., Gao, Q., Chai, J.Y.: {Recent Advances in Natural Language
+  Inference: A Survey of Benchmarks, Resources, and Approaches}. arXiv (Cornell
+  University)  (2019). \doi{10.48550/arxiv.1904.01172},
+  \url{https://doi.org/10.48550/arxiv.1904.01172}
+
+\bibitem{xu2023large}
+Xu, F., Lin, Q., Han, J., Zhao, T., Liu, J., Cambria, E.: {Are Large Language
+  Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond}.
+  arXiv preprint 2306.09841v4 (2023), \url{https://arxiv.org/abs/2306.09841v4}
+
+\end{thebibliography}

@@ -1,21 +1,116 @@
 \documentclass[runningheads]{llncs}
 \usepackage{amsmath,amssymb,graphicx,url,array}
+\raggedbottom
+\emergencystretch=2em
+\makeatletter\renewenvironment{table}[1][]{\par\noindent\begin{minipage}{\linewidth}\def\@captype{table}\footnotesize}{\end{minipage}\par}\makeatother
 \begin{document}
-
-\title{PAPER TITLE}
-\author{Anonymous}
-\institute{}
+\title{3   Natural Language Inference Models}
+\author{Anonymous}\institute{}
+\titlerunning{Literature Review}
 \maketitle
-
 \begin{abstract}
-ABSTRACT
-\keywords{keyword one \and keyword two}
+Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \cite{mei2026improving} The paper proposes a framework for causal structure discovery and evaluation from natural language text using LLMs, dividing work into extraction, summarisation, counterfactual queries, and graph evaluation stages. \cite{gendron2024counterfactual} Lovish Madaan, David Esiobu, Pontus Stenetorp, Barbara Plank, and Dieuwke Hupkes investigate NLI benchmarks' suitability for evaluating large language models, analyzing five benchmarks across six model scales to assess signal quality, discrimination ability, and saturation. \cite{madaan2024lost} Xu et al. present a systematic evaluation of LLM logical reasoning capabilities across multiple reasoning types, datasets, and model families, introducing fine-grained metrics and error taxonomy to isolate logical from content-driven performance. \cite{xu2023large} Richardson, Hu, Moss, and Sabharwal propose semantic fragments—systematically generated NLI datasets each targeting a distinct semantic phenomenon—for probing, and efficiently improving, such capabilities of linguistic models. \cite{richardson2020probing} Storks, Gao, \& Chai survey recent advances in natural language inference, focusing on benchmarks, resources, and inference approaches across symbolic, statistical, and neural models. \cite{storks2019recent} Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms. \cite{raju2017dynamic} The decomposable attention model aligns local text substructures via attention to solve NLI subproblems separately, enabling trivially parallelizable computation with fewer parameters than deep models. \cite{parikh2016decomposable}
 \end{abstract}
-
+\keywords{}
 \section{Introduction}
-TEXT
+Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving consistent accuracy gains while reducing trainable parameters. \cite{mei2026improving}
+
+Gendron, Rožanec, Witbrock, and Dobbie propose an end-to-end method for causal structure discovery and counterfactual inference from natural language text using LLMs. \cite{gendron2024counterfactual}
+
+Lovish Madaan, David Esiobu, Pontus Stenetorp, Barbara Plank, and Dieuwke Hupkes explore whether natural language inference benchmarks remain suitable for evaluating modern large language models. \cite{madaan2024lost}
+
+Xu et al. propose a comprehensive evaluation framework for LLM logical reasoning abilities across 15 datasets and seven model families. \cite{xu2023large}
+
+Richardson, Hu, Moss, and Sabharwal propose semantic fragments to investigate the extent to which state-of-the-art NLI models capture central semantic phenomena. \cite{richardson2020probing}
+
+Storks, Gao, and Chai survey recent advances in natural language inference to map the field's benchmarks, knowledge resources, and inference approaches. \cite{storks2019recent}
+
+Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms. \cite{raju2017dynamic}
+
+Parikh et al. introduce a decomposable attention model for natural language inference that processes premise and hypothesis sentence pairs. \cite{parikh2016decomposable}
+
+\section{Reviewed sources}
+\subsection{Improving JEV Entailment Reranking with Span Readouts and Selective Adaptation}
+Haocheng Mei et al. improve JEV entailment reranking with span readouts and selective adaptation, achieving 53.39\% MC11 accuracy while reducing trainable parameters by over 50\%. Mean-span pooling and selective LoRA updates in attention and DeltaNet projections yield consistent gains over all-module baselines. \cite{mei2026improving}
+
+\subsection{Counterfactual Causal Inference in Natural Language with Large Language Models}
+Gendron, Rožanec, Witbrock, and Dobbie propose an end-to-end LLM method for extracting causal variables and graphs from text, merging across sources, and performing counterfactual inference via conditional LLM interventions. They state LLM counterfactual limitations stem from prediction errors. \cite{gendron2024counterfactual}
+
+\subsection{Lost in Inference: Rediscovering the Role of Natural Language Inference for Large Language Models}
+NLI benchmarks provide signal and discriminate models of different size and quality; 1+ few-shot examples needed for reasonable accuracy; best models plateau $\leq$70\% on ANLI; high scores not caused by data contamination. \cite{madaan2024lost}
+
+\subsection{Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond}
+Xu et al. introduce a comprehensive evaluation framework for LLM logical reasoning across 15 datasets and seven model families, proposing answer and explanation metrics plus five error types to isolate reasoning quality from content bias. \cite{xu2023large}
+
+\subsection{Probing Natural Language Inference Models through Semantic Fragments}
+Richardson, Hu, Moss, and Sabharwal propose semantic fragments to probe NLI models' reasoning on logic, monotonicity, and quantification. State-of-the-art models like BERT perform poorly on these fragments despite centrality to NLI. With brief finetuning and inoculation, a BERT-based model masters all logic and monotonicity fragments while retaining established benchmark performance. \cite{richardson2020probing}
+
+\subsection{Recent Advances in Natural Language Inference: A Survey of Benchmarks, Resources, and Approaches}
+Storks, Gao, and Chai survey benchmarks, knowledge resources, and state-of-the-art learning/inference approaches across symbolic, statistical, and neural models, mapping NLI field architecture without reporting experimental findings. \cite{storks2019recent}
+
+\subsection{Dynamic Memory Inference Network for Natural Language Inference (2017)}
+Raju et al. propose Dynamic Memory Networks to enhance Natural Language Inference by treating it as a question-answer task with iterative memory updates and attention mechanisms, improving inferential accuracy beyond single-pass models. \cite{raju2017dynamic}
+
+\subsection{A Decomposable Attention Model for Natural Language Inference}
+Parikh et al. propose a decomposable attention model for natural language inference that aligns local text substructures via attention, solves subproblems separately, and aggregates information without relying on word order. The model achieves state-of-the-art accuracy on SNLI with significantly fewer parameters than complex LSTM-based approaches. \cite{parikh2016decomposable}
+
+\section{Source comparison}
+\begin{table}[H]\centering
+\caption{Qualitative comparison of the processed sources.}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.26\linewidth}|>{\raggedright\arraybackslash}p{0.235\linewidth}|>{\raggedright\arraybackslash}p{0.235\linewidth}|}\hline
+Source & Approach & Evaluation \\ \hline
+Mei 2026 \cite{mei2026improving} & mean-span pooling + selective & MC11 eleven-configuration \\ \hline
+Gendron 2024 \cite{gendron2024counterfactual} & extract graph condition+merge+intervene & LLM counterfactual inference \\ \hline
+Madaan 2024 \cite{madaan2024lost} & Five NLI benchmarks across six models & MNLI, ANLI benchmarks \\ \hline
+Xu 2023 \cite{xu2023large} & select 15 datasets across 4 reasoning types & bAbI and CLUTRR and FOLIO \\ \hline
+Richardson 2020 \cite{richardson2020probing} & semantic fragments & NLI benchmark \\ \hline
+Storks 2019 \cite{storks2019recent} & survey of benchmarks and models & NLI benchmarks and datasets \\ \hline
+Raju 2017 \cite{raju2017dynamic} & memory attention updates & SNLI dataset \\ \hline
+Parikh 2016 \cite{parikh2016decomposable} & attention-based alignment & SNLI corpus \\ \hline
+\end{tabular}\end{table}
+\section{Evidence limitations}
+The source authors state: "6
+
+Limitations
+
+LLMs provide free-text answers that can be different from the format provided in the instructions." \cite{gendron2024counterfactual}
+
+The source authors state: "Overall, it can be observed that all LLMs exhibit specific
+limitations in logical reasoning, with relative strength in
+deductive reasoning but evident struggles in inductive
+settings." \cite{xu2023large}
+
+The source authors state: "In the case of comparatives, the inability of the model to master this fragment likely
+reveals a certain architectural limitation of the model given
+
+that it is not sensitive to word-order." \cite{richardson2020probing}
+
+The source authors state: "A key limitation that Yang et al. identify
+in BERT is that since tokens are randomly masked for pre-training tasks, there is a discrepancy
+between language data in pre-training and fine-tuning." \cite{storks2019recent}
+
+The source authors state: "This work also showed some limitations that can be
+overcome and improvements that can be made." \cite{raju2017dynamic}
+
+The source authors state: "For simplicity we assume that all hidden dimensions are d and that the complexity of
+matrix(d × d)-vector(d × 1) multiplication is O(d2 )." \cite{parikh2016decomposable}
+
+\section{Conclusion}
+Selective adaptation retains LoRA updates in attention and gated DeltaNet projections while removing FFN adapters, improving NeoHorse-1-4B MC11 accuracy and reducing trainable parameters by over 50\%. \cite{mei2026improving}
+
+The authors state that LLM limitations in counterfactual causal reasoning come from prediction errors. \cite{gendron2024counterfactual}
+
+The benchmarks provide a useful signal to compare trained‑out models, though it is unclear to what extent their performance has saturated. \cite{madaan2024lost}
+
+ChatGPT exhibits stronger and consistent competitiveness, ranking first in deductive, inductive, and mixed-form settings. \cite{xu2023large}
+
+With only a few minutes of additional finetuning, a BERT-based model can master all of these logic and monotonicity fragments while retaining its performance on established NLI benchmarks. \cite{richardson2020probing}
+
+Machines lack commonsense reasoning; world-knowledge connections and inference processes remain difficult despite decades of NLP progress. \cite{storks2019recent}
+
+Raju et al. report that DMN achieves 76.5\% accuracy on the SNLI test set, outperforming previous models. \cite{raju2017dynamic}
+
+The decomposable attention model achieves state-of-the-art accuracy on SNLI with almost an order of magnitude fewer parameters than prior work. \cite{parikh2016decomposable}
 
 \bibliographystyle{splncs04}
-\bibliography{refs}
-
-\end{document}
+\bibliography{refs}\end{document}

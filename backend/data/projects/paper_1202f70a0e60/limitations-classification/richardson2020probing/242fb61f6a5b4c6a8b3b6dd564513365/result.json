@@ -1,0 +1,14 @@
+{
+  "source_key": "richardson2020probing",
+  "page": 7,
+  "quote": "In the case of comparatives, the inability of the model to master this fragment likely\nreveals a certain architectural limitation of the model given\n\nthat it is not sensitive to word-order.",
+  "score": 20,
+  "id": "E1",
+  "sentence": "The source authors state: \"In the case of comparatives, the inability of the model to master this fragment likely\nreveals a certain architectural limitation of the model given\n\nthat it is not sensitive to word-order.\"",
+  "verdict": {
+    "status": "supported",
+    "reason": "The reviewed method (Natural Language Inference model) has an architectural limitation: it is not sensitive to word-order, which prevents it from mastering comparative fragments."
+  },
+  "source_sha": "ee749f913eeb7177db69a97a87811c5514954917ce369ab4e1e1c71a7d5bf40d",
+  "contract": "classifier-v1"
+}

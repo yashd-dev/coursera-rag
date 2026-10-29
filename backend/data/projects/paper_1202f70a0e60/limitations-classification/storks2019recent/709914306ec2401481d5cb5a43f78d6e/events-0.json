@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "text",
+    "text": "{\"status\": \"unsupported\", \"reason\": \"The quoted passage 'e limitations which must be considered when interpreting machine performance, some external factors can also affect the perceived complexity of the tasks.' is incomplete and does not clearly state an actual limitation, tradeoff, assumption, or scope boundary of the reviewed method. It appears to be a fragment ('e limitations') that references limitations in general but does not specify any concrete limitation of the NLI methods surveyed. Without complete context of the full \\u00a7\"}"
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f8a4daffemxrGt2MA7t5Cn7"
+  }
+]

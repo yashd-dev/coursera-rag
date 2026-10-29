@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "text",
+    "text": "{\"status\": \"supported\", \"reason\": \"The quoted passage identifies a key limitation of BERT as identified by Yang et al.: a discrepancy between language data in pre-training and fine-tuning due to random token masking. This is a stated assumption/scope boundary of the reviewed method (BERT) and qualifies.\"}"
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f8767effepVFsz4m2dTD3WU"
+  }
+]

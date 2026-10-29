@@ -1,16 +1,16 @@
 [
   {
     "kind": "text",
-    "text": "{\\n  \\\"approach\\\": \\\"content-neutral NeuLR dataset 3k samples\\\",\\n  \\\"evaluation\\\": \\\"Logical reasoning benchmark zero-shot few-shot\\\"\\n}"
+    "text": "{\n  \"approach\": \"select 15 datasets across 4 reasoning types\",\n  \"evaluation\": \"bAbI and CLUTRR and FOLIO\"\n}"
   },
   {
     "kind": "usage",
-    "tokens": 14420,
+    "tokens": 14492,
     "cost": 0
   },
   {
     "kind": "done",
     "ok": true,
-    "session": "ses_e7803a219ffe40IDrzEGYv9ZL9"
+    "session": "ses_e77f9d446ffeoBRanb75Rjiepr"
   }
 ]

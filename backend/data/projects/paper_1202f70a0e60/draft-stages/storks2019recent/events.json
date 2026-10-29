@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"summary\": \"Storks, Gao, and Chai survey benchmarks, knowledge resources, and state-of-the-art learning/inference approaches across symbolic, statistical, and neural models, mapping NLI field architecture without reporting experimental findings.\",\n  \"limitations\": \"\",\n  \"approach\": \"survey of benchmarks and models\",\n  \"evaluation\": \"NLI benchmarks and datasets\",\n  \"abstract\": \"Storks, Gao, & Chai survey recent advances in natural language inference, focusing on benchmarks, resources, and inference approaches across symbolic, statistical, and neural models.\",\n  \"introduction\": \"Storks, Gao, and Chai survey recent advances in natural language inference to map the field's benchmarks, knowledge resources, and inference approaches.\",\n  \"conclusion\": \"Machines lack commonsense reasoning; world-knowledge connections and inference processes remain difficult despite decades of NLP progress.\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 29083,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f8e0a0ffealI116SKl6hBMU"
+  }
+]

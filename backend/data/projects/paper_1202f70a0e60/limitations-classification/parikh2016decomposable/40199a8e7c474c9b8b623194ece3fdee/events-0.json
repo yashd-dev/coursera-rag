@@ -1,0 +1,11 @@
+[
+  {
+    "kind": "text",
+    "text": "{\"status\": \"supported\", \"reason\": \"The passage explicitly states an assumption ('we assume that all hidden dimensions are d') and a complexity simplification ('the complexity of matrix(d \\u00d7 d)-vector(d \\u00d7 1) multiplication is O(d\\u00b2)') that serves as a scope boundary for the reviewed method. This qualifies as a limitation/tradeoff/scope boundary of the decomposable attention model.\"}"
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f7b5ebffeDNBECaRfKPQZaj"
+  }
+]

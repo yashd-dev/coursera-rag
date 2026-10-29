@@ -1,0 +1,14 @@
+{
+  "source_key": "parikh2016decomposable",
+  "page": 3,
+  "quote": "For simplicity we assume that all hidden dimensions are d and that the complexity of\nmatrix(d \u00d7 d)-vector(d \u00d7 1) multiplication is O(d2 ).",
+  "score": 7,
+  "id": "E1",
+  "sentence": "The source authors state: \"For simplicity we assume that all hidden dimensions are d and that the complexity of\nmatrix(d \u00d7 d)-vector(d \u00d7 1) multiplication is O(d2 ).\"",
+  "verdict": {
+    "status": "supported",
+    "reason": "The passage explicitly states an assumption ('we assume that all hidden dimensions are d') and a complexity simplification ('the complexity of matrix(d \u00d7 d)-vector(d \u00d7 1) multiplication is O(d\u00b2)') that serves as a scope boundary for the reviewed method. This qualifies as a limitation/tradeoff/scope boundary of the decomposable attention model."
+  },
+  "source_sha": "03aad338a77b331c03f76dd1ee465909e26f9dcaca93b41afdadc0bcb0a86d46",
+  "contract": "classifier-v1"
+}

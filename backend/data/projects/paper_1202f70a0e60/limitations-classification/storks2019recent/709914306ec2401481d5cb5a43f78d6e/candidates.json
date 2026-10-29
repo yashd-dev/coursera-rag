@@ -1,0 +1,30 @@
+[
+  {
+    "source_key": "storks2019recent",
+    "page": 37,
+    "quote": "e limitations which must be considered\nwhen interpreting machine performance, some external factors can also affect the perceived complexity of the tasks.",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "storks2019recent",
+    "page": 59,
+    "quote": "A key limitation that Yang et al. identify\nin BERT is that since tokens are randomly masked for pre-training tasks, there is a discrepancy\nbetween language data in pre-training and fine-tuning.",
+    "score": 20,
+    "id": "E3"
+  },
+  {
+    "source_key": "storks2019recent",
+    "page": 42,
+    "quote": "A major\nlimitation of these vectors, however, is that they are context-independent, so the vector representa16. https://framenet.icsi.berkeley.edu/fndrupal/framenet_data\n17. https://propbank.github.io/\n18. https://nlp.stanford.edu/projects/glove/\n19. https://github.com/facebookresearch/fastText\n20.",
+    "score": 20,
+    "id": "E4"
+  },
+  {
+    "source_key": "storks2019recent",
+    "page": 5,
+    "quote": "Section 4 summarizes recent learning and inference approaches, and discusses their\nperformance, limitations, and trends.\n\n2.",
+    "score": 20,
+    "id": "E6"
+  }
+]

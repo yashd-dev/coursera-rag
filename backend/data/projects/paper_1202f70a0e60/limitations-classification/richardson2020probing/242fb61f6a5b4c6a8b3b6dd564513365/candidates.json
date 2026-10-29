@@ -1,0 +1,23 @@
+[
+  {
+    "source_key": "richardson2020probing",
+    "page": 7,
+    "quote": "In other words, it is possible teach BERT (given its inherent capacity) a new fragment quickly through re-training without affecting its original performance, assuming however that time is spent on\ncarefully \ufb01nding the optimal model.6 For the other models, there is more of a trade-off; Decomp-Attn on average\nnever quite masters the logic fragments (but does master\nthe Monotonicity Fragments), and incurs an average\n6.7% loss on MNLI after re-training.",
+    "score": 25,
+    "id": "E1"
+  },
+  {
+    "source_key": "richardson2020probing",
+    "page": 7,
+    "quote": "In the case of comparatives, the inability of the model to master this fragment likely\nreveals a certain architectural limitation of the model given\n\nthat it is not sensitive to word-order.",
+    "score": 20,
+    "id": "E1"
+  },
+  {
+    "source_key": "richardson2020probing",
+    "page": 8,
+    "quote": "This methodology comes with some caveats, however: Depending on\nthe model and particular linguistic phenomena, there may\nbe some trade-offs with the model\u2019s original performance,\nwhich should \ufb01rst be looked at empirically and compared\nagainst other linguistic phenomena.",
+    "score": 18,
+    "id": "E3"
+  }
+]

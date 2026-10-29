@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "text",
+    "text": "{\n  \"summary\": \"Richardson, Hu, Moss, and Sabharwal propose semantic fragments to probe NLI models' reasoning on logic, monotonicity, and quantification. State-of-the-art models like BERT perform poorly on these fragments despite centrality to NLI. With brief finetuning and inoculation, a BERT-based model masters all logic and monotonicity fragments while retaining established benchmark performance.\",\n  \"limitations\": \"\",\n  \"approach\": \"semantic fragments\",\n  \"evaluation\": \"NLI benchmark\",\n  \"abstract\": \"Richardson, Hu, Moss, and Sabharwal propose semantic fragments\u2014systematically generated NLI datasets each targeting a distinct semantic phenomenon\u2014for probing, and efficiently improving, such capabilities of linguistic models.\",\n  \"introduction\": \"Richardson, Hu, Moss, and Sabharwal propose semantic fragments to investigate the extent to which state-of-the-art NLI models capture central semantic phenomena.\",\n  \"conclusion\": \"With only a few minutes of additional finetuning, a BERT-based model can master all of these logic and monotonicity fragments while retaining its performance on established NLI benchmarks.\"\n}"
+  },
+  {
+    "kind": "usage",
+    "tokens": 5920,
+    "cost": 0
+  },
+  {
+    "kind": "done",
+    "ok": true,
+    "session": "ses_e77f97bc8ffez86mcDBSNfioPl"
+  }
+]
